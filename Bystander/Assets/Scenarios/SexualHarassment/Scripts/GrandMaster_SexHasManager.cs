@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SteveScript : MonoBehaviour {
+public class GrandMaster_SexHasManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

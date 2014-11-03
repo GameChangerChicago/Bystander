@@ -11,27 +11,36 @@ public class GuiDanceOfficeManager : MonoBehaviour {
 	//Everytime the int guidanceSceneState variable changes...it's property variable triggers
 	//the getter and setter methods in the STEVE and FAITH scripts to update their dialogue. 
 
+	public GameObject faith;
+	public GameObject steve;
 
-	private SteveScript steveScript;
 	private FaithScript faithScript;
+	private SteveScript steveScript;
 
 	private int guidanceSceneState;
 	public int GuidanceSceneState {
 
 		get
 		{
-			//Some other code
 			return guidanceSceneState;
 		}
 		set {
-			//Some other code
+			//trigger faith script to increase to appropriate dialogue choice
+
 			guidanceSceneState = value;
+
+			if (guidanceSceneState > 9) {
+
+			}
+
+			faithScript.displayCorrectDialogue (guidanceSceneState);
+			steveScript.displayCorrectDialogue (guidanceSceneState);
 		}
 	}
 
 	void Start () {
-		faithScript = GetComponent<FaithScript>();
-		steveScript = GetComponent<SteveScript>();
+		faithScript = faith.GetComponent<FaithScript>();
+		steveScript = steve.GetComponent<SteveScript>();
 	}
 
 

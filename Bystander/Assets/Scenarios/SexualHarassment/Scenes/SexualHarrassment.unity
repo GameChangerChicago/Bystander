@@ -102,7 +102,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1461775892}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 441, y: 131}
@@ -302,7 +302,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1461775892}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 51, y: 146}
@@ -449,8 +449,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 747904497}
   - {fileID: 142273264}
+  - {fileID: 747904497}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
@@ -532,6 +532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135a0de69696a465880ffbb8539db4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faith: {fileID: 2059557044}
+  steve: {fileID: 2105841327}
 --- !u!1 &1949715692
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a772330a2d7a14922ba804b97b6a10e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySpeechText: {fileID: 142273265}
+  myManager: {fileID: 1743995646}
 --- !u!1 &2105841327
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,3 +733,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09871ae7612a453c97cdedace8aa1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySpeechText: {fileID: 747904498}
+  myManager: {fileID: 1743995646}

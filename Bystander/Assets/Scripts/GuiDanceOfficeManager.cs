@@ -23,12 +23,10 @@ public class GuiDanceOfficeManager : MonoBehaviour {
 			//Some other code
 			return guidanceSceneState;
 		}
-		set
-		{
+		set {
 			//Some other code
 			guidanceSceneState = value;
 		}
-
 	}
 
 	void Start () {
@@ -41,9 +39,5 @@ public class GuiDanceOfficeManager : MonoBehaviour {
 		GuidanceSceneState++;
 		Debug.Log ("guidanceScene State is : "+GuidanceSceneState);
 	}
-
-
-
-
 
 }

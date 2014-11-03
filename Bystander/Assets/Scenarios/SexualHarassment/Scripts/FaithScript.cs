@@ -30,9 +30,9 @@ public class FaithScript : MonoBehaviour {
 	}
 	
 	public void displayCorrectDialogue(int speechNum){
-		if (myManagerScript.GuidanceSceneState < faithLines.Count) {
+		if (speechNum < faithLines.Count) {
 			Debug.Log ("We are inside of displayCorrectDialogue for faith");
-			mySpeechText.text = faithLines [myManagerScript.GuidanceSceneState];
+			mySpeechText.text = faithLines [speechNum];
 		}
 
 	}

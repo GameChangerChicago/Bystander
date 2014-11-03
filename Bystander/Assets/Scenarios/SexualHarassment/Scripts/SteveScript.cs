@@ -30,9 +30,9 @@ public class SteveScript : MonoBehaviour {
 	}
 
 	public void displayCorrectDialogue(int speechNum){
-		if (myManagerScript.GuidanceSceneState < steveLines.Count) {
+		if (speechNum < steveLines.Count) {
 			Debug.Log ("We are inside of displayCorrectDialogue for Steve");
-			mySpeechText.text = steveLines [myManagerScript.GuidanceSceneState];
+			mySpeechText.text = steveLines [speechNum];
 		}
 
 	}

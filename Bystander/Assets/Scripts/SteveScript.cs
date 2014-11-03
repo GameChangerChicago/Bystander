@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TestScript : MonoBehaviour {
+public class SteveScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

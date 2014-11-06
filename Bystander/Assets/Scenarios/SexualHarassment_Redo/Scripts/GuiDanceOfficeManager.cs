@@ -33,8 +33,8 @@ public class GuiDanceOfficeManager : MonoBehaviour {
 
 			}
 
-			faithScript.displayCorrectDialogue (guidanceSceneState);
-			steveScript.displayCorrectDialogue (guidanceSceneState);
+			//faithScript.displayCorrectDialogue (guidanceSceneState);
+			//steveScript.displayCorrectDialogue (guidanceSceneState);
 		}
 	}
 

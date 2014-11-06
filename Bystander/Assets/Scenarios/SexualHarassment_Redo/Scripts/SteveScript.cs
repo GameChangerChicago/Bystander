@@ -5,8 +5,9 @@ using System.Collections.Generic;
 
 public class SteveScript : MonoBehaviour {
 
-	public GUIText mySpeechText; 
+	public UILabel mySpeechText; 
 
+	private int steveLinesCounter;
 
 	public GameObject myManager;
 	private GuiDanceOfficeManager myManagerScript;
@@ -29,10 +30,11 @@ public class SteveScript : MonoBehaviour {
 
 	}
 
-	public void displayCorrectDialogue(int speechNum){
-		if (speechNum < steveLines.Count) {
-			Debug.Log ("We are inside of displayCorrectDialogue for Steve");
-			mySpeechText.text = steveLines [speechNum];
+	public void displayCorrectDialogue(){
+		steveLinesCounter++;
+		if (steveLinesCounter < steveLines.Count) {
+			Debug.Log ("We are inside of displayCorrectDialogue for faith");
+			mySpeechText.text = steveLines [steveLinesCounter];
 		}
 
 	}

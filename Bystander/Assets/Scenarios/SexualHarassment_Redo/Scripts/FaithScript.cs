@@ -9,9 +9,13 @@ public class FaithScript : MonoBehaviour {
 
 
 
-	public GUIStyle myGUIStyle;
+	//public GUIStyle myGUIStyle;
 
-	public GUIText mySpeechText; 
+	//public GUIText mySpeechText; 
+
+	public UILabel mySpeechText; 
+
+	private int faithLinesCounter;
 
 
 	public GameObject myManager;
@@ -38,10 +42,11 @@ public class FaithScript : MonoBehaviour {
 
 	}
 	
-	public void displayCorrectDialogue(int speechNum){
-		if (speechNum < faithLines.Count) {
+	public void displayCorrectDialogue(){
+		faithLinesCounter++;
+		if (faithLinesCounter < faithLines.Count) {
 			Debug.Log ("We are inside of displayCorrectDialogue for faith");
-			mySpeechText.text = faithLines [speechNum];
+			mySpeechText.text = faithLines [faithLinesCounter];
 		}
 
 	}

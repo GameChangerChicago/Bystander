@@ -11,31 +11,33 @@ public class SteveScript : MonoBehaviour {
 
 	public GameObject myManager;
 	private GuiDanceOfficeManager myManagerScript;
-	private List<string> steveLines = new List<string>();
+
+	Dictionary<int, string> steveLines = new Dictionary<int, string>();
+
+	//private List<string> steveLines = new List<string>();
 
 	// Use this for initialization
 	void Start () {
 
 		myManagerScript = myManager.GetComponent<GuiDanceOfficeManager>();
 
-		steveLines.Add ("Wha ");
-		steveLines.Add ("What's the matter? ajsdlfkjalkdjflkjlaksdfjlajdlfjlajljsdlfjlkajldjfljalkdsjflkjakldfjkljaldjflkjalkjsdlkfjlkjalkjsldkfjlkjalksjdlfkjlkjlka"); 
-		steveLines.Add ("(Clears throat)*"); 
-		steveLines.Add ("Well, here we are. At the counselor's office"); 
-		steveLines.Add ("Step up. It's time to shed some light on this."); 
-		steveLines.Add ("Step up. It's time to shed some light on this."); 
-		steveLines.Add ("I can only lead you so far."); 
-		steveLines.Add ("Do you see it a lot? In the halls and stuff?"); 
-		steveLines.Add ("Do you see it a lot? In the halls and stuff?"); 
+		steveLines.Add (1, "Wha ");
+		steveLines.Add (3,"What's the matter? ajsdlfkjalkdjflkjlaksdfjlajdlfjlajljsdlfjlkajldjfljalkdsjflkjakldfjkljaldjflkjalkjsdlkfjlkjalkjsldkfjlkjalksjdlfkjlkjlka"); 
+		steveLines.Add (5, "(Clears throat)*"); 
+		steveLines.Add (7, "Well, here we are. At the counselor's office"); 
+		steveLines.Add (9,"Step up. It's time to shed some light on this."); 
+		steveLines.Add (11, "I can only lead you so far."); 
+		steveLines.Add (13, "Do you see it a lot? In the halls and stuff?"); 
 
 	}
 
 	public void displayCorrectDialogue(){
 		steveLinesCounter++;
-		if (steveLinesCounter < steveLines.Count) {
-			Debug.Log ("We are inside of displayCorrectDialogue for faith");
+
+		string temp = null;
+
+		if (steveLines.TryGetValue(steveLinesCounter, out temp)) {
 			mySpeechText.text = steveLines [steveLinesCounter];
 		}
-
 	}
 }

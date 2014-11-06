@@ -180,7 +180,7 @@ GameObject:
   - 65: {fileID: 324846505}
   - 114: {fileID: 324846504}
   m_Layer: 8
-  m_Name: Sprite
+  m_Name: NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,7 +327,7 @@ Transform:
   - {fileID: 809304937}
   - {fileID: 324846502}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!54 &380161237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -793,109 +793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpeechText: {fileID: 809304938}
-  myManager: {fileID: 1926727227}
---- !u!1 &981702033
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 981702035}
-  - 132: {fileID: 981702034}
-  m_Layer: 0
-  m_Name: guy_TEXT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!132 &981702034
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 981702033}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Text: So, here we are...
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Material: {fileID: 0}
-  m_FontSize: 0
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4279900927
-  m_PixelCorrect: 1
-  m_RichText: 1
---- !u!4 &981702035
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 981702033}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .547925115, y: .782552361, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
---- !u!1 &1053375022
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1053375024}
-  - 132: {fileID: 1053375023}
-  m_Layer: 0
-  m_Name: girl_TEXT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!132 &1053375023
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1053375022}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Text: I know. I'm just nervous.
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Material: {fileID: 0}
-  m_FontSize: 0
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4279308799
-  m_PixelCorrect: 1
-  m_RichText: 1
---- !u!4 &1053375024
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1053375022}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .761222839, y: .782552361, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
 --- !u!1 &1388575776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1004,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpeechText: {fileID: 5478957}
-  myManager: {fileID: 1926727227}
 --- !u!1 &1926727227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,10 +1013,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1926727229}
   - 212: {fileID: 1926727228}
-  - 61: {fileID: 1926727230}
-  - 114: {fileID: 1926727231}
   m_Layer: 0
-  m_Name: GuidanceOffice_ManagerOBJ
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,27 +1054,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!61 &1926727230
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1926727227}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 13.0299988, y: 8.36999893}
-  m_Center: {x: 0, y: 0}
---- !u!114 &1926727231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1926727227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 135a0de69696a465880ffbb8539db4cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  faith: {fileID: 1798027506}
-  steve: {fileID: 916132164}

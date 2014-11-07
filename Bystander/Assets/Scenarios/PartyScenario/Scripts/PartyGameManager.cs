@@ -6,12 +6,14 @@ public class PartyGameManager : MonoBehaviour
     public int MaxClicks;
 
     private PartyCameraManager _myCameraManager;
+    private Virgil _virgil;
     private int _clickCount = 0;
     private bool _sectionCompleted = false;
 
     void Start()
     {
         _myCameraManager = FindObjectOfType<PartyCameraManager>();
+        _virgil = FindObjectOfType<Virgil>();
     }
 
     public void PlayerClicked(bool importantProp)
@@ -25,13 +27,12 @@ public class PartyGameManager : MonoBehaviour
 
     private void VirgilHandler()
     {
-        Debug.Log(_clickCount + " >= " + MaxClicks);
         if (_clickCount >= MaxClicks)
         {
             if (_sectionCompleted)
-                Debug.Log("Cue Virgil Good");
+                _virgil.Appear(true);
             else
-                Debug.Log("Cue Virgil Bad");
+                _virgil.Appear(false);
         }
     }
 }

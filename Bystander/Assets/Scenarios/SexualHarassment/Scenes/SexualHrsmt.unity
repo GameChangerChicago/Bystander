@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8ee61baa7484f8295fd16703bdd761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySituationToLoad: {fileID: 0}
   target: {fileID: 1985092185}
-  speed: 0
 --- !u!1 &292342260
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,8 +669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8ee61baa7484f8295fd16703bdd761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySituationToLoad: {fileID: 0}
   target: {fileID: 1069335049}
-  speed: 10
 --- !u!1 &733622032
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,8 +888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8ee61baa7484f8295fd16703bdd761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySituationToLoad: {fileID: 0}
   target: {fileID: 1942252871}
-  speed: 10
 --- !u!1 &809304936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,8 +1312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8ee61baa7484f8295fd16703bdd761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySituationToLoad: {fileID: 0}
   target: {fileID: 292342260}
-  speed: 10
 --- !u!1 &1754107840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,5 +1686,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8ee61baa7484f8295fd16703bdd761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySituationToLoad: {fileID: 0}
   target: {fileID: 1011559730}
-  speed: 10

@@ -6,21 +6,23 @@ public class InteractableProp : MonoBehaviour
     public bool ImportantProp,
                 HasDialog,
                 HasMultipleSteps;
-    public int MaxClicks;
+    public int MaxClicks,
+               DialogSections;
     public AudioClip MySFX;
 
     private int _myClickCount = 0;
+    private string _dialog;
     private PartyGameManager _myGameManager;
 
     void Start()
     {
         _myGameManager = FindObjectOfType<PartyGameManager>();
+        TextAsset rawText = Resources.Load("DialogText/TestDialog") as TextAsset;
+        _dialog = rawText.text;
     }
 
     void OnMouseDown()
     {
-        _myGameManager.PlayerClicked(ImportantProp);
-
         if (HasMultipleSteps)
         {
             if (MaxClicks != _myClickCount)
@@ -32,5 +34,10 @@ public class InteractableProp : MonoBehaviour
         }
         else
             animation.Play();
+
+        if (!HasDialog)
+            StartCoroutine(_myGameManager.PlayerClicked(ImportantProp, animation.clip.length));
+        else
+            StartCoroutine(_myGameManager.PlayerClicked(ImportantProp, _dialog, DialogSections));
     }
 }

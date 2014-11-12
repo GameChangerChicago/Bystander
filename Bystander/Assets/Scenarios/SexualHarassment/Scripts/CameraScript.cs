@@ -5,7 +5,7 @@ public class CameraScript : MonoBehaviour {
 
 
 	private Vector3 target;
-	private float slideAmt = 12.0f;
+	//private float slideAmt = 12.0f;
 	public static readonly float speed = 3.0f;
 
 

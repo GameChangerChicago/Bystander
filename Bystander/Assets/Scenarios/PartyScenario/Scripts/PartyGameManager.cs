@@ -20,7 +20,7 @@ public class PartyGameManager : MonoBehaviour
     {
         _clickCount++;
         if (importantProp)
-            _sectionCompleted = true;
+            _sectionCompleted = true; 
 
         VirgilHandler();
     }

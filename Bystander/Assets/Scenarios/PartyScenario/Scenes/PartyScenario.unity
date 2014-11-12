@@ -190,8 +190,9 @@ GameObject:
   - 4: {fileID: 558140303}
   - 114: {fileID: 558140305}
   - 65: {fileID: 558140304}
+  - 111: {fileID: 558140306}
   m_Layer: 0
-  m_Name: DefaultProp2
+  m_Name: Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,6 +235,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
+  HasDialog: 0
+  HasMultipleSteps: 0
+  MaxClicks: 0
+  MySFX: {fileID: 0}
+--- !u!111 &558140306
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 558140302}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 504c2d2ae3d1f2149a9f315a1c5d813f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 504c2d2ae3d1f2149a9f315a1c5d813f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1015685479
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,8 +410,9 @@ GameObject:
   - 4: {fileID: 1438432001}
   - 114: {fileID: 1438432000}
   - 65: {fileID: 1438431999}
+  - 111: {fileID: 1438432002}
   m_Layer: 0
-  m_Name: DefaultPropSp
+  m_Name: Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,6 +442,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 1
+  HasDialog: 0
+  HasMultipleSteps: 0
+  MaxClicks: 0
+  MySFX: {fileID: 0}
 --- !u!4 &1438432001
 Transform:
   m_ObjectHideFlags: 0
@@ -434,6 +459,21 @@ Transform:
   - {fileID: 1015685480}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!111 &1438432002
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1438431998}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 504c2d2ae3d1f2149a9f315a1c5d813f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 504c2d2ae3d1f2149a9f315a1c5d813f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1566230805
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,8 +484,9 @@ GameObject:
   - 4: {fileID: 1566230807}
   - 114: {fileID: 1566230806}
   - 65: {fileID: 1566230808}
+  - 111: {fileID: 1566230809}
   m_Layer: 0
-  m_Name: DefaultProp1
+  m_Name: Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -463,6 +504,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
+  HasDialog: 0
+  HasMultipleSteps: 1
+  MaxClicks: 2
+  MySFX: {fileID: 0}
 --- !u!4 &1566230807
 Transform:
   m_ObjectHideFlags: 0
@@ -488,6 +533,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.20000005, y: 1.64999998, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &1566230809
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1566230805}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 504c2d2ae3d1f2149a9f315a1c5d813f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 504c2d2ae3d1f2149a9f315a1c5d813f, type: 2}
+  - {fileID: 7400000, guid: 1b63c3a024ddb694a8222eebaab8010e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1617902217
 GameObject:
   m_ObjectHideFlags: 0

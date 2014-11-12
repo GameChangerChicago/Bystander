@@ -11,11 +11,11 @@ public class GrandMaster_SexHasManager : MonoBehaviour {
 	/*The primary job of this script is to keep track of how many sections of the 
 	 * app have been completed altogether.*/
 
-	//And to generally make sure the user is in the right part of the app at the right time
+	//And to update the gameState and make sure user is in right part of the app at the right time. 
 
-	public List<Transform> situationList = new List<Transform>();
+	public List<GameObject> situationList = new List<GameObject>();
 	private GameObject uiRoot;
-	private bool bInstantiated;
+	public bool bInstantiated;
 	private bool bUiRoot = true;
 	private CameraScript camScript;
 	private SEXHAS_STATE sexHasState;
@@ -28,8 +28,7 @@ public class GrandMaster_SexHasManager : MonoBehaviour {
 			sexHasState = value;
 		}
 	}
-
-
+		
 	void Start(){
 		sexHasState = SEXHAS_STATE.GUIDANCE_1;
 		uiRoot = GameObject.FindGameObjectWithTag ("Guidance_UI_Root");
@@ -51,10 +50,10 @@ public class GrandMaster_SexHasManager : MonoBehaviour {
 				bUiRoot = false;
 			}
 			if (!bInstantiated) {
-				foreach(Transform situation in situationList){
-					situation.Destroy;
-				}
-				Instantiate (situationList [0], new Vector3 (0, -12, 0), Quaternion.identity);
+				//foreach(GameObject situation in situationList){
+				GameObject.Destroy (situationList [0]);
+				//}
+				situationList [0] = (GameObject) Instantiate (situationList [0], new Vector3 (0, -12, 0), Quaternion.identity);
 				camScript.moveToPanel ();
 				bInstantiated = true;
 			}
@@ -64,19 +63,19 @@ public class GrandMaster_SexHasManager : MonoBehaviour {
 			camScript.moveToSituHall ();
 			break;
 		case SEXHAS_STATE.BLACKTOP:
-			Debug.Log (" Inside Hall state.");
+			Debug.Log (" Inside Blacktop state.");
 			camScript.moveToSituBlackTop();
 			break;
 		case SEXHAS_STATE.CLASS:
-			Debug.Log (" Inside Hall state.");
+			Debug.Log (" Inside class state.");
 			camScript.moveToSituClass ();
 			break;
 		case SEXHAS_STATE.BATHRM:
-			Debug.Log (" Inside Hall state.");
+			Debug.Log (" Inside bathrm state.");
 			camScript.moveToSituBthrm ();
 			break;
 		case SEXHAS_STATE.CAF:
-			Debug.Log (" Inside Hall state.");
+			Debug.Log (" Inside caf state.");
 			camScript.moveToSituCaf();
 			break;
 		default:

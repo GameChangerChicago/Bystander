@@ -23,15 +23,14 @@ public class FaithScript : MonoBehaviour {
 	
 	public void displayCorrectDialogue(){
 		faithLinesCounter++;
-		Debug.Log (faithLinesCounter);
 		string temp = null;
 
-		if (faithLinesCounter > 14) {
+		if (faithLinesCounter > 12) {
 			//Move on to next scene
 			Debug.Log ("Should be sending new state to GrandManaager");
 			GrandMaster_SexHasManager sexHasManagerScript = GameObject.FindGameObjectWithTag ("GameManagerOBJ").GetComponent ("GrandMaster_SexHasManager") as GrandMaster_SexHasManager;
 			sexHasManagerScript.SexHasState = SEXHAS_STATE.PANEL;
-
+			faithLinesCounter = 0;
 		}
 
 		if (faithLines.TryGetValue(faithLinesCounter, out temp)) {

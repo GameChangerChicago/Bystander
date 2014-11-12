@@ -28,6 +28,10 @@ public class SteveScript : MonoBehaviour {
 		steveLinesCounter++;
 		string temp = null;
 
+		if (steveLinesCounter > 11) {
+			steveLinesCounter = 0;
+		}
+
 		if (steveLines.TryGetValue(steveLinesCounter, out temp)) {
 			mySpeechText.text = steveLines [steveLinesCounter];
 		}

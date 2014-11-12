@@ -13,7 +13,6 @@ public class CameraScript : MonoBehaviour {
 		transform.position = Vector3.Lerp (transform.position, target, speed * Time.deltaTime);
 	}
 
-
 	public void moveBackToGuidance(){
 		target = new Vector3(0, 0, -10);
 	}

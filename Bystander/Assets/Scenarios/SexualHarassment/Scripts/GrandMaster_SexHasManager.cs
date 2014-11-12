@@ -41,7 +41,7 @@ public class GrandMaster_SexHasManager : MonoBehaviour {
 			Debug.Log (" Inside guidance1 state." + sexHasState);
 			uiRoot.SetActive (true);
 			bUiRoot = true;
-			camScript.moveBackToGuidance ();
+			camScript.moveBackToGuidance();
 			break;
 		case SEXHAS_STATE.PANEL:
 			Debug.Log (" Inside guidance2 state.");

@@ -3,12 +3,11 @@ using System.Collections;
 
 public class MoveToNextScene : MonoBehaviour {
 
-
-	//int rand1 = Random.Range(0,2);
+	public SEXHAS_STATE gameState;
 
 	void OnMouseDown(){
 		Debug.Log ("Should be moving to new scene.");
-		CameraScript camScript = Camera.main.GetComponent ("CameraScript") as CameraScript;
-		camScript.moveToSitu1 ();
+		GrandMaster_SexHasManager sexHasManagerScript = GameObject.FindGameObjectWithTag ("GameManagerOBJ").GetComponent ("GrandMaster_SexHasManager") as GrandMaster_SexHasManager;
+		sexHasManagerScript.SexHasState = gameState;
 	}
 }

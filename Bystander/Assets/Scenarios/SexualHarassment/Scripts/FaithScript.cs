@@ -28,9 +28,10 @@ public class FaithScript : MonoBehaviour {
 
 		if (faithLinesCounter > 14) {
 			//Move on to next scene
-			Debug.Log ("Should be accessing camera");
-			CameraScript camScript = Camera.main.GetComponent ("CameraScript") as CameraScript;
-			camScript.moveToPanel ();
+			Debug.Log ("Should be sending new state to GrandManaager");
+			GrandMaster_SexHasManager sexHasManagerScript = GameObject.FindGameObjectWithTag ("GameManagerOBJ").GetComponent ("GrandMaster_SexHasManager") as GrandMaster_SexHasManager;
+			sexHasManagerScript.SexHasState = SEXHAS_STATE.PANEL;
+
 		}
 
 		if (faithLines.TryGetValue(faithLinesCounter, out temp)) {

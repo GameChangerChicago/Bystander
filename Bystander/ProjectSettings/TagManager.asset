@@ -4,6 +4,7 @@
 TagManager:
   tags:
   - Guidance_UI_Root
+  - GameManagerOBJ
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -45,6 +46,10 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: Characters
+    userID: 4
+    uniqueID: 100842567
     locked: 0
   - name: SpeechBubbles
     userID: 3

@@ -8,43 +8,33 @@ public class CameraScript : MonoBehaviour {
 	private float slideAmt = 12.0f;
 	public static readonly float speed = 3.0f;
 
-	private bool bMoveToPanel;
-	private bool bMoveToSitu1;
-	private bool bMoveToSitu2;
-	private bool bMoveToSitu3;
-
 
 	void Update(){
-		if (bMoveToPanel) {
-			transform.position = Vector3.Lerp (transform.position, target, speed * Time.deltaTime);
-		}
-		else if (bMoveToSitu1) {
-			transform.position = Vector3.Lerp (transform.position, target, speed * Time.deltaTime);
-		}
-		else if (bMoveToSitu2) {
-			transform.position = Vector3.Lerp (transform.position, target, speed * Time.deltaTime);
-		}
-		else if (bMoveToSitu3) {
-			transform.position = Vector3.Lerp (transform.position, target, speed * Time.deltaTime);
-		}
+		transform.position = Vector3.Lerp (transform.position, target, speed * Time.deltaTime);
 	}
 
-
-
-	public void moveToPanel(){
-		bMoveToPanel = true;
-		target = new Vector3 (0, -12, -10);
-	}
-
-	public void moveToSitu1(){
-		bMoveToPanel = false;
-		bMoveToSitu1 = true;
-		target = new Vector3(0,-24,-10);
-	}
 
 	public void moveBackToGuidance(){
 		target = new Vector3(0, 0, -10);
-		transform.position = Vector3.Lerp(transform.position, target, speed*Time.deltaTime);
+	}
 
+	public void moveToPanel(){
+		target = new Vector3 (0, -12, -10);
+	}
+		
+	public void moveToSituHall(){
+		target = new Vector3(0,-24,-10);
+	}
+	public void moveToSituBlackTop(){
+		target = new Vector3(0,-36,-10);
+	}
+	public void moveToSituClass(){
+		target = new Vector3(0,-48,-10);
+	}
+	public void moveToSituBthrm(){
+		target = new Vector3(0,-60,-10);
+	}
+	public void moveToSituCaf(){
+		target = new Vector3(0,-72,-10);
 	}
 }

@@ -19,12 +19,19 @@ public class FaithScript : MonoBehaviour {
 		faithLines.Add (8, "I don't know if I should. dklajlksdjflkajdlksfjlkadf"); 
 		faithLines.Add (10,"It's not so simple."); 
 		faithLines.Add (12, "It's subtle. But it's there. It's everywhere. See for yourself."); 
-
 	}
 	
 	public void displayCorrectDialogue(){
 		faithLinesCounter++;
+		Debug.Log (faithLinesCounter);
 		string temp = null;
+
+		if (faithLinesCounter > 14) {
+			//Move on to next scene
+			Debug.Log ("Should be accessing camera");
+			CameraScript camScript = Camera.main.GetComponent ("CameraScript") as CameraScript;
+			camScript.moveToPanel ();
+		}
 
 		if (faithLines.TryGetValue(faithLinesCounter, out temp)) {
 			mySpeechText.text = faithLines [faithLinesCounter];

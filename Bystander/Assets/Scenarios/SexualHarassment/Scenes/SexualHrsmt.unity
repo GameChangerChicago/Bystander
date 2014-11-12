@@ -279,6 +279,8 @@ GameObject:
   - 212: {fileID: 33577360}
   - 61: {fileID: 33577362}
   - 114: {fileID: 33577363}
+  - 114: {fileID: 33577364}
+  - 114: {fileID: 33577365}
   m_Layer: 0
   m_Name: Hallway_Panel
   m_TagString: Untagged
@@ -315,8 +317,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 33577359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.60001421, y: 2.06098437, z: 0}
-  m_LocalScale: {x: 1.1757673, y: 1.62861264, z: 1}
+  m_LocalPosition: {x: -3.868433, y: 1.797019, z: 0}
+  m_LocalScale: {x: 1.01151001, y: 1.40109241, z: 1}
   m_Children: []
   m_Father: {fileID: 859139018}
   m_RootOrder: 0
@@ -344,6 +346,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySituationToLoad: {fileID: 0}
   target: {fileID: 1985092185}
+--- !u!114 &33577364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33577359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda9c83499b884cc49142b0ca5f203a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &33577365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33577359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda9c83499b884cc49142b0ca5f203a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &292342260
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,8 +390,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 292342260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.58439159, y: -2.48626232, z: 0}
-  m_LocalScale: {x: .63994199, y: 1.98493898, z: 1.12414241}
+  m_LocalPosition: {x: -5.35889196, y: -2.00203419, z: 0}
+  m_LocalScale: {x: .508655965, y: 1.57772291, z: .893521249}
   m_Children: []
   m_Father: {fileID: 1845043386}
   m_RootOrder: 4
@@ -723,6 +747,7 @@ GameObject:
   - 92: {fileID: 467186257}
   - 124: {fileID: 467186256}
   - 81: {fileID: 467186255}
+  - 114: {fileID: 467186260}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -790,11 +815,22 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467186254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -24, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &467186260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 467186254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a3952d639714f3f8cbaffce8d37f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &489989143
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,7 +890,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 527047495}
   m_Layer: 0
-  m_Name: ObjectHolder
+  m_Name: Temp_ObjectHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,6 +919,7 @@ GameObject:
   - 212: {fileID: 610370637}
   - 61: {fileID: 610370639}
   - 114: {fileID: 610370640}
+  - 114: {fileID: 610370641}
   m_Layer: 0
   m_Name: BlackTop_Panel
   m_TagString: Untagged
@@ -919,8 +956,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 610370636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0255097337, y: 2.04282928, z: 0}
-  m_LocalScale: {x: .889535904, y: 1.60460329, z: 1}
+  m_LocalPosition: {x: .0669999123, y: 1.78138256, z: 0}
+  m_LocalScale: {x: .765265763, y: 1.38043702, z: 1}
   m_Children: []
   m_Father: {fileID: 859139018}
   m_RootOrder: 1
@@ -948,6 +985,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySituationToLoad: {fileID: 0}
   target: {fileID: 1069335049}
+--- !u!114 &610370641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 610370636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda9c83499b884cc49142b0ca5f203a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &733622032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,6 +1150,7 @@ GameObject:
   - 212: {fileID: 804867512}
   - 61: {fileID: 804867514}
   - 114: {fileID: 804867515}
+  - 114: {fileID: 804867516}
   m_Layer: 0
   m_Name: Cafeteria_Panel
   m_TagString: Untagged
@@ -1138,8 +1187,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 804867511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.59759855, y: -.0616583973, z: 0}
-  m_LocalScale: {x: 1.2407341, y: 3.45499468, z: 1}
+  m_LocalPosition: {x: 4.04426622, y: -.0290994644, z: 0}
+  m_LocalScale: {x: 1.06740129, y: 2.9723258, z: 1}
   m_Children: []
   m_Father: {fileID: 859139018}
   m_RootOrder: 4
@@ -1167,6 +1216,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySituationToLoad: {fileID: 0}
   target: {fileID: 1942252871}
+--- !u!114 &804867516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 804867511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda9c83499b884cc49142b0ca5f203a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &809304936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,8 +1572,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1011559730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.43447781, y: -2.54340005, z: 0}
-  m_LocalScale: {x: 1.44723296, y: 4.03002024, z: 1.12414241}
+  m_LocalPosition: {x: -1.26549816, y: -2.04744911, z: 0}
+  m_LocalScale: {x: 1.15032887, y: 3.20324969, z: .893521249}
   m_Children: []
   m_Father: {fileID: 1845043386}
   m_RootOrder: 2
@@ -1570,8 +1630,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1069335049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0297552496, y: 2.29153585, z: 0}
-  m_LocalScale: {x: 1.03758395, y: 1.87166202, z: 1.12414241}
+  m_LocalPosition: {x: -.148958534, y: 1.79558563, z: 0}
+  m_LocalScale: {x: .824720502, y: 1.48768497, z: .893521249}
   m_Children: []
   m_Father: {fileID: 1845043386}
   m_RootOrder: 1
@@ -1816,6 +1876,7 @@ GameObject:
   - 212: {fileID: 1566439397}
   - 61: {fileID: 1566439399}
   - 114: {fileID: 1566439400}
+  - 114: {fileID: 1566439401}
   m_Layer: 0
   m_Name: Classroom_Panel
   m_TagString: Untagged
@@ -1852,8 +1913,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1566439396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.64489603, y: -2.05324626, z: 0}
-  m_LocalScale: {x: .548632026, y: 1.7017175, z: 1}
+  m_LocalPosition: {x: -4.76734829, y: -1.74244785, z: 0}
+  m_LocalScale: {x: .471987009, y: 1.46398437, z: 1}
   m_Children: []
   m_Father: {fileID: 859139018}
   m_RootOrder: 2
@@ -1881,6 +1942,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySituationToLoad: {fileID: 0}
   target: {fileID: 292342260}
+--- !u!114 &1566439401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1566439396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda9c83499b884cc49142b0ca5f203a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1660710310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,8 +2319,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1942252871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.36278915, y: -.163208246, z: 0}
-  m_LocalScale: {x: 1.44723296, y: 4.03002024, z: 1.12414241}
+  m_LocalPosition: {x: 4.13728952, y: -.155560493, z: 0}
+  m_LocalScale: {x: 1.15032887, y: 3.20324969, z: .893521249}
   m_Children: []
   m_Father: {fileID: 1845043386}
   m_RootOrder: 3
@@ -2274,8 +2346,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1985092185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2969532, y: 2.28982353, z: 0}
-  m_LocalScale: {x: 1.371454, y: 1.8996681, z: 1.12414241}
+  m_LocalPosition: {x: -4.3355751, y: 1.79422379, z: 0}
+  m_LocalScale: {x: 1.09009612, y: 1.50994551, z: .893521249}
   m_Children: []
   m_Father: {fileID: 1845043386}
   m_RootOrder: 0
@@ -2290,6 +2362,7 @@ GameObject:
   - 212: {fileID: 2115275690}
   - 61: {fileID: 2115275692}
   - 114: {fileID: 2115275693}
+  - 114: {fileID: 2115275694}
   m_Layer: 0
   m_Name: Bathroom_Panel
   m_TagString: Untagged
@@ -2326,8 +2399,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2115275689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.28530049, y: -2.04162097, z: 0}
-  m_LocalScale: {x: 1.49642193, y: 1.70147264, z: 1}
+  m_LocalPosition: {x: -1.01679802, y: -1.73244572, z: 0}
+  m_LocalScale: {x: 1.28736866, y: 1.46377325, z: 1}
   m_Children: []
   m_Father: {fileID: 859139018}
   m_RootOrder: 3
@@ -2355,3 +2428,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySituationToLoad: {fileID: 0}
   target: {fileID: 1011559730}
+--- !u!114 &2115275694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115275689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda9c83499b884cc49142b0ca5f203a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

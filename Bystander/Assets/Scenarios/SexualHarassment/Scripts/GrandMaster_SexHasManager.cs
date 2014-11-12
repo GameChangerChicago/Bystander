@@ -10,5 +10,4 @@ public class GrandMaster_SexHasManager : MonoBehaviour {
 
 
 
-
 }

@@ -31,12 +31,15 @@ public class PartyGameManager : MonoBehaviour
         VirgilHandler();
     }
 
-    public IEnumerator PlayerClicked(bool importantProp, string dialog, int dialogCount)
+    public void DialogHandler(bool importantProp, string dialog, int dialogCount)
     {
         string currentString = "";
 
         if (importantProp)
             _sectionCompleted = true;
+
+        if (dialog.Length == _stringIndex)
+            _stringsShown++;
 
         for (int i = _stringIndex; i < dialog.Length; i++)
         {
@@ -51,14 +54,12 @@ public class PartyGameManager : MonoBehaviour
 
                 if (_usingBox1)
                 {
-                    Debug.Log(currentString);
                     DialogBox1.GetComponent<TextMesh>().text = currentString;
                     DialogBox1.GetComponent<Renderer>().enabled = true;
                     DialogBox1.GetComponentInChildren<SpriteRenderer>().enabled = true;
                 }
                 else
                 {
-                    Debug.Log(currentString);
                     DialogBox2.GetComponent<TextMesh>().text = currentString;
                     DialogBox2.GetComponent<Renderer>().enabled = true;
                     DialogBox2.GetComponentInChildren<SpriteRenderer>().enabled = true;
@@ -70,16 +71,13 @@ public class PartyGameManager : MonoBehaviour
             }
         }
 
-        Debug.Log(dialogCount + " " + _stringsShown);
-
-        if (dialogCount == _stringsShown)
+        if (dialogCount < _stringsShown)
         {
             _clickCount++;
             DialogBox1.GetComponent<Renderer>().enabled = false;
             DialogBox1.GetComponentInChildren<SpriteRenderer>().enabled = false;
             DialogBox2.GetComponent<Renderer>().enabled = false;
             DialogBox2.GetComponentInChildren<SpriteRenderer>().enabled = false;
-            yield return new WaitForSeconds(3);
             VirgilHandler();
             _stringIndex = 0;
         }

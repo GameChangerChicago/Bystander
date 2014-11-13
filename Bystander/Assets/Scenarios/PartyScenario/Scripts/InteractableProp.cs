@@ -38,6 +38,6 @@ public class InteractableProp : MonoBehaviour
         if (!HasDialog)
             StartCoroutine(_myGameManager.PlayerClicked(ImportantProp, animation.clip.length));
         else
-            StartCoroutine(_myGameManager.PlayerClicked(ImportantProp, _dialog, DialogSections));
+            _myGameManager.DialogHandler(ImportantProp, _dialog, DialogSections);
     }
 }

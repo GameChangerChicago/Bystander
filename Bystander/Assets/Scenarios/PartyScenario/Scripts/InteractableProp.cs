@@ -23,21 +23,21 @@ public class InteractableProp : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (HasMultipleSteps)
+        if (MaxClicks != _myClickCount)
         {
-            if (MaxClicks != _myClickCount)
+            if (HasMultipleSteps)
             {
                 animation.clip = animation.GetClip(this.name + _myClickCount);
                 _myClickCount++;
                 animation.Play();
             }
-        }
-        else
-            animation.Play();
+            else
+                animation.Play();
 
-        if (!HasDialog)
-            StartCoroutine(_myGameManager.PlayerClicked(ImportantProp, animation.clip.length));
-        else
-            _myGameManager.DialogHandler(ImportantProp, _dialog, DialogSections);
+            if (!HasDialog)
+                StartCoroutine(_myGameManager.PlayerClicked(ImportantProp, animation.clip.length));
+            else
+                _myGameManager.DialogHandler(ImportantProp, _dialog, DialogSections);
+        }
     }
 }

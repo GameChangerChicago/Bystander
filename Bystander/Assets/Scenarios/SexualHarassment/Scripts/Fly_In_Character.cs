@@ -1,18 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Panel_Script : MonoBehaviour {
+public class Fly_In_Character : MonoBehaviour {
 
 	public GameObject target;
-	public static readonly float offset = 20.0f;
 	private float speed;
-	private Vector3 newPosition;
 
 	void Start(){
 		int rand1 = Random.Range(0,2);
-		float rand2 = Random.Range(10f,500f);
-
-		speed = 3.0f;
+		float rand2 = Random.Range(10f,50f);
+		speed = 30.0f;
 
 		if (rand1 == 0) {
 			transform.position = new Vector3 (transform.position.x + rand2, transform.position.y, 0);
@@ -20,12 +17,10 @@ public class Panel_Script : MonoBehaviour {
 		else
 			transform.position = new Vector3 (transform.position.x, transform.position.y+ rand2, 0);
 	}
-		
+
 	void Update(){
-		transform.position = Vector3.Lerp(transform.position, target.transform.position, speed*Time.deltaTime);
+		transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
 	}
 
-	void OnMouseDown(){
-	}
-		
+
 }

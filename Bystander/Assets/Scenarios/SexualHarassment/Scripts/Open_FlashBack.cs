@@ -17,12 +17,10 @@ public class Open_FlashBack : MonoBehaviour {
 
 		mouseCounter++;
 
-		if (mouseCounter%2 ==1) {
+		if (mouseCounter%2 ==1) 
 			myFlashBack.renderer.enabled = true;
-		}
 		else
 			myFlashBack.renderer.enabled = false;
-
 	}
 
 }

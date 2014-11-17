@@ -16,6 +16,19 @@ public class GrandMaster_SexHasManager : MonoBehaviour {
 	public List<GameObject> situationList = new List<GameObject>();
 	private GameObject uiRoot;
 	public bool bInstantiated;
+	public bool bHallInstantitated;
+	public bool bBlckInstantitated;
+	public bool bClassInstantitated;
+	public bool bBathInstantitated;
+	public bool bCafInstantitated;
+
+	public static readonly Vector3 panelSpot = new Vector3 (0, -12, 0);
+	public static readonly Vector3 hallSpot = new Vector3 (0, -24, 0);
+	public static readonly Vector3 blckSpot = new Vector3 (0, -36, 0);
+	public static readonly Vector3 classSpot = new Vector3 (0, -48, 0);
+	public static readonly Vector3 bthrmSpot = new Vector3 (0, -60, 0);
+	public static readonly Vector3 cafSpot = new Vector3 (0, -72, 0);
+
 	private bool bUiRoot = true;
 	private CameraScript camScript;
 	private SEXHAS_STATE sexHasState;
@@ -50,21 +63,29 @@ public class GrandMaster_SexHasManager : MonoBehaviour {
 				bUiRoot = false;
 			}
 			if (!bInstantiated) {
-				//foreach(GameObject situation in situationList){
 				GameObject.Destroy (situationList [0]);
-				//}
-				situationList [0] = (GameObject) Instantiate (situationList [0], new Vector3 (0, -12, 0), Quaternion.identity);
+				situationList [0] = (GameObject) Instantiate (situationList [0], panelSpot, Quaternion.identity);
 				camScript.moveToPanel ();
 				bInstantiated = true;
 			}
 			break;
 		case SEXHAS_STATE.HALL:
-			Debug.Log (" Inside Hall state.");
-			camScript.moveToSituHall ();
+			if (!bHallInstantitated) {
+				Debug.Log (" Inside Hall state.");
+				GameObject.Destroy (situationList [1]);
+				situationList [1] = (GameObject) Instantiate (situationList [1], hallSpot, Quaternion.identity);
+				camScript.moveToSituHall ();
+				bHallInstantitated = true;
+			} 
 			break;
 		case SEXHAS_STATE.BLACKTOP:
-			Debug.Log (" Inside Blacktop state.");
-			camScript.moveToSituBlackTop();
+			if (!bBlckInstantitated) {
+				GameObject.Destroy (situationList [2]);
+				situationList [2] = (GameObject) Instantiate (situationList [2], blckSpot, Quaternion.identity);
+				Debug.Log (" Inside Blacktop state.");
+				camScript.moveToSituBlackTop ();
+				bBlckInstantitated = true;
+			}
 			break;
 		case SEXHAS_STATE.CLASS:
 			Debug.Log (" Inside class state.");

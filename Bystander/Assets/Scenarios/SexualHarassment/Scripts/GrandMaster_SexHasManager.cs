@@ -88,8 +88,13 @@ public class GrandMaster_SexHasManager : MonoBehaviour {
 			}
 			break;
 		case SEXHAS_STATE.CLASS:
-			Debug.Log (" Inside class state.");
-			camScript.moveToSituClass ();
+			if (!bClassInstantitated) {
+				Debug.Log (" Inside class state.");
+				camScript.moveToSituClass ();
+				GameObject.Destroy (situationList [3]);
+				situationList [3] = (GameObject) Instantiate (situationList [3], classSpot, Quaternion.identity);
+				bClassInstantitated = true;
+			}
 			break;
 		case SEXHAS_STATE.BATHRM:
 			Debug.Log (" Inside bathrm state.");

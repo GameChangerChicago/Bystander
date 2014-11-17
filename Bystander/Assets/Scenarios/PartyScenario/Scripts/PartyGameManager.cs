@@ -31,9 +31,10 @@ public class PartyGameManager : MonoBehaviour
         VirgilHandler();
     }
 
-    public void DialogHandler(bool importantProp, string dialog, int dialogCount)
+    public bool DialogHandler(bool importantProp, string dialog, int dialogCount, Vector3 orriginalSize, BoxCollider myCollider)
     {
         string currentString = "";
+        myCollider.size = new Vector3(50, 50, 2);
 
         if (importantProp)
             _sectionCompleted = true;
@@ -80,7 +81,11 @@ public class PartyGameManager : MonoBehaviour
             DialogBox2.GetComponentInChildren<SpriteRenderer>().enabled = false;
             VirgilHandler();
             _stringIndex = 0;
+            myCollider.size = orriginalSize;
+            return true;
         }
+        else
+            return false;
     }
 
     private void StringFormatter(string lineContent)

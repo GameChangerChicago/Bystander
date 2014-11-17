@@ -54,13 +54,13 @@ public class PartyGameManager : MonoBehaviour
 
                 if (_usingBox1)
                 {
-                    DialogBox1.GetComponent<TextMesh>().text = currentString;
+                    StringFormatter(currentString);
                     DialogBox1.GetComponent<Renderer>().enabled = true;
                     DialogBox1.GetComponentInChildren<SpriteRenderer>().enabled = true;
                 }
                 else
                 {
-                    DialogBox2.GetComponent<TextMesh>().text = currentString;
+                    StringFormatter(currentString);
                     DialogBox2.GetComponent<Renderer>().enabled = true;
                     DialogBox2.GetComponentInChildren<SpriteRenderer>().enabled = true;
                 }
@@ -80,6 +80,66 @@ public class PartyGameManager : MonoBehaviour
             DialogBox2.GetComponentInChildren<SpriteRenderer>().enabled = false;
             VirgilHandler();
             _stringIndex = 0;
+        }
+    }
+
+    private void StringFormatter(string lineContent)
+    {
+        string currentWord = "";
+        bool isFirstWord = true;
+        Renderer currentRenderer;
+
+        if (_usingBox1)
+        {
+            currentRenderer = DialogBox1.GetComponent<Renderer>();
+            DialogBox1.GetComponent<TextMesh>().text = currentWord;
+        }
+        else
+        {
+            currentRenderer = DialogBox2.GetComponent<Renderer>();
+            DialogBox2.GetComponent<TextMesh>().text = currentWord;
+        }
+
+        for (int i = 0; i < lineContent.Length; i++)
+        {
+            if (lineContent[i] != ' ')
+            {
+                currentWord = currentWord + lineContent[i];
+            }
+            else
+            {
+                if (isFirstWord)
+                {
+                    if (_usingBox1)
+                        DialogBox1.GetComponent<TextMesh>().text = DialogBox1.GetComponent<TextMesh>().text + currentWord;
+                    else
+                        DialogBox2.GetComponent<TextMesh>().text = DialogBox2.GetComponent<TextMesh>().text + currentWord;
+
+                    isFirstWord = false;
+                }
+                else
+                {
+                    if(_usingBox1)
+                        DialogBox1.GetComponent<TextMesh>().text = DialogBox1.GetComponent<TextMesh>().text + " " + currentWord;
+                    else
+                        DialogBox2.GetComponent<TextMesh>().text = DialogBox2.GetComponent<TextMesh>().text + " " + currentWord;
+                }
+
+                if (currentRenderer.bounds.extents.x > 5f)
+                {
+                    if (_usingBox1)
+                    {
+                        DialogBox1.GetComponent<TextMesh>().text = DialogBox1.GetComponent<TextMesh>().text.Remove(DialogBox1.GetComponent<TextMesh>().text.Length - (currentWord.Length + 1));
+                        DialogBox1.GetComponent<TextMesh>().text = DialogBox1.GetComponent<TextMesh>().text + "\n" + currentWord;
+                    }
+                    else
+                    {
+                        DialogBox2.GetComponent<TextMesh>().text = DialogBox2.GetComponent<TextMesh>().text.Remove(DialogBox2.GetComponent<TextMesh>().text.Length - (currentWord.Length + 1));
+                        DialogBox2.GetComponent<TextMesh>().text = DialogBox2.GetComponent<TextMesh>().text + "\n" + currentWord;
+                    }
+                }
+                currentWord = "";
+            }
         }
     }
 

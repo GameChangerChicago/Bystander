@@ -10,6 +10,7 @@ public class PointOfInterest : MonoBehaviour
     public GameObject MyMiniComic;
     public Transform InstantiationTransform;
     public float ComicViewTime;
+    public bool isSexualHarassment;
 
     void Start()
     {
@@ -39,5 +40,23 @@ public class PointOfInterest : MonoBehaviour
         GameObject quiz = GameObject.Find("Quiz");
         Destroy(_myMiniComic);
         quiz.transform.position = InstantiationTransform.position;
+
+        foreach (QuizButton qb in quiz.GetComponentsInChildren<QuizButton>())
+        {
+            if (isSexualHarassment)
+            {
+                if (qb.name == "Answer Yes")
+                    qb.CorrectAnswer = true;
+                else
+                    qb.CorrectAnswer = false;
+            }
+            else
+            {
+                if (qb.name == "Answer Yes")
+                    qb.CorrectAnswer = false;
+                else
+                    qb.CorrectAnswer = true;
+            }
+        }
     }
 }

@@ -892,9 +892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e46c84c18a3265439a620feb1ed01e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyMiniComic: {fileID: 100000, guid: b7e4968a621052f47b93c624d79ac042, type: 2}
   InstantiationTransform: {fileID: 860987222}
-  ComicViewTime: .100000001
+  ComicViewTime: 3
   isSexualHarassment: 1
 --- !u!65 &2135517880
 BoxCollider:

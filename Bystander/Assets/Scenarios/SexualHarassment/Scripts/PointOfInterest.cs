@@ -9,7 +9,8 @@ public class PointOfInterest : MonoBehaviour
     private string _virgilString;
     private bool _comicShown = false;
 
-    public GameObject MyMiniComic;
+    protected GameObject myMiniComic;
+
     public Transform InstantiationTransform;
     public float ComicViewTime;
     public bool isSexualHarassment;
@@ -19,6 +20,7 @@ public class PointOfInterest : MonoBehaviour
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         _virgilString = Resources.Load("SHText/VirgilDialog_" + this.name).ToString();
+        myMiniComic = Resources.Load("Prefabs/MiniComic_" + this.name) as GameObject;
     }
 
     void OnMouseDown()
@@ -30,7 +32,7 @@ public class PointOfInterest : MonoBehaviour
     private void ShowComic()
     {
         _comicShown = true;
-        _myMiniComic = (GameObject)Instantiate(MyMiniComic, InstantiationTransform.position, Quaternion.identity);
+        _myMiniComic = (GameObject)Instantiate(myMiniComic, InstantiationTransform.position, Quaternion.identity);
         Invoke("ShowQuiz", ComicViewTime);
     }
 

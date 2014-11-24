@@ -4,7 +4,9 @@ using System.Collections;
 public class PointOfInterest : MonoBehaviour
 {
     private SHGameManager _myGameManager;
+    private SHVigilHandler _myVirgil;
     private GameObject _myMiniComic;
+    private string _virgilString;
     private bool _comicShown = false;
 
     public GameObject MyMiniComic;
@@ -15,11 +17,8 @@ public class PointOfInterest : MonoBehaviour
     void Start()
     {
         _myGameManager = FindObjectOfType<SHGameManager>();
-    }
-
-    void Update()
-    {
-
+        _myVirgil = FindObjectOfType<SHVigilHandler>();
+        _virgilString = Resources.Load("SHText/VirgilDialog_" + this.name).ToString();
     }
 
     void OnMouseDown()
@@ -40,6 +39,7 @@ public class PointOfInterest : MonoBehaviour
         GameObject quiz = GameObject.Find("Quiz");
         Destroy(_myMiniComic);
         quiz.transform.position = InstantiationTransform.position;
+        _myVirgil.DialogString = _virgilString;
 
         foreach (QuizButton qb in quiz.GetComponentsInChildren<QuizButton>())
         {

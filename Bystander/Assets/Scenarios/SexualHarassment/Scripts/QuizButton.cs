@@ -4,6 +4,7 @@ using System.Collections;
 public class QuizButton : MonoBehaviour
 {
     private SHGameManager _myGameManager;
+    private SHVigilHandler _myVirgil;
     private GameObject _myQuiz;
 
     public bool CorrectAnswer;
@@ -11,15 +12,22 @@ public class QuizButton : MonoBehaviour
     void Start()
     {
         _myGameManager = FindObjectOfType<SHGameManager>();
+        _myVirgil = FindObjectOfType<SHVigilHandler>();
         _myQuiz = this.transform.parent.gameObject;
     }
 
     void OnMouseDown()
     {
         if (CorrectAnswer)
-            Debug.Log("Good Job!");
+        {
+            _myVirgil.IsCorrect = true;
+            _myVirgil.ShowStringSegment();
+        }
         else
-            Debug.Log("You Lose!");
+        {
+            _myVirgil.IsCorrect = false;
+            _myVirgil.ShowStringSegment();
+        }
 
         _myQuiz.transform.position = new Vector3(0, 0, 500);
     }

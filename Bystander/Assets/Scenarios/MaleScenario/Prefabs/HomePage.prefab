@@ -139,6 +139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7eb058921b64fd1a95a25414d15f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  next: {fileID: 0}
+  currentWebPage: 0
+  data: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,6 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7eb058921b64fd1a95a25414d15f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  next: {fileID: 0}
+  currentWebPage: 0
+  data: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

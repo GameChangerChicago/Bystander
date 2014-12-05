@@ -65,6 +65,7 @@ public class SHVigilHandler : MonoBehaviour
     }
     private bool _isVisible = false;
 
+    private SHGameManager _myGameManager;
     private BoxCollider _myCollider;
     private TextMesh _myText;
     private int _stringIndex,
@@ -76,6 +77,7 @@ public class SHVigilHandler : MonoBehaviour
 
     void Start()
     {
+        _myGameManager = FindObjectOfType<SHGameManager>();
         _myText = this.GetComponentInChildren<TextMesh>();
         _myCollider = this.GetComponent<BoxCollider>();
     }
@@ -94,6 +96,7 @@ public class SHVigilHandler : MonoBehaviour
             else
             {
                 isVisible = false;
+                _myGameManager.SectionComplete = true;
             }
         }
     }

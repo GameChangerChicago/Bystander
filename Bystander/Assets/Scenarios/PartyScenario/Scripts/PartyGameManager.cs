@@ -8,7 +8,7 @@ public class PartyGameManager : MonoBehaviour
     public int MaxClicks;
 
     private PartyCameraManager _myCameraManager;
-    private Virgil _virgil;
+    private PartyVirgil _virgil;
     private int _clickCount = 0,
                 _stringIndex = 0,
                 _stringsShown = 0;
@@ -18,17 +18,22 @@ public class PartyGameManager : MonoBehaviour
     void Start()
     {
         _myCameraManager = FindObjectOfType<PartyCameraManager>();
-        _virgil = FindObjectOfType<Virgil>();
+        _virgil = FindObjectOfType<PartyVirgil>();
     }
 
-    public IEnumerator PlayerClicked(bool importantProp, float animationLength)
+    void Update()
+    {
+
+    }
+
+    public void PlayerClicked(bool importantProp, bool hasDialog, float cameraTravelTime, Vector3 myPanelPos, float camSize)
     {
         _clickCount++;
         if (importantProp)
             _sectionCompleted = true;
 
-        yield return new WaitForSeconds(animationLength);
-        VirgilHandler();
+        _myCameraManager.SetCameraToMove(myPanelPos, cameraTravelTime, camSize);
+        //VirgilHandler();
     }
 
     public bool DialogHandler(bool importantProp, string dialog, int dialogCount, Vector3 orriginalSize, BoxCollider myCollider)

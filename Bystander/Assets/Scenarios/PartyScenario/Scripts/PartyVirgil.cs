@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Virgil : MonoBehaviour
+public class PartyVirgil : MonoBehaviour
 {
     private bool _successful;
 

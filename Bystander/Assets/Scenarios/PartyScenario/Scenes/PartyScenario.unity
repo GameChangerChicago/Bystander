@@ -139,8 +139,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 299629294}
   - 212: {fileID: 299629295}
+  - 111: {fileID: 299629296}
   m_Layer: 0
-  m_Name: SoloCupSprite
+  m_Name: CloseUpPanel_Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,6 +181,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 910ee8f97f325fa48b07ed81cebc9006, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!111 &299629296
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 299629293}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: d92ae148458cd38439bb84b5c4d354e3, type: 2}
+  - {fileID: 7400000, guid: a2e9f84dba1c96144919afeaebefbe51, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &364467224
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,12 +426,15 @@ MonoBehaviour:
   HasDialog: 1
   HasMultipleSteps: 0
   AnimationChanges: 0
+  HasCloseupAnimation: 0
   MaxClicks: 1
   DialogSections: 5
   CameraMoveTime: 0
   CameraSize: 0
+  ViewTime: 0
   MyPanelPos: {x: 0, y: 0, z: 0}
   MySFX: {fileID: 0}
+  CloseUpAnimation: {fileID: 0}
 --- !u!111 &558140306
 Animation:
   m_ObjectHideFlags: 0
@@ -564,7 +584,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1033707233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0ad46a493537045bc280e3d5fa8816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSize: 0
+  DefaultSize: 10
 --- !u!1 &1326328944
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +607,7 @@ GameObject:
   - 4: {fileID: 1326328946}
   - 212: {fileID: 1326328945}
   m_Layer: 0
-  m_Name: CloseupPanel_test
+  m_Name: CloseUpPanel_CupBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,12 +764,15 @@ MonoBehaviour:
   HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
+  HasCloseupAnimation: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 0
   CameraSize: 0
+  ViewTime: 0
   MyPanelPos: {x: 0, y: 0, z: 0}
   MySFX: {fileID: 0}
+  CloseUpAnimation: {fileID: 0}
 --- !u!4 &1438432001
 Transform:
   m_ObjectHideFlags: 0
@@ -861,12 +884,15 @@ MonoBehaviour:
   HasDialog: 0
   HasMultipleSteps: 1
   AnimationChanges: 1
+  HasCloseupAnimation: 1
   MaxClicks: 2
   DialogSections: 0
   CameraMoveTime: .5
   CameraSize: 3
+  ViewTime: 1.5
   MyPanelPos: {x: 7.62487984, y: 24.5047798, z: 0}
   MySFX: {fileID: 0}
+  CloseUpAnimation: {fileID: 299629296}
 --- !u!4 &1566230807
 Transform:
   m_ObjectHideFlags: 0
@@ -937,6 +963,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogBox1: {fileID: 1422580885}
   DialogBox2: {fileID: 364467224}
+  MainPanels:
+  - {fileID: 491178112}
   MaxClicks: 2
 --- !u!4 &1617902220
 Transform:
@@ -949,7 +977,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1705700852
 GameObject:
   m_ObjectHideFlags: 0

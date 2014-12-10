@@ -5,13 +5,29 @@ public class PartyGameManager : MonoBehaviour
 {
     public GameObject DialogBox1,
                       DialogBox2;
+    public Transform[] MainPanels;
     public int MaxClicks;
+
+    protected Transform currentMainPanel
+    {
+        get
+        {
+            _currentMainPanel = MainPanels[_interactableMomentCount];
+            return _currentMainPanel;
+        }
+        set
+        {
+            Debug.LogWarning("No one should be trying to set currentMainPanel");
+        }
+    }
+    private Transform _currentMainPanel;
 
     private PartyCameraManager _myCameraManager;
     private PartyVirgil _virgil;
     private int _clickCount = 0,
                 _stringIndex = 0,
-                _stringsShown = 0;
+                _stringsShown = 0,
+                _interactableMomentCount = 0;
     private bool _sectionCompleted = false,
                  _usingBox1 = true;
 
@@ -26,14 +42,26 @@ public class PartyGameManager : MonoBehaviour
 
     }
 
-    public void PlayerClicked(bool importantProp, bool hasDialog, float cameraTravelTime, Vector3 myPanelPos, float camSize)
+    public void PlayerClicked(bool importantProp, bool hasDialog, float cameraTravelTime, Vector3 myPanelPos, float camSize, float viewTime)
     {
-        _clickCount++;
+        if (!hasDialog)
+        {
+            _clickCount++;
+            StartCoroutine(_myCameraManager.ReturnCamera(currentMainPanel.position, cameraTravelTime + viewTime));
+        }
         if (importantProp)
             _sectionCompleted = true;
 
         _myCameraManager.SetCameraToMove(myPanelPos, cameraTravelTime, camSize);
         //VirgilHandler();
+    }
+
+    public IEnumerator PlayCloseUpAnimation(Animation currentAnimation, int clickCount, float WaitTime)
+    {
+        yield return new WaitForSeconds(WaitTime);
+
+        currentAnimation.clip = currentAnimation.GetClip(currentAnimation.gameObject.name + "_" + clickCount);
+        currentAnimation.Play();
     }
 
     public bool DialogHandler(bool importantProp, string dialog, int dialogCount, Vector3 orriginalSize, BoxCollider myCollider)

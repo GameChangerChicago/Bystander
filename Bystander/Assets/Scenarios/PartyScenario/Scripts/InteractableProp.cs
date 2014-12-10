@@ -6,14 +6,18 @@ public class InteractableProp : MonoBehaviour
     public bool ImportantProp,
                 HasDialog,
                 HasMultipleSteps,
-                AnimationChanges;
+                AnimationChanges,
+                HasCloseupAnimation;
     public int MaxClicks,
                DialogSections;
     public float CameraMoveTime,
-                 CameraSize;
+                 CameraSize,
+                 ViewTime;
     public Vector3 MyPanelPos;
     public AudioClip MySFX;
+    public Animation CloseUpAnimation;
 
+    private bool _firstDialog;
     private int _myClickCount = 0;
     private string _dialog;
     private PartyGameManager _myGameManager;
@@ -34,18 +38,22 @@ public class InteractableProp : MonoBehaviour
             if (HasMultipleSteps)
             {
                 animation.clip = animation.GetClip(this.name + _myClickCount);
-                _myClickCount++;
                 Invoke("ChangeAnimation", CameraMoveTime);
             }
             else if (AnimationChanges)
                 Invoke("ChangeAnimation", CameraMoveTime);
             
-            _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos, CameraSize);
+            _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos, CameraSize, ViewTime);
 
             if(HasDialog)
             {
                 if (_myGameManager.DialogHandler(ImportantProp, _dialog, DialogSections, _myInitialSize, this.GetComponent<BoxCollider>()))
                     _myClickCount++;
+            }
+            if (HasCloseupAnimation)
+            {
+                StartCoroutine(_myGameManager.PlayCloseUpAnimation(CloseUpAnimation, _myClickCount, CameraMoveTime));
+                _myClickCount++;
             }
         }
     }

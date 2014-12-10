@@ -30,6 +30,8 @@ public class PartyCameraManager : MonoBehaviour
 
         if (this.camera.orthographicSize > camSize)
             this.camera.orthographicSize -= _camSizeDiff / (camTravelTime / Time.deltaTime);
+        else if (this.camera.orthographicSize < camSize)
+            this.camera.orthographicSize += _camSizeDiff / (camTravelTime / Time.deltaTime);
     }
 
     public void SetCameraToMove(Vector3 pos, float camTravelTime, float camSize)
@@ -39,10 +41,20 @@ public class PartyCameraManager : MonoBehaviour
         _camSize = camSize;
         _camSizeDiff = this.camera.orthographicSize - camSize;
         _movingCamera = true;
-        Invoke("Test", camTravelTime);
+        Invoke("StopMoving", camTravelTime);
     }
 
-    private void Test()
+    public IEnumerator ReturnCamera(Vector3 pos, float viewTime)
+    {
+        yield return new WaitForSeconds(viewTime);
+
+        _pos = pos;
+        _camSize = DefaultSize;
+        _movingCamera = true;
+        Invoke("StopMoving", _camTravelTime);
+    }
+
+    private void StopMoving()
     {
         _movingCamera = false;
     }

@@ -39,8 +39,6 @@ public class InteractableProp : MonoBehaviour
             }
             else if (AnimationChanges)
                 Invoke("ChangeAnimation", CameraMoveTime);
-
-
             
             _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos, CameraSize);
 

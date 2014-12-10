@@ -26,8 +26,6 @@ public class InteractableProp : MonoBehaviour
     void Start()
     {
         _myGameManager = FindObjectOfType<PartyGameManager>();
-        TextAsset rawText = Resources.Load("PartyDialogText/TestDialog") as TextAsset;
-        _dialog = rawText.text;
         _myInitialSize = this.GetComponent<BoxCollider>().size;
     }
 

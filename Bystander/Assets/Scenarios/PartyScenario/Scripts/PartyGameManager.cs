@@ -59,6 +59,12 @@ public class PartyGameManager : MonoBehaviour
         _myCameraManager.SetCameraToMove(myPanelPos, _cameraTravelTime, camSize);
     }
 
+    public void InitiateDialog(string myName)
+    {
+        CloseUpConvo currentCloseUpConvo = GameObject.Find("CloseUpPanel_" + myName).GetComponent<CloseUpConvo>();
+        currentCloseUpConvo.DialogHandler(_cameraTravelTime);
+    }
+
     public void FinishDialog()
     {
         _clickCount++;

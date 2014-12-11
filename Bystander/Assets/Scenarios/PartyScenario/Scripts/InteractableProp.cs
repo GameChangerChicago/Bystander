@@ -13,7 +13,7 @@ public class InteractableProp : MonoBehaviour
     public float CameraMoveTime,
                  CameraSize,
                  ViewTime;
-    public Vector3 MyPanelPos;
+    public Transform MyPanelPos;
     public AudioClip MySFX;
     public Animation CloseUpAnimation;
 
@@ -41,12 +41,11 @@ public class InteractableProp : MonoBehaviour
             else if (AnimationChanges)
                 Invoke("ChangeAnimation", CameraMoveTime);
             
-            _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos, CameraSize, ViewTime);
+            _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos.position, CameraSize, ViewTime);
 
             if(HasDialog)
             {
-                if (_myGameManager.DialogHandler(ImportantProp, _dialog, DialogSections, _myInitialSize, this.GetComponent<BoxCollider>()))
-                    _myClickCount++;
+                _myGameManager.InitiateDialog(this.name);
             }
             if (HasCloseupAnimation)
             {

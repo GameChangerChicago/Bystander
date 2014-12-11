@@ -5,6 +5,7 @@ public class CloseUpConvo : MonoBehaviour
 {
     public int DialogSections;
     public GameObject DialogBox;
+    public Transform[] DialogBoxLocations;
 
     private int _stringsShown,
                 _stringIndex;
@@ -20,21 +21,23 @@ public class CloseUpConvo : MonoBehaviour
 
     void OnMouseDown()
     {
-        DialogHandler(_dialog, DialogSections);
+        DialogHandler(0);
     }
 
-    public void DialogHandler(string dialog, int dialogCount)
+    public IEnumerator DialogHandler(float waitTime)
     {
+        yield return new WaitForSeconds(waitTime);
+
         string currentString = "";
 
-        if (dialog.Length == _stringIndex)
+        if (_dialog.Length == _stringIndex)
             _stringsShown++;
 
-        for (int i = _stringIndex; i < dialog.Length; i++)
+        for (int i = _stringIndex; i < _dialog.Length; i++)
         {
-            if (dialog[i] != '|')
+            if (_dialog[i] != '|')
             {
-                currentString = currentString + dialog[i];
+                currentString = currentString + _dialog[i];
             }
             else
             {
@@ -49,7 +52,7 @@ public class CloseUpConvo : MonoBehaviour
             }
         }
 
-        if (dialogCount < _stringsShown)
+        if (DialogSections < _stringsShown)
         {
             DialogBox.GetComponent<Renderer>().enabled = false;
             DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = false;

@@ -20,18 +20,26 @@ public class PartyCameraManager : MonoBehaviour
     {
         if (_movingCamera)
         {
-            MoveCameraTo(_pos, _camTravelTime, _camSize);
+            MoveCameraTo();
         }
     }
 
-    private void MoveCameraTo(Vector3 pos, float camTravelTime, float camSize)
+    private void MoveCameraTo()
     {
-        iTween.MoveTo(this.gameObject, new Vector3(pos.x, pos.y, this.transform.position.z), camTravelTime);
+        iTween.MoveTo(this.gameObject, new Vector3(_pos.x, _pos.y, this.transform.position.z), _camTravelTime);
 
-        if (this.camera.orthographicSize > camSize)
-            this.camera.orthographicSize -= _camSizeDiff / (camTravelTime / Time.deltaTime);
-        else if (this.camera.orthographicSize < camSize)
-            this.camera.orthographicSize += _camSizeDiff / (camTravelTime / Time.deltaTime);
+        if (this.camera.orthographicSize > _camSize)
+        {
+            this.camera.orthographicSize -= _camSizeDiff / (_camTravelTime / Time.deltaTime);
+            if (this.camera.orthographicSize < _camSize)
+                this.camera.orthographicSize = _camSize;
+        }
+        else if (this.camera.orthographicSize < _camSize)
+        {
+            this.camera.orthographicSize += _camSizeDiff / (_camTravelTime / Time.deltaTime);
+            if (this.camera.orthographicSize > _camSize)
+                this.camera.orthographicSize = _camSize;
+        }
     }
 
     public void SetCameraToMove(Vector3 pos, float camTravelTime, float camSize)
@@ -47,6 +55,11 @@ public class PartyCameraManager : MonoBehaviour
     public IEnumerator ReturnCamera(Vector3 pos, float viewTime)
     {
         yield return new WaitForSeconds(viewTime);
+
+        if (this.camera.orthographicSize > DefaultSize)
+            _camSizeDiff = this.camera.orthographicSize - DefaultSize;
+        else
+            _camSizeDiff = DefaultSize - this.camera.orthographicSize;
 
         _pos = pos;
         _camSize = DefaultSize;

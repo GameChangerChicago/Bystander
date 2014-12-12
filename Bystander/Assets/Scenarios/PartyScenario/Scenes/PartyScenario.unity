@@ -197,6 +197,33 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &483164452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483164453}
+  m_Layer: 0
+  m_Name: DialogBoxTransform_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483164453
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 483164452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.35321999, y: 2.29562569, z: -.0500000045}
+  m_LocalScale: {x: .0450000018, y: .0450000018, z: .600000024}
+  m_Children: []
+  m_Father: {fileID: 1380472648}
+  m_RootOrder: 0
 --- !u!1 &491178110
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +356,33 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &593562209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 593562210}
+  m_Layer: 0
+  m_Name: DialogBoxTransform_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &593562210
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593562209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.34591293, y: 2.29562569, z: -.0500000045}
+  m_LocalScale: {x: .0450000018, y: .0450000018, z: .600000024}
+  m_Children: []
+  m_Father: {fileID: 629774152}
+  m_RootOrder: 0
 --- !u!1 &629774151
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +408,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.269283295, y: -.06731987, z: -.100000001}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 593562210}
   m_Father: {fileID: 1540067267}
   m_RootOrder: 2
 --- !u!212 &629774153
@@ -379,6 +434,33 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 40f85ebdcaa6a8647a44b28280d618aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &682155677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 682155678}
+  m_Layer: 0
+  m_Name: DialogBoxTransform_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &682155678
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682155677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.34956217, y: 2.29562569, z: -.0500000045}
+  m_LocalScale: {x: .0450000018, y: .0450000018, z: .600000024}
+  m_Children: []
+  m_Father: {fileID: 1228998742}
+  m_RootOrder: 0
 --- !u!1 &712825357
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +536,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.3868256, y: -.06731987, z: -.100000001}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1802870717}
   m_Father: {fileID: 1540067267}
   m_RootOrder: 3
 --- !u!212 &830870286
@@ -479,6 +562,33 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 40f85ebdcaa6a8647a44b28280d618aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &985562780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 985562781}
+  m_Layer: 0
+  m_Name: DialogBoxTransform_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &985562781
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985562780}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.31954193, y: 2.29562569, z: -.0500000045}
+  m_LocalScale: {x: .0450000018, y: .0450000018, z: .600000024}
+  m_Children: []
+  m_Father: {fileID: 1044323421}
+  m_RootOrder: 0
 --- !u!1 &1015685479
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +761,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25.1775703, y: -.06731987, z: -.100000001}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 985562781}
   m_Father: {fileID: 1540067267}
   m_RootOrder: 4
 --- !u!212 &1044323422
@@ -701,7 +812,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.9927092, y: -.06731987, z: -.100000001}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 682155678}
   m_Father: {fileID: 1540067267}
   m_RootOrder: 1
 --- !u!212 &1228998743
@@ -802,7 +914,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -25.716114, y: -.06731987, z: -.100000001}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 483164453}
   m_Father: {fileID: 1540067267}
   m_RootOrder: 0
 --- !u!212 &1380472649
@@ -1070,13 +1183,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogSections: 5
+  TextBounds: 3
   DialogBox: {fileID: 1422580885}
   DialogBoxLocations:
-  - {fileID: 1380472648}
-  - {fileID: 1228998742}
-  - {fileID: 629774152}
-  - {fileID: 830870285}
-  - {fileID: 1044323421}
+  - {fileID: 483164453}
+  - {fileID: 682155678}
+  - {fileID: 593562210}
+  - {fileID: 1802870717}
+  - {fileID: 985562781}
 --- !u!4 &1540067267
 Transform:
   m_ObjectHideFlags: 0
@@ -1321,6 +1435,33 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 910ee8f97f325fa48b07ed81cebc9006, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1802870716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1802870717}
+  m_Layer: 0
+  m_Name: DialogBoxTransform_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1802870717
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1802870716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.31955528, y: 2.29562569, z: -.0500000045}
+  m_LocalScale: {x: .0450000018, y: .0450000018, z: .600000024}
+  m_Children: []
+  m_Father: {fileID: 830870285}
+  m_RootOrder: 0
 --- !u!1 &1856172940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1497,7 @@ MonoBehaviour:
   HasCloseupAnimation: 0
   MaxClicks: 1
   DialogSections: 0
-  CameraMoveTime: 0
+  CameraMoveTime: .5
   CameraSize: 5
   ViewTime: 0
   MyPanelPos: {fileID: 1380472648}
@@ -1372,7 +1513,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 10, y: 6.69999981, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1856172943
 Transform:
@@ -1406,7 +1547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1950212617
 MonoBehaviour:
   m_ObjectHideFlags: 0

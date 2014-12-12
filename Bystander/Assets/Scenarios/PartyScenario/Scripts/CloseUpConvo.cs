@@ -4,6 +4,7 @@ using System.Collections;
 public class CloseUpConvo : MonoBehaviour
 {
     public int DialogSections;
+    public float TextBounds;
     public GameObject DialogBox;
     public Transform[] DialogBoxLocations;
 
@@ -11,17 +12,25 @@ public class CloseUpConvo : MonoBehaviour
                 _stringIndex;
     private string _dialog;
     private PartyGameManager _myGameManager;
+    private PartyCameraManager _myCameraManager;
 
     void Start()
     {
         _myGameManager = FindObjectOfType<PartyGameManager>();
+        _myCameraManager = FindObjectOfType<PartyCameraManager>();
         TextAsset rawText = Resources.Load("PartyDialogText/TestDialog") as TextAsset;
         _dialog = rawText.text;
     }
 
     void OnMouseDown()
     {
-        DialogHandler(0);
+        if (_stringsShown < DialogSections)
+        {
+            _myCameraManager.SetCameraToMove(DialogBoxLocations[_stringsShown].parent.position, 0.3f, _myCameraManager.camera.orthographicSize);
+            StartCoroutine(DialogHandler(0.3f));
+        }
+        else
+            _myGameManager.FinishDialog();
     }
 
     public IEnumerator DialogHandler(float waitTime)
@@ -45,6 +54,8 @@ public class CloseUpConvo : MonoBehaviour
                 _stringsShown++;
 
                 StringFormatter(currentString);
+                DialogBox.transform.position = DialogBoxLocations[_stringsShown - 1].position;
+                DialogBox.transform.localScale = DialogBoxLocations[_stringsShown - 1].lossyScale;
                 DialogBox.GetComponent<Renderer>().enabled = true;
                 DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = true;
 
@@ -89,7 +100,7 @@ public class CloseUpConvo : MonoBehaviour
                     DialogBox.GetComponent<TextMesh>().text = DialogBox.GetComponent<TextMesh>().text + " " + currentWord;
                 }
 
-                if (currentRenderer.bounds.extents.x > 5f)
+                if (currentRenderer.bounds.extents.x > TextBounds)
                 {
                     DialogBox.GetComponent<TextMesh>().text = DialogBox.GetComponent<TextMesh>().text.Remove(DialogBox.GetComponent<TextMesh>().text.Length - (currentWord.Length + 1));
                     DialogBox.GetComponent<TextMesh>().text = DialogBox.GetComponent<TextMesh>().text + "\n" + currentWord;

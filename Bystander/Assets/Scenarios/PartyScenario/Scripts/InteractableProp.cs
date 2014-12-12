@@ -40,12 +40,14 @@ public class InteractableProp : MonoBehaviour
             }
             else if (AnimationChanges)
                 Invoke("ChangeAnimation", CameraMoveTime);
-            
+
             _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos.position, CameraSize, ViewTime);
 
             if(HasDialog)
             {
-                _myGameManager.InitiateDialog(this.name);
+                CloseUpConvo currentCloseUpConvo = GameObject.Find("CloseUpPanel_" + this.name).GetComponent<CloseUpConvo>();
+                StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
+                _myClickCount++;
             }
             if (HasCloseupAnimation)
             {

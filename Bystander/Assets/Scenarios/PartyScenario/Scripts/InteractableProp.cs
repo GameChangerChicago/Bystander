@@ -45,7 +45,7 @@ public class InteractableProp : MonoBehaviour
 
             if(HasDialog)
             {
-                CloseUpConvo currentCloseUpConvo = GameObject.Find("CloseUpPanel_" + this.name).GetComponent<CloseUpConvo>();
+                ConvoHandler currentCloseUpConvo = GameObject.Find("CloseUpPanel_" + this.name).GetComponent<ConvoHandler>();
                 StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
                 _myClickCount++;
             }

@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CloseUpConvo : MonoBehaviour
+public class ConvoHandler : MonoBehaviour
 {
+    public bool IsVirgil;
     public int DialogSections;
     public float TextBounds;
     public GameObject DialogBox;
@@ -24,11 +25,13 @@ public class CloseUpConvo : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (_stringsShown < DialogSections)
+        if (_stringsShown < DialogSections && !IsVirgil)
         {
             _myCameraManager.SetCameraToMove(DialogBoxLocations[_stringsShown].parent.position, 0.3f, _myCameraManager.camera.orthographicSize);
             StartCoroutine(DialogHandler(0.3f));
         }
+        else if (_stringsShown < DialogSections && IsVirgil)
+            StartCoroutine(DialogHandler(0));
         else
             _myGameManager.FinishDialog();
     }
@@ -54,8 +57,16 @@ public class CloseUpConvo : MonoBehaviour
                 _stringsShown++;
 
                 StringFormatter(currentString);
-                DialogBox.transform.position = DialogBoxLocations[_stringsShown - 1].position;
-                DialogBox.transform.localScale = DialogBoxLocations[_stringsShown - 1].lossyScale;
+                if (!IsVirgil)
+                {
+                    DialogBox.transform.position = DialogBoxLocations[_stringsShown - 1].position;
+                    DialogBox.transform.localScale = DialogBoxLocations[_stringsShown - 1].lossyScale;
+                }
+                else
+                {
+                    DialogBox.transform.position = new Vector3(0, 0, 0);
+                    DialogBox.transform.localScale = new Vector3(1, 1, 1);
+                }
                 DialogBox.GetComponent<Renderer>().enabled = true;
                 DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = true;
 

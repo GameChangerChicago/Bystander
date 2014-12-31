@@ -19,7 +19,17 @@ public class ConvoHandler : MonoBehaviour
     {
         _myGameManager = FindObjectOfType<PartyGameManager>();
         _myCameraManager = FindObjectOfType<PartyCameraManager>();
-        TextAsset rawText = Resources.Load("PartyDialogText/TestDialog") as TextAsset;
+        string txtName = "";
+        if (IsVirgil)
+            txtName = this.name;
+        else
+        {
+            for (int i = 13; i < this.name.Length; i++)
+            {
+                txtName += this.name[i];
+            }
+        }
+        TextAsset rawText = Resources.Load("PartyDialogText/" + txtName) as TextAsset;
         _dialog = rawText.text;
     }
 
@@ -64,8 +74,8 @@ public class ConvoHandler : MonoBehaviour
                 }
                 else
                 {
-                    DialogBox.transform.position = new Vector3(0, 0, 0);
-                    DialogBox.transform.localScale = new Vector3(1, 1, 1);
+                    DialogBox.transform.position = DialogBoxLocations[0].position;
+                    DialogBox.transform.localScale = DialogBoxLocations[0].lossyScale;
                 }
                 DialogBox.GetComponent<Renderer>().enabled = true;
                 DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = true;

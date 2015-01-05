@@ -3,7 +3,8 @@ using System.Collections;
 
 public class ConvoHandler : MonoBehaviour
 {
-    public bool IsVirgil;
+    public bool IsVirgil,
+                FaceLeft;
     public int DialogSections;
     public float TextBounds;
     public GameObject DialogBox;
@@ -42,8 +43,20 @@ public class ConvoHandler : MonoBehaviour
         }
         else if (_stringsShown < DialogSections && IsVirgil)
             StartCoroutine(DialogHandler(0));
+        else if (IsVirgil)
+        {
+            DialogBox.GetComponent<Renderer>().enabled = false;
+            DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            _stringIndex = 0;
+            _myGameManager.FinsihInteractiveSegment();
+        }
         else
+        {
+            DialogBox.GetComponent<Renderer>().enabled = false;
+            DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            _stringIndex = 0;
             _myGameManager.FinishDialog();
+        }
     }
 
     public IEnumerator DialogHandler(float waitTime)
@@ -77,6 +90,12 @@ public class ConvoHandler : MonoBehaviour
                     DialogBox.transform.position = DialogBoxLocations[0].position;
                     DialogBox.transform.localScale = DialogBoxLocations[0].lossyScale;
                 }
+
+                if (FaceLeft && DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.x < 0)
+                    DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale = new Vector3(DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.x * -1, DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.y, DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.z);
+                else if (!FaceLeft && DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.x > 0)
+                    DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale = new Vector3(DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.x * -1, DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.y, DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.z);
+
                 DialogBox.GetComponent<Renderer>().enabled = true;
                 DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = true;
 
@@ -88,7 +107,6 @@ public class ConvoHandler : MonoBehaviour
         {
             DialogBox.GetComponent<Renderer>().enabled = false;
             DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = false;
-            _myGameManager.FinishDialog();
             _stringIndex = 0;
         }
     }

@@ -15,10 +15,11 @@ public class PartyVirgil : MonoBehaviour
 
     void Update()
     {
-        if (this.animation.isPlaying && _animationPlayed)
+        if (!this.animation.isPlaying && _animationPlayed)
         {
             _animationPlayed = false;
             this.GetComponent<BoxCollider2D>().enabled = true;
+            StartCoroutine(this.GetComponent<ConvoHandler>().DialogHandler(0));
         }
     }
 }

@@ -7,6 +7,7 @@ public class PartyGameManager : MonoBehaviour
                       DialogBox2;
     public Transform[] MainPanels;
     public int MaxClicks;
+    public bool SectionCompleted = false;
 
     protected Transform currentMainPanel
     {
@@ -29,18 +30,12 @@ public class PartyGameManager : MonoBehaviour
                 _stringIndex = 0,
                 _stringsShown = 0,
                 _interactableMomentCount = 0;
-    private bool _sectionCompleted = false,
-                 _usingBox1 = true;
+    private bool _usingBox1 = true;
 
     void Start()
     {
         _myCameraManager = FindObjectOfType<PartyCameraManager>();
         _virgil = FindObjectOfType<PartyVirgil>();
-    }
-
-    void Update()
-    {
-
     }
 
     public void PlayerClicked(bool importantProp, bool hasDialog, float cameraTravelTime, Vector3 myPanelPos, float camSize, float viewTime)
@@ -55,7 +50,7 @@ public class PartyGameManager : MonoBehaviour
         }
 
         if (importantProp)
-            _sectionCompleted = true;
+            SectionCompleted = true;
 
         _myCameraManager.SetCameraToMove(myPanelPos, _cameraTravelTime, camSize);
     }
@@ -69,7 +64,10 @@ public class PartyGameManager : MonoBehaviour
 
     public void FinsihInteractiveSegment()
     {
-        Debug.Log("Sup");
+        if (SectionCompleted)
+            Debug.Log("Load new prefab");
+        else
+            Debug.Log("Restart current interactive segment");
     }
 
     public IEnumerator PlayCloseUpAnimation(Animation currentAnimation, int clickCount, float WaitTime)
@@ -84,7 +82,7 @@ public class PartyGameManager : MonoBehaviour
     {
         if (_clickCount >= MaxClicks)
         {
-            if (_sectionCompleted)
+            if (SectionCompleted)
                 _virgil.Appear(true);
             else
                 _virgil.Appear(false);

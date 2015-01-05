@@ -5,13 +5,16 @@ public class ConvoHandler : MonoBehaviour
 {
     public bool IsVirgil,
                 FaceLeft;
-    public int DialogSections;
+    public int DialogSections,
+               SuccessfulDialogSections,
+               UnsuccessfulDialogSections;
     public float TextBounds;
     public GameObject DialogBox;
     public Transform[] DialogBoxLocations;
 
     private int _stringsShown,
-                _stringIndex;
+                _stringIndex,
+                _unsuccessfulDialogIndex;
     private string _dialog;
     private PartyGameManager _myGameManager;
     private PartyCameraManager _myCameraManager;
@@ -32,6 +35,15 @@ public class ConvoHandler : MonoBehaviour
         }
         TextAsset rawText = Resources.Load("PartyDialogText/" + txtName) as TextAsset;
         _dialog = rawText.text;
+
+        if (IsVirgil)
+        {
+            for (int i = 0; i < _dialog.Length; i++)
+            {
+                if (_dialog[i] == '\\')
+                    _unsuccessfulDialogIndex = i + 1;
+            }
+        }
     }
 
     void OnMouseDown()
@@ -68,6 +80,14 @@ public class ConvoHandler : MonoBehaviour
         if (_dialog.Length == _stringIndex)
             _stringsShown++;
 
+        if (IsVirgil && _stringIndex == 0 && !_myGameManager.SectionCompleted)
+        {
+            _stringIndex = _unsuccessfulDialogIndex;
+            DialogSections = UnsuccessfulDialogSections;
+        }
+        else if (IsVirgil && _stringIndex == 0 && _myGameManager.SectionCompleted)
+            DialogSections = SuccessfulDialogSections;
+
         for (int i = _stringIndex; i < _dialog.Length; i++)
         {
             if (_dialog[i] != '|')
@@ -102,6 +122,7 @@ public class ConvoHandler : MonoBehaviour
                 break;
             }
         }
+
 
         if (DialogSections < _stringsShown)
         {

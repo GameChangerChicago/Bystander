@@ -146,7 +146,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsVirgil: 1
   FaceLeft: 1
-  DialogSections: 2
+  DialogSections: 1
+  SuccessfulDialogSections: 2
+  UnsuccessfulDialogSections: 3
   TextBounds: 3
   DialogBox: {fileID: 1422580885}
   DialogBoxLocations:
@@ -1244,6 +1246,8 @@ MonoBehaviour:
   IsVirgil: 0
   FaceLeft: 0
   DialogSections: 5
+  SuccessfulDialogSections: 0
+  UnsuccessfulDialogSections: 0
   TextBounds: 3
   DialogBox: {fileID: 1422580885}
   DialogBoxLocations:
@@ -1384,6 +1388,7 @@ MonoBehaviour:
   MainPanels:
   - {fileID: 491178112}
   MaxClicks: 1
+  SectionCompleted: 0
 --- !u!4 &1617902220
 Transform:
   m_ObjectHideFlags: 0

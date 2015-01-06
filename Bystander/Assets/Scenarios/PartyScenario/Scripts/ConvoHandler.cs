@@ -12,6 +12,7 @@ public class ConvoHandler : MonoBehaviour
     public GameObject DialogBox;
     public Transform[] DialogBoxLocations;
 
+    private bool _cameraMoving;
     private int _stringsShown,
                 _stringIndex,
                 _unsuccessfulDialogIndex;
@@ -48,10 +49,11 @@ public class ConvoHandler : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (_stringsShown < DialogSections && !IsVirgil)
+        if (_stringsShown < DialogSections && !IsVirgil && !_cameraMoving)
         {
             _myCameraManager.SetCameraToMove(DialogBoxLocations[_stringsShown].parent.position, 0.3f, _myCameraManager.camera.orthographicSize);
             StartCoroutine(DialogHandler(0.3f));
+            _cameraMoving = true;
         }
         else if (_stringsShown < DialogSections && IsVirgil)
             StartCoroutine(DialogHandler(0));
@@ -62,7 +64,7 @@ public class ConvoHandler : MonoBehaviour
             _stringIndex = 0;
             _myGameManager.FinsihInteractiveSegment();
         }
-        else
+        else if (!_cameraMoving)
         {
             DialogBox.GetComponent<Renderer>().enabled = false;
             DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = false;
@@ -74,6 +76,8 @@ public class ConvoHandler : MonoBehaviour
     public IEnumerator DialogHandler(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+
+        _cameraMoving = false;
 
         string currentString = "";
 

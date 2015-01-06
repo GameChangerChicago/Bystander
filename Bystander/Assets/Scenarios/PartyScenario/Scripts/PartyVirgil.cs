@@ -18,7 +18,7 @@ public class PartyVirgil : MonoBehaviour
         if (!this.animation.isPlaying && _animationPlayed)
         {
             _animationPlayed = false;
-            this.GetComponent<BoxCollider2D>().enabled = true;
+            this.GetComponent<BoxCollider>().enabled = true;
             StartCoroutine(this.GetComponent<ConvoHandler>().DialogHandler(0));
         }
     }

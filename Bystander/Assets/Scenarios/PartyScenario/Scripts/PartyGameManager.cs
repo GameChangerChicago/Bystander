@@ -3,8 +3,7 @@ using System.Collections;
 
 public class PartyGameManager : MonoBehaviour
 {
-    public GameObject DialogBox1,
-                      DialogBox2,
+    public GameObject DialogBox,
                       LivingRoom,
                       Kitchen,
                       BackPoarch,
@@ -88,12 +87,12 @@ public class PartyGameManager : MonoBehaviour
         }
         else
         {
-            GameObject.Destroy(_currentPrefab);
+            GameObject newPrefab = null;
 
             switch (_currentInteractiveMoment)
             {
                 case InteractiveMoments.LivingRoom:
-                    Instantiate(LivingRoom);
+                    newPrefab = (GameObject)Instantiate(LivingRoom);
                     break;
                 case InteractiveMoments.Kitchen:
                     Debug.Log("Kitchen");
@@ -111,6 +110,11 @@ public class PartyGameManager : MonoBehaviour
                     Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");
                     break;
             }
+
+            GameObject.Destroy(_currentPrefab);
+            _currentPrefab = newPrefab;
+            _virgil = FindObjectOfType<PartyVirgil>();
+            _clickCount = 0;
         }
     }
 
@@ -130,6 +134,14 @@ public class PartyGameManager : MonoBehaviour
                 _virgil.Appear(true);
             else
                 _virgil.Appear(false);
+
+            InteractableProp[] props = FindObjectsOfType<InteractableProp>();
+
+            for (int i = 0; i < props.Length; i++)
+            {
+                Debug.Log(props[i]);
+                props[i].GetComponent<BoxCollider>().enabled = false;
+            }
         }
     }
 }

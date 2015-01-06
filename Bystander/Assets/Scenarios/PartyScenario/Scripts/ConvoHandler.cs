@@ -34,7 +34,17 @@ public class ConvoHandler : MonoBehaviour
                 txtName += this.name[i];
             }
         }
-        TextAsset rawText = Resources.Load("PartyDialogText/" + txtName) as TextAsset;
+        string sceneName = "";
+
+        for (int i = 0; i < this.transform.parent.name.Length; i++)
+        {
+            if (this.transform.parent.name[i] == '(')
+                break;
+            else
+                sceneName += this.transform.parent.name[i];
+        }
+
+        TextAsset rawText = Resources.Load("PartyDialogText/" + txtName + "_" + sceneName) as TextAsset;
         _dialog = rawText.text;
 
         if (IsVirgil)

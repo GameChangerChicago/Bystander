@@ -3,29 +3,13 @@ using System.Collections;
 
 public class PartyGameManager : MonoBehaviour
 {
-    public GameObject DialogBox,
-                      LivingRoom,
+    public GameObject LivingRoom,
                       Kitchen,
                       BackPoarch,
                       LivingRoom2,
                       Hallway;
-    public Transform[] MainPanels;
     public int MaxClicks;
     public bool SectionCompleted = false;
-
-    protected Transform currentMainPanel
-    {
-        get
-        {
-            _currentMainPanel = MainPanels[_interactableMomentCount];
-            return _currentMainPanel;
-        }
-        set
-        {
-            Debug.LogWarning("No one should be trying to set currentMainPanel");
-        }
-    }
-    private Transform _currentMainPanel;
 
     private enum InteractiveMoments
     {
@@ -40,11 +24,7 @@ public class PartyGameManager : MonoBehaviour
     private PartyVirgil _virgil;
     private GameObject _currentPrefab;
     private float _cameraTravelTime;
-    private int _clickCount = 0,
-                _stringIndex = 0,
-                _stringsShown = 0,
-                _interactableMomentCount = 0;
-    private bool _usingBox1 = true;
+    private int _clickCount = 0;
 
     void Start()
     {
@@ -60,7 +40,7 @@ public class PartyGameManager : MonoBehaviour
         if (!hasDialog)
         {
             _clickCount++;
-            StartCoroutine(_myCameraManager.ReturnCamera(currentMainPanel.position, _cameraTravelTime + viewTime));
+            StartCoroutine(_myCameraManager.ReturnCamera(_currentPrefab.transform.position, _cameraTravelTime + viewTime));
             Invoke("VirgilHandler", (_cameraTravelTime * 2) + viewTime);
         }
 
@@ -73,7 +53,7 @@ public class PartyGameManager : MonoBehaviour
     public void FinishDialog()
     {
         _clickCount++;
-        StartCoroutine(_myCameraManager.ReturnCamera(currentMainPanel.position, 0));
+        StartCoroutine(_myCameraManager.ReturnCamera(_currentPrefab.transform.position, 0));
         Invoke("VirgilHandler", _cameraTravelTime);
     }
 
@@ -81,9 +61,36 @@ public class PartyGameManager : MonoBehaviour
     {
         if (SectionCompleted)
         {
-            Debug.Log("Load new prefab");
-            //This will delete the prefab and instantiate the next prefab
-            //This will likely be a switch statement
+            GameObject newPrefab = null;
+
+            switch (_currentInteractiveMoment)
+            {
+                case InteractiveMoments.LivingRoom:
+                    //This should actually instantiate the Kitchen but that pfab hasn't been made yet
+                    //Each one of these also needs to set the Max click count as it may be different for each Interactive moment
+                    newPrefab = (GameObject)Instantiate(LivingRoom);
+                    break;
+                case InteractiveMoments.Kitchen:
+                    Debug.Log("Kitchen");
+                    break;
+                case InteractiveMoments.BackPoarch:
+                    Debug.Log("Back Poarch");
+                    break;
+                case InteractiveMoments.LivingRoom2:
+                    Debug.Log("Living Room2");
+                    break;
+                case InteractiveMoments.Hallway:
+                    Debug.Log("Hallway");
+                    break;
+                default:
+                    Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");
+                    break;
+            }
+
+            GameObject.Destroy(_currentPrefab);
+            _currentPrefab = newPrefab;
+            _virgil = FindObjectOfType<PartyVirgil>();
+            _clickCount = 0;
         }
         else
         {
@@ -139,7 +146,6 @@ public class PartyGameManager : MonoBehaviour
 
             for (int i = 0; i < props.Length; i++)
             {
-                Debug.Log(props[i]);
                 props[i].GetComponent<BoxCollider>().enabled = false;
             }
         }

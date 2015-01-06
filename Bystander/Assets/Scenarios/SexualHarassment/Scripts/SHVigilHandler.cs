@@ -95,8 +95,16 @@ public class SHVigilHandler : MonoBehaviour
                 DialogHandler();
             else
             {
-                isVisible = false;
-                _myGameManager.SectionComplete = true;
+                if (IsCorrect)
+                {
+                    isVisible = false;
+                    _myGameManager.SectionComplete = true;
+                }
+                else
+                {
+                    //This is where I need add code that resets the sexual harassment moment/memory
+                    Debug.Log("?????");
+                }
             }
         }
     }

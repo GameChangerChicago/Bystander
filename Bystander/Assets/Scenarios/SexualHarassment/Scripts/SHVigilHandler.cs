@@ -103,7 +103,6 @@ public class SHVigilHandler : MonoBehaviour
                 }
                 else
                 {
-                    //This is where I need add code that resets the sexual harassment moment/memory
                     isVisible = false;
                     ResetPOI();
                 }

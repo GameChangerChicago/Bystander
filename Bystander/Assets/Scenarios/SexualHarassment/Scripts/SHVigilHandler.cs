@@ -73,7 +73,8 @@ public class SHVigilHandler : MonoBehaviour
                 _splitPoint;
 
     public string DialogString;
-    public bool IsCorrect;
+    public bool IsCorrect,
+                GameWinner;
 
     void Start()
     {
@@ -95,7 +96,7 @@ public class SHVigilHandler : MonoBehaviour
                 DialogHandler();
             else
             {
-                if (IsCorrect)
+                if (IsCorrect && GameWinner)
                 {
                     isVisible = false;
                     _myGameManager.SectionComplete = true;
@@ -103,7 +104,8 @@ public class SHVigilHandler : MonoBehaviour
                 else
                 {
                     //This is where I need add code that resets the sexual harassment moment/memory
-                    Debug.Log("?????");
+                    isVisible = false;
+                    ResetPOI();
                 }
             }
         }
@@ -165,6 +167,16 @@ public class SHVigilHandler : MonoBehaviour
                 }
                 currentWord = "";
             }
+        }
+    }
+
+    private void ResetPOI()
+    {
+        PointOfInterest[] POIs = FindObjectsOfType<PointOfInterest>();
+
+        for (int i = 0; i < POIs.Length; i++)
+        {
+            POIs[i].ComicShown = false;
         }
     }
 }

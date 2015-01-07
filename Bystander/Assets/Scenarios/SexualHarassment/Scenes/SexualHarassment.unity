@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CorrectAnswer: 0
+  GameWinner: 0
 --- !u!65 &636418275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -725,6 +726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogString: 
   IsCorrect: 0
+  GameWinner: 0
 --- !u!65 &1165315455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -889,6 +891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CorrectAnswer: 1
+  GameWinner: 0
 --- !u!65 &1555827433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1137,7 +1140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InstantiationTransform: {fileID: 860987222}
   ComicViewTime: 3
-  isSexualHarassment: 1
+  IsSexualHarassment: 0
+  ComicShown: 0
 --- !u!61 &2135517880
 BoxCollider2D:
   m_ObjectHideFlags: 0

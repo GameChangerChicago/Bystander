@@ -7,13 +7,13 @@ public class PointOfInterest : MonoBehaviour
     private SHVigilHandler _myVirgil;
     private GameObject _myMiniComic;
     private string _virgilString;
-    private bool _comicShown = false;
 
     protected GameObject myMiniComic;
 
     public Transform InstantiationTransform;
     public float ComicViewTime;
-    public bool isSexualHarassment;
+    public bool IsSexualHarassment,
+                ComicShown = false;
 
     void Start()
     {
@@ -25,15 +25,15 @@ public class PointOfInterest : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!_comicShown)
+        if (!ComicShown)
             ShowComic();
     }
 
     private void ShowComic()
     {
-        _comicShown = true;
         _myMiniComic = (GameObject)Instantiate(myMiniComic, InstantiationTransform.position, Quaternion.identity);
         Invoke("ShowQuiz", ComicViewTime);
+        ComicShown = true;
     }
 
     private void ShowQuiz()
@@ -45,10 +45,13 @@ public class PointOfInterest : MonoBehaviour
 
         foreach (QuizButton qb in quiz.GetComponentsInChildren<QuizButton>())
         {
-            if (isSexualHarassment)
+            if (IsSexualHarassment)
             {
                 if (qb.name == "Answer Yes")
+                {
                     qb.CorrectAnswer = true;
+                    qb.GameWinner = true;
+                }
                 else
                     qb.CorrectAnswer = false;
             }

@@ -7,7 +7,8 @@ public class QuizButton : MonoBehaviour
     private SHVigilHandler _myVirgil;
     private GameObject _myQuiz;
 
-    public bool CorrectAnswer;
+    public bool CorrectAnswer,
+                GameWinner;
 
     void Start()
     {
@@ -20,6 +21,8 @@ public class QuizButton : MonoBehaviour
     {
         if (CorrectAnswer)
         {
+            if (GameWinner)
+                _myVirgil.GameWinner = true;
             _myVirgil.IsCorrect = true;
             _myVirgil.ShowStringSegment();
         }

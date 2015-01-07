@@ -72,6 +72,7 @@ public class ConvoHandler : MonoBehaviour
             DialogBox.GetComponent<Renderer>().enabled = false;
             DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = false;
             _stringIndex = 0;
+            _stringsShown = 0;
             _myGameManager.FinsihInteractiveSegment();
         }
         else if (!_cameraMoving)
@@ -79,6 +80,7 @@ public class ConvoHandler : MonoBehaviour
             DialogBox.GetComponent<Renderer>().enabled = false;
             DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = false;
             _stringIndex = 0;
+            _stringsShown = 0;
             _myGameManager.FinishDialog();
         }
     }
@@ -116,6 +118,7 @@ public class ConvoHandler : MonoBehaviour
                 StringFormatter(currentString);
                 if (!IsVirgil)
                 {
+                    Debug.Log(_stringsShown);
                     DialogBox.transform.position = DialogBoxLocations[_stringsShown - 1].position;
                     DialogBox.transform.localScale = DialogBoxLocations[_stringsShown - 1].lossyScale;
                 }
@@ -135,14 +138,6 @@ public class ConvoHandler : MonoBehaviour
 
                 break;
             }
-        }
-
-
-        if (DialogSections < _stringsShown)
-        {
-            DialogBox.GetComponent<Renderer>().enabled = false;
-            DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = false;
-            _stringIndex = 0;
         }
     }
 

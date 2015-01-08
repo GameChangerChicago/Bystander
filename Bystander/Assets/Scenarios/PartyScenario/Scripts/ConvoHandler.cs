@@ -106,53 +106,62 @@ public class ConvoHandler : MonoBehaviour
         if (_dialog.Length == _stringIndex)
             _stringsShown++;
 
-
+        //Each virgil dialog has a portion for when you're successful and when you're not
         if (IsVirgil && _stringIndex == 0 && !_myGameManager.SectionCompleted)
         {
+            //If the player is unsuccessful then _stringIndex is set to where the unsuccessful dialog starts and sets the number of sections the unsuccessful portion has
             _stringIndex = _unsuccessfulDialogIndex;
             DialogSections = UnsuccessfulDialogSections;
         }
-        else if (IsVirgil && _stringIndex == 0 && _myGameManager.SectionCompleted)
+        else if (IsVirgil && _stringIndex == 0 && _myGameManager.SectionCompleted) //Otherwise the DialogSections is set to the number of sections the successful portion has
             DialogSections = SuccessfulDialogSections;
 
         //This for loop handles the tricky part of breaking the string from the .txt file into it's individual dialog sections
         for (int i = _stringIndex; i < _dialog.Length; i++)
         {
+            //I seperate the various dialog sections with '|'; As long as the character isn't a '|' it will be added to currentString
             if (_dialog[i] != '|')
             {
                 currentString = currentString + _dialog[i];
             }
             else
             {
+                //If the character is a '|' than the _stringIndex is set to the point just after the '|'; it also adds one to _stringsShown
                 _stringIndex = i + 1;
                 _stringsShown++;
 
+                //By this point currentString will be filled out so it gets put into StringFormatter
                 StringFormatter(currentString);
+
+                //In non virgil convos each dialog section has a seperate location and size; this sets the location and size based on the transforms stored in DialogBoxLocations
                 if (!IsVirgil)
                 {
-                    Debug.Log(_stringsShown);
                     DialogBox.transform.position = DialogBoxLocations[_stringsShown - 1].position;
                     DialogBox.transform.localScale = DialogBoxLocations[_stringsShown - 1].lossyScale;
                 }
-                else
+                else //Virgil dialogs are always in the same spot so there is only ever one transform located in DialogBoxLocations
                 {
                     DialogBox.transform.position = DialogBoxLocations[0].position;
                     DialogBox.transform.localScale = DialogBoxLocations[0].lossyScale;
                 }
 
+                //These set the dialog box sprite to face left or right based on the bool FaceLeft
                 if (FaceLeft && DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.x < 0)
                     DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale = new Vector3(DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.x * -1, DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.y, DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.z);
                 else if (!FaceLeft && DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.x > 0)
                     DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale = new Vector3(DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.x * -1, DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.y, DialogBox.GetComponentInChildren<SpriteRenderer>().transform.localScale.z);
 
+                //This turns the DialogBox renderers on
                 DialogBox.GetComponent<Renderer>().enabled = true;
                 DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = true;
 
+                //This ends the for loop here and since _stirngIndex has been set to start after the '|' the next time we run through the for loop it will start there
                 break;
             }
         }
     }
 
+    //This method takes current string and makes sure it doesn't run outhside the bounds of the dialog box
     private void StringFormatter(string lineContent)
     {
         string currentWord = "";
@@ -164,28 +173,33 @@ public class ConvoHandler : MonoBehaviour
 
         for (int i = 0; i < lineContent.Length; i++)
         {
+            //As long as the char isn't a ' ' then it will be added to currentWord
             if (lineContent[i] != ' ')
             {
                 currentWord = currentWord + lineContent[i];
             }
             else
             {
+                //If currentWord is the first word it is added to the to the dialog box
                 if (isFirstWord)
                 {
                     DialogBox.GetComponent<TextMesh>().text = DialogBox.GetComponent<TextMesh>().text + currentWord;
 
                     isFirstWord = false;
                 }
-                else
+                else // Otherwise it adds the current word with a space before the word.
                 {
                     DialogBox.GetComponent<TextMesh>().text = DialogBox.GetComponent<TextMesh>().text + " " + currentWord;
                 }
 
+                //If after adding the word the line extends past the TextBounds then the word will be added with a line break
                 if (currentRenderer.bounds.extents.x > TextBounds)
                 {
                     DialogBox.GetComponent<TextMesh>().text = DialogBox.GetComponent<TextMesh>().text.Remove(DialogBox.GetComponent<TextMesh>().text.Length - (currentWord.Length + 1));
                     DialogBox.GetComponent<TextMesh>().text = DialogBox.GetComponent<TextMesh>().text + "\n" + currentWord;
                 }
+
+                //Resets the current word each time
                 currentWord = "";
             }
         }

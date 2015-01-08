@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PartyGameManager : MonoBehaviour
 {
+    //These five game objects are the various prefabs that make up the 5 levels
     public GameObject LivingRoom,
                       Kitchen,
                       BackPoarch,
@@ -11,6 +12,7 @@ public class PartyGameManager : MonoBehaviour
     public int MaxClicks;
     public bool SectionCompleted = false;
 
+    //This is an enum used to keep track of what level we are on
     private enum InteractiveMoments
     {
         LivingRoom,
@@ -19,6 +21,7 @@ public class PartyGameManager : MonoBehaviour
         LivingRoom2,
         Hallway
     };
+
     private InteractiveMoments _currentInteractiveMoment = InteractiveMoments.LivingRoom;
     private PartyCameraManager _myCameraManager;
     private PartyVirgil _virgil;
@@ -33,6 +36,8 @@ public class PartyGameManager : MonoBehaviour
         _currentPrefab = GameObject.Find("LivingRoom");
     }
 
+    //This method is called whenever an interactable prop is clicked
+    //It's kind of an all purpose method handling the various types of interactable props
     public void PlayerClicked(bool importantProp, bool hasDialog, float cameraTravelTime, Vector3 myPanelPos, float camSize, float viewTime)
     {
         _cameraTravelTime = cameraTravelTime;
@@ -50,6 +55,7 @@ public class PartyGameManager : MonoBehaviour
         _myCameraManager.SetCameraToMove(myPanelPos, _cameraTravelTime, camSize);
     }
 
+    //This is called when a dialog has reached its end
     public void FinishDialog()
     {
         _clickCount++;
@@ -57,12 +63,14 @@ public class PartyGameManager : MonoBehaviour
         Invoke("VirgilHandler", _cameraTravelTime);
     }
 
+    //This method is called the max clicks has been reached
     public void FinsihInteractiveSegment()
     {
-        if (SectionCompleted)
-        {
-            GameObject newPrefab = null;
+        GameObject newPrefab = null;
 
+        if (SectionCompleted) //If you've clicked the correct interactable prop
+        {
+            //Sets the next prefab or ends the scenario
             switch (_currentInteractiveMoment)
             {
                 case InteractiveMoments.LivingRoom:
@@ -86,16 +94,10 @@ public class PartyGameManager : MonoBehaviour
                     Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");
                     break;
             }
-
-            GameObject.Destroy(_currentPrefab);
-            _currentPrefab = newPrefab;
-            _virgil = FindObjectOfType<PartyVirgil>();
-            _clickCount = 0;
         }
-        else
+        else //If you never clicked the correct interactable prop
         {
-            GameObject newPrefab = null;
-
+            //Sets the same prfab to be loaded effectively reseting the level
             switch (_currentInteractiveMoment)
             {
                 case InteractiveMoments.LivingRoom:
@@ -117,14 +119,15 @@ public class PartyGameManager : MonoBehaviour
                     Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");
                     break;
             }
-
-            GameObject.Destroy(_currentPrefab);
-            _currentPrefab = newPrefab;
-            _virgil = FindObjectOfType<PartyVirgil>();
-            _clickCount = 0;
         }
+
+        GameObject.Destroy(_currentPrefab);
+        _currentPrefab = newPrefab;
+        _virgil = FindObjectOfType<PartyVirgil>();
+        _clickCount = 0;
     }
 
+    //Some iteractable props have an animation that plays in the close up panel this method handles that
     public IEnumerator PlayCloseUpAnimation(Animation currentAnimation, int clickCount, float WaitTime)
     {
         yield return new WaitForSeconds(WaitTime);
@@ -133,6 +136,7 @@ public class PartyGameManager : MonoBehaviour
         currentAnimation.Play();
     }
 
+    //This method brings up virgil and disables the interactable props
     private void VirgilHandler()
     {
         if (_clickCount >= MaxClicks)

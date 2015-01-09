@@ -141,10 +141,7 @@ public class PartyGameManager : MonoBehaviour
     {
         if (_clickCount >= MaxClicks)
         {
-            if (SectionCompleted)
-                _virgil.Appear(true);
-            else
-                _virgil.Appear(false);
+            _virgil.Appear();
 
             InteractableProp[] props = FindObjectsOfType<InteractableProp>();
 

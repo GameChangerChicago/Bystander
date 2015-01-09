@@ -72,7 +72,7 @@ public class PartyCameraManager : MonoBehaviour
         Invoke("StopMoving", _camTravelTime);
     }
 
-    //StopMoving stops the movement of the camera by setting _movingCamera, a bool used to determin whether the camera is moving, to false which will cause the camera, which up to this point was moving, to stop the afformentioned moving. This is useful for when we want the camera to no longer move.
+    //StopMoving stops the movement of the camera by setting _movingCamera, a bool used to determin whether the camera is moving, to false, which will cause the camera, which up to this point was moving, to stop the afformentioned moving. This is useful for when we want the camera to no longer move. -Mojo Jojo
     private void StopMoving()
     {
         _movingCamera = false;

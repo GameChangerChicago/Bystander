@@ -8,16 +8,15 @@ public class SHCameraSelector : MonoBehaviour
 
     void Start()
     {
+        //Standard initialization junk
         _myCamera = this.transform.parent.GetComponent<SHCameraManager>();
         _myBoxCollider = this.GetComponent<BoxCollider>();
     }
 
+    //Disables the box collider and calls FocusOnCamera
     void OnMouseDown()
     {
-        if (!_myCamera.IsCurrentCamera)
-        {
-            _myCamera.FocusOnCamera();
-            _myBoxCollider.enabled = false;
-        }
+        _myCamera.FocusOnCamera();
+        _myBoxCollider.enabled = false;
     }
 }

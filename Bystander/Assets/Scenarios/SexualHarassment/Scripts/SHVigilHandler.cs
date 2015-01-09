@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SHVigilHandler : MonoBehaviour
 {
+    //This property handles probably too much. Not totally sure what I was thinking here. I appear to have been property crazy at the time of writing this...
     protected bool isVisible
     {
         get
@@ -78,38 +79,41 @@ public class SHVigilHandler : MonoBehaviour
 
     void Start()
     {
+        //Standard initialization junk
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myText = this.GetComponentInChildren<TextMesh>();
         _myCollider = this.GetComponent<BoxCollider>();
     }
 
+    //Clicking anywhere will call ShowSpringSegment
     void OnMouseDown()
     {
         ShowStringSegment();
     }
 
+    //This method decides what happens any time the player clicks while Virigil was active
     public void ShowStringSegment()
     {
         if (isVisible)
         {
+            //If there are still lines in the dialog to say then DialogHandler is called
             if (_stringIndex < _endPoint)
                 DialogHandler();
-            else
+            else //Otherwise...
             {
-                if (IsCorrect && GameWinner)
-                {
-                    isVisible = false;
+                //If the button was a game winner than the SectionComplete in the game manager will become true
+                if (GameWinner)
                     _myGameManager.SectionComplete = true;
-                }
-                else
-                {
-                    isVisible = false;
+                else //Otherwise all points of interest are reset
                     ResetPOI();
-                }
+
+                //Virgil is always set to false
+                isVisible = false;
             }
         }
     }
 
+    //This method breaks the DialogString into it's various pieces
     public void DialogHandler()
     {
         string currentString = "";
@@ -128,9 +132,12 @@ public class SHVigilHandler : MonoBehaviour
             }
         }
 
+        //Puts the dialog section through the StringFormatter
         StringFormatter(currentString);
     }
 
+    //This method works the same way that the one in the Party Scenario does
+    //It keeps string lines within the bounds of the dialog box
     private void StringFormatter(string lineContent)
     {
         string currentWord = "";
@@ -169,6 +176,7 @@ public class SHVigilHandler : MonoBehaviour
         }
     }
 
+    //This method sets ComicShown in all points of interest to false which effectively resets the section
     private void ResetPOI()
     {
         PointOfInterest[] POIs = FindObjectsOfType<PointOfInterest>();

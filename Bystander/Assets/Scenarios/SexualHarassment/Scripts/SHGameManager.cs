@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SHGameManager : MonoBehaviour
 {
+    //This property looks at all of the SHCameraManagers and checks to see which one is the current camera then returns said SHCameraManager
     protected SHCameraManager currentCameraManager
     {
         get
@@ -21,6 +22,7 @@ public class SHGameManager : MonoBehaviour
     }
     private SHCameraManager _currentCameraManager;
 
+    //This property, when set to true, calls ReturnToHub in whichever camera is the current camera.
     public bool SectionComplete
     {
         get
@@ -36,14 +38,4 @@ public class SHGameManager : MonoBehaviour
         }
     }
     protected bool sectionComplete;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-
-    }
 }

@@ -417,6 +417,7 @@ GameObject:
   - 124: {fileID: 866427227}
   - 81: {fileID: 866427226}
   - 114: {fileID: 866427231}
+  - 114: {fileID: 866427232}
   m_Layer: 0
   m_Name: ClassroomCamera
   m_TagString: Untagged
@@ -507,6 +508,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPos: {x: .0799999982, y: .540000021}
+--- !u!114 &866427232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 866427225}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243a781cad112c75d0008dfa8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: daf9781cad112c75d0008dfa8d76c639, type: 3}
+  textureRamp: {fileID: 2800000, guid: e9a9781cad112c75d0008dfa8d76c639, type: 3}
+  rampOffset: 0
 --- !u!1 &1060715600
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +608,6 @@ GameObject:
   - 4: {fileID: 1134326686}
   - 114: {fileID: 1134326687}
   - 65: {fileID: 1134326685}
-  - 212: {fileID: 1134326688}
   m_Layer: 0
   m_Name: ClassroomCameraSelector
   m_TagString: Untagged
@@ -638,28 +652,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0838456bc6eb83742b83454d9144d628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &1134326688
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1134326684}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4d7a20914ed1a87418897b9176d77440, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1165315451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InstantiationTransform: {fileID: 860987222}
   ComicViewTime: 3
-  IsSexualHarassment: 0
+  IsSexualHarassment: 1
   ComicShown: 0
 --- !u!61 &2135517880
 BoxCollider2D:

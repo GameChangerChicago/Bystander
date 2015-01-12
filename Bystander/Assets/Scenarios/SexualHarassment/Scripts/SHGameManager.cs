@@ -3,6 +3,8 @@ using System.Collections;
 
 public class SHGameManager : MonoBehaviour
 {
+    private int _sectionsCompleted;
+
     //This property looks at all of the SHCameraManagers and checks to see which one is the current camera then returns said SHCameraManager
     protected SHCameraManager currentCameraManager
     {
@@ -33,7 +35,14 @@ public class SHGameManager : MonoBehaviour
         {
             if (value)
             {
-                currentCameraManager.ReturnToHub();
+                //Checks to see if all sections are complete; if so then we'll load the epilogue
+                if (_sectionsCompleted == 5)
+                    Debug.Log("Load Epilogue");
+                else //Otherwise we add one to _sectionsComplete and brings us back to the hub world
+                {
+                    _sectionsCompleted++;
+                    currentCameraManager.ReturnToHub();
+                }
             }
         }
     }

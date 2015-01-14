@@ -5,6 +5,7 @@ public class PointOfInterest : MonoBehaviour
 {
     private SHGameManager _myGameManager;
     private SHVigilHandler _myVirgil;
+    private QuizHandler _myQuiz;
     private GameObject _myMiniComic;
     private string _virgilString;
 
@@ -20,6 +21,7 @@ public class PointOfInterest : MonoBehaviour
         //Standard instantiation junk. UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT. WHATCHU GONNA DO NOW? A, B, START! -Konami
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
+        _myQuiz = GameObject.Find("Quiz True False").GetComponent<QuizHandler>();
 
         //The .txt used for virgil's responses and the prefabs for the mini comic are named after the PointOfInterest in question
         _virgilString = Resources.Load("SHText/VirgilDialog_" + this.name).ToString();
@@ -30,49 +32,23 @@ public class PointOfInterest : MonoBehaviour
     void OnMouseDown()
     {
         if (!ComicShown)
+        {
             ShowComic();
+            _myGameManager.CurrentPOI = this.GetComponent<PointOfInterest>();
+        }
     }
 
     //This method simply instantiates the mini comic in question and starts the Invoke for ShowQuiz
     private void ShowComic()
     {
         _myMiniComic = (GameObject)Instantiate(myMiniComic, InstantiationTransform.position, Quaternion.identity);
-        Invoke("ShowQuiz", ComicViewTime);
+        StartCoroutine(_myQuiz.ShowQuiz(ComicViewTime, InstantiationTransform.position, _virgilString, IsSexualHarassment, true));
+        Invoke("HideComic", ComicViewTime);
         ComicShown = true;
     }
 
-    //ShowQuiz handles showing the quiz and setting up it's quiz buttons
-    private void ShowQuiz()
+    private void HideComic()
     {
-        //These lines destroy the minicomic and moves the quiz into postion
-        GameObject quiz = GameObject.Find("Quiz");
         Destroy(_myMiniComic);
-        quiz.transform.position = InstantiationTransform.position;
-
-        //Set's the correct dialog string in Virgil
-        _myVirgil.DialogString = _virgilString;
-
-        //This for loop sets the impertinant bools for each QuizButton based on whether the point of interest was sexual harassment
-        foreach (QuizButton qb in quiz.GetComponentsInChildren<QuizButton>())
-        {
-            if (IsSexualHarassment)
-            {
-                //If the answer is  yes and it is a case of sexual harrasment then the qb will be marked as a Game winner
-                if (qb.name == "Answer Yes")
-                {
-                    qb.CorrectAnswer = true;
-                    qb.GameWinner = true;
-                }
-                else
-                    qb.CorrectAnswer = false;
-            }
-            else
-            {
-                if (qb.name == "Answer Yes")
-                    qb.CorrectAnswer = false;
-                else
-                    qb.CorrectAnswer = true;
-            }
-        }
     }
 }

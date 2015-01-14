@@ -47,4 +47,6 @@ public class SHGameManager : MonoBehaviour
         }
     }
     protected bool sectionComplete;
+
+    public PointOfInterest CurrentPOI;
 }

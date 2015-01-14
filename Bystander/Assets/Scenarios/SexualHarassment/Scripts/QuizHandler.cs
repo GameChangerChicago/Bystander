@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//This script is new ;)
 public class QuizHandler : MonoBehaviour
 {
     private SHVigilHandler _myVirgil;
@@ -49,8 +50,8 @@ public class QuizHandler : MonoBehaviour
         }
         else
         {
+            //Looks for the quiz that isn't this and moves it off screen
             QuizHandler[] quizes = FindObjectsOfType<QuizHandler>();
-
             for (int i = 0; i < quizes.Length; i++)
             {
                 if (quizes[i] != this)

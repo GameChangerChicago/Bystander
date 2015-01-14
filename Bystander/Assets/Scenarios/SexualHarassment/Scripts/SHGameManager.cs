@@ -1,6 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//This enum will need to be updated so that One-Five are named what the five intervention types end up being named.
+public enum ButtonType
+{
+    Yes,
+    No,
+    One,
+    Two,
+    Three,
+    Four,
+    Five
+}
+
 public class SHGameManager : MonoBehaviour
 {
     private int _sectionsCompleted;

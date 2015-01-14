@@ -6,19 +6,9 @@ public class QuizButton : MonoBehaviour
     private SHGameManager _myGameManager;
     private SHVigilHandler _myVirgil;
     private QuizHandler _otherQuiz;
-    private GameObject _myQuiz;
+    private GameObject _myQuiz,
+                       _currentMiniComic;
     private ButtonType _myButtonType;
-
-    enum ButtonType
-    {
-        Yes,
-        No,
-        One,
-        Two,
-        Three,
-        Four,
-        Five
-    }
 
     //These are the most important bools for the quiz buttons
     public bool CorrectAnswer,
@@ -30,14 +20,16 @@ public class QuizButton : MonoBehaviour
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         _myQuiz = this.transform.parent.gameObject;
-        QuizHandler[] quizes = FindObjectsOfType<QuizHandler>();
 
+        //Looks for the QuizHandler that isn't this button's parent and sets _otherQuiz to what ever that is
+        QuizHandler[] quizes = FindObjectsOfType<QuizHandler>();
         for (int i = 0; i < quizes.Length; i++)
         {
             if (_myQuiz != quizes[i].gameObject)
                 _otherQuiz = quizes[i];
         }
 
+        //Sets button type
         GetButtonType();
     }
 
@@ -48,16 +40,17 @@ public class QuizButton : MonoBehaviour
         {
             if (CorrectAnswer)
             {
-                //Tells the virgil handler that the player was correct then calls ShowStringSegment
+                //Tells the virgil handler that the player was correct
                 _myVirgil.IsCorrect = true;
 
-                //If the player correctly found the instance of sexual harrasment
+                //If the player correctly found the instance of sexual harrasment...
                 if (GameWinner)
                 {
+                    //we let _myVirgil know that it's a game winner and then we show the "Which type" quiz
                     _myVirgil.GameWinner = true;
                     StartCoroutine(_otherQuiz.ShowQuiz(0, _myQuiz.transform.position, null, true, false));
                 }
-                else
+                else //otherwise we start the virgil dialog by calling ShowStringSegment
                     _myVirgil.ShowStringSegment();
             }
             else
@@ -70,7 +63,8 @@ public class QuizButton : MonoBehaviour
         else
         {
             //This wont work until i have more minicomics
-            //GameObject myMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
+            //GameObject _currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
+            //_myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
             Debug.Log("Load: " + "Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name);
         }
 
@@ -78,6 +72,9 @@ public class QuizButton : MonoBehaviour
         _myQuiz.transform.position = new Vector3(0, 0, 500);
     }
 
+    //This method looks at the name of the QuizButton and assigns it a ButtonType based on that
+    //ButtonTypes 1-5 will be renamed to whatever they end up being but I don't know what that will be yet so:
+    //Que sara sera; what ever will be will be;
     private void GetButtonType()
     {
         switch (this.name)

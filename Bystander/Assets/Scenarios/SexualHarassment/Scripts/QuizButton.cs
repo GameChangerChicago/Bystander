@@ -10,6 +10,8 @@ public class QuizButton : MonoBehaviour
                        _currentMiniComic;
     private ButtonType _myButtonType;
 
+    protected GameObject currentMiniComic;
+
     //These are the most important bools for the quiz buttons
     public bool CorrectAnswer,
                 GameWinner;
@@ -62,10 +64,11 @@ public class QuizButton : MonoBehaviour
         }
         else
         {
-            //This wont work until i have more minicomics
-            //GameObject _currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
-            //_myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
-            Debug.Log("Load: " + "Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name);
+            //Instantiates the new mini comic then invokes RemoveComic; also we're loading the specific dialog string
+            Invoke("RemoveComic", 3);
+            _currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
+            currentMiniComic = (GameObject)Instantiate(_currentMiniComic, _myGameManager.CurrentPOI.InstantiationTransform.position, Quaternion.identity);
+            _myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
         }
 
         //Moves the quiz out of sight and reach
@@ -85,24 +88,31 @@ public class QuizButton : MonoBehaviour
             case "Answer No":
                 _myButtonType = ButtonType.No;
                 break;
-            case "Answer 1":
+            case "Answer_1":
                 _myButtonType = ButtonType.One;
                 break;
-            case "Answer 2":
+            case "Answer_2":
                 _myButtonType = ButtonType.Two;
                 break;
-            case "Answer 3":
+            case "Answer_3":
                 _myButtonType = ButtonType.Three;
                 break;
-            case "Answer 4":
+            case "Answer_4":
                 _myButtonType = ButtonType.Four;
                 break;
-            case "Answer 5":
+            case "Answer_5":
                 _myButtonType = ButtonType.Five;
                 break;
             default:
                 Debug.Log("This quiz button shouldn't be named what it is. Check that and get back to me.");
                 break;
         }
+    }
+
+    //This method destroys the current mini comic and calls ShowStringSegment
+    private void RemoveComic()
+    {
+        GameObject.Destroy(currentMiniComic);
+        _myVirgil.ShowStringSegment();
     }
 }

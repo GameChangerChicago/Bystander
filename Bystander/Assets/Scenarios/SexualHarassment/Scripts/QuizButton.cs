@@ -57,18 +57,27 @@ public class QuizButton : MonoBehaviour
             }
             else
             {
-                //Tells the virgil handler that the player was wrong then  calls ShowStringSegment
+                //Tells the virgil handler that the player was wrong then calls ShowStringSegment
                 _myVirgil.IsCorrect = false;
                 _myVirgil.ShowStringSegment();
             }
         }
         else
         {
-            //Instantiates the new mini comic then invokes RemoveComic; also we're loading the specific dialog string
-            Invoke("RemoveComic", 3);
-            _currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
-            currentMiniComic = (GameObject)Instantiate(_currentMiniComic, _myGameManager.CurrentPOI.InstantiationTransform.position, Quaternion.identity);
-            _myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
+            //Calls CheckAnswer in the game manager to see if we've used that answer before
+            if (_myGameManager.CheckAnswer(_myButtonType))
+            {
+                //Instantiates the new mini comic then invokes RemoveComic; also we're loading the specific dialog string
+                Invoke("RemoveComic", 3);
+                _currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
+                currentMiniComic = (GameObject)Instantiate(_currentMiniComic, _myGameManager.CurrentPOI.InstantiationTransform.position, Quaternion.identity);
+                _myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
+            }
+            else
+            {
+                _myVirgil.DialogString = Resources.Load("SHText/VirgilDialg_AlreadyTried_" + _myButtonType.ToString()).ToString();
+                _myVirgil.ShowStringSegment();
+            }
         }
 
         //Moves the quiz out of sight and reach

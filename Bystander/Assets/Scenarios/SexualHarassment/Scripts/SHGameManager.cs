@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 //This enum will need to be updated so that One-Five are named what the five intervention types end up being named.
 public enum ButtonType
@@ -15,6 +16,8 @@ public enum ButtonType
 
 public class SHGameManager : MonoBehaviour
 {
+    static Dictionary<ButtonType, bool> AnswersSelected = new Dictionary<ButtonType, bool>();
+
     private int _sectionsCompleted;
 
     //This property looks at all of the SHCameraManagers and checks to see which one is the current camera then returns said SHCameraManager
@@ -61,4 +64,24 @@ public class SHGameManager : MonoBehaviour
     protected bool sectionComplete;
 
     public PointOfInterest CurrentPOI;
+
+    void Start()
+    {
+        AnswersSelected.Add(ButtonType.One, false);
+        AnswersSelected.Add(ButtonType.Two, false);
+        AnswersSelected.Add(ButtonType.Three, false);
+        AnswersSelected.Add(ButtonType.Four, false);
+        AnswersSelected.Add(ButtonType.Five, false);
+    }
+
+    public bool CheckAnswer(ButtonType button)
+    {
+        if (!AnswersSelected[button])
+        {
+            AnswersSelected[button] = true;
+            return true;
+        }
+        else
+            return false;
+    }
 }

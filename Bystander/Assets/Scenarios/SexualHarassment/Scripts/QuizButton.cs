@@ -64,20 +64,15 @@ public class QuizButton : MonoBehaviour
         }
         else
         {
-            //Calls CheckAnswer in the game manager to see if we've used that answer before
-            if (_myGameManager.CheckAnswer(_myButtonType))
-            {
-                //Instantiates the new mini comic then invokes RemoveComic; also we're loading the specific dialog string
-                Invoke("RemoveComic", 3);
-                _currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
-                currentMiniComic = (GameObject)Instantiate(_currentMiniComic, _myGameManager.CurrentPOI.InstantiationTransform.position, Quaternion.identity);
-                _myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
-            }
-            else
-            {
-                _myVirgil.DialogString = Resources.Load("SHText/VirgilDialg_AlreadyTried_" + _myButtonType.ToString()).ToString();
-                _myVirgil.ShowStringSegment();
-            }
+            //Instantiates the new mini comic then invokes RemoveComic; also we're loading the specific dialog string
+            Invoke("RemoveComic", 3);
+            _currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
+            currentMiniComic = (GameObject)Instantiate(_currentMiniComic, _myGameManager.CurrentPOI.InstantiationTransform.position, Quaternion.identity);
+            _myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
+
+            //This grays out the answer and disables it's box collider so you can't select it
+            this.GetComponent<TextMesh>().color = Color.gray;
+            this.GetComponent<BoxCollider>().enabled = false;
         }
 
         //Moves the quiz out of sight and reach

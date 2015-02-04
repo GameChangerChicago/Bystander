@@ -44,7 +44,7 @@ private string correctAnswer;
 
 		guiManager = FindObjectOfType<GUIManager>();
 		gameState = GameState.Intro;
-		Invoke ("StartGame", 10f);
+		Invoke ("StartGame", 1f);
 
 
 

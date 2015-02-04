@@ -4,18 +4,9 @@ using System.Collections;
 public class Node : MonoBehaviour
 {
 
-		private bool currentWebPage;
+	private Node head, next;
+		
 
-		public Node getNode ()
-		{
-				return this; 
-		}
-				
-		public bool isCurrentWebPage ()
-		{
-				return currentWebPage;
-
-		}
 
 
 }

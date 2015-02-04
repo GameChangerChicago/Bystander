@@ -6,22 +6,28 @@ public class WebSiteManager : MonoBehaviour
 {
 
 		public List<Node> webPageList;
-		private Node currentWebPage;
+		//private Stack<Node> previousPageList, nextPageList;
+		public Node currentWebPage, previousPage;
+
+
+	void Start(){
+		//currentWebPage = GameObject.Find ("Home Page");
+	}
 
 		public void AddWebLink (Node page)
 		{
-				webPageList.Add (page);
+			webPageList.Add (page);
 	
 		}
 
 		public void NavigationHandler (Node nextPage)
 		{
-				currentWebPage = nextPage;
-				EnableCurrentPage ();
-
+			currentWebPage = nextPage;
+			EnableCurrentPage ();
 
 		}
 
+		//Cycles through all webpages in the list and hides them from view
 		private void EnableCurrentPage ()
 		{
 

@@ -22,6 +22,7 @@ private string correctAnswer;
 		Outro
 	};
 
+    //MASON NOTE: This array is redundant. In the switch you can just have correctAnswer = a. I left a commented out example below in the "BELIEVE" case.
 	//Holds correct answers for each question
 	private string[] answerArray	= new string[]{ 
 		"BELIEVE", 
@@ -72,6 +73,7 @@ private string correctAnswer;
 
 				case "BELIEVE":
 					Debug.Log ("The Answer is Believe! Moving to next game State");
+                    //correctAnswer = a;
 					correctAnswer = answerArray[1];
 					questionAnswered = false;
 					gameState = GameState.Q2;

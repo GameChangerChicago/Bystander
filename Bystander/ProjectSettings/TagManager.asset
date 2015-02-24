@@ -6,6 +6,8 @@ TagManager:
   - Guidance_UI_Root
   - GameManagerOBJ
   - 
+  - DialogName
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -62,4 +64,8 @@ TagManager:
   - name: FlashBack
     userID: 5
     uniqueID: 993293683
+    locked: 0
+  - name: Masks
+    userID: 6
+    uniqueID: 3993981873
     locked: 0

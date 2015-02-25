@@ -1099,10 +1099,10 @@ MonoBehaviour:
     alignment: 8
     x:
       scale: 1
-      value: .433299989
+      value: 0
     y:
       scale: 1
-      value: -.5
+      value: 0
     width:
       scale: 1
       value: 1
@@ -1654,7 +1654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &504240193
 Transform:
   m_ObjectHideFlags: 0
@@ -3675,6 +3675,118 @@ Prefab:
       propertyPath: m_Name
       value: Scene
       objectReference: {fileID: 0}
+    - target: {fileID: 100082, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.x.scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.y.scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.origin
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.alignment
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.x.value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.y.value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.width.scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: autoSize.maxWidth.scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100068, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400094, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.x.scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400094, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.alignment
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400094, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.origin
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400094, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: autoSize.autoSizeWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: autoSize.autoSizeHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: autoSize.maxWidth.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: scaledRect.minPixelHeight
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 100066, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400126, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: dialogue.responseMenu.buttonAlignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
   m_RootGameObject: {fileID: 956721698}
@@ -3741,7 +3853,7 @@ MonoBehaviour:
   depthSortChildren: 0
   scaledRect:
     origin: 8
-    alignment: 8
+    alignment: 7
     x:
       scale: 1
       value: -.680000007
@@ -4820,7 +4932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1664632397
 Transform:
   m_ObjectHideFlags: 0
@@ -5147,7 +5259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1904009393
 SpriteRenderer:
   m_ObjectHideFlags: 0

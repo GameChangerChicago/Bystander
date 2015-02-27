@@ -196,7 +196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100030
 GameObject:
   m_ObjectHideFlags: 1
@@ -314,7 +314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100046
 GameObject:
   m_ObjectHideFlags: 1
@@ -391,7 +391,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400054}
   - 114: {fileID: 11400094}
-  - 114: {fileID: 11400096}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Response Panel
   m_TagString: Untagged
@@ -1069,6 +1069,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400082}
   m_RootOrder: 4
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -642255930, guid: 4cf406bdc32341147b2510d9b7043fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  interval: .5
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1126,20 +1139,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 1
   scaledRect:
-    origin: 8
-    alignment: 8
+    origin: 7
+    alignment: 7
     x:
       scale: 1
-      value: .433299989
+      value: -.180000007
     y:
       scale: 1
-      value: -.5
+      value: .200000003
     width:
       scale: 1
       value: 1
     height:
-      scale: 0
-      value: 525
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -1147,7 +1160,7 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 0
+      value: 1
     maxHeight:
       scale: 1
       value: 1
@@ -1369,20 +1382,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 8
-    alignment: 8
+    origin: 4
+    alignment: 4
     x:
-      scale: 1
-      value: -.680000007
+      scale: 0
+      value: 0
     y:
-      scale: 1
-      value: -.0130000003
+      scale: 0
+      value: 0
     width:
       scale: 1
-      value: .310000002
+      value: 1
     height:
       scale: 1
-      value: .5
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -1390,10 +1403,10 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 275
+      value: 1
     maxHeight:
       scale: 1
-      value: 244
+      value: 1
     padding:
       m_Left: 0
       m_Right: 0
@@ -1788,25 +1801,25 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 4
+    alignment: 4
     x:
       scale: 1
-      value: -.600000024
+      value: .150000006
     y:
       scale: 1
-      value: .100000001
+      value: -.300000012
     width:
-      scale: 0
-      value: 470
+      scale: 1
+      value: 1
     height:
-      scale: 0
-      value: 70
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -1937,25 +1950,25 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 4
+    alignment: 4
     x:
       scale: 1
-      value: -.600000024
+      value: .209999993
     y:
       scale: 1
-      value: .25
+      value: -.100000001
     width:
-      scale: 0
-      value: 470
+      scale: 1
+      value: 1
     height:
-      scale: 0
-      value: 70
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -2961,31 +2974,31 @@ MonoBehaviour:
   depth: 3
   depthSortChildren: 1
   scaledRect:
-    origin: 2
+    origin: 1
     alignment: 0
     x:
       scale: 0
-      value: -420
+      value: 0
     y:
-      scale: 1
-      value: .449999988
+      scale: 0
+      value: 0
     width:
       scale: 1
       value: 1
     height:
-      scale: 0
-      value: 450
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 1
+      value: 2
     maxHeight:
       scale: 1
-      value: 1
+      value: 2
     padding:
       m_Left: 0
       m_Right: 0
@@ -3011,21 +3024,7 @@ MonoBehaviour:
     axisRepeatDelay: 1
     mouseWheelSensitivity: 5
   visible: 1
-  clipChildren: 1
---- !u!114 &11400096
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -713665266, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  direction: 1
-  duration: .300000012
+  clipChildren: 0
 --- !u!114 &11400098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3108,10 +3107,10 @@ MonoBehaviour:
     origin: 0
     alignment: 0
     x:
-      scale: 0
+      scale: 1
       value: 0
     y:
-      scale: 0
+      scale: 1
       value: 0
     width:
       scale: 1
@@ -3349,25 +3348,25 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 4
+    alignment: 4
     x:
       scale: 1
-      value: -.600000024
+      value: .0500000007
     y:
       scale: 1
-      value: .400000006
+      value: .100000001
     width:
-      scale: 0
-      value: 470
+      scale: 1
+      value: 1
     height:
-      scale: 0
-      value: 70
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -3498,25 +3497,25 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 4
+    alignment: 4
     x:
       scale: 1
-      value: -.629999995
+      value: -.280000001
     y:
       scale: 1
-      value: .550000012
+      value: -.409999996
     width:
-      scale: 0
-      value: 470
+      scale: 1
+      value: 1
     height:
-      scale: 0
-      value: 70
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -4405,20 +4404,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 8
-    alignment: 8
+    origin: 4
+    alignment: 4
     x:
-      scale: 1
-      value: -.680000007
+      scale: 0
+      value: 0
     y:
-      scale: 1
-      value: -.0130000003
+      scale: 0
+      value: 0
     width:
-      scale: 1
-      value: .310000002
+      scale: 0
+      value: 1
     height:
       scale: 1
-      value: .5
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -4426,10 +4425,10 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 275
+      value: 1
     maxHeight:
       scale: 1
-      value: 244
+      value: 1
     padding:
       m_Left: 0
       m_Right: 0
@@ -4480,23 +4479,23 @@ MonoBehaviour:
   m_Script: {fileID: -697685688, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depth: 10
+  depth: 0
   depthSortChildren: 1
   scaledRect:
-    origin: 8
-    alignment: 8
+    origin: 7
+    alignment: 7
     x:
       scale: 1
-      value: .433299989
+      value: -.180000007
     y:
       scale: 1
-      value: -.5
+      value: .200000003
     width:
       scale: 1
       value: 1
     height:
-      scale: 0
-      value: 525
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -4504,7 +4503,7 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 0
+      value: 1
     maxHeight:
       scale: 1
       value: 1

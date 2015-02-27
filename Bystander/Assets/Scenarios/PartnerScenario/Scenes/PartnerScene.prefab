@@ -49,7 +49,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100006
 GameObject:
   m_ObjectHideFlags: 1
@@ -233,7 +233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100028
 GameObject:
   m_ObjectHideFlags: 1
@@ -267,7 +267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100032
 GameObject:
   m_ObjectHideFlags: 1
@@ -536,7 +536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100064
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100070
 GameObject:
   m_ObjectHideFlags: 1
@@ -672,7 +672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100086
 GameObject:
   m_ObjectHideFlags: 1
@@ -688,7 +688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100088
 GameObject:
   m_ObjectHideFlags: 1
@@ -725,7 +725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100092
 GameObject:
   m_ObjectHideFlags: 1
@@ -893,7 +893,7 @@ Transform:
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 400066}
   m_RootOrder: 0
@@ -926,7 +926,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400066}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &400022
 Transform:
   m_ObjectHideFlags: 1
@@ -989,7 +989,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400066}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &400032
 Transform:
   m_ObjectHideFlags: 1
@@ -1214,14 +1214,14 @@ Transform:
   m_GameObject: {fileID: 100066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400016}
   - {fileID: 400054}
   - {fileID: 400032}
   - {fileID: 400012}
-  - {fileID: 400020}
   - {fileID: 400030}
+  - {fileID: 400020}
   - {fileID: 400042}
   m_Father: {fileID: 400070}
   m_RootOrder: 3
@@ -1504,7 +1504,7 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bb8860c7e62284c44b553c0563d77cbb, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1910,20 +1910,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 1
+    alignment: 1
     x:
-      scale: 1
-      value: -.629999995
+      scale: 0
+      value: -90
     y:
-      scale: 1
-      value: .550000012
+      scale: 0
+      value: -10
     width:
       scale: 0
-      value: 470
+      value: 0
     height:
       scale: 0
-      value: 70
+      value: 0
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -2147,20 +2147,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 1
+    alignment: 1
     x:
-      scale: 1
-      value: -.600000024
+      scale: 0
+      value: 100
     y:
-      scale: 1
-      value: .100000001
+      scale: 0
+      value: 30
     width:
-      scale: 0
-      value: 470
+      scale: 1
+      value: 0
     height:
-      scale: 0
-      value: 70
+      scale: 1
+      value: 0
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -2300,16 +2300,16 @@ MonoBehaviour:
     alignment: 8
     x:
       scale: 1
-      value: .433299989
+      value: 0
     y:
       scale: 1
-      value: -.5
+      value: 0
     width:
       scale: 1
       value: 1
     height:
-      scale: 0
-      value: 525
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -2317,7 +2317,7 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 0
+      value: 1
     maxHeight:
       scale: 1
       value: 1
@@ -2959,17 +2959,17 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 1
+    alignment: 1
     x:
-      scale: 1
-      value: -.600000024
+      scale: 0
+      value: 20
     y:
-      scale: 1
-      value: .400000006
+      scale: 0
+      value: 180
     width:
       scale: 0
-      value: 470
+      value: 0
     height:
       scale: 0
       value: 70
@@ -3832,17 +3832,17 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 1
+    alignment: 1
     x:
-      scale: 1
-      value: -.600000024
+      scale: 0
+      value: 125
     y:
-      scale: 1
-      value: .25
+      scale: 0
+      value: 110
     width:
       scale: 0
-      value: 470
+      value: 0
     height:
       scale: 0
       value: 70
@@ -4070,20 +4070,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 8
-    alignment: 8
+    origin: 4
+    alignment: 4
     x:
-      scale: 1
-      value: -.680000007
+      scale: 0
+      value: -125
     y:
-      scale: 1
-      value: -.0130000003
+      scale: 0
+      value: 75
     width:
-      scale: 1
-      value: .310000002
+      scale: 0
+      value: 0
     height:
-      scale: 1
-      value: .5
+      scale: 0
+      value: 0
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -4091,10 +4091,10 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 275
+      value: 1
     maxHeight:
       scale: 1
-      value: 244
+      value: 1
     padding:
       m_Left: 0
       m_Right: 0
@@ -4140,15 +4140,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100058}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: 0
-  fadeInDuration: .200000003
-  duration: 1
-  fadeOutDuration: 0
+  fadeInDuration: 0
+  duration: 0
+  fadeOutDuration: .5
 --- !u!114 &11400098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4344,20 +4344,20 @@ MonoBehaviour:
   depth: 3
   depthSortChildren: 1
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 4
+    alignment: 4
     x:
-      scale: 0
-      value: -420
+      scale: 1
+      value: 0
     y:
       scale: 1
-      value: .449999988
+      value: 0
     width:
       scale: 1
       value: 1
     height:
-      scale: 0
-      value: 450
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -4377,7 +4377,7 @@ MonoBehaviour:
   fit:
     above: {fileID: 0}
     below: {fileID: 0}
-    leftOf: {fileID: 11400130}
+    leftOf: {fileID: 0}
     rightOf: {fileID: 0}
     expandToFit: 1
   navigation:
@@ -4394,7 +4394,7 @@ MonoBehaviour:
     axisRepeatDelay: 1
     mouseWheelSensitivity: 5
   visible: 1
-  clipChildren: 1
+  clipChildren: 0
 --- !u!114 &11400110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4407,15 +4407,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: 0
-  direction: 1
-  duration: .300000012
+  direction: 3
+  duration: .400000006
 --- !u!114 &11400112
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100068}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
@@ -4807,7 +4807,7 @@ MonoBehaviour:
       panel: {fileID: 11400026}
       line: {fileID: 11400094}
       portraitImage: {fileID: 0}
-      portraitName: {fileID: 11400036}
+      portraitName: {fileID: 0}
       continueButton: {fileID: 11400074}
     pcSubtitle:
       panel: {fileID: 0}
@@ -4827,13 +4827,13 @@ MonoBehaviour:
         portraitImage: {fileID: 0}
         portraitName: {fileID: 11400012}
         continueButton: {fileID: 0}
-      timer: {fileID: 11400068}
+      timer: {fileID: 0}
       buttons:
       - {fileID: 11400024}
       - {fileID: 11400088}
       - {fileID: 11400050}
       - {fileID: 11400018}
-      - {fileID: 11400028}
+      - {fileID: 0}
   qteIndicators:
   - {fileID: 11400020}
   - {fileID: 11400006}

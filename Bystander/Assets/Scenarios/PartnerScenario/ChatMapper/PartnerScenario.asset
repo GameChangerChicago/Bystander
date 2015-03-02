@@ -211,7 +211,7 @@ MonoBehaviour:
       value: Myth1
       type: 0
     - title: Initial Value
-      value: False
+      value: True
       type: 2
     - title: Description
       value: 
@@ -222,7 +222,7 @@ MonoBehaviour:
       value: Myth2
       type: 0
     - title: Initial Value
-      value: False
+      value: True
       type: 2
     - title: Description
       value: 
@@ -233,7 +233,7 @@ MonoBehaviour:
       value: Myth3
       type: 0
     - title: Initial Value
-      value: False
+      value: True
       type: 2
     - title: Description
       value: 
@@ -244,7 +244,7 @@ MonoBehaviour:
       value: Myth4
       type: 0
     - title: Initial Value
-      value: False
+      value: True
       type: 2
     - title: Description
       value: 
@@ -255,7 +255,7 @@ MonoBehaviour:
       value: Myth5
       type: 0
     - title: Initial Value
-      value: False
+      value: True
       type: 2
     - title: Description
       value: 
@@ -266,7 +266,7 @@ MonoBehaviour:
       value: Myth6
       type: 0
     - title: Initial Value
-      value: False
+      value: True
       type: 2
     - title: Description
       value: 
@@ -277,7 +277,7 @@ MonoBehaviour:
       value: Myth7
       type: 0
     - title: Initial Value
-      value: False
+      value: True
       type: 2
     - title: Description
       value: 
@@ -491,9 +491,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "Gina, I have to talk to you. Something happened Friday night\u2026I\u2019m
-          just not sure what to do."
-        type: 4
+        value: Gina, I have to talk to you. Something happened Friday night.
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -501,6 +500,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -514,7 +516,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 2
         destinationConversationID: 1
-        destinationDialogueID: 3
+        destinationDialogueID: 101
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -547,7 +549,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "What\u2019s wrong?"
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -555,6 +557,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -600,10 +605,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "Well Isaac and I went out ice skating on Friday, remember? The movie
-          was great and afterwards, Isaac took me to his place and gave me this bracelet.
-          It was all so romantic. But uh\u2026"
-        type: 4
+        value: Well Isaac and I went out ice skating on Friday, remember?
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -611,6 +614,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -624,7 +630,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 4
         destinationConversationID: 1
-        destinationDialogueID: 5
+        destinationDialogueID: 102
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -657,7 +663,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: Whoa, girl, that bracelet is beautiful.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -665,6 +671,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -710,7 +719,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "I know\u2026"
+        value: I know. Remember how I was telling you Isaac and I have been talking
+          about sex lately?
         type: 0
       - title: Parenthetical
         value: 
@@ -719,6 +729,9 @@ MonoBehaviour:
         value: '[]'
         type: 0
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -796,8 +809,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 670
+        x: 223
+        y: 424
         width: 160
         height: 30
     - id: 8
@@ -823,8 +836,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "Well he kept trying to take my pants off even though I kept telling
           him I wasn't ready. You want to know what he said to me? \u201CDon\u2019t
-          worry, baby. You\u2019re gonna like this.\u201D I didn\u2019t want to, I
-          really didn\u2019t, but he just wasn\u2019t listening. It was horrible."
+          worry, baby. You\u2019re gonna like this.\u201D"
         type: 0
       - title: Parenthetical
         value: 
@@ -833,6 +845,9 @@ MonoBehaviour:
         value: '[]'
         type: 0
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -847,6 +862,12 @@ MonoBehaviour:
         originDialogueID: 8
         destinationConversationID: 1
         destinationDialogueID: 98
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 104
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -913,8 +934,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 2070
+        x: 467
+        y: 2114
         width: 160
         height: 30
     - id: 10
@@ -938,8 +959,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: He told me he loves me and that if I really loved him I would want
-          it, too. But it just felt wrong.
+        value: He told me he loved me and that if I really loved him too I'd want
+          to have sex.
         type: 0
       - title: Parenthetical
         value: 
@@ -992,8 +1013,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 345
-        y: 620
+        x: 360
+        y: 611
         width: 160
         height: 30
     - id: 11
@@ -1017,7 +1038,7 @@ MonoBehaviour:
         value: "It doesn\u2019t count if you\u2019re dating."
         type: 0
       - title: Dialogue Text
-        value: "I don\u2019t think it counts if it\u2019s someone you\u2019re dating."
+        value: 
         type: 0
       - title: Parenthetical
         value: 
@@ -1042,7 +1063,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 11
         destinationConversationID: 1
-        destinationDialogueID: 18
+        destinationDialogueID: 109
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1053,8 +1074,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 210
-        y: 670
+        x: 197
+        y: 683
         width: 160
         height: 30
     - id: 12
@@ -1078,7 +1099,7 @@ MonoBehaviour:
         value: Your boyfriend loves you.
         type: 0
       - title: Dialogue Text
-        value: "You\u2019re lucky to have a boyfriend who tells you he loves you."
+        value: 
         type: 0
       - title: Parenthetical
         value: 
@@ -1103,7 +1124,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 12
         destinationConversationID: 1
-        destinationDialogueID: 23
+        destinationDialogueID: 110
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1114,8 +1135,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 390
-        y: 670
+        x: 374
+        y: 666
         width: 160
         height: 30
     - id: 13
@@ -1164,7 +1185,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 13
         destinationConversationID: 1
-        destinationDialogueID: 14
+        destinationDialogueID: 105
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1173,8 +1194,8 @@ MonoBehaviour:
         Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
-        x: 570
-        y: 670
+        x: 574
+        y: 651
         width: 160
         height: 30
     - id: 14
@@ -1198,8 +1219,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "Sex without your consent is wrong. Even if he is your boyfriend or
-          husband, it still doesn\u2019t make it right."
+        value: Sex without your consent is wrong. Even if he is your boyfriend, it
+          doesn't make it okay.
         type: 0
       - title: Parenthetical
         value: 
@@ -1224,15 +1245,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 14
         destinationConversationID: 1
-        destinationDialogueID: 16
+        destinationDialogueID: 106
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 720
+        x: 595
+        y: 755
         width: 160
         height: 30
     - id: 15
@@ -1281,15 +1302,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 15
         destinationConversationID: 1
-        destinationDialogueID: 17
-        isConnector: 1
+        destinationDialogueID: 111
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 750
-        y: 670
+        x: 812
+        y: 655
         width: 160
         height: 30
     - id: 18
@@ -1313,7 +1334,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
+        value: Oh-
         type: 0
       - title: Parenthetical
         value: 
@@ -1342,11 +1363,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 720
+        x: 151
+        y: 614
         width: 160
         height: 30
     - id: 23
@@ -1370,8 +1391,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1379,6 +1400,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1396,11 +1420,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 345
-        y: 720
+        x: 174
+        y: 730
         width: 160
         height: 30
     - id: 16
@@ -1424,8 +1448,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "I guess I hadn\u2019t thought of it that way."
-        type: 4
+        value: I know, it definitely didn't feel okay.
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1433,6 +1457,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1453,8 +1480,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 750
-        y: 770
+        x: 801
+        y: 769
         width: 160
         height: 30
     - id: 17
@@ -1513,8 +1540,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 912
-        y: 820
+        x: 894
+        y: 824
         width: 160
         height: 30
     - id: 20
@@ -1538,10 +1565,9 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "It\u2019s just that he had been so nice all night - taking me out
-          and buying me a beautiful gift. I felt bad for not wanting to have sex and
-          I didn\u2019t want him to think I don\u2019t love him. In a weird way, I
-          felt like I owed him something even though I DIDN\u2019T want to have sex."
+        value: "He had been so nice all night - taking me out and buying me a beautiful
+          gift. In a weird way, I felt like I owed him something even though I DIDN\u2019T
+          want to have sex."
         type: 0
       - title: Parenthetical
         value: 
@@ -1594,8 +1620,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 820
+        x: 134
+        y: 783
         width: 160
         height: 30
     - id: 21
@@ -1695,8 +1721,8 @@ MonoBehaviour:
 '
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 2020
+        x: 37
+        y: 2064
         width: 160
         height: 30
     - id: 19
@@ -1759,7 +1785,7 @@ MonoBehaviour:
         value: 2
         type: 5
       - title: Menu Text
-        value: "You should have know he\u2019d expect something."
+        value: "You should have known he\u2019d expect something."
         type: 0
       - title: Dialogue Text
         value: He took you on a nice date. You should have known he expected something
@@ -1788,7 +1814,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 24
         destinationConversationID: 1
-        destinationDialogueID: 30
+        destinationDialogueID: 113
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1799,8 +1825,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 48
-        y: 870
+        x: 69
+        y: 852
         width: 160
         height: 30
     - id: 25
@@ -1850,7 +1876,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 25
         destinationConversationID: 1
-        destinationDialogueID: 31
+        destinationDialogueID: 114
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1861,8 +1887,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 870
+        x: 263
+        y: 853
         width: 160
         height: 30
     - id: 26
@@ -1911,7 +1937,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 26
         destinationConversationID: 1
-        destinationDialogueID: 27
+        destinationDialogueID: 107
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1920,8 +1946,8 @@ MonoBehaviour:
         Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 870
+        x: 452
+        y: 856
         width: 160
         height: 30
     - id: 27
@@ -1970,15 +1996,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 27
         destinationConversationID: 1
-        destinationDialogueID: 29
+        destinationDialogueID: 108
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 920
+        x: 665
+        y: 908
         width: 160
         height: 30
     - id: 28
@@ -2027,15 +2053,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 28
         destinationConversationID: 1
-        destinationDialogueID: 32
-        isConnector: 1
+        destinationDialogueID: 112
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 696
-        y: 870
+        x: 840
+        y: 893
         width: 160
         height: 30
     - id: 29
@@ -2060,7 +2086,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "That\u2019s how I felt."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2068,6 +2094,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2088,7 +2117,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 750
+        x: 798
         y: 970
         width: 160
         height: 30
@@ -2113,8 +2142,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2122,6 +2151,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2139,11 +2171,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 920
+        x: 173
+        y: 956
         width: 160
         height: 30
     - id: 31
@@ -2167,8 +2199,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2176,6 +2208,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2193,11 +2228,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 345
-        y: 920
+        x: 363
+        y: 954
         width: 160
         height: 30
     - id: 32
@@ -2237,12 +2272,6 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 32
         destinationConversationID: 1
-        destinationDialogueID: 33
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 32
-        destinationConversationID: 1
         destinationDialogueID: 92
         isConnector: 0
         priority: 2
@@ -2252,12 +2281,18 @@ MonoBehaviour:
         destinationDialogueID: 34
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 32
+        destinationConversationID: 1
+        destinationDialogueID: 115
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 912
-        y: 1020
+        x: 895
+        y: 978
         width: 160
         height: 30
     - id: 33
@@ -2281,9 +2316,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "I don\u2019t know. There are some ways that I feel like this is my
-          fault, like I brought this on myself. I wore that tight new dress from the
-          mall. Maybe I was leading him on."
+        value: I wore that tight new dress from the mall. Maybe I was leading him
+          on.
         type: 0
       - title: Parenthetical
         value: 
@@ -2329,15 +2363,12 @@ MonoBehaviour:
         destinationDialogueID: 38
         isConnector: 0
         priority: 2
-      conditionsString: ((Variable["Myth3"]==false) and (Variable["Wrong"]>=-1) and
-        (Variable["M3"]<=0))
-      userScript: 'Variable["Myth3"]=true;
-
-        Variable["FacingGina"] = true;'
+      conditionsString: 
+      userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 1020
+        x: 109
+        y: 1007
         width: 160
         height: 30
     - id: 34
@@ -2378,8 +2409,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 696
-        y: 1020
+        x: 777
+        y: 1045
         width: 160
         height: 30
     - id: 35
@@ -2428,7 +2459,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 35
         destinationConversationID: 1
-        destinationDialogueID: 40
+        destinationDialogueID: 116
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2439,8 +2470,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 48
-        y: 1070
+        x: 37
+        y: 1050
         width: 160
         height: 30
     - id: 36
@@ -2490,7 +2521,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 36
         destinationConversationID: 1
-        destinationDialogueID: 41
+        destinationDialogueID: 117
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2501,8 +2532,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 1070
+        x: 272
+        y: 1063
         width: 160
         height: 30
     - id: 37
@@ -2551,7 +2582,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 37
         destinationConversationID: 1
-        destinationDialogueID: 39
+        destinationDialogueID: 118
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2560,8 +2591,8 @@ MonoBehaviour:
         Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 1070
+        x: 499
+        y: 1068
         width: 160
         height: 30
     - id: 38
@@ -2668,15 +2699,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 39
         destinationConversationID: 1
-        destinationDialogueID: 99
+        destinationDialogueID: 120
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 1120
+        x: 584
+        y: 1153
         width: 160
         height: 30
     - id: 40
@@ -2700,8 +2731,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2709,6 +2740,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2726,11 +2760,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1120
+        x: 99
+        y: 1131
         width: 160
         height: 30
     - id: 41
@@ -2754,8 +2788,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2763,6 +2797,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2780,11 +2817,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 345
-        y: 1120
+        x: 352
+        y: 1127
         width: 160
         height: 30
     - id: 42
@@ -2808,9 +2845,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "You\u2019re right. It\u2019s crazy to think that how I dressed has
-          anything to do with it."
-        type: 4
+        value: How I dressed has nothing to do with it.
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2818,6 +2854,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2838,8 +2877,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 912
-        y: 1220
+        x: 886
+        y: 1181
         width: 160
         height: 30
     - id: 43
@@ -2898,8 +2937,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 930
-        y: 1270
+        x: 902
+        y: 1248
         width: 160
         height: 30
     - id: 44
@@ -2923,8 +2962,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "You know how guys can be. He\u2019s been wanting to have sex for awhile
-          and things were getting heavy. Maybe he just couldn\u2019t wait anymore."
+        value: "He\u2019s been wanting to have sex for awhile and things were getting
+          heavy. Maybe he just couldn\u2019t wait anymore. You know how guys can be. "
         type: 0
       - title: Parenthetical
         value: 
@@ -2977,8 +3016,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 1220
+        x: 200
+        y: 1191
         width: 160
         height: 30
     - id: 45
@@ -3069,7 +3108,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 46
         destinationConversationID: 1
-        destinationDialogueID: 51
+        destinationDialogueID: 121
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3080,8 +3119,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 1270
+        x: 25
+        y: 1213
         width: 160
         height: 30
     - id: 47
@@ -3130,7 +3169,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 47
         destinationConversationID: 1
-        destinationDialogueID: 52
+        destinationDialogueID: 122
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3141,8 +3180,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 210
-        y: 1270
+        x: 189
+        y: 1237
         width: 160
         height: 30
     - id: 48
@@ -3192,7 +3231,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 48
         destinationConversationID: 1
-        destinationDialogueID: 50
+        destinationDialogueID: 123
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3201,8 +3240,8 @@ MonoBehaviour:
         Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
-        x: 390
-        y: 1270
+        x: 358
+        y: 1253
         width: 160
         height: 30
     - id: 49
@@ -3251,15 +3290,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 49
         destinationConversationID: 1
-        destinationDialogueID: 54
-        isConnector: 1
+        destinationDialogueID: 125
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 577
-        y: 1270
+        x: 549
+        y: 1253
         width: 160
         height: 30
     - id: 50
@@ -3309,15 +3348,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 50
         destinationConversationID: 1
-        destinationDialogueID: 53
+        destinationDialogueID: 124
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 1320
+        x: 576
+        y: 1319
         width: 160
         height: 30
     - id: 51
@@ -3341,8 +3380,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3350,6 +3389,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3367,11 +3409,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1320
+        x: 96
+        y: 1321
         width: 160
         height: 30
     - id: 52
@@ -3395,8 +3437,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3404,6 +3446,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3421,11 +3466,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 345
-        y: 1320
+        x: 344
+        y: 1335
         width: 160
         height: 30
     - id: 53
@@ -3449,8 +3494,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: That is true. He had no right to force me.
-        type: 4
+        value: That's true. He had no right to force me.
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3458,6 +3503,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3478,8 +3526,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 750
-        y: 1370
+        x: 801
+        y: 1357
         width: 160
         height: 30
     - id: 54
@@ -3538,8 +3586,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 912
-        y: 1420
+        x: 877
+        y: 1407
         width: 160
         height: 30
     - id: 55
@@ -3563,9 +3611,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "I wonder sometimes...I\u2019m just a normal teenager who goes to school
-          and likes hanging out with her friends. It\u2019s not like I\u2019m one
-          of those unstable people that this happens to on TV. Why did this happen
+        value: "It feels unreal. I\u2019m a normal teenager. It\u2019s not like I\u2019m
+          one of those unstable people that this happens to on TV. Why did this happen
           to me?"
         type: 0
       - title: Parenthetical
@@ -3619,8 +3666,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 1420
+        x: 250
+        y: 1366
         width: 160
         height: 30
     - id: 56
@@ -3712,7 +3759,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 57
         destinationConversationID: 1
-        destinationDialogueID: 62
+        destinationDialogueID: 126
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3723,8 +3770,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 48
-        y: 1470
+        x: 59
+        y: 1414
         width: 160
         height: 30
     - id: 58
@@ -3773,7 +3820,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 58
         destinationConversationID: 1
-        destinationDialogueID: 63
+        destinationDialogueID: 127
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3784,8 +3831,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 1470
+        x: 229
+        y: 1446
         width: 160
         height: 30
     - id: 59
@@ -3835,7 +3882,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 59
         destinationConversationID: 1
-        destinationDialogueID: 61
+        destinationDialogueID: 128
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3844,8 +3891,8 @@ MonoBehaviour:
         Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 1470
+        x: 422
+        y: 1457
         width: 160
         height: 30
     - id: 60
@@ -3894,15 +3941,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 60
         destinationConversationID: 1
-        destinationDialogueID: 65
-        isConnector: 1
+        destinationDialogueID: 130
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 696
-        y: 1470
+        x: 849
+        y: 1465
         width: 160
         height: 30
     - id: 61
@@ -3952,15 +3999,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 61
         destinationConversationID: 1
-        destinationDialogueID: 64
+        destinationDialogueID: 129
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 1520
+        x: 593
+        y: 1506
         width: 160
         height: 30
     - id: 62
@@ -3984,8 +4031,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3993,6 +4040,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4010,11 +4060,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1520
+        x: 77
+        y: 1519
         width: 160
         height: 30
     - id: 63
@@ -4038,8 +4088,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4047,6 +4097,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4064,11 +4117,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 345
-        y: 1520
+        x: 280
+        y: 1533
         width: 160
         height: 30
     - id: 64
@@ -4093,7 +4146,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "Yeah, I never thought it could happen to me, but you\u2019re right."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4101,6 +4154,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4121,8 +4177,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 750
-        y: 1570
+        x: 756
+        y: 1541
         width: 160
         height: 30
     - id: 65
@@ -4182,7 +4238,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 912
-        y: 1620
+        y: 1583
         width: 160
         height: 30
     - id: 66
@@ -4206,8 +4262,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "I didn\u2019t fight him off or anything...I don\u2019t have any marks
-          on my body and he didn\u2019t have a weapon on him on anything."
+        value: "I just froze. I didn\u2019t fight him off or anything."
         type: 0
       - title: Parenthetical
         value: 
@@ -4232,25 +4287,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 66
         destinationConversationID: 1
-        destinationDialogueID: 68
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 66
-        destinationConversationID: 1
-        destinationDialogueID: 69
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 66
-        destinationConversationID: 1
-        destinationDialogueID: 70
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 66
-        destinationConversationID: 1
-        destinationDialogueID: 71
+        destinationDialogueID: 131
         isConnector: 0
         priority: 2
       conditionsString: ((Variable["Myth6"]==false) and (Variable["Wrong"]>=-1) and
@@ -4260,8 +4297,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 1620
+        x: 214
+        y: 1590
         width: 160
         height: 30
     - id: 67
@@ -4327,8 +4364,8 @@ MonoBehaviour:
         value: People might not believe you.
         type: 0
       - title: Dialogue Text
-        value: "People probably won\u2019t believe you. Unless you put up a fight,
-          it\u2019s hard to know if it was really assault."
+        value: "People might not believe you. Unless you put up a fight, it\u2019s
+          hard to know if it was really assault."
         type: 0
       - title: Parenthetical
         value: 
@@ -4353,7 +4390,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 68
         destinationConversationID: 1
-        destinationDialogueID: 75
+        destinationDialogueID: 132
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4364,8 +4401,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 48
-        y: 1670
+        x: 58
+        y: 1659
         width: 160
         height: 30
     - id: 69
@@ -4415,7 +4452,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 69
         destinationConversationID: 1
-        destinationDialogueID: 76
+        destinationDialogueID: 133
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4477,7 +4514,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 70
         destinationConversationID: 1
-        destinationDialogueID: 72
+        destinationDialogueID: 134
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4486,8 +4523,8 @@ MonoBehaviour:
         Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 1670
+        x: 435
+        y: 1664
         width: 160
         height: 30
     - id: 71
@@ -4536,15 +4573,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 71
         destinationConversationID: 1
-        destinationDialogueID: 74
-        isConnector: 1
+        destinationDialogueID: 136
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 696
-        y: 1670
+        x: 823
+        y: 1656
         width: 160
         height: 30
     - id: 72
@@ -4593,15 +4630,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 72
         destinationConversationID: 1
-        destinationDialogueID: 73
+        destinationDialogueID: 135
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 1720
+        x: 635
+        y: 1711
         width: 160
         height: 30
     - id: 73
@@ -4625,7 +4662,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Thanks, for your support.
+        value: Thanks for your support.
         type: 0
       - title: Parenthetical
         value: 
@@ -4657,8 +4694,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 750
-        y: 1770
+        x: 737
+        y: 1785
         width: 160
         height: 30
     - id: 74
@@ -4742,8 +4779,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4751,6 +4788,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4768,11 +4808,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1720
+        x: 59
+        y: 1763
         width: 160
         height: 30
     - id: 76
@@ -4796,8 +4836,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4805,6 +4845,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4822,11 +4865,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 345
-        y: 1720
+        x: 320
+        y: 1752
         width: 160
         height: 30
     - id: 77
@@ -4850,9 +4893,9 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "I guess I\u2019m just worried that people will think that I am making
-          this up, that I wanted to have sex then regretted it or was trying to get
-          back at Isaac for something."
+        value: "I\u2019m worried that people will think that I am making this up.
+          That I wanted to have sex then regretted it or I'm trying to get back at
+          Isaac for something."
         type: 0
       - title: Parenthetical
         value: 
@@ -4998,7 +5041,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 79
         destinationConversationID: 1
-        destinationDialogueID: 85
+        destinationDialogueID: 137
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5060,7 +5103,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 80
         destinationConversationID: 1
-        destinationDialogueID: 86
+        destinationDialogueID: 138
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5122,7 +5165,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 81
         destinationConversationID: 1
-        destinationDialogueID: 83
+        destinationDialogueID: 139
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5181,15 +5224,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 82
         destinationConversationID: 1
-        destinationDialogueID: 87
-        isConnector: 1
+        destinationDialogueID: 143
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 698
-        y: 1873
+        x: 735
+        y: 1875
         width: 160
         height: 30
     - id: 83
@@ -5213,7 +5256,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Otherwise that is still rape. I believe you, Holly.
+        value: And your partner must listen. Otherwise that is still rape.
         type: 0
       - title: Parenthetical
         value: 
@@ -5238,15 +5281,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 83
         destinationConversationID: 1
-        destinationDialogueID: 84
+        destinationDialogueID: 140
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 1920
+        x: 659
+        y: 1914
         width: 160
         height: 30
     - id: 84
@@ -5270,7 +5313,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Thanks Gina, I needed to hear that.
+        value: You're absolutely right.
         type: 0
       - title: Parenthetical
         value: 
@@ -5302,8 +5345,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 750
-        y: 1970
+        x: 835
+        y: 1942
         width: 160
         height: 30
     - id: 85
@@ -5327,8 +5370,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        value: Oh-
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -5336,6 +5379,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -5353,11 +5399,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 75
-        y: 1920
+        x: 161
+        y: 1977
         width: 160
         height: 30
     - id: 86
@@ -5381,7 +5427,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: '[em4]Holly puts her head down.[/em4]'
+        value: Oh-
         type: 0
       - title: Parenthetical
         value: 
@@ -5410,11 +5456,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Placeholder for animation
       canvasRect:
         serializedVersion: 2
-        x: 345
-        y: 1920
+        x: 366
+        y: 1959
         width: 160
         height: 30
     - id: 87
@@ -5467,8 +5513,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 915
-        y: 2020
+        x: 802
+        y: 2116
         width: 160
         height: 30
     - id: 88
@@ -5483,20 +5529,16 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 3
+        value: 1
         type: 5
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
       - title: Menu Text
         value: 
         type: 0
       - title: Dialogue Text
-        value: "In this story, Gina is a great example of an active bystander. Even
-          though she had no ability to prevent the assault, she was able to support
-          her friend by listening, believing her story, emphasizing that rape is NEVER
-          the victim\u2019s fault, and supporting her friend\u2019s decisions for
-          next steps."
+        value: I believe you and support you, Holly.
         type: 0
       - title: Parenthetical
         value: 
@@ -5517,15 +5559,21 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 88
+        destinationConversationID: 1
+        destinationDialogueID: 141
+        isConnector: 0
+        priority: 2
       conditionsString: ((Variable["M1"]==1) and (Variable["M2"]==1) and (Variable["M3"]==1)
         and  (Variable["M4"]==1) and (Variable["M5"]==1) and (Variable["M6"]==1) and
         (Variable["M7"]==1))
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 346
-        y: 2020
+        x: 345
+        y: 2023
         width: 160
         height: 30
     - id: 89
@@ -5645,8 +5693,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 620
+        x: 664
+        y: 610
         width: 160
         height: 30
     - id: 91
@@ -5724,8 +5772,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 820
+        x: 445
+        y: 782
         width: 160
         height: 30
     - id: 92
@@ -5803,8 +5851,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 1020
+        x: 534
+        y: 1015
         width: 160
         height: 30
     - id: 93
@@ -5882,8 +5930,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 1220
+        x: 448
+        y: 1192
         width: 160
         height: 30
     - id: 94
@@ -5961,8 +6009,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 1420
+        x: 460
+        y: 1408
         width: 160
         height: 30
     - id: 95
@@ -6040,8 +6088,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 1620
+        x: 489
+        y: 1610
         width: 160
         height: 30
     - id: 96
@@ -6144,9 +6192,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Remember how I was telling you Isaac and I have been talking about
-          sex lately? Well, when we got to his house we were making out and that felt
-          really nice, but then things started getting  intense.
+        value: Well, when we got to his house we were making out and that felt really
+          nice, but then things started getting intense.
         type: 0
       - title: Parenthetical
         value: 
@@ -6214,6 +6261,9 @@ MonoBehaviour:
       - title: Video File
         value: 
         type: 0
+      - title: Sequence
+        value: 
+        type: 0
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -6232,66 +6282,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 520
-        width: 160
-        height: 30
-    - id: 99
-      fields:
-      - title: Title
-        value: New Dialogue
-        type: 0
-      - title: Pictures
-        value: '[]'
-        type: 3
-      - title: Description
-        value: 
-        type: 0
-      - title: Actor
-        value: 2
-        type: 5
-      - title: Conversant
-        value: 2
-        type: 5
-      - title: Menu Text
-        value: 
-        type: 0
-      - title: Dialogue Text
-        value: People are free to dress however they want and have CONSENSUAL sex
-          without being assaulted.
-        type: 0
-      - title: Parenthetical
-        value: 
-        type: 0
-      - title: Audio Files
-        value: '[]'
-        type: 0
-      - title: Video File
-        value: 
-        type: 0
-      - title: Sequence
-        value: 
-        type: 0
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: White
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 39
-        destinationConversationID: 1
-        destinationDialogueID: 42
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 748
-        y: 1167
+        x: 489
+        y: 538
         width: 160
         height: 30
     - id: 100
@@ -6309,9 +6301,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Remember how I was telling you Isaac and I have been talking about
-          sex lately? Well, when we got to his house we were making out and that felt
-          really nice, but then things started getting  intense.
+        value: Well, when we got to his house we were making out and that felt really
+          nice, but then things started getting intense.
         type: 0
       - title: Video File
         value: 
@@ -6356,8 +6347,1978 @@ MonoBehaviour:
         Variable["Wrong"]=0;'
       canvasRect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1
+        y: 367
+        width: 160
+        height: 30
+    - id: 101
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "I\u2019m just not sure what to do."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 101
+        destinationConversationID: 1
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 657
+        y: 147
+        width: 160
+        height: 30
+    - id: 102
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: We had a great time and afterwards, Isaac took me to his place and
+          gave me this bracelet.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 102
+        destinationConversationID: 1
+        destinationDialogueID: 103
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 656
+        y: 245
+        width: 160
+        height: 30
+    - id: 103
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: It was all so romantic. But-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 103
+        destinationConversationID: 1
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 829
+        y: 279
+        width: 160
+        height: 30
+    - id: 104
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "I didn\u2019t want to, I really didn\u2019t, but he just wasn\u2019t
+          listening. It was horrible."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 104
+        destinationConversationID: 1
+        destinationDialogueID: 98
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 669
+        y: 498
+        width: 160
+        height: 30
+    - id: 105
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "It doesn\u2019t matter what your relationship is."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 105
+        destinationConversationID: 1
+        destinationDialogueID: 14
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 567
+        y: 693
+        width: 160
+        height: 30
+    - id: 106
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Huh-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 106
+        destinationConversationID: 1
+        destinationDialogueID: 16
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 758
+        y: 716
+        width: 160
+        height: 30
+    - id: 107
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: You NEVER owe anyone sex. It should always be voluntary.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 107
+        destinationConversationID: 1
+        destinationDialogueID: 27
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 503
+        y: 908
+        width: 160
+        height: 30
+    - id: 108
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Huh-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 108
+        destinationConversationID: 1
+        destinationDialogueID: 29
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 690
+        y: 936
+        width: 160
+        height: 30
+    - id: 109
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "I don\u2019t think it counts if it\u2019s someone you\u2019re dating."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 109
+        destinationConversationID: 1
+        destinationDialogueID: 18
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 63
+        y: 651
+        width: 160
+        height: 30
+    - id: 110
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "You\u2019re lucky to have a boyfriend who tells you he loves you."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 110
+        destinationConversationID: 1
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 384
+        y: 722
+        width: 160
+        height: 30
+    - id: 111
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Well-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 111
+        destinationConversationID: 1
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 917
+        y: 763
+        width: 160
+        height: 30
+    - id: 112
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Well-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 112
+        destinationConversationID: 1
+        destinationDialogueID: 32
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 941
+        y: 948
+        width: 160
+        height: 30
+    - id: 113
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: He took you on a nice date. You should have known he expected something
+          from you.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 113
+        destinationConversationID: 1
+        destinationDialogueID: 30
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 71
+        y: 918
+        width: 160
+        height: 30
+    - id: 114
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "You were planning on having sex with him anyway, so what\u2019s the
+          big deal?"
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 114
+        destinationConversationID: 1
+        destinationDialogueID: 31
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 250
+        y: 898
+        width: 160
+        height: 30
+    - id: 115
+      fields:
+      - title: Title
+        value: Myth 3
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: 'There are some ways that I feel like this is still my fault, like
+          I brought this on myself. '
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 115
+        destinationConversationID: 1
+        destinationDialogueID: 33
+        isConnector: 0
+        priority: 2
+      conditionsString: ((Variable["Myth3"]==false) and (Variable["Wrong"]>=-1) and
+        (Variable["M3"]<=0))
+      userScript: 'Variable["Myth3"]=true;
+
+        Variable["FacingGina"] = true;'
+      canvasRect:
+        serializedVersion: 2
+        x: 311
+        y: 989
+        width: 160
+        height: 30
+    - id: 116
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: He probably got the wrong idea.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 116
+        destinationConversationID: 1
+        destinationDialogueID: 40
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 16
+        y: 1089
+        width: 160
+        height: 30
+    - id: 117
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Just last week I remember you saying you wanted to buy that dress to
+          wear for Isaac.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 117
+        destinationConversationID: 1
+        destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 204
+        y: 1095
+        width: 160
+        height: 30
+    - id: 118
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: It is NEVER the fault of someone who was assaulted.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 118
+        destinationConversationID: 1
+        destinationDialogueID: 39
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 461
+        y: 1132
+        width: 160
+        height: 30
+    - id: 119
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Huh-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 119
+        destinationConversationID: 1
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 945
+        y: 1098
+        width: 160
+        height: 30
+    - id: 120
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: People are free to dress however they want and have CONSENSUAL sex
+          without being assaulted.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 120
+        destinationConversationID: 1
+        destinationDialogueID: 119
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 725
+        y: 1126
+        width: 160
+        height: 30
+    - id: 121
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "Guys will be guys. Sometimes they can\u2019t control their urges."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 121
+        destinationConversationID: 1
+        destinationDialogueID: 51
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 1
+        y: 1269
+        width: 160
+        height: 30
+    - id: 122
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Well, pretty much all of the guys in our grade are having sex now.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 122
+        destinationConversationID: 1
+        destinationDialogueID: 52
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 175
+        y: 1280
+        width: 160
+        height: 30
+    - id: 123
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Most men have never sexually assaulted anyone, regardless of how interested
+          they are in another person.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 123
+        destinationConversationID: 1
+        destinationDialogueID: 50
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 410
+        y: 1286
+        width: 160
+        height: 30
+    - id: 124
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Huh-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 124
+        destinationConversationID: 1
+        destinationDialogueID: 53
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 760
+        y: 1314
+        width: 160
+        height: 30
+    - id: 125
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Well-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 125
+        destinationConversationID: 1
+        destinationDialogueID: 54
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 720
+        y: 1264
+        width: 160
+        height: 30
+    - id: 126
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "I don\u2019t know, sometimes people are needy and clingy and attract
+          these things."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 126
+        destinationConversationID: 1
+        destinationDialogueID: 62
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 19
+        y: 1460
+        width: 160
+        height: 30
+    - id: 127
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: It sounds like you may be giving Isaac mixed signals.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 127
+        destinationConversationID: 1
+        destinationDialogueID: 63
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 230
+        y: 1483
+        width: 160
+        height: 30
+    - id: 128
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: 'No one ever asks for it or wants it or puts themselves in the position
+          of having this happen to them. '
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 128
+        destinationConversationID: 1
+        destinationDialogueID: 61
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 429
+        y: 1501
+        width: 160
+        height: 30
+    - id: 129
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Huh-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 129
+        destinationConversationID: 1
+        destinationDialogueID: 64
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 576
+        y: 1546
+        width: 160
+        height: 30
+    - id: 130
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Well-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 130
+        destinationConversationID: 1
+        destinationDialogueID: 65
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 929
+        y: 1525
+        width: 160
+        height: 30
+    - id: 131
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "I don\u2019t have any marks on my body and he didn\u2019t have a weapon."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 131
+        destinationConversationID: 1
+        destinationDialogueID: 68
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 131
+        destinationConversationID: 1
+        destinationDialogueID: 69
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 131
+        destinationConversationID: 1
+        destinationDialogueID: 70
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 131
+        destinationConversationID: 1
+        destinationDialogueID: 71
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 92
+        y: 1595
+        width: 160
+        height: 30
+    - id: 132
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "People might not believe you. Unless you put up a fight, it\u2019s
+          hard to know if it was really assault."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 132
+        destinationConversationID: 1
+        destinationDialogueID: 75
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 98
+        y: 1706
+        width: 160
+        height: 30
+    - id: 133
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "Maybe you actually wanted to have sex but couldn\u2019t let yourself
+          go."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 133
+        destinationConversationID: 1
+        destinationDialogueID: 76
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 260
+        y: 1714
+        width: 160
+        height: 30
+    - id: 134
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "Saying \u201Cno\u201D or even forcing sex on you without your consent
+          IS rape."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 134
+        destinationConversationID: 1
+        destinationDialogueID: 72
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 467
+        y: 1715
+        width: 160
+        height: 30
+    - id: 135
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Huh-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 135
+        destinationConversationID: 1
+        destinationDialogueID: 73
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 708
+        y: 1756
+        width: 160
+        height: 30
+    - id: 136
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Well-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 136
+        destinationConversationID: 1
+        destinationDialogueID: 74
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 937
+        y: 1708
+        width: 160
+        height: 30
+    - id: 137
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "Maybe you did want to have sex, but didn\u2019t want it to ruin your
+          reputation."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 137
+        destinationConversationID: 1
+        destinationDialogueID: 85
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 47
+        y: 1920
+        width: 160
+        height: 30
+    - id: 138
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Isaac is like the nicest guy in school with so much going for him.
+          Do you really want to be responsible for ruining his life?
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 138
+        destinationConversationID: 1
+        destinationDialogueID: 86
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 300
+        y: 1916
+        width: 160
+        height: 30
+    - id: 139
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 2
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Even if you were making out or even started having sex, you are free
+          to change your mind at ANYTIME.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 139
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 480
+        y: 1920
+        width: 160
+        height: 30
+    - id: 140
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Huh-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 140
+        destinationConversationID: 1
+        destinationDialogueID: 84
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 625
+        y: 1955
+        width: 160
+        height: 30
+    - id: 141
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Thanks, Gina. I needed to hear that.
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 141
+        destinationConversationID: 1
+        destinationDialogueID: 142
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 272
+        y: 2073
+        width: 160
+        height: 30
+    - id: 142
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 3
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "In this story, Gina is a great example of an active bystander. Even
+          though she had no ability to prevent the assault, she was able to support
+          her friend by listening, believing her story, emphasizing that rape is NEVER
+          the victim\u2019s fault, and supporting her friend\u2019s decisions for
+          next steps."
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 272
+        y: 2123
+        width: 160
+        height: 30
+    - id: 143
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Well-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 143
+        destinationConversationID: 1
+        destinationDialogueID: 87
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Placeholder for animation
+      canvasRect:
+        serializedVersion: 2
+        x: 925
+        y: 2003
         width: 160
         height: 30
   syncInfo:

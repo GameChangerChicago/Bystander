@@ -91,7 +91,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &10374307
 Transform:
   m_ObjectHideFlags: 0
@@ -614,20 +614,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 1
+    alignment: 1
     x:
-      scale: 1
-      value: -.629999995
+      scale: 0
+      value: -90
     y:
-      scale: 1
-      value: .550000012
+      scale: 0
+      value: -10
     width:
       scale: 0
-      value: 470
+      value: 0
     height:
       scale: 0
-      value: 70
+      value: 0
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -892,7 +892,7 @@ Transform:
   m_GameObject: {fileID: 212140079}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1296856023}
   m_RootOrder: 0
@@ -911,20 +911,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 1
+    alignment: 1
     x:
-      scale: 1
-      value: -.600000024
+      scale: 0
+      value: 100
     y:
-      scale: 1
-      value: .100000001
+      scale: 0
+      value: 30
     width:
-      scale: 0
-      value: 470
+      scale: 1
+      value: 0
     height:
-      scale: 0
-      value: 70
+      scale: 1
+      value: 0
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -1107,8 +1107,8 @@ MonoBehaviour:
       scale: 1
       value: 1
     height:
-      scale: 0
-      value: 525
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -1116,7 +1116,7 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 0
+      value: 1
     maxHeight:
       scale: 1
       value: 1
@@ -1173,7 +1173,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1296856023}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &364147740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,7 +1929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &576862173
 Transform:
   m_ObjectHideFlags: 0
@@ -1941,7 +1941,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1296856023}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &576862174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2061,17 +2061,17 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 1
+    alignment: 1
     x:
-      scale: 1
-      value: -.600000024
+      scale: 0
+      value: 20
     y:
-      scale: 1
-      value: .400000006
+      scale: 0
+      value: 180
     width:
       scale: 0
-      value: 470
+      value: 0
     height:
       scale: 0
       value: 70
@@ -3344,7 +3344,7 @@ Animator:
   m_GameObject: {fileID: 956721698}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bb8860c7e62284c44b553c0563d77cbb, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -3393,17 +3393,17 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 1
+    alignment: 1
     x:
-      scale: 1
-      value: -.600000024
+      scale: 0
+      value: 125
     y:
-      scale: 1
-      value: .25
+      scale: 0
+      value: 110
     width:
       scale: 0
-      value: 470
+      value: 0
     height:
       scale: 0
       value: 70
@@ -3675,142 +3675,6 @@ Prefab:
       propertyPath: m_Name
       value: Scene
       objectReference: {fileID: 0}
-    - target: {fileID: 100082, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100018, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400018, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.x.scale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.y.scale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.origin
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.alignment
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.x.value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.y.value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.width.scale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: autoSize.maxWidth.scale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100068, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100062, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100026, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100058, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400094, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.x.scale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400094, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.alignment
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400094, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.origin
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400094, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: autoSize.autoSizeWidth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: autoSize.autoSizeHeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: autoSize.maxWidth.value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: scaledRect.minPixelHeight
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 100066, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100030, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400126, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: dialogue.responseMenu.buttonAlignment
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100090, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200002, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100036, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100096, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
   m_RootGameObject: {fileID: 956721698}
@@ -3876,20 +3740,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 8
-    alignment: 7
+    origin: 4
+    alignment: 4
     x:
-      scale: 1
-      value: -.680000007
+      scale: 0
+      value: -125
     y:
-      scale: 1
-      value: -.0130000003
+      scale: 0
+      value: 75
     width:
-      scale: 1
-      value: .310000002
+      scale: 0
+      value: 0
     height:
-      scale: 1
-      value: .5
+      scale: 0
+      value: 0
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -3897,10 +3761,10 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 275
+      value: 1
     maxHeight:
       scale: 1
-      value: 244
+      value: 1
     padding:
       m_Left: 0
       m_Right: 0
@@ -3947,15 +3811,15 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1078260796}
   m_GameObject: {fileID: 1123321188}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: 0
-  fadeInDuration: .200000003
-  duration: 1
-  fadeOutDuration: 0
+  fadeInDuration: 0
+  duration: 0
+  fadeOutDuration: .5
 --- !u!1 &1123918603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4067,7 +3931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1125283165
 Transform:
   m_ObjectHideFlags: 0
@@ -4212,7 +4076,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -4316,14 +4180,14 @@ Transform:
   m_GameObject: {fileID: 1296856022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 212140080}
   - {fileID: 1052791758}
   - {fileID: 604001587}
   - {fileID: 163206551}
-  - {fileID: 364147739}
   - {fileID: 576862173}
+  - {fileID: 364147739}
   - {fileID: 749456084}
   m_Father: {fileID: 1379296795}
   m_RootOrder: 3
@@ -4342,20 +4206,20 @@ MonoBehaviour:
   depth: 3
   depthSortChildren: 1
   scaledRect:
-    origin: 2
-    alignment: 0
+    origin: 4
+    alignment: 4
     x:
-      scale: 0
-      value: -420
+      scale: 1
+      value: 0
     y:
       scale: 1
-      value: .449999988
+      value: 0
     width:
       scale: 1
       value: 1
     height:
-      scale: 0
-      value: 450
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -4375,7 +4239,7 @@ MonoBehaviour:
   fit:
     above: {fileID: 0}
     below: {fileID: 0}
-    leftOf: {fileID: 1812052547}
+    leftOf: {fileID: 0}
     rightOf: {fileID: 0}
     expandToFit: 1
   navigation:
@@ -4392,7 +4256,7 @@ MonoBehaviour:
     axisRepeatDelay: 1
     mouseWheelSensitivity: 5
   visible: 1
-  clipChildren: 1
+  clipChildren: 0
 --- !u!114 &1296856025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4406,8 +4270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: 0
-  direction: 1
-  duration: .300000012
+  direction: 3
+  duration: .400000006
 --- !u!1 &1315317320
 GameObject:
   m_ObjectHideFlags: 0
@@ -4423,7 +4287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1315317321
 Transform:
   m_ObjectHideFlags: 0
@@ -4443,7 +4307,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1078260796}
   m_GameObject: {fileID: 1315317320}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
@@ -4989,7 +4853,7 @@ MonoBehaviour:
       panel: {fileID: 270504105}
       line: {fileID: 1123321191}
       portraitImage: {fileID: 0}
-      portraitName: {fileID: 504240194}
+      portraitName: {fileID: 0}
       continueButton: {fileID: 798331616}
     pcSubtitle:
       panel: {fileID: 0}
@@ -5009,13 +4873,13 @@ MonoBehaviour:
         portraitImage: {fileID: 0}
         portraitName: {fileID: 92352748}
         continueButton: {fileID: 0}
-      timer: {fileID: 749456085}
+      timer: {fileID: 0}
       buttons:
       - {fileID: 212140081}
       - {fileID: 1052791759}
       - {fileID: 604001588}
       - {fileID: 163206552}
-      - {fileID: 364147740}
+      - {fileID: 0}
   qteIndicators:
   - {fileID: 182236628}
   - {fileID: 23671102}
@@ -5039,7 +4903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1812052546
 Transform:
   m_ObjectHideFlags: 0

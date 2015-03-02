@@ -1292,10 +1292,10 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Overflow:
-      m_Left: 5
-      m_Right: 5
-      m_Top: 5
-      m_Bottom: 5
+      m_Left: 15
+      m_Right: 15
+      m_Top: 15
+      m_Bottom: 15
     m_Font: {fileID: 0}
     m_FontSize: 20
     m_FontStyle: 0
@@ -1306,7 +1306,7 @@ MonoBehaviour:
     m_ImagePosition: 0
     m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 400
-    m_FixedHeight: 175
+    m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 1
   - m_Name: Response Button
@@ -1340,20 +1340,20 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Margin:
-      m_Left: 10
-      m_Right: 10
-      m_Top: 8
-      m_Bottom: 8
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
     m_Padding:
       m_Left: 10
       m_Right: 10
       m_Top: 5
       m_Bottom: 5
     m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
+      m_Left: 10
+      m_Right: 15
+      m_Top: 12
+      m_Bottom: 10
     m_Font: {fileID: 0}
     m_FontSize: 20
     m_FontStyle: 0
@@ -1363,10 +1363,10 @@ MonoBehaviour:
     m_TextClipping: 0
     m_ImagePosition: 0
     m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 300
-    m_FixedHeight: 120
-    m_StretchWidth: 0
-    m_StretchHeight: 0
+    m_FixedWidth: 325
+    m_FixedHeight: 90
+    m_StretchWidth: 1
+    m_StretchHeight: 1
   - m_Name: Portrait
     m_Normal:
       m_Background: {fileID: 0}

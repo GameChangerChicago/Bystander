@@ -12,9 +12,9 @@ public class GeenaCharacterScript : MonoBehaviour {
 	void Start () {
 		_theShakes = false;
 		_theTuck = true;
-		VectorXXX = this.gameObject.transform.position.x;
+        VectorXXX = this.gameObject.transform.position.x;
+        VectorWHY = this.gameObject.transform.position.y;
 		VectorDBZ = this.gameObject.transform.position.z;
-		VectorWHY = this.gameObject.transform.position.y;
 	
 	}
 	

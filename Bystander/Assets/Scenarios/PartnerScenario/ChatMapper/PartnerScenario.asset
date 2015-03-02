@@ -200,8 +200,8 @@ MonoBehaviour:
       value: Affect
       type: 0
     - title: Initial Value
-      value: 0
-      type: 1
+      value: 
+      type: 0
     - title: Description
       value: 
       type: 0
@@ -297,6 +297,17 @@ MonoBehaviour:
     fields:
     - title: Name
       value: RestartCheckpoint
+      type: 0
+    - title: Initial Value
+      value: False
+      type: 2
+    - title: Description
+      value: 
+      type: 0
+  - id: 18
+    fields:
+    - title: Name
+      value: FacingGina
       type: 0
     - title: Initial Value
       value: False
@@ -929,7 +940,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: He told me he loves me and that if I really loved him I would want
           it, too. But it just felt wrong.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -937,6 +948,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -973,7 +987,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth1"]==false) and (Variable["Wrong"]>=-1) and
         (Variable["M1"]<=0))
-      userScript: Variable["Myth1"]=true
+      userScript: 'Variable["Myth1"]=true;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 345
@@ -1002,7 +1018,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "I don\u2019t think it counts if it\u2019s someone you\u2019re dating."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1010,6 +1026,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1031,7 +1050,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 210
@@ -1060,7 +1079,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "You\u2019re lucky to have a boyfriend who tells you he loves you."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1068,6 +1087,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1089,7 +1111,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 390
@@ -1118,7 +1140,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "It doesn\u2019t matter what your relationship is."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1126,6 +1148,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1145,7 +1170,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["M1"]=1;
 
-        Variable["Affect"]=Variable["Affect"]+1;'
+        Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
         x: 570
@@ -1164,7 +1189,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 1
+        value: 2
         type: 5
       - title: Conversant
         value: 2
@@ -1175,7 +1200,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "Sex without your consent is wrong. Even if he is your boyfriend or
           husband, it still doesn\u2019t make it right."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1183,6 +1208,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1229,7 +1257,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: '[em4]You nod and look like you''re actively listening.[/em4]'
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1237,6 +1265,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1254,7 +1285,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
         x: 750
@@ -1511,7 +1542,7 @@ MonoBehaviour:
           and buying me a beautiful gift. I felt bad for not wanting to have sex and
           I didn\u2019t want him to think I don\u2019t love him. In a weird way, I
           felt like I owed him something even though I DIDN\u2019T want to have sex."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1519,6 +1550,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1555,7 +1589,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth2"]==false) and (Variable["Wrong"]>=-1) and
         (Variable["M2"]<=0))
-      userScript: Variable["Myth2"]=true
+      userScript: 'Variable["Myth2"]=true;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -1728,7 +1764,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: He took you on a nice date. You should have known he expected something
           from you.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1736,6 +1772,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1757,7 +1796,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 48
@@ -1787,7 +1826,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "You were planning on having sex with him anyway, so what\u2019s the
           big deal?"
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1795,6 +1834,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1816,7 +1858,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -1845,7 +1887,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: You NEVER owe anyone sex. It should always be voluntary.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1853,6 +1895,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1872,7 +1917,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["M2"]=1;
 
-        Variable["Affect"]=Variable["Affect"]+1;'
+        Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -1891,7 +1936,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 1
+        value: 2
         type: 5
       - title: Conversant
         value: 2
@@ -1901,7 +1946,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: Sex without consent is illegal and wrong.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1909,6 +1954,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1955,7 +2003,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: '[em4]You nod and look like you''re actively listening.[/em4]'
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -1963,6 +2011,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -1980,7 +2031,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
         x: 696
@@ -2233,7 +2284,7 @@ MonoBehaviour:
         value: "I don\u2019t know. There are some ways that I feel like this is my
           fault, like I brought this on myself. I wore that tight new dress from the
           mall. Maybe I was leading him on."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2241,6 +2292,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2277,7 +2331,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth3"]==false) and (Variable["Wrong"]>=-1) and
         (Variable["M3"]<=0))
-      userScript: Variable["Myth3"]=true
+      userScript: 'Variable["Myth3"]=true;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -2348,7 +2404,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: He probably got the wrong idea.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2356,6 +2412,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2377,7 +2436,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 48
@@ -2407,7 +2466,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: Just last week I remember you saying you wanted to buy that dress to
           wear for Isaac.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2415,6 +2474,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2436,7 +2498,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -2465,7 +2527,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: It is NEVER the fault of someone who was assaulted.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2473,6 +2535,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2492,7 +2557,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["M3"]=1;
 
-        Variable["Affect"]=Variable["Affect"]+1;'
+        Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -2521,7 +2586,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "[em4]Gina nods and looks like she\u2019s actively listening.[/em4]"
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2529,6 +2594,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2546,7 +2614,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
         x: 696
@@ -2565,7 +2633,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 1
+        value: 2
         type: 5
       - title: Conversant
         value: 2
@@ -2584,6 +2652,9 @@ MonoBehaviour:
         value: '[]'
         type: 0
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2854,7 +2925,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "You know how guys can be. He\u2019s been wanting to have sex for awhile
           and things were getting heavy. Maybe he just couldn\u2019t wait anymore."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2862,6 +2933,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2898,7 +2972,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth4"]==false) and (Variable["Wrong"]>=-1) and
         (Variable["M4"]<=0))
-      userScript: Variable["Myth4"]=true
+      userScript: 'Variable["Myth4"]=true;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -2969,7 +3045,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "Guys will be guys. Sometimes they can\u2019t control their urges."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -2977,6 +3053,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -2998,7 +3077,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 30
@@ -3027,7 +3106,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: Well, pretty much all of the guys in our grade are having sex now.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3035,6 +3114,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3056,7 +3138,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 210
@@ -3086,7 +3168,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: Most men have never sexually assaulted anyone, regardless of how interested
           they are in another person.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3094,6 +3176,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3113,7 +3198,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["M4"]=1;
 
-        Variable["Affect"]=Variable["Affect"]+1;'
+        Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
         x: 390
@@ -3142,7 +3227,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "[em4]Gina nods and looks like she\u2019s actively listening.[/em4]"
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3150,6 +3235,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3167,10 +3255,10 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 570
+        x: 577
         y: 1270
         width: 160
         height: 30
@@ -3186,7 +3274,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 1
+        value: 2
         type: 5
       - title: Conversant
         value: 2
@@ -3197,7 +3285,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: No one, not even your boyfriend, has the right to force any type of
           sexual activity on you.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3205,6 +3293,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3476,7 +3567,7 @@ MonoBehaviour:
           and likes hanging out with her friends. It\u2019s not like I\u2019m one
           of those unstable people that this happens to on TV. Why did this happen
           to me?"
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3484,6 +3575,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3520,7 +3614,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth5"]==false) and (Variable["Wrong"]>=-1) and
         (Variable["M5"]<=0))
-      userScript: Variable["Myth5"]=true
+      userScript: 'Variable["Myth5"]=true;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -3592,7 +3688,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "I don\u2019t know, sometimes people are needy and clingy and attract
           these things."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3600,6 +3696,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3621,7 +3720,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 48
@@ -3650,7 +3749,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: It sounds like you may be giving Isaac mixed signals.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3658,6 +3757,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3679,7 +3781,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -3709,7 +3811,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: 'No one ever asks for it or wants it or puts themselves in the position
           of having this happen to them. '
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3717,6 +3819,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3736,7 +3841,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["M5"]=1;
 
-        Variable["Affect"]=Variable["Affect"]+1;'
+        Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -3765,7 +3870,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "[em4]Gina nods and looks like she\u2019s actively listening.[/em4]"
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3773,6 +3878,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -3790,7 +3898,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
         x: 696
@@ -3809,7 +3917,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 1
+        value: 2
         type: 5
       - title: Conversant
         value: 2
@@ -3820,7 +3928,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: The only common denominator is coming into contact with someone who
           would sexually assault another person.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -3828,6 +3936,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4097,7 +4208,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "I didn\u2019t fight him off or anything...I don\u2019t have any marks
           on my body and he didn\u2019t have a weapon on him on anything."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4105,6 +4216,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4141,7 +4255,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth6"]==false) and (Variable["Wrong"]>=-1) and
         (Variable["M6"]<=0))
-      userScript: Variable["Myth6"]=true
+      userScript: 'Variable["Myth6"]=true;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -4213,7 +4329,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "People probably won\u2019t believe you. Unless you put up a fight,
           it\u2019s hard to know if it was really assault."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4221,6 +4337,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4242,7 +4361,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 48
@@ -4272,7 +4391,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "Maybe you actually wanted to have sex but couldn\u2019t let yourself
           go."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4280,6 +4399,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4301,7 +4423,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -4331,7 +4453,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "Saying \u201Cno\u201D or even forcing sex on you without your consent
           IS rape."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4339,6 +4461,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4358,7 +4483,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["M6"]=1;
 
-        Variable["Affect"]=Variable["Affect"]+1;'
+        Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -4387,7 +4512,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: '[em4]Gina nods and looks like she''s actively listening.[/em4]'
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4395,6 +4520,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4412,7 +4540,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
         x: 696
@@ -4431,7 +4559,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 1
+        value: 2
         type: 5
       - title: Conversant
         value: 2
@@ -4441,7 +4569,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: No means no, and he should respect that.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4449,6 +4577,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4495,7 +4626,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: Thanks, for your support.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4503,6 +4634,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4583,8 +4717,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 912
-        y: 1820
+        x: 915
+        y: 1824
         width: 160
         height: 30
     - id: 75
@@ -4719,7 +4853,7 @@ MonoBehaviour:
         value: "I guess I\u2019m just worried that people will think that I am making
           this up, that I wanted to have sex then regretted it or was trying to get
           back at Isaac for something."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4727,6 +4861,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4763,7 +4900,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth7"]==false) and (Variable["Wrong"]>=-1) and
         (Variable["M7"]<=0))
-      userScript: Variable["Myth7"]=true
+      userScript: 'Variable["Myth7"]=true;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -4808,8 +4947,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 696
-        y: 1820
+        x: 918
+        y: 1899
         width: 160
         height: 30
     - id: 79
@@ -4835,7 +4974,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: "Maybe you did want to have sex, but didn\u2019t want it to ruin your
           reputation."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4843,6 +4982,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4864,10 +5006,10 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 48
+        x: 47
         y: 1870
         width: 160
         height: 30
@@ -4894,7 +5036,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: Isaac is like the nicest guy in school with so much going for him.
           Do you really want to be responsible for ruining his life?
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4902,6 +5044,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4923,7 +5068,7 @@ MonoBehaviour:
 
         Variable["Wrong"]=Variable["Wrong"]-1;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
         x: 264
@@ -4953,7 +5098,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: Even if you were making out or even started having sex, you are free
           to change your mind at ANYTIME and your partner must listen.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -4961,6 +5106,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -4980,7 +5128,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Variable["M7"]=1;
 
-        Variable["Affect"]=Variable["Affect"]+1;'
+        Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -5009,7 +5157,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "[em4]Gina nods and looks like she\u2019s actively listening.[/em4]"
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -5017,6 +5165,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -5034,11 +5185,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 696
-        y: 1870
+        x: 698
+        y: 1873
         width: 160
         height: 30
     - id: 83
@@ -5053,7 +5204,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 1
+        value: 2
         type: 5
       - title: Conversant
         value: 2
@@ -5063,7 +5214,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: Otherwise that is still rape. I believe you, Holly.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -5071,6 +5222,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -5117,7 +5271,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: Thanks Gina, I needed to hear that.
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -5125,6 +5279,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -5225,7 +5382,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: '[em4]Holly puts her head down.[/em4]'
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -5233,6 +5390,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -5307,7 +5467,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 885
+        x: 915
         y: 2020
         width: 160
         height: 30
@@ -5337,7 +5497,7 @@ MonoBehaviour:
           her friend by listening, believing her story, emphasizing that rape is NEVER
           the victim\u2019s fault, and supporting her friend\u2019s decisions for
           next steps."
-        type: 4
+        type: 0
       - title: Parenthetical
         value: 
         type: 0
@@ -5345,6 +5505,9 @@ MonoBehaviour:
         value: '[]'
         type: 3
       - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
         value: 
         type: 0
       conversationID: 1
@@ -5361,7 +5524,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 345
+        x: 346
         y: 2020
         width: 160
         height: 30
@@ -5477,7 +5640,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth1"]==true) and (Variable["Wrong"]>=-1) and
         (Variable["M1"]<=0))
-      userScript: Variable["Myth1"]=false
+      userScript: 'Variable["Myth1"]=false;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 615
@@ -5554,7 +5719,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth2"]==true) and (Variable["Wrong"]>=-1) and
         (Variable["M2"]<=0))
-      userScript: Variable["Myth2"]=false
+      userScript: 'Variable["Myth2"]=false;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -5631,7 +5798,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth3"]==true) and (Variable["Wrong"]>=-1) and
         (Variable["M3"]<=0))
-      userScript: Variable["Myth3"]=false
+      userScript: 'Variable["Myth3"]=false;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -5708,7 +5877,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth4"]==true) and (Variable["Wrong"]>=-1) and
         (Variable["M4"]<=0))
-      userScript: Variable["Myth4"]=false
+      userScript: 'Variable["Myth4"]=false;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -5785,7 +5956,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth5"]==true) and (Variable["Wrong"]>=-1) and
         (Variable["M5"]<=0))
-      userScript: Variable["Myth5"]=false
+      userScript: 'Variable["Myth5"]=false;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -5862,7 +6035,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth6"]==true) and (Variable["Wrong"]>=-1) and
         (Variable["M6"]<=0))
-      userScript: Variable["Myth6"]=false
+      userScript: 'Variable["Myth6"]=false;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -5939,11 +6114,13 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth7"]==true) and (Variable["Wrong"]>=-1) and
         (Variable["M7"]<=0))
-      userScript: Variable["Myth7"]=false
+      userScript: 'Variable["Myth7"]=false;
+
+        Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
         x: 480
-        y: 1820
+        y: 1821
         width: 160
         height: 30
     - id: 97
@@ -6071,7 +6248,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 1
+        value: 2
         type: 5
       - title: Conversant
         value: 2
@@ -6092,6 +6269,9 @@ MonoBehaviour:
       - title: Video File
         value: 
         type: 0
+      - title: Sequence
+        value: 
+        type: 0
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -6110,8 +6290,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 750
-        y: 1170
+        x: 748
+        y: 1167
         width: 160
         height: 30
     - id: 100

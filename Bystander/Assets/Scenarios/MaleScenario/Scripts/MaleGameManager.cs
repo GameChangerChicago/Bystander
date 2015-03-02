@@ -5,17 +5,17 @@ using System.Collections;
 //Moved for global accessability
 public enum GameState
 {
-	Intro, 
-	Q1, 
-	Q2, 
-	Q3, 
-	Q4, 
-	Q5, 
-	Q6, 
-	Q7, 
-	Outro
-};
-
+		Intro, 
+		Q1, 
+		Q2, 
+		Q3, 
+		Q4, 
+		Q5, 
+		Q6, 
+		Q7, 
+		Outro
+}
+;
 
 public class MaleGameManager : MonoBehaviour
 {
@@ -23,9 +23,6 @@ public class MaleGameManager : MonoBehaviour
 		
 		private string correctAnswer;
 		private bool questionAnswered;
-
-		
-		
 		public static GameState gameState;
 
 		//MASON NOTE: This array is redundant. In the switch you can just have correctAnswer = a. I left a commented out example below in the "BELIEVE" case.
@@ -40,31 +37,39 @@ public class MaleGameManager : MonoBehaviour
 		"ALCOHOL",
 		"1-800-656-HOPE"
 	};
-		
 
 		void Start ()
 		{
-			gameState = GameState.Intro;
-			Invoke ("StartGame", 5f);
+				gameState = GameState.Intro;
+				Invoke ("StartGame", 5f);
 		}
-
-	
 
 		void StartGame ()
 		{
-			questionAnswered = false;
-			gameState = GameState.Q1;
-			correctAnswer = "BELIEVE";
+				questionAnswered = false;
+				gameState = GameState.Q1;
+				correctAnswer = "BELIEVE";
 
 		}
 
-		public bool isGameState(GameState state)
+		public bool isGameState (GameState state)
 		{
 
-			if(gameState == state)
-				return true;
-			else return false;
+				if (gameState == state)
+						return true;
+				else
+						return false;
 	
+		}
+
+		public GameState State ()
+		{
+				return gameState;
+		}
+
+		public bool isAnswered ()
+		{
+				return questionAnswered;
 		}
 
 		
@@ -82,7 +87,7 @@ public class MaleGameManager : MonoBehaviour
 						case "BELIEVE":
 								Debug.Log ("The Answer is Believe! Moving to next game State");
 								//correctAnswer = a;
-								correctAnswer = answerArray[1];
+								correctAnswer = answerArray [1];
 								questionAnswered = false;
 								gameState = GameState.Q2;
 								Debug.Log (correctAnswer);
@@ -92,36 +97,43 @@ public class MaleGameManager : MonoBehaviour
 								correctAnswer = answerArray [2];
 								questionAnswered = false;
 								gameState = GameState.Q3;
+								Debug.Log (correctAnswer);
 								break;
 						case "2 MILLION":
 								Debug.Log ("Correct!  You are so smart");
 								correctAnswer = answerArray [3];
 								questionAnswered = false;
 					//Since this is a two part question, we will not change the game state
+								Debug.Log (correctAnswer);
 								break;
 						case "STATE":
 								Debug.Log ("Correct! You are really smart");
 								correctAnswer = answerArray [4];
 								gameState = GameState.Q4;
+								Debug.Log (correctAnswer);
 								break;
 						case "CONSENT":
 								Debug.Log ("Yep yep!");
 								correctAnswer = answerArray [5];
 								gameState = GameState.Q5;
+								Debug.Log (correctAnswer);
 								break;
 						case "THREATENED":
 								Debug.Log ("Uh-huh!");
 								correctAnswer = answerArray [6];
 								gameState = GameState.Q6;
+								Debug.Log (correctAnswer);
 								break;
 						case "ALCOHOL":
 								Debug.Log ("Yes~");
 								correctAnswer = answerArray [7];
 								gameState = GameState.Q7;
+								Debug.Log (correctAnswer);
 								break;
 						case "1-800-656-HOPE":
 								Debug.Log ("Say what!");
 								gameState = GameState.Outro;
+								Debug.Log (correctAnswer);
 								break;
 						}
 

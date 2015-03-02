@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Student Animator Controller
+  m_Name: LeoController
   serializedVersion: 2
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -35,6 +35,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110253421
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Idle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: af94878dab3aa49d1982b55056094fe3, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 432, y: -120, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110267649
 State:
   m_ObjectHideFlags: 3
@@ -46,7 +61,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 3b9df36d376694732baaf8a0e3a78bd5, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 324, y: -60, z: 0}
+  m_Position: {x: 300, y: 48, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -57,14 +72,21 @@ StateMachine:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110267649}
+  m_DefaultState: {fileID: 110253421}
   m_States:
   - {fileID: 110267649}
+  - {fileID: 110253421}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 110253421}
+      second: []
+    data:
       first: {fileID: 0}
+      second: []
+    data:
+      first: {fileID: 110267649}
       second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}

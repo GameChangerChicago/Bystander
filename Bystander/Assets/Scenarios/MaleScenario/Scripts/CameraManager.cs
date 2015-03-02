@@ -18,11 +18,11 @@ public class CameraManager : MonoBehaviour {
 
 		isLerping = false;
 
-		defaultSize = 22.25f;
-		introSize = 10f;
+		defaultSize = 22.6f;
+		introSize = 11.82f;
 		camTravelSpeed = 4f;
 
-		introCamPosition = new Vector3 (-19, 11, -20);
+		introCamPosition = new Vector3 (-18.4f, 11, -20);
 		defaultPosition =  new Vector3 (0,0, -20);
 
 

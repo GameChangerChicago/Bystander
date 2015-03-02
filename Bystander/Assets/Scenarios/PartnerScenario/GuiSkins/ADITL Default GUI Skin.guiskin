@@ -1253,13 +1253,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   - m_Name: Subtitle
     m_Normal:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: 6180c9eb9753df442a08e79fb87b5d47, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 0}
+      m_Background: {fileID: 2800000, guid: 6180c9eb9753df442a08e79fb87b5d47, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
@@ -1277,10 +1277,10 @@ MonoBehaviour:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Border:
-      m_Left: 8
-      m_Right: 16
-      m_Top: 8
-      m_Bottom: 8
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
     m_Margin:
       m_Left: 8
       m_Right: 8
@@ -1292,32 +1292,32 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: 55275fd478a41bb4fa09ab2049e54d0f, type: 3}
-    m_FontSize: 17
-    m_FontStyle: 1
-    m_Alignment: 5
+      m_Left: 5
+      m_Right: 5
+      m_Top: 5
+      m_Bottom: 5
+    m_Font: {fileID: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_Alignment: 4
     m_WordWrap: 1
     m_RichText: 1
-    m_TextClipping: 1
+    m_TextClipping: 0
     m_ImagePosition: 0
     m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 197
-    m_FixedHeight: 222
-    m_StretchWidth: 0
-    m_StretchHeight: 0
+    m_FixedWidth: 400
+    m_FixedHeight: 175
+    m_StretchWidth: 1
+    m_StretchHeight: 1
   - m_Name: Response Button
     m_Normal:
-      m_Background: {fileID: 2800000, guid: 518c30d0b77a3b34197feedb49502557, type: 3}
+      m_Background: {fileID: 2800000, guid: 4ee985a50b856ac40ae6a227c39d6bc3, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
-      m_Background: {fileID: 2800000, guid: 518c30d0b77a3b34197feedb49502557, type: 3}
-      m_TextColor: {r: .823529422, g: .309803933, b: .811764717, a: 1}
+      m_Background: {fileID: 2800000, guid: 4ee985a50b856ac40ae6a227c39d6bc3, type: 3}
+      m_TextColor: {r: .823529422, g: .625665188, b: .19982703, a: .635294139}
     m_Active:
-      m_Background: {fileID: 2800000, guid: 518c30d0b77a3b34197feedb49502557, type: 3}
+      m_Background: {fileID: 2800000, guid: 4ee985a50b856ac40ae6a227c39d6bc3, type: 3}
       m_TextColor: {r: .752941191, g: .752941191, b: .752941191, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
@@ -1335,38 +1335,38 @@ MonoBehaviour:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Border:
-      m_Left: 16
-      m_Right: 16
-      m_Top: 5
-      m_Bottom: 5
-    m_Margin:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
+    m_Margin:
+      m_Left: 10
+      m_Right: 10
+      m_Top: 8
+      m_Bottom: 8
     m_Padding:
-      m_Left: 26
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
+      m_Left: 10
+      m_Right: 10
+      m_Top: 5
+      m_Bottom: 5
     m_Overflow:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 0}
-    m_FontSize: 13
-    m_FontStyle: 1
-    m_Alignment: 3
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_Alignment: 4
     m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
     m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 250
-    m_FixedHeight: 0
+    m_FixedWidth: 300
+    m_FixedHeight: 120
     m_StretchWidth: 0
-    m_StretchHeight: 1
+    m_StretchHeight: 0
   - m_Name: Portrait
     m_Normal:
       m_Background: {fileID: 0}
@@ -1427,7 +1427,7 @@ MonoBehaviour:
     m_StretchHeight: 0
   - m_Name: Border
     m_Normal:
-      m_Background: {fileID: 2800000, guid: d59fe108f4bbdab4f8f5a64d9df9b3d2, type: 3}
+      m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}

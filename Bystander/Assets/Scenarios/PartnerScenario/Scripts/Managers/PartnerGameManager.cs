@@ -31,81 +31,101 @@ public class PartnerGameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            UpdateAnimationParams();
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            
-        }
+        UpdateGinaAnimationParams();
+        UpdateHollyAnimationParams();
     }
 
-    private void UpdateAnimationParams()
+    private void UpdateGinaAnimationParams()
     {
         switch (_currentGinaState)
         {
-            case GinaStates.LISTENING:
-                //pklksalfjd[alskd
+            case GinaStates.BACK:
+                if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    _affect = "";
+                    DialogueLua.SetVariable("Affect", "");
+                    GinaAnimator.SetBool("FacingGina", true);
+                    _currentGinaState = GinaStates.THINKING;
+                }
                 break;
             case GinaStates.THINKING:
-                Debug.Log(_affect);
+                _affect = DialogueLua.GetVariable("Affect").AsString;
+
                 if (_affect != "")
                 {
                     _currentGinaState = GinaStates.TRANSITIONING;
                     GinaAnimator.SetBool("DecisionMade", true);
                 }
                 break;
-            case GinaStates.HELPFUL:
-                Debug.Log("Helpful");
-                break;
-            case GinaStates.UNHELPFUL:
-                Debug.Log("Unhelpful");
-                break;
             case GinaStates.TRANSITIONING:
                 if (_affect == "Listening")
                 {
                     _currentGinaState = GinaStates.LISTENING;
                     GinaAnimator.SetBool("Listening", true);
+                    Invoke("ResetAnimProperites", 1);
                 }
                 else if (_affect == "Helpful")
                 {
                     _currentGinaState = GinaStates.HELPFUL;
                     GinaAnimator.SetBool("Helpful", true);
+                    Invoke("ResetAnimProperites", 1);
                 }
                 else if (_affect == "Unhelpful")
                 {
                     _currentGinaState = GinaStates.UNHELPFUL;
                     GinaAnimator.SetBool("Unhelpful", true);
+                    Invoke("ResetAnimProperites", 1);
                 }
-
-                GinaAnimator.SetBool("DecisionMade", false);
                 break;
-            case GinaStates.BACK:
-                if (DialogueLua.GetVariable("FacingGina").AsBool)
+            case GinaStates.LISTENING:
+                //Invoke("Flip", 1.5f);
+                if (!DialogueLua.GetVariable("FacingGina").AsBool)
                 {
-                    GinaAnimator.SetBool("FacingGina", true);
-                    _currentGinaState = GinaStates.THINKING;
-                    //_affect = DialogueLua.GetVariable("")
-                    //_affect = "";
-                    //GinaAnimator.SetBool("Listening", false);
-                    //GinaAnimator.SetBool("Helpful", false);
-                    //GinaAnimator.SetBool("Unhelpful", false);
+                    _currentGinaState = GinaStates.BACK;
+                    GinaAnimator.SetBool("FacingGina", false);
+                    GinaAnimator.SetBool("DecisionMade", false);
+                }
+                break;
+            case GinaStates.HELPFUL:
+                //Invoke("Flip", 2.15f);
+                if (!DialogueLua.GetVariable("FacingGina").AsBool)
+                {
+                    _currentGinaState = GinaStates.BACK;
+                    GinaAnimator.SetBool("FacingGina", false);
+                    GinaAnimator.SetBool("DecisionMade", false);
+                }
+                break;
+            case GinaStates.UNHELPFUL:
+                //Invoke("Flip", 2.15f);
+                if (!DialogueLua.GetVariable("FacingGina").AsBool)
+                {
+                    _currentGinaState = GinaStates.BACK;
+                    GinaAnimator.SetBool("FacingGina", false);
+                    GinaAnimator.SetBool("DecisionMade", false);
                 }
                 break;
             default:
                 Debug.Log("Fool, that Gina state doesn't even exists");
                 break;
         }
+    }
 
+    private void UpdateHollyAnimationParams()
+    {
         switch (_currentHollyState)
         {
             case HollyStates.EXPLAINING:
-                if (DialogueLua.GetVariable("FacingGina").AsBool)
+                if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    HollyAnimator.SetBool("FacingGina", true);
                     _currentHollyState = HollyStates.BACK;
-                    //_affect = "";
+                    HollyAnimator.SetBool("FacingGina", true);
+                    HollyAnimator.SetBool("Explaining", false);
+                    HollyAnimator.SetBool("Helpful", false);
+                    HollyAnimator.SetBool("Unhelpful", false);
+                }
+                else
+                {
+                    HollyAnimator.SetBool("FacingGina", false);
                 }
                 break;
             case HollyStates.BACK:
@@ -129,10 +149,18 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 break;
             case HollyStates.HELPFUL:
-                Debug.Log("Helpful");
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    _currentHollyState = HollyStates.EXPLAINING;
+                    HollyAnimator.SetBool("Explaining", true);
+                }
                 break;
             case HollyStates.UNHELPFUL:
-                Debug.Log("Unhelpful");
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    _currentHollyState = HollyStates.EXPLAINING;
+                    HollyAnimator.SetBool("Explaining", true);
+                }
                 break;
             default:
                 Debug.Log("Fool, that Holly state doesn't even exists");
@@ -140,5 +168,10 @@ public class PartnerGameManager : MonoBehaviour
         }
     }
 
-
+    private void RecetAnimProperties()
+    {
+        GinaAnimator.SetBool("Listening", false);
+        GinaAnimator.SetBool("Helpful", false);
+        GinaAnimator.SetBool("Unhelpful", false);
+    }
 }

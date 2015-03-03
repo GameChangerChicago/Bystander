@@ -3675,6 +3675,14 @@ Prefab:
       propertyPath: m_Name
       value: Scene
       objectReference: {fileID: 0}
+    - target: {fileID: 21200014, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
   m_RootGameObject: {fileID: 956721698}

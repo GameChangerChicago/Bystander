@@ -384,15 +384,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 0
         destinationConversationID: 1
-        destinationDialogueID: 1
+        destinationDialogueID: 8
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 20
+        x: 481
+        y: 418
         width: 160
         height: 30
     - id: 1
@@ -1074,8 +1074,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 197
-        y: 683
+        x: 215
+        y: 685
         width: 160
         height: 30
     - id: 12
@@ -1252,7 +1252,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 595
+        x: 608
         y: 755
         width: 160
         height: 30
@@ -1363,7 +1363,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 151
@@ -1420,7 +1420,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 174
@@ -1540,8 +1540,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 894
-        y: 824
+        x: 898
+        y: 818
         width: 160
         height: 30
     - id: 20
@@ -1763,8 +1763,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 696
-        y: 820
+        x: 699
+        y: 827
         width: 160
         height: 30
     - id: 24
@@ -2171,7 +2171,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 173
@@ -2228,7 +2228,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 363
@@ -2641,15 +2641,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 38
         destinationConversationID: 1
-        destinationDialogueID: 43
-        isConnector: 1
+        destinationDialogueID: 144
+        isConnector: 0
         priority: 2
       conditionsString: 
       userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 696
-        y: 1070
+        x: 738
+        y: 1071
         width: 160
         height: 30
     - id: 39
@@ -2706,8 +2706,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 584
-        y: 1153
+        x: 602
+        y: 1162
         width: 160
         height: 30
     - id: 40
@@ -2760,7 +2760,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 99
@@ -2817,11 +2817,11 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 352
-        y: 1127
+        x: 359
+        y: 1134
         width: 160
         height: 30
     - id: 42
@@ -2877,8 +2877,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 886
-        y: 1181
+        x: 961
+        y: 1159
         width: 160
         height: 30
     - id: 43
@@ -2937,8 +2937,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 902
-        y: 1248
+        x: 913
+        y: 1217
         width: 160
         height: 30
     - id: 44
@@ -3297,8 +3297,8 @@ MonoBehaviour:
       userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 549
-        y: 1253
+        x: 548
+        y: 1259
         width: 160
         height: 30
     - id: 50
@@ -3409,7 +3409,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 96
@@ -3466,7 +3466,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 344
@@ -4060,7 +4060,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 77
@@ -4117,7 +4117,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 280
@@ -4580,8 +4580,8 @@ MonoBehaviour:
       userScript: Variable["Affect"]="Listening";
       canvasRect:
         serializedVersion: 2
-        x: 823
-        y: 1656
+        x: 825
+        y: 1657
         width: 160
         height: 30
     - id: 72
@@ -4808,7 +4808,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 59
@@ -4865,7 +4865,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 320
@@ -5399,7 +5399,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 161
@@ -5456,7 +5456,7 @@ MonoBehaviour:
         isConnector: 1
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 366
@@ -6616,7 +6616,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 750
@@ -6706,7 +6706,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 690
@@ -6841,7 +6841,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 915
@@ -6886,7 +6886,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 941
@@ -7166,8 +7166,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 461
-        y: 1132
+        x: 512
+        y: 1116
         width: 160
         height: 30
     - id: 119
@@ -7208,11 +7208,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 945
-        y: 1098
+        x: 941
+        y: 1095
         width: 160
         height: 30
     - id: 120
@@ -7257,8 +7257,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 725
-        y: 1126
+        x: 723
+        y: 1133
         width: 160
         height: 30
     - id: 121
@@ -7435,7 +7435,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 760
@@ -7480,10 +7480,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 720
+        x: 740
         y: 1264
         width: 160
         height: 30
@@ -7662,11 +7662,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 576
-        y: 1546
+        x: 594
+        y: 1552
         width: 160
         height: 30
     - id: 130
@@ -7707,7 +7707,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 929
@@ -7911,8 +7911,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 467
-        y: 1715
+        x: 455
+        y: 1720
         width: 160
         height: 30
     - id: 135
@@ -7953,7 +7953,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 708
@@ -7998,7 +7998,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 937
@@ -8181,7 +8181,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 625
@@ -8314,11 +8314,56 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Placeholder for animation
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 925
         y: 2003
+        width: 160
+        height: 30
+    - id: 144
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: Well-
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 144
+        destinationConversationID: 1
+        destinationDialogueID: 43
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["FacingGina"] = false
+      canvasRect:
+        serializedVersion: 2
+        x: 802
+        y: 1164
         width: 160
         height: 30
   syncInfo:

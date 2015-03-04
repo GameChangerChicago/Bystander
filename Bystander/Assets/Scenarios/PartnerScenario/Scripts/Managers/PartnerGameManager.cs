@@ -78,7 +78,6 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 break;
             case GinaStates.LISTENING:
-                //Invoke("Flip", 1.5f);
                 if (!DialogueLua.GetVariable("FacingGina").AsBool)
                 {
                     _currentGinaState = GinaStates.BACK;
@@ -87,7 +86,6 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 break;
             case GinaStates.HELPFUL:
-                //Invoke("Flip", 2.15f);
                 if (!DialogueLua.GetVariable("FacingGina").AsBool)
                 {
                     _currentGinaState = GinaStates.BACK;
@@ -96,7 +94,6 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 break;
             case GinaStates.UNHELPFUL:
-                //Invoke("Flip", 2.15f);
                 if (!DialogueLua.GetVariable("FacingGina").AsBool)
                 {
                     _currentGinaState = GinaStates.BACK;

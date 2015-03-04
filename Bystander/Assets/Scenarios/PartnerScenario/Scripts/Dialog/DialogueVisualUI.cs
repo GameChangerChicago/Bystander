@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using PixelCrushers.DialogueSystem;
 using PixelCrushers.DialogueSystem.UnityGUI;
 
@@ -30,4 +31,40 @@ public class DialogueVisualUI : UnityDialogueUI {
 		base.ShowSubtitle(subtitle);
 	}
 
+
+    public override void ShowResponses(Subtitle subtitle, Response[] responses, float timeout)
+    {
+        //Scramble the responses but keeps "Keep Listening" at the bottom
+        if (responses.Length > 3)
+        {
+            List<int> responseIndex = new List<int>();
+            responseIndex.Add(0);
+            responseIndex.Add(1);
+            responseIndex.Add(2);
+
+            Response[] responseRef = new Response[4] { responses[0], responses[1], responses[2], responses[3] };
+
+            for (int i = 0; i < responseRef.Length; i++)
+            {
+                if (i == 2)
+                {
+                    responses[i] = responseRef[3];
+                }
+                else
+                {
+                    int randIndex;
+
+                    if (responseIndex.Count > 1)
+                        randIndex = Random.Range(0, responseIndex.Count);
+                    else
+                        randIndex = 0;
+
+                    responses[i] = responseRef[responseIndex[randIndex]];
+                    responseIndex.RemoveAt(randIndex);
+                }
+            }
+        }
+
+        base.ShowResponses(subtitle, responses, timeout);
+    }
 }

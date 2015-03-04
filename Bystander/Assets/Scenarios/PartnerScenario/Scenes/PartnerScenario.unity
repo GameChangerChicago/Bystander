@@ -3675,13 +3675,25 @@ Prefab:
       propertyPath: m_Name
       value: Scene
       objectReference: {fileID: 0}
-    - target: {fileID: 21200014, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_Enabled
+    - target: {fileID: 100082, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400148, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: displaySettings.cameraSettings.defaultSequence
+      value: None()
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400148, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: displaySettings.cameraSettings.disableInternalSequencerCommands
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 11400148, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: displaySettings.cameraSettings.sequencerCamera
+      value: 
+      objectReference: {fileID: 1214040606}
+    - target: {fileID: 11400148, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: displaySettings.cameraSettings.cameraAngles
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
@@ -4828,7 +4840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1664632397
 Transform:
   m_ObjectHideFlags: 0
@@ -5508,8 +5520,8 @@ MonoBehaviour:
       informSequenceStartAndEnd: 0
     cameraSettings:
       sequencerCamera: {fileID: 1214040606}
-      cameraAngles: {fileID: 1214040602}
-      defaultSequence: Camera
+      cameraAngles: {fileID: 0}
+      defaultSequence: None()
       disableInternalSequencerCommands: 1
     inputSettings:
       alwaysForceResponseMenu: 1

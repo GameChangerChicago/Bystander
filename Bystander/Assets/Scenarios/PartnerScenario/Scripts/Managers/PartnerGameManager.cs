@@ -135,6 +135,8 @@ public class PartnerGameManager : MonoBehaviour
                     {
                         _currentHollyState = HollyStates.EXPLAINING;
                         HollyAnimator.SetBool("Explaining", true);
+                        int rand = Random.Range(0, 2);
+                        HollyAnimator.SetInteger("ExplainRandomizer", rand);
                     }
                     else if (_affect == "Helpful")
                     {
@@ -153,6 +155,8 @@ public class PartnerGameManager : MonoBehaviour
                 {
                     _currentHollyState = HollyStates.EXPLAINING;
                     HollyAnimator.SetBool("Explaining", true);
+                    int rand = Random.Range(0, 2);
+                    HollyAnimator.SetInteger("ExplainRandomizer", rand);
                 }
                 break;
             case HollyStates.UNHELPFUL:
@@ -160,6 +164,8 @@ public class PartnerGameManager : MonoBehaviour
                 {
                     _currentHollyState = HollyStates.EXPLAINING;
                     HollyAnimator.SetBool("Explaining", true);
+                    int rand = Random.Range(0, 2);
+                    HollyAnimator.SetInteger("ExplainRandomizer", rand);
                 }
                 break;
             default:

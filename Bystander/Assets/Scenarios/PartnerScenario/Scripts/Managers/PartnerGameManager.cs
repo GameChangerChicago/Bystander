@@ -24,6 +24,7 @@ public class PartnerGameManager : MonoBehaviour
 {
     public Animator GinaAnimator,
                     HollyAnimator;
+    public Subtitle CurrentSubtitle;
 
     private GinaStates _currentGinaState = GinaStates.BACK;
     private HollyStates _currentHollyState = HollyStates.EXPLAINING;
@@ -44,6 +45,7 @@ public class PartnerGameManager : MonoBehaviour
                 {
                     _affect = "";
                     DialogueLua.SetVariable("Affect", "");
+                    Debug.Log("This is happening");
                     GinaAnimator.SetBool("FacingGina", true);
                     _currentGinaState = GinaStates.THINKING;
                 }
@@ -62,23 +64,23 @@ public class PartnerGameManager : MonoBehaviour
                 {
                     _currentGinaState = GinaStates.LISTENING;
                     GinaAnimator.SetBool("Listening", true);
-                    Invoke("ResetAnimProperites", 1);
+                    Invoke("RecetAnimProperties", 1);
                 }
                 else if (_affect == "Helpful")
                 {
                     _currentGinaState = GinaStates.HELPFUL;
                     GinaAnimator.SetBool("Helpful", true);
-                    Invoke("ResetAnimProperites", 1);
+                    Invoke("RecetAnimProperties", 1);
                 }
                 else if (_affect == "Unhelpful")
                 {
                     _currentGinaState = GinaStates.UNHELPFUL;
                     GinaAnimator.SetBool("Unhelpful", true);
-                    Invoke("ResetAnimProperites", 1);
+                    Invoke("RecetAnimProperties", 1);
                 }
                 break;
             case GinaStates.LISTENING:
-                if (!DialogueLua.GetVariable("FacingGina").AsBool)
+                if (!DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     _currentGinaState = GinaStates.BACK;
                     GinaAnimator.SetBool("FacingGina", false);
@@ -128,7 +130,7 @@ public class PartnerGameManager : MonoBehaviour
             case HollyStates.BACK:
                 if (!DialogueLua.GetVariable("FacingGina").AsBool)
                 {
-                    if (_affect == "Listening")
+                    if (_affect == "Listening" && Input.GetKeyDown(KeyCode.Mouse0))
                     {
                         _currentHollyState = HollyStates.EXPLAINING;
                         HollyAnimator.SetBool("Explaining", true);
@@ -173,6 +175,7 @@ public class PartnerGameManager : MonoBehaviour
 
     private void RecetAnimProperties()
     {
+        Debug.Log("Indeed");
         GinaAnimator.SetBool("Listening", false);
         GinaAnimator.SetBool("Helpful", false);
         GinaAnimator.SetBool("Unhelpful", false);

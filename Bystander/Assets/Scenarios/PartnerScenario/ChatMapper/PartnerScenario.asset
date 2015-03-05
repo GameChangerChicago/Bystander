@@ -1477,11 +1477,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 801
-        y: 769
+        x: 808
+        y: 762
         width: 160
         height: 30
     - id: 17
@@ -2003,7 +2003,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 665
+        x: 664
         y: 908
         width: 160
         height: 30
@@ -2114,11 +2114,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 798
-        y: 970
+        x: 746
+        y: 975
         width: 160
         height: 30
     - id: 30
@@ -2364,11 +2364,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FacingGina"] = true;
       canvasRect:
         serializedVersion: 2
-        x: 109
-        y: 1007
+        x: 103
+        y: 1008
         width: 160
         height: 30
     - id: 34
@@ -2874,7 +2874,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 961
@@ -3016,8 +3016,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 200
-        y: 1191
+        x: 204
+        y: 1175
         width: 160
         height: 30
     - id: 45
@@ -3523,7 +3523,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 801
@@ -4174,7 +4174,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 756
@@ -4691,10 +4691,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 737
+        x: 736
         y: 1785
         width: 160
         height: 30
@@ -5342,7 +5342,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
         x: 835
@@ -5851,8 +5851,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 534
-        y: 1015
+        x: 535
+        y: 1013
         width: 160
         height: 30
     - id: 93
@@ -5930,8 +5930,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 448
-        y: 1192
+        x: 433
+        y: 1194
         width: 160
         height: 30
     - id: 94
@@ -6664,8 +6664,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 503
-        y: 908
+        x: 484
+        y: 896
         width: 160
         height: 30
     - id: 108
@@ -6709,8 +6709,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 690
-        y: 936
+        x: 691
+        y: 933
         width: 160
         height: 30
     - id: 109
@@ -6844,8 +6844,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 915
-        y: 753
+        x: 942
+        y: 749
         width: 160
         height: 30
     - id: 112
@@ -7025,13 +7025,11 @@ MonoBehaviour:
         priority: 2
       conditionsString: ((Variable["Myth3"]==false) and (Variable["Wrong"]>=-1) and
         (Variable["M3"]<=0))
-      userScript: 'Variable["Myth3"]=true;
-
-        Variable["FacingGina"] = true;'
+      userScript: Variable["Myth3"]=true;
       canvasRect:
         serializedVersion: 2
-        x: 311
-        y: 989
+        x: 299
+        y: 993
         width: 160
         height: 30
     - id: 116
@@ -7208,11 +7206,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["FacingGina"] = false
+      userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 941
-        y: 1095
+        x: 928
+        y: 1098
         width: 160
         height: 30
     - id: 120
@@ -7435,11 +7433,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["FacingGina"] = false
+      userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 760
-        y: 1314
+        x: 762
+        y: 1309
         width: 160
         height: 30
     - id: 125
@@ -7662,11 +7660,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["FacingGina"] = false
+      userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 594
-        y: 1552
+        x: 589
+        y: 1546
         width: 160
         height: 30
     - id: 130
@@ -7953,11 +7951,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["FacingGina"] = false
+      userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 708
-        y: 1756
+        x: 732
+        y: 1751
         width: 160
         height: 30
     - id: 136
@@ -8181,11 +8179,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["FacingGina"] = false
+      userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 625
-        y: 1955
+        x: 661
+        y: 1966
         width: 160
         height: 30
     - id: 141

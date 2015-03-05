@@ -672,7 +672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100086
 GameObject:
   m_ObjectHideFlags: 1
@@ -5230,7 +5230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialDatabase: {fileID: 11400000, guid: 7b34ad1ac9015bc4ca12637ee621980d, type: 2}
   displaySettings:
-    dialogueUI: {fileID: 100040, guid: 1d57c7e2693d6a8489a97eab2ce6fde0, type: 2}
+    dialogueUI: {fileID: 100072, guid: 657356a109ce7dc499e80398357de77c, type: 2}
     localizationSettings:
       language: 
       useSystemLanguage: 0
@@ -5246,8 +5246,8 @@ MonoBehaviour:
       informSequenceStartAndEnd: 0
     cameraSettings:
       sequencerCamera: {fileID: 2000000}
-      cameraAngles: {fileID: 100064}
-      defaultSequence: Camera
+      cameraAngles: {fileID: 0}
+      defaultSequence: None()
       disableInternalSequencerCommands: 1
     inputSettings:
       alwaysForceResponseMenu: 1

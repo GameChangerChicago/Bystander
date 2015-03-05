@@ -2,31 +2,46 @@
 using System.Collections;
 using PixelCrushers.DialogueSystem;
 
-public class VirgilScript : MonoBehaviour {
+public class VirgilScript : MonoBehaviour
+{
+    protected bool restart
+    {
+        get
+        {
+            return _restart;
+        }
+        set
+        {
+            if (value != _restart)
+            {
+                if (value)
+                {
+                    grayscaleEffect.enabled = true;
+                    _multiDialogUi.ChangeDialog("DialogueVisualUIVirgil");
+                }
+                else
+                {
+                    grayscaleEffect.enabled = false;
+                    _multiDialogUi.ChangeDialog("DialogueVisualUIDefault");
+                }
+            }
+        }
+    }
+    private bool _restart;
+
+    private MultiDialogUI _multiDialogUi;
+
     public GrayscaleEffect grayscaleEffect;
-    bool _restart;
-    bool VirgilTalking;
-	// Use this for initialization
-	void Start () {
-       
+    // Use this for initialization
+    void Start()
+    {
         _restart = DialogueLua.GetVariable("Repeat").AsBool;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        _restart = DialogueLua.GetVariable("Repeat").AsBool;
-        if (_restart)
-        {
-            grayscaleEffect.enabled = true;
-           
-        }
-        else 
-        {
-            grayscaleEffect.enabled = false;
-        }
-	
-	}
+        _multiDialogUi = FindObjectOfType<MultiDialogUI>();
+    }
 
-
-
+    // Update is called once per frame
+    void Update()
+    {
+        restart = DialogueLua.GetVariable("Repeat").AsBool;
+    }
 }

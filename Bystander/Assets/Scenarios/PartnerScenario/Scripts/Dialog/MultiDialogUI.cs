@@ -23,6 +23,7 @@ public class MultiDialogUI : DialogueVisualUI
         }
 
         dialogue = DialogUiSets[0];
+        ChangeDialog("DialogueVisualUIDefault");
     }
 
     public void ChangeDialog(string setUpName)

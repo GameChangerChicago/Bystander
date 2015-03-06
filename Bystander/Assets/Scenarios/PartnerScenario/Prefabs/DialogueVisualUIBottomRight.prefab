@@ -1,41 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &100000
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400000}
-  - 114: {fileID: 11400004}
-  - 114: {fileID: 11400008}
-  - 114: {fileID: 11400006}
-  m_Layer: 0
-  m_Name: NPC Portrait Line
-  m_TagString: DialogName
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!1 &100002
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400002}
-  - 114: {fileID: 11400024}
-  - 114: {fileID: 11400012}
-  - 114: {fileID: 11400010}
-  m_Layer: 0
-  m_Name: zBorder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 1
@@ -43,10 +7,10 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 400006}
-  - 114: {fileID: 11400028}
+  - 4: {fileID: 400076}
+  - 114: {fileID: 11400132}
   m_Layer: 0
-  m_Name: NPC Subtitle Line
+  m_Name: NPC Portrait Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +47,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100010
 GameObject:
   m_ObjectHideFlags: 1
@@ -100,22 +64,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &100012
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400012}
-  - 114: {fileID: 11400032}
-  m_Layer: 0
-  m_Name: PC Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &100014
 GameObject:
   m_ObjectHideFlags: 1
@@ -125,6 +73,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400014}
   - 114: {fileID: 11400030}
+  - 114: {fileID: 11400024}
+  - 114: {fileID: 11400040}
   m_Layer: 0
   m_Name: NPC Subtitle Line
   m_TagString: Untagged
@@ -140,14 +90,16 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400016}
-  - 114: {fileID: 11400034}
+  - 114: {fileID: 11400118}
+  - 114: {fileID: 11400116}
+  - 114: {fileID: 11400056}
   m_Layer: 0
-  m_Name: NPC Portrait Image
+  m_Name: zBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100018
 GameObject:
   m_ObjectHideFlags: 1
@@ -156,14 +108,14 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400018}
-  - 114: {fileID: 11400038}
+  - 114: {fileID: 11400042}
   m_Layer: 0
-  m_Name: ContinueImage
+  m_Name: NPC Portrait Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100020
 GameObject:
   m_ObjectHideFlags: 1
@@ -190,8 +142,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400022}
   - 114: {fileID: 11400048}
-  - 114: {fileID: 11400002}
-  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: PC Panel
   m_TagString: Untagged
@@ -255,9 +205,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400030}
-  - 114: {fileID: 11400040}
+  - 114: {fileID: 11400122}
+  - 114: {fileID: 11400120}
   m_Layer: 0
-  m_Name: NPC Portrait Image
+  m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,13 +256,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 400036}
   - 114: {fileID: 11400064}
+  - 114: {fileID: 11400066}
   m_Layer: 0
   m_Name: Alert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100038
 GameObject:
   m_ObjectHideFlags: 1
@@ -363,24 +315,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!1 &100044
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400044}
-  - 114: {fileID: 11400066}
-  - 114: {fileID: 11400056}
-  - 114: {fileID: 11400042}
-  m_Layer: 0
-  m_Name: NPC Subtitle Line
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100046
 GameObject:
   m_ObjectHideFlags: 1
@@ -457,7 +391,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400054}
   - 114: {fileID: 11400094}
-  - 114: {fileID: 11400036}
   m_Layer: 0
   m_Name: Response Panel
   m_TagString: Untagged
@@ -473,10 +406,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400056}
-  - 114: {fileID: 11400076}
-  - 114: {fileID: 11400074}
+  - 114: {fileID: 11400098}
+  - 114: {fileID: 11400036}
+  - 114: {fileID: 11400032}
   m_Layer: 0
-  m_Name: Continue
+  m_Name: PC Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -513,7 +447,25 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
+--- !u!1 &100062
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400062}
+  - 114: {fileID: 11400108}
+  - 114: {fileID: 11400104}
+  - 114: {fileID: 11400106}
+  m_Layer: 0
+  m_Name: NPC Subtitle Line
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &100064
 GameObject:
   m_ObjectHideFlags: 1
@@ -546,6 +498,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100074
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400078}
+  - 114: {fileID: 11400134}
+  m_Layer: 0
+  m_Name: ContinueImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &100076
 GameObject:
   m_ObjectHideFlags: 1
@@ -563,6 +531,42 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &100078
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400006}
+  - 114: {fileID: 11400148}
+  - 114: {fileID: 11400012}
+  - 114: {fileID: 11400146}
+  m_Layer: 0
+  m_Name: NPC Portrait Line
+  m_TagString: DialogName
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100080
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400074}
+  - 114: {fileID: 11400142}
+  - 114: {fileID: 11400138}
+  - 114: {fileID: 11400136}
+  m_Layer: 0
+  m_Name: NPC Subtitle Line
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &100082
 GameObject:
   m_ObjectHideFlags: 1
@@ -578,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100084
 GameObject:
   m_ObjectHideFlags: 1
@@ -596,31 +600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &400000
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400004}
-  m_RootOrder: 3
---- !u!4 &400002
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400082}
-  m_RootOrder: 4
+  m_IsActive: 1
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -631,12 +611,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400080}
-  - {fileID: 400018}
+  - {fileID: 400030}
+  - {fileID: 400008}
+  - {fileID: 400010}
+  - {fileID: 400042}
+  - {fileID: 400014}
   - {fileID: 400016}
-  - {fileID: 400000}
-  - {fileID: 400006}
-  - {fileID: 400084}
   m_Father: {fileID: 400058}
   m_RootOrder: 0
 --- !u!4 &400006
@@ -644,13 +624,13 @@ Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
+  m_GameObject: {fileID: 100078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400004}
-  m_RootOrder: 4
+  m_Father: {fileID: 400082}
+  m_RootOrder: 5
 --- !u!4 &400008
 Transform:
   m_ObjectHideFlags: 1
@@ -661,7 +641,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400082}
+  m_Father: {fileID: 400004}
   m_RootOrder: 1
 --- !u!4 &400010
 Transform:
@@ -673,21 +653,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400022}
-  m_RootOrder: 2
---- !u!4 &400012
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100012}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 400050}
-  - {fileID: 400034}
-  m_Father: {fileID: 400058}
+  m_Father: {fileID: 400004}
   m_RootOrder: 2
 --- !u!4 &400014
 Transform:
@@ -699,8 +665,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400082}
-  m_RootOrder: 3
+  m_Father: {fileID: 400004}
+  m_RootOrder: 4
 --- !u!4 &400016
 Transform:
   m_ObjectHideFlags: 1
@@ -712,7 +678,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 2
+  m_RootOrder: 5
 --- !u!4 &400018
 Transform:
   m_ObjectHideFlags: 1
@@ -723,8 +689,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400004}
-  m_RootOrder: 1
+  m_Father: {fileID: 400056}
+  m_RootOrder: 2
 --- !u!4 &400020
 Transform:
   m_ObjectHideFlags: 1
@@ -747,11 +713,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400044}
-  - {fileID: 400046}
-  - {fileID: 400010}
+  - {fileID: 400050}
+  - {fileID: 400034}
   m_Father: {fileID: 400058}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!4 &400024
 Transform:
   m_ObjectHideFlags: 1
@@ -760,7 +725,7 @@ Transform:
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400054}
   m_RootOrder: 0
@@ -787,7 +752,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400054}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &400030
 Transform:
   m_ObjectHideFlags: 1
@@ -798,8 +763,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400082}
-  m_RootOrder: 2
+  m_Father: {fileID: 400004}
+  m_RootOrder: 0
 --- !u!4 &400032
 Transform:
   m_ObjectHideFlags: 1
@@ -822,7 +787,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400012}
+  m_Father: {fileID: 400022}
   m_RootOrder: 1
 --- !u!4 &400036
 Transform:
@@ -871,20 +836,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400082}
-  m_RootOrder: 5
---- !u!4 &400044
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400022}
-  m_RootOrder: 0
+  m_Father: {fileID: 400004}
+  m_RootOrder: 3
 --- !u!4 &400046
 Transform:
   m_ObjectHideFlags: 1
@@ -895,7 +848,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400022}
+  m_Father: {fileID: 400056}
   m_RootOrder: 1
 --- !u!4 &400048
 Transform:
@@ -923,7 +876,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400012}
+  m_Father: {fileID: 400022}
   m_RootOrder: 0
 --- !u!4 &400052
 Transform:
@@ -936,7 +889,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400054}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &400054
 Transform:
   m_ObjectHideFlags: 1
@@ -945,14 +898,14 @@ Transform:
   m_GameObject: {fileID: 100054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400024}
   - {fileID: 400026}
   - {fileID: 400064}
   - {fileID: 400066}
-  - {fileID: 400028}
   - {fileID: 400052}
+  - {fileID: 400028}
   - {fileID: 400032}
   m_Father: {fileID: 400058}
   m_RootOrder: 3
@@ -965,9 +918,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400082}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 400062}
+  - {fileID: 400046}
+  - {fileID: 400018}
+  m_Father: {fileID: 400058}
+  m_RootOrder: 5
 --- !u!4 &400058
 Transform:
   m_ObjectHideFlags: 1
@@ -980,10 +936,10 @@ Transform:
   m_Children:
   - {fileID: 400004}
   - {fileID: 400082}
-  - {fileID: 400012}
+  - {fileID: 400022}
   - {fileID: 400054}
   - {fileID: 400060}
-  - {fileID: 400022}
+  - {fileID: 400056}
   m_Father: {fileID: 400048}
   m_RootOrder: 0
 --- !u!4 &400060
@@ -998,6 +954,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400058}
   m_RootOrder: 4
+--- !u!4 &400062
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400056}
+  m_RootOrder: 0
 --- !u!4 &400064
 Transform:
   m_ObjectHideFlags: 1
@@ -1022,6 +990,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400054}
   m_RootOrder: 3
+--- !u!4 &400074
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400082}
+  m_RootOrder: 3
+--- !u!4 &400076
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400082}
+  m_RootOrder: 2
+--- !u!4 &400078
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400082}
+  m_RootOrder: 1
 --- !u!4 &400080
 Transform:
   m_ObjectHideFlags: 1
@@ -1032,7 +1036,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400004}
+  m_Father: {fileID: 400082}
   m_RootOrder: 0
 --- !u!4 &400082
 Transform:
@@ -1044,12 +1048,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400056}
-  - {fileID: 400008}
-  - {fileID: 400030}
-  - {fileID: 400014}
-  - {fileID: 400002}
-  - {fileID: 400042}
+  - {fileID: 400080}
+  - {fileID: 400078}
+  - {fileID: 400076}
+  - {fileID: 400074}
+  - {fileID: 400084}
+  - {fileID: 400006}
   m_Father: {fileID: 400058}
   m_RootOrder: 1
 --- !u!4 &400084
@@ -1062,202 +1066,14 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400004}
-  m_RootOrder: 5
---- !u!114 &11400000
+  m_Father: {fileID: 400082}
+  m_RootOrder: 4
+--- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1229025713, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialDatabase: {fileID: 0}
-  displaySettings:
-    dialogueUI: {fileID: 0}
-    localizationSettings:
-      language: 
-      useSystemLanguage: 0
-    subtitleSettings:
-      showNPCSubtitlesDuringLine: 1
-      showNPCSubtitlesWithResponses: 1
-      showPCSubtitlesDuringLine: 0
-      allowPCSubtitleReminders: 0
-      subtitleCharsPerSecond: 30
-      minSubtitleSeconds: 2
-      continueButton: 0
-      richTextEmphases: 0
-      informSequenceStartAndEnd: 0
-    cameraSettings:
-      sequencerCamera: {fileID: 0}
-      cameraAngles: {fileID: 0}
-      defaultSequence: Camera(Closeup); required Camera(Closeup,listener)@{{end}}
-      disableInternalSequencerCommands: 0
-    inputSettings:
-      alwaysForceResponseMenu: 0
-      responseTimeout: 0
-      responseTimeoutAction: 0
-      qteButtons:
-      - Fire1
-      - Fire2
-      cancel:
-        key: 27
-        buttonName: 
-    alertSettings:
-      allowAlertsDuringConversations: 0
-      alertCheckFrequency: 0
-  includeSimStatus: 0
-  debugLevel: 2
-  dontDestroyOnLoad: 1
-  allowOnlyOneInstance: 1
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1229025713, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialDatabase: {fileID: 0}
-  displaySettings:
-    dialogueUI: {fileID: 0}
-    localizationSettings:
-      language: 
-      useSystemLanguage: 0
-    subtitleSettings:
-      showNPCSubtitlesDuringLine: 1
-      showNPCSubtitlesWithResponses: 1
-      showPCSubtitlesDuringLine: 0
-      allowPCSubtitleReminders: 0
-      subtitleCharsPerSecond: 30
-      minSubtitleSeconds: 2
-      continueButton: 0
-      richTextEmphases: 0
-      informSequenceStartAndEnd: 0
-    cameraSettings:
-      sequencerCamera: {fileID: 0}
-      cameraAngles: {fileID: 0}
-      defaultSequence: Camera(Closeup); required Camera(Closeup,listener)@{{end}}
-      disableInternalSequencerCommands: 0
-    inputSettings:
-      alwaysForceResponseMenu: 0
-      responseTimeout: 0
-      responseTimeoutAction: 0
-      qteButtons:
-      - Fire1
-      - Fire2
-      cancel:
-        key: 27
-        buttonName: 
-    alertSettings:
-      allowAlertsDuringConversations: 0
-      alertCheckFrequency: 0
-  includeSimStatus: 0
-  debugLevel: 2
-  dontDestroyOnLoad: 1
-  allowOnlyOneInstance: 1
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: 0
-  depthSortChildren: 0
-  scaledRect:
-    origin: 6
-    alignment: 0
-    x:
-      scale: 1
-      value: .075000003
-    y:
-      scale: 1
-      value: -.460000008
-    width:
-      scale: 1
-      value: .200000003
-    height:
-      scale: 1
-      value: 0
-    minPixelWidth: 0
-    minPixelHeight: 0
-  autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 0}
-    rightOf: {fileID: 0}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 1
-  localizedText: {fileID: 0}
-  text: name place
-  guiStyleName: Name
-  textStyle: 0
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  image: {fileID: 0}
-  imageAnimation:
-    animate: 0
-    frameWidth: 64
-    framesPerSecond: 1
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  fadeInDuration: .200000003
-  duration: 1
-  fadeOutDuration: 0
---- !u!114 &11400008
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 100078}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
@@ -1265,35 +1081,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: 0
   charactersPerSecond: 25
-  audioClip: {fileID: 0}
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  fadeInDuration: .200000003
-  duration: 1
-  fadeOutDuration: 0
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  charactersPerSecond: 50
   audioClip: {fileID: 0}
 --- !u!114 &11400014
 MonoBehaviour:
@@ -1338,14 +1125,14 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 1
   scaledRect:
-    origin: 8
-    alignment: 8
+    origin: 7
+    alignment: 7
     x:
       scale: 1
-      value: 0
+      value: -.180000007
     y:
       scale: 1
-      value: 0
+      value: .200000003
     width:
       scale: 1
       value: 1
@@ -1475,6 +1262,300 @@ MonoBehaviour:
   m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  depth: 5
+  depthSortChildren: 1
+  scaledRect:
+    origin: 0
+    alignment: 0
+    x:
+      scale: 0
+      value: 30
+    y:
+      scale: 0
+      value: 285
+    width:
+      scale: 1
+      value: .300000012
+    height:
+      scale: 0
+      value: 200
+    minPixelWidth: 0
+    minPixelHeight: 0
+  autoSize:
+    autoSizeWidth: 0
+    autoSizeHeight: 0
+    maxWidth:
+      scale: 1
+      value: 1
+    maxHeight:
+      scale: 1
+      value: 1
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 0}
+    rightOf: {fileID: 0}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 1
+  localizedText: {fileID: 0}
+  text: 
+  guiStyleName: Portrait
+  textStyle: 0
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  image: {fileID: 2800000, guid: c11cca84b56bc4c468f4e5d0c648c4ce, type: 3}
+  imageAnimation:
+    animate: 0
+    frameWidth: 64
+    framesPerSecond: 1
+--- !u!114 &11400024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  charactersPerSecond: 50
+  audioClip: {fileID: 0}
+--- !u!114 &11400026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6fffd129b6f49e2bf4c121c568ba90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisplayNames:
+  - {fileID: 11400128}
+  - {fileID: 11400148}
+--- !u!114 &11400030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: 0
+  depthSortChildren: 0
+  scaledRect:
+    origin: 4
+    alignment: 4
+    x:
+      scale: 0
+      value: 0
+    y:
+      scale: 0
+      value: 0
+    width:
+      scale: 1
+      value: 1
+    height:
+      scale: 1
+      value: 1
+    minPixelWidth: 0
+    minPixelHeight: 0
+  autoSize:
+    autoSizeWidth: 1
+    autoSizeHeight: 1
+    maxWidth:
+      scale: 1
+      value: 1
+    maxHeight:
+      scale: 1
+      value: 1
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 0}
+    rightOf: {fileID: 0}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 1
+  localizedText: {fileID: 0}
+  text: "It\u2019s just that he had been so nice all night - taking me out and buying
+    me a beautiful gift. I felt bad for not wanting to have sex and I didn\u2019t
+    want him to think I don\u2019t love him. In a weird way, I felt like I owed him
+    something even though I DIDN\u2019T want to have sex."
+  guiStyleName: Subtitle
+  textStyle: 0
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  image: {fileID: 0}
+  imageAnimation:
+    animate: 0
+    frameWidth: 0
+    framesPerSecond: 1
+--- !u!114 &11400032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1229025713, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialDatabase: {fileID: 0}
+  displaySettings:
+    dialogueUI: {fileID: 0}
+    localizationSettings:
+      language: 
+      useSystemLanguage: 0
+    subtitleSettings:
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      allowPCSubtitleReminders: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      richTextEmphases: 0
+      informSequenceStartAndEnd: 0
+    cameraSettings:
+      sequencerCamera: {fileID: 0}
+      cameraAngles: {fileID: 0}
+      defaultSequence: Camera(Closeup); required Camera(Closeup,listener)@{{end}}
+      disableInternalSequencerCommands: 0
+    inputSettings:
+      alwaysForceResponseMenu: 0
+      responseTimeout: 0
+      responseTimeoutAction: 0
+      qteButtons:
+      - Fire1
+      - Fire2
+      cancel:
+        key: 27
+        buttonName: 
+    alertSettings:
+      allowAlertsDuringConversations: 0
+      alertCheckFrequency: 0
+  includeSimStatus: 0
+  debugLevel: 2
+  dontDestroyOnLoad: 1
+  allowOnlyOneInstance: 1
+--- !u!114 &11400036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1229025713, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialDatabase: {fileID: 0}
+  displaySettings:
+    dialogueUI: {fileID: 0}
+    localizationSettings:
+      language: 
+      useSystemLanguage: 0
+    subtitleSettings:
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      allowPCSubtitleReminders: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      richTextEmphases: 0
+      informSequenceStartAndEnd: 0
+    cameraSettings:
+      sequencerCamera: {fileID: 0}
+      cameraAngles: {fileID: 0}
+      defaultSequence: Camera(Closeup); required Camera(Closeup,listener)@{{end}}
+      disableInternalSequencerCommands: 0
+    inputSettings:
+      alwaysForceResponseMenu: 0
+      responseTimeout: 0
+      responseTimeoutAction: 0
+      qteButtons:
+      - Fire1
+      - Fire2
+      cancel:
+        key: 27
+        buttonName: 
+    alertSettings:
+      allowAlertsDuringConversations: 0
+      alertCheckFrequency: 0
+  includeSimStatus: 0
+  debugLevel: 2
+  dontDestroyOnLoad: 1
+  allowOnlyOneInstance: 1
+--- !u!114 &11400040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  fadeInDuration: .200000003
+  duration: 1
+  fadeOutDuration: 0
+--- !u!114 &11400042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   depth: 0
   depthSortChildren: 0
   scaledRect:
@@ -1539,570 +1620,6 @@ MonoBehaviour:
     animate: 0
     frameWidth: 64
     framesPerSecond: 1
---- !u!114 &11400024
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: -5
-  depthSortChildren: 1
-  scaledRect:
-    origin: 7
-    alignment: 7
-    x:
-      scale: 1
-      value: -.219999999
-    y:
-      scale: 1
-      value: -.0599999987
-    width:
-      scale: 1
-      value: .439999998
-    height:
-      scale: 1
-      value: .449999988
-    minPixelWidth: 0
-    minPixelHeight: 200
-  autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 0}
-    rightOf: {fileID: 0}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 1
-  localizedText: {fileID: 0}
-  text: ''''
-  guiStyleName: Border
-  textStyle: 0
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  image: {fileID: 0}
-  imageAnimation:
-    animate: 0
-    frameWidth: 64
-    framesPerSecond: 1
---- !u!114 &11400026
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6fffd129b6f49e2bf4c121c568ba90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayNames:
-  - {fileID: 11400004}
-  - {fileID: 11400128}
---- !u!114 &11400028
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: 0
-  depthSortChildren: 0
-  scaledRect:
-    origin: 4
-    alignment: 4
-    x:
-      scale: 1
-      value: .200000003
-    y:
-      scale: 1
-      value: .0900000036
-    width:
-      scale: 0
-      value: 0
-    height:
-      scale: 0
-      value: 0
-    minPixelWidth: 0
-    minPixelHeight: 0
-  autoSize:
-    autoSizeWidth: 1
-    autoSizeHeight: 1
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 0}
-    rightOf: {fileID: 0}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 1
-  localizedText: {fileID: 0}
-  text: "It\u2019s just that he had been so nice all night - taking me out and buying
-    me a beautiful gift. I felt bad for not wanting to have sex and I didn\u2019t
-    want him to think I don\u2019t love him. In a weird way, I felt like I owed him
-    something even though I DIDN\u2019T want to have sex."
-  guiStyleName: Subtitle
-  textStyle: 0
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  image: {fileID: 0}
-  imageAnimation:
-    animate: 0
-    frameWidth: 0
-    framesPerSecond: 1
---- !u!114 &11400030
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: 0
-  depthSortChildren: 0
-  scaledRect:
-    origin: 4
-    alignment: 4
-    x:
-      scale: 1
-      value: -.180000007
-    y:
-      scale: 1
-      value: .0900000036
-    width:
-      scale: 0
-      value: 0
-    height:
-      scale: 0
-      value: 0
-    minPixelWidth: 0
-    minPixelHeight: 0
-  autoSize:
-    autoSizeWidth: 1
-    autoSizeHeight: 1
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 0}
-    rightOf: {fileID: 0}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 1
-  localizedText: {fileID: 0}
-  text: "It\u2019s just that he had been so nice all night - taking me out and buying
-    me a beautiful gift. I felt bad for not wanting to have sex and I didn\u2019t
-    want him to think I don\u2019t love him. In a weird way, I felt like I owed him
-    something even though I DIDN\u2019T want to have sex."
-  guiStyleName: Subtitle
-  textStyle: 0
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  image: {fileID: 0}
-  imageAnimation:
-    animate: 0
-    frameWidth: 0
-    framesPerSecond: 1
---- !u!114 &11400032
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -697685688, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: 0
-  depthSortChildren: 0
-  scaledRect:
-    origin: 0
-    alignment: 0
-    x:
-      scale: 0
-      value: 0
-    y:
-      scale: 0
-      value: 22
-    width:
-      scale: 1
-      value: 1
-    height:
-      scale: 0
-      value: 92
-    minPixelWidth: 0
-    minPixelHeight: 0
-  autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 11400102}
-    rightOf: {fileID: 0}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 1
---- !u!114 &11400034
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: 5
-  depthSortChildren: 1
-  scaledRect:
-    origin: 0
-    alignment: 0
-    x:
-      scale: 0
-      value: 30
-    y:
-      scale: 0
-      value: 285
-    width:
-      scale: 1
-      value: .300000012
-    height:
-      scale: 0
-      value: 200
-    minPixelWidth: 0
-    minPixelHeight: 0
-  autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 0}
-    rightOf: {fileID: 0}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 1
-  localizedText: {fileID: 0}
-  text: 
-  guiStyleName: Portrait
-  textStyle: 0
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  image: {fileID: 2800000, guid: c11cca84b56bc4c468f4e5d0c648c4ce, type: 3}
-  imageAnimation:
-    animate: 0
-    frameWidth: 64
-    framesPerSecond: 1
---- !u!114 &11400036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -713665266, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  direction: 3
-  duration: .400000006
---- !u!114 &11400038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100018}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: 10
-  depthSortChildren: 0
-  scaledRect:
-    origin: 0
-    alignment: 0
-    x:
-      scale: 0
-      value: 750
-    y:
-      scale: 0
-      value: 250
-    width:
-      scale: 1
-      value: .300000012
-    height:
-      scale: 0
-      value: 180
-    minPixelWidth: 0
-    minPixelHeight: 0
-  autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 0}
-    rightOf: {fileID: 0}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 1
-  localizedText: {fileID: 0}
-  text: 
-  guiStyleName: 
-  textStyle: 0
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  image: {fileID: 2800000, guid: 4f929751e63ad4c93984a61b236941ea, type: 3}
-  imageAnimation:
-    animate: 0
-    frameWidth: 64
-    framesPerSecond: 1
---- !u!114 &11400040
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: 5
-  depthSortChildren: 1
-  scaledRect:
-    origin: 0
-    alignment: 0
-    x:
-      scale: 0
-      value: 30
-    y:
-      scale: 0
-      value: 285
-    width:
-      scale: 1
-      value: .300000012
-    height:
-      scale: 0
-      value: 200
-    minPixelWidth: 0
-    minPixelHeight: 0
-  autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 0}
-    rightOf: {fileID: 0}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 1
-  localizedText: {fileID: 0}
-  text: 
-  guiStyleName: Portrait
-  textStyle: 0
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  image: {fileID: 2800000, guid: c11cca84b56bc4c468f4e5d0c648c4ce, type: 3}
-  imageAnimation:
-    animate: 0
-    frameWidth: 64
-    framesPerSecond: 1
---- !u!114 &11400042
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  fadeInDuration: .200000003
-  duration: 1
-  fadeOutDuration: 0
 --- !u!114 &11400044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2205,20 +1722,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 6
-    alignment: 6
+    origin: 0
+    alignment: 0
     x:
       scale: 0
-      value: 75
+      value: 0
     y:
       scale: 0
-      value: -25
+      value: 22
     width:
       scale: 1
       value: 1
     height:
       scale: 0
-      value: 250
+      value: 92
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -2270,25 +1787,25 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 1
-    alignment: 1
+    origin: 4
+    alignment: 4
     x:
-      scale: 0
-      value: 100
+      scale: 1
+      value: .150000006
     y:
-      scale: 0
-      value: 30
+      scale: 1
+      value: -.300000012
     width:
       scale: 1
-      value: 0
+      value: 1
     height:
       scale: 1
-      value: 0
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -2419,25 +1936,25 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 1
-    alignment: 1
+    origin: 4
+    alignment: 4
     x:
-      scale: 0
-      value: 125
+      scale: 1
+      value: .209999993
     y:
-      scale: 0
-      value: 110
+      scale: 1
+      value: -.100000001
     width:
-      scale: 0
-      value: 0
+      scale: 1
+      value: 1
     height:
-      scale: 0
-      value: 70
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -2634,15 +2151,16 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100044}
-  m_Enabled: 1
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: 0
-  charactersPerSecond: 50
-  audioClip: {fileID: 0}
+  fadeInDuration: .200000003
+  duration: 1
+  fadeOutDuration: 0
 --- !u!114 &11400058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2820,22 +2338,22 @@ MonoBehaviour:
     origin: 4
     alignment: 4
     x:
-      scale: 1
-      value: -.200000003
-    y:
-      scale: 1
-      value: .300000012
-    width:
-      scale: 1
-      value: 0
-    height:
       scale: 0
       value: 0
-    minPixelWidth: 300
-    minPixelHeight: 100
+    y:
+      scale: 0
+      value: 0
+    width:
+      scale: 1
+      value: .75
+    height:
+      scale: 0
+      value: 64
+    minPixelWidth: 0
+    minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 1
-    autoSizeHeight: 1
+    autoSizeWidth: 0
+    autoSizeHeight: 0
     maxWidth:
       scale: 1
       value: 1
@@ -2883,76 +2401,16 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100044}
+  m_GameObject: {fileID: 100036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depth: 0
-  depthSortChildren: 0
-  scaledRect:
-    origin: 0
-    alignment: 0
-    x:
-      scale: 0
-      value: 5
-    y:
-      scale: 0
-      value: 30
-    width:
-      scale: 1
-      value: .75
-    height:
-      scale: 0
-      value: 64
-    minPixelWidth: 0
-    minPixelHeight: 64
-  autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 0}
-    rightOf: {fileID: 11400022}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 1
-  localizedText: {fileID: 0}
-  text: NPC Subtitle
-  guiStyleName: Subtitle
-  textStyle: 0
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  image: {fileID: 0}
-  imageAnimation:
-    animate: 0
-    frameWidth: 64
-    framesPerSecond: 1
+  trigger: 0
+  fadeInDuration: .5
+  duration: 1
+  fadeOutDuration: .5
 --- !u!114 &11400068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3057,10 +2515,10 @@ MonoBehaviour:
     panel: {fileID: 11400100}
     npcSubtitle:
       panel: {fileID: 11400018}
-      line: {fileID: 11400028}
+      line: {fileID: 11400030}
       portraitImage: {fileID: 0}
-      portraitName: {fileID: 0}
-      continueButton: {fileID: 11400140}
+      portraitName: {fileID: 11400128}
+      continueButton: {fileID: 11400122}
     pcSubtitle:
       panel: {fileID: 0}
       line: {fileID: 0}
@@ -3075,17 +2533,17 @@ MonoBehaviour:
       pcName: {fileID: 0}
       subtitleReminder:
         panel: {fileID: 11400144}
-        line: {fileID: 11400030}
+        line: {fileID: 11400142}
         portraitImage: {fileID: 0}
-        portraitName: {fileID: 11400128}
-        continueButton: {fileID: 11400076}
-      timer: {fileID: 0}
+        portraitName: {fileID: 11400148}
+        continueButton: {fileID: 0}
+      timer: {fileID: 11400058}
       buttons:
       - {fileID: 11400050}
       - {fileID: 11400052}
       - {fileID: 11400110}
       - {fileID: 11400114}
-      - {fileID: 0}
+      - {fileID: 11400092}
   qteIndicators:
   - {fileID: 11400068}
   - {fileID: 11400044}
@@ -3093,169 +2551,7 @@ MonoBehaviour:
     panel: {fileID: 0}
     line: {fileID: 11400064}
     continueButton: {fileID: 0}
-  npcBorderFadeEffect: {fileID: 11400014}
---- !u!114 &11400074
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -797819540, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 11400072}
-  typewriterEffect: {fileID: 0}
---- !u!114 &11400076
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -125749421, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depth: 5
-  depthSortChildren: 1
-  scaledRect:
-    origin: 0
-    alignment: 0
-    x:
-      scale: 0
-      value: 0
-    y:
-      scale: 0
-      value: 450
-    width:
-      scale: 0
-      value: 1
-    height:
-      scale: 0
-      value: 1
-    minPixelWidth: 0
-    minPixelHeight: 0
-  autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
-    maxWidth:
-      scale: 1
-      value: 1
-    maxHeight:
-      scale: 1
-      value: 1
-    padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-  fit:
-    above: {fileID: 0}
-    below: {fileID: 0}
-    leftOf: {fileID: 0}
-    rightOf: {fileID: 0}
-    expandToFit: 1
-  navigation:
-    enabled: 0
-    focusFirstControlOnEnable: 1
-    jumpToMousePosition: 1
-    order: []
-    clickButton: Fire1
-    click: 32
-    previous: 273
-    next: 274
-    axis: Vertical
-    invertAxis: 1
-    axisRepeatDelay: 1
-    mouseWheelSensitivity: 5
-  visible: 1
-  clipChildren: 0
-  localizedText: {fileID: 0}
-  text: ' '
-  guiStyleName: Continue
-  clickable: 1
-  disabled:
-    pixelRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    texture: {fileID: 0}
-    useTexCoords: 0
-    texCoords:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    scaleMode: 2
-    alphaBlend: 1
-    aspect: 0
-  normal:
-    pixelRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    texture: {fileID: 0}
-    useTexCoords: 0
-    texCoords:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    scaleMode: 2
-    alphaBlend: 1
-    aspect: 0
-  hover:
-    pixelRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    texture: {fileID: 0}
-    useTexCoords: 0
-    texCoords:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    scaleMode: 2
-    alphaBlend: 1
-    aspect: 0
-  pressed:
-    pixelRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    texture: {fileID: 0}
-    useTexCoords: 0
-    texCoords:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    scaleMode: 2
-    alphaBlend: 1
-    aspect: 0
-  hoverSound: {fileID: 0}
-  clickSound: {fileID: 0}
-  trigger:
-    key: 323
-    buttonName: 
-  message: OnFastForward
-  parameter: 
-  target: {fileID: 400056}
+  npcBorderFadeEffect: {fileID: 11400056}
 --- !u!114 &11400082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3304,7 +2600,7 @@ MonoBehaviour:
     above: {fileID: 0}
     below: {fileID: 0}
     leftOf: {fileID: 0}
-    rightOf: {fileID: 11400022}
+    rightOf: {fileID: 11400042}
     expandToFit: 1
   navigation:
     enabled: 0
@@ -3664,13 +2960,13 @@ MonoBehaviour:
   depth: 3
   depthSortChildren: 1
   scaledRect:
-    origin: 4
-    alignment: 4
+    origin: 1
+    alignment: 0
     x:
-      scale: 1
+      scale: 0
       value: 0
     y:
-      scale: 1
+      scale: 0
       value: 0
     width:
       scale: 1
@@ -3678,6 +2974,71 @@ MonoBehaviour:
     height:
       scale: 1
       value: 1
+    minPixelWidth: 0
+    minPixelHeight: 0
+  autoSize:
+    autoSizeWidth: 1
+    autoSizeHeight: 1
+    maxWidth:
+      scale: 1
+      value: 2
+    maxHeight:
+      scale: 1
+      value: 2
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 11400102}
+    rightOf: {fileID: 0}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 0
+--- !u!114 &11400098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -697685688, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: 0
+  depthSortChildren: 0
+  scaledRect:
+    origin: 6
+    alignment: 6
+    x:
+      scale: 0
+      value: 75
+    y:
+      scale: 0
+      value: -25
+    width:
+      scale: 1
+      value: 1
+    height:
+      scale: 0
+      value: 250
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -3697,7 +3058,7 @@ MonoBehaviour:
   fit:
     above: {fileID: 0}
     below: {fileID: 0}
-    leftOf: {fileID: 0}
+    leftOf: {fileID: 11400102}
     rightOf: {fileID: 0}
     expandToFit: 1
   navigation:
@@ -3714,7 +3075,7 @@ MonoBehaviour:
     axisRepeatDelay: 1
     mouseWheelSensitivity: 5
   visible: 1
-  clipChildren: 0
+  clipChildren: 1
 --- !u!114 &11400100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3732,10 +3093,10 @@ MonoBehaviour:
     origin: 0
     alignment: 0
     x:
-      scale: 0
+      scale: 1
       value: 0
     y:
-      scale: 0
+      scale: 1
       value: 0
     width:
       scale: 1
@@ -3855,6 +3216,110 @@ MonoBehaviour:
     animate: 0
     frameWidth: 64
     framesPerSecond: 1
+--- !u!114 &11400104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  charactersPerSecond: 50
+  audioClip: {fileID: 0}
+--- !u!114 &11400106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  fadeInDuration: .200000003
+  duration: 1
+  fadeOutDuration: 0
+--- !u!114 &11400108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: 0
+  depthSortChildren: 0
+  scaledRect:
+    origin: 0
+    alignment: 0
+    x:
+      scale: 0
+      value: 5
+    y:
+      scale: 0
+      value: 30
+    width:
+      scale: 1
+      value: .75
+    height:
+      scale: 0
+      value: 64
+    minPixelWidth: 0
+    minPixelHeight: 64
+  autoSize:
+    autoSizeWidth: 0
+    autoSizeHeight: 0
+    maxWidth:
+      scale: 1
+      value: 1
+    maxHeight:
+      scale: 1
+      value: 1
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 0}
+    rightOf: {fileID: 11400042}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 1
+  localizedText: {fileID: 0}
+  text: NPC Subtitle
+  guiStyleName: Subtitle
+  textStyle: 0
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  image: {fileID: 0}
+  imageAnimation:
+    animate: 0
+    frameWidth: 64
+    framesPerSecond: 1
 --- !u!114 &11400110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3869,25 +3334,25 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 1
-    alignment: 1
+    origin: 4
+    alignment: 4
     x:
-      scale: 0
-      value: 20
+      scale: 1
+      value: .0500000007
     y:
-      scale: 0
-      value: 180
+      scale: 1
+      value: .100000001
     width:
-      scale: 0
-      value: 0
+      scale: 1
+      value: 1
     height:
-      scale: 0
-      value: 70
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -4018,25 +3483,25 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 1
-    alignment: 1
+    origin: 4
+    alignment: 4
     x:
-      scale: 0
-      value: -90
+      scale: 1
+      value: -.280000001
     y:
-      scale: 0
-      value: -10
+      scale: 1
+      value: -.409999996
     width:
-      scale: 0
-      value: 0
+      scale: 1
+      value: 1
     height:
-      scale: 0
-      value: 0
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -4153,6 +3618,257 @@ MonoBehaviour:
   message: OnClick
   parameter: 
   target: {fileID: 400040}
+--- !u!114 &11400116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  charactersPerSecond: 50
+  audioClip: {fileID: 0}
+--- !u!114 &11400118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: -5
+  depthSortChildren: 1
+  scaledRect:
+    origin: 7
+    alignment: 7
+    x:
+      scale: 1
+      value: -.219999999
+    y:
+      scale: 1
+      value: -.0599999987
+    width:
+      scale: 1
+      value: .439999998
+    height:
+      scale: 1
+      value: .449999988
+    minPixelWidth: 0
+    minPixelHeight: 200
+  autoSize:
+    autoSizeWidth: 0
+    autoSizeHeight: 0
+    maxWidth:
+      scale: 1
+      value: 1
+    maxHeight:
+      scale: 1
+      value: 1
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 0}
+    rightOf: {fileID: 0}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 1
+  localizedText: {fileID: 0}
+  text: ''''
+  guiStyleName: Border
+  textStyle: 0
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  image: {fileID: 0}
+  imageAnimation:
+    animate: 0
+    frameWidth: 64
+    framesPerSecond: 1
+--- !u!114 &11400120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -797819540, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 11400072}
+  typewriterEffect: {fileID: 11400024}
+--- !u!114 &11400122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -125749421, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: 5
+  depthSortChildren: 1
+  scaledRect:
+    origin: 0
+    alignment: 0
+    x:
+      scale: 0
+      value: 0
+    y:
+      scale: 0
+      value: 450
+    width:
+      scale: 0
+      value: 1
+    height:
+      scale: 0
+      value: 1
+    minPixelWidth: 0
+    minPixelHeight: 0
+  autoSize:
+    autoSizeWidth: 0
+    autoSizeHeight: 0
+    maxWidth:
+      scale: 1
+      value: 1
+    maxHeight:
+      scale: 1
+      value: 1
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 0}
+    rightOf: {fileID: 0}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 0
+  localizedText: {fileID: 0}
+  text: ' '
+  guiStyleName: Continue
+  clickable: 1
+  disabled:
+    pixelRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    texture: {fileID: 0}
+    useTexCoords: 0
+    texCoords:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    scaleMode: 2
+    alphaBlend: 1
+    aspect: 0
+  normal:
+    pixelRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    texture: {fileID: 0}
+    useTexCoords: 0
+    texCoords:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    scaleMode: 2
+    alphaBlend: 1
+    aspect: 0
+  hover:
+    pixelRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    texture: {fileID: 0}
+    useTexCoords: 0
+    texCoords:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    scaleMode: 2
+    alphaBlend: 1
+    aspect: 0
+  pressed:
+    pixelRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    texture: {fileID: 0}
+    useTexCoords: 0
+    texCoords:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    scaleMode: 2
+    alphaBlend: 1
+    aspect: 0
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
+  trigger:
+    key: 323
+    buttonName: 
+  message: OnFastForward
+  parameter: 
+  target: {fileID: 400030}
 --- !u!114 &11400124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4332,6 +4048,185 @@ MonoBehaviour:
     animate: 0
     frameWidth: 64
     framesPerSecond: 1
+--- !u!114 &11400132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: 5
+  depthSortChildren: 1
+  scaledRect:
+    origin: 0
+    alignment: 0
+    x:
+      scale: 0
+      value: 30
+    y:
+      scale: 0
+      value: 285
+    width:
+      scale: 1
+      value: .300000012
+    height:
+      scale: 0
+      value: 200
+    minPixelWidth: 0
+    minPixelHeight: 0
+  autoSize:
+    autoSizeWidth: 0
+    autoSizeHeight: 0
+    maxWidth:
+      scale: 1
+      value: 1
+    maxHeight:
+      scale: 1
+      value: 1
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 0}
+    rightOf: {fileID: 0}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 1
+  localizedText: {fileID: 0}
+  text: 
+  guiStyleName: Portrait
+  textStyle: 0
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  image: {fileID: 2800000, guid: c11cca84b56bc4c468f4e5d0c648c4ce, type: 3}
+  imageAnimation:
+    animate: 0
+    frameWidth: 64
+    framesPerSecond: 1
+--- !u!114 &11400134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: 10
+  depthSortChildren: 0
+  scaledRect:
+    origin: 0
+    alignment: 0
+    x:
+      scale: 0
+      value: 750
+    y:
+      scale: 0
+      value: 250
+    width:
+      scale: 1
+      value: .300000012
+    height:
+      scale: 0
+      value: 180
+    minPixelWidth: 0
+    minPixelHeight: 0
+  autoSize:
+    autoSizeWidth: 0
+    autoSizeHeight: 0
+    maxWidth:
+      scale: 1
+      value: 1
+    maxHeight:
+      scale: 1
+      value: 1
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 0}
+    rightOf: {fileID: 0}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 1
+  localizedText: {fileID: 0}
+  text: 
+  guiStyleName: 
+  textStyle: 0
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  image: {fileID: 2800000, guid: 4f929751e63ad4c93984a61b236941ea, type: 3}
+  imageAnimation:
+    animate: 0
+    frameWidth: 64
+    framesPerSecond: 1
+--- !u!114 &11400136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100080}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  fadeInDuration: .200000003
+  duration: 1
+  fadeOutDuration: 0
+--- !u!114 &11400138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100080}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  charactersPerSecond: 50
+  audioClip: {fileID: 0}
 --- !u!114 &11400140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4481,6 +4376,84 @@ MonoBehaviour:
   message: OnFastForward
   parameter: 
   target: {fileID: 400080}
+--- !u!114 &11400142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: 0
+  depthSortChildren: 0
+  scaledRect:
+    origin: 4
+    alignment: 4
+    x:
+      scale: 0
+      value: 0
+    y:
+      scale: 0
+      value: 0
+    width:
+      scale: 0
+      value: 1
+    height:
+      scale: 1
+      value: 1
+    minPixelWidth: 0
+    minPixelHeight: 0
+  autoSize:
+    autoSizeWidth: 1
+    autoSizeHeight: 1
+    maxWidth:
+      scale: 1
+      value: 1
+    maxHeight:
+      scale: 1
+      value: 1
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 0}
+    rightOf: {fileID: 0}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 1
+  localizedText: {fileID: 0}
+  text: "It\u2019s just that he had been so nice all night - taking me out and buying
+    me a beautiful gift. I felt bad for not wanting to have sex and I didn\u2019t
+    want him to think I don\u2019t love him. In a weird way, I felt like I owed him
+    something even though I DIDN\u2019T want to have sex."
+  guiStyleName: Subtitle
+  textStyle: 0
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  image: {fileID: 0}
+  imageAnimation:
+    animate: 0
+    frameWidth: 0
+    framesPerSecond: 1
 --- !u!114 &11400144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4495,14 +4468,14 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 1
   scaledRect:
-    origin: 8
-    alignment: 8
+    origin: 7
+    alignment: 7
     x:
       scale: 1
-      value: 0
+      value: -.180000007
     y:
       scale: 1
-      value: 0
+      value: .200000003
     width:
       scale: 1
       value: 1
@@ -4546,6 +4519,96 @@ MonoBehaviour:
     mouseWheelSensitivity: 5
   visible: 1
   clipChildren: 1
+--- !u!114 &11400146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100078}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  fadeInDuration: .200000003
+  duration: 1
+  fadeOutDuration: 0
+--- !u!114 &11400148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1287875049, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depth: 0
+  depthSortChildren: 0
+  scaledRect:
+    origin: 6
+    alignment: 0
+    x:
+      scale: 1
+      value: .075000003
+    y:
+      scale: 1
+      value: -.460000008
+    width:
+      scale: 1
+      value: .200000003
+    height:
+      scale: 1
+      value: 0
+    minPixelWidth: 0
+    minPixelHeight: 0
+  autoSize:
+    autoSizeWidth: 0
+    autoSizeHeight: 0
+    maxWidth:
+      scale: 1
+      value: 1
+    maxHeight:
+      scale: 1
+      value: 1
+    padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  fit:
+    above: {fileID: 0}
+    below: {fileID: 0}
+    leftOf: {fileID: 0}
+    rightOf: {fileID: 0}
+    expandToFit: 1
+  navigation:
+    enabled: 0
+    focusFirstControlOnEnable: 1
+    jumpToMousePosition: 1
+    order: []
+    clickButton: Fire1
+    click: 32
+    previous: 273
+    next: 274
+    axis: Vertical
+    invertAxis: 1
+    axisRepeatDelay: 1
+    mouseWheelSensitivity: 5
+  visible: 1
+  clipChildren: 1
+  localizedText: {fileID: 0}
+  text: name place
+  guiStyleName: Name
+  textStyle: 0
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  image: {fileID: 0}
+  imageAnimation:
+    animate: 0
+    frameWidth: 64
+    framesPerSecond: 1
 --- !u!114 &11400150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4558,7 +4621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 11400072}
-  typewriterEffect: {fileID: 0}
+  typewriterEffect: {fileID: 11400138}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

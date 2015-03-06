@@ -82,7 +82,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100010
 GameObject:
   m_ObjectHideFlags: 1
@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100012
 GameObject:
   m_ObjectHideFlags: 1
@@ -243,8 +243,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400028}
   - 114: {fileID: 11400042}
-  - 114: {fileID: 11400044}
-  - 114: {fileID: 11400046}
   m_Layer: 0
   m_Name: NPC Subtitle Line
   m_TagString: Untagged
@@ -353,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100042
 GameObject:
   m_ObjectHideFlags: 1
@@ -421,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100050
 GameObject:
   m_ObjectHideFlags: 1
@@ -496,8 +494,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400058}
   - 114: {fileID: 11400094}
-  - 114: {fileID: 11400092}
-  - 114: {fileID: 11400096}
   m_Layer: 0
   m_Name: NPC Subtitle Line
   m_TagString: Untagged
@@ -623,7 +619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100078
 GameObject:
   m_ObjectHideFlags: 1
@@ -649,7 +645,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400080}
   - 114: {fileID: 11400122}
-  - 114: {fileID: 11400124}
   m_Layer: 0
   m_Name: Alert
   m_TagString: Untagged
@@ -2777,20 +2772,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 8
-    alignment: 8
+    origin: 4
+    alignment: 4
     x:
-      scale: 1
-      value: -.680000007
+      scale: 0
+      value: -125
     y:
-      scale: 1
-      value: -.0130000003
+      scale: 0
+      value: 75
     width:
-      scale: 1
-      value: .310000002
+      scale: 0
+      value: 0
     height:
-      scale: 1
-      value: .5
+      scale: 0
+      value: 0
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -2798,10 +2793,10 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 275
+      value: 1
     maxHeight:
       scale: 1
-      value: 244
+      value: 1
     padding:
       m_Left: 0
       m_Right: 0
@@ -2841,35 +2836,6 @@ MonoBehaviour:
     animate: 0
     frameWidth: 0
     framesPerSecond: 1
---- !u!114 &11400044
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  charactersPerSecond: 50
-  audioClip: {fileID: 0}
---- !u!114 &11400046
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  fadeInDuration: .200000003
-  duration: 1
-  fadeOutDuration: 0
 --- !u!114 &11400048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3333,23 +3299,23 @@ MonoBehaviour:
   m_Script: {fileID: -697685688, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depth: 10
+  depth: 0
   depthSortChildren: 1
   scaledRect:
     origin: 8
     alignment: 8
     x:
       scale: 1
-      value: .433299989
+      value: 0
     y:
       scale: 1
-      value: -.5
+      value: 0
     width:
       scale: 1
       value: 1
     height:
-      scale: 0
-      value: 525
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -3357,7 +3323,7 @@ MonoBehaviour:
     autoSizeHeight: 1
     maxWidth:
       scale: 1
-      value: 0
+      value: 1
     maxHeight:
       scale: 1
       value: 1
@@ -3484,7 +3450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 11400126}
-  typewriterEffect: {fileID: 11400092}
+  typewriterEffect: {fileID: 0}
 --- !u!114 &11400074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4042,20 +4008,6 @@ MonoBehaviour:
     animate: 0
     frameWidth: 64
     framesPerSecond: 1
---- !u!114 &11400092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100058}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  charactersPerSecond: 50
-  audioClip: {fileID: 0}
 --- !u!114 &11400094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4073,11 +4025,11 @@ MonoBehaviour:
     origin: 4
     alignment: 4
     x:
-      scale: 0
-      value: -125
+      scale: 1
+      value: .300000012
     y:
-      scale: 0
-      value: 75
+      scale: 1
+      value: .0900000036
     width:
       scale: 0
       value: 0
@@ -4134,21 +4086,6 @@ MonoBehaviour:
     animate: 0
     frameWidth: 0
     framesPerSecond: 1
---- !u!114 &11400096
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  fadeInDuration: 0
-  duration: 0
-  fadeOutDuration: .5
 --- !u!114 &11400098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4717,10 +4654,10 @@ MonoBehaviour:
     alignment: 4
     x:
       scale: 1
-      value: -.100000001
+      value: -.200000003
     y:
       scale: 1
-      value: .100000001
+      value: .300000012
     width:
       scale: 1
       value: 0
@@ -4774,21 +4711,6 @@ MonoBehaviour:
     animate: 0
     frameWidth: 64
     framesPerSecond: 1
---- !u!114 &11400124
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  fadeInDuration: .5
-  duration: 1
-  fadeOutDuration: .5
 --- !u!114 &11400126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5067,7 +4989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 11400126}
-  typewriterEffect: {fileID: 11400044}
+  typewriterEffect: {fileID: 0}
 --- !u!114 &11400146
 MonoBehaviour:
   m_ObjectHideFlags: 1

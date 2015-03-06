@@ -558,8 +558,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400074}
   - 114: {fileID: 11400142}
-  - 114: {fileID: 11400138}
-  - 114: {fileID: 11400136}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: NPC Subtitle Line
   m_TagString: Untagged
@@ -1068,6 +1067,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400082}
   m_RootOrder: 4
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -713665266, guid: 4cf406bdc32341147b2510d9b7043fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
+  direction: 3
+  duration: .300000012
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4198,35 +4211,6 @@ MonoBehaviour:
     animate: 0
     frameWidth: 64
     framesPerSecond: 1
---- !u!114 &11400136
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100080}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  fadeInDuration: .200000003
-  duration: 1
-  fadeOutDuration: 0
---- !u!114 &11400138
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100080}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  charactersPerSecond: 50
-  audioClip: {fileID: 0}
 --- !u!114 &11400140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4475,7 +4459,7 @@ MonoBehaviour:
       value: -.180000007
     y:
       scale: 1
-      value: .200000003
+      value: .140000001
     width:
       scale: 1
       value: 1
@@ -4621,7 +4605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 11400072}
-  typewriterEffect: {fileID: 11400138}
+  typewriterEffect: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

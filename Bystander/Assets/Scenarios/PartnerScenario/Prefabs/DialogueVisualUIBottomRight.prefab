@@ -548,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100080
 GameObject:
   m_ObjectHideFlags: 1
@@ -582,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100084
 GameObject:
   m_ObjectHideFlags: 1
@@ -1129,10 +1129,10 @@ MonoBehaviour:
     alignment: 7
     x:
       scale: 1
-      value: -.180000007
+      value: .209999993
     y:
       scale: 1
-      value: .200000003
+      value: .140000001
     width:
       scale: 1
       value: 1
@@ -2517,7 +2517,7 @@ MonoBehaviour:
       panel: {fileID: 11400018}
       line: {fileID: 11400030}
       portraitImage: {fileID: 0}
-      portraitName: {fileID: 11400128}
+      portraitName: {fileID: 0}
       continueButton: {fileID: 11400122}
     pcSubtitle:
       panel: {fileID: 0}
@@ -2535,7 +2535,7 @@ MonoBehaviour:
         panel: {fileID: 11400144}
         line: {fileID: 11400142}
         portraitImage: {fileID: 0}
-        portraitName: {fileID: 11400148}
+        portraitName: {fileID: 0}
         continueButton: {fileID: 0}
       timer: {fileID: 11400058}
       buttons:

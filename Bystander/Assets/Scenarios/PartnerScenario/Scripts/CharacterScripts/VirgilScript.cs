@@ -17,13 +17,14 @@ public class VirgilScript : MonoBehaviour
                 if (value)
                 {
                     grayscaleEffect.enabled = true;
-                    _multiDialogUi.ChangeDialog("DialogueVisualUIVirgil");
+                    //_multiDialogUi.ChangeDialog("DialogueVisualUIVirgil");
                 }
                 else
                 {
                     grayscaleEffect.enabled = false;
-                    _multiDialogUi.ChangeDialog("DialogueVisualUIDefault");
+                    //_multiDialogUi.ChangeDialog("DialogueVisualUIDefault");
                 }
+                _restart = value;
             }
         }
     }

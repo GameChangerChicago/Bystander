@@ -45,7 +45,6 @@ public class PartnerGameManager : MonoBehaviour
                 {
                     _affect = "";
                     DialogueLua.SetVariable("Affect", "");
-                    Debug.Log("This is happening");
                     GinaAnimator.SetBool("FacingGina", true);
                     _currentGinaState = GinaStates.THINKING;
                 }
@@ -175,7 +174,6 @@ public class PartnerGameManager : MonoBehaviour
 
     private void RecetAnimProperties()
     {
-        Debug.Log("Indeed");
         GinaAnimator.SetBool("Listening", false);
         GinaAnimator.SetBool("Helpful", false);
         GinaAnimator.SetBool("Unhelpful", false);

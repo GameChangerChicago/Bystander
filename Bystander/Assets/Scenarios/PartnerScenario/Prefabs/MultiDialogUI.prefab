@@ -1001,7 +1001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1011,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400132}
   - 114: {fileID: 11400224}
-  - 114: {fileID: 11400226}
   m_Layer: 0
   m_Name: Alert
   m_TagString: Untagged
@@ -1085,7 +1084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100142
 GameObject:
   m_ObjectHideFlags: 1
@@ -7966,20 +7965,20 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 4
-    alignment: 4
+    origin: 0
+    alignment: 0
     x:
-      scale: 0
-      value: 0
+      scale: 1
+      value: .5
     y:
-      scale: 0
-      value: 0
+      scale: 1
+      value: -.5
     width:
       scale: 1
-      value: .75
+      value: 1
     height:
-      scale: 0
-      value: 64
+      scale: 1
+      value: 1
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
@@ -8027,21 +8026,6 @@ MonoBehaviour:
     animate: 0
     frameWidth: 64
     framesPerSecond: 1
---- !u!114 &11400226
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1430733816, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
-  fadeInDuration: .5
-  duration: 1
-  fadeOutDuration: .5
 --- !u!114 &11400228
 MonoBehaviour:
   m_ObjectHideFlags: 1

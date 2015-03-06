@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100082
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100086
 GameObject:
   m_ObjectHideFlags: 1
@@ -4716,22 +4716,22 @@ MonoBehaviour:
     origin: 4
     alignment: 4
     x:
-      scale: 0
-      value: 0
+      scale: 1
+      value: -.100000001
     y:
-      scale: 0
-      value: 0
+      scale: 1
+      value: .100000001
     width:
       scale: 1
-      value: .75
+      value: 0
     height:
       scale: 0
-      value: 64
-    minPixelWidth: 0
-    minPixelHeight: 0
+      value: 0
+    minPixelWidth: 300
+    minPixelHeight: 100
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -5230,7 +5230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialDatabase: {fileID: 11400000, guid: 7b34ad1ac9015bc4ca12637ee621980d, type: 2}
   displaySettings:
-    dialogueUI: {fileID: 100072, guid: 657356a109ce7dc499e80398357de77c, type: 2}
+    dialogueUI: {fileID: 100040, guid: 1d57c7e2693d6a8489a97eab2ce6fde0, type: 2}
     localizationSettings:
       language: 
       useSystemLanguage: 0
@@ -5260,8 +5260,8 @@ MonoBehaviour:
         key: 27
         buttonName: 
     alertSettings:
-      allowAlertsDuringConversations: 0
-      alertCheckFrequency: 0
+      allowAlertsDuringConversations: 1
+      alertCheckFrequency: .200000003
   includeSimStatus: 0
   debugLevel: 2
   dontDestroyOnLoad: 0

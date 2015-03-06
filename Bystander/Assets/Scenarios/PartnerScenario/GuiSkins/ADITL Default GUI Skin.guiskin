@@ -1195,14 +1195,14 @@ MonoBehaviour:
   m_CustomStyles:
   - m_Name: Alert
     m_Normal:
-      m_Background: {fileID: 2800000, guid: 7f10989be1ab66f43a57143a6faf0135, type: 3}
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      m_Background: {fileID: 2800000, guid: a092ab201983190478146355ce8119fd, type: 3}
+      m_TextColor: {r: .854901969, g: .854901969, b: .854901969, a: 1}
     m_Hover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Background: {fileID: 2800000, guid: a092ab201983190478146355ce8119fd, type: 3}
+      m_TextColor: {r: .860294104, g: .860294104, b: .860294104, a: 1}
     m_Active:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Background: {fileID: 2800000, guid: a092ab201983190478146355ce8119fd, type: 3}
+      m_TextColor: {r: .854901969, g: .854901969, b: .854901969, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1219,38 +1219,38 @@ MonoBehaviour:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Border:
-      m_Left: 8
-      m_Right: 16
-      m_Top: 5
-      m_Bottom: 5
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
     m_Margin:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
     m_Padding:
-      m_Left: 16
-      m_Right: 16
-      m_Top: 7
-      m_Bottom: 7
-    m_Overflow:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 1
+    m_Overflow:
+      m_Left: 15
+      m_Right: 15
+      m_Top: 15
+      m_Bottom: 15
+    m_Font: {fileID: 12800000, guid: 37396b94382f6544882c4c0da3e3b1f4, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
     m_Alignment: 4
     m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
     m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 1
-    m_StretchHeight: 0
+    m_FixedWidth: 500
+    m_FixedHeight: 250
+    m_StretchWidth: 0
+    m_StretchHeight: 1
   - m_Name: Subtitle
     m_Normal:
       m_Background: {fileID: 2800000, guid: 6180c9eb9753df442a08e79fb87b5d47, type: 3}

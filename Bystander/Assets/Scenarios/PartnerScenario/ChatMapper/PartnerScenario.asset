@@ -463,7 +463,9 @@ MonoBehaviour:
 
         Variable["Wrong"]=0;
 
-        Variable["Affect"]=0;'
+        Variable["Affect"]=0;
+
+        Variable["Alert"]="For instance, listening to a friend when she needs you."'''
       canvasRect:
         serializedVersion: 2
         x: 480
@@ -934,8 +936,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 467
-        y: 2114
+        x: 459
+        y: 2095
         width: 160
         height: 30
     - id: 10
@@ -1480,8 +1482,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 808
-        y: 762
+        x: 786
+        y: 768
         width: 160
         height: 30
     - id: 17
@@ -1687,7 +1689,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Let's take it from the beginning.
+        value: '---'
         type: 0
       - title: Parenthetical
         value: 
@@ -1718,7 +1720,7 @@ MonoBehaviour:
       conditionsString: Variable["Wrong"]==-2
       userScript: 'Variable["Repeat"]=true;
 
-'
+        Variable["Alert"]="Let''s take it from the beginning.";'
       canvasRect:
         serializedVersion: 2
         x: 37
@@ -2003,8 +2005,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 664
-        y: 908
+        x: 654
+        y: 903
         width: 160
         height: 30
     - id: 28
@@ -2117,8 +2119,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 746
-        y: 975
+        x: 719
+        y: 987
         width: 160
         height: 30
     - id: 30
@@ -3586,8 +3588,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 877
-        y: 1407
+        x: 902
+        y: 1383
         width: 160
         height: 30
     - id: 55
@@ -3666,8 +3668,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 250
-        y: 1366
+        x: 241
+        y: 1370
         width: 160
         height: 30
     - id: 56
@@ -3770,8 +3772,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 59
-        y: 1414
+        x: 56
+        y: 1417
         width: 160
         height: 30
     - id: 58
@@ -4990,8 +4992,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 918
-        y: 1899
+        x: 921
+        y: 1908
         width: 160
         height: 30
     - id: 79
@@ -5345,8 +5347,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 835
-        y: 1942
+        x: 790
+        y: 1978
         width: 160
         height: 30
     - id: 85
@@ -5459,8 +5461,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 366
-        y: 1959
+        x: 374
+        y: 1964
         width: 160
         height: 30
     - id: 87
@@ -5513,8 +5515,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 802
-        y: 2116
+        x: 806
+        y: 2177
         width: 160
         height: 30
     - id: 88
@@ -5572,8 +5574,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 345
-        y: 2023
+        x: 404
+        y: 2014
         width: 160
         height: 30
     - id: 89
@@ -6616,7 +6618,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["FacingGina"] = false
+      userScript: 
       canvasRect:
         serializedVersion: 2
         x: 750
@@ -6706,11 +6708,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["FacingGina"] = false
+      userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 691
-        y: 933
+        x: 717
+        y: 941
         width: 160
         height: 30
     - id: 109
@@ -7255,8 +7257,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 723
-        y: 1133
+        x: 751
+        y: 1122
         width: 160
         height: 30
     - id: 121
@@ -8182,8 +8184,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 661
-        y: 1966
+        x: 634
+        y: 1970
         width: 160
         height: 30
     - id: 141
@@ -8227,8 +8229,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 272
-        y: 2073
+        x: 264
+        y: 2059
         width: 160
         height: 30
     - id: 142
@@ -8246,11 +8248,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "In this story, Gina is a great example of an active bystander. Even
-          though she had no ability to prevent the assault, she was able to support
-          her friend by listening, believing her story, emphasizing that rape is NEVER
-          the victim\u2019s fault, and supporting her friend\u2019s decisions for
-          next steps."
+        value: '---'
         type: 0
       - title: Video File
         value: 
@@ -8267,7 +8265,11 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: "Variable[\"Alert\"]=\"In this story, Gina is a great example of
+        an active bystander. Even though she had no ability to prevent the assault,
+        she was able to support her friend by listening, believing her story, emphasizing
+        that rape is NEVER the victim\u2019s fault, and supporting her friend\u2019s
+        decisions for next steps.\";"
       canvasRect:
         serializedVersion: 2
         x: 272
@@ -8315,7 +8317,7 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 925
+        x: 947
         y: 2003
         width: 160
         height: 30
@@ -8360,8 +8362,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 802
-        y: 1164
+        x: 826
+        y: 1172
         width: 160
         height: 30
   syncInfo:

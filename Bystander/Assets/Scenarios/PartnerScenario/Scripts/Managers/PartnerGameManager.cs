@@ -29,6 +29,7 @@ public class PartnerGameManager : MonoBehaviour
     private GinaStates _currentGinaState = GinaStates.BACK;
     private HollyStates _currentHollyState = HollyStates.EXPLAINING;
     private string _affect = "";
+    private bool _helpfulPrimer = false;
 
     void Update()
     {
@@ -149,12 +150,15 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 break;
             case HollyStates.HELPFUL:
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (Input.GetKeyDown(KeyCode.Mouse0) && !_helpfulPrimer)
+                    _helpfulPrimer = true;
+                else if (Input.GetKeyDown(KeyCode.Mouse0) && _helpfulPrimer)
                 {
                     _currentHollyState = HollyStates.EXPLAINING;
                     HollyAnimator.SetBool("Explaining", true);
                     int rand = Random.Range(0, 2);
                     HollyAnimator.SetInteger("ExplainRandomizer", rand);
+                    _helpfulPrimer = false;
                 }
                 break;
             case HollyStates.UNHELPFUL:

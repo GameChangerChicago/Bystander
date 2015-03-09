@@ -41,10 +41,10 @@ public class MaleGameManager : MonoBehaviour
 		void Start ()
 		{
 				gameState = GameState.Intro;
-				Invoke ("StartGame", 5f);
+				//Invoke ("StartGame", 5f);
 		}
 
-		void StartGame ()
+		public void StartGame ()
 		{
 				questionAnswered = false;
 				gameState = GameState.Q1;

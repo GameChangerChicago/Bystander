@@ -186,7 +186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100024
 GameObject:
   m_ObjectHideFlags: 1
@@ -853,7 +853,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.4972305, y: 11.0046616, z: -10}
+  m_LocalPosition: {x: 23.4972305, y: 11.0046616, z: 0}
   m_LocalScale: {x: 1.30289829, y: 1.30310214, z: .868734717}
   m_Children:
   - {fileID: 400048}
@@ -1277,8 +1277,8 @@ BoxCollider2D:
   m_GameObject: {fileID: 100036}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 18.7600002, y: 19.9400005}
+  m_IsTrigger: 1
+  m_Size: {x: 18.9400005, y: 19.9400005}
   m_Center: {x: 1.20000005, y: -2.79999995}
 --- !u!61 &6100018
 BoxCollider2D:
@@ -1579,8 +1579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8217a7986c39340f08de4969be479282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuToTransitionTo: {fileID: 100040}
-  isMenu: 0
+  menuToTransitionTo: {fileID: 100040}
+  isMenu: 1
   isOpen: 0
 --- !u!114 &11400020
 MonoBehaviour:
@@ -1664,9 +1664,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8217a7986c39340f08de4969be479282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuToTransitionTo: {fileID: 100028}
+  menuToTransitionTo: {fileID: 100028}
   isMenu: 0
-  isOpen: 0
+  isOpen: 1
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2258,8 +2258,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 3993981873
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 0d25703a396204ad8ab59472376d4f07, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!212 &21200050

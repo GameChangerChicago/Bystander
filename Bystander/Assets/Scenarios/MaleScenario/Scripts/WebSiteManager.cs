@@ -34,17 +34,24 @@ public class WebSiteManager : MonoBehaviour
 				for (int i = 0; i <webPageList.Count; i++) {
 		
 						SpriteRenderer[] rs = webPageList [i].GetComponentsInChildren<SpriteRenderer> ();
-		
-						if (webPageList [i].Equals (currentWebPage)) {
+						BoxCollider2D[] bc = webPageList[i].GetComponentsInChildren<BoxCollider2D>(); 
+						
+				if (webPageList [i].Equals (currentWebPage)) {
 			
 								foreach (SpriteRenderer r in rs)
 										r.enabled = true;
+
+								foreach(BoxCollider2D b in bc)
+										b.enabled = true;
 			
 								continue;
 						}
 
 						foreach (SpriteRenderer r in rs) {
 								r.enabled = false;
+
+						foreach(BoxCollider2D b in bc)
+					b.enabled = false;
 						}
 		
 				}

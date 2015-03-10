@@ -19,11 +19,11 @@ public class AnimationManager : MonoBehaviour
 		void Update ()
 		{
 	
-				if ((isLeo || isJace) && (gameManager.isGameState (GameState.Intro) || gameManager.isGameState (GameState.Outro)))
-						animator.Play ("Idle");
-				else
-						animator.Play ("Walk");
-					
+//				if ((isLeo || isJace) && (gameManager.isGameState (GameState.Intro) || gameManager.isGameState (GameState.Outro)))
+//						animator.Play ("Idle");
+//				else
+//						animator.Play ("Walk");
+//					
 
 				//Plays the animations for objects that aren't Leo and Jace based on the current Game State
 				if (!isLeo || !isJace) {

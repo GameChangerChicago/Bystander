@@ -12,7 +12,8 @@ public enum GameState
 		Q4, 
 		Q5, 
 		Q6, 
-		Q7, 
+		Q7,
+		Q8,
 		Outro
 }
 ;
@@ -24,6 +25,7 @@ public class MaleGameManager : MonoBehaviour
 		private string correctAnswer;
 		private bool questionAnswered;
 		public static GameState gameState;
+		private CameraManager cameraManager;
 
 		//MASON NOTE: This array is redundant. In the switch you can just have correctAnswer = a. I left a commented out example below in the "BELIEVE" case.
 		//Holds correct answers for next question asked
@@ -41,6 +43,7 @@ public class MaleGameManager : MonoBehaviour
 		void Start ()
 		{
 				gameState = GameState.Intro;
+				cameraManager = FindObjectOfType<CameraManager> ();
 				//Invoke ("StartGame", 5f);
 		}
 
@@ -103,31 +106,31 @@ public class MaleGameManager : MonoBehaviour
 								Debug.Log ("Correct!  You are so smart");
 								correctAnswer = answerArray [3];
 								questionAnswered = false;
-					//Since this is a two part question, we will not change the game state
+								gameState = GameState.Q4;
 								Debug.Log (correctAnswer);
 								break;
 						case "STATE":
 								Debug.Log ("Correct! You are really smart");
 								correctAnswer = answerArray [4];
-								gameState = GameState.Q4;
+								gameState = GameState.Q5;
 								Debug.Log (correctAnswer);
 								break;
 						case "CONSENT":
 								Debug.Log ("Yep yep!");
 								correctAnswer = answerArray [5];
-								gameState = GameState.Q5;
+								gameState = GameState.Q6;
 								Debug.Log (correctAnswer);
 								break;
 						case "THREATENED":
 								Debug.Log ("Uh-huh!");
 								correctAnswer = answerArray [6];
-								gameState = GameState.Q6;
+								gameState = GameState.Q7;
 								Debug.Log (correctAnswer);
 								break;
 						case "ALCOHOL":
 								Debug.Log ("Yes~");
 								correctAnswer = answerArray [7];
-								gameState = GameState.Q7;
+								gameState = GameState.Q8;
 								Debug.Log (correctAnswer);
 								break;
 						case "1-800-656-HOPE":

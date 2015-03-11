@@ -315,6 +315,17 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
+  - id: 19
+    fields:
+    - title: Name
+      value: Win
+      type: 0
+    - title: Initial Value
+      value: False
+      type: 2
+    - title: Description
+      value: 
+      type: 0
   conversations:
   - id: 1
     fields:
@@ -5531,7 +5542,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Actor
-        value: 1
+        value: 2
         type: 5
       - title: Conversant
         value: 2
@@ -5571,11 +5582,13 @@ MonoBehaviour:
       conditionsString: ((Variable["M1"]==1) and (Variable["M2"]==1) and (Variable["M3"]==1)
         and  (Variable["M4"]==1) and (Variable["M5"]==1) and (Variable["M6"]==1) and
         (Variable["M7"]==1))
-      userScript: 
+      userScript: 'Variable["FacingGina"] = false;
+
+        Variable["Affect"] = "Helpful";'
       canvasRect:
         serializedVersion: 2
-        x: 404
-        y: 2014
+        x: 395
+        y: 2021
         width: 160
         height: 30
     - id: 89
@@ -8139,8 +8152,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 1920
+        x: 479
+        y: 1917
         width: 160
         height: 30
     - id: 140

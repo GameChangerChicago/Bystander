@@ -44,6 +44,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: Win
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -168,6 +174,10 @@ Transition:
     m_ConditionEvent: Helpful
     m_EventTreshold: 0
     m_ExitTime: 1
+  - m_ConditionMode: 2
+    m_ConditionEvent: FacingGina
+    m_EventTreshold: 0
+    m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -276,6 +286,30 @@ Transition:
     m_ConditionEvent: FacingGina
     m_EventTreshold: 0
     m_ExitTime: .772727251
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110189411
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110239601}
+  m_DstState: {fileID: 110200000}
+  m_TransitionDuration: .153061226
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: FacingGina
+    m_EventTreshold: 0
+    m_ExitTime: .846938789
+  - m_ConditionMode: 1
+    m_ConditionEvent: Win
+    m_EventTreshold: 0
+    m_ExitTime: .846938789
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -392,6 +426,7 @@ StateMachine:
       second:
       - {fileID: 110103406}
       - {fileID: 110100000}
+      - {fileID: 110189411}
     data:
       first: {fileID: 110231776}
       second:

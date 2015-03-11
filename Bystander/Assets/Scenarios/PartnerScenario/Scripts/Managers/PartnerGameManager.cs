@@ -29,7 +29,36 @@ public class PartnerGameManager : MonoBehaviour
     private GinaStates _currentGinaState = GinaStates.BACK;
     private HollyStates _currentHollyState = HollyStates.EXPLAINING;
     private string _affect = "";
-    private bool _helpfulPrimer = false;
+    private bool _helpfulPrimer = false,
+                 _finalBool = false;//This is definitely hacky but I don't know if I'll fix it...
+
+    protected bool win
+    {
+        get
+        {
+            if (DialogueLua.GetVariable("M1").AsInt > 0 &&
+                DialogueLua.GetVariable("M2").AsInt > 0 &&
+                DialogueLua.GetVariable("M3").AsInt > 0 &&
+                DialogueLua.GetVariable("M4").AsInt > 0 &&
+                DialogueLua.GetVariable("M5").AsInt > 0 &&
+                DialogueLua.GetVariable("M6").AsInt > 0 &&
+                DialogueLua.GetVariable("M7").AsInt > 0)
+            {
+                _win = true;
+                HollyAnimator.SetBool("Win", true);
+            }
+            else
+                _win = false;
+
+            return _win;
+        }
+
+        set
+        {
+            _win = value;
+        }
+    }
+    private bool _win;
 
     void Update()
     {
@@ -42,13 +71,20 @@ public class PartnerGameManager : MonoBehaviour
         switch (_currentGinaState)
         {
             case GinaStates.BACK:
-                if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0))
+                if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && !win)
                 {
                     _affect = "";
                     DialogueLua.SetVariable("Affect", "");
                     GinaAnimator.SetBool("FacingGina", true);
                     _currentGinaState = GinaStates.THINKING;
+                }//The bullshit starts here...
+                else if (Input.GetKeyDown(KeyCode.Mouse0) && win && _helpfulPrimer)
+                {
+                    GinaAnimator.SetBool("FacingGina", true);
+                    GinaAnimator.SetBool("Helpful", true);
+                    _currentGinaState = GinaStates.HELPFUL;
                 }
+
                 break;
             case GinaStates.THINKING:
                 _affect = DialogueLua.GetVariable("Affect").AsString;
@@ -88,12 +124,32 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 break;
             case GinaStates.HELPFUL:
-                if (!DialogueLua.GetVariable("FacingGina").AsBool)
+                if (!win)
                 {
-                    _currentGinaState = GinaStates.BACK;
-                    GinaAnimator.SetBool("FacingGina", false);
-                    GinaAnimator.SetBool("DecisionMade", false);
+                    if (!DialogueLua.GetVariable("FacingGina").AsBool)
+                    {
+                        _currentGinaState = GinaStates.BACK;
+                        GinaAnimator.SetBool("FacingGina", false);
+                        GinaAnimator.SetBool("DecisionMade", false);
+                    }
                 }
+                else
+                {
+                    if (!DialogueLua.GetVariable("FacingGina").AsBool && !_finalBool)
+                    {
+                        _currentGinaState = GinaStates.BACK;
+                        GinaAnimator.SetBool("FacingGina", false);
+                        GinaAnimator.SetBool("DecisionMade", false);
+                        _finalBool = true;
+                    }
+
+                    if (!DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && _finalBool)
+                    {
+                        _currentGinaState = GinaStates.BACK;
+                        GinaAnimator.SetBool("FacingGina", false);
+                    }
+                }
+                
                 break;
             case GinaStates.UNHELPFUL:
                 if (!DialogueLua.GetVariable("FacingGina").AsBool)
@@ -130,6 +186,15 @@ public class PartnerGameManager : MonoBehaviour
             case HollyStates.BACK:
                 if (!DialogueLua.GetVariable("FacingGina").AsBool)
                 {
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        if (win)
+                        {
+                            _affect = "Helpful";
+                            HollyAnimator.SetBool("Win", false);
+                        }
+                    }
+
                     if (_affect == "Listening" && Input.GetKeyDown(KeyCode.Mouse0))
                     {
                         _currentHollyState = HollyStates.EXPLAINING;
@@ -141,18 +206,28 @@ public class PartnerGameManager : MonoBehaviour
                     {
                         _currentHollyState = HollyStates.HELPFUL;
                         HollyAnimator.SetBool("Helpful", true);
+                        HollyAnimator.SetBool("FacingGina", false);
                     }
                     else if (_affect == "Unhelpful")
                     {
                         _currentHollyState = HollyStates.UNHELPFUL;
                         HollyAnimator.SetBool("Unhelpful", true);
+                        HollyAnimator.SetBool("FacingGina", false);
                     }
                 }
                 break;
             case HollyStates.HELPFUL:
                 if (Input.GetKeyDown(KeyCode.Mouse0) && !_helpfulPrimer)
                     _helpfulPrimer = true;
-                else if (Input.GetKeyDown(KeyCode.Mouse0) && _helpfulPrimer)
+                else if (Input.GetKeyDown(KeyCode.Mouse0) && _helpfulPrimer && win)
+                {
+                    _currentHollyState = HollyStates.BACK;
+                    _affect = "";
+                    HollyAnimator.SetBool("Helpful", false);
+                    HollyAnimator.SetBool("FacingGina", true);
+                    _helpfulPrimer = false;
+                }
+                else if (Input.GetKeyDown(KeyCode.Mouse0) && _helpfulPrimer && !win)
                 {
                     _currentHollyState = HollyStates.EXPLAINING;
                     HollyAnimator.SetBool("Explaining", true);

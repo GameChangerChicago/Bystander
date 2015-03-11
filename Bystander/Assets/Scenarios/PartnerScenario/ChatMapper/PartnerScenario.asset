@@ -847,9 +847,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "Well he kept trying to take my pants off even though I kept telling
-          him I wasn't ready. You want to know what he said to me? \u201CDon\u2019t
-          worry, baby. You\u2019re gonna like this.\u201D"
+        value: Well he kept trying to take my pants off even though I kept telling
+          him I wasn't ready.
         type: 0
       - title: Parenthetical
         value: 
@@ -874,21 +873,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 8
         destinationConversationID: 1
-        destinationDialogueID: 98
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 8
-        destinationConversationID: 1
-        destinationDialogueID: 104
+        destinationDialogueID: 145
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 470
+        x: 484
+        y: 466
         width: 160
         height: 30
     - id: 9
@@ -3218,7 +3211,7 @@ MonoBehaviour:
         value: Most men have never sexually assaulted someone.
         type: 0
       - title: Dialogue Text
-        value: Most men have never sexually assaulted anyone, regardless of how interested
+        value: Most guy have never sexually assaulted anyone, regardless of how interested
           they are in another person.
         type: 0
       - title: Parenthetical
@@ -3253,8 +3246,8 @@ MonoBehaviour:
         Variable["Affect"]="Helpful";'
       canvasRect:
         serializedVersion: 2
-        x: 358
-        y: 1253
+        x: 369
+        y: 1245
         width: 160
         height: 30
     - id: 49
@@ -4310,8 +4303,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 214
-        y: 1590
+        x: 302
+        y: 1578
         width: 160
         height: 30
     - id: 67
@@ -6049,8 +6042,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "I didn\u2019t fight back. I couldn\u2019t. I don\u2019t\r have any
-          bruises or anything."
+        value: "I didn\u2019t fight back. I couldn\u2019t."
         type: 0
       - title: Parenthetical
         value: 
@@ -6103,8 +6095,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 489
-        y: 1610
+        x: 494
+        y: 1614
         width: 160
         height: 30
     - id: 96
@@ -6129,7 +6121,7 @@ MonoBehaviour:
         type: 0
       - title: Dialogue Text
         value: "I\u2019m afraid people won\u2019t believe me. That\r they\u2019ll
-          think I had second thoughts about \rhaving sex and then made up this story."
+          think I had second thoughts about \rhaving sex and then made up a story."
         type: 0
       - title: Parenthetical
         value: 
@@ -6544,8 +6536,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 669
-        y: 498
+        x: 797
+        y: 529
         width: 160
         height: 30
     - id: 105
@@ -7742,7 +7734,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "I don\u2019t have any marks on my body and he didn\u2019t have a weapon."
+        value: "Also, he didn\u2019t have a weapon."
         type: 0
       - title: Video File
         value: 
@@ -7786,8 +7778,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 92
-        y: 1595
+        x: 96
+        y: 1608
         width: 160
         height: 30
     - id: 132
@@ -7832,7 +7824,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 98
+        x: 64
         y: 1706
         width: 160
         height: 30
@@ -8377,6 +8369,52 @@ MonoBehaviour:
         serializedVersion: 2
         x: 826
         y: 1172
+        width: 160
+        height: 30
+    - id: 145
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+      - title: Actor
+        value: 2
+        type: 5
+      - title: Conversant
+        value: 1
+        type: 5
+      - title: Menu Text
+        value: 
+        type: 0
+      - title: Dialogue Text
+        value: "You want to know what he said to me? \u201CDon\u2019t worry, baby.
+          You\u2019re gonna like this.\u201D"
+        type: 0
+      - title: Video File
+        value: 
+        type: 0
+      - title: Sequence
+        value: 
+        type: 0
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 145
+        destinationConversationID: 1
+        destinationDialogueID: 104
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 783
+        y: 468
         width: 160
         height: 30
   syncInfo:

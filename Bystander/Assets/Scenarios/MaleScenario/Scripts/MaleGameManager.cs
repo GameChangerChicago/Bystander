@@ -14,6 +14,7 @@ public enum GameState
 		Q6, 
 		Q7,
 		Q8,
+		Q9,
 		Outro
 }
 ;
@@ -26,29 +27,37 @@ public class MaleGameManager : MonoBehaviour
 		private bool questionAnswered;
 		public static GameState gameState;
 		private CameraManager cameraManager;
+	private SoundManager soundManager;
 
 		//MASON NOTE: This array is redundant. In the switch you can just have correctAnswer = a. I left a commented out example below in the "BELIEVE" case.
 		//Holds correct answers for next question asked
 		private string[] answerArray = new string[]{ 
 		"BELIEVE", 
-		"23%", 
+		"23", 
 		"2 MILLION",
 		"STATE",
 		"CONSENT",
 		"THREATENED",
 		"ALCOHOL",
-		"1-800-656-HOPE"
+		"TRUSTED",
+		"656HOPE"
 	};
 
 		void Start ()
 		{
 				gameState = GameState.Intro;
 				cameraManager = FindObjectOfType<CameraManager> ();
-				//Invoke ("StartGame", 5f);
+				soundManager = FindObjectOfType<SoundManager> ();
+				
 		}
 
-		public void StartGame ()
+		public IEnumerator StartGame ()
 		{
+				cameraManager.GetComponent<Animator>().Play("TrackOut");
+				
+		//waiting for the camera animation to stop	
+		yield return new WaitForSeconds (5);
+				
 				questionAnswered = false;
 				gameState = GameState.Q1;
 				correctAnswer = "BELIEVE";
@@ -81,7 +90,7 @@ public class MaleGameManager : MonoBehaviour
 		public void CheckAnswer (string a)
 		{
 
-				if (a.Equals (correctAnswer)) {
+				if (a.Equals(correctAnswer)) {
 
 						questionAnswered = true;
 
@@ -93,55 +102,67 @@ public class MaleGameManager : MonoBehaviour
 								correctAnswer = answerArray [1];
 								questionAnswered = false;
 								gameState = GameState.Q2;
-								Debug.Log (correctAnswer);
+								//Debug.Log (correctAnswer);
 								break;
-						case "23%":
+						case "23":
 								Debug.Log ("The Answer is 23%! Moving to next game State");
 								correctAnswer = answerArray [2];
 								questionAnswered = false;
 								gameState = GameState.Q3;
-								Debug.Log (correctAnswer);
+								//Debug.Log (correctAnswer);
 								break;
 						case "2 MILLION":
 								Debug.Log ("Correct!  You are so smart");
 								correctAnswer = answerArray [3];
 								questionAnswered = false;
 								gameState = GameState.Q4;
-								Debug.Log (correctAnswer);
+								//Debug.Log (correctAnswer);
 								break;
 						case "STATE":
 								Debug.Log ("Correct! You are really smart");
 								correctAnswer = answerArray [4];
 								gameState = GameState.Q5;
-								Debug.Log (correctAnswer);
+								//Debug.Log (correctAnswer);
 								break;
 						case "CONSENT":
 								Debug.Log ("Yep yep!");
 								correctAnswer = answerArray [5];
 								gameState = GameState.Q6;
-								Debug.Log (correctAnswer);
+								//Debug.Log (correctAnswer);
 								break;
 						case "THREATENED":
 								Debug.Log ("Uh-huh!");
 								correctAnswer = answerArray [6];
 								gameState = GameState.Q7;
-								Debug.Log (correctAnswer);
+								//Debug.Log (correctAnswer);
 								break;
 						case "ALCOHOL":
 								Debug.Log ("Yes~");
 								correctAnswer = answerArray [7];
 								gameState = GameState.Q8;
-								Debug.Log (correctAnswer);
+								//Debug.Log (correctAnswer);
 								break;
-						case "1-800-656-HOPE":
+						case "TRUSTED":
+								Debug.Log ("Correcto mundo");
+								correctAnswer = answerArray [8];
+								gameState = GameState.Q9;
+								//Debug.Log (correctAnswer);
+								break;
+						case "656HOPE":
 								Debug.Log ("Say what!");
 								gameState = GameState.Outro;
-								Debug.Log (correctAnswer);
+								cameraManager.GetComponent<Animator> ().Play ("TrackInCharacter");
+								//Debug.Log (correctAnswer);
 								break;
-						}
-
-				} else
-						Debug.Log ("Wrong Answer. Try Again");
+					
+			}
+			
+		} else {
+			Debug.Log ("Wrong Answer. Try Again");
+						questionAnswered = false;
+						soundManager.PlayVirgilIncorrect();
+				}
+						
 
 		}
 

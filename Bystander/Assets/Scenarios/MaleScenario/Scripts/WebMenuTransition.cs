@@ -51,7 +51,7 @@ public class WebMenuTransition : MonoBehaviour
 
 		}
 
-		void TransitionToMenu ()
+		public void TransitionToMenu ()
 		{
 				
 		isOpen = !isOpen;
@@ -80,4 +80,16 @@ public class WebMenuTransition : MonoBehaviour
 		
 				Debug.Log (isOpen);
 		}
+
+	void OnMouseEnter(){
+		
+	}
+	
+	void OnMouseOver(){
+
+	}
+	
+	void OnMouseExit(){
+}
+
 }

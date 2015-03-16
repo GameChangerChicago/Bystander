@@ -45,7 +45,9 @@ public class DialogueHandler: MonoBehaviour
 		{
 		
 				if (gameManager.isGameState (GameState.Intro) && numDialogueLinesShown == numDialogueLines)
-						gameManager.StartGame ();
+						StartCoroutine(gameManager.StartGame());
+						//gameManager.StartGame ();
+						
 		
 				if (gameManager.State () != gameState) {
 						gameState = gameManager.State ();
@@ -106,7 +108,8 @@ public class DialogueHandler: MonoBehaviour
 										questionSprite.enabled = false;
 										virgilDialogueSprite.enabled = false;
 										dialogueBox.GetComponent<TextMesh> ().color = Color.black;
-										dialogueBox.GetComponent<TextMesh> ().fontSize = 30;
+										dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
+					TextBounds = 5;
 					
 										i++;
 								} else if (dialogue [i] == '\\') {
@@ -115,12 +118,17 @@ public class DialogueHandler: MonoBehaviour
 										questionSprite.enabled = false;
 										virgilDialogueSprite.enabled = false;
 										dialogueBox.GetComponent<TextMesh> ().color = Color.black;
-										dialogueBox.GetComponent<TextMesh> ().fontSize = 30;
+										dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
+					TextBounds = 5;
+
 										i++;
 								} else  if (dialogue [i] == '@') {
-										dialogueBox.transform.position = dialogueBoxPosition [1].position;
+										dialogueBox.transform.position = dialogueBoxPosition [3].position;
+										dialogueBox.GetComponent<TextMesh>().fontSize = 45;
+										TextBounds = 7;
 										dialogueSprite.enabled = false;
 										questionSprite.enabled = true;
+
 										i++;
 								} else if (dialogue [i] == '$') {
 										dialogueBox.transform.position = dialogueBoxPosition [2].position;
@@ -128,6 +136,7 @@ public class DialogueHandler: MonoBehaviour
 										virgilDialogueSprite.enabled = true;
 										dialogueBox.GetComponent<TextMesh> ().color = Color.white;
 										dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
+					TextBounds = 5;
 										i++;
 
 								}
@@ -210,6 +219,18 @@ public class DialogueHandler: MonoBehaviour
 		
 		
 		}
+
+	void DefaultText()
+	{
+		dialogueBox.GetComponent<TextMesh>().fontSize = 30;
+		dialogueSprite.enabled = true;
+		questionSprite.enabled = false;
+		dialogueBox.GetComponent<TextMesh> ().color = Color.black;
+
+
+
+		}
+
 }
 
 

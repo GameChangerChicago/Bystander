@@ -28,8 +28,11 @@ public class GUIManager : MonoBehaviour
 		{
 			if (Event.current.keyCode == KeyCode.Return && Event.current.type == EventType.KeyDown && !questionAnswered) {
 					gameManager.CheckAnswer (inputField.ToUpper ());
+					inputField = "";
 				    questionAnswered = true;
 					
+
+
 			}
 
         if (Event.current.type == EventType.KeyUp)
@@ -37,6 +40,7 @@ public class GUIManager : MonoBehaviour
             questionAnswered = false;
 
         }
+
 
 			inputField = GUI.TextField (new Rect (screenWidth - 120, screenHeight - 45 , 125, 30), inputField, 15);
 		}

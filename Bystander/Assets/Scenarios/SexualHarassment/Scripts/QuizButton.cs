@@ -92,20 +92,20 @@ public class QuizButton : MonoBehaviour
             case "Answer No":
                 _myButtonType = ButtonType.No;
                 break;
-            case "Answer_1":
-                _myButtonType = ButtonType.One;
+            case "Check In":
+                _myButtonType = ButtonType.CheckIn;
                 break;
-            case "Answer_2":
-                _myButtonType = ButtonType.Two;
+            case "Empathy":
+                _myButtonType = ButtonType.Empathy;
                 break;
-            case "Answer_3":
-                _myButtonType = ButtonType.Three;
+            case "Silent Stare":
+                _myButtonType = ButtonType.SilentStare;
                 break;
-            case "Answer_4":
-                _myButtonType = ButtonType.Four;
+            case "I Statement":
+                _myButtonType = ButtonType.IStatement;
                 break;
-            case "Answer_5":
-                _myButtonType = ButtonType.Five;
+            case "Friends":
+                _myButtonType = ButtonType.Friends;
                 break;
             default:
                 Debug.Log("This quiz button shouldn't be named what it is. Check that and get back to me.");

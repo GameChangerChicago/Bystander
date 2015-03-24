@@ -7,11 +7,11 @@ public enum ButtonType
 {
     Yes,
     No,
-    One,
-    Two,
-    Three,
-    Four,
-    Five
+    CheckIn,
+    Empathy,
+    SilentStare,
+    IStatement,
+    Friends
 }
 
 public class SHGameManager : MonoBehaviour
@@ -67,11 +67,11 @@ public class SHGameManager : MonoBehaviour
 
     void Start()
     {
-        AnswersSelected.Add(ButtonType.One, false);
-        AnswersSelected.Add(ButtonType.Two, false);
-        AnswersSelected.Add(ButtonType.Three, false);
-        AnswersSelected.Add(ButtonType.Four, false);
-        AnswersSelected.Add(ButtonType.Five, false);
+        AnswersSelected.Add(ButtonType.CheckIn, false);
+        AnswersSelected.Add(ButtonType.Empathy, false);
+        AnswersSelected.Add(ButtonType.SilentStare, false);
+        AnswersSelected.Add(ButtonType.IStatement, false);
+        AnswersSelected.Add(ButtonType.Friends, false);
     }
 
     public bool CheckAnswer(ButtonType button)

@@ -3,15 +3,19 @@ using System.Collections;
 
 public class InterventionManager : MonoBehaviour
 {
+    private SHGameManager _myGameManager;
+    private TextMesh _myText;
     private string _interventionText;
 
     void Start()
     {
-        _interventionText = Resources.Load("SHText/InterventionText").ToString();
+        _myGameManager = FindObjectOfType<SHGameManager>();
+        _myText = this.GetComponentInChildren<TextMesh>();
     }
 
     public void InterventionSetup(ButtonType currentType)
     {
+        _interventionText = Resources.Load("SHText/InterventionText_" + _myGameManager.CurrentMicroScenario.ToString()).ToString();
         string interventionText = "";
         char buttonTypeChar = '&';
         bool startPointFound = false;
@@ -71,8 +75,56 @@ public class InterventionManager : MonoBehaviour
             }
         }
 
-        //interventionText needs to be sent into a string formatter so that it stays in bounds
+        StringFormatter(interventionText);
+        //I don't want this to be so hard coded in the future but it's fine for now
+        this.transform.position = new Vector3(18.77299f, -28.77442f, -4.177366f);
+        Invoke("RemoveIntervention", 3);
         //Also needs to display the test somewhere
         //Beyond even that is the load the correct animation part
+    }
+
+    //This method works the same way that the one in the Party Scenario does
+    //It keeps string lines within the bounds of the dialog box
+    private void StringFormatter(string lineContent)
+    {
+        string currentWord = "";
+        bool isFirstWord = true;
+        Renderer currentRenderer;
+
+        currentRenderer = _myText.GetComponent<Renderer>();
+        _myText.text = currentWord;
+
+        for (int i = 0; i < lineContent.Length; i++)
+        {
+            if (lineContent[i] != ' ')
+            {
+                currentWord = currentWord + lineContent[i];
+            }
+            else
+            {
+                if (isFirstWord)
+                {
+                    _myText.text = _myText.text + currentWord;
+
+                    isFirstWord = false;
+                }
+                else
+                {
+                    _myText.text = _myText.text + " " + currentWord;
+                }
+
+                if (currentRenderer.bounds.extents.x > 7.5f)
+                {
+                    _myText.text = _myText.text.Remove(_myText.text.Length - (currentWord.Length + 1));
+                    _myText.text = _myText.text + "\n" + currentWord;
+                }
+                currentWord = "";
+            }
+        }
+    }
+
+    private void RemoveIntervention()
+    {
+        this.transform.position = new Vector3(5018.77299f, -5028.77442f, -504.177366f);
     }
 }

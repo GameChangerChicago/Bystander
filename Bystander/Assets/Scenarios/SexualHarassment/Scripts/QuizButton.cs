@@ -4,6 +4,7 @@ using System.Collections;
 public class QuizButton : MonoBehaviour
 {
     private SHGameManager _myGameManager;
+    private InterventionManager _myInterventionManager;
     private SHVigilHandler _myVirgil;
     private QuizHandler _otherQuiz;
     private GameObject _myQuiz,
@@ -20,6 +21,7 @@ public class QuizButton : MonoBehaviour
     {
         //Standard initialization junk
         _myGameManager = FindObjectOfType<SHGameManager>();
+        _myInterventionManager = FindObjectOfType<InterventionManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         _myQuiz = this.transform.parent.gameObject;
 
@@ -65,10 +67,11 @@ public class QuizButton : MonoBehaviour
         else
         {
             //Instantiates the new mini comic then invokes RemoveComic; also we're loading the specific dialog string
-            Invoke("RemoveComic", 3);
-            _currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
-            currentMiniComic = (GameObject)Instantiate(_currentMiniComic, _myGameManager.CurrentPOI.InstantiationTransform.position, Quaternion.identity);
-            _myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
+            //Invoke("RemoveComic", 3);
+            //_currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
+            //currentMiniComic = (GameObject)Instantiate(_currentMiniComic, _myGameManager.CurrentPOI.InstantiationTransform.position, Quaternion.identity);
+            _myInterventionManager.InterventionSetup(_myButtonType);
+            //_myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
 
             //This grays out the answer and disables it's box collider so you can't select it
             this.GetComponent<TextMesh>().color = Color.gray;

@@ -14,6 +14,15 @@ public enum ButtonType
     Friends
 }
 
+public enum MicroScenarios
+{
+    Hallway,
+    Classroom,
+    Bathroom,
+    Gym,
+    Library
+}
+
 public class SHGameManager : MonoBehaviour
 {
     static Dictionary<ButtonType, bool> AnswersSelected = new Dictionary<ButtonType, bool>();
@@ -64,6 +73,7 @@ public class SHGameManager : MonoBehaviour
     protected bool sectionComplete;
 
     public PointOfInterest CurrentPOI;
+    public MicroScenarios CurrentMicroScenario;
 
     void Start()
     {

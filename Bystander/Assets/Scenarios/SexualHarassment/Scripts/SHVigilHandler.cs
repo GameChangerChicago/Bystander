@@ -145,7 +145,7 @@ public class SHVigilHandler : MonoBehaviour
         Renderer currentRenderer;
 
         currentRenderer = _myText.GetComponent<Renderer>();
-        _myText.GetComponent<TextMesh>().text = currentWord;
+        _myText.text = currentWord;
 
         for (int i = 0; i < lineContent.Length; i++)
         {

@@ -5,12 +5,15 @@ public class InterventionManager : MonoBehaviour
 {
     private SHGameManager _myGameManager;
     private TextMesh _myText;
+    //private Vector3[] _interventionPositions = new Vector3[3];
     private string _interventionText;
 
     void Start()
     {
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myText = this.GetComponentInChildren<TextMesh>();
+
+        //_interventionPositions[0] = new Vector3 ()
     }
 
     public void InterventionSetup(ButtonType currentType)
@@ -77,7 +80,7 @@ public class InterventionManager : MonoBehaviour
 
         StringFormatter(interventionText);
         //I don't want this to be so hard coded in the future but it's fine for now
-        this.transform.position = new Vector3(18.77299f, -28.77442f, -4.177366f);
+        this.transform.position = new Vector3(26.78879f, -35.70682f, -15.32112f);
         Invoke("RemoveIntervention", 3);
         //Also needs to display the test somewhere
         //Beyond even that is the load the correct animation part
@@ -125,6 +128,6 @@ public class InterventionManager : MonoBehaviour
 
     private void RemoveIntervention()
     {
-        this.transform.position = new Vector3(5018.77299f, -5028.77442f, -504.177366f);
+        this.transform.position = new Vector3(5000, -5000, -5000);
     }
 }

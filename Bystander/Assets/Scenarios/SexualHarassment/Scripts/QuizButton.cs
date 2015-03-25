@@ -66,10 +66,7 @@ public class QuizButton : MonoBehaviour
         }
         else
         {
-            //Instantiates the new mini comic then invokes RemoveComic; also we're loading the specific dialog string
-            //Invoke("RemoveComic", 3);
-            //_currentMiniComic = Resources.Load("Prefabs/MiniComic_" + _myGameManager.CurrentPOI.name + "_" + this.name) as GameObject;
-            //currentMiniComic = (GameObject)Instantiate(_currentMiniComic, _myGameManager.CurrentPOI.InstantiationTransform.position, Quaternion.identity);
+            //Tells the Intervention Manager to show the type of intervention. InterventionSetup() handles all that.
             _myInterventionManager.InterventionSetup(_myButtonType);
             //_myVirgil.DialogString = Resources.Load("SHText/VirgilDialog_" + _myGameManager.CurrentPOI.name + "_" + this.name).ToString();
 

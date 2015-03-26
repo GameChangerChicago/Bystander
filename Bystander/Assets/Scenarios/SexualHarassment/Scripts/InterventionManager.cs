@@ -4,16 +4,18 @@ using System.Collections;
 public class InterventionManager : MonoBehaviour
 {
     private SHGameManager _myGameManager;
+    private Animator _myAnimator;
     private TextMesh _myText;
-    //private Vector3[] _interventionPositions = new Vector3[3];
+    private Vector3[] _interventionPositions = new Vector3[5];
     private string _interventionText;
 
     void Start()
     {
         _myGameManager = FindObjectOfType<SHGameManager>();
+        _myAnimator = GetComponentInChildren<Animator>();
         _myText = this.GetComponentInChildren<TextMesh>();
 
-        //_interventionPositions[0] = new Vector3 ()
+        _interventionPositions[0] = new Vector3(26.78879f, -35.70682f, -15.32112f);
     }
 
     public void InterventionSetup(ButtonType currentType)
@@ -34,6 +36,7 @@ public class InterventionManager : MonoBehaviour
                         {
                             startPointFound = true;
                             buttonTypeChar = _interventionText[i];
+                            _myAnimator.SetInteger("InterventionIndex", 0);
                         }
                         break;
                     case ButtonType.Empathy:
@@ -41,6 +44,7 @@ public class InterventionManager : MonoBehaviour
                         {
                             startPointFound = true;
                             buttonTypeChar = _interventionText[i];
+                            _myAnimator.SetInteger("InterventionIndex", 1);
                         }
                         break;
                     case ButtonType.Friends:
@@ -48,6 +52,7 @@ public class InterventionManager : MonoBehaviour
                         {
                             startPointFound = true;
                             buttonTypeChar = _interventionText[i];
+                            _myAnimator.SetInteger("InterventionIndex", 2);
                         }
                         break;
                     case ButtonType.IStatement:
@@ -55,6 +60,7 @@ public class InterventionManager : MonoBehaviour
                         {
                             startPointFound = true;
                             buttonTypeChar = _interventionText[i];
+                            _myAnimator.SetInteger("InterventionIndex", 3);
                         }
                         break;
                     case ButtonType.SilentStare:
@@ -62,6 +68,7 @@ public class InterventionManager : MonoBehaviour
                         {
                             startPointFound = true;
                             buttonTypeChar = _interventionText[i];
+                            _myAnimator.SetInteger("InterventionIndex", 4);
                         }
                         break;
                     default:
@@ -79,11 +86,29 @@ public class InterventionManager : MonoBehaviour
         }
 
         StringFormatter(interventionText);
-        //I don't want this to be so hard coded in the future but it's fine for now
-        this.transform.position = new Vector3(26.78879f, -35.70682f, -15.32112f);
+
+        switch (_myGameManager.CurrentMicroScenario)
+        {
+            case MicroScenarios.Hallway:
+                this.transform.position = _interventionPositions[0];
+                break;
+            case MicroScenarios.Classroom:
+                this.transform.position = _interventionPositions[1];
+                break;
+            case MicroScenarios.Bathroom:
+                this.transform.position = _interventionPositions[2];
+                break;
+            case MicroScenarios.Gym:
+                this.transform.position = _interventionPositions[3];
+                break;
+            case MicroScenarios.Library:
+                this.transform.position = _interventionPositions[4];
+                break;
+            default:
+                Debug.Log("This shouldn't even be possible. If I were you, I'd check the \"MicroScenarios\" enum and see if there's something funky going on.");
+                break;
+        }
         Invoke("RemoveIntervention", 3);
-        //Also needs to display the test somewhere
-        //Beyond even that is the load the correct animation part
     }
 
     //This method works the same way that the one in the Party Scenario does

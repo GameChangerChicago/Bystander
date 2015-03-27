@@ -52,7 +52,7 @@ public class QuizButton : MonoBehaviour
                 {
                     //we let _myVirgil know that it's a game winner and then we show the "Which type" quiz
                     _myVirgil.GameWinner = true;
-                    StartCoroutine(_otherQuiz.ShowQuiz(0, _myQuiz.transform.position, null, true, false));
+                    _otherQuiz.ShowQuiz(_myQuiz.transform.position, null, true, false);
                 }
                 else //otherwise we start the virgil dialog by calling ShowStringSegment
                     _myVirgil.ShowStringSegment();

@@ -8,11 +8,11 @@ public class PointOfInterest : MonoBehaviour
     private QuizHandler _myQuiz;
     private GameObject _myMiniComic;
     private string _virgilString;
+    private bool _showingComic;
 
     protected GameObject myMiniComic;
 
     public Transform InstantiationTransform;
-    public float ComicViewTime;
     public bool IsSexualHarassment,
                 ComicShown = false;
 
@@ -29,26 +29,22 @@ public class PointOfInterest : MonoBehaviour
     }
 
     //If the player clicks and the comic isn't already being shown then the ShowComic is called
-    void OnMouseDown()
+    void OnMouseUp()
     {
         if (!ComicShown)
         {
-            ShowComic();
+            _myMiniComic = (GameObject)Instantiate(myMiniComic, InstantiationTransform.position, Quaternion.identity);
+            ComicShown = true;
             _myGameManager.CurrentPOI = this.GetComponent<PointOfInterest>();
         }
     }
 
-    //This method simply instantiates the mini comic in question and starts the Invoke for ShowQuiz
-    private void ShowComic()
+    void Update()
     {
-        _myMiniComic = (GameObject)Instantiate(myMiniComic, InstantiationTransform.position, Quaternion.identity);
-        StartCoroutine(_myQuiz.ShowQuiz(ComicViewTime, InstantiationTransform.position, _virgilString, IsSexualHarassment, true));
-        Invoke("HideComic", ComicViewTime);
-        ComicShown = true;
-    }
-
-    private void HideComic()
-    {
-        Destroy(_myMiniComic);
+        if (Input.GetKeyDown(KeyCode.Mouse0) && ComicShown)
+        {
+            Destroy(_myMiniComic);
+            _myQuiz.ShowQuiz(InstantiationTransform.position, _virgilString, IsSexualHarassment, true);
+        }
     }
 }

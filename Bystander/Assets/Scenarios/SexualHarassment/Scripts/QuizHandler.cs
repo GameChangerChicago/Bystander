@@ -13,10 +13,8 @@ public class QuizHandler : MonoBehaviour
     }
 
     //ShowQuiz handles showing the quiz and setting up it's quiz buttons
-    public IEnumerator ShowQuiz(float waitTime, Vector3 instantiationPosition, string virgilString, bool isSexualHarassment, bool simpleQuiz)
+    public void ShowQuiz(Vector3 instantiationPosition, string virgilString, bool isSexualHarassment, bool simpleQuiz)
     {
-        yield return new WaitForSeconds(waitTime);
-
         //This line moves the quiz into postion
         this.transform.position = instantiationPosition;
 

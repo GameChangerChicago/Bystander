@@ -35,15 +35,17 @@ public class PointOfInterest : MonoBehaviour
         {
             _myMiniComic = (GameObject)Instantiate(myMiniComic, InstantiationTransform.position, Quaternion.identity);
             ComicShown = true;
+            _showingComic = true;
             _myGameManager.CurrentPOI = this.GetComponent<PointOfInterest>();
         }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && ComicShown)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && _showingComic)
         {
             Destroy(_myMiniComic);
+            _showingComic = false;
             _myQuiz.ShowQuiz(InstantiationTransform.position, _virgilString, IsSexualHarassment, true);
         }
     }

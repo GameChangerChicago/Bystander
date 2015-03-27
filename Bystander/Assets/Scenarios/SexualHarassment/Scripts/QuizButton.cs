@@ -62,6 +62,7 @@ public class QuizButton : MonoBehaviour
                 //Tells the virgil handler that the player was wrong then calls ShowStringSegment
                 _myVirgil.IsCorrect = false;
                 _myVirgil.ShowStringSegment();
+                _myGameManager.CurrentPOI.ComicShown = false;
             }
         }
         else
@@ -111,12 +112,5 @@ public class QuizButton : MonoBehaviour
                 Debug.Log("This quiz button shouldn't be named what it is. Check that and get back to me.");
                 break;
         }
-    }
-
-    //This method destroys the current mini comic and calls ShowStringSegment
-    private void RemoveComic()
-    {
-        GameObject.Destroy(currentMiniComic);
-        _myVirgil.ShowStringSegment();
     }
 }

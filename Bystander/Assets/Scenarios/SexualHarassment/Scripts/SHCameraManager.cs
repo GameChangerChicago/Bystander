@@ -24,12 +24,12 @@ public class SHCameraManager : MonoBehaviour
                 for (int i = 0; i < FindObjectsOfType<SHCameraManager>().Length; i++)
                 {
                     if (FindObjectsOfType<SHCameraManager>()[i] != this)
-                        this.camera.enabled = false;
+                        FindObjectsOfType<SHCameraManager>()[i].camera.enabled = false;
                 }
             }
             else //When set false the camera is moved and shrunken to it's hold position
             {
-                this.camera.rect = new Rect(cameraPos.x, cameraPos.y, 0.2f, 0.2f);
+                this.camera.rect = new Rect(cameraPos.x, cameraPos.y, 0.25f, 0.3f);
             }
 
             isCurrentCamera = value;
@@ -51,9 +51,15 @@ public class SHCameraManager : MonoBehaviour
         for (int i = 0; i < FindObjectsOfType<SHCameraManager>().Length; i++)
         {
             if (FindObjectsOfType<SHCameraManager>()[i] == this)
+            {
                 IsCurrentCamera = true;
+                Debug.Log("Me " + FindObjectsOfType<SHCameraManager>()[i]);
+            }
             else
+            {
                 FindObjectsOfType<SHCameraManager>()[i].IsCurrentCamera = false;
+                Debug.Log(FindObjectsOfType<SHCameraManager>()[i]);
+            }
         }
     }
 

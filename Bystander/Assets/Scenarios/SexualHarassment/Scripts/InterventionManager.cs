@@ -4,6 +4,7 @@ using System.Collections;
 public class InterventionManager : MonoBehaviour
 {
     private SHGameManager _myGameManager;
+    private SHVigilHandler _myVirgil;
     private Animator _myAnimator;
     private TextMesh _myText;
     private Vector3[] _interventionPositions = new Vector3[5];
@@ -12,6 +13,7 @@ public class InterventionManager : MonoBehaviour
     void Start()
     {
         _myGameManager = FindObjectOfType<SHGameManager>();
+        _myVirgil = FindObjectOfType<SHVigilHandler>();
         _myAnimator = GetComponentInChildren<Animator>();
         _myText = this.GetComponentInChildren<TextMesh>();
 
@@ -154,5 +156,6 @@ public class InterventionManager : MonoBehaviour
     private void RemoveIntervention()
     {
         this.transform.position = new Vector3(5000, -5000, -5000);
+        _myVirgil.ShowStringSegment();
     }
 }

@@ -74,6 +74,7 @@ public class SHGameManager : MonoBehaviour
 
     public PointOfInterest CurrentPOI;
     public MicroScenarios CurrentMicroScenario;
+    public bool FocusedOnPOI;
 
     void Start()
     {

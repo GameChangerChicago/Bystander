@@ -63,6 +63,7 @@ public class QuizButton : MonoBehaviour
                 _myVirgil.IsCorrect = false;
                 _myVirgil.ShowStringSegment();
                 _myGameManager.CurrentPOI.ComicShown = false;
+                _myGameManager.FocusedOnPOI = false;
             }
         }
         else

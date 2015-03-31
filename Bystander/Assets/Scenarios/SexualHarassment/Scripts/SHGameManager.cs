@@ -48,6 +48,26 @@ public class SHGameManager : MonoBehaviour
     }
     private SHCameraManager _currentCameraManager;
 
+
+    public int WrongAnswerCounter
+    {
+        get
+        {
+            return wrongAnswerCounter;
+        }
+        set
+        {
+            if (value > 2)
+            {
+                Debug.Log("Virgil Shows up");
+                wrongAnswerCounter = 0;
+            }
+
+            wrongAnswerCounter = value;
+        }
+    }
+    protected int wrongAnswerCounter;
+
     //This property, when set to true, calls ReturnToHub in whichever camera is the current camera.
     public bool SectionComplete
     {
@@ -68,6 +88,8 @@ public class SHGameManager : MonoBehaviour
                     currentCameraManager.ReturnToHub();
                 }
             }
+
+            sectionComplete = value;
         }
     }
     protected bool sectionComplete;

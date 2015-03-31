@@ -64,6 +64,9 @@ public class QuizButton : MonoBehaviour
                 _myVirgil.ShowStringSegment();
                 _myGameManager.CurrentPOI.ComicShown = false;
                 _myGameManager.FocusedOnPOI = false;
+
+
+                Debug.Log("Play Audio");
             }
         }
         else

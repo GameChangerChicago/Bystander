@@ -1725,7 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e46c84c18a3265439a620feb1ed01e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InstantiationTransform: {fileID: 0}
+  InstantiationTransform: {fileID: 680169119}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &1034328203
@@ -2149,6 +2149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPOI: {fileID: 0}
   CurrentMicroScenario: 0
+  FocusedOnPOI: 0
 --- !u!4 &1170292873
 Transform:
   m_ObjectHideFlags: 0
@@ -2830,7 +2831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e46c84c18a3265439a620feb1ed01e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InstantiationTransform: {fileID: 0}
+  InstantiationTransform: {fileID: 1494850815}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &1494850814
@@ -3722,7 +3723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e46c84c18a3265439a620feb1ed01e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InstantiationTransform: {fileID: 680169119}
+  InstantiationTransform: {fileID: 1353114230}
   IsSexualHarassment: 1
   ComicShown: 0
 --- !u!1 &1944128210

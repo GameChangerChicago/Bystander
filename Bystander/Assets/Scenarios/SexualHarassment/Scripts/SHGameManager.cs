@@ -62,8 +62,8 @@ public class SHGameManager : MonoBehaviour
                 Debug.Log("Virgil Shows up");
                 wrongAnswerCounter = 0;
             }
-
-            wrongAnswerCounter = value;
+            else
+                wrongAnswerCounter = value;
         }
     }
     protected int wrongAnswerCounter;

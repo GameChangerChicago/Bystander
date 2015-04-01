@@ -59,7 +59,11 @@ public class QuizButton : MonoBehaviour
                     _otherQuiz.ShowQuiz(_myQuiz.transform.position, " ", true, false);
                 }
                 else //otherwise we start the virgil dialog by calling ShowStringSegment
+                {
                     _myVirgil.ShowStringSegment();
+                    _myGameManager.FocusedOnPOI = false;
+                    Debug.Log("Play correct but not game winner reaction");
+                }
             }
             else
             {
@@ -71,6 +75,7 @@ public class QuizButton : MonoBehaviour
 
                 _virgilAudioSource.clip = _wrongAnswerClip;
                 _virgilAudioSource.Play();
+                _myGameManager.WrongAnswerCounter++;
             }
         }
         else

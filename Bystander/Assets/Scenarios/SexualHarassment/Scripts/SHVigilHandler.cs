@@ -104,8 +104,6 @@ public class SHVigilHandler : MonoBehaviour
                 //If the button was a game winner than the SectionComplete in the game manager will become true
                 if (GameWinner)
                     _myGameManager.SectionComplete = true;
-                else //Otherwise all points of interest are reset
-                    ResetPOI();
 
                 //Virgil is always set to false
                 isVisible = false;
@@ -173,17 +171,6 @@ public class SHVigilHandler : MonoBehaviour
                 }
                 currentWord = "";
             }
-        }
-    }
-
-    //This method sets ComicShown in all points of interest to false which effectively resets the section
-    private void ResetPOI()
-    {
-        PointOfInterest[] POIs = FindObjectsOfType<PointOfInterest>();
-
-        for (int i = 0; i < POIs.Length; i++)
-        {
-            POIs[i].ComicShown = false;
         }
     }
 }

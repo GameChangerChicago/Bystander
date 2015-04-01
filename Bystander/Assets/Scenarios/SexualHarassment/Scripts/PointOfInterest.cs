@@ -31,6 +31,7 @@ public class PointOfInterest : MonoBehaviour
     //If the player clicks and the comic isn't already being shown then the ShowComic is called
     void OnMouseUp()
     {
+        Debug.Log(!ComicShown + " && " + !_myGameManager.FocusedOnPOI);
         if (!ComicShown && !_myGameManager.FocusedOnPOI)
         {
             _myMiniComic = (GameObject)Instantiate(myMiniComic, InstantiationTransform.position, Quaternion.identity);

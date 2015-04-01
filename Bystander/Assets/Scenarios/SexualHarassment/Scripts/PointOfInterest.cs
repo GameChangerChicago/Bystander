@@ -24,8 +24,8 @@ public class PointOfInterest : MonoBehaviour
         _myQuiz = GameObject.Find("Quiz True False").GetComponent<QuizHandler>();
 
         //The .txt used for virgil's responses and the prefabs for the mini comic are named after the PointOfInterest in question
-		//_virgilString = Resources.Load("SHText/VirgilDialog_" + this.name).ToString();
         myMiniComic = Resources.Load("Prefabs/MiniComic_" + this.name) as GameObject;
+        _virgilString = Resources.Load("SHText/VirgilDialog_" + this.name).ToString();
     }
 
     //If the player clicks and the comic isn't already being shown then the ShowComic is called

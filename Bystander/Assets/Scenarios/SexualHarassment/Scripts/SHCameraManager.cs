@@ -51,15 +51,9 @@ public class SHCameraManager : MonoBehaviour
         for (int i = 0; i < FindObjectsOfType<SHCameraManager>().Length; i++)
         {
             if (FindObjectsOfType<SHCameraManager>()[i] == this)
-            {
                 IsCurrentCamera = true;
-                Debug.Log("Me " + FindObjectsOfType<SHCameraManager>()[i]);
-            }
             else
-            {
                 FindObjectsOfType<SHCameraManager>()[i].IsCurrentCamera = false;
-                Debug.Log(FindObjectsOfType<SHCameraManager>()[i]);
-            }
         }
     }
 

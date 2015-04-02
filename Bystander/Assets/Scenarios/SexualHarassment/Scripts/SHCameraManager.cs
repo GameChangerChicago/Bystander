@@ -62,5 +62,10 @@ public class SHCameraManager : MonoBehaviour
     {
         IsCurrentCamera = false;
         this.GetComponent<GrayscaleEffect>().enabled = true;
+
+        for (int i = 0; i < FindObjectsOfType<SHCameraManager>().Length; i++)
+        {
+            FindObjectsOfType<SHCameraManager>()[i].camera.enabled = enabled;
+        }
     }
 }

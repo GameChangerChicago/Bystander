@@ -11,7 +11,8 @@ public class QuizButton : MonoBehaviour
                        _currentMiniComic;
     private ButtonType _myButtonType;
     private AudioSource _virgilAudioSource;
-    private AudioClip _wrongAnswerClip;
+    private AudioClip _wrongAnswerClip,
+                      _interventionClip;
 
     protected GameObject currentMiniComic;
 
@@ -28,6 +29,7 @@ public class QuizButton : MonoBehaviour
         _myQuiz = this.transform.parent.gameObject;
         _virgilAudioSource = _myVirgil.GetComponentInChildren<AudioSource>();
         _wrongAnswerClip = Resources.Load("Sounds/VirgilWrong") as AudioClip;
+        _interventionClip = Resources.Load("Sounds/VirgilIntervention") as AudioClip;
 
         //Looks for the QuizHandler that isn't this button's parent and sets _otherQuiz to what ever that is
         QuizHandler[] quizes = FindObjectsOfType<QuizHandler>();
@@ -57,6 +59,8 @@ public class QuizButton : MonoBehaviour
                     //we let _myVirgil know that it's a game winner and then we show the "Which type" quiz
                     _myVirgil.GameWinner = true;
                     _otherQuiz.ShowQuiz(_myQuiz.transform.position, " ", true, false);
+                    _virgilAudioSource.clip = _interventionClip;
+                    _virgilAudioSource.Play();
                 }
                 else //otherwise we start the virgil dialog by calling ShowStringSegment
                 {

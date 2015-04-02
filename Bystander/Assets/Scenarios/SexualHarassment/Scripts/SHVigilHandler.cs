@@ -3,77 +3,19 @@ using System.Collections;
 
 public class SHVigilHandler : MonoBehaviour
 {
-    //This property handles probably too much. Not totally sure what I was thinking here. I appear to have been property crazy at the time of writing this...
-    protected bool isVisible
-    {
-        get
-        {
-            if (!_isVisible)
-            {
-                //Turns on all renderers for Virgil
-                this.GetComponent<Renderer>().enabled = true;
-                foreach (Renderer r in this.GetComponentsInChildren<Renderer>())
-                {
-                    r.enabled = true;
-                }
-
-                //Finds where the "wrong choice" dialog begins
-                for (int i = 0; i < DialogString.Length; i++)
-                {
-                    if (DialogString[i] == '-')
-                        _splitPoint = i;
-                }
-
-                //Sets where to start reading the string from
-                if (IsCorrect)
-                {
-                    _stringIndex = 1;
-                    _endPoint = _splitPoint;
-                }
-                else
-                {
-                    _stringIndex = _splitPoint + 1;
-                    _endPoint = DialogString.Length;
-                }
-
-                //Turns on the collider for mouse clicks
-                _myCollider.enabled = true;
-
-                //Sets visible to true so that the preceding code is only run once
-                _isVisible = true;
-            }
-
-            return _isVisible;
-        }
-
-        set
-        {
-            if (!value)
-            {
-                //Turns all renderers for Virgil off
-                this.GetComponent<Renderer>().enabled = false;
-                foreach (Renderer r in this.GetComponentsInChildren<Renderer>())
-                {
-                    r.enabled = false;
-                }
-
-                //Turns collider off
-                _myCollider.enabled = false;
-            }
-
-            _isVisible = value;
-        }
-    }
-    private bool _isVisible = false;
-
     private SHGameManager _myGameManager;
+    private AudioSource _myAudioSource;
+    private AudioClip _wrongAnswerClip,
+                      _interventionClip;
     private BoxCollider _myCollider;
     private TextMesh _myText;
+    private string _correctString,
+                   _wrongString;
     private int _stringIndex,
                 _endPoint,
                 _splitPoint;
+    private bool _isVisible = false;
 
-    public string DialogString;
     public bool IsCorrect,
                 GameWinner;
 
@@ -83,56 +25,79 @@ public class SHVigilHandler : MonoBehaviour
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myText = this.GetComponentInChildren<TextMesh>();
         _myCollider = this.GetComponent<BoxCollider>();
+        _myAudioSource = GetComponentInChildren<AudioSource>();
+        _wrongAnswerClip = Resources.Load("Sounds/VirgilWrong") as AudioClip;
+        _interventionClip = Resources.Load("Sounds/VirgilIntervention") as AudioClip;
+        _correctString = "That's right! But let's try to find an instance of sexual harrasment.";
+        _wrongString = "Let's review ";
     }
 
     //Clicking anywhere will call ShowSpringSegment
-    void OnMouseDown()
+    //void OnMouseDown()
+    //{
+    //    ShowStringSegment();
+    //}
+
+    public void PlayAudio(bool playVirgilWrong)
     {
-        ShowStringSegment();
+        if (playVirgilWrong)
+            _myAudioSource.clip = _wrongAnswerClip;
+        else
+            _myAudioSource.clip = _interventionClip;
+
+        _myAudioSource.Play();
+    }
+
+    public void ShowDialog(bool correct)
+    {
+        if (correct)
+            StringFormatter(_correctString);
+        else
+            StringFormatter(_wrongString);
     }
 
     //This method decides what happens any time the player clicks while Virigil was active
-    public void ShowStringSegment()
-    {
-        if (isVisible)
-        {
-            //If there are still lines in the dialog to say then DialogHandler is called
-            if (_stringIndex < _endPoint)
-                DialogHandler();
-            else //Otherwise...
-            {
-                //If the button was a game winner than the SectionComplete in the game manager will become true
-                if (GameWinner)
-                    _myGameManager.SectionComplete = true;
+    //public void ShowStringSegment()
+    //{
+    //    if (isVisible)
+    //    {
+    //        //If there are still lines in the dialog to say then DialogHandler is called
+    //        if (_stringIndex < _endPoint)
+    //            DialogHandler();
+    //        else //Otherwise...
+    //        {
+    //            //If the button was a game winner than the SectionComplete in the game manager will become true
+    //            if (GameWinner)
+    //                _myGameManager.SectionComplete = true;
 
-                //Virgil is always set to false
-                isVisible = false;
-            }
-        }
-    }
+    //            //Virgil is always set to false
+    //            isVisible = false;
+    //        }
+    //    }
+    //}
 
     //This method breaks the DialogString into it's various pieces
-    public void DialogHandler()
-    {
-        string currentString = "";
+    //public void DialogHandler()
+    //{
+    //    string currentString = "";
 
-        for (int i = _stringIndex; i < _endPoint; i++)
-        {
-            if (DialogString[i] != '|')
-            {
-                currentString = currentString + DialogString[i];
-            }
-            else
-            {
-                _stringIndex = i + 1;
+    //    for (int i = _stringIndex; i < _endPoint; i++)
+    //    {
+    //        if (DialogString[i] != '|')
+    //        {
+    //            currentString = currentString + DialogString[i];
+    //        }
+    //        else
+    //        {
+    //            _stringIndex = i + 1;
 
-                break;
-            }
-        }
+    //            break;
+    //        }
+    //    }
 
-        //Puts the dialog section through the StringFormatter
-        StringFormatter(currentString);
-    }
+    //    //Puts the dialog section through the StringFormatter
+    //    StringFormatter(currentString);
+    //}
 
     //This method works the same way that the one in the Party Scenario does
     //It keeps string lines within the bounds of the dialog box

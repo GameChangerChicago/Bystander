@@ -13,16 +13,13 @@ public class QuizHandler : MonoBehaviour
     }
 
     //ShowQuiz handles showing the quiz and setting up it's quiz buttons
-    public void ShowQuiz(Vector3 instantiationPosition, string virgilString, bool isSexualHarassment, bool simpleQuiz)
+    public void ShowQuiz(Vector3 instantiationPosition, bool isSexualHarassment, bool simpleQuiz)
     {
         //This line moves the quiz into postion
         this.transform.position = instantiationPosition;
 
         if (simpleQuiz)
         {
-            //Set's the correct dialog string in Virgil
-            _myVirgil.DialogString = virgilString;
-
             //This for loop sets the impertinant bools for each QuizButton based on whether the point of interest was sexual harassment
             foreach (QuizButton qb in this.GetComponentsInChildren<QuizButton>())
             {

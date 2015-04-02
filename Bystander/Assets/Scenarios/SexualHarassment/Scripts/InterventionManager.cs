@@ -156,6 +156,6 @@ public class InterventionManager : MonoBehaviour
     private void RemoveIntervention()
     {
         this.transform.position = new Vector3(5000, -5000, -5000);
-        _myVirgil.ShowStringSegment();
+        //_myVirgil.ShowStringSegment();
     }
 }

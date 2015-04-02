@@ -7,7 +7,6 @@ public class PointOfInterest : MonoBehaviour
     private SHVigilHandler _myVirgil;
     private QuizHandler _myQuiz;
     private GameObject _myMiniComic;
-    private string _virgilString;
     private bool _showingComic;
 
     protected GameObject myMiniComic;
@@ -25,13 +24,11 @@ public class PointOfInterest : MonoBehaviour
 
         //The .txt used for virgil's responses and the prefabs for the mini comic are named after the PointOfInterest in question
         myMiniComic = Resources.Load("Prefabs/MiniComic_" + this.name) as GameObject;
-        _virgilString = Resources.Load("SHText/VirgilDialog_" + this.name).ToString();
     }
 
     //If the player clicks and the comic isn't already being shown then the ShowComic is called
     void OnMouseUp()
     {
-        Debug.Log(!ComicShown + " && " + !_myGameManager.FocusedOnPOI);
         if (!ComicShown && !_myGameManager.FocusedOnPOI)
         {
             _myMiniComic = (GameObject)Instantiate(myMiniComic, InstantiationTransform.position, Quaternion.identity);
@@ -48,7 +45,7 @@ public class PointOfInterest : MonoBehaviour
         {
             Destroy(_myMiniComic);
             _showingComic = false;
-            _myQuiz.ShowQuiz(InstantiationTransform.position, _virgilString, IsSexualHarassment, true);
+            _myQuiz.ShowQuiz(InstantiationTransform.position, IsSexualHarassment, true);
         }
     }
 }

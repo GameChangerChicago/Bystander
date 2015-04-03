@@ -60,7 +60,6 @@ public class SHGameManager : MonoBehaviour
         {
             if (value > 2)
             {
-                Debug.Log("jklfsd;kljl");
                 //If we call ShowDialog with 'false' it will bring up the virgil dialog box with the 'wrong' dialog
                 _myVirgil.ShowDialog(false);
                 wrongAnswerCounter = 0;

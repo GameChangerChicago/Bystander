@@ -154,7 +154,7 @@ public class SHVigilHandler : MonoBehaviour
                     _myText.text = _myText.text + " " + currentWord;
                 }
 
-                if (currentRenderer.bounds.extents.x > 7.5f)
+                if (currentRenderer.bounds.extents.x > 11f)
                 {
                     _myText.text = _myText.text.Remove(_myText.text.Length - (currentWord.Length + 1));
                     _myText.text = _myText.text + "\n" + currentWord;

@@ -360,7 +360,7 @@ GameObject:
   - 4: {fileID: 196219177}
   - 212: {fileID: 196219178}
   m_Layer: 0
-  m_Name: ScenarioPanels
+  m_Name: PanelFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,7 +396,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 3993981873
+  m_SortingLayerID: 2267121087
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a7c8ce3dcb2ea1b4799f950f859db5a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -982,6 +982,56 @@ MonoBehaviour:
   InstantiationTransform: {fileID: 1282957997}
   IsSexualHarassment: 0
   ComicShown: 0
+--- !u!1 &487003626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 487003627}
+  - 212: {fileID: 487003628}
+  m_Layer: 0
+  m_Name: StudentNPC_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &487003627
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 487003626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.5226021, y: .634178162, z: 10}
+  m_LocalScale: {x: 1.55450344, y: 1.55450344, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032067575}
+  m_RootOrder: 8
+--- !u!212 &487003628
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 487003626}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 100842567
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 3eaff9d3ac81f854eb73940b089ac354, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &554368340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,7 +2034,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 100842567
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 84f82aa395cbd6a458aa4576fedfe55a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1134326684
 GameObject:
@@ -2106,7 +2156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76eb6c49dcb139f4f9538ddf7f358ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogString: sup
   IsCorrect: 0
   GameWinner: 0
 --- !u!65 &1165315455
@@ -2359,6 +2408,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 969313706}
   m_RootOrder: 0
+--- !u!1 &1183302210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1183302212}
+  - 212: {fileID: 1183302211}
+  m_Layer: 0
+  m_Name: StudentNPC_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1183302211
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1183302210}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 100842567
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300002, guid: 3eaff9d3ac81f854eb73940b089ac354, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1183302212
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1183302210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.6778793, y: -5.50195312, z: 10}
+  m_LocalScale: {x: 2.27304482, y: 2.27304482, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032067575}
+  m_RootOrder: 9
 --- !u!1 &1241212682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,6 +3020,56 @@ MonoBehaviour:
   InstantiationTransform: {fileID: 1494850815}
   IsSexualHarassment: 0
   ComicShown: 0
+--- !u!1 &1452746063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1452746065}
+  - 212: {fileID: 1452746064}
+  m_Layer: 0
+  m_Name: StudentNPCSprite_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1452746064
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452746063}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 100842567
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300002, guid: 3eaff9d3ac81f854eb73940b089ac354, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1452746065
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452746063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.4111347, y: -82.1925964, z: 0}
+  m_LocalScale: {x: 1.02856624, y: 1.02856624, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
 --- !u!1 &1494850814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3461,6 +3610,56 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5960a4a5101dc9a40b98d27555134863, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .745098054}
+--- !u!1 &1816173338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1816173340}
+  - 212: {fileID: 1816173339}
+  m_Layer: 0
+  m_Name: WhiteSquare
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1816173339
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816173338}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 100842567
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: 5960a4a5101dc9a40b98d27555134863, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+--- !u!4 &1816173340
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816173338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22.2255096, y: -91.250145, z: 0}
+  m_LocalScale: {x: 1419.33655, y: 2170.47998, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1 &1823125333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3612,7 +3811,7 @@ Transform:
   m_Children:
   - {fileID: 1310415123}
   m_Father: {fileID: 2032067575}
-  m_RootOrder: 8
+  m_RootOrder: 10
 --- !u!114 &1828027644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4021,6 +4220,8 @@ Transform:
   - {fileID: 1353114230}
   - {fileID: 1867381533}
   - {fileID: 1011716437}
+  - {fileID: 487003627}
+  - {fileID: 1183302212}
   - {fileID: 1828027643}
   m_Father: {fileID: 0}
   m_RootOrder: 10

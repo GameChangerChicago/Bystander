@@ -61,7 +61,8 @@ public class QuizButton : MonoBehaviour
                 {
                     //_myVirgil.ShowStringSegment();
                     _myGameManager.FocusedOnPOI = false;
-                    Debug.Log("Play correct but not game winner reaction");
+                    //If we call ShowDialog with 'true' it will bring up the virgil dialog box with the 'correct' dialog
+                    _myVirgil.ShowDialog(true);
                 }
             }
             else
@@ -71,6 +72,7 @@ public class QuizButton : MonoBehaviour
                 //_myVirgil.ShowStringSegment();
                 _myGameManager.CurrentPOI.ComicShown = false;
                 _myGameManager.FocusedOnPOI = false;
+                _myGameManager.WrongAnswerCounter++;
 
                 //When calling this method with 'true' it plays the wrong answer audio
                 _myVirgil.PlayAudio(true);

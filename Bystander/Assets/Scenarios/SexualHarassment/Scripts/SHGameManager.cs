@@ -27,6 +27,7 @@ public class SHGameManager : MonoBehaviour
 {
     static Dictionary<ButtonType, bool> AnswersSelected = new Dictionary<ButtonType, bool>();
 
+    private SHVigilHandler _myVirgil;
     private int _sectionsCompleted;
 
     //This property looks at all of the SHCameraManagers and checks to see which one is the current camera then returns said SHCameraManager
@@ -59,7 +60,9 @@ public class SHGameManager : MonoBehaviour
         {
             if (value > 2)
             {
-                Debug.Log("Virgil Shows up");
+                Debug.Log("jklfsd;kljl");
+                //If we call ShowDialog with 'false' it will bring up the virgil dialog box with the 'wrong' dialog
+                _myVirgil.ShowDialog(false);
                 wrongAnswerCounter = 0;
             }
             else
@@ -100,6 +103,7 @@ public class SHGameManager : MonoBehaviour
 
     void Start()
     {
+        _myVirgil = FindObjectOfType<SHVigilHandler>();
         AnswersSelected.Add(ButtonType.CheckIn, false);
         AnswersSelected.Add(ButtonType.Empathy, false);
         AnswersSelected.Add(ButtonType.SilentStare, false);

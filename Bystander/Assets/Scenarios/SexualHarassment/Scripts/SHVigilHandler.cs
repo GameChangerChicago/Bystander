@@ -16,6 +16,7 @@ public class SHVigilHandler : MonoBehaviour
                 _splitPoint;
     private bool _isVisible = false;
 
+    public Transform[] MicroScenarioTransforms = new Transform[5];
     public bool IsCorrect,
                 GameWinner;
 
@@ -29,14 +30,14 @@ public class SHVigilHandler : MonoBehaviour
         _wrongAnswerClip = Resources.Load("Sounds/VirgilWrong") as AudioClip;
         _interventionClip = Resources.Load("Sounds/VirgilIntervention") as AudioClip;
         _correctString = "That's right! But let's try to find an instance of sexual harrasment.";
-        _wrongString = "Let's review ";
+        _wrongString = "It seems like you're having some trouble. Remember, we're trying to find an instance of sexual harrasment.";
     }
 
     //Clicking anywhere will call ShowSpringSegment
-    //void OnMouseDown()
-    //{
-    //    ShowStringSegment();
-    //}
+    void OnMouseDown()
+    {
+        FinishDialog();
+    }
 
     public void PlayAudio(bool playVirgilWrong)
     {
@@ -54,6 +55,30 @@ public class SHVigilHandler : MonoBehaviour
             StringFormatter(_correctString);
         else
             StringFormatter(_wrongString);
+
+        switch (_myGameManager.CurrentMicroScenario)
+        {
+            case MicroScenarios.Hallway:
+                this.transform.position = MicroScenarioTransforms[0].position;
+                break;
+            case MicroScenarios.Classroom:
+                this.transform.position = MicroScenarioTransforms[1].position;
+                break;
+            case MicroScenarios.Bathroom:
+                break;
+            case MicroScenarios.Gym:
+                break;
+            case MicroScenarios.Library:
+                break;
+            default:
+                Debug.Log("There is no such Micro Scenario. Something very strange is happening...");
+                break;
+        }
+    }
+
+    private void FinishDialog()
+    {
+        this.transform.position = new Vector3(500, 500, 500);
     }
 
     //This method decides what happens any time the player clicks while Virigil was active
@@ -129,7 +154,7 @@ public class SHVigilHandler : MonoBehaviour
                     _myText.text = _myText.text + " " + currentWord;
                 }
 
-                if (currentRenderer.bounds.extents.x > 3.5f)
+                if (currentRenderer.bounds.extents.x > 7.5f)
                 {
                     _myText.text = _myText.text.Remove(_myText.text.Length - (currentWord.Length + 1));
                     _myText.text = _myText.text + "\n" + currentWord;

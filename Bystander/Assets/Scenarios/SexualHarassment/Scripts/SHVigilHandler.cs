@@ -81,49 +81,6 @@ public class SHVigilHandler : MonoBehaviour
         this.transform.position = new Vector3(500, 500, 500);
     }
 
-    //This method decides what happens any time the player clicks while Virigil was active
-    //public void ShowStringSegment()
-    //{
-    //    if (isVisible)
-    //    {
-    //        //If there are still lines in the dialog to say then DialogHandler is called
-    //        if (_stringIndex < _endPoint)
-    //            DialogHandler();
-    //        else //Otherwise...
-    //        {
-    //            //If the button was a game winner than the SectionComplete in the game manager will become true
-    //            if (GameWinner)
-    //                _myGameManager.SectionComplete = true;
-
-    //            //Virgil is always set to false
-    //            isVisible = false;
-    //        }
-    //    }
-    //}
-
-    //This method breaks the DialogString into it's various pieces
-    //public void DialogHandler()
-    //{
-    //    string currentString = "";
-
-    //    for (int i = _stringIndex; i < _endPoint; i++)
-    //    {
-    //        if (DialogString[i] != '|')
-    //        {
-    //            currentString = currentString + DialogString[i];
-    //        }
-    //        else
-    //        {
-    //            _stringIndex = i + 1;
-
-    //            break;
-    //        }
-    //    }
-
-    //    //Puts the dialog section through the StringFormatter
-    //    StringFormatter(currentString);
-    //}
-
     //This method works the same way that the one in the Party Scenario does
     //It keeps string lines within the bounds of the dialog box
     private void StringFormatter(string lineContent)

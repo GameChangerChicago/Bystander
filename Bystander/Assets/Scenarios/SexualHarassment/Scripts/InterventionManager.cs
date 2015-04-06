@@ -9,6 +9,7 @@ public class InterventionManager : MonoBehaviour
     private TextMesh _myText;
     private Vector3[] _interventionPositions = new Vector3[5];
     private string _interventionText;
+    private bool _interventionActive;
 
     void Start()
     {
@@ -18,6 +19,16 @@ public class InterventionManager : MonoBehaviour
         _myText = this.GetComponentInChildren<TextMesh>();
 
         _interventionPositions[0] = new Vector3(26.78879f, -35.70682f, -15.32112f);
+        _interventionPositions[1] = new Vector3(16.9052f, -84.01974f, -15.32112f);
+        _interventionPositions[2] = new Vector3(26.78879f, -35.70682f, -15.32112f);
+        _interventionPositions[3] = new Vector3(26.78879f, -35.70682f, -15.32112f);
+        _interventionPositions[4] = new Vector3(26.78879f, -35.70682f, -15.32112f);
+    }
+
+    void OnMouseDown()
+    {
+        if (_interventionActive)
+            RemoveIntervention();
     }
 
     public void InterventionSetup(ButtonType currentType)
@@ -26,6 +37,7 @@ public class InterventionManager : MonoBehaviour
         string interventionText = "";
         char buttonTypeChar = '&';
         bool startPointFound = false;
+        _interventionActive = true;
 
         for (int i = 0; i < _interventionText.Length; i++)
         {
@@ -110,7 +122,6 @@ public class InterventionManager : MonoBehaviour
                 Debug.Log("This shouldn't even be possible. If I were you, I'd check the \"MicroScenarios\" enum and see if there's something funky going on.");
                 break;
         }
-        Invoke("RemoveIntervention", 3);
     }
 
     //This method works the same way that the one in the Party Scenario does
@@ -156,6 +167,9 @@ public class InterventionManager : MonoBehaviour
     private void RemoveIntervention()
     {
         this.transform.position = new Vector3(5000, -5000, -5000);
+        _interventionActive = false;
+        _myGameManager.SectionComplete = true;
+        _myGameManager.FocusedOnPOI = false;
         //_myVirgil.ShowStringSegment();
     }
 }

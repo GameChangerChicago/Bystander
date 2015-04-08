@@ -27,6 +27,7 @@ public class SHGameManager : MonoBehaviour
 {
     static Dictionary<ButtonType, bool> AnswersSelected = new Dictionary<ButtonType, bool>();
 
+    private Dictionary<MicroScenarios, PointOfInterest[]> PointsOfViewPerMicroScenario = new Dictionary<MicroScenarios, PointOfInterest[]>();
     private SHVigilHandler _myVirgil;
     private int _sectionsCompleted;
 
@@ -108,6 +109,7 @@ public class SHGameManager : MonoBehaviour
         AnswersSelected.Add(ButtonType.SilentStare, false);
         AnswersSelected.Add(ButtonType.IStatement, false);
         AnswersSelected.Add(ButtonType.Friends, false);
+        InitializePointsOfView();
     }
 
     public bool CheckAnswer(ButtonType button)
@@ -119,5 +121,28 @@ public class SHGameManager : MonoBehaviour
         }
         else
             return false;
+    }
+
+    private void InitializePointsOfView()
+    {
+        PointsOfViewPerMicroScenario.Add(MicroScenarios.Hallway, GameObject.Find("Hallway").GetComponentsInChildren<PointOfInterest>());
+        PointsOfViewPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
+        PointsOfViewPerMicroScenario.Add(MicroScenarios.Library, GameObject.Find("Library").GetComponentsInChildren<PointOfInterest>());
+        //PointsOfViewPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
+        //PointsOfViewPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
+        foreach (PointOfInterest poi in GameObject.FindObjectsOfType<PointOfInterest>())
+        {
+            poi.enabled = false;
+            poi.GetComponentInChildren<SpriteRenderer>().enabled = false;
+        }
+    }
+
+    public void ActivatePOIs()
+    {
+        for (int i = 0; i < PointsOfViewPerMicroScenario[CurrentMicroScenario].Length; i++)
+        {
+            PointsOfViewPerMicroScenario[CurrentMicroScenario][i].enabled = true;
+            PointsOfViewPerMicroScenario[CurrentMicroScenario][i].GetComponentInChildren<SpriteRenderer>().enabled = true;
+        }
     }
 }

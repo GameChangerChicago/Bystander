@@ -23,5 +23,6 @@ public class SHCameraSelector : MonoBehaviour
         _myCamera.FocusOnCamera();
         _myBoxCollider.enabled = false;
         _myGameManager.CurrentMicroScenario = MyMicroScenario;
+        _myGameManager.ActivatePOIs();
     }
 }

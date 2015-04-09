@@ -38,7 +38,7 @@ public class QuizButton : MonoBehaviour
     }
 
     //This method handles what happens when the player clicks one of the quiz buttons
-    void OnMouseDown()
+    void OnMouseUp()
     {
         if (_myButtonType == ButtonType.Yes || _myButtonType == ButtonType.No)
         {
@@ -59,8 +59,7 @@ public class QuizButton : MonoBehaviour
                 }
                 else //otherwise we start the virgil dialog by calling ShowStringSegment
                 {
-                    //_myVirgil.ShowStringSegment();
-                    _myGameManager.FocusedOnPOI = false;
+                    Invoke("ReenablePOIs", 0.05f);
                     //If we call ShowDialog with 'true' it will bring up the virgil dialog box with the 'correct' dialog
                     _myVirgil.ShowDialog(true);
                 }
@@ -71,7 +70,7 @@ public class QuizButton : MonoBehaviour
                 _myVirgil.IsCorrect = false;
                 //_myVirgil.ShowStringSegment();
                 _myGameManager.CurrentPOI.ComicShown = false;
-                _myGameManager.FocusedOnPOI = false;
+                Invoke("ReenablePOIs", 0.05f);
                 _myGameManager.WrongAnswerCounter++;
 
                 //When calling this method with 'true' it plays the wrong answer audio
@@ -125,5 +124,10 @@ public class QuizButton : MonoBehaviour
                 Debug.Log("This quiz button shouldn't be named what it is. Check that and get back to me.");
                 break;
         }
+    }
+
+    private void ReenablePOIs()
+    {
+        _myGameManager.FocusedOnPOI = false;
     }
 }

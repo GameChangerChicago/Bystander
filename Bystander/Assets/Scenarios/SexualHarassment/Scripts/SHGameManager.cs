@@ -142,7 +142,11 @@ public class SHGameManager : MonoBehaviour
         for (int i = 0; i < PointsOfViewPerMicroScenario[CurrentMicroScenario].Length; i++)
         {
             PointsOfViewPerMicroScenario[CurrentMicroScenario][i].enabled = true;
-            PointsOfViewPerMicroScenario[CurrentMicroScenario][i].GetComponentInChildren<SpriteRenderer>().enabled = true;
+            for (int j = 0; j < PointsOfViewPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>().Length; j++)
+            {
+                if (PointsOfViewPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j] != PointsOfViewPerMicroScenario[CurrentMicroScenario][i].MouseOverSprite)
+                    PointsOfViewPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j].enabled = true;
+            }
         }
     }
 }

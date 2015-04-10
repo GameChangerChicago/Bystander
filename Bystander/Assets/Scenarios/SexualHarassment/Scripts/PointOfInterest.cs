@@ -3,6 +3,24 @@ using System.Collections;
 
 public class PointOfInterest : MonoBehaviour
 {
+    protected bool mouseOver
+    {
+        get
+        {
+            return _mouseOver;
+        }
+        set
+        {
+            if (value)
+                MouseOverSprite.enabled = true;
+            else
+                MouseOverSprite.enabled = false;
+
+            _mouseOver = value;
+        }
+    }
+    private bool _mouseOver;
+
     private SHGameManager _myGameManager;
     private SHVigilHandler _myVirgil;
     private QuizHandler _myQuiz;
@@ -13,6 +31,7 @@ public class PointOfInterest : MonoBehaviour
     protected GameObject myMiniComic;
 
     public Transform InstantiationTransform;
+    public SpriteRenderer MouseOverSprite;
     public bool IsSexualHarassment,
                 ComicShown = false;
 
@@ -45,6 +64,8 @@ public class PointOfInterest : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f) && (Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f).transform.parent.parent != null))
         {
+            if (Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f).transform.parent.parent == this.transform)
+                mouseOver = true;
             if (Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f).transform.parent.parent == this.transform && _myGameManager.FocusedOnPOI == false)
             {
                 if (!ComicShown && Input.GetKeyUp(KeyCode.Mouse0))
@@ -57,6 +78,8 @@ public class PointOfInterest : MonoBehaviour
                 }
             }
         }
+        else
+            mouseOver = false;
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && _showingComic)
         {

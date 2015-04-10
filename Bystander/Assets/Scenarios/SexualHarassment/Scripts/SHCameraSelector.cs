@@ -18,11 +18,16 @@ public class SHCameraSelector : MonoBehaviour
     }
 
     //Disables the box collider and calls FocusOnCamera
-    void OnMouseDown()
+    void OnMouseUp()
     {
         _myCamera.FocusOnCamera();
         _myBoxCollider.enabled = false;
         _myGameManager.CurrentMicroScenario = MyMicroScenario;
+        Invoke("ActivationDelay", 0.01f);
+    }
+
+    private void ActivationDelay()
+    {
         _myGameManager.ActivatePOIs();
     }
 }

@@ -28,11 +28,6 @@ AnimationClip:
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
-      - time: 2
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Enabled
@@ -52,11 +47,6 @@ AnimationClip:
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
-      - time: 2
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Enabled
@@ -71,6 +61,15 @@ AnimationClip:
       value: {fileID: 21300002, guid: 5be6aca5fc0bf60499ae5f03b855dcc8, type: 3}
     attribute: m_Sprite
     path: CoupleSprite
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 6a48f56cc8633ba43b4a8a99eabc91ae, type: 3}
+    - time: 1
+      value: {fileID: 21300002, guid: 6a48f56cc8633ba43b4a8a99eabc91ae, type: 3}
+    attribute: m_Sprite
+    path: CoupleSelectedSprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 1
@@ -98,9 +97,17 @@ AnimationClip:
       classID: 212
       customType: 23
       isPPtrCurve: 1
+    - path: 2887301160
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 5be6aca5fc0bf60499ae5f03b855dcc8, type: 3}
     - {fileID: 21300002, guid: 5be6aca5fc0bf60499ae5f03b855dcc8, type: 3}
+    - {fileID: 21300000, guid: 6a48f56cc8633ba43b4a8a99eabc91ae, type: 3}
+    - {fileID: 21300002, guid: 6a48f56cc8633ba43b4a8a99eabc91ae, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
@@ -132,11 +139,6 @@ AnimationClip:
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
-      - time: 2
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Enabled
@@ -153,11 +155,6 @@ AnimationClip:
         tangentMode: 31
       - time: 1
         value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: 2
-        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31

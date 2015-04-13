@@ -14,19 +14,100 @@ AnimationClip:
   m_CompressedRotationCurves: []
   m_PositionCurves: []
   m_ScaleCurves: []
-  m_FloatCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: Colliders/Collider1
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: Colliders/Collider2
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: Colliders/Collider3
+    classID: 1
+    script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
+      value: {fileID: 21300000, guid: 39f62ad7714bd134d92ea02c4b2f0b51, type: 3}
     - time: 1
-      value: {fileID: 21300004, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
+      value: {fileID: 21300004, guid: 39f62ad7714bd134d92ea02c4b2f0b51, type: 3}
     - time: 2
-      value: {fileID: 21300004, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
-    - time: 3
-      value: {fileID: 21300002, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
+      value: {fileID: 21300002, guid: 39f62ad7714bd134d92ea02c4b2f0b51, type: 3}
     attribute: m_Sprite
-    path: 
+    path: NoteSelectSprite
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300008, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
+    - time: 1
+      value: {fileID: 21300012, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
+    - time: 2
+      value: {fileID: 21300010, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
+    attribute: m_Sprite
+    path: NoteSprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 1
@@ -36,21 +117,47 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 0
+    - path: 19129721
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2552935619
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4012737621
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1721201297
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - path: 2462369331
       attribute: 0
       script: {fileID: 0}
       classID: 212
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
-    - {fileID: 21300004, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
-    - {fileID: 21300004, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
-    - {fileID: 21300002, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
+    - {fileID: 21300000, guid: 39f62ad7714bd134d92ea02c4b2f0b51, type: 3}
+    - {fileID: 21300004, guid: 39f62ad7714bd134d92ea02c4b2f0b51, type: 3}
+    - {fileID: 21300002, guid: 39f62ad7714bd134d92ea02c4b2f0b51, type: 3}
+    - {fileID: 21300008, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
+    - {fileID: 21300012, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
+    - {fileID: 21300010, guid: 508284547bf40c840b55d29c9c25032e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 4
+    m_StopTime: 3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -64,6 +171,78 @@ AnimationClip:
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0
     m_Mirror: 0
-  m_EditorCurves: []
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: Colliders/Collider1
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: Colliders/Collider2
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: Colliders/Collider3
+    classID: 1
+    script: {fileID: 0}
   m_EulerEditorCurves: []
   m_Events: []

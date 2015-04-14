@@ -12,9 +12,21 @@ public class PointOfInterest : MonoBehaviour
         set
         {
             if (value)
+            {
                 MouseOverSprite.enabled = true;
+
+                _myGameManager.DeselectPOIs(this);
+
+                if (CompanionPOI != null)
+                    CompanionPOI.MouseOverSprite.enabled = true;
+            }
             else
+            {
                 MouseOverSprite.enabled = false;
+
+                if (CompanionPOI != null)
+                    CompanionPOI.MouseOverSprite.enabled = false;
+            }
 
             _mouseOver = value;
         }
@@ -30,6 +42,7 @@ public class PointOfInterest : MonoBehaviour
 
     protected GameObject myMiniComic;
 
+    public PointOfInterest CompanionPOI;
     public Transform InstantiationTransform;
     public SpriteRenderer MouseOverSprite;
     public bool IsSexualHarassment,

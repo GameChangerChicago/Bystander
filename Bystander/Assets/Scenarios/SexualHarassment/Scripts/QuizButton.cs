@@ -70,6 +70,8 @@ public class QuizButton : MonoBehaviour
                 _myVirgil.IsCorrect = false;
                 //_myVirgil.ShowStringSegment();
                 _myGameManager.CurrentPOI.ComicShown = false;
+                if (_myGameManager.CurrentPOI.CompanionPOI != null)
+                    _myGameManager.CurrentPOI.CompanionPOI.ComicShown = false;
                 Invoke("ReenablePOIs", 0.05f);
                 _myGameManager.WrongAnswerCounter++;
 

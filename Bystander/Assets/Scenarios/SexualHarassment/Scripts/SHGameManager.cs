@@ -27,7 +27,7 @@ public class SHGameManager : MonoBehaviour
 {
     static Dictionary<ButtonType, bool> AnswersSelected = new Dictionary<ButtonType, bool>();
 
-    private Dictionary<MicroScenarios, PointOfInterest[]> PointsOfViewPerMicroScenario = new Dictionary<MicroScenarios, PointOfInterest[]>();
+    private Dictionary<MicroScenarios, PointOfInterest[]> PointsOfInterestPerMicroScenario = new Dictionary<MicroScenarios, PointOfInterest[]>();
     private SHVigilHandler _myVirgil;
     private int _sectionsCompleted;
 
@@ -125,9 +125,9 @@ public class SHGameManager : MonoBehaviour
 
     private void InitializePointsOfView()
     {
-        PointsOfViewPerMicroScenario.Add(MicroScenarios.Hallway, GameObject.Find("Hallway").GetComponentsInChildren<PointOfInterest>());
-        PointsOfViewPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
-        PointsOfViewPerMicroScenario.Add(MicroScenarios.Library, GameObject.Find("Library").GetComponentsInChildren<PointOfInterest>());
+        PointsOfInterestPerMicroScenario.Add(MicroScenarios.Hallway, GameObject.Find("Hallway").GetComponentsInChildren<PointOfInterest>());
+        PointsOfInterestPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
+        PointsOfInterestPerMicroScenario.Add(MicroScenarios.Library, GameObject.Find("Library").GetComponentsInChildren<PointOfInterest>());
         //PointsOfViewPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
         //PointsOfViewPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
         foreach (PointOfInterest poi in GameObject.FindObjectsOfType<PointOfInterest>())
@@ -139,14 +139,23 @@ public class SHGameManager : MonoBehaviour
 
     public void ActivatePOIs()
     {
-        for (int i = 0; i < PointsOfViewPerMicroScenario[CurrentMicroScenario].Length; i++)
+        for (int i = 0; i < PointsOfInterestPerMicroScenario[CurrentMicroScenario].Length; i++)
         {
-            PointsOfViewPerMicroScenario[CurrentMicroScenario][i].enabled = true;
-            for (int j = 0; j < PointsOfViewPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>().Length; j++)
+            PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].enabled = true;
+            for (int j = 0; j < PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>().Length; j++)
             {
-                if (PointsOfViewPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j] != PointsOfViewPerMicroScenario[CurrentMicroScenario][i].MouseOverSprite)
-                    PointsOfViewPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j].enabled = true;
+                if (PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j] != PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].MouseOverSprite)
+                    PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j].enabled = true;
             }
+        }
+    }
+
+    public void DeselectPOIs(PointOfInterest poi)
+    {
+        for (int i = 0; i < PointsOfInterestPerMicroScenario[CurrentMicroScenario].Length; i++)
+        {
+            if (poi != PointsOfInterestPerMicroScenario[CurrentMicroScenario][i])
+                PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].MouseOverSprite.enabled = false;
         }
     }
 }

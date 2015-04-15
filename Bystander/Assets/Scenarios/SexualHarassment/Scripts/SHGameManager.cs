@@ -128,7 +128,7 @@ public class SHGameManager : MonoBehaviour
         PointsOfInterestPerMicroScenario.Add(MicroScenarios.Hallway, GameObject.Find("Hallway").GetComponentsInChildren<PointOfInterest>());
         PointsOfInterestPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
         PointsOfInterestPerMicroScenario.Add(MicroScenarios.Library, GameObject.Find("Library").GetComponentsInChildren<PointOfInterest>());
-        //PointsOfViewPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
+        PointsOfInterestPerMicroScenario.Add(MicroScenarios.Gym, GameObject.Find("Gym").GetComponentsInChildren<PointOfInterest>());
         //PointsOfViewPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
         foreach (PointOfInterest poi in GameObject.FindObjectsOfType<PointOfInterest>())
         {
@@ -145,7 +145,10 @@ public class SHGameManager : MonoBehaviour
             for (int j = 0; j < PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>().Length; j++)
             {
                 if (PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j] != PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].MouseOverSprite)
+                {
                     PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j].enabled = true;
+                    Debug.Log(PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j].enabled);
+                }
             }
         }
     }

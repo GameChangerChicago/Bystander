@@ -8,6 +8,7 @@ public class SHCameraSelector : MonoBehaviour
     private BoxCollider _myBoxCollider;
 
     public MicroScenarios MyMicroScenario;
+    public SpriteRenderer MySelectSprite;
 
     void Start()
     {
@@ -15,6 +16,21 @@ public class SHCameraSelector : MonoBehaviour
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myCamera = this.transform.parent.GetComponent<SHCameraManager>();
         _myBoxCollider = this.GetComponent<BoxCollider>();
+    }
+
+    void Update()
+    {
+        Collider2D mouseCollision = Physics2D.OverlapCircle(_myCamera.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition), 0.01f);
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(_myCamera.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition), Vector3.forward, out hit))
+        {
+            if (hit.collider.transform == this.transform)
+                MySelectSprite.enabled = true;
+        }
+        else
+            MySelectSprite.enabled = false;
     }
 
     //Disables the box collider and calls FocusOnCamera

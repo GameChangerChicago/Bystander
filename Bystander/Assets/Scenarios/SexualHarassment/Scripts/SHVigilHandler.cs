@@ -65,10 +65,13 @@ public class SHVigilHandler : MonoBehaviour
                 this.transform.position = MicroScenarioTransforms[1].position;
                 break;
             case MicroScenarios.Bathroom:
+                this.transform.position = MicroScenarioTransforms[4].position;
                 break;
             case MicroScenarios.Gym:
+                this.transform.position = MicroScenarioTransforms[3].position;
                 break;
             case MicroScenarios.Library:
+                this.transform.position = MicroScenarioTransforms[2].position;
                 break;
             default:
                 Debug.Log("There is no such Micro Scenario. Something very strange is happening...");

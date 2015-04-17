@@ -20,9 +20,9 @@ public class InterventionManager : MonoBehaviour
 
         _interventionPositions[0] = new Vector3(26.78879f, -35.70682f, -15.32112f);
         _interventionPositions[1] = new Vector3(16.9052f, -84.01974f, -15.32112f);
-        _interventionPositions[2] = new Vector3(26.78879f, -35.70682f, -15.32112f);
-        _interventionPositions[3] = new Vector3(26.78879f, -35.70682f, -15.32112f);
-        _interventionPositions[4] = new Vector3(26.78879f, -35.70682f, -15.32112f);
+        _interventionPositions[2] = new Vector3(15.63024f, -235.9857f, -15.32112f);
+        _interventionPositions[3] = new Vector3(16.7015f, -190.4575f, -15.32112f);
+        _interventionPositions[4] = new Vector3(17.23712f, -138.5017f, -15.32112f);
     }
 
     void OnMouseDown()

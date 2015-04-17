@@ -126,10 +126,10 @@ public class SHGameManager : MonoBehaviour
     private void InitializePointsOfView()
     {
         PointsOfInterestPerMicroScenario.Add(MicroScenarios.Hallway, GameObject.Find("Hallway").GetComponentsInChildren<PointOfInterest>());
-        //PointsOfInterestPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
-        //PointsOfInterestPerMicroScenario.Add(MicroScenarios.Library, GameObject.Find("Library").GetComponentsInChildren<PointOfInterest>());
-        //PointsOfInterestPerMicroScenario.Add(MicroScenarios.Gym, GameObject.Find("Gym").GetComponentsInChildren<PointOfInterest>());
-        //PointsOfInterestPerMicroScenario.Add(MicroScenarios.Bathroom, GameObject.Find("Bathroom").GetComponentsInChildren<PointOfInterest>());
+        PointsOfInterestPerMicroScenario.Add(MicroScenarios.Classroom, GameObject.Find("Classroom").GetComponentsInChildren<PointOfInterest>());
+        PointsOfInterestPerMicroScenario.Add(MicroScenarios.Library, GameObject.Find("Library").GetComponentsInChildren<PointOfInterest>());
+        PointsOfInterestPerMicroScenario.Add(MicroScenarios.Gym, GameObject.Find("Gym").GetComponentsInChildren<PointOfInterest>());
+        PointsOfInterestPerMicroScenario.Add(MicroScenarios.Bathroom, GameObject.Find("Bathroom").GetComponentsInChildren<PointOfInterest>());
         foreach (PointOfInterest poi in GameObject.FindObjectsOfType<PointOfInterest>())
         {
             poi.enabled = false;

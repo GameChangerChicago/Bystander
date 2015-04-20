@@ -847,8 +847,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Well he kept trying to take my pants off even though I kept telling
-          him I wasn't ready.
+        value: He kept trying to take my pants off even though I told him I wasn't
+          ready.
         type: 0
       - title: Parenthetical
         value: 
@@ -1340,7 +1340,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -1397,7 +1397,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -2148,7 +2148,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -2205,7 +2205,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -2737,7 +2737,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -2794,7 +2794,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -3386,7 +3386,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -3443,7 +3443,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -4037,7 +4037,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -4094,7 +4094,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -4151,7 +4151,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "Yeah, I never thought it could happen to me, but you\u2019re right."
+        value: "I never thought it could happen to me, but you\u2019re right."
         type: 0
       - title: Parenthetical
         value: 
@@ -4293,7 +4293,25 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 66
         destinationConversationID: 1
-        destinationDialogueID: 131
+        destinationDialogueID: 68
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 66
+        destinationConversationID: 1
+        destinationDialogueID: 69
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 66
+        destinationConversationID: 1
+        destinationDialogueID: 70
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 66
+        destinationConversationID: 1
+        destinationDialogueID: 71
         isConnector: 0
         priority: 2
       conditionsString: ((Variable["Myth6"]==false) and (Variable["Wrong"]>=-1) and
@@ -4303,8 +4321,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 302
-        y: 1578
+        x: 184
+        y: 1610
         width: 160
         height: 30
     - id: 67
@@ -4785,7 +4803,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -4842,7 +4860,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -4874,7 +4892,7 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 320
+        x: 321
         y: 1752
         width: 160
         height: 30
@@ -5376,7 +5394,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -5433,7 +5451,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: Oh-
+        value: Oh.
         type: 0
       - title: Parenthetical
         value: 
@@ -5519,8 +5537,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 806
-        y: 2177
+        x: 719
+        y: 2159
         width: 160
         height: 30
     - id: 88
@@ -5544,7 +5562,8 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: I believe you and support you, Holly.
+        value: There is nothing you did to make this happen. I believe you, Holly,
+          and support you in whatever you choose to do.
         type: 0
       - title: Parenthetical
         value: 
@@ -5580,8 +5599,8 @@ MonoBehaviour:
         Variable["Affect"] = "Helpful";'
       canvasRect:
         serializedVersion: 2
-        x: 395
-        y: 2021
+        x: 401
+        y: 2028
         width: 160
         height: 30
     - id: 89
@@ -5648,7 +5667,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "He\u2019s been so sweet in the past, and mostly a really great boyfriend."
+        value: "He\u2019s been so sweet in the past and a really great boyfriend."
         type: 0
       - title: Parenthetical
         value: 
@@ -6095,8 +6114,8 @@ MonoBehaviour:
         Variable["FacingGina"] = true;'
       canvasRect:
         serializedVersion: 2
-        x: 494
-        y: 1614
+        x: 464
+        y: 1616
         width: 160
         height: 30
     - id: 96
@@ -6509,8 +6528,7 @@ MonoBehaviour:
         value: 
         type: 0
       - title: Dialogue Text
-        value: "I didn\u2019t want to, I really didn\u2019t, but he just wasn\u2019t
-          listening. It was horrible."
+        value: "I didn\u2019t want to. He just wasn\u2019t listening. It was horrible."
         type: 0
       - title: Video File
         value: 
@@ -7670,8 +7688,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 599
-        y: 1540
+        x: 572
+        y: 1547
         width: 160
         height: 30
     - id: 130
@@ -7717,69 +7735,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 929
         y: 1525
-        width: 160
-        height: 30
-    - id: 131
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-      - title: Actor
-        value: 2
-        type: 5
-      - title: Conversant
-        value: 1
-        type: 5
-      - title: Menu Text
-        value: 
-        type: 0
-      - title: Dialogue Text
-        value: "Also, he didn\u2019t have a weapon."
-        type: 0
-      - title: Video File
-        value: 
-        type: 0
-      - title: Sequence
-        value: 
-        type: 0
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 131
-        destinationConversationID: 1
-        destinationDialogueID: 68
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 131
-        destinationConversationID: 1
-        destinationDialogueID: 69
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 131
-        destinationConversationID: 1
-        destinationDialogueID: 70
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 131
-        destinationConversationID: 1
-        destinationDialogueID: 71
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 96
-        y: 1608
         width: 160
         height: 30
     - id: 132

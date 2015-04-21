@@ -16,7 +16,12 @@ public class CutSceneManager : MonoBehaviour
 
     void OnMouseDown()
     {
-        SetCameraToMove();
+        if (Page[_currentStep].CameraChange)
+            SetCameraToMove();
+
+        if (Page[_currentStep].MyAnimation != null)
+            Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
+
         _currentStep++;
     }
 
@@ -24,6 +29,12 @@ public class CutSceneManager : MonoBehaviour
     {
         if (_movingCamera)
             MoveCameraTo();
+    }
+
+    private void FireAnimation()
+    {
+        Page[_currentStep].MyAnimation.clip = Page[_currentStep].MyAnimationClip;
+        Page[_currentStep].MyAnimation.Play();
     }
 
     //This method initializes the moving process; setting impertinant fields and also invokes StopMoving
@@ -39,6 +50,7 @@ public class CutSceneManager : MonoBehaviour
         Invoke("StopMoving", Page[_currentStep].CamTravelTime);
     }
 
+    //This method moves and resizes the camera for each page section
     private void MoveCameraTo()
     {
         //Using the iTween method MoveTo we set an object to move, a location, and a speed; iTween handles the rest

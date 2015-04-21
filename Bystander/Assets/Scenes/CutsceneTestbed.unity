@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyAnimation: {fileID: 0}
+  MyAnimationClip: {fileID: 0}
   CamRectangle:
     serializedVersion: 2
     x: .939999998
@@ -110,6 +112,7 @@ MonoBehaviour:
   CamLocation: {x: -1.69000006, y: -.310000002}
   CamSize: 1.78999996
   CamTravelTime: 1
+  CameraChange: 1
 --- !u!4 &18037950
 Transform:
   m_ObjectHideFlags: 0
@@ -149,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyAnimation: {fileID: 0}
+  MyAnimationClip: {fileID: 0}
   CamRectangle:
     serializedVersion: 2
     x: .254999995
@@ -158,6 +163,7 @@ MonoBehaviour:
   CamLocation: {x: 2.86999989, y: -.289999992}
   CamSize: 2.1099999
   CamTravelTime: 1
+  CameraChange: 1
 --- !u!4 &284281329
 Transform:
   m_ObjectHideFlags: 0
@@ -315,6 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyAnimation: {fileID: 0}
+  MyAnimationClip: {fileID: 0}
   CamRectangle:
     serializedVersion: 2
     x: .939999998
@@ -324,6 +332,7 @@ MonoBehaviour:
   CamLocation: {x: -1.69000006, y: -.310000002}
   CamSize: 1.78999996
   CamTravelTime: 1
+  CameraChange: 1
 --- !u!4 &1480785498
 Transform:
   m_ObjectHideFlags: 0
@@ -363,6 +372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyAnimation: {fileID: 0}
+  MyAnimationClip: {fileID: 0}
   CamRectangle:
     serializedVersion: 2
     x: .0299999993
@@ -372,6 +383,7 @@ MonoBehaviour:
   CamLocation: {x: -1.69000006, y: -.310000002}
   CamSize: 1.78999996
   CamTravelTime: 1
+  CameraChange: 1
 --- !u!4 &1671838806
 Transform:
   m_ObjectHideFlags: 0

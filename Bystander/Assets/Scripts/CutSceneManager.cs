@@ -16,11 +16,14 @@ public class CutSceneManager : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (Page[_currentStep].CameraChange)
+        if (Page[_currentStep].CamTravelTime > 0)
             SetCameraToMove();
 
         if (Page[_currentStep].MyAnimation != null)
             Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
+
+        if (Page[_currentStep].MyTextMesh != null)
+            ChangeDialog();
 
         _currentStep++;
     }
@@ -35,6 +38,56 @@ public class CutSceneManager : MonoBehaviour
     {
         Page[_currentStep].MyAnimation.clip = Page[_currentStep].MyAnimationClip;
         Page[_currentStep].MyAnimation.Play();
+    }
+
+    private void ChangeDialog()
+    {
+        StringFormatter(Page[_currentStep].MyText);
+    }
+
+    //This method takes current string and makes sure it doesn't run outhside the bounds of the dialog box
+    private void StringFormatter(string lineContent)
+    {
+        string currentWord = "";
+        bool isFirstWord = true;
+        Renderer currentRenderer;
+        GameObject dialogBox = Page[_currentStep].TextBox;
+
+        currentRenderer = dialogBox.GetComponentInChildren<Renderer>();
+        dialogBox.GetComponentInChildren<TextMesh>().text = currentWord;
+
+        for (int i = 0; i < lineContent.Length; i++)
+        {
+            //As long as the char isn't a ' ' then it will be added to currentWord
+            if (lineContent[i] != ' ')
+            {
+                currentWord = currentWord + lineContent[i];
+            }
+            else
+            {
+                //If currentWord is the first word it is added to the to the dialog box
+                if (isFirstWord)
+                {
+                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + currentWord;
+
+                    isFirstWord = false;
+                }
+                else // Otherwise it adds the current word with a space before the word.
+                {
+                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + " " + currentWord;
+                }
+
+                //If after adding the word the line extends past the TextBounds then the word will be added with a line break
+                if (currentRenderer.bounds.extents.x > Page[_currentStep].TextBounds)
+                {
+                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text.Remove(dialogBox.GetComponentInChildren<TextMesh>().text.Length - (currentWord.Length + 1));
+                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + "\n" + currentWord;
+                }
+
+                //Resets the current word each time
+                currentWord = "";
+            }
+        }
     }
 
     //This method initializes the moving process; setting impertinant fields and also invokes StopMoving

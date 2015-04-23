@@ -3,8 +3,7 @@ using System.Collections;
 
 public class Step : MonoBehaviour
 {
-    public Animation MyAnimation;
-    public AnimationClip MyAnimationClip;
+    public Animator MyAnimator;
     public TextMesh MyTextMesh;
     public GameObject TextBox;
     public Rect CamRectangle;
@@ -13,4 +12,5 @@ public class Step : MonoBehaviour
     public float CamSize,
                  CamTravelTime,
                  TextBounds;
+    public int AnimatorIndex;
 }

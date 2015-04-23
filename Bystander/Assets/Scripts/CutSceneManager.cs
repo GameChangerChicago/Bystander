@@ -19,7 +19,7 @@ public class CutSceneManager : MonoBehaviour
         if (Page[_currentStep].CamTravelTime > 0)
             SetCameraToMove();
 
-        if (Page[_currentStep].MyAnimation != null)
+        if (Page[_currentStep].MyAnimator != null)
             Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
 
         if (Page[_currentStep].MyTextMesh != null)
@@ -36,8 +36,8 @@ public class CutSceneManager : MonoBehaviour
 
     private void FireAnimation()
     {
-        Page[_currentStep].MyAnimation.clip = Page[_currentStep].MyAnimationClip;
-        Page[_currentStep].MyAnimation.Play();
+        Page[_currentStep].MyAnimator.SetInteger("AnimatorIndex", Page[_currentStep].AnimatorIndex);
+        Page[_currentStep].MyAnimator.enabled = true;
     }
 
     private void ChangeDialog()

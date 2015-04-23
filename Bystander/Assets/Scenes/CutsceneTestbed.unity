@@ -101,8 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimation: {fileID: 0}
-  MyAnimationClip: {fileID: 0}
+  MyAnimator: {fileID: 0}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
@@ -116,6 +115,8 @@ MonoBehaviour:
   CamSize: 1.78999996
   CamTravelTime: 1
   TextBounds: 0
+  AnimatorIndex: 0
+  PlayImmediately: 0
 --- !u!4 &18037950
 Transform:
   m_ObjectHideFlags: 0
@@ -137,7 +138,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 173034982}
   - 212: {fileID: 173034981}
-  - 111: {fileID: 173034980}
+  - 95: {fileID: 173034980}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -145,21 +146,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!111 &173034980
-Animation:
+--- !u!95 &173034980
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173034979}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 4b00783861e95c847bdff23c63f542df, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 84d8d9430860de346ae522522d2c13fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &173034981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -189,8 +190,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173034979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.07681608, y: 3.9489367, z: -1.49000001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -.8054322, y: -.349551916, z: -1.49000001}
+  m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -221,8 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimation: {fileID: 0}
-  MyAnimationClip: {fileID: 0}
+  MyAnimator: {fileID: 0}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
@@ -236,6 +236,8 @@ MonoBehaviour:
   CamSize: 2.1099999
   CamTravelTime: 1
   TextBounds: 0
+  AnimatorIndex: 0
+  PlayImmediately: 0
 --- !u!4 &284281329
 Transform:
   m_ObjectHideFlags: 0
@@ -381,7 +383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &483845899
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -411,7 +413,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 483845898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.41826439, y: 6.19951153, z: -1.0078125}
+  m_LocalPosition: {x: -3.35772228, y: -.883912563, z: -1.0078125}
   m_LocalScale: {x: 275, y: 200, z: 1}
   m_Children:
   - {fileID: 727306918}
@@ -441,8 +443,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 727306917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0046972204, y: .00400244212, z: 0}
-  m_LocalScale: {x: .000545454561, y: .000750000007, z: 1}
+  m_LocalPosition: {x: -.00457710447, y: .00422265381, z: 0}
+  m_LocalScale: {x: .00363636366, y: .00499999989, z: 1}
   m_Children: []
   m_Father: {fileID: 483845900}
   m_RootOrder: 0
@@ -453,14 +455,14 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 727306917}
-  m_Text: Yo, what's up. Yo yo, what's up.
+  m_Text: 
   m_OffsetZ: -1
-  m_CharacterSize: 1
+  m_CharacterSize: .00999999978
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 250
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 68b1ba0d65756244192edd6201fdb2c9, type: 3}
@@ -514,8 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimation: {fileID: 0}
-  MyAnimationClip: {fileID: 0}
+  MyAnimator: {fileID: 0}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
@@ -529,6 +530,8 @@ MonoBehaviour:
   CamSize: 1.78999996
   CamTravelTime: 1
   TextBounds: 0
+  AnimatorIndex: 0
+  PlayImmediately: 0
 --- !u!4 &1480785498
 Transform:
   m_ObjectHideFlags: 0
@@ -568,10 +571,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimation: {fileID: 0}
-  MyAnimationClip: {fileID: 0}
-  MyTextMesh: {fileID: 0}
-  TextBox: {fileID: 0}
+  MyAnimator: {fileID: 173034980}
+  MyTextMesh: {fileID: 727306919}
+  TextBox: {fileID: 483845898}
   CamRectangle:
     serializedVersion: 2
     x: .0299999993
@@ -579,10 +581,12 @@ MonoBehaviour:
     width: .939999998
     height: 1
   CamLocation: {x: -1.69000006, y: -.310000002}
-  MyText: 
+  MyText: 'Hi everybody! It''s me. It''s me. It''s King DDD. '
   CamSize: 1.78999996
   CamTravelTime: 1
-  TextBounds: 0
+  TextBounds: 1.5
+  AnimatorIndex: 0
+  PlayImmediately: 0
 --- !u!4 &1671838806
 Transform:
   m_ObjectHideFlags: 0
@@ -604,9 +608,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1713528199}
   - 20: {fileID: 1713528198}
-  - 92: {fileID: 1713528197}
-  - 124: {fileID: 1713528196}
-  - 81: {fileID: 1713528195}
   m_Layer: 0
   m_Name: BackgroundCamera
   m_TagString: MainCamera
@@ -614,27 +615,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1713528195
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1713528194}
-  m_Enabled: 1
---- !u!124 &1713528196
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1713528194}
-  m_Enabled: 1
---- !u!92 &1713528197
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1713528194}
-  m_Enabled: 1
 --- !u!20 &1713528198
 Camera:
   m_ObjectHideFlags: 0

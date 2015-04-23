@@ -19,8 +19,10 @@ public class CutSceneManager : MonoBehaviour
         if (Page[_currentStep].CamTravelTime > 0)
             SetCameraToMove();
 
-        if (Page[_currentStep].MyAnimator != null)
+        if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayImmediately)
             Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
+        else if (Page[_currentStep].MyAnimator != null)
+            FireAnimation();
 
         if (Page[_currentStep].MyTextMesh != null)
             ChangeDialog();
@@ -53,10 +55,10 @@ public class CutSceneManager : MonoBehaviour
     {
         string currentWord = "";
         bool isFirstWord = true;
-        Renderer currentRenderer;
+        MeshRenderer currentRenderer;
         GameObject dialogBox = Page[_currentStep].TextBox;
 
-        currentRenderer = dialogBox.GetComponentInChildren<Renderer>();
+        currentRenderer = dialogBox.GetComponentInChildren<MeshRenderer>();
         dialogBox.GetComponentInChildren<TextMesh>().text = currentWord;
 
         for (int i = 0; i < lineContent.Length; i++)
@@ -64,7 +66,7 @@ public class CutSceneManager : MonoBehaviour
             //As long as the char isn't a ' ' then it will be added to currentWord
             if (lineContent[i] != ' ')
             {
-                currentWord = currentWord + lineContent[i];
+                currentWord += lineContent[i];
             }
             else
             {
@@ -77,13 +79,16 @@ public class CutSceneManager : MonoBehaviour
                 }
                 else // Otherwise it adds the current word with a space before the word.
                 {
+                    Debug.Log(currentRenderer.bounds.extents.x);
                     dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + " " + currentWord;
+                    Debug.Log(currentRenderer.name);
+                    Debug.Log(currentRenderer.bounds.extents.x);
                 }
 
                 //If after adding the word the line extends past the TextBounds then the word will be added with a line break
                 if (currentRenderer.bounds.extents.x > Page[_currentStep].TextBounds)
                 {
-                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text.Remove(dialogBox.GetComponentInChildren<TextMesh>().text.Length - (currentWord.Length + 1));
+                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text.Remove(dialogBox.GetComponentInChildren<TextMesh>().text.Length - (currentWord.Length));
                     dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + "\n" + currentWord;
                 }
 

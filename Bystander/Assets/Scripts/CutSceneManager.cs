@@ -42,6 +42,9 @@ public class CutSceneManager : MonoBehaviour
 
     private void ChangeDialog()
     {
+        if (!Page[_currentStep].TextBox.active)
+            Page[_currentStep].TextBox.SetActive(true);
+
         StringFormatter(Page[_currentStep].MyText);
     }
 

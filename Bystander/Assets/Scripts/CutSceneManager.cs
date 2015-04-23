@@ -25,7 +25,7 @@ public class CutSceneManager : MonoBehaviour
         if (Page[_currentStep].MyTextMesh != null)
             ChangeDialog();
 
-        _currentStep++;
+        Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.05f);
     }
 
     void Update()
@@ -168,5 +168,10 @@ public class CutSceneManager : MonoBehaviour
             height = _rect.height;
         }
         this.camera.rect = new Rect(x, y, width, height);
+    }
+
+    private void AdvanceStep()
+    {
+        _currentStep++;
     }
 }

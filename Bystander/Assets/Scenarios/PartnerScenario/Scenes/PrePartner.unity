@@ -178,9 +178,11 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: 16.9450092, y: 0}
   MyText: 'Gina, I have to talk to you. '
+  SceneToLoad: 
   CamSize: 5.80000019
-  CamTravelTime: 4
+  CamTravelTime: 3
   TextBounds: 3
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!4 &48939726
@@ -381,9 +383,11 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: 20.1725101, y: -11.1857004}
   MyText: 'What do you Mean? '
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   TextBounds: 2.5
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!1 &103496276
@@ -759,9 +763,11 @@ MonoBehaviour:
     height: 0
   CamLocation: {x: 0, y: 0}
   MyText: 'Something happened Friday night... I''m just not sure what to do. '
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   TextBounds: 3
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!4 &259101273
@@ -827,11 +833,70 @@ MonoBehaviour:
   CamLocation: {x: 20.1725101, y: -11.1857004}
   MyText: 'Remember how I was telling you Isaac and I have been talking about sex
     lately? '
+  SceneToLoad: 
   CamSize: 5.5999999
-  CamTravelTime: 3
+  CamTravelTime: 2
   TextBounds: 2.5
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
+--- !u!1 &328682638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 328682640}
+  - 114: {fileID: 328682639}
+  m_Layer: 0
+  m_Name: Step
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &328682639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328682638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  MyTextMesh: {fileID: 0}
+  TextBox: {fileID: 0}
+  CamRectangle:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  CamLocation: {x: 0, y: 0}
+  MyText: 'Afterwards, we just watched TV and then he walked me home. '
+  SceneToLoad: PartnerScenario
+  CamSize: 0
+  CamTravelTime: 0
+  TextBounds: 0
+  ClickDelay: 0
+  AnimatorIndex: 0
+  PlayImmediately: 1
+--- !u!4 &328682640
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328682638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.9218197, y: -22.8364563, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 721782357}
+  m_RootOrder: 15
 --- !u!1 &333266318
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,9 +1018,11 @@ MonoBehaviour:
   CamLocation: {x: 20.1725101, y: -11.1857004}
   MyText: 'Well, when we got to his house we were making out and that felt really
     good, but then things started getting intense. '
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   TextBounds: 2.5
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!1 &376076262
@@ -1008,9 +1075,11 @@ MonoBehaviour:
     height: 0
   CamLocation: {x: 0, y: 0}
   MyText: 'Afterwards, we just watched TV and then he walked me home. '
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   TextBounds: 5
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 1
 --- !u!1 &412788306
@@ -1064,9 +1133,11 @@ MonoBehaviour:
   CamLocation: {x: 0, y: 0}
   MyText: 'It was great and afterwards, Isaac took me to his place and gave me this
     bracelet. '
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   TextBounds: 3.70000005
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!1 &415976470
@@ -1353,9 +1424,11 @@ MonoBehaviour:
   CamLocation: {x: 20.9218197, y: -24.1781902}
   MyText: "You want to know what he said to me? \u201CDon\u2019t worry, baby. You\u2019re
     gonna like it.\u201D "
+  SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 20
   TextBounds: 40
+  ClickDelay: 1.5
   AnimatorIndex: 1
   PlayImmediately: 1
 --- !u!1 &606116708
@@ -1491,9 +1564,11 @@ MonoBehaviour:
   CamLocation: {x: -2.01467204, y: -24.1781902}
   MyText: 'Well, he kept trying to take my pants off even though I kept telling him
     I wasn''t ready. '
+  SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 4
   TextBounds: 6
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!1 &676299302
@@ -1716,6 +1791,7 @@ Transform:
   - {fileID: 566584322}
   - {fileID: 1881920160}
   - {fileID: 376076263}
+  - {fileID: 328682640}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &721782358
@@ -1745,6 +1821,7 @@ MonoBehaviour:
   - {fileID: 566584323}
   - {fileID: 1881920161}
   - {fileID: 376076264}
+  - {fileID: 328682639}
 --- !u!65 &721782359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2378,9 +2455,11 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: 6.82338476, y: -11.1857004}
   MyText: 'Whoa, girl, that bracelet is beautiful. '
+  SceneToLoad: 
   CamSize: 5.5999999
-  CamTravelTime: 2
+  CamTravelTime: 1
   TextBounds: 3
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!4 &995760036
@@ -2516,9 +2595,11 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: 6.82338476, y: -11.1857004}
   MyText: 'I know. '
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   TextBounds: 3
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!1 &1087214368
@@ -2918,9 +2999,11 @@ MonoBehaviour:
     height: 0
   CamLocation: {x: 0, y: 0}
   MyText: 'What''s Wrong? '
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   TextBounds: 3
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!4 &1297095863
@@ -3390,9 +3473,11 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: -5.72920179, y: -11.4084101}
   MyText: 'Well Isaac and I went out ice skating on Friday, remember? '
+  SceneToLoad: 
   CamSize: 5.80000019
-  CamTravelTime: 4
+  CamTravelTime: 3
   TextBounds: 3.5
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!4 &1604126228
@@ -3965,9 +4050,11 @@ MonoBehaviour:
   CamLocation: {x: 0, y: 0}
   MyText: "I didn\u2019t want to, I really didn\u2019t, but he just wasn\u2019t listening.
     It was horrible. "
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   TextBounds: 5
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 1
 --- !u!1 &1901654976
@@ -4122,9 +4209,11 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: 2.11047697, y: -10.05935}
   MyText: "It was all so romantic. But uh\u2026 "
+  SceneToLoad: 
   CamSize: 4
-  CamTravelTime: 2
+  CamTravelTime: 1
   TextBounds: 3
+  ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
 --- !u!1 &2018552068

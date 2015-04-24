@@ -8,10 +8,12 @@ public class Step : MonoBehaviour
     public GameObject TextBox;
     public Rect CamRectangle;
     public Vector2 CamLocation;
-    public string MyText;
+    public string MyText,
+                  SceneToLoad;
     public float CamSize,
                  CamTravelTime,
-                 TextBounds;
+                 TextBounds,
+                 ClickDelay;
     public int AnimatorIndex;
     public bool PlayImmediately;
 }

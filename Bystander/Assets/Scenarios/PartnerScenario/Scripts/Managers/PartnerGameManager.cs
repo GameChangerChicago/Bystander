@@ -221,6 +221,8 @@ public class PartnerGameManager : MonoBehaviour
                     _helpfulPrimer = true;
                 else if (Input.GetKeyDown(KeyCode.Mouse0) && _helpfulPrimer && win)
                 {
+                    DialogueManager.StopConversation();
+                    Application.LoadLevel("PostPartner");
                     _currentHollyState = HollyStates.BACK;
                     _affect = "";
                     HollyAnimator.SetBool("Helpful", false);

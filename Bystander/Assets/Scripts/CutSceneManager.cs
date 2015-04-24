@@ -12,22 +12,34 @@ public class CutSceneManager : MonoBehaviour
                   _camSize,
                   _camSizeDiff;
     private int _currentStep;
-    private bool _movingCamera;
+    private bool _movingCamera,
+                 _clickDisabled;
 
     void OnMouseDown()
     {
-        if (Page[_currentStep].CamTravelTime > 0)
-            SetCameraToMove();
+        if (!_clickDisabled && Page[_currentStep].SceneToLoad == "")
+        {
+            if (Page[_currentStep].CamTravelTime > 0)
+                SetCameraToMove();
 
-        if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayImmediately)
-            Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
-        else if (Page[_currentStep].MyAnimator != null)
-            FireAnimation();
+            if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayImmediately)
+                Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
+            else if (Page[_currentStep].MyAnimator != null && !_clickDisabled)
+                FireAnimation();
 
-        if (Page[_currentStep].MyTextMesh != null)
-            ChangeDialog();
+            if (Page[_currentStep].MyTextMesh != null)
+                ChangeDialog();
 
-        Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.05f);
+            Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.05f);
+            if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
+                Invoke("ReEnableClicking", Page[_currentStep].ClickDelay);
+            else
+                Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime);
+
+            _clickDisabled = true;
+        }
+        else if (Page[_currentStep].SceneToLoad != "")
+            Application.LoadLevel(Page[_currentStep].SceneToLoad);
     }
 
     void Update()
@@ -38,7 +50,8 @@ public class CutSceneManager : MonoBehaviour
 
     private void FireAnimation()
     {
-        Page[_currentStep].MyAnimator.SetInteger("AnimatorIndex", Page[_currentStep].AnimatorIndex);
+        if (Page[_currentStep].AnimatorIndex != 0)
+            Page[_currentStep].MyAnimator.SetInteger("AnimatorIndex", Page[_currentStep].AnimatorIndex);
         Page[_currentStep].MyAnimator.enabled = true;
     }
 
@@ -79,10 +92,7 @@ public class CutSceneManager : MonoBehaviour
                 }
                 else // Otherwise it adds the current word with a space before the word.
                 {
-                    Debug.Log(currentRenderer.bounds.extents.x);
                     dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + " " + currentWord;
-                    Debug.Log(currentRenderer.name);
-                    Debug.Log(currentRenderer.bounds.extents.x);
                 }
 
                 //If after adding the word the line extends past the TextBounds then the word will be added with a line break
@@ -114,13 +124,22 @@ public class CutSceneManager : MonoBehaviour
     //This method moves and resizes the camera for each page section
     private void MoveCameraTo()
     {
+        float travelTimeModifier = 1f;
+        Hashtable Values = new Hashtable();
+        Values.Add("x", _pos.x);
+        Values.Add("y", _pos.y);
+        Values.Add("z", this.transform.position.z);
+        Values.Add("time", Page[_currentStep].CamTravelTime);
+        Values.Add("easetype", iTween.EaseType.easeOutQuad);
+
         //Using the iTween method MoveTo we set an object to move, a location, and a speed; iTween handles the rest
-        iTween.MoveTo(this.gameObject, new Vector3(_pos.x, _pos.y, this.transform.position.z), _camTravelTime);
+        //iTween.MoveTo(this.gameObject, new Vector3(_pos.x, _pos.y, this.transform.position.z), _camTravelTime);
+        iTween.MoveTo(this.gameObject, Values);
 
         //If the current camera size is greater than _camSize then we know we need to decrease the size of the camera
         if (this.camera.orthographicSize > _camSize)
         {
-            this.camera.orthographicSize -= _camSizeDiff / (_camTravelTime / Time.deltaTime);
+            this.camera.orthographicSize -= _camSizeDiff / (_camTravelTime / Time.deltaTime * travelTimeModifier);
 
             //Eventually the camera size will be slightly smaller than the desired size; once this happens we simply set the size to _camSize
             if (this.camera.orthographicSize < _camSize)
@@ -128,7 +147,7 @@ public class CutSceneManager : MonoBehaviour
         }
         else if (this.camera.orthographicSize < _camSize) //If the current camera size is less than _camSize then we know we need to increase the size of the camera
         {
-            this.camera.orthographicSize += _camSizeDiff / (_camTravelTime / Time.deltaTime);
+            this.camera.orthographicSize += _camSizeDiff / (_camTravelTime / Time.deltaTime * travelTimeModifier);
 
             //Eventually the camera size will be slightly larger than the desired size; once this happens we simply set the size to _camSize
             if (this.camera.orthographicSize > _camSize)
@@ -142,7 +161,7 @@ public class CutSceneManager : MonoBehaviour
         float height = this.camera.rect.height;
         if (x > _rect.x)
         {
-            x -= _rectDiff.x / (_camTravelTime / Time.deltaTime);
+            x -= _rectDiff.x / (_camTravelTime / Time.deltaTime * travelTimeModifier);
         }
         else
         {
@@ -150,7 +169,7 @@ public class CutSceneManager : MonoBehaviour
         }
         if (y > _rect.y)
         {
-            y -= _rectDiff.y / (_camTravelTime / Time.deltaTime);
+            y -= _rectDiff.y / (_camTravelTime / Time.deltaTime * travelTimeModifier);
         }
         else
         {
@@ -158,7 +177,7 @@ public class CutSceneManager : MonoBehaviour
         }
         if (width > _rect.width)
         {
-            width -= _rectDiff.width / (_camTravelTime / Time.deltaTime);
+            width -= _rectDiff.width / (_camTravelTime / Time.deltaTime * travelTimeModifier);
         }
         else
         {
@@ -166,7 +185,7 @@ public class CutSceneManager : MonoBehaviour
         }
         if (height > _rect.height)
         {
-            height -= _rectDiff.height / (_camTravelTime / Time.deltaTime);
+            height -= _rectDiff.height / (_camTravelTime / Time.deltaTime * travelTimeModifier);
         }
         else
         {
@@ -175,8 +194,18 @@ public class CutSceneManager : MonoBehaviour
         this.camera.rect = new Rect(x, y, width, height);
     }
 
+    private void StopMoving()
+    {
+        _movingCamera = false;
+    }
+
     private void AdvanceStep()
     {
         _currentStep++;
+    }
+
+    private void ReEnableClicking()
+    {
+        _clickDisabled = false;
     }
 }

@@ -25,6 +25,7 @@ public class PartnerGameManager : MonoBehaviour
     public Animator GinaAnimator,
                     HollyAnimator;
     public Subtitle CurrentSubtitle;
+    public AudioSource VirgilAudioSource;
 
     private GinaStates _currentGinaState = GinaStates.BACK;
     private HollyStates _currentHollyState = HollyStates.EXPLAINING;
@@ -59,6 +60,22 @@ public class PartnerGameManager : MonoBehaviour
         }
     }
     private bool _win;
+
+    protected int wrongAnswerCount
+    {
+        get
+        {
+            return _wrongAnswerCount;
+        }
+        set
+        {
+            //if (value > 1)
+            //    VirgilAudioSource.Play();
+
+            _wrongAnswerCount = value;
+        }
+    }
+    private int _wrongAnswerCount;
 
     void Update()
     {
@@ -110,6 +127,7 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 else if (_affect == "Unhelpful")
                 {
+                    wrongAnswerCount++;
                     _currentGinaState = GinaStates.UNHELPFUL;
                     GinaAnimator.SetBool("Unhelpful", true);
                     Invoke("RecetAnimProperties", 1);

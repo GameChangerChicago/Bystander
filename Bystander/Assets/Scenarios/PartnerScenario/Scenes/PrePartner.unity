@@ -958,6 +958,61 @@ MonoBehaviour:
   TextBounds: 2.5
   AnimatorIndex: 0
   PlayImmediately: 0
+--- !u!1 &376076262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 376076263}
+  - 114: {fileID: 376076264}
+  m_Layer: 0
+  m_Name: Step
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &376076263
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 376076262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.9218197, y: -22.8364563, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 721782357}
+  m_RootOrder: 14
+--- !u!114 &376076264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 376076262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  MyTextMesh: {fileID: 1636327997}
+  TextBox: {fileID: 415976470}
+  CamRectangle:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  CamLocation: {x: 0, y: 0}
+  MyText: 'Afterwards, we just watched TV and then he walked me home. '
+  CamSize: 0
+  CamTravelTime: 0
+  TextBounds: 5
+  AnimatorIndex: 0
+  PlayImmediately: 1
 --- !u!1 &412788306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +1077,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 415976471}
+  - 212: {fileID: 415976472}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -1042,6 +1098,28 @@ Transform:
   - {fileID: 1636327996}
   m_Father: {fileID: 222468305}
   m_RootOrder: 6
+--- !u!212 &415976472
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415976470}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5960a4a5101dc9a40b98d27555134863, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &462744123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1714,8 @@ Transform:
   - {fileID: 79748604}
   - {fileID: 666996418}
   - {fileID: 566584322}
+  - {fileID: 1881920160}
+  - {fileID: 376076263}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &721782358
@@ -1663,8 +1743,8 @@ MonoBehaviour:
   - {fileID: 79748605}
   - {fileID: 666996419}
   - {fileID: 566584323}
-  - {fileID: 372235916}
-  - {fileID: 372235916}
+  - {fileID: 1881920161}
+  - {fileID: 376076264}
 --- !u!65 &721782359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2724,12 +2804,12 @@ TextMesh:
   m_Text: "I didn\u2019t want to, I really didn\u2019t, but he just wasn\u2019t listening.
     It was horrible. "
   m_OffsetZ: 0
-  m_CharacterSize: .5
+  m_CharacterSize: .300000012
   m_LineSpacing: 1
-  m_Anchor: 6
+  m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 24
+  m_FontSize: 30
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 68b1ba0d65756244192edd6201fdb2c9, type: 3}
@@ -2763,7 +2843,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1259543437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.93360043, y: .575813293, z: 0}
+  m_LocalPosition: {x: 8.18554211, y: 2.09297562, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1648183984}
@@ -3402,7 +3482,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1636327995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.93360043, y: .575813293, z: 0}
+  m_LocalPosition: {x: 8.21164799, y: -1.66287231, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415976471}
@@ -3416,12 +3496,12 @@ TextMesh:
   m_GameObject: {fileID: 1636327995}
   m_Text: 'Afterwards, we just watched TV and then he walked me home. '
   m_OffsetZ: 0
-  m_CharacterSize: .5
+  m_CharacterSize: .300000012
   m_LineSpacing: 1
-  m_Anchor: 6
+  m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 24
+  m_FontSize: 30
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 68b1ba0d65756244192edd6201fdb2c9, type: 3}
@@ -3456,6 +3536,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1648183984}
+  - 212: {fileID: 1648183985}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -3476,6 +3557,28 @@ Transform:
   - {fileID: 1259543440}
   m_Father: {fileID: 222468305}
   m_RootOrder: 5
+--- !u!212 &1648183985
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1648183983}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5960a4a5101dc9a40b98d27555134863, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1656574317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3811,6 +3914,62 @@ Transform:
   - {fileID: 2032893245}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!1 &1881920159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1881920160}
+  - 114: {fileID: 1881920161}
+  m_Layer: 0
+  m_Name: Step
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1881920160
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881920159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.9218197, y: -22.8364563, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 721782357}
+  m_RootOrder: 13
+--- !u!114 &1881920161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881920159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  MyTextMesh: {fileID: 1259543438}
+  TextBox: {fileID: 1648183983}
+  CamRectangle:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  CamLocation: {x: 0, y: 0}
+  MyText: "I didn\u2019t want to, I really didn\u2019t, but he just wasn\u2019t listening.
+    It was horrible. "
+  CamSize: 0
+  CamTravelTime: 0
+  TextBounds: 5
+  AnimatorIndex: 0
+  PlayImmediately: 1
 --- !u!1 &1901654976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,7 +3993,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1901654976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.65255356, y: -2.96333885, z: 0}
+  m_LocalPosition: {x: -5.05255413, y: -2.96333885, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1026978997}
@@ -4135,7 +4294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2056686215
 Transform:
   m_ObjectHideFlags: 0

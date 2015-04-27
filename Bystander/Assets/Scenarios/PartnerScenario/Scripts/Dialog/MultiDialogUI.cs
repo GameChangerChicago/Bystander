@@ -11,11 +11,10 @@ public class MultiDialogUI : DialogueVisualUI
     public string[] DialogUiNames;
 
     private Dictionary<string, UnityDialogueControls> _dialogUiSets = new Dictionary<string, UnityDialogueControls>();
-    private PartnerGameManager _myGameManager;
 
     void Start()
     {
-        _myGameManager = FindObjectOfType<PartnerGameManager>();
+        myGameManager = FindObjectOfType<PartnerGameManager>();
 
         for (int i = 0; i < DialogUiSets.Length; i++)
         {
@@ -31,6 +30,6 @@ public class MultiDialogUI : DialogueVisualUI
         Close();
         dialogue = _dialogUiSets[setUpName];
         Open();
-        ShowSubtitle(_myGameManager.CurrentSubtitle);
+        ShowSubtitle(myGameManager.CurrentSubtitle);
     }
 }

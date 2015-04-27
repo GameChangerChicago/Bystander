@@ -5,7 +5,7 @@ using PixelCrushers.DialogueSystem.UnityGUI;
 
 public class DialogueVisualUI : UnityDialogueUI
 {
-    private PartnerGameManager _myGameManager;
+    protected PartnerGameManager myGameManager;
     private bool _clickEnabled = true;
 
     // This is a reference to the NPC subtitle fade effect. If the subtitle panel is already
@@ -19,7 +19,7 @@ public class DialogueVisualUI : UnityDialogueUI
     public override void Awake()
     {
         base.Awake();
-        _myGameManager = FindObjectOfType<PartnerGameManager>();
+        myGameManager = FindObjectOfType<PartnerGameManager>();
         if (npcBorderFadeEffect == null) Debug.LogError(string.Format("{0}: NPC Border Fade Effect is unassigned!", DialogueDebug.Prefix));
     }
 
@@ -43,7 +43,7 @@ public class DialogueVisualUI : UnityDialogueUI
         if (_clickEnabled)
         {
             _clickEnabled = false;
-            _myGameManager.InteractionEnabled = false;
+            myGameManager.InteractionEnabled = false;
             Invoke("EnableClick", 1.25f);
             base.OnContinue();
         }
@@ -54,7 +54,7 @@ public class DialogueVisualUI : UnityDialogueUI
         if(_clickEnabled)
         {
             _clickEnabled = false;
-            _myGameManager.InteractionEnabled = false;
+            myGameManager.InteractionEnabled = false;
             Invoke("EnableClick", 1.25f);
             base.OnClick(data);
         }
@@ -99,6 +99,6 @@ public class DialogueVisualUI : UnityDialogueUI
     public void EnableClick()
     {
         _clickEnabled = true;
-        _myGameManager.InteractionEnabled = true;
+        myGameManager.InteractionEnabled = true;
     }
 }

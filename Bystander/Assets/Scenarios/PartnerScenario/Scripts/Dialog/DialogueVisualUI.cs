@@ -41,7 +41,7 @@ public class DialogueVisualUI : UnityDialogueUI
         if (_clickEnabled)
         {
             _clickEnabled = false;
-            Invoke("EnableClick", 0.25f);
+            Invoke("EnableClick", 1.25f);
             base.OnContinue();
         }
     }
@@ -51,7 +51,7 @@ public class DialogueVisualUI : UnityDialogueUI
         if(_clickEnabled)
         {
             _clickEnabled = false;
-            Invoke("EnableClick", 0.25f);
+            Invoke("EnableClick", 1.25f);
             base.OnClick(data);
         }
     }

@@ -1873,6 +1873,18 @@ Prefab:
       propertyPath: duration
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400124, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d81bde4c0f2cb2f4991ffc36feeb838c, type: 2}
@@ -12324,7 +12336,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

@@ -395,15 +395,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 0
         destinationConversationID: 1
-        destinationDialogueID: 8
+        destinationDialogueID: 9
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 481
-        y: 418
+        x: 501
+        y: 575
         width: 160
         height: 30
     - id: 1
@@ -880,8 +880,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 484
-        y: 466
+        x: 485
+        y: 471
         width: 160
         height: 30
     - id: 9
@@ -1727,8 +1727,8 @@ MonoBehaviour:
         Variable["Alert"]="Let''s take it from the beginning.";'
       canvasRect:
         serializedVersion: 2
-        x: 51
-        y: 2066
+        x: 64
+        y: 2151
         width: 160
         height: 30
     - id: 19
@@ -6308,8 +6308,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 489
-        y: 538
+        x: 450
+        y: 515
         width: 160
         height: 30
     - id: 100

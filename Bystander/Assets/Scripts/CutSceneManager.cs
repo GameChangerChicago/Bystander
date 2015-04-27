@@ -4,6 +4,7 @@ using System.Collections;
 public class CutSceneManager : MonoBehaviour
 {
     public Step[] Page;
+    public AudioSource IntroAudio;
 
     private Rect _rect,
                  _rectDiff;
@@ -13,11 +14,12 @@ public class CutSceneManager : MonoBehaviour
                   _camSizeDiff;
     private int _currentStep;
     private bool _movingCamera,
-                 _clickDisabled;
+                 _clickDisabled,
+                 _introAudioFinished;
 
     void OnMouseDown()
     {
-        if (!_clickDisabled && Page[_currentStep].SceneToLoad == "")
+        if (!_clickDisabled && _introAudioFinished && Page[_currentStep].SceneToLoad == "")
         {
             if (Page[_currentStep].CamTravelTime > 0)
                 SetCameraToMove();
@@ -44,6 +46,8 @@ public class CutSceneManager : MonoBehaviour
 
     void Update()
     {
+        if (IntroAudio != null && !IntroAudio.isPlaying)
+            _introAudioFinished = true;
         if (_movingCamera)
             MoveCameraTo();
     }

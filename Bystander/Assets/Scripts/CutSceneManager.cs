@@ -11,7 +11,9 @@ public class CutSceneManager : MonoBehaviour
     private Vector2 _pos;
     private float _camTravelTime,
                   _camSize,
-                  _camSizeDiff;
+                  _camSizeDiff,
+                  _camRotation,
+                  _camRotationDiff;
     private int _currentStep;
     private bool _movingCamera,
                  _clickDisabled,
@@ -139,6 +141,8 @@ public class CutSceneManager : MonoBehaviour
         _camTravelTime = Page[_currentStep].CamTravelTime;
         _camSize = Page[_currentStep].CamSize;
         _camSizeDiff = Mathf.Abs(this.camera.orthographicSize - Page[_currentStep].CamSize);
+        _camRotation = Page[_currentStep].CamRotation;
+        _camRotationDiff = Mathf.Abs(this.transform.rotation.z - Page[_currentStep].CamRotation);
         _rectDiff = new Rect(Mathf.Abs(this.camera.rect.x - _rect.x), Mathf.Abs(this.camera.rect.y - _rect.y), Mathf.Abs(this.camera.rect.width - _rect.width), Mathf.Abs(this.camera.rect.height - _rect.height));
         _movingCamera = true;
         Invoke("StopMoving", Page[_currentStep].CamTravelTime);
@@ -147,17 +151,26 @@ public class CutSceneManager : MonoBehaviour
     //This method moves and resizes the camera for each page section
     private void MoveCameraTo()
     {
-        float travelTimeModifier = 1f;
-        Hashtable Values = new Hashtable();
-        Values.Add("x", _pos.x);
-        Values.Add("y", _pos.y);
-        Values.Add("z", this.transform.position.z);
-        Values.Add("time", Page[_currentStep].CamTravelTime);
-        Values.Add("easetype", iTween.EaseType.easeOutQuad);
+        float travelTimeModifier = 1f,
+              currentRotation = this.transform.rotation.z;
+
+        Hashtable MoveValues = new Hashtable();
+        MoveValues.Add("x", _pos.x);
+        MoveValues.Add("y", _pos.y);
+        MoveValues.Add("z", this.transform.position.z);
+        MoveValues.Add("time", Page[_currentStep].CamTravelTime);
+        MoveValues.Add("easetype", iTween.EaseType.easeOutQuad);
+
+        Hashtable RotateValues = new Hashtable();
+        RotateValues.Add("z", _camRotation);
+        RotateValues.Add("time", Page[_currentStep].CamTravelTime);
+        RotateValues.Add("easetype", iTween.EaseType.easeOutQuad);
 
         //Using the iTween method MoveTo we set an object to move, a location, and a speed; iTween handles the rest
         //iTween.MoveTo(this.gameObject, new Vector3(_pos.x, _pos.y, this.transform.position.z), _camTravelTime);
-        iTween.MoveTo(this.gameObject, Values);
+        iTween.MoveTo(this.gameObject, MoveValues);
+
+        iTween.RotateTo(this.gameObject, RotateValues);
 
         //If the current camera size is greater than _camSize then we know we need to decrease the size of the camera
         if (this.camera.orthographicSize > _camSize)

@@ -12,6 +12,7 @@ public class Step : MonoBehaviour
                   SceneToLoad;
     public float CamSize,
                  CamTravelTime,
+                 CamRotation,
                  TextBounds,
                  ClickDelay;
     public int AnimatorIndex;

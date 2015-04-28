@@ -15,7 +15,13 @@ public class CutSceneManager : MonoBehaviour
     private int _currentStep;
     private bool _movingCamera,
                  _clickDisabled,
-                 _introAudioFinished;
+                 _introAudioFinished = true;
+
+    void Start()
+    {
+        if (IntroAudio != null)
+            _introAudioFinished = false;
+    }
 
     void OnMouseDown()
     {
@@ -32,11 +38,24 @@ public class CutSceneManager : MonoBehaviour
             if (Page[_currentStep].MyTextMesh != null)
                 ChangeDialog();
 
-            Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.05f);
             if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
+            {
                 Invoke("ReEnableClicking", Page[_currentStep].ClickDelay);
+
+                if (!Page[_currentStep + 1].AutoStep)
+                    Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.05f);
+                else
+                    Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.05f);
+            }
             else
+            {
                 Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime);
+
+                if (!Page[_currentStep + 1].AutoStep)
+                    Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.05f);
+                else
+                    Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.05f);
+            }
 
             _clickDisabled = true;
         }
@@ -206,6 +225,49 @@ public class CutSceneManager : MonoBehaviour
     private void AdvanceStep()
     {
         _currentStep++;
+    }
+
+    private void AutoStep()
+    {
+        _clickDisabled = true;
+        _currentStep++;
+
+        if (Page[_currentStep].SceneToLoad == "")
+        {
+            if (Page[_currentStep].CamTravelTime > 0)
+                SetCameraToMove();
+
+            if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayImmediately)
+                Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
+            else if (Page[_currentStep].MyAnimator != null && !_clickDisabled)
+                FireAnimation();
+
+            if (Page[_currentStep].MyTextMesh != null)
+                ChangeDialog();
+
+            if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
+            {
+                Invoke("ReEnableClicking", Page[_currentStep].ClickDelay);
+                
+                if (!Page[_currentStep + 1].AutoStep)
+                    Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.05f);
+                else
+                    Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.05f);
+            }
+            else
+            {
+                Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime);
+
+                if (!Page[_currentStep + 1].AutoStep)
+                    Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.05f);
+                else
+                    Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.05f);
+            }
+
+            _clickDisabled = true;
+        }
+        else if (Page[_currentStep].SceneToLoad != "")
+            Application.LoadLevel(Page[_currentStep].SceneToLoad);
     }
 
     private void ReEnableClicking()

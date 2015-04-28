@@ -15,5 +15,6 @@ public class Step : MonoBehaviour
                  TextBounds,
                  ClickDelay;
     public int AnimatorIndex;
-    public bool PlayImmediately;
+    public bool PlayImmediately,
+                AutoStep;
 }

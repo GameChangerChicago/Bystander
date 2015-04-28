@@ -112,11 +112,14 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: -1.69000006, y: -.310000002}
   MyText: 
+  SceneToLoad: 
   CamSize: 1.78999996
   CamTravelTime: 1
   TextBounds: 0
+  ClickDelay: 0
   AnimatorIndex: 0
   PlayImmediately: 0
+  AutoStep: 0
 --- !u!4 &18037950
 Transform:
   m_ObjectHideFlags: 0
@@ -233,11 +236,14 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: 2.86999989, y: -.289999992}
   MyText: 
+  SceneToLoad: 
   CamSize: 2.1099999
   CamTravelTime: 1
   TextBounds: 0
+  ClickDelay: 0
   AnimatorIndex: 0
   PlayImmediately: 0
+  AutoStep: 1
 --- !u!4 &284281329
 Transform:
   m_ObjectHideFlags: 0
@@ -368,6 +374,7 @@ MonoBehaviour:
   - {fileID: 284281328}
   - {fileID: 18037949}
   - {fileID: 1480785497}
+  IntroAudio: {fileID: 0}
 --- !u!1 &483845898
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,11 +534,14 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: -1.69000006, y: -.310000002}
   MyText: 
+  SceneToLoad: 
   CamSize: 1.78999996
   CamTravelTime: 1
   TextBounds: 0
+  ClickDelay: 0
   AnimatorIndex: 0
   PlayImmediately: 0
+  AutoStep: 0
 --- !u!4 &1480785498
 Transform:
   m_ObjectHideFlags: 0
@@ -582,11 +592,14 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: -1.69000006, y: -.310000002}
   MyText: 'Hi everybody! It''s me. It''s me. It''s King DDD. '
+  SceneToLoad: 
   CamSize: 1.78999996
   CamTravelTime: 1
   TextBounds: 1.5
+  ClickDelay: 3
   AnimatorIndex: 0
   PlayImmediately: 0
+  AutoStep: 0
 --- !u!4 &1671838806
 Transform:
   m_ObjectHideFlags: 0

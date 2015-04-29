@@ -237,12 +237,14 @@ public class CutSceneManager : MonoBehaviour
 
     private void AdvanceStep()
     {
+        GameObject.Destroy(Page[_currentStep]);
         _currentStep++;
     }
 
     private void AutoStep()
     {
         _clickDisabled = true;
+        GameObject.Destroy(Page[_currentStep]);
         _currentStep++;
 
         if (Page[_currentStep].SceneToLoad == "")

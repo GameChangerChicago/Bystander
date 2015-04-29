@@ -537,7 +537,7 @@ Camera:
   m_GameObject: {fileID: 1085795002}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -550,7 +550,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 0
@@ -853,6 +853,7 @@ MonoBehaviour:
   Page:
   - {fileID: 2039645013}
   - {fileID: 1972201844}
+  IntroAudio: {fileID: 0}
 --- !u!1 &1828767003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,10 +1008,12 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 8.19999981
   CamTravelTime: 3
+  CamRotation: 0
   TextBounds: 4.19999981
   ClickDelay: 1
   AnimatorIndex: 1
   PlayImmediately: 1
+  AutoStep: 0
 --- !u!1 &2005598256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,10 +1121,12 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 3.5
   ClickDelay: 1
   AnimatorIndex: 0
   PlayImmediately: 0
+  AutoStep: 0
 --- !u!4 &2039645014
 Transform:
   m_ObjectHideFlags: 0

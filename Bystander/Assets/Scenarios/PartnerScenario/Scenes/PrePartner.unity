@@ -172,7 +172,7 @@ MonoBehaviour:
   TextBox: {fileID: 725848984}
   CamRectangle:
     serializedVersion: 2
-    x: 0
+    x: .0500000007
     y: 0
     width: .899999976
     height: 1
@@ -181,11 +181,12 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 5.80000019
   CamTravelTime: 3
+  CamRotation: 0
   TextBounds: 3
   ClickDelay: 1.5
   AnimatorIndex: 0
   PlayImmediately: 0
-  AutoStep: 0
+  AutoStep: 1
 --- !u!4 &48939726
 Transform:
   m_ObjectHideFlags: 0
@@ -438,6 +439,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 2.5
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -891,6 +893,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 3
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -1165,6 +1168,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 5.75
   CamTravelTime: 2
+  CamRotation: 0
   TextBounds: 2.5
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -1211,6 +1215,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 0
   ClickDelay: 0
   AnimatorIndex: 0
@@ -1402,6 +1407,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 2.5
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -1460,6 +1466,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 5
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -1569,6 +1576,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 3.70000005
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -1931,6 +1939,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 4.5
   ClickDelay: 1.25
   AnimatorIndex: 0
@@ -2041,6 +2050,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 20
+  CamRotation: 0
   TextBounds: 40
   ClickDelay: 1.5
   AnimatorIndex: 1
@@ -2279,6 +2289,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 4
+  CamRotation: 0
   TextBounds: 6
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -2337,6 +2348,7 @@ MonoBehaviour:
   SceneToLoad: PartnerScenario
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 0
   ClickDelay: 1.25
   AnimatorIndex: 0
@@ -2445,6 +2457,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 3
+  CamRotation: 0
   TextBounds: 3
   ClickDelay: 1.25
   AnimatorIndex: 0
@@ -2910,6 +2923,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 15
   CamTravelTime: 4
+  CamRotation: 0
   TextBounds: 0
   ClickDelay: 1.25
   AnimatorIndex: 0
@@ -3656,6 +3670,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 5.80000019
   CamTravelTime: 1
+  CamRotation: 0
   TextBounds: 3
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -3847,6 +3862,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 3
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -4491,6 +4507,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 3
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -4968,6 +4985,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 1
+  CamRotation: 0
   TextBounds: 5
   ClickDelay: 1.25
   AnimatorIndex: 0
@@ -4997,7 +5015,7 @@ Camera:
   m_GameObject: {fileID: 1501749939}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -5010,7 +5028,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 0
@@ -5086,6 +5104,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 1.5
+  CamRotation: 0
   TextBounds: 3
   ClickDelay: 1.25
   AnimatorIndex: 0
@@ -5132,6 +5151,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 5.80000019
   CamTravelTime: 3
+  CamRotation: 0
   TextBounds: 3.5
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -5981,6 +6001,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  CamRotation: 0
   TextBounds: 5
   ClickDelay: 1.5
   AnimatorIndex: 0
@@ -6262,6 +6283,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 4
   CamTravelTime: 1
+  CamRotation: 0
   TextBounds: 3
   ClickDelay: 1.5
   AnimatorIndex: 0

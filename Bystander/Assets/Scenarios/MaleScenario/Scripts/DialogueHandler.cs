@@ -9,13 +9,16 @@ public class DialogueHandler: MonoBehaviour
 		public bool isLeo, isJace;
 		public TextMesh textMesh;
 		public GameObject  dialogueBox;
-		public Transform[] dialogueBoxPosition;
-		public float TextBounds;
+		public Transform[] dialogueBoxPosition, dialogueBoxPositionBack;
+		private AnimationManager animationManager;
+		private AniState aniState;
+		public float TextBounds, y_TextBounds;
 		private MaleGameManager gameManager;
 		private string dialogue;
 		private int dialogueIndex;
 		public int numDialogueLines, numDialogueLinesShown;
 		private GameState gameState;
+		public float TextBoxBounds;
 		private int dialogue_position;
 		public SpriteRenderer questionSprite, dialogueSprite, virgilDialogueSprite;
 		
@@ -28,6 +31,8 @@ public class DialogueHandler: MonoBehaviour
 		
 		
 				gameManager = FindObjectOfType<MaleGameManager> ();
+				animationManager = FindObjectOfType<AnimationManager> ();
+				aniState = animationManager.State ();
 				gameState = gameManager.State ();
 				dialogueIndex = 0;
 				dialogue = "";
@@ -45,11 +50,16 @@ public class DialogueHandler: MonoBehaviour
 		{
 		
 				if (gameManager.isGameState (GameState.Intro) && numDialogueLinesShown == numDialogueLines)
-						StartCoroutine(gameManager.StartGame());
-						//gameManager.StartGame ();
+						StartCoroutine (gameManager.StartGame ());
+				//gameManager.StartGame ();
 						
-		
+
+
+
 				if (gameManager.State () != gameState) {
+				
+						
+					
 						gameState = gameManager.State ();
 						numDialogueLines = 0;
 						numDialogueLinesShown = 0;
@@ -61,12 +71,13 @@ public class DialogueHandler: MonoBehaviour
 			
 				}
 		
-				Debug.Log ("Inside Update with Dialogue Length: " + dialogue.Length);
-				Debug.Log ("Inside Dialogue Update Function: " + dialogueIndex);
+				if (!animationManager.isAniState (aniState))
+						aniState = animationManager.State ();
+
 		
 		
 		
-		
+
 		}
 	
 		void OnMouseDown ()
@@ -103,28 +114,42 @@ public class DialogueHandler: MonoBehaviour
 						if (dialogue [i] != '*') {
 								
 								if (dialogue [i] == '|') {
-										dialogueBox.transform.position = dialogueBoxPosition [0].position;
+											
+										if (animationManager.State () == AniState.Back) {
+												dialogueBox.transform.position = dialogueBoxPosition [4].position;
+										} else if (animationManager.State () == AniState.Profile || animationManager.State () == AniState.CloseUp) {
+												dialogueBox.transform.position = dialogueBoxPosition [0].position;
+										}
+						
+										
 										dialogueSprite.enabled = true;
 										questionSprite.enabled = false;
 										virgilDialogueSprite.enabled = false;
 										dialogueBox.GetComponent<TextMesh> ().color = Color.black;
-										dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
-					TextBounds = 5;
+										//dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
+										//TextBounds = 5;
 					
 										i++;
 								} else if (dialogue [i] == '\\') {
-										dialogueBox.transform.position = dialogueBoxPosition [1].position;
+
+										if (animationManager.State () == AniState.Back) {
+												dialogueBox.transform.position = dialogueBoxPosition [5].position;
+										} else if (animationManager.State () == AniState.Profile || animationManager.State () == AniState.CloseUp) {
+												dialogueBox.transform.position = dialogueBoxPosition [1].position;
+										}
+
+										
 										dialogueSprite.enabled = true;
 										questionSprite.enabled = false;
 										virgilDialogueSprite.enabled = false;
 										dialogueBox.GetComponent<TextMesh> ().color = Color.black;
-										dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
-					TextBounds = 5;
+										//dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
+										//TextBounds = 5;
 
 										i++;
 								} else  if (dialogue [i] == '@') {
 										dialogueBox.transform.position = dialogueBoxPosition [3].position;
-										dialogueBox.GetComponent<TextMesh>().fontSize = 45;
+									//	dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
 										TextBounds = 7;
 										dialogueSprite.enabled = false;
 										questionSprite.enabled = true;
@@ -135,8 +160,8 @@ public class DialogueHandler: MonoBehaviour
 										dialogueSprite.enabled = false;
 										virgilDialogueSprite.enabled = true;
 										dialogueBox.GetComponent<TextMesh> ().color = Color.white;
-										dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
-					TextBounds = 5;
+										//dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
+										//TextBounds = 5;
 										i++;
 
 								}
@@ -145,7 +170,7 @@ public class DialogueHandler: MonoBehaviour
 								displayText += dialogue [i];
 
 
-								Debug.Log ("Inside Dialogue PopUp: " + dialogueIndex);
+								
 						} else {
 
 								dialogueIndex = i + 1;
@@ -193,6 +218,16 @@ public class DialogueHandler: MonoBehaviour
 										dialogueBox.GetComponent<TextMesh> ().text = dialogueBox.GetComponent<TextMesh> ().text.Remove (dialogueBox.GetComponent<TextMesh> ().text.Length - (currentWord.Length + 1));
 										dialogueBox.GetComponent<TextMesh> ().text = dialogueBox.GetComponent<TextMesh> ().text + "\n" + currentWord;
 								}
+								
+							dialogueSprite.GetComponent<Transform>().localScale = new Vector3 (currentRenderer.bounds.extents.x + 1f, currentRenderer.bounds.extents.y + TextBoxBounds, currentRenderer.bounds.extents.z);
+				virgilDialogueSprite.GetComponent<Transform>().localScale = new Vector3 (currentRenderer.bounds.extents.x + 1f, currentRenderer.bounds.extents.y +  TextBoxBounds, currentRenderer.bounds.extents.z);
+
+				//dialogueSprite.GetComponent<Transform>().localPosition = //dialogueBox.transform.bounds.center; //new Vector3 (currentRenderer.bounds.center.x, currentRenderer.bounds.center.y, currentRenderer.bounds.center.z);
+								
+								//dialogueSprite.GetComponenet<Transform>().
+								
+
+								Debug.Log(currentRenderer.bounds);
 				
 								//Resets the current word each time
 								currentWord = "";
@@ -212,20 +247,19 @@ public class DialogueHandler: MonoBehaviour
 				dialogue = scenarioText.text;
 				
 				
-				Debug.Log (dialogue);
-		
+				
 				//	}
 		
 		
 		
 		}
 
-	void DefaultText()
-	{
-		dialogueBox.GetComponent<TextMesh>().fontSize = 30;
-		dialogueSprite.enabled = true;
-		questionSprite.enabled = false;
-		dialogueBox.GetComponent<TextMesh> ().color = Color.black;
+		void DefaultText ()
+		{
+				dialogueBox.GetComponent<TextMesh> ().fontSize = 30;
+				dialogueSprite.enabled = true;
+				questionSprite.enabled = false;
+				dialogueBox.GetComponent<TextMesh> ().color = Color.black;
 
 
 

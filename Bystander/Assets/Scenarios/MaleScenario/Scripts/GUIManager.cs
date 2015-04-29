@@ -8,6 +8,7 @@ public class GUIManager : MonoBehaviour
 		private string inputField;
 		private bool questionAnswered;
 		private int screenWidth, screenHeight;
+		public GUISkin maleSkin;
 
 
 	void Start ()
@@ -17,11 +18,20 @@ public class GUIManager : MonoBehaviour
 		gameManager = FindObjectOfType<MaleGameManager> ();
 		inputField = "Answer";
 		questionAnswered = false;
+
+
 	}
 
 
 	void OnGUI ()
 	{
+		GUI.skin = maleSkin;
+
+//		GUI.SetNextControlName("inputField");
+//		if (UnityEngine.Event.current.type == EventType.Repaint)
+//				if (GUI.GetNameOfFocusedControl == "inputField")
+//						inputField = "";
+
 
 
 		if(!gameManager.isGameState(GameState.Intro) && !gameManager.isGameState(GameState.Outro))
@@ -42,24 +52,13 @@ public class GUIManager : MonoBehaviour
         }
 
 
-			inputField = GUI.TextField (new Rect (screenWidth - 120, screenHeight - 45 , 125, 30), inputField, 15);
+			inputField = GUI.TextField (new Rect (screenWidth - 200, screenHeight - 45 , 250, 50), inputField, 15);
 		}
-	}
-
-	void Update(){
-
-
-
-
-	}
-	
-	private void IntroText ()
-	{
-			Debug.Log ("Here is some intro text");
-			
 	}
 
 
 }
+
+
 
 

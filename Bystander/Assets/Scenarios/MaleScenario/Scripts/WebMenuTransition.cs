@@ -5,8 +5,11 @@ public class WebMenuTransition : MonoBehaviour
 {
 		public GameObject menuToTransitionTo;
 		private WebMenuTransition menu;
+		private LinkHighlight[] menuOptions;
+		private BoxCollider2D[] menuOptionsColliders;
 		public bool isMenu;
 		public bool isOpen;
+	private bool isClicked;
 
 
 		// Use this for initialization
@@ -14,6 +17,9 @@ public class WebMenuTransition : MonoBehaviour
 		{
 
 				menu = menuToTransitionTo.GetComponent<WebMenuTransition> ();
+				
+		if(isMenu)
+			menuOptions = menu.GetComponentsInChildren<LinkHighlight> ();
 
 
 
@@ -24,6 +30,11 @@ public class WebMenuTransition : MonoBehaviour
 				}
 
 
+				
+
+		for (int i = 0; i < menuOptions.Length; i++)
+						menuOptionsColliders[i] = menuOptions [i].GetComponent<BoxCollider2D> ();
+					
 							
 				
 
@@ -47,6 +58,8 @@ public class WebMenuTransition : MonoBehaviour
 
 				
 				TransitionToMenu ();
+				if (isMenu)
+						isClicked = true;
 
 
 		}
@@ -55,7 +68,10 @@ public class WebMenuTransition : MonoBehaviour
 		{
 				
 		isOpen = !isOpen;
-		menu.isOpen = !menu.isOpen;
+		//menu.isOpen = !menu.isOpen;
+
+		if(isMenu)
+			isClicked = !isClicked;
 		
 		
 				//Turns on the new menus sprite renderers and box colliders
@@ -90,6 +106,16 @@ public class WebMenuTransition : MonoBehaviour
 	}
 	
 	void OnMouseExit(){
-}
 
+//		if(isMenu && isClicked){
+//		for (int i = 0; i < menuOptions.Length; i++)
+//						if (menuOptions [i].isHover ())
+//								break;
+//						else
+//								TransitionToMenu ();
+
+
+//
+//}
+			   }
 }

@@ -80,11 +80,8 @@ public class PartnerGameManager : MonoBehaviour
 
     void Update()
     {
-        if (InteractionEnabled)
-        {
-            UpdateGinaAnimationParams();
-            UpdateHollyAnimationParams();
-        }
+        UpdateGinaAnimationParams();
+        UpdateHollyAnimationParams();
     }
 
     private void UpdateGinaAnimationParams()
@@ -92,14 +89,14 @@ public class PartnerGameManager : MonoBehaviour
         switch (_currentGinaState)
         {
             case GinaStates.BACK:
-                if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && !win)
+                if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled && !win)
                 {
                     _affect = "";
                     DialogueLua.SetVariable("Affect", "");
                     GinaAnimator.SetBool("FacingGina", true);
                     _currentGinaState = GinaStates.THINKING;
                 }//The bullshit starts here...
-                else if (Input.GetKeyDown(KeyCode.Mouse0) && win && _helpfulPrimer)
+                else if (Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled && win && _helpfulPrimer)
                 {
                     GinaAnimator.SetBool("FacingGina", true);
                     GinaAnimator.SetBool("Helpful", true);
@@ -137,7 +134,7 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 break;
             case GinaStates.LISTENING:
-                if (!DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0))
+                if (!DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled)
                 {
                     _currentGinaState = GinaStates.BACK;
                     GinaAnimator.SetBool("FacingGina", false);
@@ -164,7 +161,7 @@ public class PartnerGameManager : MonoBehaviour
                         _finalBool = true;
                     }
 
-                    if (!DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && _finalBool)
+                    if (!DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled && _finalBool)
                     {
                         _currentGinaState = GinaStates.BACK;
                         GinaAnimator.SetBool("FacingGina", false);
@@ -191,7 +188,7 @@ public class PartnerGameManager : MonoBehaviour
         switch (_currentHollyState)
         {
             case HollyStates.EXPLAINING:
-                if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0))
+                if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled)
                 {
                     _currentHollyState = HollyStates.BACK;
                     HollyAnimator.SetBool("FacingGina", true);
@@ -216,7 +213,7 @@ public class PartnerGameManager : MonoBehaviour
                         }
                     }
 
-                    if (_affect == "Listening" && Input.GetKeyDown(KeyCode.Mouse0))
+                    if (_affect == "Listening" && Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled)
                     {
                         _currentHollyState = HollyStates.EXPLAINING;
                         HollyAnimator.SetBool("Explaining", true);
@@ -238,7 +235,7 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 break;
             case HollyStates.HELPFUL:
-                if (Input.GetKeyDown(KeyCode.Mouse0) && !_helpfulPrimer)
+                if (Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled && !_helpfulPrimer)
                     _helpfulPrimer = true;
                 else if (Input.GetKeyDown(KeyCode.Mouse0) && _helpfulPrimer && win)
                 {
@@ -250,7 +247,7 @@ public class PartnerGameManager : MonoBehaviour
                     HollyAnimator.SetBool("FacingGina", true);
                     _helpfulPrimer = false;
                 }
-                else if (Input.GetKeyDown(KeyCode.Mouse0) && _helpfulPrimer && !win)
+                else if (Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled && _helpfulPrimer && !win)
                 {
                     _currentHollyState = HollyStates.EXPLAINING;
                     HollyAnimator.SetBool("Explaining", true);
@@ -260,7 +257,7 @@ public class PartnerGameManager : MonoBehaviour
                 }
                 break;
             case HollyStates.UNHELPFUL:
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled)
                 {
                     _currentHollyState = HollyStates.EXPLAINING;
                     HollyAnimator.SetBool("Explaining", true);

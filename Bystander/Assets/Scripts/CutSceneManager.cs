@@ -29,6 +29,9 @@ public class CutSceneManager : MonoBehaviour
     {
         if (!_clickDisabled && _introAudioFinished && Page[_currentStep].SceneToLoad == "")
         {
+            Debug.Log(_currentStep);
+            _clickDisabled = true;
+
             if (Page[_currentStep].CamTravelTime > 0)
                 SetCameraToMove();
 
@@ -42,24 +45,22 @@ public class CutSceneManager : MonoBehaviour
 
             if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
             {
-                Invoke("ReEnableClicking", Page[_currentStep].ClickDelay);
+                Invoke("ReEnableClicking", Page[_currentStep].ClickDelay + 0.05f);
 
                 if (!Page[_currentStep + 1].AutoStep)
-                    Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.05f);
+                    Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.025f);
                 else
-                    Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.05f);
+                    Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.025f);
             }
             else
             {
-                Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime);
+                Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime + 0.05f);
 
                 if (!Page[_currentStep + 1].AutoStep)
-                    Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.05f);
+                    Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.025f);
                 else
-                    Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.05f);
+                    Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.025f);
             }
-
-            _clickDisabled = true;
         }
         else if (Page[_currentStep].SceneToLoad != "")
             Application.LoadLevel(Page[_currentStep].SceneToLoad);
@@ -67,8 +68,16 @@ public class CutSceneManager : MonoBehaviour
 
     void Update()
     {
-        if (IntroAudio != null && !IntroAudio.isPlaying)
+        if (IntroAudio != null && !IntroAudio.isPlaying && !_introAudioFinished)
+        {
+            if (Page[_currentStep].AutoStep)
+            {
+                _currentStep--;
+                AutoStep();
+            }
+
             _introAudioFinished = true;
+        }
         if (_movingCamera)
             MoveCameraTo();
     }
@@ -244,7 +253,6 @@ public class CutSceneManager : MonoBehaviour
     private void AutoStep()
     {
         _clickDisabled = true;
-        GameObject.Destroy(Page[_currentStep]);
         _currentStep++;
 
         if (Page[_currentStep].SceneToLoad == "")
@@ -262,21 +270,21 @@ public class CutSceneManager : MonoBehaviour
 
             if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
             {
-                Invoke("ReEnableClicking", Page[_currentStep].ClickDelay);
-                
+                Invoke("ReEnableClicking", Page[_currentStep].ClickDelay + 0.05f);
+
                 if (!Page[_currentStep + 1].AutoStep)
-                    Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.05f);
+                    Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.025f);
                 else
-                    Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.05f);
+                    Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.025f);
             }
             else
             {
-                Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime);
+                Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime + 0.05f);
 
                 if (!Page[_currentStep + 1].AutoStep)
-                    Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.05f);
+                    Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.025f);
                 else
-                    Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.05f);
+                    Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.025f);
             }
 
             _clickDisabled = true;

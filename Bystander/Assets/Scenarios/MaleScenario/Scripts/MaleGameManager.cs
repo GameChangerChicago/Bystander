@@ -14,8 +14,7 @@ public enum GameState
 		Q6, 
 		Q7,
 		Q8,
-		Q9,
-		Outro
+		Outro,
 }
 ;
 
@@ -33,8 +32,7 @@ public class MaleGameManager : MonoBehaviour
 		//Holds correct answers for next question asked
 		private string[] answerArray = new string[]{ 
 		"BELIEVE", 
-		"23", 
-		"2 MILLION",
+		"23",
 		"STATE",
 		"CONSENT",
 		"THREATENED",
@@ -48,6 +46,7 @@ public class MaleGameManager : MonoBehaviour
 				gameState = GameState.Intro;
 				cameraManager = FindObjectOfType<CameraManager> ();
 				soundManager = FindObjectOfType<SoundManager> ();
+				correctAnswer = answerArray[0];
 				
 		}
 
@@ -60,7 +59,7 @@ public class MaleGameManager : MonoBehaviour
 				
 				questionAnswered = false;
 				gameState = GameState.Q1;
-				correctAnswer = "BELIEVE";
+				//correctAnswer = answerArray[0];
 
 		}
 
@@ -111,41 +110,41 @@ public class MaleGameManager : MonoBehaviour
 								gameState = GameState.Q3;
 								//Debug.Log (correctAnswer);
 								break;
-						case "2 MILLION":
-								Debug.Log ("Correct!  You are so smart");
-								correctAnswer = answerArray [3];
-								questionAnswered = false;
-								gameState = GameState.Q4;
-								//Debug.Log (correctAnswer);
-								break;
+//						case "2 MILLION":
+//								Debug.Log ("Correct!  You are so smart");
+//								correctAnswer = answerArray [3];
+//								questionAnswered = false;
+//								gameState = GameState.Q4;
+//								//Debug.Log (correctAnswer);
+//								break;
 						case "STATE":
 								Debug.Log ("Correct! You are really smart");
-								correctAnswer = answerArray [4];
-								gameState = GameState.Q5;
+								correctAnswer = answerArray [3];
+								gameState = GameState.Q4;
 								//Debug.Log (correctAnswer);
 								break;
 						case "CONSENT":
 								Debug.Log ("Yep yep!");
-								correctAnswer = answerArray [5];
-								gameState = GameState.Q6;
+								correctAnswer = answerArray [4];
+								gameState = GameState.Q5;
 								//Debug.Log (correctAnswer);
 								break;
 						case "THREATENED":
 								Debug.Log ("Uh-huh!");
-								correctAnswer = answerArray [6];
-								gameState = GameState.Q7;
+								correctAnswer = answerArray [5];
+								gameState = GameState.Q6;
 								//Debug.Log (correctAnswer);
 								break;
 						case "ALCOHOL":
 								Debug.Log ("Yes~");
-								correctAnswer = answerArray [7];
-								gameState = GameState.Q8;
+								correctAnswer = answerArray [6];
+								gameState = GameState.Q7;
 								//Debug.Log (correctAnswer);
 								break;
 						case "TRUSTED":
 								Debug.Log ("Correcto mundo");
-								correctAnswer = answerArray [8];
-								gameState = GameState.Q9;
+								correctAnswer = answerArray [7];
+								gameState = GameState.Q8;
 								//Debug.Log (correctAnswer);
 								break;
 						case "656HOPE":

@@ -37,7 +37,7 @@ public class CutSceneManager : MonoBehaviour
 
             if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayImmediately)
                 Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
-            else if (Page[_currentStep].MyAnimator != null && !_clickDisabled)
+            else if (Page[_currentStep].MyAnimator != null)
                 FireAnimation();
 
             if (Page[_currentStep].MyTextMesh != null)

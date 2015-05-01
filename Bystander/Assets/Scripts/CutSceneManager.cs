@@ -130,10 +130,21 @@ public class CutSceneManager : MonoBehaviour
                 }
 
                 //If after adding the word the line extends past the TextBounds then the word will be added with a line break
-                if (currentRenderer.bounds.extents.x > Page[_currentStep].TextBounds)
+                if (Page[_currentStep].CamRotation == 90 || Page[_currentStep].CamRotation == -90 || Page[_currentStep].CamRotation == 270 || Page[_currentStep].CamRotation == -270)
                 {
-                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text.Remove(dialogBox.GetComponentInChildren<TextMesh>().text.Length - (currentWord.Length));
-                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + "\n" + currentWord;
+                    if (currentRenderer.bounds.extents.y > Page[_currentStep].TextBounds)
+                    {
+                        dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text.Remove(dialogBox.GetComponentInChildren<TextMesh>().text.Length - (currentWord.Length));
+                        dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + "\n" + currentWord;
+                    }
+                }
+                else
+                {
+                    if (currentRenderer.bounds.extents.x > Page[_currentStep].TextBounds)
+                    {
+                        dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text.Remove(dialogBox.GetComponentInChildren<TextMesh>().text.Length - (currentWord.Length));
+                        dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + "\n" + currentWord;
+                    }
                 }
 
                 //Resets the current word each time

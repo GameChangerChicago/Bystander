@@ -421,8 +421,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 483845898}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.35772228, y: -.883912563, z: -1.0078125}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: -1.90686166, y: -.883912385, z: -1.0078125}
   m_LocalScale: {x: 275, y: 200, z: 1}
   m_Children:
   - {fileID: 727306918}
@@ -598,7 +598,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 1.78999996
   CamTravelTime: 1
-  CamRotation: -90
+  CamRotation: 90
   TextBounds: 1.5
   ClickDelay: 3
   AnimatorIndex: 0

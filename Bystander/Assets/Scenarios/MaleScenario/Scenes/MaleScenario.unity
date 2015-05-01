@@ -3899,7 +3899,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1499536635}
   - 212: {fileID: 1499536637}
-  - 61: {fileID: 1499536636}
   - 114: {fileID: 1499536638}
   - 114: {fileID: 1499536639}
   m_Layer: 0
@@ -3921,18 +3920,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1094763314}
   m_RootOrder: 0
---- !u!61 &1499536636
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100022, guid: dc789dfb889af4b8a8443f49bc6b6e63,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1499536634}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 11.0100002, y: 2}
-  m_Center: {x: 1.61000001, y: 0}
 --- !u!212 &1499536637
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3963,7 +3950,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1499536634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9068b7a5839d42a0b1d14222c03b637, type: 3}
   m_Name: 

@@ -4,7 +4,8 @@ using System.Collections;
 public class CutSceneManager : MonoBehaviour
 {
     public Step[] Page;
-    public AudioSource IntroAudio;
+    public AudioSource IntroAudio,
+                       StepSoundEffect;
 
     private Rect _rect,
                  _rectDiff;
@@ -35,10 +36,15 @@ public class CutSceneManager : MonoBehaviour
             if (Page[_currentStep].CamTravelTime > 0)
                 SetCameraToMove();
 
-            if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayImmediately)
+            if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayAnimImmediately)
                 Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
             else if (Page[_currentStep].MyAnimator != null)
                 FireAnimation();
+
+            if (Page[_currentStep].StepClip != null && !Page[_currentStep].PlayAudioImmediately)
+                Invoke("PlaySoundEffect", Page[_currentStep].CamTravelTime);
+            else if(Page[_currentStep].StepClip != null)
+                PlaySoundEffect();
 
             if (Page[_currentStep].MyTextMesh != null)
                 ChangeDialog();
@@ -87,6 +93,12 @@ public class CutSceneManager : MonoBehaviour
         if (Page[_currentStep].AnimatorIndex != 0)
             Page[_currentStep].MyAnimator.SetInteger("AnimatorIndex", Page[_currentStep].AnimatorIndex);
         Page[_currentStep].MyAnimator.enabled = true;
+    }
+
+    private void PlaySoundEffect()
+    {
+        StepSoundEffect.clip = Page[_currentStep].StepClip;
+        StepSoundEffect.Play();
     }
 
     private void ChangeDialog()
@@ -271,7 +283,7 @@ public class CutSceneManager : MonoBehaviour
             if (Page[_currentStep].CamTravelTime > 0)
                 SetCameraToMove();
 
-            if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayImmediately)
+            if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayAnimImmediately)
                 Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
             else if (Page[_currentStep].MyAnimator != null && !_clickDisabled)
                 FireAnimation();

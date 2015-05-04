@@ -4,6 +4,7 @@ using System.Collections;
 public class Step : MonoBehaviour
 {
     public Animator MyAnimator;
+    public AudioClip StepClip;
     public TextMesh MyTextMesh;
     public GameObject TextBox;
     public Rect CamRectangle;
@@ -16,6 +17,7 @@ public class Step : MonoBehaviour
                  TextBounds,
                  ClickDelay;
     public int AnimatorIndex;
-    public bool PlayImmediately,
+    public bool PlayAnimImmediately,
+                PlayAudioImmediately,
                 AutoStep;
 }

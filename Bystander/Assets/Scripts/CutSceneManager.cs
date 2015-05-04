@@ -42,7 +42,7 @@ public class CutSceneManager : MonoBehaviour
                 FireAnimation();
 
             if (Page[_currentStep].StepClip != null && !Page[_currentStep].PlayAudioImmediately)
-                Invoke("PlaySoundEffect", Page[_currentStep].CamTravelTime);
+                Invoke("PlaySoundEffect", Page[_currentStep].CamTravelTime + Page[_currentStep].AudioDelay);
             else if(Page[_currentStep].StepClip != null)
                 PlaySoundEffect();
 

@@ -118,6 +118,7 @@ MonoBehaviour:
   CamTravelTime: 1
   CamRotation: 0
   TextBounds: 0
+  AudioDelay: 0
   ClickDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
@@ -245,6 +246,7 @@ MonoBehaviour:
   CamTravelTime: 1
   CamRotation: 0
   TextBounds: 0
+  AudioDelay: 0
   ClickDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
@@ -547,6 +549,7 @@ MonoBehaviour:
   CamTravelTime: 1
   CamRotation: 0
   TextBounds: 0
+  AudioDelay: 0
   ClickDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
@@ -608,10 +611,11 @@ MonoBehaviour:
   CamTravelTime: 1
   CamRotation: 90
   TextBounds: 1.5
+  AudioDelay: 1
   ClickDelay: 3
   AnimatorIndex: 0
   PlayAnimImmediately: 0
-  PlayAudioImmediately: 1
+  PlayAudioImmediately: 0
   AutoStep: 0
 --- !u!4 &1671838806
 Transform:

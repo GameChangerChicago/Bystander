@@ -15,6 +15,7 @@ public class Step : MonoBehaviour
                  CamTravelTime,
                  CamRotation,
                  TextBounds,
+                 AudioDelay,
                  ClickDelay;
     public int AnimatorIndex;
     public bool PlayAnimImmediately,

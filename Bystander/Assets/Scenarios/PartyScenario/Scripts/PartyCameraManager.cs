@@ -23,8 +23,16 @@ public class PartyCameraManager : MonoBehaviour
     //This method handles moving the camera from place to place and also handles camera size
     private void MoveCameraTo()
     {
+        //Initializing MoveTo values
+        Hashtable MoveValues = new Hashtable();
+        MoveValues.Add("x", _pos.x);
+        MoveValues.Add("y", _pos.y);
+        MoveValues.Add("z", this.transform.position.z);
+        MoveValues.Add("time", _camTravelTime);
+        MoveValues.Add("easetype", iTween.EaseType.easeOutQuad);
+
         //Using the iTween method MoveTo we set an object to move, a location, and a speed; iTween handles the rest
-        iTween.MoveTo(this.gameObject, new Vector3(_pos.x, _pos.y, this.transform.position.z), _camTravelTime);
+        iTween.MoveTo(this.gameObject, MoveValues);
 
         //If the current camera size is greater than _camSize then we know we need to decrease the size of the camera
         if (this.camera.orthographicSize > _camSize)

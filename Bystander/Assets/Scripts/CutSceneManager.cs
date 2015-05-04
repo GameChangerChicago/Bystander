@@ -185,7 +185,8 @@ public class CutSceneManager : MonoBehaviour
     {
         float travelTimeModifier = 1f,
               currentRotation = this.transform.rotation.z;
-
+        
+        //Initializing MoveTo values
         Hashtable MoveValues = new Hashtable();
         MoveValues.Add("x", _pos.x);
         MoveValues.Add("y", _pos.y);
@@ -193,6 +194,7 @@ public class CutSceneManager : MonoBehaviour
         MoveValues.Add("time", Page[_currentStep].CamTravelTime);
         MoveValues.Add("easetype", iTween.EaseType.easeOutQuad);
 
+        //Initializing RotateTo values
         Hashtable RotateValues = new Hashtable();
         RotateValues.Add("z", _camRotation);
         RotateValues.Add("time", Page[_currentStep].CamTravelTime);

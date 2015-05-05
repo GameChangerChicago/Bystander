@@ -50,7 +50,6 @@ public class SHGameManager : MonoBehaviour
     }
     private SHCameraManager _currentCameraManager;
 
-
     public int WrongAnswerCounter
     {
         get
@@ -157,5 +156,10 @@ public class SHGameManager : MonoBehaviour
             if (poi != PointsOfInterestPerMicroScenario[CurrentMicroScenario][i])
                 PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].MouseOverSprite.enabled = false;
         }
+    }
+
+    public void HideAllPOIs()
+    {
+
     }
 }

@@ -35,8 +35,8 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110204543}
-  m_TransitionDuration: .0416666679
-  m_TransitionOffset: 0
+  m_TransitionDuration: 0
+  m_TransitionOffset: .00966793019
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: AnimatorIndex
@@ -91,12 +91,12 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110204543}
-      second: []
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
+    data:
+      first: {fileID: 110204543}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

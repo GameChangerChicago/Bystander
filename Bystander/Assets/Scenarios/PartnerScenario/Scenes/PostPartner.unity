@@ -507,7 +507,7 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 1
-  ClickDelay: 6
+  ClickDelay: 8
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 1579008511}
-  StepClip: {fileID: 8300000, guid: f60d20db66bfd0244b80d24bcee04045, type: 3}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
@@ -802,7 +802,7 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
+  ClickDelay: 20
   AnimatorIndex: 1
   PlayAnimImmediately: 1
   PlayAudioImmediately: 0

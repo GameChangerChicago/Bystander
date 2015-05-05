@@ -368,8 +368,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519881208}
-  m_Text: "Thanks, I really\r\nappreciate it. I \r\ndon\u2019t know when I\u2019ll\r\nfeel
-    better, but I \r\nthink this is a start."
+  m_Text: "Thanks for being \nthere for me."
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -391,7 +390,7 @@ Renderer:
   m_GameObject: {fileID: 519881208}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
@@ -509,7 +508,7 @@ SpriteRenderer:
   m_SortingLayerID: 3993981873
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f1d00f10086fd1a40a68c94ef6ea7285, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &855656383
 GameObject:
   m_ObjectHideFlags: 0

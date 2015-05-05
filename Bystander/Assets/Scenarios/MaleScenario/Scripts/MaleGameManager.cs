@@ -46,12 +46,14 @@ public class MaleGameManager : MonoBehaviour
 				gameState = GameState.Intro;
 				cameraManager = FindObjectOfType<CameraManager> ();
 				soundManager = FindObjectOfType<SoundManager> ();
-				correctAnswer = answerArray[0];
+				//correctAnswer = answerArray[0];
 				
 		}
 
 		public IEnumerator StartGame ()
 		{
+
+		yield return new WaitForSeconds (3);
 				cameraManager.GetComponent<Animator>().Play("TrackOut");
 				
 		//waiting for the camera animation to stop	
@@ -59,7 +61,21 @@ public class MaleGameManager : MonoBehaviour
 				
 				questionAnswered = false;
 				gameState = GameState.Q1;
-				//correctAnswer = answerArray[0];
+				correctAnswer = answerArray[0];
+
+		}
+
+	public IEnumerator EndGame()
+	{
+
+		yield return new WaitForSeconds (5);
+		cameraManager.GetComponent<Animator> ().Play ("TrackInLocation");
+
+		yield return new WaitForSeconds (5);
+			//gameState = GameState.Outro;
+			
+
+		Application.LoadLevel ("PostMale");
 
 		}
 
@@ -147,10 +163,10 @@ public class MaleGameManager : MonoBehaviour
 								gameState = GameState.Q8;
 								//Debug.Log (correctAnswer);
 								break;
-						case "656HOPE":
+						case "656HOPE":	
 								Debug.Log ("Say what!");
 								gameState = GameState.Outro;
-								cameraManager.GetComponent<Animator> ().Play ("TrackInCharacter");
+							//	cameraManager.GetComponent<Animator> ().Play ("TrackInLocation");
 								//Debug.Log (correctAnswer);
 								break;
 					
@@ -160,6 +176,7 @@ public class MaleGameManager : MonoBehaviour
 			Debug.Log ("Wrong Answer. Try Again");
 						questionAnswered = false;
 						soundManager.PlayVirgilIncorrect();
+						
 				}
 						
 

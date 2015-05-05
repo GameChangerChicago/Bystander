@@ -3738,7 +3738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeo: 1
-  isJace: 0
+  isJace: 1
   bg_SidewaysScroll: {fileID: 0}
   bg_SidewaysFlatScroll: {fileID: 0}
   bg_TrackScroll: {fileID: 0}
@@ -5325,6 +5325,10 @@ Prefab:
     - target: {fileID: 10200000, guid: f4cabb9608c6d4d92a8dbe15a3fed7c0, type: 2}
       propertyPath: m_Text
       value: What  what
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: f4cabb9608c6d4d92a8dbe15a3fed7c0, type: 2}
+      propertyPath: isJace
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4cabb9608c6d4d92a8dbe15a3fed7c0, type: 2}

@@ -76,7 +76,8 @@ public class DialogueHandler: MonoBehaviour
 
 		
 		
-		
+			if (gameManager.isGameState (GameState.Outro) && numDialogueLinesShown == numDialogueLines)
+						StartCoroutine (gameManager.EndGame ());
 
 		}
 	

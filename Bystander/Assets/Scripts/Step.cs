@@ -20,5 +20,6 @@ public class Step : MonoBehaviour
     public int AnimatorIndex;
     public bool PlayAnimImmediately,
                 PlayAudioImmediately,
-                AutoStep;
+                AutoStep,
+                InitialAutoStep;
 }

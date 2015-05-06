@@ -24,6 +24,11 @@ public class CutSceneManager : MonoBehaviour
     {
         if (IntroAudio != null)
             _introAudioFinished = false;
+        else if (Page[_currentStep].InitialAutoStep)
+        {
+            _currentStep--;
+            AutoStep();
+        }
     }
 
     void OnMouseDown()

@@ -28,7 +28,10 @@ public class InterventionManager : MonoBehaviour
     void OnMouseDown()
     {
         if (_interventionActive)
+        {
             RemoveIntervention();
+            _myGameManager.HideCurrentPOIs();
+        }
     }
 
     public void InterventionSetup(ButtonType currentType)

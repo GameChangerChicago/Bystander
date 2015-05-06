@@ -158,8 +158,12 @@ public class SHGameManager : MonoBehaviour
         }
     }
 
-    public void HideAllPOIs()
+    public void HideCurrentPOIs()
     {
-
+        for (int i = 0; i < PointsOfInterestPerMicroScenario[CurrentMicroScenario].Length; i++)
+        {
+            for (int j = 0; j < PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>().Length; j++)
+                PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j].enabled = false;
+        }
     }
 }

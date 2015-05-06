@@ -88,6 +88,8 @@ public class QuizButton : MonoBehaviour
             //This grays out the answer and disables it's box collider so you can't select it
             this.GetComponent<TextMesh>().color = Color.gray;
             this.GetComponent<BoxCollider>().enabled = false;
+
+            _myGameManager.HideCurrentPOIs();
         }
 
         //Moves the quiz out of sight and reach

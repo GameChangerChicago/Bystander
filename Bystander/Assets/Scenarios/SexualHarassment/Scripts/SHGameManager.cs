@@ -164,6 +164,8 @@ public class SHGameManager : MonoBehaviour
         {
             for (int j = 0; j < PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>().Length; j++)
                 PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].GetComponentsInChildren<SpriteRenderer>()[j].enabled = false;
+
+            PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].enabled = false;
         }
     }
 }

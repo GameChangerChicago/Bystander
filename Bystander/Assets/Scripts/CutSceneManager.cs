@@ -54,23 +54,26 @@ public class CutSceneManager : MonoBehaviour
             if (Page[_currentStep].MyTextMesh != null)
                 ChangeDialog();
 
-            if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
+            if (Page[_currentStep + 1] != null)
             {
-                Invoke("ReEnableClicking", Page[_currentStep].ClickDelay + 0.05f);
+                if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
+                {
+                    Invoke("ReEnableClicking", Page[_currentStep].ClickDelay + 0.05f);
 
-                if (!Page[_currentStep + 1].AutoStep)
-                    Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.025f);
+                    if (!Page[_currentStep + 1].AutoStep)
+                        Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.025f);
+                    else
+                        Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.025f);
+                }
                 else
-                    Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.025f);
-            }
-            else
-            {
-                Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime + 0.05f);
+                {
+                    Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime + 0.05f);
 
-                if (!Page[_currentStep + 1].AutoStep)
-                    Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.025f);
-                else
-                    Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.025f);
+                    if (!Page[_currentStep + 1].AutoStep)
+                        Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.025f);
+                    else
+                        Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.025f);
+                }
             }
         }
         else if (Page[_currentStep].SceneToLoad != "")
@@ -298,23 +301,26 @@ public class CutSceneManager : MonoBehaviour
             if (Page[_currentStep].MyTextMesh != null)
                 ChangeDialog();
 
-            if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
+            if (Page[_currentStep + 1] != null)
             {
-                Invoke("ReEnableClicking", Page[_currentStep].ClickDelay + 0.05f);
+                if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
+                {
+                    Invoke("ReEnableClicking", Page[_currentStep].ClickDelay + 0.05f);
 
-                if (!Page[_currentStep + 1].AutoStep)
-                    Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.025f);
+                    if (!Page[_currentStep + 1].AutoStep)
+                        Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.025f);
+                    else
+                        Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.025f);
+                }
                 else
-                    Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.025f);
-            }
-            else
-            {
-                Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime + 0.05f);
+                {
+                    Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime + 0.05f);
 
-                if (!Page[_currentStep + 1].AutoStep)
-                    Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.025f);
-                else
-                    Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.025f);
+                    if (!Page[_currentStep + 1].AutoStep)
+                        Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.025f);
+                    else
+                        Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.025f);
+                }
             }
 
             _clickDisabled = true;

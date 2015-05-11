@@ -3,6 +3,56 @@ using System.Collections;
 
 public class SHVigilHandler : MonoBehaviour
 {
+    public Transform[] MicroScenarioTransforms = new Transform[5];
+    public bool IsCorrect,
+                GameWinner;
+
+    protected bool playWrongAnswer
+    {
+        get
+        {
+            if (_wrongCount < 3)
+            {
+                _wrongCount++;
+                _playWrongAnswer = false;
+            }
+            else
+            {
+                _wrongCount = 0;
+                _playWrongAnswer = true;
+            }
+            return _playWrongAnswer;
+        }
+        set
+        {
+            _playWrongAnswer = value;
+        }
+    }
+    private bool _playWrongAnswer = false;
+
+    protected bool playIntervention
+    {
+        get
+        {
+            if (_interveneCount < 3)
+            {
+                _interveneCount++;
+                playIntervention = false;
+            }
+            else
+            {
+                _interveneCount = 0;
+                _playIntervention = true;
+            }
+            return _playIntervention;
+        }
+        set
+        {
+            _playIntervention = value;
+        }
+    }
+    private bool _playIntervention = false;
+
     private SHGameManager _myGameManager;
     private AudioSource _myAudioSource;
     private AudioClip _wrongAnswerClip,
@@ -13,12 +63,10 @@ public class SHVigilHandler : MonoBehaviour
                    _wrongString;
     private int _stringIndex,
                 _endPoint,
-                _splitPoint;
+                _splitPoint,
+                _wrongCount = 3,
+                _interveneCount = 3;
     private bool _isVisible = false;
-
-    public Transform[] MicroScenarioTransforms = new Transform[5];
-    public bool IsCorrect,
-                GameWinner;
 
     void Start()
     {
@@ -41,12 +89,18 @@ public class SHVigilHandler : MonoBehaviour
 
     public void PlayAudio(bool playVirgilWrong)
     {
-        if (playVirgilWrong)
+        if (playVirgilWrong && playWrongAnswer)
+        {
+            _wrongCount = 0;
             _myAudioSource.clip = _wrongAnswerClip;
-        else
+            _myAudioSource.Play();
+        }
+        else if (!playVirgilWrong && playIntervention)
+        {
+            _interveneCount = 0;
             _myAudioSource.clip = _interventionClip;
-
-        _myAudioSource.Play();
+            _myAudioSource.Play();
+        }
     }
 
     public void ShowDialog(bool correct)

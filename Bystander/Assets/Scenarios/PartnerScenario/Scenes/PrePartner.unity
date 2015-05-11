@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 919664679}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1237372503}
   TextBox: {fileID: 725848984}
   CamRectangle:
@@ -183,10 +184,13 @@ MonoBehaviour:
   CamTravelTime: 3
   CamRotation: 0
   TextBounds: 3
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 1
+  InitialAutoStep: 0
 --- !u!4 &48939726
 Transform:
   m_ObjectHideFlags: 0
@@ -426,6 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 549392053}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 2123347504}
   TextBox: {fileID: 2032893244}
   CamRectangle:
@@ -441,10 +446,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 2.5
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &103496276
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1356012628}
   TextBox: {fileID: 794733816}
   CamRectangle:
@@ -895,10 +904,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 3
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!4 &259101273
 Transform:
   m_ObjectHideFlags: 0
@@ -1154,6 +1166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 549392053}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1447698594}
   TextBox: {fileID: 2056686214}
   CamRectangle:
@@ -1170,10 +1183,13 @@ MonoBehaviour:
   CamTravelTime: 2
   CamRotation: 0
   TextBounds: 2.5
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &328682638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
@@ -1217,10 +1234,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 0
+  AudioDelay: 0
   ClickDelay: 0
   AnimatorIndex: 0
-  PlayImmediately: 1
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!4 &328682640
 Transform:
   m_ObjectHideFlags: 0
@@ -1393,6 +1413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 549392053}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 2128809371}
   TextBox: {fileID: 1611677879}
   CamRectangle:
@@ -1409,10 +1430,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 2.5
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &376076262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,6 +1477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1636327997}
   TextBox: {fileID: 415976470}
   CamRectangle:
@@ -1468,10 +1493,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 5
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 1
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &381656016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1744258417}
   TextBox: {fileID: 2129319546}
   CamRectangle:
@@ -1578,10 +1607,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 3.70000005
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &415976470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1817076124}
   TextBox: {fileID: 563392258}
   CamRectangle:
@@ -1941,10 +1974,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 4.5
+  AudioDelay: 0
   ClickDelay: 1.25
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &563392258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,6 +2072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 20171432}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1026978995}
   TextBox: {fileID: 1901654976}
   CamRectangle:
@@ -2045,17 +2082,20 @@ MonoBehaviour:
     width: 1
     height: 1
   CamLocation: {x: 20.9218197, y: -24.1781902}
-  MyText: "You want to know what he said to me? \u201CDon\u2019t worry, baby. You\u2019re
-    gonna like it.\u201D "
+  MyText: 'You want to know what he said to me? "Don''t worry, baby. You''re gonna
+    like it." '
   SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 20
   CamRotation: 0
   TextBounds: 40
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 1
-  PlayImmediately: 1
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &605399928
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,6 +2315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 20171432}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 715395009}
   TextBox: {fileID: 2042144362}
   CamRectangle:
@@ -2291,10 +2332,13 @@ MonoBehaviour:
   CamTravelTime: 4
   CamRotation: 0
   TextBounds: 6
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &670501064
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,6 +2379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
@@ -2350,10 +2395,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 0
+  AudioDelay: 0
   ClickDelay: 1.25
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &676299302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,6 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 1175474669}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 211386079}
   TextBox: {fileID: 277890950}
   CamRectangle:
@@ -2459,10 +2508,13 @@ MonoBehaviour:
   CamTravelTime: 3
   CamRotation: 0
   TextBounds: 3
+  AudioDelay: 0
   ClickDelay: 1.25
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &708521791
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,6 +2779,7 @@ MonoBehaviour:
   - {fileID: 853573766}
   - {fileID: 670501066}
   IntroAudio: {fileID: 1981265165}
+  StepSoundEffect: {fileID: 0}
 --- !u!65 &721782359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2910,6 +2963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
@@ -2925,10 +2979,13 @@ MonoBehaviour:
   CamTravelTime: 4
   CamRotation: 0
   TextBounds: 0
+  AudioDelay: 0
   ClickDelay: 1.25
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &866249499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,6 +3714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 490376674}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1738826142}
   TextBox: {fileID: 1087214368}
   CamRectangle:
@@ -3672,10 +3730,13 @@ MonoBehaviour:
   CamTravelTime: 1
   CamRotation: 0
   TextBounds: 3
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!4 &995760036
 Transform:
   m_ObjectHideFlags: 0
@@ -3849,6 +3910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 103496277}
   TextBox: {fileID: 147404406}
   CamRectangle:
@@ -3864,10 +3926,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 3
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1087214368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,6 +4559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 954884064}
   TextBox: {fileID: 1911177784}
   CamRectangle:
@@ -4509,10 +4575,13 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 3
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!4 &1297095863
 Transform:
   m_ObjectHideFlags: 0
@@ -4972,6 +5041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 605399930}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1903178716}
   TextBox: {fileID: 1941345625}
   CamRectangle:
@@ -4987,10 +5057,13 @@ MonoBehaviour:
   CamTravelTime: 1
   CamRotation: 0
   TextBounds: 5
+  AudioDelay: 0
   ClickDelay: 1.25
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1501749939
 GameObject:
   m_ObjectHideFlags: 0
@@ -5091,6 +5164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 917206029}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 291015396}
   TextBox: {fileID: 941909106}
   CamRectangle:
@@ -5106,10 +5180,13 @@ MonoBehaviour:
   CamTravelTime: 1.5
   CamRotation: 0
   TextBounds: 3
+  AudioDelay: 0
   ClickDelay: 1.25
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1604126226
 GameObject:
   m_ObjectHideFlags: 0
@@ -5138,6 +5215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 66371647}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 333266319}
   TextBox: {fileID: 1259314722}
   CamRectangle:
@@ -5153,10 +5231,13 @@ MonoBehaviour:
   CamTravelTime: 3
   CamRotation: 0
   TextBounds: 3.5
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!4 &1604126228
 Transform:
   m_ObjectHideFlags: 0
@@ -5987,6 +6068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 1259543438}
   TextBox: {fileID: 1648183983}
   CamRectangle:
@@ -5996,17 +6078,20 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: "I didn\u2019t want to, I really didn\u2019t, but he just wasn\u2019t listening.
-    It was horrible. "
+  MyText: 'I didn''t want to, I really didn''t, but he just wasn''t listening. It
+    was horrible. '
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 5
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 1
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1901654976
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,6 +6355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 910204312}
+  StepClip: {fileID: 0}
   MyTextMesh: {fileID: 77703727}
   TextBox: {fileID: 1123460524}
   CamRectangle:
@@ -6285,10 +6371,13 @@ MonoBehaviour:
   CamTravelTime: 1
   CamRotation: 0
   TextBounds: 3
+  AudioDelay: 0
   ClickDelay: 1.5
   AnimatorIndex: 0
-  PlayImmediately: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1981265164
 GameObject:
   m_ObjectHideFlags: 0

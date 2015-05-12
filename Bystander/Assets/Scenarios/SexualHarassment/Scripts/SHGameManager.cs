@@ -81,14 +81,13 @@ public class SHGameManager : MonoBehaviour
         {
             if (value)
             {
+                _sectionsCompleted++;
+
                 //Checks to see if all sections are complete; if so then we'll load the epilogue
                 if (_sectionsCompleted == 5)
-                    Debug.Log("Load Epilogue");
+                    Application.LoadLevel("PostHarassment");
                 else //Otherwise we add one to _sectionsComplete and brings us back to the hub world
-                {
-                    _sectionsCompleted++;
                     currentCameraManager.ReturnToHub();
-                }
             }
 
             sectionComplete = value;
@@ -167,5 +166,12 @@ public class SHGameManager : MonoBehaviour
 
             PointsOfInterestPerMicroScenario[CurrentMicroScenario][i].enabled = false;
         }
+    }
+
+    public IEnumerator ReenablePOIs()
+    {
+        yield return new WaitForSeconds(0.05f);
+        Debug.Log("sfd");
+        FocusedOnPOI = false;
     }
 }

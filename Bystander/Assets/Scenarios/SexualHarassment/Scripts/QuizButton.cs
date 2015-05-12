@@ -59,7 +59,6 @@ public class QuizButton : MonoBehaviour
                 }
                 else //otherwise we start the virgil dialog by calling ShowStringSegment
                 {
-                    Invoke("ReenablePOIs", 0.05f);
                     //If we call ShowDialog with 'true' it will bring up the virgil dialog box with the 'correct' dialog
                     _myVirgil.ShowDialog(true);
                 }
@@ -72,7 +71,7 @@ public class QuizButton : MonoBehaviour
                 _myGameManager.CurrentPOI.ComicShown = false;
                 if (_myGameManager.CurrentPOI.CompanionPOI != null)
                     _myGameManager.CurrentPOI.CompanionPOI.ComicShown = false;
-                Invoke("ReenablePOIs", 0.05f);
+                StartCoroutine(_myGameManager.ReenablePOIs());
                 _myGameManager.WrongAnswerCounter++;
 
                 //When calling this method with 'true' it plays the wrong answer audio
@@ -126,10 +125,5 @@ public class QuizButton : MonoBehaviour
                 Debug.Log("This quiz button shouldn't be named what it is. Check that and get back to me.");
                 break;
         }
-    }
-
-    private void ReenablePOIs()
-    {
-        _myGameManager.FocusedOnPOI = false;
     }
 }

@@ -82,7 +82,7 @@ public class SHVigilHandler : MonoBehaviour
     }
 
     //Clicking anywhere will call ShowSpringSegment
-    void OnMouseDown()
+    void OnMouseUp()
     {
         FinishDialog();
     }
@@ -136,6 +136,7 @@ public class SHVigilHandler : MonoBehaviour
     private void FinishDialog()
     {
         this.transform.position = new Vector3(500, 500, 500);
+        StartCoroutine(_myGameManager.ReenablePOIs());
     }
 
     //This method works the same way that the one in the Party Scenario does

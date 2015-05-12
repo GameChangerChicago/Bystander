@@ -172,7 +172,6 @@ public class InterventionManager : MonoBehaviour
         this.transform.position = new Vector3(5000, -5000, -5000);
         _interventionActive = false;
         _myGameManager.SectionComplete = true;
-        _myGameManager.FocusedOnPOI = false;
         //_myVirgil.ShowStringSegment();
     }
 }

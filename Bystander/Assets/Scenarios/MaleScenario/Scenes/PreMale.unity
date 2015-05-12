@@ -137,6 +137,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &52230008
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +889,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &192886405
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +952,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 1
+  InitialAutoStep: 0
 --- !u!1 &195275472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1065,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 1
+  InitialAutoStep: 0
 --- !u!1 &265875661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1400,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &355990002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,6 +1647,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &405315133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +1781,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &431269376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,6 +1896,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &467579588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,6 +1959,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &513786317
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2022,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &522749503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2749,6 +2759,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &702585896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,6 +2940,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!4 &762516692
 Transform:
   m_ObjectHideFlags: 0
@@ -3525,6 +3537,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1071246471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,6 +4170,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1358401912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4337,6 +4351,7 @@ MonoBehaviour:
   PlayAnimImmediately: 1
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1420355807
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,6 +4447,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1476907250
 GameObject:
   m_ObjectHideFlags: 0
@@ -4601,7 +4617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1488388372
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4644,7 +4660,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 0
@@ -4847,6 +4863,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1524039459
 GameObject:
   m_ObjectHideFlags: 0
@@ -5326,6 +5343,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1694627796
 GameObject:
   m_ObjectHideFlags: 0
@@ -5579,6 +5597,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1762095463
 GameObject:
   m_ObjectHideFlags: 0
@@ -6111,6 +6130,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1858825287
 GameObject:
   m_ObjectHideFlags: 0
@@ -7244,6 +7264,7 @@ MonoBehaviour:
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &2122467445
 GameObject:
   m_ObjectHideFlags: 0

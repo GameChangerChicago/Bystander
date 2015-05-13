@@ -124,6 +124,92 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5960a4a5101dc9a40b98d27555134863, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
+--- !u!1 &211117558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 211117560}
+  - 82: {fileID: 211117559}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &211117559
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211117558}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &211117560
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211117558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.6152725, y: -4.86531734, z: -.0137519836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1053695688}
+  m_RootOrder: 6
 --- !u!1 &312987569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1276,7 @@ Transform:
   - {fileID: 1139219847}
   - {fileID: 1622861923}
   - {fileID: 1013171706}
+  - {fileID: 211117560}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!65 &1053695689
@@ -1223,7 +1310,7 @@ MonoBehaviour:
   - {fileID: 1622861924}
   - {fileID: 1013171707}
   IntroAudio: {fileID: 0}
-  StepSoundEffect: {fileID: 0}
+  StepSoundEffect: {fileID: 211117559}
 --- !u!1 &1084935844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,7 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 404145496}
-  StepClip: {fileID: 0}
+  StepClip: {fileID: 8300000, guid: 2c67a203b07763049913b6cc22f05d1b, type: 3}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
@@ -1683,7 +1770,7 @@ MonoBehaviour:
   CamTravelTime: 0
   CamRotation: 0
   TextBounds: 0
-  AudioDelay: 0
+  AudioDelay: 1
   ClickDelay: 4.19999981
   AnimatorIndex: 2
   PlayAnimImmediately: 0
@@ -2008,7 +2095,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2145746130}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &2145746132
 Behaviour:
   m_ObjectHideFlags: 0

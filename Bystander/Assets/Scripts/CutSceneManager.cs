@@ -301,7 +301,7 @@ public class CutSceneManager : MonoBehaviour
             if (Page[_currentStep].MyTextMesh != null)
                 ChangeDialog();
 
-            if (Page[_currentStep + 1] != null)
+            if (_currentStep <= Page.Length)
             {
                 if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
                 {

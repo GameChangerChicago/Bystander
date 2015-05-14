@@ -35,7 +35,6 @@ public class CutSceneManager : MonoBehaviour
     {
         if (!_clickDisabled && _introAudioFinished && Page[_currentStep].SceneToLoad == "")
         {
-            Debug.Log(_currentStep);
             _clickDisabled = true;
 
             if (Page[_currentStep].CamTravelTime > 0)
@@ -298,10 +297,15 @@ public class CutSceneManager : MonoBehaviour
             else if (Page[_currentStep].MyAnimator != null && !_clickDisabled)
                 FireAnimation();
 
+            if (Page[_currentStep].StepClip != null && !Page[_currentStep].PlayAudioImmediately)
+                Invoke("PlaySoundEffect", Page[_currentStep].CamTravelTime + Page[_currentStep].AudioDelay);
+            else if (Page[_currentStep].StepClip != null)
+                PlaySoundEffect();
+
             if (Page[_currentStep].MyTextMesh != null)
                 ChangeDialog();
 
-            if (_currentStep <= Page.Length)
+            if (_currentStep + 1 <= Page.Length)
             {
                 if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
                 {

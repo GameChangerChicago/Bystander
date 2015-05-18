@@ -25,12 +25,13 @@ public class InterventionManager : MonoBehaviour
         _interventionPositions[4] = new Vector3(17.23712f, -138.5017f, -15.32112f);
     }
 
-    void OnMouseDown()
+    void OnMouseUp()
     {
         if (_interventionActive)
         {
             RemoveIntervention();
             _myGameManager.HideCurrentPOIs();
+            StartCoroutine(_myGameManager.ReenablePOIs());
         }
     }
 
@@ -41,6 +42,7 @@ public class InterventionManager : MonoBehaviour
         char buttonTypeChar = '&';
         bool startPointFound = false;
         _interventionActive = true;
+        _myAnimator.SetBool("IsFaith", !_myAnimator.GetBool("IsFaith"));
 
         for (int i = 0; i < _interventionText.Length; i++)
         {

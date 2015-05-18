@@ -171,7 +171,6 @@ public class SHGameManager : MonoBehaviour
     public IEnumerator ReenablePOIs()
     {
         yield return new WaitForSeconds(0.05f);
-        Debug.Log("sfd");
         FocusedOnPOI = false;
     }
 }

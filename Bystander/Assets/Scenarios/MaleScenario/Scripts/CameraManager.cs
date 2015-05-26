@@ -28,9 +28,8 @@ public class CameraManager : MonoBehaviour
 		//
 		public void MoveCamera ()
 		{
-//		
-				
-						camera.GetComponent<Animator> ().Play ("TrackOut");
+                camera.GetComponent<Animator>().Play("TrackOut");
+
 			Debug.Log("Hello?");
 				
 

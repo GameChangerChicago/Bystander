@@ -178,8 +178,12 @@ public class CutSceneManager : MonoBehaviour
         _pos = Page[_currentStep].CamLocation;
         _rect = Page[_currentStep].CamRectangle;
         _camTravelTime = Page[_currentStep].CamTravelTime;
-        _camSize = Page[_currentStep].CamSize;
-        _camSizeDiff = Mathf.Abs(this.camera.orthographicSize - Page[_currentStep].CamSize);
+
+        if (this.GetComponent<AspectRatioHandler>().IsMacAspect)
+            _camSize = Page[_currentStep].CamSize + (Page[_currentStep].CamSize * 0.11f);
+        else
+            _camSize = Page[_currentStep].CamSize;
+        _camSizeDiff = Mathf.Abs(this.camera.orthographicSize - _camSize);
         _camRotation = Page[_currentStep].CamRotation;
         _camRotationDiff = Mathf.Abs(this.transform.rotation.z - Page[_currentStep].CamRotation);
         _rectDiff = new Rect(Mathf.Abs(this.camera.rect.x - _rect.x), Mathf.Abs(this.camera.rect.y - _rect.y), Mathf.Abs(this.camera.rect.width - _rect.width), Mathf.Abs(this.camera.rect.height - _rect.height));
@@ -224,6 +228,7 @@ public class CutSceneManager : MonoBehaviour
         }
         else if (this.camera.orthographicSize < _camSize) //If the current camera size is less than _camSize then we know we need to increase the size of the camera
         {
+            Debug.Log("Cam Size: " + _camSize);
             this.camera.orthographicSize += _camSizeDiff / (_camTravelTime / Time.deltaTime * travelTimeModifier);
 
             //Eventually the camera size will be slightly larger than the desired size; once this happens we simply set the size to _camSize

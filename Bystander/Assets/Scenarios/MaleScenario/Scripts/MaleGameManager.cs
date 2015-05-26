@@ -48,13 +48,19 @@ public class MaleGameManager : MonoBehaviour
 				soundManager = FindObjectOfType<SoundManager> ();
 				//correctAnswer = answerArray[0];
 				
+            if (cameraManager.camera.aspect < 1.61f)
+                cameraManager.GetComponent<Animator>().Play("CameraIntroMac");
 		}
 
 		public IEnumerator StartGame ()
 		{
 
 		yield return new WaitForSeconds (3);
-				cameraManager.GetComponent<Animator>().Play("TrackOut");
+            //Mason: This looks at the aspect ratio and calls the correct animation accordingly
+        if (cameraManager.camera.aspect < 1.61f)
+            cameraManager.GetComponent<Animator>().Play("TrackOutMac");
+        else
+            cameraManager.GetComponent<Animator>().Play("TrackOut");
 				
 		//waiting for the camera animation to stop	
 		yield return new WaitForSeconds (5);

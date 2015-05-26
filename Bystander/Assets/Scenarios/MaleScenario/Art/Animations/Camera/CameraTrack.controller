@@ -115,6 +115,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110254842
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: TrackOutMac
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: b63a3b2c94186de4fb2760034e3b9aba, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 451, y: 207, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110258117
 State:
   m_ObjectHideFlags: 3
@@ -127,6 +142,21 @@ State:
   - {fileID: 7400000, guid: 65bfb04b7bff5a448b4a787c5c8ace47, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 192, y: 288, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110261357
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CameraIntroMac
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 9a10a51c8175a98418fd2adcf6b0adcd, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 132, y: 228, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -159,6 +189,8 @@ StateMachine:
   - {fileID: 110258117}
   - {fileID: 110253232}
   - {fileID: 110230395}
+  - {fileID: 110254842}
+  - {fileID: 110261357}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions: {}

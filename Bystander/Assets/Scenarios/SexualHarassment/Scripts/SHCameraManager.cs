@@ -18,7 +18,14 @@ public class SHCameraManager : MonoBehaviour
             if (value)
             {
                 //The camera's rectangle is position that it encompaces the scene
-                this.camera.rect = new Rect(0, 0, 1, 1);
+                //if (this.camera.aspect < 1.61f)
+                //    this.camera.rect = new Rect(0.05f, 0, 0.9f, 1);
+                //else
+                //{
+                    this.camera.rect = new Rect(0, 0, 1, 1);
+                //}
+
+                this.camera.clearFlags = CameraClearFlags.Skybox;
 
                 //It then turns off every other camera
                 for (int i = 0; i < FindObjectsOfType<SHCameraManager>().Length; i++)
@@ -29,7 +36,7 @@ public class SHCameraManager : MonoBehaviour
             }
             else //When set false the camera is moved and shrunken to it's hold position
             {
-                this.camera.rect = new Rect(cameraPos.x, cameraPos.y, 0.25f, 0.3f);
+                this.camera.rect = new Rect(cameraPos.x, cameraPos.y, 0.3f, 0.3f);
             }
 
             isCurrentCamera = value;
@@ -51,7 +58,9 @@ public class SHCameraManager : MonoBehaviour
         for (int i = 0; i < FindObjectsOfType<SHCameraManager>().Length; i++)
         {
             if (FindObjectsOfType<SHCameraManager>()[i] == this)
+            {
                 IsCurrentCamera = true;
+            }
             else
                 FindObjectsOfType<SHCameraManager>()[i].IsCurrentCamera = false;
         }
@@ -66,6 +75,7 @@ public class SHCameraManager : MonoBehaviour
         for (int i = 0; i < FindObjectsOfType<SHCameraManager>().Length; i++)
         {
             FindObjectsOfType<SHCameraManager>()[i].camera.enabled = enabled;
+            FindObjectsOfType<SHCameraManager>()[i].camera.clearFlags = CameraClearFlags.Depth;
         }
     }
 }

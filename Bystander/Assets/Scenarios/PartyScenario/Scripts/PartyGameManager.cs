@@ -33,7 +33,7 @@ public class PartyGameManager : MonoBehaviour
     {
         _myCameraManager = FindObjectOfType<PartyCameraManager>();
         _virgil = FindObjectOfType<PartyVirgil>();
-        _currentPrefab = GameObject.Find("LivingRoom");
+        _currentPrefab = GameObject.Find("LivingRoom1");
     }
 
     //This method is called whenever an interactable prop is clicked

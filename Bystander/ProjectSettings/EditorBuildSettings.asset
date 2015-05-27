@@ -11,11 +11,11 @@ EditorBuildSettings:
     path: Assets/Scenarios/MaleScenario/Scenes/MaleScenario.unity
   - enabled: 0
     path: Assets/Scenarios/MaleScenario/Scenes/PostMale.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenarios/SexualHarassment/Scenes/PreHarassment.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenarios/SexualHarassment/Scenes/SexualHarassment.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenarios/SexualHarassment/Scenes/PostHarassment.unity
   - enabled: 0
     path: Assets/Scenarios/PartnerScenario/Scenes/PrePartner.unity
@@ -23,3 +23,5 @@ EditorBuildSettings:
     path: Assets/Scenarios/PartnerScenario/Scenes/PartnerScenario.unity
   - enabled: 0
     path: Assets/Scenarios/PartnerScenario/Scenes/PostPartner.unity
+  - enabled: 1
+    path: Assets/Scenarios/PartyScenario/Scenes/PartyScenario.unity

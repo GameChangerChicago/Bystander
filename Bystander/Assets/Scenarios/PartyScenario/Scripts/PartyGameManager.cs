@@ -25,7 +25,7 @@ public class PartyGameManager : MonoBehaviour
     private InteractiveMoments _currentInteractiveMoment = InteractiveMoments.LivingRoom;
     private PartyCameraManager _myCameraManager;
     private PartyVirgil _virgil;
-    private GameObject _currentPrefab;
+    private GameObject _currentSection;
     private float _cameraTravelTime;
     private int _clickCount = 0;
 
@@ -33,7 +33,7 @@ public class PartyGameManager : MonoBehaviour
     {
         _myCameraManager = FindObjectOfType<PartyCameraManager>();
         _virgil = FindObjectOfType<PartyVirgil>();
-        _currentPrefab = GameObject.Find("LivingRoom1");
+        _currentSection = GameObject.Find("LivingRoom1");
     }
 
     //This method is called whenever an interactable prop is clicked
@@ -45,7 +45,7 @@ public class PartyGameManager : MonoBehaviour
         if (!hasDialog)
         {
             _clickCount++;
-            StartCoroutine(_myCameraManager.ReturnCamera(_currentPrefab.transform.position, _cameraTravelTime + viewTime));
+            StartCoroutine(_myCameraManager.ReturnCamera(_currentSection.transform.position, _cameraTravelTime + viewTime));
             Invoke("VirgilHandler", (_cameraTravelTime * 2) + viewTime);
         }
 
@@ -59,15 +59,13 @@ public class PartyGameManager : MonoBehaviour
     public void FinishDialog()
     {
         _clickCount++;
-        StartCoroutine(_myCameraManager.ReturnCamera(_currentPrefab.transform.position, 0));
+        StartCoroutine(_myCameraManager.ReturnCamera(_currentSection.transform.position, 0));
         Invoke("VirgilHandler", _cameraTravelTime);
     }
 
     //This method is called the max clicks has been reached
     public void FinsihInteractiveSegment()
     {
-        GameObject newPrefab = null;
-
         if (SectionCompleted) //If you've clicked the correct interactable prop
         {
             //Sets the next prefab or ends the scenario
@@ -76,16 +74,22 @@ public class PartyGameManager : MonoBehaviour
                 case InteractiveMoments.LivingRoom:
                     //This should actually instantiate the Kitchen but that pfab hasn't been made yet
                     //Each one of these also needs to set the Max click count as it may be different for each Interactive moment
-                    newPrefab = (GameObject)Instantiate(LivingRoom);
+                    _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19);
+                    _currentInteractiveMoment = InteractiveMoments.Kitchen;
+                    _currentSection = Kitchen;
                     break;
                 case InteractiveMoments.Kitchen:
-                    Debug.Log("Kitchen");
+                    _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19);
+                    _currentInteractiveMoment = InteractiveMoments.BackPoarch;
+                    _currentSection = BackPoarch;
                     break;
                 case InteractiveMoments.BackPoarch:
-                    Debug.Log("Back Poarch");
+                    _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19);
+                    _currentInteractiveMoment = InteractiveMoments.LivingRoom2;
+                    _currentSection = LivingRoom2;
                     break;
                 case InteractiveMoments.LivingRoom2:
-                    Debug.Log("Living Room2");
+                    Debug.Log("Done");
                     break;
                 case InteractiveMoments.Hallway:
                     Debug.Log("Hallway");
@@ -101,7 +105,6 @@ public class PartyGameManager : MonoBehaviour
             switch (_currentInteractiveMoment)
             {
                 case InteractiveMoments.LivingRoom:
-                    newPrefab = (GameObject)Instantiate(LivingRoom);
                     break;
                 case InteractiveMoments.Kitchen:
                     Debug.Log("Kitchen");
@@ -121,19 +124,19 @@ public class PartyGameManager : MonoBehaviour
             }
         }
 
-        GameObject.Destroy(_currentPrefab);
-        _currentPrefab = newPrefab;
         _virgil = FindObjectOfType<PartyVirgil>();
         _clickCount = 0;
     }
 
     //Some iteractable props have an animation that plays in the close up panel this method handles that
-    public IEnumerator PlayCloseUpAnimation(Animation currentAnimation, int clickCount, float WaitTime)
+    public IEnumerator PlayCloseUpAnimation(Animator currentAnimator, int clickCount, float WaitTime)
     {
         yield return new WaitForSeconds(WaitTime);
 
-        currentAnimation.clip = currentAnimation.GetClip(currentAnimation.gameObject.name + "_" + clickCount);
-        currentAnimation.Play();
+        if (currentAnimator.enabled != true)
+            currentAnimator.enabled = true;
+        else
+            currentAnimator.Play(currentAnimator.gameObject.name + "_" + clickCount);
     }
 
     //This method brings up virgil and disables the interactable props

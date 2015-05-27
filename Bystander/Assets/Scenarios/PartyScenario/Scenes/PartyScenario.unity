@@ -221,8 +221,9 @@ MonoBehaviour:
   CameraSize: 5.5
   ViewTime: 3
   MyPanelPos: {fileID: 950486466}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX:
+  - {fileID: 0}
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 1490358706}
 --- !u!95 &12764877
 Animator:
@@ -248,6 +249,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 40538237}
   - 114: {fileID: 40538238}
+  - 95: {fileID: 40538240}
+  - 212: {fileID: 40538239}
   m_Layer: 0
   m_Name: Popcorn
   m_TagString: Untagged
@@ -283,17 +286,55 @@ MonoBehaviour:
   ImportantProp: 0
   HasDialog: 0
   HasMultipleSteps: 0
-  AnimationChanges: 0
-  HasCloseupAnimation: 0
-  MaxClicks: 0
+  AnimationChanges: 1
+  HasCloseupAnimation: 1
+  MaxClicks: 2
   DialogSections: 0
-  CameraMoveTime: 0
-  CameraSize: 0
-  ViewTime: 0
-  MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
-  MouseOverObject: {fileID: 0}
+  CameraMoveTime: 2
+  CameraSize: 5
+  ViewTime: 1
+  MyPanelPos: {fileID: 1103640908}
+  MySFX:
+  - {fileID: 0}
+  CloseUpAnimator: {fileID: 1103640910}
+  MouseOverObject: {fileID: 96953733}
+--- !u!212 &40538239
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40538236}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &40538240
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40538236}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f604341c9d4fc234b8dba958be3b6729, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &54965618
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +848,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1092028404}
   m_RootOrder: 0
+--- !u!1 &96953733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 96953734}
+  - 212: {fileID: 96953735}
+  m_Layer: 0
+  m_Name: PopcornSelectSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &96953734
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 96953733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1788539588}
+  m_RootOrder: 0
+--- !u!212 &96953735
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 96953733}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 100842567
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 7aa645e8b0de11b44a32b156b95fc722, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &97387824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +2452,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 312315188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.9753513, y: 26.333889, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1103640908}
@@ -3286,8 +3377,9 @@ MonoBehaviour:
   CameraSize: 3
   ViewTime: 1.5
   MyPanelPos: {fileID: 235815395}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 1544905734}
+  MySFX:
+  - {fileID: 0}
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &440447935
 GameObject:
@@ -3411,8 +3503,8 @@ MonoBehaviour:
   CameraSize: 0
   ViewTime: 0
   MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX: []
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &445234358
 GameObject:
@@ -5884,8 +5976,9 @@ MonoBehaviour:
   CameraSize: 5
   ViewTime: 0
   MyPanelPos: {fileID: 1853832056}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX:
+  - {fileID: 0}
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &820184552
 GameObject:
@@ -6083,16 +6176,18 @@ MonoBehaviour:
   HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
-  HasCloseupAnimation: 0
-  MaxClicks: 0
+  HasCloseupAnimation: 1
+  MaxClicks: 1
   DialogSections: 0
-  CameraMoveTime: 0
-  CameraSize: 0
-  ViewTime: 0
-  MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
-  MouseOverObject: {fileID: 0}
+  CameraMoveTime: 2
+  CameraSize: 4
+  ViewTime: .5
+  MyPanelPos: {fileID: 2111722849}
+  MySFX:
+  - {fileID: 8300000, guid: 9f8aa1843d93c224094bce18b7794e15, type: 3}
+  - {fileID: 8300000, guid: 40d86f73f456dfd4986c09b4ed792ac0, type: 3}
+  CloseUpAnimator: {fileID: 0}
+  MouseOverObject: {fileID: 1579759447}
 --- !u!1 &869310518
 GameObject:
   m_ObjectHideFlags: 0
@@ -6450,8 +6545,8 @@ MonoBehaviour:
   CameraSize: 0
   ViewTime: 0
   MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX: []
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &910359617
 GameObject:
@@ -6631,7 +6726,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 929038934}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
   m_LocalPosition: {x: -33.2776642, y: 1.09958649, z: .013671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6908,7 +7003,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 941117785}
-  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -32.7710304, y: 14.0172615, z: .013671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8231,7 +8326,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1103640908}
   - 95: {fileID: 1103640910}
-  - 212: {fileID: 1103640909}
   m_Layer: 0
   m_Name: PopcornComic
   m_TagString: Untagged
@@ -8246,34 +8340,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1103640907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.74163675, y: 1.79402161, z: .013671875}
+  m_LocalPosition: {x: 20.0332203, y: 28.1988106, z: .013671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 312315189}
   m_Father: {fileID: 2083676826}
   m_RootOrder: 4
---- !u!212 &1103640909
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1103640907}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1103640910
 Animator:
   serializedVersion: 3
@@ -8281,7 +8353,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1103640907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3f275fe45f82f6d4aacf9077bea6ec34, type: 2}
   m_CullingMode: 0
@@ -8335,15 +8407,16 @@ MonoBehaviour:
   HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
-  HasCloseupAnimation: 0
+  HasCloseupAnimation: 1
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 2
   CameraSize: 5
   ViewTime: 3
   MyPanelPos: {fileID: 929038935}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX:
+  - {fileID: 0}
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 290256876}
 --- !u!1 &1106469512
 GameObject:
@@ -9861,8 +9934,9 @@ MonoBehaviour:
   CameraSize: 0
   ViewTime: 0
   MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX:
+  - {fileID: 0}
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &1383070610
 GameObject:
@@ -10299,6 +10373,92 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1605339784}
   m_RootOrder: 0
+--- !u!1 &1453772803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1453772805}
+  - 82: {fileID: 1453772804}
+  m_Layer: 0
+  m_Name: AudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1453772804
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1453772803}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 9f8aa1843d93c224094bce18b7794e15, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &1453772805
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1453772803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0410017967, y: -49.2823029, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &1460254092
 GameObject:
   m_ObjectHideFlags: 0
@@ -10634,16 +10794,16 @@ MonoBehaviour:
   HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
-  HasCloseupAnimation: 0
-  MaxClicks: 0
+  HasCloseupAnimation: 1
+  MaxClicks: 1
   DialogSections: 0
-  CameraMoveTime: 0
-  CameraSize: 0
+  CameraMoveTime: 1
+  CameraSize: 5.69999981
   ViewTime: 0
-  MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
-  MouseOverObject: {fileID: 0}
+  MyPanelPos: {fileID: 634538021}
+  MySFX: []
+  CloseUpAnimator: {fileID: 0}
+  MouseOverObject: {fileID: 765095140}
 --- !u!1 &1520774665
 GameObject:
   m_ObjectHideFlags: 0
@@ -11236,8 +11396,9 @@ MonoBehaviour:
   CameraSize: 0
   ViewTime: 0
   MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX:
+  - {fileID: 0}
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &1574679236
 GameObject:
@@ -11842,8 +12003,8 @@ MonoBehaviour:
   CameraSize: 0
   ViewTime: 0
   MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX: []
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &1694271910
 GameObject:
@@ -11998,8 +12159,8 @@ MonoBehaviour:
   CameraSize: 0
   ViewTime: 0
   MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX: []
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &1732125290
 GameObject:
@@ -12542,7 +12703,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .412234008, y: .412234008, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 96953734}
   m_Father: {fileID: 40538237}
   m_RootOrder: 0
 --- !u!1 &1805022458
@@ -14458,8 +14620,8 @@ MonoBehaviour:
   CameraSize: 0
   ViewTime: 0
   MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX: []
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &2054419161
 GameObject:
@@ -14697,15 +14859,16 @@ MonoBehaviour:
   HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
-  HasCloseupAnimation: 0
+  HasCloseupAnimation: 1
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 2
   CameraSize: 5.19999981
   ViewTime: 2
   MyPanelPos: {fileID: 941117786}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX:
+  - {fileID: 0}
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 1129474172}
 --- !u!1 &2083676825
 GameObject:
@@ -15132,8 +15295,8 @@ MonoBehaviour:
   CameraSize: 0
   ViewTime: 0
   MyPanelPos: {fileID: 0}
-  MySFX: {fileID: 0}
-  CloseUpAnimation: {fileID: 0}
+  MySFX: []
+  CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
 --- !u!1 &2144706135
 GameObject:

@@ -44,13 +44,14 @@ public class InteractableProp : MonoBehaviour
                  CameraSize,
                  ViewTime;
     public Transform MyPanelPos;
-    public AudioClip MySFX;
-    public Animation CloseUpAnimation;
+    public AudioClip[] MySFX;
+    public Animator CloseUpAnimator;
     public GameObject MouseOverObject;
 
     private bool _firstDialog;
     private int _myClickCount = 0;
     private string _dialog;
+    private Animator _myAnimator;
     private PartyGameManager _myGameManager;
     private Camera _myCamera;
     private Collider2D _overlapCircle;
@@ -58,6 +59,7 @@ public class InteractableProp : MonoBehaviour
     void Start()
     {
         _myGameManager = FindObjectOfType<PartyGameManager>();
+        _myAnimator = GetComponent<Animator>();
         _myCamera = Camera.main;
     }
 
@@ -81,13 +83,8 @@ public class InteractableProp : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            //Interactable Props with multiple steps need to call different animations each time
-            if (HasMultipleSteps)
-            {
-                animation.clip = animation.GetClip(this.name + _myClickCount);
-                Invoke("ChangeAnimation", CameraMoveTime);
-            } //Otherwise, don't worry about it
-            else if (AnimationChanges)
+            //If an Interactable Props changes animations while off screen
+            if (AnimationChanges)
                 Invoke("ChangeAnimation", CameraMoveTime);
 
             //This calls PlayerClicked sending all of the impertinent data
@@ -98,55 +95,30 @@ public class InteractableProp : MonoBehaviour
             {
                 ConvoHandler currentCloseUpConvo = GameObject.Find("CloseUpPanel_" + this.name).GetComponent<ConvoHandler>();
                 StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
-                _myClickCount++;
             }
 
             //If the interactable prop has dialog than this calls PlayCloseUpAnimation
             if (HasCloseupAnimation)
             {
-                //StartCoroutine(_myGameManager.PlayCloseUpAnimation(CloseUpAnimation, _myClickCount, CameraMoveTime));
-                _myClickCount++;
-            }
-        }
-    }
-
-    void OnMouseUp()
-    {
-        Debug.Log("asdf");   
-        if (MousedOver)
-        {
-            //Interactable Props with multiple steps need to call different animations each time
-            if (HasMultipleSteps)
-            {
-                animation.clip = animation.GetClip(this.name + _myClickCount);
-                Invoke("ChangeAnimation", CameraMoveTime);
-            } //Otherwise, don't worry about it
-            else if (AnimationChanges)
-                Invoke("ChangeAnimation", CameraMoveTime);
-
-            //This calls PlayerClicked sending all of the impertinent data
-            _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos.position, CameraSize, ViewTime);
-            Debug.Log("asfd");
-
-            //If the interactable prop has dialog than this calls the first DialogHandler
-            if(HasDialog)
-            {
-                ConvoHandler currentCloseUpConvo = GameObject.Find("CloseUpPanel_" + this.name).GetComponent<ConvoHandler>();
-                StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
-                _myClickCount++;
+                StartCoroutine(_myGameManager.PlayCloseUpAnimation(CloseUpAnimator, _myClickCount, CameraMoveTime));
             }
 
-            //If the interactable prop has dialog than this calls PlayCloseUpAnimation
-            if (HasCloseupAnimation)
+            if (MySFX[0] != null)
             {
-                StartCoroutine(_myGameManager.PlayCloseUpAnimation(CloseUpAnimation, _myClickCount, CameraMoveTime));
-                _myClickCount++;
+                if (FindObjectOfType<AudioSource>().clip == MySFX[0])
+                    FindObjectOfType<AudioSource>().clip = MySFX[1];
+                else
+                    FindObjectOfType<AudioSource>().clip = MySFX[0];
+
+                FindObjectOfType<AudioSource>().Play();
             }
+
+            _myClickCount++;
         }
     }
 
     private void ChangeAnimation()
     {
-        animation.Play();
+        _myAnimator.Play(this.name + "_" + _myClickCount);
     }
 }

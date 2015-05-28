@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PartyGameManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PartyGameManager : MonoBehaviour
         Hallway
     };
 
+    private Dictionary<InteractiveMoments, InteractableProp[]> PropsPerIM = new Dictionary<InteractiveMoments, InteractableProp[]>();
     private InteractiveMoments _currentInteractiveMoment = InteractiveMoments.LivingRoom;
     private PartyCameraManager _myCameraManager;
     private PartyVirgil _virgil;
@@ -34,6 +36,17 @@ public class PartyGameManager : MonoBehaviour
         _myCameraManager = FindObjectOfType<PartyCameraManager>();
         _virgil = FindObjectOfType<PartyVirgil>();
         _currentSection = GameObject.Find("LivingRoom1");
+
+        InitializeProps();
+    }
+
+    private void InitializeProps()
+    {
+        PropsPerIM.Add(InteractiveMoments.LivingRoom, LivingRoom.GetComponentsInChildren<InteractableProp>());
+        PropsPerIM.Add(InteractiveMoments.Kitchen, Kitchen.GetComponentsInChildren<InteractableProp>());
+        PropsPerIM.Add(InteractiveMoments.BackPoarch, BackPoarch.GetComponentsInChildren<InteractableProp>());
+        PropsPerIM.Add(InteractiveMoments.LivingRoom2, LivingRoom2.GetComponentsInChildren<InteractableProp>());
+        PropsPerIM.Add(InteractiveMoments.Hallway, Hallway.GetComponentsInChildren<InteractableProp>());
     }
 
     //This method is called whenever an interactable prop is clicked
@@ -45,8 +58,8 @@ public class PartyGameManager : MonoBehaviour
         if (!hasDialog)
         {
             _clickCount++;
-            StartCoroutine(_myCameraManager.ReturnCamera(_currentSection.transform.position, _cameraTravelTime + viewTime));
-            Invoke("VirgilHandler", (_cameraTravelTime * 2) + viewTime);
+            StartCoroutine(_myCameraManager.ReturnCamera(_currentSection.transform.position, _cameraTravelTime + viewTime, 0));
+            //Invoke("VirgilHandler", (_cameraTravelTime * 2) + viewTime);
         }
 
         if (importantProp)
@@ -59,13 +72,15 @@ public class PartyGameManager : MonoBehaviour
     public void FinishDialog()
     {
         _clickCount++;
-        StartCoroutine(_myCameraManager.ReturnCamera(_currentSection.transform.position, 0));
-        Invoke("VirgilHandler", _cameraTravelTime);
+        StartCoroutine(_myCameraManager.ReturnCamera(_currentSection.transform.position, 0, 0));
+        //Invoke("VirgilHandler", _cameraTravelTime);
     }
 
     //This method is called the max clicks has been reached
-    public void FinsihInteractiveSegment()
+    public IEnumerator FinsihInteractiveSegment(float waitTime)
     {
+        yield return new WaitForSeconds(waitTime);
+
         if (SectionCompleted) //If you've clicked the correct interactable prop
         {
             //Sets the next prefab or ends the scenario
@@ -98,34 +113,20 @@ public class PartyGameManager : MonoBehaviour
                     Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");
                     break;
             }
+
+            _clickCount = 0;
         }
-        else //If you never clicked the correct interactable prop
+        else if (_clickCount >= MaxClicks) //If you never clicked the correct interactable prop
         {
-            //Sets the same prfab to be loaded effectively reseting the level
-            switch (_currentInteractiveMoment)
+            for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
             {
-                case InteractiveMoments.LivingRoom:
-                    break;
-                case InteractiveMoments.Kitchen:
-                    Debug.Log("Kitchen");
-                    break;
-                case InteractiveMoments.BackPoarch:
-                    Debug.Log("Back Poarch");
-                    break;
-                case InteractiveMoments.LivingRoom2:
-                    Debug.Log("Living Room2");
-                    break;
-                case InteractiveMoments.Hallway:
-                    Debug.Log("Hallway");
-                    break;
-                default:
-                    Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");
-                    break;
+                PropsPerIM[_currentInteractiveMoment][i].ResetProp();
             }
+
+            _clickCount = 0;
         }
 
         _virgil = FindObjectOfType<PartyVirgil>();
-        _clickCount = 0;
     }
 
     //Some iteractable props have an animation that plays in the close up panel this method handles that
@@ -133,25 +134,25 @@ public class PartyGameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(WaitTime);
 
-        if (currentAnimator.enabled != true)
-            currentAnimator.enabled = true;
-        else
+        if (currentAnimator.speed == 0) //Initially and when props are reset, the animator's speed is set to 0; this set's it back to 1
+            currentAnimator.speed = 1;
+        else //Otherwise we will play the next animation
             currentAnimator.Play(currentAnimator.gameObject.name + "_" + clickCount);
     }
 
     //This method brings up virgil and disables the interactable props
-    private void VirgilHandler()
-    {
-        if (_clickCount >= MaxClicks)
-        {
-            _virgil.Appear();
+    //private void VirgilHandler()
+    //{
+    //    if (_clickCount >= MaxClicks)
+    //    {
+    //        _virgil.Appear();
 
-            InteractableProp[] props = FindObjectsOfType<InteractableProp>();
+    //        InteractableProp[] props = FindObjectsOfType<InteractableProp>();
 
-            for (int i = 0; i < props.Length; i++)
-            {
-                props[i].GetComponent<BoxCollider>().enabled = false;
-            }
-        }
-    }
+    //        for (int i = 0; i < props.Length; i++)
+    //        {
+    //            props[i].GetComponent<BoxCollider>().enabled = false;
+    //        }
+    //    }
+    //}
 }

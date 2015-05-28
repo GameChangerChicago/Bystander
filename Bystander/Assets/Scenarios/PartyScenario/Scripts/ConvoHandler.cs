@@ -81,7 +81,7 @@ public class ConvoHandler : MonoBehaviour
             DialogBox.GetComponentInChildren<SpriteRenderer>().enabled = false;
             _stringIndex = 0;
             _stringsShown = 0;
-            _myGameManager.FinsihInteractiveSegment();
+            _myGameManager.FinsihInteractiveSegment(0);
         }
         else if (!_cameraMoving) //For typical convos that have shown all dialog sections
         {

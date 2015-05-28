@@ -23,6 +23,8 @@ AnimationClip:
       value: {fileID: 21300016, guid: 2a1bb0825b9753a44b7c150ce250944d, type: 3}
     - time: .666666687
       value: {fileID: 21300018, guid: 2a1bb0825b9753a44b7c150ce250944d, type: 3}
+    - time: 1
+      value: {fileID: 21300004, guid: 2a1bb0825b9753a44b7c150ce250944d, type: 3}
     attribute: m_Sprite
     path: PopcornSprite
     classID: 212
@@ -44,10 +46,11 @@ AnimationClip:
     - {fileID: 21300000, guid: 2a1bb0825b9753a44b7c150ce250944d, type: 3}
     - {fileID: 21300016, guid: 2a1bb0825b9753a44b7c150ce250944d, type: 3}
     - {fileID: 21300018, guid: 2a1bb0825b9753a44b7c150ce250944d, type: 3}
+    - {fileID: 21300004, guid: 2a1bb0825b9753a44b7c150ce250944d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 1.33333337
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

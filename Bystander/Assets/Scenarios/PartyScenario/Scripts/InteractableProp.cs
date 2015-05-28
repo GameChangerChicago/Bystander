@@ -45,12 +45,15 @@ public class InteractableProp : MonoBehaviour
                  ViewTime,
                  CamRotation;
     public Transform MyPanelPos;
-    public AudioClip[] MySFX;
+    public AudioClip[] MyBGM,
+                       MySFX;
     public Animator CloseUpAnimator;
     public GameObject MouseOverObject;
 
     private bool _firstDialog;
-    private int _myClickCount = 0;
+    private int _myClickCount = 0,
+                _BGMIndex,
+                _SFXIndex;
     private string _dialog;
     private Animator _myAnimator;
     private PartyGameManager _myGameManager;
@@ -62,6 +65,9 @@ public class InteractableProp : MonoBehaviour
         _myGameManager = FindObjectOfType<PartyGameManager>();
         _myAnimator = GetComponent<Animator>();
         _myCamera = Camera.main;
+
+        if (CloseUpAnimator != null)
+            CloseUpAnimator.speed = 0;
     }
 
     void Update()
@@ -94,9 +100,11 @@ public class InteractableProp : MonoBehaviour
             //If the interactable prop has dialog than this calls the first DialogHandler
             if (HasDialog)
             {
-                ConvoHandler currentCloseUpConvo = GameObject.Find("CloseUpPanel_" + this.name).GetComponent<ConvoHandler>();
+                ConvoHandler currentCloseUpConvo = GameObject.Find(this.name + "Comic").GetComponent<ConvoHandler>();
                 StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
             }
+            else
+                StartCoroutine(_myGameManager.FinsihInteractiveSegment((2 * CameraMoveTime) + ViewTime));
 
             //If the interactable prop has dialog than this calls PlayCloseUpAnimation
             if (HasCloseupAnimation)
@@ -104,14 +112,19 @@ public class InteractableProp : MonoBehaviour
                 StartCoroutine(_myGameManager.PlayCloseUpAnimation(CloseUpAnimator, _myClickCount, CameraMoveTime));
             }
 
-            if (MySFX[0] != null)
+            //This bit handles background music changes
+            if (MyBGM.Length != 0)
             {
-                if (FindObjectOfType<AudioSource>().clip == MySFX[0])
-                    FindObjectOfType<AudioSource>().clip = MySFX[1];
-                else
-                    FindObjectOfType<AudioSource>().clip = MySFX[0];
+                if (MyBGM[_BGMIndex] != null)
+                {
+                    FindObjectOfType<AudioSource>().clip = MyBGM[_BGMIndex];
+                    FindObjectOfType<AudioSource>().Play();
 
-                FindObjectOfType<AudioSource>().Play();
+                    if (_BGMIndex == MyBGM.Length)
+                        _BGMIndex = 0;
+                    else
+                        _BGMIndex++;
+                }
             }
 
             _myClickCount++;
@@ -121,5 +134,20 @@ public class InteractableProp : MonoBehaviour
     private void ChangeAnimation()
     {
         _myAnimator.Play(this.name + "_" + _myClickCount);
+    }
+
+    public void ResetProp()
+    {
+        _myClickCount = 0;
+
+        if (AnimationChanges)
+            _myAnimator.Play(this.name + "_0");
+
+        if (HasCloseupAnimation)
+        {
+            CloseUpAnimator.Play(CloseUpAnimator.name + "_0");
+            CloseUpAnimator.speed = 0;
+            //CloseUpAnimator.enabled = false;
+        }
     }
 }

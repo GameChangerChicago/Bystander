@@ -219,12 +219,12 @@ MonoBehaviour:
   DialogSections: 0
   CameraMoveTime: 2
   CameraSize: 5.5
-  ViewTime: 3
+  ViewTime: 3.5
   CamRotation: 0
   MyPanelPos: {fileID: 950486466}
-  MySFX:
-  - {fileID: 0}
-  CloseUpAnimator: {fileID: 0}
+  MyBGM: []
+  MySFX: []
+  CloseUpAnimator: {fileID: 950486468}
   MouseOverObject: {fileID: 1490358706}
 --- !u!95 &12764877
 Animator:
@@ -296,8 +296,8 @@ MonoBehaviour:
   ViewTime: 1
   CamRotation: 0
   MyPanelPos: {fileID: 1103640908}
-  MySFX:
-  - {fileID: 0}
+  MyBGM: []
+  MySFX: []
   CloseUpAnimator: {fileID: 1103640910}
   MouseOverObject: {fileID: 96953733}
 --- !u!212 &40538239
@@ -3380,6 +3380,7 @@ MonoBehaviour:
   ViewTime: 1.5
   CamRotation: 0
   MyPanelPos: {fileID: 235815395}
+  MyBGM: []
   MySFX:
   - {fileID: 0}
   CloseUpAnimator: {fileID: 0}
@@ -3507,6 +3508,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 0}
+  MyBGM: []
   MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
@@ -5981,6 +5983,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 1853832056}
+  MyBGM: []
   MySFX:
   - {fileID: 0}
   CloseUpAnimator: {fileID: 0}
@@ -6181,17 +6184,18 @@ MonoBehaviour:
   HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
-  HasCloseupAnimation: 1
-  MaxClicks: 1
+  HasCloseupAnimation: 0
+  MaxClicks: 100
   DialogSections: 0
   CameraMoveTime: 2
   CameraSize: 4
   ViewTime: .5
   CamRotation: 0
   MyPanelPos: {fileID: 2111722849}
-  MySFX:
-  - {fileID: 8300000, guid: 9f8aa1843d93c224094bce18b7794e15, type: 3}
+  MyBGM:
   - {fileID: 8300000, guid: 40d86f73f456dfd4986c09b4ed792ac0, type: 3}
+  - {fileID: 8300000, guid: 9f8aa1843d93c224094bce18b7794e15, type: 3}
+  MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 1579759447}
 --- !u!1 &869310518
@@ -6552,6 +6556,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 0}
+  MyBGM: []
   MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
@@ -8360,7 +8365,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1103640907}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3f275fe45f82f6d4aacf9077bea6ec34, type: 2}
   m_CullingMode: 0
@@ -8422,9 +8427,9 @@ MonoBehaviour:
   ViewTime: 3
   CamRotation: 90
   MyPanelPos: {fileID: 929038935}
-  MySFX:
-  - {fileID: 0}
-  CloseUpAnimator: {fileID: 0}
+  MyBGM: []
+  MySFX: []
+  CloseUpAnimator: {fileID: 929038937}
   MouseOverObject: {fileID: 290256876}
 --- !u!1 &1106469512
 GameObject:
@@ -9943,6 +9948,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 0}
+  MyBGM: []
   MySFX:
   - {fileID: 0}
   CloseUpAnimator: {fileID: 0}
@@ -10811,6 +10817,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 634538021}
+  MyBGM: []
   MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 765095140}
@@ -11407,6 +11414,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 0}
+  MyBGM: []
   MySFX:
   - {fileID: 0}
   CloseUpAnimator: {fileID: 0}
@@ -12015,6 +12023,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 0}
+  MyBGM: []
   MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
@@ -12172,6 +12181,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 0}
+  MyBGM: []
   MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
@@ -14634,6 +14644,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 0}
+  MyBGM: []
   MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}
@@ -14873,16 +14884,16 @@ MonoBehaviour:
   HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
-  HasCloseupAnimation: 1
+  HasCloseupAnimation: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 2
   CameraSize: 5.19999981
   ViewTime: 2
-  CamRotation: 0
+  CamRotation: 90
   MyPanelPos: {fileID: 941117786}
-  MySFX:
-  - {fileID: 0}
+  MyBGM: []
+  MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 1129474172}
 --- !u!1 &2083676825
@@ -15311,6 +15322,7 @@ MonoBehaviour:
   ViewTime: 0
   CamRotation: 0
   MyPanelPos: {fileID: 0}
+  MyBGM: []
   MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 0}

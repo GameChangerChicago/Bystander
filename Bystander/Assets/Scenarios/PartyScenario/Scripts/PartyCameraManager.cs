@@ -41,6 +41,7 @@ public class PartyCameraManager : MonoBehaviour
         //Using the iTween method MoveTo we set an object to move, a location, and a speed; iTween handles the rest
         iTween.MoveTo(this.gameObject, MoveValues);
 
+        //Using the iTween method RotateTo to handle rotation
         iTween.RotateTo(this.gameObject, RotateValues);
 
         //If the current camera size is greater than _camSize then we know we need to decrease the size of the camera
@@ -75,7 +76,7 @@ public class PartyCameraManager : MonoBehaviour
     }
 
     //This method moves the camera back to it's orrigin pos and size; also it invokes StopMoving
-    public IEnumerator ReturnCamera(Vector3 pos, float viewTime)
+    public IEnumerator ReturnCamera(Vector3 pos, float viewTime, float camRotation)
     {
         yield return new WaitForSeconds(viewTime);
 
@@ -86,6 +87,7 @@ public class PartyCameraManager : MonoBehaviour
 
         _pos = pos;
         _camSize = DefaultSize;
+        _camRotation = camRotation;
         _movingCamera = true;
         Invoke("StopMoving", _camTravelTime);
     }

@@ -104,7 +104,7 @@ public class InteractableProp : MonoBehaviour
                 StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
             }
             else
-                StartCoroutine(_myGameManager.FinsihInteractiveSegment((2 * CameraMoveTime) + ViewTime));
+                StartCoroutine(_myGameManager.FinsihInteractiveSegment((2 * CameraMoveTime) + ViewTime + 0.5f));
 
             //If the interactable prop has dialog than this calls PlayCloseUpAnimation
             if (HasCloseupAnimation)

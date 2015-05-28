@@ -73,6 +73,7 @@ public class PartyCameraManager : MonoBehaviour
         _movingCamera = true;
         _camRotation = camRotation;
         Invoke("StopMoving", camTravelTime);
+        Debug.Log("SUP!");
     }
 
     //This method moves the camera back to it's orrigin pos and size; also it invokes StopMoving

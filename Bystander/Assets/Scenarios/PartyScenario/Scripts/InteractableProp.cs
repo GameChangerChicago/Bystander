@@ -42,7 +42,8 @@ public class InteractableProp : MonoBehaviour
                DialogSections;
     public float CameraMoveTime,
                  CameraSize,
-                 ViewTime;
+                 ViewTime,
+                 CamRotation;
     public Transform MyPanelPos;
     public AudioClip[] MySFX;
     public Animator CloseUpAnimator;
@@ -88,7 +89,7 @@ public class InteractableProp : MonoBehaviour
                 Invoke("ChangeAnimation", CameraMoveTime);
 
             //This calls PlayerClicked sending all of the impertinent data
-            _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos.position, CameraSize, ViewTime);
+            _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos.position, CameraSize, ViewTime, CamRotation);
 
             //If the interactable prop has dialog than this calls the first DialogHandler
             if (HasDialog)

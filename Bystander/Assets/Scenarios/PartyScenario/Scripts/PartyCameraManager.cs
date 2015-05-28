@@ -8,7 +8,8 @@ public class PartyCameraManager : MonoBehaviour
     private Vector3 _pos;
     private float _camTravelTime,
                   _camSize,
-                  _camSizeDiff;
+                  _camSizeDiff,
+                  _camRotation;
     private bool _movingCamera;
 
     void Update()
@@ -31,8 +32,16 @@ public class PartyCameraManager : MonoBehaviour
         MoveValues.Add("time", _camTravelTime);
         MoveValues.Add("easetype", iTween.EaseType.easeOutQuad);
 
+        //Initializing RotateTo values
+        Hashtable RotateValues = new Hashtable();
+        RotateValues.Add("z", _camRotation);
+        RotateValues.Add("time", _camTravelTime);
+        RotateValues.Add("easetype", iTween.EaseType.easeOutQuad);
+
         //Using the iTween method MoveTo we set an object to move, a location, and a speed; iTween handles the rest
         iTween.MoveTo(this.gameObject, MoveValues);
+
+        iTween.RotateTo(this.gameObject, RotateValues);
 
         //If the current camera size is greater than _camSize then we know we need to decrease the size of the camera
         if (this.camera.orthographicSize > _camSize)
@@ -54,13 +63,14 @@ public class PartyCameraManager : MonoBehaviour
     }
 
     //This method initializes the moving process; setting impertinant fields and also invokes StopMoving
-    public void SetCameraToMove(Vector3 pos, float camTravelTime, float camSize)
+    public void SetCameraToMove(Vector3 pos, float camTravelTime, float camSize, float camRotation)
     {
         _pos = pos;
         _camTravelTime = camTravelTime;
         _camSize = camSize;
         _camSizeDiff = this.camera.orthographicSize - camSize;
         _movingCamera = true;
+        _camRotation = camRotation;
         Invoke("StopMoving", camTravelTime);
     }
 

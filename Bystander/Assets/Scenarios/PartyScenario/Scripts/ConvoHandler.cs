@@ -69,7 +69,7 @@ public class ConvoHandler : MonoBehaviour
         //These if and else ifs will call DialogHandler in various ways or end the convo or lvl
         if (_stringsShown < DialogSections && !IsVirgil && !_cameraMoving) //For typical convos that still have unshown dialog sections and the camera isn't moving
         {
-            _myCameraManager.SetCameraToMove(DialogBoxLocations[_stringsShown].parent.position, 0.3f, _myCameraManager.camera.orthographicSize);
+            //_myCameraManager.SetCameraToMove(DialogBoxLocations[_stringsShown].parent.position, 0.3f, _myCameraManager.camera.orthographicSize);
             StartCoroutine(DialogHandler(0.3f));
             _cameraMoving = true;
         }

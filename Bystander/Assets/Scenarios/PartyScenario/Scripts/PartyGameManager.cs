@@ -38,7 +38,7 @@ public class PartyGameManager : MonoBehaviour
 
     //This method is called whenever an interactable prop is clicked
     //It's kind of an all purpose method handling the various types of interactable props
-    public void PlayerClicked(bool importantProp, bool hasDialog, float cameraTravelTime, Vector3 myPanelPos, float camSize, float viewTime)
+    public void PlayerClicked(bool importantProp, bool hasDialog, float cameraTravelTime, Vector3 myPanelPos, float camSize, float viewTime, float camRotation)
     {
         _cameraTravelTime = cameraTravelTime;
 
@@ -52,7 +52,7 @@ public class PartyGameManager : MonoBehaviour
         if (importantProp)
             SectionCompleted = true;
 
-        _myCameraManager.SetCameraToMove(myPanelPos, _cameraTravelTime, camSize);
+        _myCameraManager.SetCameraToMove(myPanelPos, _cameraTravelTime, camSize, camRotation);
     }
 
     //This is called when a dialog has reached its end
@@ -74,17 +74,17 @@ public class PartyGameManager : MonoBehaviour
                 case InteractiveMoments.LivingRoom:
                     //This should actually instantiate the Kitchen but that pfab hasn't been made yet
                     //Each one of these also needs to set the Max click count as it may be different for each Interactive moment
-                    _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19);
+                    _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19, 0);
                     _currentInteractiveMoment = InteractiveMoments.Kitchen;
                     _currentSection = Kitchen;
                     break;
                 case InteractiveMoments.Kitchen:
-                    _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19);
+                    _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19, 0);
                     _currentInteractiveMoment = InteractiveMoments.BackPoarch;
                     _currentSection = BackPoarch;
                     break;
                 case InteractiveMoments.BackPoarch:
-                    _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19);
+                    _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19, 0);
                     _currentInteractiveMoment = InteractiveMoments.LivingRoom2;
                     _currentSection = LivingRoom2;
                     break;

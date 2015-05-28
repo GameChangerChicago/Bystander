@@ -113,7 +113,7 @@ public class PartyGameManager : MonoBehaviour
                     Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");
                     break;
             }
-
+            SectionCompleted = false;
             _clickCount = 0;
         }
         else if (_clickCount >= MaxClicks) //If you never clicked the correct interactable prop

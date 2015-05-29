@@ -215,6 +215,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 2
@@ -289,6 +290,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 1
   HasCloseupAnimation: 1
+  InfiniteClicks: 0
   MaxClicks: 2
   DialogSections: 0
   CameraMoveTime: 2
@@ -1900,12 +1902,12 @@ GameObject:
   - 4: {fileID: 226901699}
   - 212: {fileID: 226901698}
   m_Layer: 0
-  m_Name: Box
+  m_Name: Box5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &226901698
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2869,11 +2871,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 347201693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.62177277, y: -2.03764343, z: .013671875}
+  m_LocalPosition: {x: 8.1319828, y: -1.20424652, z: 0}
   m_LocalScale: {x: -2.10669494, y: 2.10669494, z: 1}
   m_Children: []
-  m_Father: {fileID: 1848671429}
-  m_RootOrder: 1
+  m_Father: {fileID: 836812121}
+  m_RootOrder: 3
 --- !u!212 &347201695
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3482,7 +3484,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 437088161}
-  m_Text: 'You see this? I don''t like where it''s headed. '
+  m_Text: "You see this? I don't like\r\nwhere it's headed."
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -3606,6 +3608,7 @@ MonoBehaviour:
   HasMultipleSteps: 1
   AnimationChanges: 1
   HasCloseupAnimation: 1
+  InfiniteClicks: 0
   MaxClicks: 2
   DialogSections: 0
   CameraMoveTime: .5
@@ -3734,6 +3737,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 2
@@ -3839,7 +3843,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 452900648}
-  m_Text: 'I saw Brian making Anisha''s Drink. Waaaaay too strong. '
+  m_Text: "I saw Brian making Anisha's\r\nDrink. Waaaaay too strong."
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -4539,7 +4543,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 593270945}
   - 212: {fileID: 593270944}
-  - 95: {fileID: 593270946}
   m_Layer: 0
   m_Name: DancingSprite
   m_TagString: Untagged
@@ -4576,26 +4579,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 593270943}
   m_LocalRotation: {x: 0, y: 0, z: 2.54103895e-07, w: -1}
-  m_LocalPosition: {x: -15.2839031, y: -1.72419739, z: .013671875}
+  m_LocalPosition: {x: -5.53014755, y: -.890800476, z: 0}
   m_LocalScale: {x: 2.18859029, y: 2.18859029, z: 1}
   m_Children: []
-  m_Father: {fileID: 1848671429}
-  m_RootOrder: 0
---- !u!95 &593270946
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 593270943}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a13463be4678bd9429df0e52038a16ce, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Father: {fileID: 836812121}
+  m_RootOrder: 2
 --- !u!1 &613905891
 GameObject:
   m_ObjectHideFlags: 0
@@ -4710,7 +4698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &631322008
 Transform:
   m_ObjectHideFlags: 0
@@ -4723,7 +4711,7 @@ Transform:
   m_Children:
   - {fileID: 2082625057}
   m_Father: {fileID: 693772825}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &634538020
 GameObject:
   m_ObjectHideFlags: 0
@@ -5379,13 +5367,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1250318622}
   - {fileID: 2050692338}
   - {fileID: 904932140}
   - {fileID: 631322008}
   - {fileID: 2043846736}
   - {fileID: 910359618}
   - {fileID: 1194116836}
+  - {fileID: 1250318622}
   m_Father: {fileID: 896431602}
   m_RootOrder: 0
 --- !u!1 &700834820
@@ -5539,12 +5527,12 @@ GameObject:
   - 4: {fileID: 717962763}
   - 212: {fileID: 717962762}
   m_Layer: 0
-  m_Name: Box
+  m_Name: Box3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &717962762
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6440,6 +6428,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 0
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: .5
@@ -6476,7 +6465,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 820184552}
-  m_Text: 'Yeah, he was talking about it on the porch. We should say something. '
+  m_Text: "Yeah, he was talking about it on the\r\nporch. We should say something. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -6612,6 +6601,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 836812121}
   - 114: {fileID: 836812122}
+  - 95: {fileID: 836812123}
   m_Layer: 0
   m_Name: Stereo
   m_TagString: Untagged
@@ -6631,6 +6621,8 @@ Transform:
   m_Children:
   - {fileID: 1025074684}
   - {fileID: 804591181}
+  - {fileID: 593270945}
+  - {fileID: 347201694}
   m_Father: {fileID: 1054812847}
   m_RootOrder: 3
 --- !u!114 &836812122
@@ -6647,9 +6639,10 @@ MonoBehaviour:
   ImportantProp: 0
   HasDialog: 0
   HasMultipleSteps: 0
-  AnimationChanges: 0
+  AnimationChanges: 1
   HasCloseupAnimation: 0
-  MaxClicks: 100
+  InfiniteClicks: 1
+  MaxClicks: 2
   DialogSections: 0
   CameraMoveTime: 2
   CameraSize: 4
@@ -6662,6 +6655,21 @@ MonoBehaviour:
   MySFX: []
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 1579759447}
+--- !u!95 &836812123
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836812120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1332d7c9b05ac74aad5013537e57edf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &869310518
 GameObject:
   m_ObjectHideFlags: 0
@@ -6997,7 +7005,7 @@ Transform:
   - {fileID: 1297929377}
   - {fileID: 1919936782}
   m_Father: {fileID: 693772825}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &904932141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7014,6 +7022,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 0
+  InfiniteClicks: 0
   MaxClicks: 0
   DialogSections: 0
   CameraMoveTime: 0
@@ -7059,7 +7068,7 @@ Transform:
   - {fileID: 1827021019}
   - {fileID: 1901666079}
   m_Father: {fileID: 693772825}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &911533844
 GameObject:
   m_ObjectHideFlags: 0
@@ -7498,7 +7507,7 @@ GameObject:
   - 4: {fileID: 943132025}
   - 212: {fileID: 943132024}
   m_Layer: 0
-  m_Name: Box
+  m_Name: Box1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8689,7 +8698,7 @@ Transform:
   m_LocalScale: {x: .206617013, y: .206617013, z: 1}
   m_Children: []
   m_Father: {fileID: 1848671429}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &1097363214
 GameObject:
   m_ObjectHideFlags: 0
@@ -8887,6 +8896,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 2
@@ -8908,12 +8918,12 @@ GameObject:
   - 4: {fileID: 1106469514}
   - 212: {fileID: 1106469513}
   m_Layer: 0
-  m_Name: Box
+  m_Name: Box2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1106469513
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8998,7 +9008,7 @@ Transform:
   m_LocalScale: {x: .206617042, y: .206617042, z: 1}
   m_Children: []
   m_Father: {fileID: 1848671429}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!1 &1117899381
 GameObject:
   m_ObjectHideFlags: 0
@@ -9048,7 +9058,7 @@ Transform:
   m_LocalScale: {x: .228656977, y: .228656977, z: 1}
   m_Children: []
   m_Father: {fileID: 1848671429}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &1129474172
 GameObject:
   m_ObjectHideFlags: 0
@@ -9439,7 +9449,7 @@ Transform:
   - {fileID: 1851816139}
   - {fileID: 663494033}
   m_Father: {fileID: 693772825}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!95 &1194116837
 Animator:
   serializedVersion: 3
@@ -9983,7 +9993,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 693772825}
-  m_RootOrder: 0
+  m_RootOrder: 6
 --- !u!212 &1250318623
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10390,9 +10400,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1381307645}
   - 20: {fileID: 1381307644}
-  - 124: {fileID: 1381307643}
-  - 92: {fileID: 1381307642}
-  - 81: {fileID: 1381307641}
   m_Layer: 0
   m_Name: BackGroundCamera
   m_TagString: Untagged
@@ -10400,27 +10407,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1381307641
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1381307640}
-  m_Enabled: 1
---- !u!92 &1381307642
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1381307640}
-  m_Enabled: 1
---- !u!124 &1381307643
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1381307640}
-  m_Enabled: 1
 --- !u!20 &1381307644
 Camera:
   m_ObjectHideFlags: 0
@@ -10542,6 +10528,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 0
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 0
@@ -11461,6 +11448,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 1.5
@@ -12058,6 +12046,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 0
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 5
   CameraMoveTime: 0
@@ -12667,6 +12656,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 1.5
@@ -12826,6 +12816,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 0
+  InfiniteClicks: 0
   MaxClicks: 0
   DialogSections: 0
   CameraMoveTime: 0
@@ -13625,8 +13616,6 @@ Transform:
   m_LocalPosition: {x: -1.74163675, y: -1.79402161, z: -.013671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 593270945}
-  - {fileID: 347201694}
   - {fileID: 1117899383}
   - {fileID: 1110621409}
   - {fileID: 1097118695}
@@ -14136,7 +14125,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1901666078}
   m_LocalRotation: {x: 0, y: 0, z: .0122910542, w: -.999924541}
-  m_LocalPosition: {x: -9.82047081, y: -4.98607635, z: 0}
+  m_LocalPosition: {x: -.915014267, y: -7.76904297, z: 0}
   m_LocalScale: {x: 2.3668921, y: 2.3668921, z: 1}
   m_Children: []
   m_Father: {fileID: 910359618}
@@ -14694,7 +14683,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 5.30000019
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -14712,8 +14701,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950212616}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.2945099, y: -136.949127, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: -44.1779633, y: -117.410454, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15202,7 +15191,7 @@ Transform:
   m_Children:
   - {fileID: 757301327}
   m_Father: {fileID: 693772825}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &2048930381
 GameObject:
   m_ObjectHideFlags: 0
@@ -15302,7 +15291,7 @@ Transform:
   - {fileID: 676612672}
   - {fileID: 568959677}
   m_Father: {fileID: 693772825}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &2050692339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15318,18 +15307,19 @@ MonoBehaviour:
   HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
-  HasCloseupAnimation: 0
-  MaxClicks: 0
+  HasCloseupAnimation: 1
+  InfiniteClicks: 0
+  MaxClicks: 1
   DialogSections: 0
-  CameraMoveTime: 0
-  CameraSize: 0
-  ViewTime: 0
-  CamRotation: 0
-  MyPanelPos: {fileID: 0}
+  CameraMoveTime: 1.5
+  CameraSize: 5.30000019
+  ViewTime: 12
+  CamRotation: 90
+  MyPanelPos: {fileID: 884721345}
   MyBGM: []
   MySFX: []
-  CloseUpAnimator: {fileID: 0}
-  MouseOverObject: {fileID: 0}
+  CloseUpAnimator: {fileID: 884721346}
+  MouseOverObject: {fileID: 625503008}
 --- !u!1 &2054419161
 GameObject:
   m_ObjectHideFlags: 0
@@ -15480,12 +15470,12 @@ GameObject:
   - 4: {fileID: 2065548728}
   - 212: {fileID: 2065548727}
   m_Layer: 0
-  m_Name: Box
+  m_Name: Box4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2065548727
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15567,6 +15557,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 0
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 2
@@ -16100,6 +16091,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  InfiniteClicks: 0
   MaxClicks: 1
   DialogSections: 0
   CameraMoveTime: 1.5

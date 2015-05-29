@@ -37,7 +37,8 @@ public class InteractableProp : MonoBehaviour
                 HasDialog,
                 HasMultipleSteps,
                 AnimationChanges,
-                HasCloseupAnimation;
+                HasCloseupAnimation,
+                InfiniteClicks;
     public int MaxClicks,
                DialogSections;
     public float CameraMoveTime,
@@ -52,7 +53,6 @@ public class InteractableProp : MonoBehaviour
 
     private bool _firstDialog;
     private int _myClickCount = 0,
-                _BGMIndex,
                 _SFXIndex;
     private string _dialog;
     private Animator _myAnimator;
@@ -115,19 +115,18 @@ public class InteractableProp : MonoBehaviour
             //This bit handles background music changes
             if (MyBGM.Length != 0)
             {
-                if (MyBGM[_BGMIndex] != null)
+                if (MyBGM[_myClickCount] != null)
                 {
-                    FindObjectOfType<AudioSource>().clip = MyBGM[_BGMIndex];
+                    FindObjectOfType<AudioSource>().clip = MyBGM[_myClickCount];
                     FindObjectOfType<AudioSource>().Play();
-
-                    if (_BGMIndex == MyBGM.Length)
-                        _BGMIndex = 0;
-                    else
-                        _BGMIndex++;
                 }
             }
 
             _myClickCount++;
+
+            if (InfiniteClicks)
+                if (_myClickCount == MaxClicks)
+                    _myClickCount = 0;
         }
     }
 

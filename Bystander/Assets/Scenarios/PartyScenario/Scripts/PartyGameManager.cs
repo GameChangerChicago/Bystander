@@ -4,6 +4,37 @@ using System.Collections.Generic;
 
 public class PartyGameManager : MonoBehaviour
 {
+    public bool CameraMoving
+    {
+        get
+        {
+            return _cameraMoving;
+        }
+        set
+        {
+            if (value != _cameraMoving)
+            {
+                if (value)
+                {
+                    for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+                    {
+                        PropsPerIM[_currentInteractiveMoment][i].Disabled = true;
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+                    {
+                        PropsPerIM[_currentInteractiveMoment][i].Disabled = false;
+                    }
+                }
+
+                _cameraMoving = value;
+            }
+        }
+    }
+    private bool _cameraMoving;
+
     //These five game objects are the various prefabs that make up the 5 levels
     public GameObject LivingRoom,
                       Kitchen,
@@ -11,7 +42,8 @@ public class PartyGameManager : MonoBehaviour
                       LivingRoom2,
                       Hallway;
     public int MaxClicks;
-    public bool SectionCompleted = false;
+    public bool SectionCompleted = false,
+                ChoseCoral;
 
     //This is an enum used to keep track of what level we are on
     private enum InteractiveMoments
@@ -83,31 +115,38 @@ public class PartyGameManager : MonoBehaviour
 
         if (SectionCompleted) //If you've clicked the correct interactable prop
         {
+            for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+            {
+                PropsPerIM[_currentInteractiveMoment][i].Disabled = true;
+            }
+
             //Sets the next prefab or ends the scenario
             switch (_currentInteractiveMoment)
             {
                 case InteractiveMoments.LivingRoom:
                     //This should actually instantiate the Kitchen but that pfab hasn't been made yet
                     //Each one of these also needs to set the Max click count as it may be different for each Interactive moment
-                    _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19, 0);
                     _currentInteractiveMoment = InteractiveMoments.Kitchen;
                     _currentSection = Kitchen;
+                    _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19, 0);
                     break;
                 case InteractiveMoments.Kitchen:
-                    _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19, 0);
                     _currentInteractiveMoment = InteractiveMoments.BackPoarch;
                     _currentSection = BackPoarch;
+                    _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19, 0);
                     break;
                 case InteractiveMoments.BackPoarch:
-                    _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19, 0);
                     _currentInteractiveMoment = InteractiveMoments.LivingRoom2;
                     _currentSection = LivingRoom2;
+                    _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19, 0);
                     break;
                 case InteractiveMoments.LivingRoom2:
-                    Debug.Log("Done");
+                    _currentInteractiveMoment = InteractiveMoments.Hallway;
+                    _currentSection = Hallway;
+                    _myCameraManager.SetCameraToMove(Hallway.transform.position, 3, 24, 0);
                     break;
                 case InteractiveMoments.Hallway:
-                    Debug.Log("Hallway");
+                    Debug.Log("You win?");
                     break;
                 default:
                     Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");

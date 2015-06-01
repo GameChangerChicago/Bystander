@@ -38,7 +38,8 @@ public class InteractableProp : MonoBehaviour
                 HasMultipleSteps,
                 AnimationChanges,
                 HasCloseupAnimation,
-                InfiniteClicks;
+                InfiniteClicks,
+                Disabled;
     public int MaxClicks,
                DialogSections;
     public float CameraMoveTime,
@@ -74,7 +75,7 @@ public class InteractableProp : MonoBehaviour
     {
         _overlapCircle = Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f);
 
-        if (_overlapCircle && _overlapCircle.transform.parent != null && MaxClicks != _myClickCount)
+        if (_overlapCircle && _overlapCircle.transform.parent != null && MaxClicks != _myClickCount && !Disabled)
         {
             if (_overlapCircle.transform.parent.parent == this.transform)
                 MousedOver = true;

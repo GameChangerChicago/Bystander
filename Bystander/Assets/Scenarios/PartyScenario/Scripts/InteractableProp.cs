@@ -116,11 +116,7 @@ public class InteractableProp : MonoBehaviour
             //This bit handles background music changes
             if (MyBGM.Length != 0)
             {
-                if (MyBGM[_myClickCount] != null)
-                {
-                    FindObjectOfType<AudioSource>().clip = MyBGM[_myClickCount];
-                    FindObjectOfType<AudioSource>().Play();
-                }
+                Invoke("ChangeBGM", CameraMoveTime);
             }
 
             _myClickCount++;
@@ -134,6 +130,20 @@ public class InteractableProp : MonoBehaviour
     private void ChangeAnimation()
     {
         _myAnimator.Play(this.name + "_" + _myClickCount);
+    }
+
+    private void ChangeBGM()
+    {
+        if (FindObjectOfType<AudioSource>().clip == MyBGM[0])
+        {
+            FindObjectOfType<AudioSource>().clip = MyBGM[1];
+            FindObjectOfType<AudioSource>().Play();
+        }
+        else
+        {
+            FindObjectOfType<AudioSource>().clip = MyBGM[0];
+            FindObjectOfType<AudioSource>().Play();
+        }
     }
 
     public void ResetProp()

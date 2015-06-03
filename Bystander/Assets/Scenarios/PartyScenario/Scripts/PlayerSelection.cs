@@ -16,6 +16,7 @@ public class PlayerSelection : MonoBehaviour
             {
                 if (value)
                     _mouseOverDavid = false;
+                if (!value)
 
                 _mouseOverCoral = value;
             }
@@ -35,6 +36,7 @@ public class PlayerSelection : MonoBehaviour
             {
                 if (value)
                     _mouseOverCoral = false;
+                if (!value)
 
                 _mouseOverDavid = value;
             }
@@ -62,80 +64,50 @@ public class PlayerSelection : MonoBehaviour
         {
             if (overlapCircle.gameObject == SelectObjects[0])
             {
-                RendererHandler(SelectObjects[0]);
                 SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", true);
+                SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
 
                 if (Input.GetKeyUp(KeyCode.Mouse0))
-                    SelectionMade(true);
+                    StartCoroutine(SelectionMade(true));
             }
             else if (overlapCircle.gameObject == SelectObjects[1])
             {
-                RendererHandler(SelectObjects[1]);
                 SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", true);
+                SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", false);
 
                 if (Input.GetKeyUp(KeyCode.Mouse0))
-                    SelectionMade(false);
+                    StartCoroutine(SelectionMade(false));
             }
-        }
-    }
-
-    private void SelectionMade(bool isCoral)
-    {
-        if (this.name == "Coral")
-            _myGameManager.ChoseCoral = true;
-
-        Debug.Log("I suggest feather touch. You have selected " + this.name);
-    }
-
-    private void RendererHandler(GameObject selectObject)
-    {
-        if (SelectObjects[0] == selectObject)
-        {
-            SelectObjects[0].GetComponent<SpriteRenderer>().sortingOrder = 2;
-            SpriteRenderer[] otherRenderers = SelectObjects[0].GetComponentsInChildren<SpriteRenderer>();
-
-            for (int i = 0; i < otherRenderers.Length; i++)
+            else
             {
-                if (otherRenderers[i].name == "FighterSelectFrameSprite")
-                    otherRenderers[i].sortingOrder = 4;
-                else
-                    otherRenderers[i].sortingOrder = 3;
-            }
-
-            SelectObjects[1].GetComponent<SpriteRenderer>().sortingOrder = 1;
-            otherRenderers = SelectObjects[1].GetComponentsInChildren<SpriteRenderer>();
-
-            for (int i = 0; i < otherRenderers.Length; i++)
-            {
-                if (otherRenderers[i].name == "FighterSelectFrameSprite")
-                    otherRenderers[i].sortingOrder = 3;
-                else
-                    otherRenderers[i].sortingOrder = 2;
+                SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", false);
+                SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
             }
         }
         else
         {
-            SelectObjects[1].GetComponent<SpriteRenderer>().sortingOrder = 2;
-            SpriteRenderer[] otherRenderers = SelectObjects[1].GetComponentsInChildren<SpriteRenderer>();
-
-            for (int i = 0; i < otherRenderers.Length; i++)
-            {
-                if (otherRenderers[i].name == "FighterSelectFrameSprite")
-                    otherRenderers[i].sortingOrder = 4;
-                else
-                    otherRenderers[i].sortingOrder = 3;
-            }
-
-            SelectObjects[0].GetComponent<SpriteRenderer>().sortingOrder = 1;
-            otherRenderers = SelectObjects[0].GetComponentsInChildren<SpriteRenderer>();
-
-            for (int i = 0; i < otherRenderers.Length; i++)
-            {
-                if (otherRenderers[i].name == "FighterSelectFrameSprite")
-                    otherRenderers[i].sortingOrder = 3;
-                else
-                    otherRenderers[i].sortingOrder = 2;
-            }
+            SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", false);
+            SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
         }
+    }
+
+    private IEnumerator SelectionMade(bool isCoral)
+    {
+        if (isCoral)
+        {
+            _myGameManager.ChoseCoral = true;
+            SelectObjects[0].GetComponent<Animator>().SetBool("Selected", true);
+            SelectObjects[1].GetComponent<Animator>().SetBool("NotSelected", true);
+        }
+        else
+        {
+            _myGameManager.ChoseCoral = false;
+            SelectObjects[1].GetComponent<Animator>().SetBool("Selected", true);
+            SelectObjects[0].GetComponent<Animator>().SetBool("NotSelected", true);
+        }
+
+        yield return new WaitForSeconds(1);
+
+        Destroy(this.gameObject);
     }
 }

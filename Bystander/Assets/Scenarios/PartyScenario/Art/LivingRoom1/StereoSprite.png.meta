@@ -5,6 +5,9 @@ TextureImporter:
     21300000: StereoSprite_0
     21300002: StereoSprite_1
     21300004: StereoSprite_2
+    21300006: StereoSprite_3
+    21300008: StereoSprite_4
+    21300010: StereoSprite_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -50,7 +53,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1024
         width: 1024
         height: 1024
       alignment: 0
@@ -60,13 +63,43 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 0
+        y: 1024
         width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: StereoSprite_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: StereoSprite_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: StereoSprite_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: StereoSprite_5
       rect:
         serializedVersion: 2
         x: 2048

@@ -35,15 +35,35 @@ public class PartyGameManager : MonoBehaviour
     }
     private bool _cameraMoving;
 
+    //HACK: This will need to updated once I finish the other final comics
+    public bool ChoseCoral
+    {
+        get
+        {
+            return _choseCoral;
+        }
+        set
+        {
+            if (value)
+                CoralBryanProp.SetActive(true);
+            else
+                DavidBryanProp.SetActive(true);
+
+            _choseCoral = value;
+        }
+    }
+    private bool _choseCoral;
+
     //These five game objects are the various prefabs that make up the 5 levels
     public GameObject LivingRoom,
                       Kitchen,
                       BackPoarch,
                       LivingRoom2,
-                      Hallway;
+                      Hallway,
+                      CoralBryanProp,
+                      DavidBryanProp;
     public int MaxClicks;
-    public bool SectionCompleted = false,
-                ChoseCoral;
+    public bool SectionCompleted = false;
 
     //This is an enum used to keep track of what level we are on
     private enum InteractiveMoments

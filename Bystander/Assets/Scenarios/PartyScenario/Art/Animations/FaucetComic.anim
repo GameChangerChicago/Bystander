@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MakeoutComic
+  m_Name: FaucetComic
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,49 +18,40 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - time: .333333343
-      value: {fileID: 21300002, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - time: .666666687
-      value: {fileID: 21300004, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - time: 1
-      value: {fileID: 21300006, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - time: 1.33333337
-      value: {fileID: 21300008, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - time: 1.66666663
-      value: {fileID: 21300008, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
+      value: {fileID: 21300000, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
+    - time: .300000012
+      value: {fileID: 21300002, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
+    - time: 1.00100005
+      value: {fileID: 21300000, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
     attribute: m_Sprite
-    path: MakeoutComicSprite
+    path: FaucetComicSprite
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 3
+  m_SampleRate: 10
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 2791341849
+    - path: 1637917255
       attribute: 0
       script: {fileID: 0}
       classID: 212
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - {fileID: 21300002, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - {fileID: 21300004, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - {fileID: 21300006, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - {fileID: 21300008, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
-    - {fileID: 21300008, guid: 1ca820519b9e94b4192ece14878f5fb3, type: 3}
+    - {fileID: 21300000, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
+    - {fileID: 21300002, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
+    - {fileID: 21300000, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 1.10100007
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

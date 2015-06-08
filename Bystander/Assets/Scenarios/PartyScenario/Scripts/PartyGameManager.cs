@@ -45,9 +45,15 @@ public class PartyGameManager : MonoBehaviour
         set
         {
             if (value)
+            {
                 CoralBryanProp.SetActive(true);
+                CoralAnishaProp.SetActive(true);
+            }
             else
+            {
                 DavidBryanProp.SetActive(true);
+                DavidBryanProp2.SetActive(true);
+            }
 
             _choseCoral = value;
         }
@@ -61,7 +67,9 @@ public class PartyGameManager : MonoBehaviour
                       LivingRoom2,
                       Hallway,
                       CoralBryanProp,
-                      DavidBryanProp;
+                      DavidBryanProp,
+                      CoralAnishaProp,
+                      DavidBryanProp2;
     public int MaxClicks;
     public bool SectionCompleted = false;
 

@@ -61,6 +61,7 @@ public class PartyCameraManager : MonoBehaviour
         }
         else if (this.camera.orthographicSize < _camSize) //If the current camera size is less than _camSize then we know we need to increase the size of the camera
         {
+            Debug.Log(this.camera.orthographicSize + " " + _camSize);
             this.camera.orthographicSize += _camSizeDiff / (_camTravelTime / Time.deltaTime);
 
             //Eventually the camera size will be slightly larger than the desired size; once this happens we simply set the size to _camSize
@@ -75,7 +76,7 @@ public class PartyCameraManager : MonoBehaviour
         _pos = pos;
         _camTravelTime = camTravelTime;
         _camSize = camSize;
-        _camSizeDiff = this.camera.orthographicSize - camSize;
+        _camSizeDiff = Mathf.Abs(this.camera.orthographicSize - camSize);
         _movingCamera = true;
         _camRotation = camRotation;
         Invoke("StopMoving", camTravelTime);

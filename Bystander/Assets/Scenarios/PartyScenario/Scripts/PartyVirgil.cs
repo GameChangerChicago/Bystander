@@ -9,6 +9,7 @@ public class PartyVirgil : MonoBehaviour
     private PartyGameManager _myGameManager;
     private AudioSource _myAudioSource;
     private float _maskAlphaValue;
+    private int _virgilSFXCount;
     private bool _maskFadingIn,
                  _maskFadingOut;
 
@@ -18,7 +19,15 @@ public class PartyVirgil : MonoBehaviour
         _myGameManager = FindObjectOfType<PartyGameManager>();
         _myAudioSource = this.GetComponent<AudioSource>();
         _myAudioSource.clip = VirgilResetSFX;
-        _myAudioSource.Play();
+
+        if (_virgilSFXCount < 2)
+        {
+            _virgilSFXCount++;
+            _myAudioSource.Play();
+        }
+        else
+            _virgilSFXCount = 0;
+
         _myGameManager.DisableAllProps();
         _maskFadingOut = true;
     }

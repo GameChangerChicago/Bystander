@@ -47,6 +47,7 @@ public class InteractableProp : MonoBehaviour
                  ViewTime,
                  CamRotation;
     public Transform MyPanelPos;
+    public AudioSource BGMSource;
     public AudioClip[] MyBGM,
                        MySFX;
     public Animator CloseUpAnimator;
@@ -105,7 +106,7 @@ public class InteractableProp : MonoBehaviour
                 StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
             }
             else
-                StartCoroutine(_myGameManager.FinsihInteractiveSegment((2 * CameraMoveTime) + ViewTime + 0.5f));
+                StartCoroutine(_myGameManager.FinsihInteractiveSegment((2 * CameraMoveTime) + ViewTime));
 
             //If the interactable prop has dialog than this calls PlayCloseUpAnimation
             if (HasCloseupAnimation)
@@ -134,15 +135,15 @@ public class InteractableProp : MonoBehaviour
 
     private void ChangeBGM()
     {
-        if (FindObjectOfType<AudioSource>().clip == MyBGM[0])
+        if (BGMSource.clip == MyBGM[0])
         {
-            FindObjectOfType<AudioSource>().clip = MyBGM[1];
-            FindObjectOfType<AudioSource>().Play();
+            BGMSource.clip = MyBGM[1];
+            BGMSource.Play();
         }
         else
         {
-            FindObjectOfType<AudioSource>().clip = MyBGM[0];
-            FindObjectOfType<AudioSource>().Play();
+            BGMSource.clip = MyBGM[0];
+            BGMSource.Play();
         }
     }
 
@@ -157,7 +158,6 @@ public class InteractableProp : MonoBehaviour
         {
             CloseUpAnimator.Play(CloseUpAnimator.name + "_0");
             CloseUpAnimator.speed = 0;
-            //CloseUpAnimator.enabled = false;
         }
     }
 }

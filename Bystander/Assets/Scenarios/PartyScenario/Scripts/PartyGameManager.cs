@@ -48,11 +48,15 @@ public class PartyGameManager : MonoBehaviour
             {
                 CoralBryanProp.SetActive(true);
                 CoralAnishaProp.SetActive(true);
+                DavidBryanProp.SetActive(false);
+                DavidBryanProp2.SetActive(false);
             }
             else
             {
                 DavidBryanProp.SetActive(true);
                 DavidBryanProp2.SetActive(true);
+                CoralBryanProp.SetActive(false);
+                CoralAnishaProp.SetActive(false);
             }
 
             _choseCoral = value;
@@ -143,6 +147,8 @@ public class PartyGameManager : MonoBehaviour
 
         if (SectionCompleted) //If you've clicked the correct interactable prop
         {
+            yield return new WaitForSeconds(0.5f);
+
             for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
             {
                 PropsPerIM[_currentInteractiveMoment][i].Disabled = true;
@@ -157,24 +163,28 @@ public class PartyGameManager : MonoBehaviour
                     _currentInteractiveMoment = InteractiveMoments.Kitchen;
                     _currentSection = Kitchen;
                     _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19, 0);
+                    MaxClicks = 2;
                     break;
                 case InteractiveMoments.Kitchen:
                     _currentInteractiveMoment = InteractiveMoments.BackPoarch;
                     _currentSection = BackPoarch;
                     _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19, 0);
+                    MaxClicks = 1;
                     break;
                 case InteractiveMoments.BackPoarch:
                     _currentInteractiveMoment = InteractiveMoments.LivingRoom2;
                     _currentSection = LivingRoom2;
                     _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19, 0);
+                    MaxClicks = 2;
                     break;
                 case InteractiveMoments.LivingRoom2:
                     _currentInteractiveMoment = InteractiveMoments.Hallway;
                     _currentSection = Hallway;
                     _myCameraManager.SetCameraToMove(Hallway.transform.position, 3, 24, 0);
+                    MaxClicks = 1;
                     break;
                 case InteractiveMoments.Hallway:
-                    Debug.Log("You win?");
+                    Application.LoadLevel("PostParty");
                     break;
                 default:
                     Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");
@@ -185,15 +195,10 @@ public class PartyGameManager : MonoBehaviour
         }
         else if (_clickCount >= MaxClicks) //If you never clicked the correct interactable prop
         {
-            for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
-            {
-                PropsPerIM[_currentInteractiveMoment][i].ResetProp();
-            }
+            _virgil.VirgilReset();
 
             _clickCount = 0;
         }
-
-        _virgil = FindObjectOfType<PartyVirgil>();
     }
 
     //Some iteractable props have an animation that plays in the close up panel this method handles that
@@ -205,6 +210,30 @@ public class PartyGameManager : MonoBehaviour
             currentAnimator.speed = 1;
         else //Otherwise we will play the next animation
             currentAnimator.Play(currentAnimator.gameObject.name + "_" + clickCount);
+    }
+
+    public void DisableAllProps()
+    {
+        for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+        {
+            PropsPerIM[_currentInteractiveMoment][i].Disabled = true;
+        }
+    }
+
+    public void EnableAllProps()
+    {
+        for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+        {
+            PropsPerIM[_currentInteractiveMoment][i].Disabled = false;
+        }
+    }
+
+    public void ResetProps()
+    {
+        for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+        {
+            PropsPerIM[_currentInteractiveMoment][i].ResetProp();
+        }
     }
 
     //This method brings up virgil and disables the interactable props

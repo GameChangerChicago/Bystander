@@ -226,8 +226,6 @@ public class PartyGameManager : MonoBehaviour
         {
             PropsPerIM[_currentInteractiveMoment][i].Disabled = false;
         }
-
-        //_clickCount = 0;
     }
 
     public void ResetProps()

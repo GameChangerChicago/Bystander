@@ -418,7 +418,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 54965618}
-  m_Text: "You know, just hanging,\r\ngetting to know one another. "
+  m_Text: "Bryan: You know, just hanging,\r\ngetting to know one another. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -539,7 +539,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63550914}
-  m_Text: "Dude, Anisha's not looking\r\nso good after all those drinks. "
+  m_Text: "David: Dude, Anisha's not looking\r\nso good after all those drinks. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -1129,8 +1129,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109854966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.55780792, y: 10.9387207, z: .05078125}
-  m_LocalScale: {x: 4.0999999, y: 1.25, z: 1}
+  m_LocalPosition: {x: .646377563, y: 10.9387207, z: .05078125}
+  m_LocalScale: {x: 4.69999981, y: 1.25, z: 1}
   m_Children:
   - {fileID: 445234361}
   m_Father: {fileID: 66290033}
@@ -1560,8 +1560,8 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 168125931}
-  m_Text: "Because that's assault, man. Even if you\r\nboth been drinking. I'm not
-    about that,\r\nand I know you aren't either. "
+  m_Text: "David: Because that's assault, man. Even\r\nif you both been drinking.
+    I'm not about\r\nthat, and I know you aren't either. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -1965,7 +1965,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 13
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1983,8 +1983,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205794054}
-  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
-  m_LocalPosition: {x: 93.9950409, y: -95.9532623, z: -6.26147652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 92.6447983, y: -201.807938, z: -6.26147652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2324,8 +2324,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 226901697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .534560859, y: -3.24144411, z: 0}
-  m_LocalScale: {x: .932853818, y: .346049815, z: 1}
+  m_LocalPosition: {x: .0969234556, y: -3.24144411, z: 0}
+  m_LocalScale: {x: 1.39999998, y: .346049815, z: 1}
   m_Children:
   - {fileID: 790725891}
   m_Father: {fileID: 884721345}
@@ -3303,8 +3303,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 306414919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4000001, y: -6.75860596, z: 0}
-  m_LocalScale: {x: 3, y: 1.25, z: 1}
+  m_LocalPosition: {x: -1.39646149, y: -6.55502319, z: 0}
+  m_LocalScale: {x: 3.5, y: 1.25, z: 1}
   m_Children:
   - {fileID: 1694271913}
   m_Father: {fileID: 1750407258}
@@ -3404,8 +3404,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 320602396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0198669434, y: 6.93353271, z: .05078125}
-  m_LocalScale: {x: 3.20000005, y: 1.25, z: 1}
+  m_LocalPosition: {x: -2.32215118, y: 10.437027, z: .05078125}
+  m_LocalScale: {x: 4.0999999, y: 1.25, z: 1}
   m_Children:
   - {fileID: 1472319135}
   m_Father: {fileID: 66290033}
@@ -3953,8 +3953,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 361641638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4000001, y: -6.90052795, z: 0}
-  m_LocalScale: {x: 2.75, y: 1.25, z: 1}
+  m_LocalPosition: {x: -4.17858887, y: -6.90052795, z: 0}
+  m_LocalScale: {x: 3, y: 1.25, z: 1}
   m_Children:
   - {fileID: 413686246}
   m_Father: {fileID: 1750407258}
@@ -4196,8 +4196,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 399232361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11412048, y: 7, z: .05078125}
-  m_LocalScale: {x: 3, y: 1.25, z: 1}
+  m_LocalPosition: {x: -.0470046997, y: 7, z: .05078125}
+  m_LocalScale: {x: 3.29999995, y: 1.25, z: 1}
   m_Children:
   - {fileID: 1520774668}
   m_Father: {fileID: 1097363215}
@@ -4409,8 +4409,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403776971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.38490677, y: 2.48701477, z: 0}
-  m_LocalScale: {x: 2.04484344, y: .747877717, z: 1}
+  m_LocalPosition: {x: -2.3309021, y: 2.58528137, z: 0}
+  m_LocalScale: {x: 2.0999999, y: .747877717, z: 1}
   m_Children:
   - {fileID: 1785116838}
   m_Father: {fileID: 969736302}
@@ -4439,7 +4439,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 413686243}
-  m_Text: "...I wouldn't be okay\r\nwith that...or you. "
+  m_Text: "Coral: ...I wouldn't be\r\nokay with that...or you. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -4480,8 +4480,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 413686243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.90880251, y: 1.25706792, z: 0}
-  m_LocalScale: {x: .363636374, y: .800000012, z: 1}
+  m_LocalPosition: {x: -3.99020648, y: 1.25706792, z: 0}
+  m_LocalScale: {x: .333333343, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 361641639}
   m_RootOrder: 0
@@ -4509,8 +4509,9 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 416666760}
-  m_Text: "Imagine if your lil' sis were in her\r\nshoes. How'd you like some guy
-    like\r\nyou creeping at her with drinks, and\r\nthen stealing off into the bedroom?"
+  m_Text: "David: Imagine if your lil' sis were in\r\nher shoes. How'd you like some
+    guy\r\nlike you creeping at her with drinks,\r\nand then stealing off into the
+    bedroom?"
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -4551,8 +4552,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 416666760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.04390526, y: 1.58675814, z: -.05078125}
-  m_LocalScale: {x: .196078435, y: .444444448, z: 1}
+  m_LocalPosition: {x: -3.96591592, y: 1.58675814, z: -.05078125}
+  m_LocalScale: {x: .175438598, y: .444444448, z: 1}
   m_Children: []
   m_Father: {fileID: 570697013}
   m_RootOrder: 0
@@ -4765,7 +4766,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 437088161}
-  m_Text: "You see this? I don't like\r\nwhere it's headed."
+  m_Text: "Anisha: You see this? I don't\r\nlike where it's headed."
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -4806,8 +4807,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 437088161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.00683069, y: 1.21671844, z: 0}
-  m_LocalScale: {x: .297052234, y: .693358779, z: 1}
+  m_LocalPosition: {x: -3.91415572, y: 1.21671665, z: 0}
+  m_LocalScale: {x: .265004158, y: .693358779, z: 1}
   m_Children: []
   m_Father: {fileID: 943132025}
   m_RootOrder: 0
@@ -5058,7 +5059,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445234358}
-  m_Text: "So? She's into me. Didn't you\r\njust see us in the living room? "
+  m_Text: "Bryan: So? She's into me. Didn't\r\nyou just see us in the living room? "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -5099,8 +5100,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445234358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.98407912, y: 1.28874516, z: -.05078125}
-  m_LocalScale: {x: .243902445, y: .800000012, z: 1}
+  m_LocalPosition: {x: -3.94402528, y: 1.28874516, z: -.05078125}
+  m_LocalScale: {x: .212765962, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 109854967}
   m_RootOrder: 0
@@ -5206,7 +5207,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 452900648}
-  m_Text: "I saw Brian making Anisha's\r\nDrink. Waaaaay too strong."
+  m_Text: "Anisha: I saw Brian making Anisha's\r\nDrink. Waaaaay too strong."
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -5247,8 +5248,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 452900648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.92601585, y: 1.42937768, z: 0}
-  m_LocalScale: {x: .274107635, y: .6933586, z: 1}
+  m_LocalPosition: {x: -3.95484614, y: 1.42937934, z: 0}
+  m_LocalScale: {x: .216821656, y: .6933586, z: 1}
   m_Children: []
   m_Father: {fileID: 717962763}
   m_RootOrder: 0
@@ -5416,7 +5417,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 478349395}
-  m_Text: "What are you doing\r\nback here?"
+  m_Text: "Bryan: What are you\r\ndoing back here?"
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -5457,7 +5458,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 478349395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.88267827, y: 1.31932378, z: 0}
+  m_LocalPosition: {x: -3.96097636, y: 1.31932378, z: 0}
   m_LocalScale: {x: .384615391, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 1164162866}
@@ -5555,8 +5556,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 496773390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4000001, y: -5.97679138, z: 0}
-  m_LocalScale: {x: 4.69999981, y: 1.75, z: 1}
+  m_LocalPosition: {x: -.582183838, y: -5.97679138, z: 0}
+  m_LocalScale: {x: 4.9000001, y: 1.75, z: 1}
   m_Children:
   - {fileID: 1923114660}
   m_Father: {fileID: 1750407258}
@@ -5716,8 +5717,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 549150452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.449203491, y: 10.4888, z: .05078125}
-  m_LocalScale: {x: 4.5, y: 1.25, z: 1}
+  m_LocalPosition: {x: -2.92523956, y: 10.4888, z: .05078125}
+  m_LocalScale: {x: 5, y: 1.25, z: 1}
   m_Children:
   - {fileID: 1542463976}
   m_Father: {fileID: 1783044675}
@@ -5937,8 +5938,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 570697011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: -7.5, z: .05078125}
-  m_LocalScale: {x: 5.0999999, y: 2.25, z: 1}
+  m_LocalPosition: {x: 4.98180389, y: -7.5, z: .05078125}
+  m_LocalScale: {x: 5.69999981, y: 2.25, z: 1}
   m_Children:
   - {fileID: 416666763}
   m_Father: {fileID: 1097363215}
@@ -6046,7 +6047,8 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 583901900}
-  m_Text: "I'm just saying. If you go in that\r\nroom, I wouldn't want to be you. "
+  m_Text: "David: I'm just saying. If you go in\r\nthat room, I wouldn't want to be
+    you. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -6087,8 +6089,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 583901900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.04715586, y: 1.28873289, z: -.05078125}
-  m_LocalScale: {x: .232558131, y: .800000012, z: 1}
+  m_LocalPosition: {x: -3.90097046, y: 1.28873289, z: -.05078125}
+  m_LocalScale: {x: .200000003, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 1279533162}
   m_RootOrder: 0
@@ -6204,8 +6206,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 593102677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.26625824, y: -10.4415283, z: .05078125}
-  m_LocalScale: {x: 4.80000019, y: 1.25, z: 1}
+  m_LocalPosition: {x: -.266265869, y: -10.4415283, z: .05078125}
+  m_LocalScale: {x: 5.5, y: 1.25, z: 1}
   m_Children:
   - {fileID: 679843168}
   m_Father: {fileID: 1783044675}
@@ -6321,8 +6323,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 594321406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4000001, y: -6.97161865, z: 0}
-  m_LocalScale: {x: 3.9000001, y: 1.25, z: 1}
+  m_LocalPosition: {x: -.446472168, y: -6.97161865, z: 0}
+  m_LocalScale: {x: 4.30000019, y: 1.25, z: 1}
   m_Children:
   - {fileID: 939970752}
   m_Father: {fileID: 1750407258}
@@ -6678,7 +6680,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 645394991}
-  m_Text: "Relax, it's not like she\r\nwouldn't want to do it anyway. "
+  m_Text: "Bryan: Relax, it's not like she\r\nwouldn't want to do it anyway. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -6900,7 +6902,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 673486941}
-  m_Text: 'Uh, yeah. Whatever. '
+  m_Text: 'Bryan: Uh, yeah. Whatever. '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -6941,8 +6943,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 673486941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.96245193, y: .784469306, z: 0}
-  m_LocalScale: {x: .392482132, y: 1.20608735, z: 1}
+  m_LocalPosition: {x: -3.83856058, y: .784478128, z: 0}
+  m_LocalScale: {x: .288082272, y: 1.20608735, z: 1}
   m_Children: []
   m_Father: {fileID: 2108779875}
   m_RootOrder: 0
@@ -7069,7 +7071,8 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679843165}
-  m_Text: "Hey Anisha. You're missing out on the\r\nsinging contest on the back porch. "
+  m_Text: "Coral: Hey Anisha. You're missing out\r\non the singing contest on the
+    back porch. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -7110,8 +7113,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679843165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.03633118, y: 1.27152097, z: 0}
-  m_LocalScale: {x: .208333328, y: .800000012, z: 1}
+  m_LocalPosition: {x: -4.01073837, y: 1.27152097, z: 0}
+  m_LocalScale: {x: .181818187, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 593102678}
   m_RootOrder: 0
@@ -7210,8 +7213,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 689523426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.38490677, y: 2.48701477, z: 0}
-  m_LocalScale: {x: 1.64823294, y: .747877717, z: 1}
+  m_LocalPosition: {x: -1.89357758, y: 2.58528137, z: 0}
+  m_LocalScale: {x: 1.89999998, y: .747877717, z: 1}
   m_Children:
   - {fileID: 1173450726}
   m_Father: {fileID: 969736302}
@@ -7414,8 +7417,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 716644228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.6606827, y: 8.66914368, z: .05078125}
-  m_LocalScale: {x: 1.20000005, y: .730000019, z: 1}
+  m_LocalPosition: {x: 10.0975723, y: 9.87576294, z: .05078125}
+  m_LocalScale: {x: 2.0999999, y: .730000019, z: 1}
   m_Children:
   - {fileID: 772675873}
   m_Father: {fileID: 66290033}
@@ -7487,8 +7490,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 717962761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .534560859, y: -3.24144411, z: 0}
-  m_LocalScale: {x: 1.74022007, y: .687966585, z: 1}
+  m_LocalPosition: {x: -.00390663696, y: -3.24144411, z: 0}
+  m_LocalScale: {x: 2.20000005, y: .687966585, z: 1}
   m_Children:
   - {fileID: 452900651}
   m_Father: {fileID: 884721345}
@@ -7769,7 +7772,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756220991}
-  m_Text: 'For real? '
+  m_Text: 'David: For real? '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -7810,8 +7813,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756220991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.95059443, y: .984463632, z: 0}
-  m_LocalScale: {x: .769230783, y: 1.36986303, z: 1}
+  m_LocalPosition: {x: -3.93199039, y: .984463632, z: 0}
+  m_LocalScale: {x: .476190507, y: 1.36986303, z: 1}
   m_Children: []
   m_Father: {fileID: 2079223454}
   m_RootOrder: 0
@@ -8038,7 +8041,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 772675870}
-  m_Text: 'Why not? '
+  m_Text: 'Bryan: Why not? '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -8079,8 +8082,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 772675870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.87738538, y: 1.01794934, z: -.05078125}
-  m_LocalScale: {x: .833333313, y: 1.36986303, z: 1}
+  m_LocalPosition: {x: -3.90108037, y: 1.01794934, z: -.05078125}
+  m_LocalScale: {x: .476190507, y: 1.36986303, z: 1}
   m_Children: []
   m_Father: {fileID: 716644229}
   m_RootOrder: 0
@@ -8259,7 +8262,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 790725888}
-  m_Text: 'Yeah, let''s go. '
+  m_Text: 'Anisha: Yeah, let''s go. '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -8300,8 +8303,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 790725888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.73646259, y: .938424885, z: 0}
-  m_LocalScale: {x: .511342168, y: 1.37843525, z: 1}
+  m_LocalPosition: {x: -3.81823492, y: .938425839, z: 0}
+  m_LocalScale: {x: .34071967, y: 1.37843525, z: 1}
   m_Children: []
   m_Father: {fileID: 226901699}
   m_RootOrder: 0
@@ -8648,7 +8651,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 820184552}
-  m_Text: "Yeah, he was talking about it on the\r\nporch. We should say something. "
+  m_Text: "David: Yeah, he was talking about it on\r\nthe porch. We should say something. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -8689,8 +8692,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 820184552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.97755098, y: 1.48585463, z: 0}
-  m_LocalScale: {x: .209586322, y: .738189459, z: 1}
+  m_LocalPosition: {x: -3.97710514, y: 1.48585415, z: 0}
+  m_LocalScale: {x: .198753238, y: .738189518, z: 1}
   m_Children: []
   m_Father: {fileID: 2065548728}
   m_RootOrder: 0
@@ -9102,7 +9105,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 890127999}
-  m_Text: 'Feel me? '
+  m_Text: 'David: Feel me? '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -9143,8 +9146,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 890127999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.76612973, y: 1.01794934, z: -.05078125}
-  m_LocalScale: {x: .833333313, y: 1.36986303, z: 1}
+  m_LocalPosition: {x: -3.90872574, y: 1.01794934, z: -.05078125}
+  m_LocalScale: {x: .5, y: 1.36986303, z: 1}
   m_Children: []
   m_Father: {fileID: 1252172963}
   m_RootOrder: 0
@@ -9653,8 +9656,8 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 930177877}
-  m_Text: "Whether she wants it or not isn't\r\nthe point. She'sin no position to\r\nmake
-    that type of decision right now. "
+  m_Text: "David: Whether she wants it or not\r\nisn't the point. She'sin no position
+    to\r\nmake that type of decision right now. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -9801,7 +9804,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 939970749}
-  m_Text: "Just checking up on y'all.\r\nYou both been drinking, yeah?"
+  m_Text: "Coral: Just checking up on y'all.\r\nYou both been drinking, yeah?"
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -9842,8 +9845,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 939970749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9769156, y: 1.31392825, z: 0}
-  m_LocalScale: {x: .256410241, y: .800000012, z: 1}
+  m_LocalPosition: {x: -4.01726484, y: 1.31392825, z: 0}
+  m_LocalScale: {x: .232558131, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 594321407}
   m_RootOrder: 0
@@ -9871,7 +9874,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940163999}
-  m_Text: "Totally. But girl, you not looking\r\nso good. "
+  m_Text: "Coral: Totally. But girl, you\r\nnot looking so good. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -9912,8 +9915,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940163999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.0045166, y: 1.35693359, z: 0}
-  m_LocalScale: {x: .227272719, y: .800000012, z: 1}
+  m_LocalPosition: {x: -3.97343183, y: 1.35693359, z: 0}
+  m_LocalScale: {x: .270270258, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 1537878752}
   m_RootOrder: 0
@@ -9962,7 +9965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &943132024
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9992,8 +9995,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 943132023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .534560859, y: -3.24144411, z: 0}
-  m_LocalScale: {x: 1.60580337, y: .687966287, z: 1}
+  m_LocalPosition: {x: 1.14585853, y: -3.24144411, z: 0}
+  m_LocalScale: {x: 1.79999995, y: .687966287, z: 1}
   m_Children:
   - {fileID: 437088164}
   m_Father: {fileID: 884721345}
@@ -10022,7 +10025,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 943250561}
-  m_Text: 'Hey. '
+  m_Text: 'Coral: Hey. '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -10063,8 +10066,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 943250561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.78809595, y: .93197757, z: 0}
-  m_LocalScale: {x: 1.66666663, y: 1.36986303, z: 1}
+  m_LocalPosition: {x: -3.96313262, y: .93197757, z: 0}
+  m_LocalScale: {x: .714285731, y: 1.36986303, z: 1}
   m_Children: []
   m_Father: {fileID: 1523109575}
   m_RootOrder: 0
@@ -11371,8 +11374,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1087439443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.769104, y: 6.88438416, z: 0}
-  m_LocalScale: {x: 3.4000001, y: 1.25, z: 1}
+  m_LocalPosition: {x: 1.56552887, y: 6.88438416, z: 0}
+  m_LocalScale: {x: 3.54999995, y: 1.25, z: 1}
   m_Children:
   - {fileID: 1862441405}
   m_Father: {fileID: 1750407258}
@@ -11913,8 +11916,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1106469512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .534560859, y: -3.24144411, z: 0}
-  m_LocalScale: {x: .850523233, y: .339792341, z: 1}
+  m_LocalPosition: {x: 2.05074286, y: -3.24144435, z: 0}
+  m_LocalScale: {x: 1.20000005, y: .339792341, z: 1}
   m_Children:
   - {fileID: 1574679239}
   m_Father: {fileID: 884721345}
@@ -12515,7 +12518,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173450723}
-  m_Text: "Girls are easy once you\r\nget alcohol in them."
+  m_Text: "Bryan: Girls are easy once\r\nyou get alcohol in them."
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -12556,8 +12559,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173450723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.03366327, y: 1.3600626, z: 0}
-  m_LocalScale: {x: .314608544, y: .693359256, z: 1}
+  m_LocalPosition: {x: -3.75776196, y: 1.2286762, z: 0}
+  m_LocalScale: {x: .272920102, y: .693359256, z: 1}
   m_Children: []
   m_Father: {fileID: 689523428}
   m_RootOrder: 0
@@ -12774,7 +12777,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1202173494}
-  m_Text: "Come on you can catch up\r\nwith him another time. "
+  m_Text: "Coral: Come on you can catch\r\nup with him another time. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -12815,8 +12818,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1202173494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.91756821, y: 1.45115972, z: 0}
-  m_LocalScale: {x: .29411763, y: .800000012, z: 1}
+  m_LocalPosition: {x: -3.9821701, y: 1.45115972, z: 0}
+  m_LocalScale: {x: .256410211, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 1289818707}
   m_RootOrder: 0
@@ -13006,8 +13009,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1215072314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.23368073, y: 11.2028656, z: .05078125}
-  m_LocalScale: {x: 4.0999999, y: .730000019, z: 1}
+  m_LocalPosition: {x: -1.85270691, y: 10.8491516, z: .05078125}
+  m_LocalScale: {x: 5.0999999, y: .730000019, z: 1}
   m_Children:
   - {fileID: 1615170318}
   m_Father: {fileID: 1783044675}
@@ -13354,8 +13357,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1252172962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.1677094, y: -7.81898499, z: .05078125}
-  m_LocalScale: {x: 1.20000005, y: .730000019, z: 1}
+  m_LocalPosition: {x: -9.31755829, y: -7.97987366, z: .05078125}
+  m_LocalScale: {x: 2, y: .730000019, z: 1}
   m_Children:
   - {fileID: 890128002}
   m_Father: {fileID: 66290033}
@@ -13520,8 +13523,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1279533161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5821991, y: -9.08731079, z: .05078125}
-  m_LocalScale: {x: 4.30000019, y: 1.25, z: 1}
+  m_LocalPosition: {x: -.620002747, y: -9.08731079, z: .05078125}
+  m_LocalScale: {x: 5, y: 1.25, z: 1}
   m_Children:
   - {fileID: 583901903}
   m_Father: {fileID: 66290033}
@@ -13681,8 +13684,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1289818706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.20875549, y: -11.0894928, z: .05078125}
-  m_LocalScale: {x: 3.4000001, y: 1.25, z: 1}
+  m_LocalPosition: {x: -2.53521729, y: -11.0894928, z: .05078125}
+  m_LocalScale: {x: 3.9000001, y: 1.25, z: 1}
   m_Children:
   - {fileID: 1202173497}
   m_Father: {fileID: 1783044675}
@@ -14366,7 +14369,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1395726792}
-  m_Text: '(mumbles) '
+  m_Text: 'Anisha: (mumbles) '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -14407,8 +14410,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1395726792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.81390905, y: 1.11309731, z: 0}
-  m_LocalScale: {x: .666666687, y: 1.36986303, z: 1}
+  m_LocalPosition: {x: -3.88008118, y: 1.11309731, z: 0}
+  m_LocalScale: {x: .400000006, y: 1.36986303, z: 1}
   m_Children: []
   m_Father: {fileID: 2030062924}
   m_RootOrder: 0
@@ -14435,8 +14438,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397462263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.43628693, y: -6.89434814, z: .05078125}
-  m_LocalScale: {x: 2.20000005, y: .730000019, z: 1}
+  m_LocalPosition: {x: -5.33319855, y: -6.89434814, z: .05078125}
+  m_LocalScale: {x: 3, y: .730000019, z: 1}
   m_Children:
   - {fileID: 1900846271}
   m_Father: {fileID: 66290033}
@@ -15019,7 +15022,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1472319132}
-  m_Text: "Gonna go in that room,\r\nso you know what's up. "
+  m_Text: "Bryan: Gonna go in that room,\r\nso you know what's up. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -15060,8 +15063,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1472319132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9989996, y: 1.39553225, z: -.05078125}
-  m_LocalScale: {x: .3125, y: .800000012, z: 1}
+  m_LocalPosition: {x: -4.02450752, y: 1.39553225, z: -.05078125}
+  m_LocalScale: {x: .243902445, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 320602397}
   m_RootOrder: 0
@@ -15370,7 +15373,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1520774665}
-  m_Text: "I don't know what you\r\ntalking bout man. "
+  m_Text: "Bryan: I don't know what\r\nyou talking bout man. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -15411,8 +15414,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1520774665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.96810913, y: 1.36136472, z: -.05078125}
-  m_LocalScale: {x: .333333343, y: .800000012, z: 1}
+  m_LocalPosition: {x: -3.93074036, y: 1.36136472, z: -.05078125}
+  m_LocalScale: {x: .303030312, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 399232362}
   m_RootOrder: 0
@@ -15439,8 +15442,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1523109574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9948349, y: -5.83929443, z: 0}
-  m_LocalScale: {x: .600000024, y: .730000019, z: 1}
+  m_LocalPosition: {x: -.719306946, y: -5.83929443, z: 0}
+  m_LocalScale: {x: 1.39999998, y: .730000019, z: 1}
   m_Children:
   - {fileID: 943250564}
   m_Father: {fileID: 1750407258}
@@ -15490,8 +15493,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1537878751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.03343964, y: -9.20451355, z: .05078125}
-  m_LocalScale: {x: 4.4000001, y: 1.25, z: 1}
+  m_LocalPosition: {x: -2.74087524, y: -10.7078247, z: .05078125}
+  m_LocalScale: {x: 3.70000005, y: 1.25, z: 1}
   m_Children:
   - {fileID: 940164002}
   m_Father: {fileID: 1783044675}
@@ -15615,7 +15618,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542463973}
-  m_Text: "Had to show me the thing. In the\r\nbedroom. In heeeere. He's cuuute. "
+  m_Text: "Anisha: Had to show me the thing. In\r\nthe bedroom. In heeeere. He's cuuute. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -15656,8 +15659,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542463973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.95479679, y: 1.35692143, z: 0}
-  m_LocalScale: {x: .222222224, y: .800000012, z: 1}
+  m_LocalPosition: {x: -4.01915121, y: 1.35692143, z: 0}
+  m_LocalScale: {x: .200000003, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 549150453}
   m_RootOrder: 0
@@ -16073,7 +16076,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1574679236}
-  m_Text: 'You too, huh? '
+  m_Text: 'David: You too, huh? '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -16114,8 +16117,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1574679236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.88412738, y: 1.06738329, z: 0}
-  m_LocalScale: {x: .56084007, y: 1.40382063, z: 1}
+  m_LocalPosition: {x: -4.01643801, y: 1.06737792, z: 0}
+  m_LocalScale: {x: .397506237, y: 1.40382063, z: 1}
   m_Children: []
   m_Father: {fileID: 1106469514}
   m_RootOrder: 0
@@ -16459,7 +16462,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1615170315}
-  m_Text: 'Where''s Bryan? He said, uh, um... '
+  m_Text: 'Anisha: Where''s Bryan? He said, uh, um... '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -16500,8 +16503,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1615170315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.01018286, y: 1.11311817, z: 0}
-  m_LocalScale: {x: .243902445, y: 1.36986303, z: 1}
+  m_LocalPosition: {x: -3.96945286, y: 1.11311817, z: 0}
+  m_LocalScale: {x: .196078435, y: 1.36986303, z: 1}
   m_Children: []
   m_Father: {fileID: 1215072315}
   m_RootOrder: 0
@@ -16541,7 +16544,7 @@ MonoBehaviour:
   DavidBryanProp: {fileID: 638586394}
   CoralAnishaProp: {fileID: 435056280}
   DavidBryanProp2: {fileID: 1289761712}
-  MaxClicks: 2
+  MaxClicks: 6
   SectionCompleted: 0
 --- !u!4 &1617902220
 Transform:
@@ -16740,7 +16743,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1694271910}
-  m_Text: "Neither of y'all are in\r\nany place to consent. "
+  m_Text: "Coral: Neither of y'all are\r\nin any place to consent. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -16781,8 +16784,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1694271910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8892746, y: 1.27209473, z: 0}
-  m_LocalScale: {x: .333333343, y: .800000012, z: 1}
+  m_LocalPosition: {x: -4.01222897, y: 1.32637942, z: 0}
+  m_LocalScale: {x: .285714298, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 306414920}
   m_RootOrder: 0
@@ -17602,7 +17605,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1785116835}
-  m_Text: "Actually man, that's not cool.\r\nNot to Mention Illegal. "
+  m_Text: "David: Actually man, that's not\r\ncool. Not to Mention Illegal. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -17643,8 +17646,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1785116835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.02704716, y: 1.375283, z: 0}
-  m_LocalScale: {x: .253588051, y: .693359256, z: 1}
+  m_LocalPosition: {x: -3.94699311, y: 1.2438966, z: 0}
+  m_LocalScale: {x: .246927559, y: .693359256, z: 1}
   m_Children: []
   m_Father: {fileID: 403776973}
   m_RootOrder: 0
@@ -17773,8 +17776,8 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1805022458}
-  m_Text: "I hope that's all you're up to.\r\nGiven how she's stumbling\r\naround
-    and all. "
+  m_Text: "David: I hope that's all you're\r\nup to. Given how she's\r\nstumbling
+    around and all. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -18041,8 +18044,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837140119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4000001, y: -6.6965332, z: 0}
-  m_LocalScale: {x: 2.9000001, y: 1.25, z: 1}
+  m_LocalPosition: {x: -2.00717163, y: -6.6965332, z: 0}
+  m_LocalScale: {x: 3.70000005, y: 1.25, z: 1}
   m_Children:
   - {fileID: 1951929295}
   m_Father: {fileID: 1750407258}
@@ -18305,7 +18308,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1862441402}
-  m_Text: "Why are you up in my\r\nbusiness all of a sudden? "
+  m_Text: "Bryan: Why are you up in my\r\nbusiness all of a sudden? "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -18346,8 +18349,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1862441402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.93478823, y: 1.25705564, z: 0}
-  m_LocalScale: {x: .29411763, y: .800000012, z: 1}
+  m_LocalPosition: {x: -3.97878957, y: 1.25705564, z: 0}
+  m_LocalScale: {x: .28169015, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 1087439444}
   m_RootOrder: 0
@@ -18638,7 +18641,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1900846268}
-  m_Text: 'What''s up Bryan? '
+  m_Text: 'David: What''s up Bryan? '
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -18679,8 +18682,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1900846268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.93026519, y: 1.13621545, z: -.05078125}
-  m_LocalScale: {x: .454545438, y: 1.36986303, z: 1}
+  m_LocalPosition: {x: -3.91655731, y: 1.13621545, z: -.05078125}
+  m_LocalScale: {x: .333333343, y: 1.36986303, z: 1}
   m_Children: []
   m_Father: {fileID: 1397462264}
   m_RootOrder: 0
@@ -18786,8 +18789,8 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1923114657}
-  m_Text: "Look, I'm just saying if I were\r\nAnisha and I found out we got it on\r\nwith
-    me being in a state like that... "
+  m_Text: "Coral: Look, I'm just saying if I were\r\nAnisha and I found out we got
+    it on\r\nwith me being in a state like that... "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -18828,8 +18831,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1923114657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.98031855, y: 1.46635222, z: 0}
-  m_LocalScale: {x: .212765962, y: .571428597, z: 1}
+  m_LocalPosition: {x: -4.01173162, y: 1.46635222, z: 0}
+  m_LocalScale: {x: .204081625, y: .571428597, z: 1}
   m_Children: []
   m_Father: {fileID: 496773391}
   m_RootOrder: 0
@@ -19150,8 +19153,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1939796719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0306396484, y: -11.7374573, z: .05078125}
-  m_LocalScale: {x: 4.0999999, y: 1.25, z: 1}
+  m_LocalPosition: {x: .146217346, y: -10.6763, z: .05078125}
+  m_LocalScale: {x: 4.19999981, y: 1.25, z: 1}
   m_Children:
   - {fileID: 2060826390}
   m_Father: {fileID: 1783044675}
@@ -19299,7 +19302,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1951929292}
-  m_Text: "Yeah. You gotta think\r\nabout what you doing. "
+  m_Text: "Coral: Yeah. You gotta think\r\nabout what you doing. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -19340,8 +19343,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1951929292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.86657429, y: 1.39335942, z: 0}
-  m_LocalScale: {x: .344827563, y: .800000012, z: 1}
+  m_LocalPosition: {x: -3.94753933, y: 1.39335942, z: 0}
+  m_LocalScale: {x: .270270258, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 1837140120}
   m_RootOrder: 0
@@ -19686,8 +19689,8 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1990883268}
-  m_Text: "If you're into her, get her number\r\nand pick up where you left off next
-    time. "
+  m_Text: "Bryan: If you're into her, get her number\r\nand pick up where you left
+    off next time. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -19889,8 +19892,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2030062923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.914222717, y: 6.87683105, z: .05078125}
-  m_LocalScale: {x: 1.5, y: .730000019, z: 1}
+  m_LocalPosition: {x: .765937805, y: 8.46855164, z: .05078125}
+  m_LocalScale: {x: 2.5, y: .730000019, z: 1}
   m_Children:
   - {fileID: 1395726795}
   m_Father: {fileID: 1783044675}
@@ -20090,7 +20093,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2048930381}
-  m_Text: 'Hey, what''s up with you and Anisha? '
+  m_Text: "David: Hey, what's up\r\nwith you and Anisha? "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -20131,8 +20134,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2048930381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.00956869, y: 1.05133057, z: -.05078125}
-  m_LocalScale: {x: .217391312, y: 1.36986303, z: 1}
+  m_LocalPosition: {x: -3.95157981, y: 1.28474128, z: -.05078125}
+  m_LocalScale: {x: .370370358, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 2126684030}
   m_RootOrder: 0
@@ -20290,7 +20293,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2060826387}
-  m_Text: "Let's get you a glass of water\r\nand have you sit down. "
+  m_Text: "Coral: Let's get you a glass of\r\nwater and have you sit down. "
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -20331,8 +20334,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2060826387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.96708059, y: 1.35693359, z: 0}
-  m_LocalScale: {x: .243902445, y: .800000012, z: 1}
+  m_LocalPosition: {x: -3.91473532, y: 1.35693359, z: 0}
+  m_LocalScale: {x: .238095254, y: .800000012, z: 1}
   m_Children: []
   m_Father: {fileID: 1939796720}
   m_RootOrder: 0
@@ -20381,8 +20384,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2065548726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .534560859, y: -3.24144411, z: 0}
-  m_LocalScale: {x: 2.275949, y: .646185637, z: 1}
+  m_LocalPosition: {x: .0969234556, y: -3.24144411, z: 0}
+  m_LocalScale: {x: 2.4000001, y: .646185637, z: 1}
   m_Children:
   - {fileID: 820184555}
   m_Father: {fileID: 884721345}
@@ -20470,8 +20473,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2079223453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.27788544, y: 8.37654114, z: 0}
-  m_LocalScale: {x: 1.29999995, y: .730000019, z: 1}
+  m_LocalPosition: {x: 8.39929199, y: 8.37654114, z: 0}
+  m_LocalScale: {x: 2.0999999, y: .730000019, z: 1}
   m_Children:
   - {fileID: 756220994}
   m_Father: {fileID: 1750407258}
@@ -20766,8 +20769,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2108779874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.38490677, y: 2.48701477, z: 0}
-  m_LocalScale: {x: 1.32120168, y: .42994225, z: 1}
+  m_LocalPosition: {x: -.710697174, y: 2.48701477, z: 0}
+  m_LocalScale: {x: 1.79999995, y: .42994225, z: 1}
   m_Children:
   - {fileID: 673486944}
   m_Father: {fileID: 969736302}
@@ -20932,8 +20935,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2126684029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: -7.5, z: .05078125}
-  m_LocalScale: {x: 4.5999999, y: .730000019, z: 1}
+  m_LocalPosition: {x: -5.76564789, y: -8.3384552, z: .05078125}
+  m_LocalScale: {x: 2.70000005, y: 1.25, z: 1}
   m_Children:
   - {fileID: 2048930384}
   m_Father: {fileID: 1097363215}

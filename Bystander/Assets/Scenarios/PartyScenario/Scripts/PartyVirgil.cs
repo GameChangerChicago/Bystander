@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PartyVirgil : MonoBehaviour
 {
+    public AudioSource BGMSource;
     public AudioClip VirgilResetSFX;
     public SpriteRenderer CameraMask;
 
@@ -19,10 +20,12 @@ public class PartyVirgil : MonoBehaviour
         _myGameManager = FindObjectOfType<PartyGameManager>();
         _myAudioSource = this.GetComponent<AudioSource>();
         _myAudioSource.clip = VirgilResetSFX;
+        BGMSource.volume = BGMSource.volume / 3;
 
         if (_virgilSFXCount < 2)
         {
             _virgilSFXCount++;
+            BGMSource.volume = BGMSource.volume / 3;
             _myAudioSource.Play();
         }
         else
@@ -59,6 +62,8 @@ public class PartyVirgil : MonoBehaviour
                 _maskAlphaValue = 0;
                 _maskFadingIn = false;
                 _myGameManager.EnableAllProps();
+                if (BGMSource.volume < 0.3f)
+                    BGMSource.volume = BGMSource.volume * 3;
             }
 
             CameraMask.color = new Vector4(0, 0, 0, _maskAlphaValue);

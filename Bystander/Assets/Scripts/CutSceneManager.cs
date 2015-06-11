@@ -53,7 +53,7 @@ public class CutSceneManager : MonoBehaviour
             if (Page[_currentStep].MyTextMesh != null)
                 ChangeDialog();
 
-            if (_currentStep + 1 > Page.Length)
+            if (_currentStep + 1 < Page.Length)
             {
                 if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
                 {
@@ -76,7 +76,12 @@ public class CutSceneManager : MonoBehaviour
             }
         }
         else if (Page[_currentStep].SceneToLoad != "")
-            Application.LoadLevel(Page[_currentStep].SceneToLoad);
+        {
+            if (Page[_currentStep].SceneToLoad == "CLOSE")
+                Application.Quit();
+            else
+                Application.LoadLevel(Page[_currentStep].SceneToLoad);
+        }
     }
 
     void Update()
@@ -335,7 +340,12 @@ public class CutSceneManager : MonoBehaviour
             _clickDisabled = true;
         }
         else if (Page[_currentStep].SceneToLoad != "")
-            Application.LoadLevel(Page[_currentStep].SceneToLoad);
+        {
+            if (Page[_currentStep].SceneToLoad == "CLOSE")
+                Application.Quit();
+            else
+                Application.LoadLevel(Page[_currentStep].SceneToLoad);
+        }
     }
 
     private void ReEnableClicking()

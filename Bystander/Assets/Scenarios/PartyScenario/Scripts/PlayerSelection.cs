@@ -45,6 +45,7 @@ public class PlayerSelection : MonoBehaviour
     private bool _mouseOverDavid;
 
     public GameObject[] SelectObjects;
+    public PolygonCollider2D[] HallwayColliders;
 
     private PartyGameManager _myGameManager;
     private SpriteRenderer _idleSprite;
@@ -107,6 +108,11 @@ public class PlayerSelection : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1);
+
+        for (int i = 0; i < 4; i++)
+        {
+            HallwayColliders[i].enabled = true;
+        }
 
         Destroy(this.gameObject);
     }

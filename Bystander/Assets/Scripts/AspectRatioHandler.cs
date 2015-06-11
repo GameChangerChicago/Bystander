@@ -16,5 +16,6 @@ public class AspectRatioHandler : MonoBehaviour
             LetterBoxBottom.enabled = true;
             IsMacAspect = true;
         }
+        Debug.Log(IsMacAspect);
     }
 }

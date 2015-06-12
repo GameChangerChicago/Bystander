@@ -75,14 +75,15 @@ public class PartyCameraManager : MonoBehaviour
         _pos = pos;
         _camTravelTime = camTravelTime;
 
-        Debug.Log(this.GetComponent<AspectRatioHandler>().IsMacAspect);
-
         if (this.GetComponent<AspectRatioHandler>().IsMacAspect)
+        {
+            DefaultSize = this.camera.orthographicSize;
             _camSize = camSize + camSize * 0.11f;
+        }
         else
             _camSize = camSize;
 
-        _camSizeDiff = Mathf.Abs(this.camera.orthographicSize - camSize);
+        _camSizeDiff = Mathf.Abs(this.camera.orthographicSize - _camSize);
         _movingCamera = true;
         _camRotation = camRotation;
         Invoke("StopMoving", camTravelTime);

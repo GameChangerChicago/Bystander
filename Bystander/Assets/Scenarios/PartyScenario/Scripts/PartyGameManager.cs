@@ -74,6 +74,7 @@ public class PartyGameManager : MonoBehaviour
                       DavidBryanProp,
                       CoralAnishaProp,
                       DavidBryanProp2;
+    public SpriteRenderer[] BystanderPortraits;
     public int MaxClicks;
     public bool SectionCompleted = false;
 
@@ -91,6 +92,7 @@ public class PartyGameManager : MonoBehaviour
     private InteractiveMoments _currentInteractiveMoment = InteractiveMoments.LivingRoom;
     private PartyCameraManager _myCameraManager;
     private PartyVirgil _virgil;
+    private SpriteRenderer _currentBystanderPortrait;
     private GameObject _currentSection;
     private float _cameraTravelTime;
     private int _clickCount = 0;
@@ -100,6 +102,7 @@ public class PartyGameManager : MonoBehaviour
         _myCameraManager = FindObjectOfType<PartyCameraManager>();
         _virgil = FindObjectOfType<PartyVirgil>();
         _currentSection = GameObject.Find("LivingRoom1");
+        _currentBystanderPortrait = BystanderPortraits[0];
 
         InitializeProps();
     }
@@ -130,6 +133,9 @@ public class PartyGameManager : MonoBehaviour
             SectionCompleted = true;
 
         _myCameraManager.SetCameraToMove(myPanelPos, _cameraTravelTime, camSize, camRotation);
+
+        _currentBystanderPortrait.color = new Color(1, 1, 1, 1f - (float)_clickCount / (float)MaxClicks);
+        Debug.Log(_currentBystanderPortrait.color);
     }
 
     //This is called when a dialog has reached its end
@@ -163,18 +169,21 @@ public class PartyGameManager : MonoBehaviour
                     _currentInteractiveMoment = InteractiveMoments.Kitchen;
                     _currentSection = Kitchen;
                     _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19, 0);
+                    _currentBystanderPortrait = BystanderPortraits[1];
                     MaxClicks = 2;
                     break;
                 case InteractiveMoments.Kitchen:
                     _currentInteractiveMoment = InteractiveMoments.BackPoarch;
                     _currentSection = BackPoarch;
                     _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19, 0);
+                    _currentBystanderPortrait = BystanderPortraits[2];
                     MaxClicks = 1;
                     break;
                 case InteractiveMoments.BackPoarch:
                     _currentInteractiveMoment = InteractiveMoments.LivingRoom2;
                     _currentSection = LivingRoom2;
                     _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19, 0);
+                    _currentBystanderPortrait = BystanderPortraits[3];
                     MaxClicks = 2;
                     break;
                 case InteractiveMoments.LivingRoom2:

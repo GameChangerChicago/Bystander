@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: StereoComic
+  m_Name: FlirtComic_0
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,39 +18,39 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300004, guid: 084413bbb01040643b5efcc83b1a7ef1, type: 3}
-    - time: .200000003
-      value: {fileID: 21300006, guid: 084413bbb01040643b5efcc83b1a7ef1, type: 3}
-    - time: .400000006
-      value: {fileID: 21300008, guid: 084413bbb01040643b5efcc83b1a7ef1, type: 3}
-    - time: .600000024
-      value: {fileID: 21300010, guid: 084413bbb01040643b5efcc83b1a7ef1, type: 3}
+      value: {fileID: 21300000, guid: 2a7073de1e958af45a6bb309c20ae42a, type: 3}
+    - time: 1
+      value: {fileID: 21300002, guid: 2a7073de1e958af45a6bb309c20ae42a, type: 3}
+    - time: 2
+      value: {fileID: 21300004, guid: 2a7073de1e958af45a6bb309c20ae42a, type: 3}
+    - time: 3
+      value: {fileID: 21300006, guid: 2a7073de1e958af45a6bb309c20ae42a, type: 3}
     attribute: m_Sprite
-    path: 
+    path: FlirtComicSprite
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 5
+  m_SampleRate: 1
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 0
+    - path: 2098445154
       attribute: 0
       script: {fileID: 0}
       classID: 212
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300004, guid: 084413bbb01040643b5efcc83b1a7ef1, type: 3}
-    - {fileID: 21300006, guid: 084413bbb01040643b5efcc83b1a7ef1, type: 3}
-    - {fileID: 21300008, guid: 084413bbb01040643b5efcc83b1a7ef1, type: 3}
-    - {fileID: 21300010, guid: 084413bbb01040643b5efcc83b1a7ef1, type: 3}
+    - {fileID: 21300000, guid: 2a7073de1e958af45a6bb309c20ae42a, type: 3}
+    - {fileID: 21300002, guid: 2a7073de1e958af45a6bb309c20ae42a, type: 3}
+    - {fileID: 21300004, guid: 2a7073de1e958af45a6bb309c20ae42a, type: 3}
+    - {fileID: 21300006, guid: 2a7073de1e958af45a6bb309c20ae42a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .800000012
+    m_StopTime: 4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

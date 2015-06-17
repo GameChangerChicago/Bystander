@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: FaucetComic
+  m_Name: Drink_0
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,36 +18,36 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
-    - time: .300000012
-      value: {fileID: 21300002, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
-    - time: 1.00100005
-      value: {fileID: 21300000, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
+      value: {fileID: 21300000, guid: 51bd6cd7290b26f4bbcc8794cb5d6d73, type: 3}
+    - time: .5
+      value: {fileID: 21300002, guid: 51bd6cd7290b26f4bbcc8794cb5d6d73, type: 3}
+    - time: 1
+      value: {fileID: 21300004, guid: 51bd6cd7290b26f4bbcc8794cb5d6d73, type: 3}
     attribute: m_Sprite
-    path: FaucetComicSprite
+    path: DrinkComicSprite
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 2
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 1637917255
+    - path: 59995287
       attribute: 0
       script: {fileID: 0}
       classID: 212
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
-    - {fileID: 21300002, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
-    - {fileID: 21300000, guid: 551a69383ccdd534089ea59a3618cd4d, type: 3}
+    - {fileID: 21300000, guid: 51bd6cd7290b26f4bbcc8794cb5d6d73, type: 3}
+    - {fileID: 21300002, guid: 51bd6cd7290b26f4bbcc8794cb5d6d73, type: 3}
+    - {fileID: 21300004, guid: 51bd6cd7290b26f4bbcc8794cb5d6d73, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 1.10100007
+    m_StopTime: 1.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

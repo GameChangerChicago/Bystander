@@ -131,11 +131,10 @@ public class PartyGameManager : MonoBehaviour
 
         if (importantProp)
             SectionCompleted = true;
+        else
+            _currentBystanderPortrait.color = new Color(1, 1, 1, 1f - (float)_clickCount / (float)MaxClicks);
 
         _myCameraManager.SetCameraToMove(myPanelPos, _cameraTravelTime, camSize, camRotation);
-
-        _currentBystanderPortrait.color = new Color(1, 1, 1, 1f - (float)_clickCount / (float)MaxClicks);
-        Debug.Log(_currentBystanderPortrait.color);
     }
 
     //This is called when a dialog has reached its end
@@ -243,21 +242,6 @@ public class PartyGameManager : MonoBehaviour
         {
             PropsPerIM[_currentInteractiveMoment][i].ResetProp();
         }
+        _currentBystanderPortrait.color = new Color(1, 1, 1, 1);
     }
-
-    //This method brings up virgil and disables the interactable props
-    //private void VirgilHandler()
-    //{
-    //    if (_clickCount >= MaxClicks)
-    //    {
-    //        _virgil.Appear();
-
-    //        InteractableProp[] props = FindObjectsOfType<InteractableProp>();
-
-    //        for (int i = 0; i < props.Length; i++)
-    //        {
-    //            props[i].GetComponent<BoxCollider>().enabled = false;
-    //        }
-    //    }
-    //}
 }

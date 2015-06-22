@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: JaceConfession
+  m_Name: LeoHelpPause
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,20 +18,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 23ee57c434617c84cb4e6146aec8f260, type: 3}
-    - time: 1
-      value: {fileID: 21300004, guid: 23ee57c434617c84cb4e6146aec8f260, type: 3}
-    - time: 2
-      value: {fileID: 21300006, guid: 23ee57c434617c84cb4e6146aec8f260, type: 3}
-    - time: 3
-      value: {fileID: 21300002, guid: 23ee57c434617c84cb4e6146aec8f260, type: 3}
-    - time: 4
-      value: {fileID: 21300004, guid: 4a4752effdded04429808c3e29127788, type: 3}
+      value: {fileID: 21300000, guid: 6729d62518c428841a1e0da1f00e2869, type: 3}
+    - time: .333333343
+      value: {fileID: 21300004, guid: 6729d62518c428841a1e0da1f00e2869, type: 3}
+    - time: .666666687
+      value: {fileID: 21300002, guid: 6729d62518c428841a1e0da1f00e2869, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 1
+  m_SampleRate: 3
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -45,15 +41,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 23ee57c434617c84cb4e6146aec8f260, type: 3}
-    - {fileID: 21300004, guid: 23ee57c434617c84cb4e6146aec8f260, type: 3}
-    - {fileID: 21300006, guid: 23ee57c434617c84cb4e6146aec8f260, type: 3}
-    - {fileID: 21300002, guid: 23ee57c434617c84cb4e6146aec8f260, type: 3}
-    - {fileID: 21300004, guid: 4a4752effdded04429808c3e29127788, type: 3}
+    - {fileID: 21300000, guid: 6729d62518c428841a1e0da1f00e2869, type: 3}
+    - {fileID: 21300004, guid: 6729d62518c428841a1e0da1f00e2869, type: 3}
+    - {fileID: 21300002, guid: 6729d62518c428841a1e0da1f00e2869, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 5
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

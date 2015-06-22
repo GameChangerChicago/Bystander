@@ -51,8 +51,8 @@ public class GUIManager : MonoBehaviour
 
         }
 
-
-			inputField = GUI.TextField (new Rect (screenWidth - 200, screenHeight - 45 , 250, 50), inputField, 15);
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            inputField = GUI.TextField(new Rect(screenWidth - 200, screenHeight - 45, 250, 50), inputField, 15);
 		}
 	}
 

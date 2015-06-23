@@ -9,7 +9,9 @@ public class HintManager : MonoBehaviour
 
     private float _hintTimer;
     private bool _timerActive = true,
-                 _initialHintShown;
+                 _initialHintShown,
+                 _fadingIn,
+                 _fadingOut;
 
     void Update()
     {
@@ -21,25 +23,52 @@ public class HintManager : MonoBehaviour
             _hintTimer = 0;
             _timerActive = false;
             _initialHintShown = true;
-            InstructionSprite.enabled = true;
+            _fadingIn = true;
         }
 
         if (_hintTimer > HintDelay && _initialHintShown)
         {
             _hintTimer = 0;
             _timerActive = false;
-            InstructionSprite.enabled = true;
+            _fadingIn = true;
         }
 
         if (!_timerActive && Input.GetKeyDown(KeyCode.Mouse0))
         {
             _timerActive = true;
-            InstructionSprite.enabled = false;
+            _fadingOut = true;
         }
 
         if (Input.anyKeyDown && _initialHintShown)
         {
             _hintTimer = 0;
+        }
+
+        Fading();
+    }
+
+    private void Fading()
+    {
+        if (_fadingIn && InstructionSprite.color.a < 1)
+        {
+            InstructionSprite.color = new Color(1, 1, 1, InstructionSprite.color.a + (2f * Time.deltaTime));
+
+            if (InstructionSprite.color.a > 1)
+            {
+                InstructionSprite.color = new Color(1, 1, 1, 1);
+                _fadingIn = false;
+            }
+        }
+
+        if (_fadingOut && InstructionSprite.color.a > 0)
+        {
+            InstructionSprite.color = new Color(1, 1, 1, InstructionSprite.color.a - (3f * Time.deltaTime));
+
+            if (InstructionSprite.color.a < 0)
+            {
+                InstructionSprite.color = new Color(1, 1, 1, 0);
+                _fadingOut = false;
+            }
         }
     }
 }

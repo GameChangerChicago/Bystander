@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WebLink : MonoBehaviour
 {
-
+    public WebMenuTransition MyWebMenu;
 		public Node webPage;
 		private WebSiteManager siteManager;
 
@@ -19,7 +19,7 @@ public class WebLink : MonoBehaviour
 		{
 
 				siteManager.NavigationHandler (webPage);
-
+                MyWebMenu.TransitionToMenu();
 
 		}
 

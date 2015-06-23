@@ -55,7 +55,6 @@ public class WebMenuTransition : MonoBehaviour
 
 		void OnMouseDown ()
 		{
-
 				
 				TransitionToMenu ();
 				if (isMenu)

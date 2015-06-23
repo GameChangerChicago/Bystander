@@ -106,7 +106,7 @@ public class AnimationManager : MonoBehaviour
 			
 				}
 
-		Debug.Log (aniState);
+		//Debug.Log (aniState);
 		}
 
 

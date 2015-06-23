@@ -6,7 +6,8 @@ public class GUIManager : MonoBehaviour
 
 		private MaleGameManager gameManager;
 		private string inputField;
-		private bool questionAnswered;
+		private bool questionAnswered,
+                     textFieldActive;
 		private int screenWidth, screenHeight;
 		public GUISkin maleSkin;
 
@@ -23,38 +24,42 @@ public class GUIManager : MonoBehaviour
 	}
 
 
-	void OnGUI ()
-	{
-		GUI.skin = maleSkin;
+    void OnGUI()
+    {
+        GUI.skin = maleSkin;
 
-//		GUI.SetNextControlName("inputField");
-//		if (UnityEngine.Event.current.type == EventType.Repaint)
-//				if (GUI.GetNameOfFocusedControl == "inputField")
-//						inputField = "";
-
-
-
-		if(!gameManager.isGameState(GameState.Intro) && !gameManager.isGameState(GameState.Outro))
-		{
-			if (Event.current.keyCode == KeyCode.Return && Event.current.type == EventType.KeyDown && !questionAnswered) {
-					gameManager.CheckAnswer (inputField.ToUpper ());
-					inputField = "";
-				    questionAnswered = true;
-					
+        //		GUI.SetNextControlName("inputField");
+        //		if (UnityEngine.Event.current.type == EventType.Repaint)
+        //				if (GUI.GetNameOfFocusedControl == "inputField")
+        //						inputField = "";
 
 
-			}
 
-        if (Event.current.type == EventType.KeyUp)
+        if (!gameManager.isGameState(GameState.Intro) && !gameManager.isGameState(GameState.Outro))
         {
-            questionAnswered = false;
+            if (Event.current.keyCode == KeyCode.Return && Event.current.type == EventType.KeyDown && !questionAnswered)
+            {
+                gameManager.CheckAnswer(inputField.ToUpper());
+                inputField = "";
+                questionAnswered = true;
 
+
+
+            }
+
+            if (Event.current.type == EventType.KeyUp)
+            {
+                questionAnswered = false;
+
+            }
+
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+                textFieldActive = true;
+
+            if(textFieldActive)
+                inputField = GUI.TextField(new Rect(screenWidth - 200, screenHeight - 45, 250, 50), inputField, 15);
         }
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-            inputField = GUI.TextField(new Rect(screenWidth - 200, screenHeight - 45, 250, 50), inputField, 15);
-		}
-	}
+    }
 
 
 }

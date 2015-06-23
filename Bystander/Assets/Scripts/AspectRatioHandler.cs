@@ -5,7 +5,8 @@ public class AspectRatioHandler : MonoBehaviour
 {
     public SpriteRenderer LetterBoxTop,
                           LetterBoxBottom;
-    public bool IsMacAspect = false;
+    public bool IsMacAspect = false,
+                StaticLetterBoxing;
     private float _adjustedOrthographicSize;
 
     void Start()
@@ -22,7 +23,7 @@ public class AspectRatioHandler : MonoBehaviour
 
     void Update()
     {
-        if (IsMacAspect)
+        if (IsMacAspect && !StaticLetterBoxing)
         {
             if (_adjustedOrthographicSize != this.camera.orthographicSize - this.camera.orthographicSize * 0.11f)
                 _adjustedOrthographicSize = this.camera.orthographicSize - this.camera.orthographicSize * 0.11f;

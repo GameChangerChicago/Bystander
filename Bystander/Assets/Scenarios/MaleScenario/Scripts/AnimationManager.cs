@@ -62,7 +62,7 @@ public class AnimationManager : MonoBehaviour
 
 						if (i == 0) {
 
-				aniState = AniState.CloseUp;
+								aniState = AniState.CloseUp;
 								bg_SidewaysScroll.SetActive (false);
 								//activeBackground = bg_SidewaysScroll;
 								//activeBackground.SetActive(true);
@@ -77,7 +77,7 @@ public class AnimationManager : MonoBehaviour
 						} else if (i == 1) {
 
 							
-				aniState = AniState.Profile;
+								aniState = AniState.Profile;
 								bg_SidewaysScroll.SetActive (true);
 								LeoJace.Play ("WalkTogether");
 								//bg_TrackScroll.SetActive(false);
@@ -90,20 +90,20 @@ public class AnimationManager : MonoBehaviour
 								
 						} else if (i == 2) {
 
-				aniState = AniState.Back;
+								aniState = AniState.Back;
 								bg_SidewaysScroll.SetActive (false);
 								LeoJace.Play ("WalkingBacks");
 								//bg_TrackScroll.SetActive(false);
 								bg_BackwardsScroll.SetActive (true);
 								bg_SidewaysFlatScroll.SetActive (false);
+								i = -1;
 								
 
 
 
-						} else
-								i = 0;
-
+						
 			
+						}
 				}
 
 		//Debug.Log (aniState);

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 public class GUIManager : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class GUIManager : MonoBehaviour
 		screenWidth = Screen.width / 2;
 		screenHeight = Screen.height / 2;
 		gameManager = FindObjectOfType<MaleGameManager> ();
-		inputField = "Answer";
+		inputField = "";
 		questionAnswered = false;
 
 
@@ -39,11 +40,27 @@ public class GUIManager : MonoBehaviour
         {
             if (Event.current.keyCode == KeyCode.Return && Event.current.type == EventType.KeyDown && !questionAnswered)
             {
-                gameManager.CheckAnswer(inputField.ToUpper());
-                inputField = "";
-                questionAnswered = true;
+		
+//			if(gameManager.isGameState(GameState.Q8)){
 
+					string m_inputField = Regex.Replace(inputField, @"\W+" , "");
+					gameManager.CheckAnswer(m_inputField.ToUpper());
+					inputField = "";
+					questionAnswered = true;
 
+//				}else{
+//
+//
+//					gameManager.CheckAnswer(inputField.ToUpper());
+//					inputField = "";
+//					questionAnswered = true;
+//					//					if(inputField.ToUpper()== "656 HOPE" || inputField.ToUpper() == "656-HOPE" || inputField.ToUpper() == "656HOPE")
+//					//						gameManager.CheckAnswer("656HOPE");
+//					//						inputField = "";
+//					//						questionAnswered = true;
+//					
+//				}
+//
 
             }
 

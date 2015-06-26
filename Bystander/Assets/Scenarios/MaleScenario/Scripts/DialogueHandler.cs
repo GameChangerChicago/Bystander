@@ -76,7 +76,7 @@ public class DialogueHandler: MonoBehaviour
 
 		
 		
-			if (gameManager.isGameState (GameState.Outro) && numDialogueLinesShown == numDialogueLines)
+				if (gameManager.isGameState (GameState.Outro) && numDialogueLinesShown == numDialogueLines)
 						StartCoroutine (gameManager.EndGame ());
 
 		}
@@ -118,8 +118,10 @@ public class DialogueHandler: MonoBehaviour
 											
 										if (animationManager.State () == AniState.Back) {
 												dialogueBox.transform.position = dialogueBoxPosition [4].position;
-										} else if (animationManager.State () == AniState.Profile || animationManager.State () == AniState.CloseUp) {
+										} else if (animationManager.State () == AniState.Profile) {
 												dialogueBox.transform.position = dialogueBoxPosition [0].position;
+										} else if (animationManager.State () == AniState.CloseUp) {
+												dialogueBox.transform.position = dialogueBoxPosition [6].position;
 										}
 						
 										
@@ -150,7 +152,7 @@ public class DialogueHandler: MonoBehaviour
 										i++;
 								} else  if (dialogue [i] == '@') {
 										dialogueBox.transform.position = dialogueBoxPosition [3].position;
-									//	dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
+										//	dialogueBox.GetComponent<TextMesh> ().fontSize = 40;
 										TextBounds = 7;
 										dialogueSprite.enabled = false;
 										questionSprite.enabled = true;
@@ -220,15 +222,15 @@ public class DialogueHandler: MonoBehaviour
 										dialogueBox.GetComponent<TextMesh> ().text = dialogueBox.GetComponent<TextMesh> ().text + "\n" + currentWord;
 								}
 								
-							dialogueSprite.GetComponent<Transform>().localScale = new Vector3 (currentRenderer.bounds.extents.x + 1f, currentRenderer.bounds.extents.y + TextBoxBounds, currentRenderer.bounds.extents.z);
-				virgilDialogueSprite.GetComponent<Transform>().localScale = new Vector3 (currentRenderer.bounds.extents.x + 1f, currentRenderer.bounds.extents.y +  TextBoxBounds, currentRenderer.bounds.extents.z);
+								dialogueSprite.GetComponent<Transform> ().localScale = new Vector3 (currentRenderer.bounds.extents.x + 1f, currentRenderer.bounds.extents.y + TextBoxBounds, currentRenderer.bounds.extents.z);
+								virgilDialogueSprite.GetComponent<Transform> ().localScale = new Vector3 (currentRenderer.bounds.extents.x + 1f, currentRenderer.bounds.extents.y + TextBoxBounds, currentRenderer.bounds.extents.z);
 
-				//dialogueSprite.GetComponent<Transform>().localPosition = //dialogueBox.transform.bounds.center; //new Vector3 (currentRenderer.bounds.center.x, currentRenderer.bounds.center.y, currentRenderer.bounds.center.z);
+								//dialogueSprite.GetComponent<Transform>().localPosition = //dialogueBox.transform.bounds.center; //new Vector3 (currentRenderer.bounds.center.x, currentRenderer.bounds.center.y, currentRenderer.bounds.center.z);
 								
 								//dialogueSprite.GetComponenet<Transform>().
 								
 
-								Debug.Log(currentRenderer.bounds);
+								Debug.Log (currentRenderer.bounds);
 				
 								//Resets the current word each time
 								currentWord = "";

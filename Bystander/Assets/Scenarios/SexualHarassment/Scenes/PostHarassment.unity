@@ -1200,6 +1200,7 @@ GameObject:
   - 81: {fileID: 1053695684}
   - 114: {fileID: 1053695690}
   - 65: {fileID: 1053695689}
+  - 114: {fileID: 1053695691}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1311,6 +1312,21 @@ MonoBehaviour:
   - {fileID: 1013171707}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 211117559}
+--- !u!114 &1053695691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053695683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af76097c8a6a59f4b9273fab8e1b333d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LetterBoxTop: {fileID: 0}
+  LetterBoxBottom: {fileID: 0}
+  IsMacAspect: 0
+  StaticLetterBoxing: 0
 --- !u!1 &1084935844
 GameObject:
   m_ObjectHideFlags: 0

@@ -169,7 +169,7 @@ public class PartyGameManager : MonoBehaviour
                     _currentSection = Kitchen;
                     _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19, 0);
                     _currentBystanderPortrait = BystanderPortraits[1];
-                    MaxClicks = 2;
+                    MaxClicks = 3;
                     break;
                 case InteractiveMoments.Kitchen:
                     _currentInteractiveMoment = InteractiveMoments.BackPoarch;

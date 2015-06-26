@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using PixelCrushers.DialogueSystem;
 
 public class HintManager : MonoBehaviour
 {
     public SpriteRenderer InstructionSprite;
+    public ConversationTrigger MyTrigger;
     public float HintDelay,
                  InitialDelay;
 
+    DatabaseManager _databaseManager;
     private float _hintTimer;
     private bool _timerActive = true,
                  _initialHintShown,
@@ -68,6 +71,9 @@ public class HintManager : MonoBehaviour
             {
                 InstructionSprite.color = new Color(1, 1, 1, 0);
                 _fadingOut = false;
+
+                if (MyTrigger != null)
+                    MyTrigger.TryStartConversation(MyTrigger.actor);
             }
         }
     }

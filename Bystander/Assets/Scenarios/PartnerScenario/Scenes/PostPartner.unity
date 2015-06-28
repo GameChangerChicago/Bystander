@@ -865,7 +865,7 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: 11.6093102, y: -22.2448006}
   MyText: 
-  SceneToLoad: 
+  SceneToLoad: HubWorld_Party
   CamSize: 11.5
   CamTravelTime: 3
   CamRotation: 0
@@ -1743,6 +1743,7 @@ MonoBehaviour:
   LetterBoxTop: {fileID: 902809329}
   LetterBoxBottom: {fileID: 820953464}
   IsMacAspect: 0
+  StaticLetterBoxing: 0
 --- !u!1 &1828767003
 GameObject:
   m_ObjectHideFlags: 0

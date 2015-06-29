@@ -233,7 +233,6 @@ public class CutSceneManager : MonoBehaviour
         }
         else if (this.camera.orthographicSize < _camSize) //If the current camera size is less than _camSize then we know we need to increase the size of the camera
         {
-            Debug.Log("Cam Size: " + _camSize);
             this.camera.orthographicSize += _camSizeDiff / (_camTravelTime / Time.deltaTime * travelTimeModifier);
 
             //Eventually the camera size will be slightly larger than the desired size; once this happens we simply set the size to _camSize

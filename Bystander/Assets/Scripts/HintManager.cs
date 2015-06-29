@@ -36,7 +36,7 @@ public class HintManager : MonoBehaviour
             _fadingIn = true;
         }
 
-        if (!_timerActive && Input.GetKeyDown(KeyCode.Mouse0))
+        if (!_timerActive && !_fadingIn && Input.GetKeyDown(KeyCode.Mouse0))
         {
             _timerActive = true;
             _fadingOut = true;

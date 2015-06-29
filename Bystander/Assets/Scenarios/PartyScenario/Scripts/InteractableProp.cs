@@ -39,7 +39,8 @@ public class InteractableProp : MonoBehaviour
                 AnimationChanges,
                 HasCloseupAnimation,
                 InfiniteClicks,
-                Disabled;
+                Disabled,
+                Exit;
     public int MaxClicks,
                DialogSections;
     public float CameraMoveTime,
@@ -106,7 +107,7 @@ public class InteractableProp : MonoBehaviour
                 StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
             }
             else
-                StartCoroutine(_myGameManager.FinsihInteractiveSegment((2 * CameraMoveTime) + ViewTime));
+                StartCoroutine(_myGameManager.FinsihInteractiveSegment((2 * CameraMoveTime) + ViewTime, Exit));
 
             //If the interactable prop has dialog than this calls PlayCloseUpAnimation
             if (HasCloseupAnimation)
@@ -156,6 +157,7 @@ public class InteractableProp : MonoBehaviour
 
         if (HasCloseupAnimation)
         {
+            CloseUpAnimator.StartPlayback();
             CloseUpAnimator.Play(CloseUpAnimator.name + "_0");
             CloseUpAnimator.speed = 0;
         }

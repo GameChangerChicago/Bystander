@@ -16,16 +16,16 @@ public class PartyGameManager : MonoBehaviour
             {
                 if (value)
                 {
-                    for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+                    for (int i = 0; i < _propsPerIM[_currentInteractiveMoment].Length; i++)
                     {
-                        PropsPerIM[_currentInteractiveMoment][i].Disabled = true;
+                        _propsPerIM[_currentInteractiveMoment][i].Disabled = true;
                     }
                 }
                 else
                 {
-                    for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+                    for (int i = 0; i < _propsPerIM[_currentInteractiveMoment].Length; i++)
                     {
-                        PropsPerIM[_currentInteractiveMoment][i].Disabled = false;
+                        _propsPerIM[_currentInteractiveMoment][i].Disabled = false;
                     }
                 }
 
@@ -88,7 +88,8 @@ public class PartyGameManager : MonoBehaviour
         Hallway
     };
 
-    private Dictionary<InteractiveMoments, InteractableProp[]> PropsPerIM = new Dictionary<InteractiveMoments, InteractableProp[]>();
+    private Dictionary<InteractiveMoments, InteractableProp[]> _propsPerIM = new Dictionary<InteractiveMoments, InteractableProp[]>();
+    private InteractableProp[] _allProps;
     private InteractiveMoments _currentInteractiveMoment = InteractiveMoments.LivingRoom;
     private PartyCameraManager _myCameraManager;
     private PartyVirgil _virgil;
@@ -109,11 +110,12 @@ public class PartyGameManager : MonoBehaviour
 
     private void InitializeProps()
     {
-        PropsPerIM.Add(InteractiveMoments.LivingRoom, LivingRoom.GetComponentsInChildren<InteractableProp>());
-        PropsPerIM.Add(InteractiveMoments.Kitchen, Kitchen.GetComponentsInChildren<InteractableProp>());
-        PropsPerIM.Add(InteractiveMoments.BackPoarch, BackPoarch.GetComponentsInChildren<InteractableProp>());
-        PropsPerIM.Add(InteractiveMoments.LivingRoom2, LivingRoom2.GetComponentsInChildren<InteractableProp>());
-        PropsPerIM.Add(InteractiveMoments.Hallway, Hallway.GetComponentsInChildren<InteractableProp>());
+        _propsPerIM.Add(InteractiveMoments.LivingRoom, LivingRoom.GetComponentsInChildren<InteractableProp>());
+        _propsPerIM.Add(InteractiveMoments.Kitchen, Kitchen.GetComponentsInChildren<InteractableProp>());
+        _propsPerIM.Add(InteractiveMoments.BackPoarch, BackPoarch.GetComponentsInChildren<InteractableProp>());
+        _propsPerIM.Add(InteractiveMoments.LivingRoom2, LivingRoom2.GetComponentsInChildren<InteractableProp>());
+        _propsPerIM.Add(InteractiveMoments.Hallway, Hallway.GetComponentsInChildren<InteractableProp>());
+        _allProps = FindObjectsOfType<InteractableProp>();
     }
 
     //This method is called whenever an interactable prop is clicked
@@ -146,7 +148,7 @@ public class PartyGameManager : MonoBehaviour
     }
 
     //This method is called the max clicks has been reached
-    public IEnumerator FinsihInteractiveSegment(float waitTime)
+    public IEnumerator FinsihInteractiveSegment(float waitTime, bool exit)
     {
         yield return new WaitForSeconds(waitTime);
 
@@ -154,9 +156,9 @@ public class PartyGameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
 
-            for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+            for (int i = 0; i < _propsPerIM[_currentInteractiveMoment].Length; i++)
             {
-                PropsPerIM[_currentInteractiveMoment][i].Disabled = true;
+                _propsPerIM[_currentInteractiveMoment][i].Disabled = true;
             }
 
             //Sets the next prefab or ends the scenario
@@ -176,7 +178,7 @@ public class PartyGameManager : MonoBehaviour
                     _currentSection = BackPoarch;
                     _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19, 0);
                     _currentBystanderPortrait = BystanderPortraits[2];
-                    MaxClicks = 1;
+                    MaxClicks = 2;
                     break;
                 case InteractiveMoments.BackPoarch:
                     _currentInteractiveMoment = InteractiveMoments.LivingRoom2;
@@ -201,7 +203,7 @@ public class PartyGameManager : MonoBehaviour
             SectionCompleted = false;
             _clickCount = 0;
         }
-        else if (_clickCount >= MaxClicks) //If you never clicked the correct interactable prop
+        else if (_clickCount >= MaxClicks || exit) //If you never clicked the correct interactable prop
         {
             _virgil.VirgilReset();
 
@@ -222,26 +224,27 @@ public class PartyGameManager : MonoBehaviour
 
     public void DisableAllProps()
     {
-        for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+        for (int i = 0; i < _propsPerIM[_currentInteractiveMoment].Length; i++)
         {
-            PropsPerIM[_currentInteractiveMoment][i].Disabled = true;
+            _propsPerIM[_currentInteractiveMoment][i].Disabled = true;
         }
     }
 
     public void EnableAllProps()
     {
-        for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+        for (int i = 0; i < _allProps.Length; i++)
         {
-            PropsPerIM[_currentInteractiveMoment][i].Disabled = false;
+            _allProps[i].Disabled = false;
         }
     }
 
     public void ResetProps()
     {
-        for (int i = 0; i < PropsPerIM[_currentInteractiveMoment].Length; i++)
+        for (int i = 0; i < _allProps.Length; i++)
         {
-            PropsPerIM[_currentInteractiveMoment][i].ResetProp();
+            _allProps[i].ResetProp();
         }
+        _myCameraManager.ResetCam();
         _currentBystanderPortrait.color = new Color(1, 1, 1, 1);
     }
 }

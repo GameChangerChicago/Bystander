@@ -6,7 +6,8 @@ public class PartyCameraManager : MonoBehaviour
     public float DefaultSize;
 
     private PartyGameManager _myGameManager;
-    private Vector3 _pos;
+    private Vector3 _pos,
+                    _startPos;
     private float _camTravelTime,
                   _camSize,
                   _camSizeDiff,
@@ -16,6 +17,7 @@ public class PartyCameraManager : MonoBehaviour
     void Start()
     {
         _myGameManager = FindObjectOfType<PartyGameManager>();
+        _startPos = this.transform.position;
     }
 
     void Update()
@@ -113,5 +115,10 @@ public class PartyCameraManager : MonoBehaviour
     {
         _movingCamera = false;
         _myGameManager.CameraMoving = false;
+    }
+
+    public void ResetCam()
+    {
+        this.transform.position = _startPos;
     }
 }

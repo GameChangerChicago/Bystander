@@ -37,7 +37,10 @@ public class PlayButton : MonoBehaviour {
 
 	void OnMouseDown(){
 
-		Application.LoadLevel (level);
+		if (level == "CLOSE")
+						Application.Quit ();
+		else
+			Application.LoadLevel (level);
 		//Application.LoadLevel (hb_Manager.NextLevel());
 		//hb_Manager.prepNextLevel ();
 	}

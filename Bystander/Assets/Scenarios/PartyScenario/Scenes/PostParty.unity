@@ -185,7 +185,7 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: 31.1499996, y: 0}
   MyText: 
-  SceneToLoad: HubWorld_Phone
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   CamRotation: 0
@@ -287,7 +287,7 @@ Transform:
   m_LocalScale: {x: 2500, y: 150, z: 1}
   m_Children: []
   m_Father: {fileID: 1252706851}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!212 &1214110405
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -397,6 +397,7 @@ Transform:
   m_Children:
   - {fileID: 307893925}
   - {fileID: 257928099}
+  - {fileID: 2091407864}
   - {fileID: 1214110404}
   - {fileID: 1534519711}
   m_Father: {fileID: 0}
@@ -415,6 +416,7 @@ MonoBehaviour:
   Page:
   - {fileID: 307893924}
   - {fileID: 257928100}
+  - {fileID: 2091407865}
   IntroAudio: {fileID: 1409974949}
   StepSoundEffect: {fileID: 1409974949}
 --- !u!65 &1252706853
@@ -657,7 +659,7 @@ Transform:
   m_LocalScale: {x: 2500, y: 150, z: 1}
   m_Children: []
   m_Father: {fileID: 1252706851}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!212 &1534519712
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -896,6 +898,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &2091407863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2091407864}
+  - 114: {fileID: 2091407865}
+  m_Layer: 0
+  m_Name: Step
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2091407864
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091407863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1252706851}
+  m_RootOrder: 2
+--- !u!114 &2091407865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091407863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
+  MyTextMesh: {fileID: 0}
+  TextBox: {fileID: 0}
+  CamRectangle:
+    serializedVersion: 2
+    x: .100000001
+    y: 0
+    width: .800000012
+    height: 1
+  CamLocation: {x: 31.1499996, y: 0}
+  MyText: 
+  SceneToLoad: HubWorld_Phone
+  CamSize: 0
+  CamTravelTime: 0
+  CamRotation: 0
+  TextBounds: 0
+  AudioDelay: 0
+  ClickDelay: 0
+  AnimatorIndex: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
+  AutoStep: 1
+  InitialAutoStep: 0
 --- !u!1 &2098210459
 GameObject:
   m_ObjectHideFlags: 0

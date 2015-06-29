@@ -209,7 +209,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1053695688}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &312987569
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +517,69 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &446315441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 446315442}
+  - 114: {fileID: 446315443}
+  m_Layer: 0
+  m_Name: Step7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &446315442
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 446315441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.6014557, y: -4.8651638, z: -.0144042969}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1053695688}
+  m_RootOrder: 6
+--- !u!114 &446315443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 446315441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
+  MyTextMesh: {fileID: 0}
+  TextBox: {fileID: 0}
+  CamRectangle:
+    serializedVersion: 2
+    x: .100000001
+    y: 0
+    width: .800000012
+    height: 1
+  CamLocation: {x: 42.3935318, y: -1.536762}
+  MyText: 
+  SceneToLoad: HubWorld_Partner
+  CamSize: 8
+  CamTravelTime: 2
+  CamRotation: 0
+  TextBounds: 0
+  AudioDelay: 0
+  ClickDelay: 0
+  AnimatorIndex: 3
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
+  AutoStep: 1
+  InitialAutoStep: 0
 --- !u!1 &574403433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1237,7 @@ MonoBehaviour:
     height: 1
   CamLocation: {x: 42.3935318, y: -1.536762}
   MyText: 
-  SceneToLoad: HubWorld_Partner
+  SceneToLoad: 
   CamSize: 8
   CamTravelTime: 2
   CamRotation: 0
@@ -1277,6 +1340,7 @@ Transform:
   - {fileID: 1139219847}
   - {fileID: 1622861923}
   - {fileID: 1013171706}
+  - {fileID: 446315442}
   - {fileID: 211117560}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1310,6 +1374,7 @@ MonoBehaviour:
   - {fileID: 1139219848}
   - {fileID: 1622861924}
   - {fileID: 1013171707}
+  - {fileID: 446315443}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 211117559}
 --- !u!114 &1053695691

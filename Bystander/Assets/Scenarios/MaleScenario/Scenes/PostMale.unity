@@ -884,6 +884,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1293235366}
+  - 114: {fileID: 1293235367}
   m_Layer: 0
   m_Name: Step
   m_TagString: Untagged
@@ -903,6 +904,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 109311020}
   m_RootOrder: 2
+--- !u!114 &1293235367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1293235365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
+  MyTextMesh: {fileID: 0}
+  TextBox: {fileID: 0}
+  CamRectangle:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  CamLocation: {x: 0, y: 0}
+  MyText: 
+  SceneToLoad: CLOSE
+  CamSize: 0
+  CamTravelTime: 0
+  CamRotation: 0
+  TextBounds: 0
+  AudioDelay: 0
+  ClickDelay: 0
+  AnimatorIndex: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
+  AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1396046101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1178,7 @@ MonoBehaviour:
     height: 0
   CamLocation: {x: 0, y: 0}
   MyText: 
-  SceneToLoad: CLOSE
+  SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   CamRotation: 0

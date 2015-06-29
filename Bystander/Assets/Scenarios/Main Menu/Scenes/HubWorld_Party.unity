@@ -129,6 +129,10 @@ Prefab:
       propertyPath: nextLevel
       value: PreParty
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: ca39ecc9c65b6426b8bb5d6fc03a26ff, type: 2}
+      propertyPath: level
+      value: PreParty
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca39ecc9c65b6426b8bb5d6fc03a26ff, type: 2}
   m_RootGameObject: {fileID: 214479470}
@@ -1132,7 +1136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regularSprite: {fileID: 1318845280}
   selectedSprite: {fileID: 1093543579}
-  nextLevel: PreParty
+  level: PreParty
 --- !u!61 &1098209003
 BoxCollider2D:
   m_ObjectHideFlags: 0

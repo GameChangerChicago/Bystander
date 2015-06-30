@@ -207,6 +207,7 @@ public class PartyGameManager : MonoBehaviour
         {
             _virgil.VirgilReset();
             _currentSection = GameObject.Find("LivingRoom1");
+            _currentInteractiveMoment = InteractiveMoments.LivingRoom;
             MaxClicks = 6;
             _clickCount = 0;
         }
@@ -218,9 +219,15 @@ public class PartyGameManager : MonoBehaviour
         yield return new WaitForSeconds(WaitTime);
 
         if (currentAnimator.speed == 0) //Initially and when props are reset, the animator's speed is set to 0; this set's it back to 1
+        {
+            currentAnimator.StopPlayback();
             currentAnimator.speed = 1;
+        }
         else //Otherwise we will play the next animation
+        {
+            Debug.Log("Hi");
             currentAnimator.Play(currentAnimator.gameObject.name + "_" + clickCount);
+        }
     }
 
     public void DisableAllProps()

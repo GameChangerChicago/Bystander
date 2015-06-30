@@ -206,7 +206,8 @@ public class PartyGameManager : MonoBehaviour
         else if (_clickCount >= MaxClicks || exit) //If you never clicked the correct interactable prop
         {
             _virgil.VirgilReset();
-
+            _currentSection = GameObject.Find("LivingRoom1");
+            MaxClicks = 6;
             _clickCount = 0;
         }
     }

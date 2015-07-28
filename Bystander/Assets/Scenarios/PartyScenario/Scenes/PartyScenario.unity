@@ -799,7 +799,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
-  InfiniteClicks: 0
+  InfiniteClicks: 1
   Disabled: 0
   Exit: 0
   MaxClicks: 1
@@ -6353,7 +6353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &625503009
 Transform:
   m_ObjectHideFlags: 0
@@ -6363,8 +6363,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1975248517}
+  m_Children: []
   m_Father: {fileID: 676612672}
   m_RootOrder: 0
 --- !u!212 &625503010
@@ -16771,7 +16770,7 @@ GameObject:
   - 23: {fileID: 1728094289}
   - 102: {fileID: 1728094288}
   m_Layer: 0
-  m_Name: Notice
+  m_Name: Pet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16784,7 +16783,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1728094286}
   m_LocalRotation: {x: -0, y: 0, z: .100416467, w: -.994945526}
-  m_LocalPosition: {x: -2.11829162, y: 4.40396309, z: -.013671875}
+  m_LocalPosition: {x: -.718915462, y: 3.67637324, z: -.013671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1077356188}
@@ -16796,7 +16795,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1728094286}
-  m_Text: 'Notice '
+  m_Text: Pet
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -19635,12 +19634,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1975248516}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.39263391, y: -.530163705, z: -.013671875}
-  m_LocalScale: {x: .553098321, y: .553098321, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -.0802069828, w: -.99677825}
+  m_LocalPosition: {x: -11.5506058, y: -.299413204, z: -.013671875}
+  m_LocalScale: {x: .450875938, y: .450875789, z: 1}
   m_Children: []
-  m_Father: {fileID: 625503009}
-  m_RootOrder: 0
+  m_Father: {fileID: 1981576964}
+  m_RootOrder: 1
 --- !u!102 &1975248518
 TextMesh:
   serializedVersion: 3
@@ -19725,7 +19724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1981576964
 Transform:
   m_ObjectHideFlags: 0
@@ -19737,6 +19736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1219450872}
+  - {fileID: 1975248517}
   m_Father: {fileID: 1297929377}
   m_RootOrder: 0
 --- !u!212 &1981576965

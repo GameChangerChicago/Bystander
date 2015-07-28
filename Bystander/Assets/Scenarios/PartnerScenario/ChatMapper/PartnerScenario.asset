@@ -822,8 +822,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 236
-        y: 388
+        x: 243
+        y: 359
         width: 160
         height: 30
     - id: 8
@@ -880,8 +880,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 485
-        y: 471
+        x: 444
+        y: 454
         width: 160
         height: 30
     - id: 9
@@ -940,8 +940,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 459
-        y: 2095
+        x: 477
+        y: 2075
         width: 160
         height: 30
     - id: 10
@@ -1718,17 +1718,33 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 22
         destinationConversationID: 1
-        destinationDialogueID: 100
+        destinationDialogueID: 9
         isConnector: 0
         priority: 2
       conditionsString: Variable["Wrong"]==-2
-      userScript: 'Variable["Repeat"]=true;
+      userScript: 'Variable["Repeat"]=false;
+
+        Variable["M1"]=0;
+
+        Variable["M2"]=0;
+
+        Variable["M3"]=0;
+
+        Variable["M4"]=0;
+
+        Variable["M5"]=0;
+
+        Variable["M6"]=0;
+
+        Variable["M7"]=0;
+
+        Variable["Wrong"]=0;
 
         Variable["Alert"]="Let''s take it from the beginning.";'
       canvasRect:
         serializedVersion: 2
-        x: 64
-        y: 2151
+        x: 71
+        y: 2079
         width: 160
         height: 30
     - id: 19
@@ -6356,23 +6372,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["Repeat"]=false;
-
-        Variable["M1"]=0;
-
-        Variable["M2"]=0;
-
-        Variable["M3"]=0;
-
-        Variable["M4"]=0;
-
-        Variable["M5"]=0;
-
-        Variable["M6"]=0;
-
-        Variable["M7"]=0;
-
-        Variable["Wrong"]=0;'
+      userScript: 
       canvasRect:
         serializedVersion: 2
         x: 1
@@ -8234,8 +8234,8 @@ MonoBehaviour:
         decisions for next steps.\";"
       canvasRect:
         serializedVersion: 2
-        x: 253
-        y: 2173
+        x: 244
+        y: 2172
         width: 160
         height: 30
     - id: 143

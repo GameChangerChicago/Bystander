@@ -38,12 +38,14 @@ public class GUIManager : MonoBehaviour
 
         if (!gameManager.isGameState(GameState.Intro) && !gameManager.isGameState(GameState.Outro))
         {
+            if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Mouse0))
+                GUI.FocusControl("InputField");
             if (Event.current.keyCode == KeyCode.Return && Event.current.type == EventType.KeyDown && !questionAnswered)
             {
-		
+                Debug.Log(inputField);
 //			if(gameManager.isGameState(GameState.Q8)){
-
 					string m_inputField = Regex.Replace(inputField, @"\W+" , "");
+                Debug.Log(m_inputField);
 					gameManager.CheckAnswer(m_inputField.ToUpper());
 					inputField = "";
 					questionAnswered = true;
@@ -67,14 +69,16 @@ public class GUIManager : MonoBehaviour
             if (Event.current.type == EventType.KeyUp)
             {
                 questionAnswered = false;
-
             }
 
             if (Input.GetKeyUp(KeyCode.Mouse0))
                 textFieldActive = true;
 
-            if(textFieldActive)
+            if (textFieldActive)
+            {
+                GUI.SetNextControlName("InputField");
                 inputField = GUI.TextField(new Rect(screenWidth - 200, screenHeight - 45, 250, 50), inputField, 15);
+            }
         }
     }
 

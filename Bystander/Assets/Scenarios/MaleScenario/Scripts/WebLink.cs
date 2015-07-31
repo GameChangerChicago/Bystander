@@ -19,6 +19,7 @@ public class WebLink : MonoBehaviour
 		{
 
 				siteManager.NavigationHandler (webPage);
+            if(MyWebMenu != null)
                 MyWebMenu.TransitionToMenu();
 
 		}

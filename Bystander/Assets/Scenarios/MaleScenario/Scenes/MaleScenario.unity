@@ -1241,6 +1241,10 @@ Prefab:
       propertyPath: alphaTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: f4cabb9608c6d4d92a8dbe15a3fed7c0, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4cabb9608c6d4d92a8dbe15a3fed7c0, type: 2}
   m_RootGameObject: {fileID: 1351931322}
@@ -4416,7 +4420,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 387083550}
   m_GameObject: {fileID: 1354501738}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f5dab0649b8a4473b85b9e88b5eea5d, type: 3}
   m_Name: 

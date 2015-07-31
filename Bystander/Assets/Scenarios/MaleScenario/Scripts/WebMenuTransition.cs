@@ -32,8 +32,8 @@ public class WebMenuTransition : MonoBehaviour
 
 				
 
-		for (int i = 0; i < menuOptions.Length; i++)
-						menuOptionsColliders[i] = menuOptions [i].GetComponent<BoxCollider2D> ();
+        //for (int i = 0; i < menuOptions.Length; i++)
+        //                menuOptionsColliders[i] = menuOptions [i].GetComponent<BoxCollider2D> ();
 					
 							
 				

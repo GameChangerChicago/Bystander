@@ -27,6 +27,12 @@ public class HintManager : MonoBehaviour
             _timerActive = false;
             _initialHintShown = true;
             _fadingIn = true;
+
+            //Possibly gonna use this for not jumping right into a micro scenario
+            //if (Application.loadedLevelName == "SexualHarassment")
+            //{
+                
+            //}
         }
 
         if (_hintTimer > HintDelay && _initialHintShown)
@@ -36,7 +42,7 @@ public class HintManager : MonoBehaviour
             _fadingIn = true;
         }
 
-        if (!_timerActive && !_fadingIn && Input.GetKeyDown(KeyCode.Mouse0))
+        if (!_timerActive && !_fadingIn && Input.GetKeyUp(KeyCode.Mouse0))
         {
             _timerActive = true;
             _fadingOut = true;

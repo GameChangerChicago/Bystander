@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
 
 				//Invoke Repeating since we would like these audio clips to loop.
 				InvokeRepeating ("PlayBackgroundNoise", 0.0f, BackgroundNoise.length);
-                Debug.Log("Temporarily desabled play background music since there is no background music right now.");
+                Debug.Log("Temporarily disabled play background music since there is no background music right now.");
 				//InvokeRepeating ("PlayBackgroundMusic", 0.0f, BackgroundMusic.length);
 
 		}

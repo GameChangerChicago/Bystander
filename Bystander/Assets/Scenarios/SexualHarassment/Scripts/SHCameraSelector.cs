@@ -6,6 +6,7 @@ public class SHCameraSelector : MonoBehaviour
     private SHGameManager _myGameManager;
     private SHCameraManager _myCamera;
     private BoxCollider _myBoxCollider;
+    private bool _clickInitialized;
 
     public MicroScenarios MyMicroScenario;
     public SpriteRenderer MySelectSprite;
@@ -16,6 +17,8 @@ public class SHCameraSelector : MonoBehaviour
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myCamera = this.transform.parent.GetComponent<SHCameraManager>();
         _myBoxCollider = this.GetComponent<BoxCollider>();
+
+        this.enabled = false;
     }
 
     void Update()
@@ -31,15 +34,22 @@ public class SHCameraSelector : MonoBehaviour
         }
         else
             MySelectSprite.enabled = false;
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !_clickInitialized)
+            _clickInitialized = true;
     }
 
     //Disables the box collider and calls FocusOnCamera
     void OnMouseUp()
     {
-        _myCamera.FocusOnCamera();
-        _myBoxCollider.enabled = false;
-        _myGameManager.CurrentMicroScenario = MyMicroScenario;
-        Invoke("ActivationDelay", 0.01f);
+        if (_clickInitialized)
+        {
+            _myCamera.FocusOnCamera();
+            _myBoxCollider.enabled = false;
+            _myGameManager.CurrentMicroScenario = MyMicroScenario;
+            Invoke("ActivationDelay", 0.01f);
+            _clickInitialized = false;
+        }
     }
 
     private void ActivationDelay()

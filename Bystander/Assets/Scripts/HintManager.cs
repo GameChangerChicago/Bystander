@@ -9,12 +9,53 @@ public class HintManager : MonoBehaviour
     public float HintDelay,
                  InitialDelay;
 
+    protected bool fadingIn
+    {
+        get
+        {
+            return _fadingIn;
+        }
+
+        set
+        {
+            if (_fadingIn != value)
+            {
+                _fadingIn = value;
+
+            }
+        }
+    }
+    protected bool fadingOut
+    {
+        get
+        {
+            return _fadingOut;
+        }
+
+        set
+        {
+            if (_fadingOut != value)
+            {
+                _fadingOut = value;
+
+                
+            }
+        }
+    }
+
     DatabaseManager _databaseManager;
+    private SHCameraSelector[] _SHCameraSelector;
     private float _hintTimer;
     private bool _timerActive = true,
                  _initialHintShown,
                  _fadingIn,
                  _fadingOut;
+
+    void Start()
+    {
+        if (Application.loadedLevelName == "SexualHarassment")
+            _SHCameraSelector = FindObjectsOfType<SHCameraSelector>();
+    }
 
     void Update()
     {
@@ -27,12 +68,6 @@ public class HintManager : MonoBehaviour
             _timerActive = false;
             _initialHintShown = true;
             _fadingIn = true;
-
-            //Possibly gonna use this for not jumping right into a micro scenario
-            //if (Application.loadedLevelName == "SexualHarassment")
-            //{
-                
-            //}
         }
 
         if (_hintTimer > HintDelay && _initialHintShown)
@@ -66,6 +101,14 @@ public class HintManager : MonoBehaviour
             {
                 InstructionSprite.color = new Color(1, 1, 1, 1);
                 _fadingIn = false;
+
+                if (Application.loadedLevelName == "SexualHarassment")
+                {
+                    for (int i = 0; i < _SHCameraSelector.Length; i++)
+                    {
+                        _SHCameraSelector[i].enabled = false;
+                    }
+                }
             }
         }
 
@@ -77,6 +120,14 @@ public class HintManager : MonoBehaviour
             {
                 InstructionSprite.color = new Color(1, 1, 1, 0);
                 _fadingOut = false;
+
+                if (Application.loadedLevelName == "SexualHarassment")
+                {
+                    for (int i = 0; i < _SHCameraSelector.Length; i++)
+                    {
+                        _SHCameraSelector[i].enabled = true;
+                    }
+                }
 
                 if (MyTrigger != null)
                     MyTrigger.TryStartConversation(MyTrigger.actor);

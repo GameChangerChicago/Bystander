@@ -2696,7 +2696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InstructionSprite: {fileID: 462511479}
   MyTrigger: {fileID: 0}
-  HintDelay: 25
+  HintDelay: 3
   InitialDelay: 8
 --- !u!1 &900860983
 GameObject:
@@ -3515,6 +3515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maleSkin: {fileID: 11400000, guid: 8e7edeccaaa9a4a08bd6c604dda10fd0, type: 2}
+  ShowingHint: 1
 --- !u!1 &1044622066
 GameObject:
   m_ObjectHideFlags: 0

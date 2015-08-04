@@ -93,6 +93,9 @@ public class HintManager : MonoBehaviour
 
     private void Fading()
     {
+        if (_fadingIn && InstructionSprite.color.a == 0 && Application.loadedLevelName == "MaleScenario")
+            FindObjectOfType<GUIManager>().ShowingHint = false;
+
         if (_fadingIn && InstructionSprite.color.a < 1)
         {
             InstructionSprite.color = new Color(1, 1, 1, InstructionSprite.color.a + (2f * Time.deltaTime));
@@ -128,6 +131,9 @@ public class HintManager : MonoBehaviour
                         _SHCameraSelector[i].enabled = true;
                     }
                 }
+
+                if (Application.loadedLevelName == "MaleScenario")
+                    FindObjectOfType<GUIManager>().ShowingHint = true;
 
                 if (MyTrigger != null)
                     MyTrigger.TryStartConversation(MyTrigger.actor);

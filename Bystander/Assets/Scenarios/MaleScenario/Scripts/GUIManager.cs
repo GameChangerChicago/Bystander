@@ -11,6 +11,7 @@ public class GUIManager : MonoBehaviour
                      textFieldActive;
 		private int screenWidth, screenHeight;
 		public GUISkin maleSkin;
+        public bool ShowingHint = true;
 
 
 	void Start ()
@@ -74,7 +75,7 @@ public class GUIManager : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Mouse0))
                 textFieldActive = true;
 
-            if (textFieldActive)
+            if (textFieldActive && ShowingHint)
             {
                 GUI.SetNextControlName("InputField");
                 inputField = GUI.TextField(new Rect(screenWidth - 200, screenHeight - 45, 250, 50), inputField, 15);

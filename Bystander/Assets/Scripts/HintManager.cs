@@ -6,42 +6,10 @@ public class HintManager : MonoBehaviour
 {
     public SpriteRenderer InstructionSprite;
     public ConversationTrigger MyTrigger;
+    public PartnerGameManager MyPartnerGameManager;
+    public GameObject MyDialogueManager;
     public float HintDelay,
                  InitialDelay;
-
-    protected bool fadingIn
-    {
-        get
-        {
-            return _fadingIn;
-        }
-
-        set
-        {
-            if (_fadingIn != value)
-            {
-                _fadingIn = value;
-
-            }
-        }
-    }
-    protected bool fadingOut
-    {
-        get
-        {
-            return _fadingOut;
-        }
-
-        set
-        {
-            if (_fadingOut != value)
-            {
-                _fadingOut = value;
-
-                
-            }
-        }
-    }
 
     DatabaseManager _databaseManager;
     private SHCameraSelector[] _SHCameraSelector;
@@ -75,6 +43,12 @@ public class HintManager : MonoBehaviour
             _hintTimer = 0;
             _timerActive = false;
             _fadingIn = true;
+
+            if (MyTrigger != null)
+            {
+                MyDialogueManager.SetActive(false);
+                MyPartnerGameManager.enabled = false;
+            }
         }
 
         if (!_timerActive && !_fadingIn && Input.GetKeyUp(KeyCode.Mouse0))
@@ -136,7 +110,11 @@ public class HintManager : MonoBehaviour
                     FindObjectOfType<GUIManager>().ShowingHint = true;
 
                 if (MyTrigger != null)
+                {
                     MyTrigger.TryStartConversation(MyTrigger.actor);
+                    MyPartnerGameManager.enabled = true;
+                    MyDialogueManager.SetActive(true);
+                }
             }
         }
     }

@@ -6,10 +6,11 @@ public class WebLink : MonoBehaviour
     public WebMenuTransition MyWebMenu;
 		public Node webPage;
 		private WebSiteManager siteManager;
+        private CursorHandler _cursorHandler;
 
 		void Start ()
 		{
-		
+            _cursorHandler = FindObjectOfType<CursorHandler>();
 				siteManager = FindObjectOfType<WebSiteManager> ();
 				siteManager.AddWebLink (webPage);
 
@@ -25,6 +26,13 @@ public class WebLink : MonoBehaviour
 		}
 
 
+        void OnMouseEnter()
+        {
+            _cursorHandler.ChangeCursor(0);
+        }
 
-
+        void OnMouseExit()
+        {
+            _cursorHandler.ChangeCursor(1);
+        }
 }

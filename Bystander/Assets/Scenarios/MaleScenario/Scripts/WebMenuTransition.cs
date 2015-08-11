@@ -7,6 +7,7 @@ public class WebMenuTransition : MonoBehaviour
 		private WebMenuTransition menu;
 		private LinkHighlight[] menuOptions;
 		private BoxCollider2D[] menuOptionsColliders;
+        private CursorHandler _cursorHandler;
 		public bool isMenu;
 		public bool isOpen;
 	private bool isClicked;
@@ -15,8 +16,8 @@ public class WebMenuTransition : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-
 				menu = menuToTransitionTo.GetComponent<WebMenuTransition> ();
+                _cursorHandler = FindObjectOfType<CursorHandler>();
 				
 		if(isMenu)
 			menuOptions = menu.GetComponentsInChildren<LinkHighlight> ();
@@ -97,7 +98,7 @@ public class WebMenuTransition : MonoBehaviour
 		}
 
 	void OnMouseEnter(){
-		
+        _cursorHandler.ChangeCursor(0);
 	}
 	
 	void OnMouseOver(){
@@ -105,7 +106,7 @@ public class WebMenuTransition : MonoBehaviour
 	}
 	
 	void OnMouseExit(){
-
+        _cursorHandler.ChangeCursor(1);
 //		if(isMenu && isClicked){
 //		for (int i = 0; i < menuOptions.Length; i++)
 //						if (menuOptions [i].isHover ())

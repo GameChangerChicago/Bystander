@@ -179,6 +179,7 @@ public class DialogueHandler: MonoBehaviour
 								dialogueIndex = i + 1;
 								numDialogueLinesShown++;
 								StringFormatter (displayText);
+                                Debug.Log("Sup");
 								break;
 				
 				

@@ -7,6 +7,7 @@ public class CutSceneManager : MonoBehaviour
     public AudioSource IntroAudio,
                        StepSoundEffect;
 
+    private CursorHandler _cursorHandler;
     private Rect _rect,
                  _rectDiff;
     private Vector2 _pos;
@@ -29,6 +30,8 @@ public class CutSceneManager : MonoBehaviour
             _currentStep--;
             AutoStep();
         }
+
+        _cursorHandler = FindObjectOfType<CursorHandler>();
     }
 
     void OnMouseDown()
@@ -47,7 +50,7 @@ public class CutSceneManager : MonoBehaviour
 
             if (Page[_currentStep].StepClip != null && !Page[_currentStep].PlayAudioImmediately)
                 Invoke("PlaySoundEffect", Page[_currentStep].CamTravelTime + Page[_currentStep].AudioDelay);
-            else if(Page[_currentStep].StepClip != null)
+            else if (Page[_currentStep].StepClip != null)
                 PlaySoundEffect();
 
             if (Page[_currentStep].MyTextMesh != null)
@@ -82,6 +85,13 @@ public class CutSceneManager : MonoBehaviour
             else
                 Application.LoadLevel(Page[_currentStep].SceneToLoad);
         }
+        else
+            _cursorHandler.ChangeCursor(2);
+    }
+
+    void OnMouseUp()
+    {
+        _cursorHandler.ChangeCursor(1);
     }
 
     void Update()

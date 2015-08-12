@@ -17,6 +17,7 @@ public class InteractableProp : MonoBehaviour
                 if (value)
                 {
                     MouseOverObject.SetActive(true);
+                    _cursorHandler.ChangeCursor(0);
 
                     for (int i = 0; i < FindObjectsOfType<InteractableProp>().Length; i++)
                     {
@@ -25,7 +26,10 @@ public class InteractableProp : MonoBehaviour
                     }
                 }
                 else
+                {
                     MouseOverObject.SetActive(false);
+                    _cursorHandler.ChangeCursor(1);
+                }
 
                 _mousedOver = value;
             }
@@ -60,6 +64,7 @@ public class InteractableProp : MonoBehaviour
     private string _dialog;
     private Animator _myAnimator;
     private PartyGameManager _myGameManager;
+    private CursorHandler _cursorHandler;
     private Camera _myCamera;
     private Collider2D _overlapCircle;
 
@@ -68,6 +73,7 @@ public class InteractableProp : MonoBehaviour
         _myGameManager = FindObjectOfType<PartyGameManager>();
         _myAnimator = GetComponent<Animator>();
         _myCamera = Camera.main;
+        _cursorHandler = FindObjectOfType<CursorHandler>();
 
         if (CloseUpAnimator != null)
             CloseUpAnimator.speed = 0;

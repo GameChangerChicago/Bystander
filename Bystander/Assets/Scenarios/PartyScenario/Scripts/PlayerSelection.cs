@@ -3,81 +3,56 @@ using System.Collections;
 
 public class PlayerSelection : MonoBehaviour
 {
-    protected bool mouseOverCoral
-    {
-        get
-        {
-            return _mouseOverCoral;
-        }
-
-        set
-        {
-            if (value != _mouseOverCoral)
-            {
-                if (value)
-                    _mouseOverDavid = false;
-                if (!value)
-
-                _mouseOverCoral = value;
-            }
-        }
-    }
-    private bool _mouseOverCoral;
-    protected bool mouseOverDavid
-    {
-        get
-        {
-            return _mouseOverDavid;
-        }
-
-        set
-        {
-            if (value != _mouseOverDavid)
-            {
-                if (value)
-                    _mouseOverCoral = false;
-                if (!value)
-
-                _mouseOverDavid = value;
-            }
-        }
-    }
-    private bool _mouseOverDavid;
-
     public GameObject[] SelectObjects;
     public PolygonCollider2D[] HallwayColliders;
 
     private PartyGameManager _myGameManager;
+    private CursorHandler _cursorManager;
     private SpriteRenderer _idleSprite;
     private Camera _myCamera;
+    private bool _selectionMade;
 
     void Start()
     {
         _myCamera = Camera.main;
         _myGameManager = FindObjectOfType<PartyGameManager>();
+        _cursorManager = FindObjectOfType<CursorHandler>();
     }
 
     void Update()
     {
-        Collider2D overlapCircle = Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f);
-
-        if (overlapCircle && overlapCircle.transform != null)
+        if (_myGameManager.IsFinalInteractiveMoment())
         {
-            if (overlapCircle.gameObject == SelectObjects[0])
-            {
-                SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", true);
-                SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
+            Collider2D overlapCircle = Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f);
 
-                if (Input.GetKeyUp(KeyCode.Mouse0))
-                    StartCoroutine(SelectionMade(true));
-            }
-            else if (overlapCircle.gameObject == SelectObjects[1])
+            if (overlapCircle && overlapCircle.transform != null)
             {
-                SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", true);
-                SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", false);
+                if (overlapCircle.gameObject == SelectObjects[0])
+                {
+                    if (!_selectionMade)
+                        _cursorManager.ChangeCursor(0);
+                    SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", true);
+                    SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
 
-                if (Input.GetKeyUp(KeyCode.Mouse0))
-                    StartCoroutine(SelectionMade(false));
+                    if (Input.GetKeyUp(KeyCode.Mouse0))
+                        StartCoroutine(SelectionMade(true));
+                }
+                else if (overlapCircle.gameObject == SelectObjects[1])
+                {
+                    if (!_selectionMade)
+                        _cursorManager.ChangeCursor(0);
+                    SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", true);
+                    SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", false);
+
+                    if (Input.GetKeyUp(KeyCode.Mouse0))
+                        StartCoroutine(SelectionMade(false));
+                }
+                else
+                {
+                    _cursorManager.ChangeCursor(1);
+                    SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", false);
+                    SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
+                }
             }
             else
             {
@@ -85,23 +60,22 @@ public class PlayerSelection : MonoBehaviour
                 SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
             }
         }
-        else
-        {
-            SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", false);
-            SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
-        }
     }
 
     private IEnumerator SelectionMade(bool isCoral)
     {
+        _selectionMade = true;
+
         if (isCoral)
         {
+            _cursorManager.ChangeCursor(1);
             _myGameManager.ChoseCoral = true;
             SelectObjects[0].GetComponent<Animator>().SetBool("Selected", true);
             SelectObjects[1].GetComponent<Animator>().SetBool("NotSelected", true);
         }
         else
         {
+            _cursorManager.ChangeCursor(1);
             _myGameManager.ChoseCoral = false;
             SelectObjects[1].GetComponent<Animator>().SetBool("Selected", true);
             SelectObjects[0].GetComponent<Animator>().SetBool("NotSelected", true);

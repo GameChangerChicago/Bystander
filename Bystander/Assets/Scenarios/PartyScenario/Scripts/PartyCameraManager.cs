@@ -5,6 +5,7 @@ public class PartyCameraManager : MonoBehaviour
 {
     public float DefaultSize;
 
+    private CursorHandler _cursorHandler;
     private PartyGameManager _myGameManager;
     private Vector3 _pos,
                     _startPos;
@@ -12,12 +13,14 @@ public class PartyCameraManager : MonoBehaviour
                   _camSize,
                   _camSizeDiff,
                   _camRotation;
-    private bool _movingCamera;
+    private bool _movingCamera,
+                 _movingBack;
 
     void Start()
     {
         _myGameManager = FindObjectOfType<PartyGameManager>();
         _startPos = this.transform.position;
+        _cursorHandler = FindObjectOfType<CursorHandler>();
     }
 
     void Update()
@@ -90,6 +93,7 @@ public class PartyCameraManager : MonoBehaviour
         _camRotation = camRotation;
         Invoke("StopMoving", camTravelTime);
         _myGameManager.CameraMoving = true;
+        _cursorHandler.ChangeCursor(2);
     }
 
     //This method moves the camera back to it's orrigin pos and size; also it invokes StopMoving
@@ -106,6 +110,7 @@ public class PartyCameraManager : MonoBehaviour
         _camSize = DefaultSize;
         _camRotation = camRotation;
         _movingCamera = true;
+        _movingBack = true;
         _myGameManager.CameraMoving = true;
         Invoke("StopMoving", _camTravelTime);
     }
@@ -115,6 +120,9 @@ public class PartyCameraManager : MonoBehaviour
     {
         _movingCamera = false;
         _myGameManager.CameraMoving = false;
+
+        if (_movingBack)
+            _cursorHandler.ChangeCursor(1);
     }
 
     public void ResetCam()

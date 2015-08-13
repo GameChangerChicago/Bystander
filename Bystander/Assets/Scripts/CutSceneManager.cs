@@ -3,6 +3,27 @@ using System.Collections;
 
 public class CutSceneManager : MonoBehaviour
 {
+    protected bool clickDisabled
+    {
+        get
+        {
+            return _clickDisabled;
+        }
+        set
+        {
+            if (value != _clickDisabled)
+            {
+                if (value)
+                    _cursorHandler.ChangeCursor(2);
+                else
+                    _cursorHandler.ChangeCursor(1);
+
+                _clickDisabled = value;
+            }
+        }
+    }
+    private bool _clickDisabled;
+
     public Step[] Page;
     public AudioSource IntroAudio,
                        StepSoundEffect;
@@ -18,11 +39,13 @@ public class CutSceneManager : MonoBehaviour
                   _camRotationDiff;
     private int _currentStep;
     private bool _movingCamera,
-                 _clickDisabled,
                  _introAudioFinished = true;
 
     void Start()
     {
+        _cursorHandler = FindObjectOfType<CursorHandler>();
+        _cursorHandler.ChangeCursor(2);
+
         if (IntroAudio != null)
             _introAudioFinished = false;
         else if (Page[_currentStep].InitialAutoStep)
@@ -30,15 +53,13 @@ public class CutSceneManager : MonoBehaviour
             _currentStep--;
             AutoStep();
         }
-
-        _cursorHandler = FindObjectOfType<CursorHandler>();
     }
 
     void OnMouseDown()
     {
-        if (!_clickDisabled && _introAudioFinished && Page[_currentStep].SceneToLoad == "")
+        if (!clickDisabled && _introAudioFinished && Page[_currentStep].SceneToLoad == "")
         {
-            _clickDisabled = true;
+            clickDisabled = true;
 
             if (Page[_currentStep].CamTravelTime > 0)
                 SetCameraToMove();
@@ -85,13 +106,6 @@ public class CutSceneManager : MonoBehaviour
             else
                 Application.LoadLevel(Page[_currentStep].SceneToLoad);
         }
-        else
-            _cursorHandler.ChangeCursor(2);
-    }
-
-    void OnMouseUp()
-    {
-        _cursorHandler.ChangeCursor(1);
     }
 
     void Update()
@@ -303,7 +317,7 @@ public class CutSceneManager : MonoBehaviour
 
     private void AutoStep()
     {
-        _clickDisabled = true;
+        clickDisabled = true;
         _currentStep++;
 
         if (Page[_currentStep].SceneToLoad == "")
@@ -313,7 +327,7 @@ public class CutSceneManager : MonoBehaviour
 
             if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayAnimImmediately)
                 Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
-            else if (Page[_currentStep].MyAnimator != null && !_clickDisabled)
+            else if (Page[_currentStep].MyAnimator != null && !clickDisabled)
                 FireAnimation();
 
             if (Page[_currentStep].StepClip != null && !Page[_currentStep].PlayAudioImmediately)
@@ -346,7 +360,7 @@ public class CutSceneManager : MonoBehaviour
                 }
             }
 
-            _clickDisabled = true;
+            clickDisabled = true;
         }
         else if (Page[_currentStep].SceneToLoad != "")
         {
@@ -359,6 +373,6 @@ public class CutSceneManager : MonoBehaviour
 
     private void ReEnableClicking()
     {
-        _clickDisabled = false;
+        clickDisabled = false;
     }
 }

@@ -255,4 +255,12 @@ public class PartyGameManager : MonoBehaviour
         _myCameraManager.ResetCam();
         _currentBystanderPortrait.color = new Color(1, 1, 1, 1);
     }
+
+    public bool IsFinalInteractiveMoment()
+    {
+        if (_currentInteractiveMoment == InteractiveMoments.Hallway)
+            return true;
+        else
+            return false;
+    }
 }

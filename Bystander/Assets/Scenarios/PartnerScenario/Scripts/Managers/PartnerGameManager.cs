@@ -97,6 +97,7 @@ public class PartnerGameManager : MonoBehaviour
             case GinaStates.BACK:
                 if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled && !win)
                 {
+                    Debug.Log("NOW!!");
                     _affect = "";
                     DialogueLua.SetVariable("Affect", "");
                     GinaAnimator.SetBool("FacingGina", true);

@@ -28,6 +28,7 @@ public class PartnerGameManager : MonoBehaviour
     public AudioSource VirgilAudioSource;
     public bool InteractionEnabled;
 
+    private CursorHandler _cursorHandler;
     private GinaStates _currentGinaState = GinaStates.BACK;
     private HollyStates _currentHollyState = HollyStates.EXPLAINING;
     private string _affect = "";
@@ -77,6 +78,11 @@ public class PartnerGameManager : MonoBehaviour
         }
     }
     private int _wrongAnswerCount;
+
+    void Start()
+    {
+        _cursorHandler = FindObjectOfType<CursorHandler>();
+    }
 
     void Update()
     {

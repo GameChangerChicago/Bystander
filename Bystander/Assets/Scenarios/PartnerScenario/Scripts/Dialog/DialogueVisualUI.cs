@@ -28,6 +28,8 @@ public class DialogueVisualUI : UnityDialogueUI
     }
     private bool _clickEnabled = true;
 
+    public bool ButtonsShowing = false;
+
     private CursorHandler _cursorHandler;
     private GUIButton[] _guiButtons;
     private float _width,
@@ -58,6 +60,49 @@ public class DialogueVisualUI : UnityDialogueUI
     {
         base.Update();
 
+        if (ButtonsShowing)
+            CursorLogic();
+    }
+
+    // When the UI has just been opened, the subtitle panel is not visible:
+    public override void Open()
+    {
+        base.Open();
+        isSubtitleVisible = false;
+    }
+    
+    // If the subtitle panel is already visible, disable the fade effect:
+    public override void ShowSubtitle(Subtitle subtitle)
+    {
+        if (npcBorderFadeEffect != null) npcBorderFadeEffect.enabled = !isSubtitleVisible;
+        isSubtitleVisible = true;
+        base.ShowSubtitle(subtitle);
+    }
+
+    public override void OnContinue()
+    {
+        if (ClickEnabled)
+        {
+            ClickEnabled = false;
+            myGameManager.InteractionEnabled = false;
+            Invoke("EnableClick", 1.25f);
+            base.OnContinue();
+        }
+    }
+
+    public override void OnClick(object data)
+    {
+        if (ClickEnabled)
+        {
+            ClickEnabled = false;
+            myGameManager.InteractionEnabled = false;
+            Invoke("EnableClick", 1.25f);
+            base.OnClick(data);
+        }
+    }
+
+    private void CursorLogic()
+    {
         for (int i = 0; i < _guiButtons.Length; i++)
         {
             float xOffset = 0,
@@ -115,45 +160,6 @@ public class DialogueVisualUI : UnityDialogueUI
             _cursorHandler.ChangeCursor(0);
         else
             _cursorHandler.ChangeCursor(1);
-
-        //Debug.Log("Mouse Pos: " + Input.mousePosition);
-    }
-
-    // When the UI has just been opened, the subtitle panel is not visible:
-    public override void Open()
-    {
-        base.Open();
-        isSubtitleVisible = false;
-    }
-    
-    // If the subtitle panel is already visible, disable the fade effect:
-    public override void ShowSubtitle(Subtitle subtitle)
-    {
-        if (npcBorderFadeEffect != null) npcBorderFadeEffect.enabled = !isSubtitleVisible;
-        isSubtitleVisible = true;
-        base.ShowSubtitle(subtitle);
-    }
-
-    public override void OnContinue()
-    {
-        if (ClickEnabled)
-        {
-            ClickEnabled = false;
-            myGameManager.InteractionEnabled = false;
-            Invoke("EnableClick", 1.25f);
-            base.OnContinue();
-        }
-    }
-
-    public override void OnClick(object data)
-    {
-        if (ClickEnabled)
-        {
-            ClickEnabled = false;
-            myGameManager.InteractionEnabled = false;
-            Invoke("EnableClick", 1.25f);
-            base.OnClick(data);
-        }
     }
 
     public override void ShowResponses(Subtitle subtitle, Response[] responses, float timeout)

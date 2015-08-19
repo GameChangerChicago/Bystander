@@ -28,6 +28,7 @@ public class PartnerGameManager : MonoBehaviour
     public AudioSource VirgilAudioSource;
     public bool InteractionEnabled;
 
+    private DialogueVisualUI _myDialogueUI;
     private CursorHandler _cursorHandler;
     private GinaStates _currentGinaState = GinaStates.BACK;
     private HollyStates _currentHollyState = HollyStates.EXPLAINING;
@@ -97,11 +98,12 @@ public class PartnerGameManager : MonoBehaviour
             case GinaStates.BACK:
                 if (DialogueLua.GetVariable("FacingGina").AsBool && Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled && !win)
                 {
-                    Debug.Log("NOW!!");
                     _affect = "";
                     DialogueLua.SetVariable("Affect", "");
                     GinaAnimator.SetBool("FacingGina", true);
                     _currentGinaState = GinaStates.THINKING;
+                    _myDialogueUI = FindObjectOfType<DialogueVisualUI>();
+                    _myDialogueUI.ButtonsShowing = true;
                 }//The bullshit starts here...
                 else if (Input.GetKeyDown(KeyCode.Mouse0) && InteractionEnabled && win && _helpfulPrimer)
                 {
@@ -109,7 +111,6 @@ public class PartnerGameManager : MonoBehaviour
                     GinaAnimator.SetBool("Helpful", true);
                     _currentGinaState = GinaStates.HELPFUL;
                 }
-
                 break;
             case GinaStates.THINKING:
                 _affect = DialogueLua.GetVariable("Affect").AsString;
@@ -117,6 +118,7 @@ public class PartnerGameManager : MonoBehaviour
                 if (_affect != "")
                 {
                     _currentGinaState = GinaStates.TRANSITIONING;
+                    _myDialogueUI.ButtonsShowing = false;
                     GinaAnimator.SetBool("DecisionMade", true);
                 }
                 break;

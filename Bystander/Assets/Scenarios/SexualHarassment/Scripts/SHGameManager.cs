@@ -28,21 +28,27 @@ public class SHGameManager : MonoBehaviour
     static Dictionary<ButtonType, bool> AnswersSelected = new Dictionary<ButtonType, bool>();
 
     private Dictionary<MicroScenarios, PointOfInterest[]> PointsOfInterestPerMicroScenario = new Dictionary<MicroScenarios, PointOfInterest[]>();
+    private CursorHandler _cursorHandler;
+    private SHCameraSelector[] _allSelectors;
     private SHVigilHandler _myVirgil;
     private int _sectionsCompleted;
 
     //This property looks at all of the SHCameraManagers and checks to see which one is the current camera then returns said SHCameraManager
-    protected SHCameraManager currentCameraManager
+    public SHCameraManager CurrentCameraManager
     {
         get
         {
-            for (int i = 0; i < FindObjectsOfType<SHCameraManager>().Length; i++)
+            SHCameraManager[] cameraManagers = FindObjectsOfType<SHCameraManager>();
+
+            for (int i = 0; i < cameraManagers.Length; i++)
             {
-                if (FindObjectsOfType<SHCameraManager>()[i].IsCurrentCamera)
+                if (cameraManagers[i].IsCurrentCamera)
                 {
-                    _currentCameraManager = FindObjectsOfType<SHCameraManager>()[i];
+                    _currentCameraManager = cameraManagers[i];
                     break;
                 }
+                else
+                    _currentCameraManager = cameraManagers[0];
             }
 
             return _currentCameraManager;
@@ -87,7 +93,7 @@ public class SHGameManager : MonoBehaviour
                 if (_sectionsCompleted == 5)
                     Application.LoadLevel("PostHarassment");
                 else //Otherwise we add one to _sectionsComplete and brings us back to the hub world
-                    currentCameraManager.ReturnToHub();
+                    CurrentCameraManager.ReturnToHub();
             }
 
             sectionComplete = value;
@@ -108,6 +114,8 @@ public class SHGameManager : MonoBehaviour
         AnswersSelected.Add(ButtonType.IStatement, false);
         AnswersSelected.Add(ButtonType.Friends, false);
         InitializePointsOfView();
+        _cursorHandler = FindObjectOfType<CursorHandler>();
+        _allSelectors = FindObjectsOfType<SHCameraSelector>();
     }
 
     public bool CheckAnswer(ButtonType button)

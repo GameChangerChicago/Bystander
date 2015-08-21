@@ -3,6 +3,7 @@ using System.Collections;
 
 public class QuizButton : MonoBehaviour
 {
+    private CursorHandler _cursorHanlder;
     private SHGameManager _myGameManager;
     private InterventionManager _myInterventionManager;
     private SHVigilHandler _myVirgil;
@@ -12,6 +13,26 @@ public class QuizButton : MonoBehaviour
     private ButtonType _myButtonType;
 
     protected GameObject currentMiniComic;
+    protected bool mousedOver
+    {
+        get
+        {
+            return _mousedOver;
+        }
+        set
+        {
+            if (_mousedOver != value)
+            {
+                if (value)
+                    _cursorHanlder.ChangeCursor(0);
+                else
+                    _cursorHanlder.ChangeCursor(1);
+
+                _mousedOver = value;
+            }
+        }
+    }
+    private bool _mousedOver;
 
     //These are the most important bools for the quiz buttons
     public bool CorrectAnswer,
@@ -23,6 +44,7 @@ public class QuizButton : MonoBehaviour
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myInterventionManager = FindObjectOfType<InterventionManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
+        _cursorHanlder = FindObjectOfType<CursorHandler>();
         _myQuiz = this.transform.parent.gameObject;
 
         //Looks for the QuizHandler that isn't this button's parent and sets _otherQuiz to what ever that is
@@ -35,6 +57,16 @@ public class QuizButton : MonoBehaviour
 
         //Sets button type
         GetButtonType();
+    }
+
+    void Update()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(_myGameManager.CurrentCameraManager.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition), Vector3.forward, out hit))
+            mousedOver = true;
+        else
+            mousedOver = false;
     }
 
     //This method handles what happens when the player clicks one of the quiz buttons

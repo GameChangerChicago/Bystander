@@ -11,28 +11,32 @@ public class PointOfInterest : MonoBehaviour
         }
         set
         {
-            if (value)
+            if (value != _mouseOver)
             {
-                MouseOverSprite.enabled = true;
+                if (value)
+                {
+                    MouseOverSprite.enabled = true;
+                    _cursorHandler.ChangeCursor(0);
+                    _myGameManager.DeselectPOIs(this);
 
-                _myGameManager.DeselectPOIs(this);
+                    if (CompanionPOI != null)
+                        CompanionPOI.MouseOverSprite.enabled = true;
+                }
+                else
+                {
+                    MouseOverSprite.enabled = false;
+                    _cursorHandler.ChangeCursor(1);
+                    if (CompanionPOI != null)
+                        CompanionPOI.MouseOverSprite.enabled = false;
+                }
 
-                if (CompanionPOI != null)
-                    CompanionPOI.MouseOverSprite.enabled = true;
+                _mouseOver = value;
             }
-            else
-            {
-                MouseOverSprite.enabled = false;
-
-                if (CompanionPOI != null)
-                    CompanionPOI.MouseOverSprite.enabled = false;
-            }
-
-            _mouseOver = value;
         }
     }
     private bool _mouseOver;
 
+    private CursorHandler _cursorHandler;
     private SHGameManager _myGameManager;
     private SHVigilHandler _myVirgil;
     private QuizHandler _myQuiz;
@@ -55,6 +59,7 @@ public class PointOfInterest : MonoBehaviour
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         _myCamera = this.transform.parent.GetComponentInChildren<Camera>();
         _myQuiz = GameObject.Find("Quiz True False").GetComponent<QuizHandler>();
+        _cursorHandler = FindObjectOfType<CursorHandler>();
 
         //The .txt used for virgil's responses and the prefabs for the mini comic are named after the PointOfInterest in question
         myMiniComic = Resources.Load("Prefabs/MiniComic_" + this.name) as GameObject;

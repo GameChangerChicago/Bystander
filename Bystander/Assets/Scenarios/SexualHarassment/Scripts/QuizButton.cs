@@ -64,9 +64,14 @@ public class QuizButton : MonoBehaviour
         RaycastHit hit;
 
         if (Physics.Raycast(_myGameManager.CurrentCameraManager.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition), Vector3.forward, out hit))
-            mousedOver = true;
+        {
+            if (hit.transform.gameObject == this.gameObject)
+                mousedOver = true;
+        }
         else
+        {
             mousedOver = false;
+        }
     }
 
     //This method handles what happens when the player clicks one of the quiz buttons

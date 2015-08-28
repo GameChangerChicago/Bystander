@@ -28,7 +28,6 @@ public class SHGameManager : MonoBehaviour
     static Dictionary<ButtonType, bool> AnswersSelected = new Dictionary<ButtonType, bool>();
 
     private Dictionary<MicroScenarios, PointOfInterest[]> PointsOfInterestPerMicroScenario = new Dictionary<MicroScenarios, PointOfInterest[]>();
-    private CursorHandler _cursorHandler;
     private SHCameraSelector[] _allSelectors;
     private SHVigilHandler _myVirgil;
     private int _sectionsCompleted;
@@ -114,7 +113,6 @@ public class SHGameManager : MonoBehaviour
         AnswersSelected.Add(ButtonType.IStatement, false);
         AnswersSelected.Add(ButtonType.Friends, false);
         InitializePointsOfView();
-        _cursorHandler = FindObjectOfType<CursorHandler>();
         _allSelectors = FindObjectsOfType<SHCameraSelector>();
     }
 

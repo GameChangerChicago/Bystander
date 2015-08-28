@@ -50,7 +50,7 @@ public class QuizHandler : MonoBehaviour
             for (int i = 0; i < quizes.Length; i++)
             {
                 if (quizes[i] != this)
-                    quizes[i].transform.position = new Vector3(0, 0, 500);
+                    quizes[i].transform.position = new Vector3(5000, 5000, 500);
             }
         }
     }

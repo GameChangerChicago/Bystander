@@ -75,6 +75,7 @@ public class PointOfInterest : MonoBehaviour
                 if (!ComicShown && Input.GetKeyUp(KeyCode.Mouse0))
                 {
                     _myMiniComic = (GameObject)Instantiate(myMiniComic, InstantiationTransform.position, Quaternion.identity);
+                    mouseOver = false;
                     ComicShown = true;
                     _showingComic = true;
                     _myGameManager.CurrentPOI = this.GetComponent<PointOfInterest>();

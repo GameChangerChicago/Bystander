@@ -940,8 +940,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 477
-        y: 2075
+        x: 494
+        y: 2122
         width: 160
         height: 30
     - id: 10
@@ -1546,8 +1546,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 885
-        y: 827
+        x: 933
+        y: 820
         width: 160
         height: 30
     - id: 20
@@ -1668,8 +1668,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 885
-        y: 620
+        x: 856
+        y: 606
         width: 160
         height: 30
     - id: 22
@@ -1724,27 +1724,13 @@ MonoBehaviour:
       conditionsString: Variable["Wrong"]==-2
       userScript: 'Variable["Repeat"]=false;
 
-        Variable["M1"]=0;
-
-        Variable["M2"]=0;
-
-        Variable["M3"]=0;
-
-        Variable["M4"]=0;
-
-        Variable["M5"]=0;
-
-        Variable["M6"]=0;
-
-        Variable["M7"]=0;
-
         Variable["Wrong"]=0;
 
         Variable["Alert"]="Let''s take it from the beginning.";'
       canvasRect:
         serializedVersion: 2
-        x: 71
-        y: 2079
+        x: 87
+        y: 2104
         width: 160
         height: 30
     - id: 19
@@ -3608,8 +3594,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 889
-        y: 1372
+        x: 975
+        y: 1393
         width: 160
         height: 30
     - id: 55
@@ -4503,8 +4489,8 @@ MonoBehaviour:
         Variable["Affect"]="Unhelpful";'
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 1670
+        x: 265
+        y: 1668
         width: 160
         height: 30
     - id: 70
@@ -4795,8 +4781,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 921
-        y: 1823
+        x: 936
+        y: 1831
         width: 160
         height: 30
     - id: 75
@@ -4909,8 +4895,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 321
-        y: 1752
+        x: 326
+        y: 1762
         width: 160
         height: 30
     - id: 77
@@ -6871,8 +6857,8 @@ MonoBehaviour:
       userScript: Variable["FacingGina"] = false
       canvasRect:
         serializedVersion: 2
-        x: 942
-        y: 749
+        x: 991
+        y: 736
         width: 160
         height: 30
     - id: 112
@@ -7827,7 +7813,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 260
+        x: 261
         y: 1714
         width: 160
         height: 30

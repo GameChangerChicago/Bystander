@@ -47,6 +47,7 @@ public class CutSceneManager : MonoBehaviour
 
         if (IntroAudio != null)
         {
+            _cursorHandler.ChangeCursor(2);
             _introAudioFinished = false;
         }
         else if (Page[_currentStep].InitialAutoStep)
@@ -375,7 +376,7 @@ public class CutSceneManager : MonoBehaviour
 
     private void ReEnableClicking()
     {
-        if (!Page[_currentStep + 1].AutoStep)
+        if (!Page[_currentStep].AutoStep)
             clickDisabled = false;
     }
 }

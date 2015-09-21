@@ -8,7 +8,7 @@ public class CursorHandler : MonoBehaviour
                     NoClickCursor;
     private int _cursorIndex;
 
-    void Start()
+    void Awake()
     {
         Screen.showCursor = false;
         _cursorIndex = 1;

@@ -119,11 +119,9 @@ public class CutSceneManager : MonoBehaviour
                 AutoStep();
             }
 
-            _cursorHandler.ChangeCursor(1);
             _introAudioFinished = true;
         }
-        else
-            _cursorHandler.ChangeCursor(2);
+
         if (_movingCamera)
             MoveCameraTo();
     }
@@ -377,6 +375,7 @@ public class CutSceneManager : MonoBehaviour
 
     private void ReEnableClicking()
     {
-        clickDisabled = false;
+        if (!Page[_currentStep + 1].AutoStep)
+            clickDisabled = false;
     }
 }

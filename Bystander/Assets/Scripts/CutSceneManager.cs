@@ -118,6 +118,7 @@ public class CutSceneManager : MonoBehaviour
                 AutoStep();
             }
 
+            _cursorHandler.ChangeCursor(1);
             _introAudioFinished = true;
         }
         if (_movingCamera)

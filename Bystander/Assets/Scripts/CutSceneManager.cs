@@ -44,10 +44,11 @@ public class CutSceneManager : MonoBehaviour
     void Start()
     {
         _cursorHandler = FindObjectOfType<CursorHandler>();
-        _cursorHandler.ChangeCursor(2);
 
         if (IntroAudio != null)
+        {
             _introAudioFinished = false;
+        }
         else if (Page[_currentStep].InitialAutoStep)
         {
             _currentStep--;
@@ -121,6 +122,8 @@ public class CutSceneManager : MonoBehaviour
             _cursorHandler.ChangeCursor(1);
             _introAudioFinished = true;
         }
+        else
+            _cursorHandler.ChangeCursor(2);
         if (_movingCamera)
             MoveCameraTo();
     }

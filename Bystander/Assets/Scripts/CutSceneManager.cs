@@ -50,10 +50,12 @@ public class CutSceneManager : MonoBehaviour
             _cursorHandler.ChangeCursor(2);
             _introAudioFinished = false;
         }
-        else if (Page[_currentStep].InitialAutoStep)
+        
+        if (Page[_currentStep].InitialAutoStep)
         {
             _currentStep--;
-            AutoStep();
+            Invoke("AutoStep", Page[_currentStep + 1].InitialDelay);
+            //AutoStep();
         }
     }
 
@@ -114,10 +116,13 @@ public class CutSceneManager : MonoBehaviour
     {
         if (IntroAudio != null && !IntroAudio.isPlaying && !_introAudioFinished)
         {
-            if (Page[_currentStep].AutoStep)
+            if (_currentStep > -1)
             {
-                _currentStep--;
-                AutoStep();
+                if (Page[_currentStep].AutoStep)
+                {
+                    _currentStep--;
+                    AutoStep();
+                }
             }
 
             _introAudioFinished = true;

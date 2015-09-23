@@ -192,6 +192,7 @@ MonoBehaviour:
   TextBounds: 0
   AudioDelay: 0
   ClickDelay: 0
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -243,11 +244,12 @@ MonoBehaviour:
   TextBounds: 0
   AudioDelay: 0
   ClickDelay: 34
+  InitialDelay: 2
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
-  InitialAutoStep: 0
+  InitialAutoStep: 1
 --- !u!4 &307893925
 Transform:
   m_ObjectHideFlags: 0
@@ -999,6 +1001,7 @@ MonoBehaviour:
   TextBounds: 0
   AudioDelay: 0
   ClickDelay: 0
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0

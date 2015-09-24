@@ -4,6 +4,7 @@ using System.Collections;
 public class SHCameraManager : MonoBehaviour
 {
     public Vector2 cameraPos;
+    public SpriteRenderer GraySprite;
 
     //This property handles which camera is being shown and where it should be when it's not the main camera
     public bool IsCurrentCamera
@@ -70,7 +71,7 @@ public class SHCameraManager : MonoBehaviour
     public void ReturnToHub()
     {
         IsCurrentCamera = false;
-        this.GetComponent<GrayscaleEffect>().enabled = true;
+        GraySprite.enabled = true;
 
         for (int i = 0; i < FindObjectsOfType<SHCameraManager>().Length; i++)
         {

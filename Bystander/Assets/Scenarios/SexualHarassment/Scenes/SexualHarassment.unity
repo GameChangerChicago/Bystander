@@ -2618,6 +2618,56 @@ PolygonCollider2D:
       - {x: -1.00280952, y: 2.41275024}
       - {x: -1.34091759, y: 3.4990387}
       - {x: -1.46894836, y: 4.42170715}
+--- !u!1 &434571934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 434571935}
+  - 212: {fileID: 434571936}
+  m_Layer: 0
+  m_Name: GrayRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &434571935
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434571934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 4.13000011, y: 4.13000011, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2009147109}
+  m_RootOrder: 1
+--- !u!212 &434571936
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434571934}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 3993981873
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 8fd366bac990b2e42af801dc830caa21, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &443370952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3801,6 +3851,56 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 25e2ad9a3d127ab43a59d057d7f7144d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &718593217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 718593218}
+  - 212: {fileID: 718593219}
+  m_Layer: 0
+  m_Name: GrayRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &718593218
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 718593217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 4.19999981, y: 4.19999981, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1828027643}
+  m_RootOrder: 1
+--- !u!212 &718593219
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 718593217}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 3993981873
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 6631dc79dbef8dc4da5131b0dea5ccf2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &755449242
 GameObject:
   m_ObjectHideFlags: 0
@@ -4438,7 +4538,6 @@ GameObject:
   - 92: {fileID: 866427228}
   - 124: {fileID: 866427227}
   - 114: {fileID: 866427231}
-  - 114: {fileID: 866427232}
   m_Layer: 0
   m_Name: HallwayCamera
   m_TagString: Untagged
@@ -4506,6 +4605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1134326686}
+  - {fileID: 1819839723}
   m_Father: {fileID: 304236756}
   m_RootOrder: 6
 --- !u!114 &866427231
@@ -4521,21 +4621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPos: {x: .0900000036, y: .649999976}
---- !u!114 &866427232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 0bfbd68bd8a73d240abaf24d2f11a7de,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 866427225}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243a781cad112c75d0008dfa8d76c639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: daf9781cad112c75d0008dfa8d76c639, type: 3}
-  textureRamp: {fileID: 2800000, guid: e9a9781cad112c75d0008dfa8d76c639, type: 3}
-  rampOffset: 0
+  GraySprite: {fileID: 1819839724}
 --- !u!1 &871135736
 GameObject:
   m_ObjectHideFlags: 0
@@ -5494,6 +5580,56 @@ MonoBehaviour:
   MouseOverSprite: {fileID: 383231878}
   IsSexualHarassment: 0
   ComicShown: 0
+--- !u!1 &1012558392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1012558393}
+  - 212: {fileID: 1012558394}
+  m_Layer: 0
+  m_Name: GrayRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012558393
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012558392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 4.13000011, y: 4.13000011, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1772049861}
+  m_RootOrder: 1
+--- !u!212 &1012558394
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012558392}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 3993981873
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 91f44a027e8e4a642b07c1cc29d3cfdc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1034328203
 GameObject:
   m_ObjectHideFlags: 0
@@ -7958,6 +8094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPos: {x: .0799999982, y: .540000021}
+  GraySprite: {fileID: 0}
 --- !u!81 &1306538158
 AudioListener:
   m_ObjectHideFlags: 0
@@ -9146,7 +9283,6 @@ GameObject:
   - 92: {fileID: 1521772725}
   - 124: {fileID: 1521772724}
   - 114: {fileID: 1521772722}
-  - 114: {fileID: 1521772721}
   m_Layer: 0
   m_Name: LibraryCamera
   m_TagString: Untagged
@@ -9165,23 +9301,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 90148183}
+  - {fileID: 1988343261}
   m_Father: {fileID: 964483348}
   m_RootOrder: 7
---- !u!114 &1521772721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 0bfbd68bd8a73d240abaf24d2f11a7de,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1521772719}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243a781cad112c75d0008dfa8d76c639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: daf9781cad112c75d0008dfa8d76c639, type: 3}
-  textureRamp: {fileID: 2800000, guid: e9a9781cad112c75d0008dfa8d76c639, type: 3}
-  rampOffset: 0
 --- !u!114 &1521772722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9195,6 +9317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPos: {x: .0299999993, y: .239999995}
+  GraySprite: {fileID: 1988343262}
 --- !u!124 &1521772724
 Behaviour:
   m_ObjectHideFlags: 0
@@ -10573,7 +10696,6 @@ GameObject:
   - 92: {fileID: 1772049865}
   - 124: {fileID: 1772049864}
   - 114: {fileID: 1772049863}
-  - 114: {fileID: 1772049862}
   m_Layer: 0
   m_Name: GymCamera
   m_TagString: Untagged
@@ -10592,23 +10714,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1896830699}
+  - {fileID: 1012558393}
   m_Father: {fileID: 2135861334}
   m_RootOrder: 6
---- !u!114 &1772049862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 0bfbd68bd8a73d240abaf24d2f11a7de,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1772049860}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243a781cad112c75d0008dfa8d76c639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: daf9781cad112c75d0008dfa8d76c639, type: 3}
-  textureRamp: {fileID: 2800000, guid: e9a9781cad112c75d0008dfa8d76c639, type: 3}
-  rampOffset: 0
 --- !u!114 &1772049863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10622,6 +10730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPos: {x: .699999988, y: .239999995}
+  GraySprite: {fileID: 1012558394}
 --- !u!124 &1772049864
 Behaviour:
   m_ObjectHideFlags: 0
@@ -10919,6 +11028,56 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5960a4a5101dc9a40b98d27555134863, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .745098054}
+--- !u!1 &1819839722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1819839723}
+  - 212: {fileID: 1819839724}
+  m_Layer: 0
+  m_Name: GrayRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1819839723
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1819839722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 4.13000011, y: 4.13000011, z: 1}
+  m_Children: []
+  m_Father: {fileID: 866427230}
+  m_RootOrder: 1
+--- !u!212 &1819839724
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1819839722}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 3993981873
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 483149a936fb69a41bbea4ac49feb1d2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1823125333
 GameObject:
   m_ObjectHideFlags: 0
@@ -11032,7 +11191,6 @@ GameObject:
   - 92: {fileID: 1828027648}
   - 124: {fileID: 1828027647}
   - 114: {fileID: 1828027645}
-  - 114: {fileID: 1828027644}
   m_Layer: 0
   m_Name: ClassroomCamera
   m_TagString: Untagged
@@ -11051,23 +11209,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1310415123}
+  - {fileID: 718593218}
   m_Father: {fileID: 2032067575}
   m_RootOrder: 10
---- !u!114 &1828027644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 0bfbd68bd8a73d240abaf24d2f11a7de,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1828027642}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243a781cad112c75d0008dfa8d76c639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: daf9781cad112c75d0008dfa8d76c639, type: 3}
-  textureRamp: {fileID: 2800000, guid: e9a9781cad112c75d0008dfa8d76c639, type: 3}
-  rampOffset: 0
 --- !u!114 &1828027645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11081,6 +11225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPos: {x: .620000005, y: .649999976}
+  GraySprite: {fileID: 718593219}
 --- !u!124 &1828027647
 Behaviour:
   m_ObjectHideFlags: 0
@@ -11550,6 +11695,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 858522784}
   m_RootOrder: 0
+--- !u!1 &1988343260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1988343261}
+  - 212: {fileID: 1988343262}
+  m_Layer: 0
+  m_Name: GrayRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1988343261
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988343260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 4.13000011, y: 4.13000011, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1521772720}
+  m_RootOrder: 1
+--- !u!212 &1988343262
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988343260}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 3993981873
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: ebc84835b1d45ad43a956d5cb1778fb3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2009147108
 GameObject:
   m_ObjectHideFlags: 0
@@ -11562,7 +11757,6 @@ GameObject:
   - 92: {fileID: 2009147113}
   - 124: {fileID: 2009147112}
   - 114: {fileID: 2009147111}
-  - 114: {fileID: 2009147110}
   m_Layer: 0
   m_Name: BathroomCamera
   m_TagString: Untagged
@@ -11581,23 +11775,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1630243946}
+  - {fileID: 434571935}
   m_Father: {fileID: 275285644}
   m_RootOrder: 6
---- !u!114 &2009147110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 0bfbd68bd8a73d240abaf24d2f11a7de,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2009147108}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243a781cad112c75d0008dfa8d76c639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: daf9781cad112c75d0008dfa8d76c639, type: 3}
-  textureRamp: {fileID: 2800000, guid: e9a9781cad112c75d0008dfa8d76c639, type: 3}
-  rampOffset: 0
 --- !u!114 &2009147111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11611,6 +11791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPos: {x: .360000014, y: .0500000007}
+  GraySprite: {fileID: 434571936}
 --- !u!124 &2009147112
 Behaviour:
   m_ObjectHideFlags: 0

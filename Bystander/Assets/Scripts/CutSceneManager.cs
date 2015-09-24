@@ -55,7 +55,6 @@ public class CutSceneManager : MonoBehaviour
         {
             _currentStep--;
             Invoke("AutoStep", Page[_currentStep + 1].InitialDelay);
-            //AutoStep();
         }
     }
 
@@ -147,7 +146,7 @@ public class CutSceneManager : MonoBehaviour
 
     private void ChangeDialog()
     {
-        if (!Page[_currentStep].TextBox.active)
+        if (!Page[_currentStep].TextBox.activeSelf)
             Page[_currentStep].TextBox.SetActive(true);
 
         StringFormatter(Page[_currentStep].MyText);
@@ -220,6 +219,7 @@ public class CutSceneManager : MonoBehaviour
             _camSize = Page[_currentStep].CamSize + (Page[_currentStep].CamSize * 0.11f);
         else
             _camSize = Page[_currentStep].CamSize;
+
         _camSizeDiff = Mathf.Abs(this.camera.orthographicSize - _camSize);
         _camRotation = Page[_currentStep].CamRotation;
         _camRotationDiff = Mathf.Abs(this.transform.rotation.z - Page[_currentStep].CamRotation);

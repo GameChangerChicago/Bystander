@@ -225,7 +225,6 @@ public class PartyGameManager : MonoBehaviour
         }
         else //Otherwise we will play the next animation
         {
-            Debug.Log("Hi");
             currentAnimator.Play(currentAnimator.gameObject.name + "_" + clickCount);
         }
     }

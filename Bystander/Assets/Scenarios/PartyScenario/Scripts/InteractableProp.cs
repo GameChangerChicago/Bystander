@@ -29,7 +29,7 @@ public class InteractableProp : MonoBehaviour
                 {
                     MouseOverObject.SetActive(false);
 
-                    if (!_clicked)
+                    if (!_clicked && !Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f))
                     {
                         _cursorHandler.ChangeCursor(1);
                     }

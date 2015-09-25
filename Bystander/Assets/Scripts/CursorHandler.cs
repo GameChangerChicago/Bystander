@@ -27,6 +27,5 @@ public class CursorHandler : MonoBehaviour
     public void ChangeCursor(int cursorIndex)
     {
         _cursorIndex = cursorIndex;
-        //Debug.Log("This is what i am typing right now");
     }
 }

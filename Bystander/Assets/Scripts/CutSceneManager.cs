@@ -28,6 +28,7 @@ public class CutSceneManager : MonoBehaviour
     public AudioSource IntroAudio,
                        StepSoundEffect;
 
+    private GameManager _gameManager;
     private CursorHandler _cursorHandler;
     private Rect _rect,
                  _rectDiff;
@@ -44,6 +45,7 @@ public class CutSceneManager : MonoBehaviour
     void Start()
     {
         _cursorHandler = FindObjectOfType<CursorHandler>();
+        _gameManager = FindObjectOfType<GameManager>();
 
         if (IntroAudio != null)
         {
@@ -104,10 +106,21 @@ public class CutSceneManager : MonoBehaviour
         }
         else if (Page[_currentStep].SceneToLoad != "")
         {
-            if (Page[_currentStep].SceneToLoad == "CLOSE")
-                Application.Quit();
+            Debug.LogError(_gameManager.SingleScenarioMode);
+            //The only scenes who's second character is 'o' are the post cutscenes
+            //So basically what I'm doing with that second condition is seeing if this is a post cutscene
+            if (_gameManager.SingleScenarioMode && Application.loadedLevelName[1] == 'o')
+            {
+                Application.LoadLevel("MainMenu_Generic");
+                _gameManager.SingleScenarioMode = false;
+            }
             else
-                Application.LoadLevel(Page[_currentStep].SceneToLoad);
+            {
+                if (Page[_currentStep].SceneToLoad == "CLOSE")
+                    Application.Quit();
+                else
+                    Application.LoadLevel(Page[_currentStep].SceneToLoad);
+            }
         }
     }
 
@@ -372,10 +385,21 @@ public class CutSceneManager : MonoBehaviour
         }
         else if (Page[_currentStep].SceneToLoad != "")
         {
-            if (Page[_currentStep].SceneToLoad == "CLOSE")
-                Application.Quit();
+            Debug.Log(_gameManager.SingleScenarioMode);
+            //The only scenes who's second character is 'o' are the post cutscenes
+            //So basically what I'm doing with that second condition is seeing if this is a post cutscene
+            if (_gameManager.SingleScenarioMode && Application.loadedLevelName[1] == 'o')
+            {
+                Application.LoadLevel("MainMenu_Generic");
+                _gameManager.SingleScenarioMode = false;
+            }
             else
-                Application.LoadLevel(Page[_currentStep].SceneToLoad);
+            {
+                if (Page[_currentStep].SceneToLoad == "CLOSE")
+                    Application.Quit();
+                else
+                    Application.LoadLevel(Page[_currentStep].SceneToLoad);
+            }
         }
     }
 

@@ -74,6 +74,50 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1001 &148962026
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.32755136
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.45028877
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+  m_RootGameObject: {fileID: 911991833}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &168989066
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +380,7 @@ MonoBehaviour:
   TextBounds: 0
   AudioDelay: 0
   ClickDelay: 6.5
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -473,6 +518,7 @@ MonoBehaviour:
   TextBounds: 0
   AudioDelay: 0
   ClickDelay: 0
+  InitialDelay: 0
   AnimatorIndex: 3
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -1061,6 +1107,46 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5960a4a5101dc9a40b98d27555134863, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
+--- !u!1 &911991833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+  m_PrefabInternal: {fileID: 148962026}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 911991835}
+  - 114: {fileID: 911991834}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &911991834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: d0dbd5501345e794b83f56978e681c83,
+    type: 2}
+  m_PrefabInternal: {fileID: 148962026}
+  m_GameObject: {fileID: 911991833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7209c91781cef3e4da531e1c8ff85208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &911991835
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+  m_PrefabInternal: {fileID: 148962026}
+  m_GameObject: {fileID: 911991833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.32755136, y: -1.45028877, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &980577088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1321,7 @@ MonoBehaviour:
   TextBounds: 0
   AudioDelay: 0
   ClickDelay: 0
+  InitialDelay: 0
   AnimatorIndex: 3
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -1543,6 +1630,7 @@ MonoBehaviour:
   TextBounds: 0
   AudioDelay: 0
   ClickDelay: 2
+  InitialDelay: 0
   AnimatorIndex: 1
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -1782,6 +1870,7 @@ MonoBehaviour:
   TextBounds: 0
   AudioDelay: 0
   ClickDelay: 0
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 1
   PlayAudioImmediately: 0
@@ -1845,6 +1934,7 @@ MonoBehaviour:
   TextBounds: 0
   AudioDelay: 1
   ClickDelay: 30
+  InitialDelay: 0
   AnimatorIndex: 2
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -1908,6 +1998,7 @@ MonoBehaviour:
   TextBounds: 7.30000019
   AudioDelay: 0
   ClickDelay: 0
+  InitialDelay: 0
   AnimatorIndex: 1
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0

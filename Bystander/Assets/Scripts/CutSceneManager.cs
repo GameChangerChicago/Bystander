@@ -126,7 +126,7 @@ public class CutSceneManager : MonoBehaviour
 
     void Update()
     {
-        if (IntroAudio != null && !IntroAudio.isPlaying && !_introAudioFinished)
+        if (IntroAudio != null && IntroAudio.time >= IntroAudio.clip.length && !_introAudioFinished)
         {
             if (_currentStep > -1)
             {
@@ -271,6 +271,7 @@ public class CutSceneManager : MonoBehaviour
         if (this.camera.orthographicSize > _camSize)
         {
             this.camera.orthographicSize -= _camSizeDiff / (_camTravelTime / Time.deltaTime * travelTimeModifier);
+            _gameManager.PauseMenu.transform.localScale = new Vector3(_gameManager.PauseMenu.transform.localScale.x - ((_camSizeDiff * 0.06f) / (_camTravelTime / Time.deltaTime * travelTimeModifier)), _gameManager.PauseMenu.transform.localScale.y - ((_camSizeDiff * 0.06f) / (_camTravelTime / Time.deltaTime * travelTimeModifier)), _gameManager.PauseMenu.transform.localScale.z);
 
             //Eventually the camera size will be slightly smaller than the desired size; once this happens we simply set the size to _camSize
             if (this.camera.orthographicSize < _camSize)
@@ -279,6 +280,7 @@ public class CutSceneManager : MonoBehaviour
         else if (this.camera.orthographicSize < _camSize) //If the current camera size is less than _camSize then we know we need to increase the size of the camera
         {
             this.camera.orthographicSize += _camSizeDiff / (_camTravelTime / Time.deltaTime * travelTimeModifier);
+            _gameManager.PauseMenu.transform.localScale = new Vector3(_gameManager.PauseMenu.transform.localScale.x - ((_camSizeDiff * 0.06f) / (_camTravelTime / Time.deltaTime * travelTimeModifier)), _gameManager.PauseMenu.transform.localScale.y - ((_camSizeDiff * 0.06f) / (_camTravelTime / Time.deltaTime * travelTimeModifier)), _gameManager.PauseMenu.transform.localScale.z);
 
             //Eventually the camera size will be slightly larger than the desired size; once this happens we simply set the size to _camSize
             if (this.camera.orthographicSize > _camSize)
@@ -385,7 +387,6 @@ public class CutSceneManager : MonoBehaviour
         }
         else if (Page[_currentStep].SceneToLoad != "")
         {
-            Debug.Log(_gameManager.SingleScenarioMode);
             //The only scenes who's second character is 'o' are the post cutscenes
             //So basically what I'm doing with that second condition is seeing if this is a post cutscene
             if (_gameManager.SingleScenarioMode && Application.loadedLevelName[1] == 'o')

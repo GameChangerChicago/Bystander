@@ -85,7 +85,6 @@ public class MenuButton : MonoBehaviour
                 else
                 {
                     _gameManager.TogglePauseMenu();
-                    _cursorHandler.ChangeCursor(_gameManager.CursorIndexAtPause);
                 }
 
                 if (ScenerioButton)

@@ -47,21 +47,27 @@ public class GameManager : MonoBehaviour
     }
     private bool _audioPaused;
 
-    public GameObject PauseMenu;
-    public int CursorIndexAtPause;
+    public GameObject PauseMenu,
+                      DialogManager;
 
     private AudioSource[] _allAudioSources;
     private CursorHandler _cursorHandler;
+    private PartnerGameManager _partnerGM;
+    private PartyGameManager _partyGM;
     private GUIManager _guiManager;
     private Camera _camera;
+    private int _cursorIndexAtPause;
     
     void Start()
     {
         _cursorHandler = FindObjectOfType<CursorHandler>();
         _allAudioSources = FindObjectsOfType<AudioSource>();
+        _partnerGM = FindObjectOfType<PartnerGameManager>();
+        _partyGM = FindObjectOfType<PartyGameManager>();
         _camera = Camera.main;
         if (PauseMenu != null)
         {
+            Debug.Log(_camera);
             PauseMenu.transform.localScale = new Vector3(PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) * 0.06f),
                                                          PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) * 0.06f),
                                                          PauseMenu.transform.localScale.z);
@@ -90,8 +96,19 @@ public class GameManager : MonoBehaviour
                 _guiManager.ShowTextBar = false;
             }
 
+            if (_partnerGM != null)
+            {
+                DialogManager.SetActive(false);
+                _partnerGM.enabled = false;
+            }
+
+            if (_partyGM != null)
+            {
+                _partyGM.DisableAllProps();
+            }
+
             audioPaused = true;
-            CursorIndexAtPause = _cursorHandler.CursorIndex;
+            _cursorIndexAtPause = _cursorHandler.CursorIndex;
             _cursorHandler.ChangeCursor(1);
             PauseMenu.SetActive(true);
             Time.timeScale = 0;
@@ -103,6 +120,18 @@ public class GameManager : MonoBehaviour
                 _guiManager.ShowTextBar = true;
             }
 
+            if (_partnerGM != null)
+            {
+                DialogManager.SetActive(true);
+                _partnerGM.enabled = true;
+            }
+
+            if (_partyGM != null)
+            {
+                _partyGM.EnableAllProps();
+            }
+
+            _cursorHandler.ChangeCursor(_cursorIndexAtPause);
             audioPaused = false;
             PauseMenu.SetActive(false);
             Time.timeScale = 1;

@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
 
     private AudioSource[] _allAudioSources;
     private CursorHandler _cursorHandler;
+    private GUIManager _guiManager;
     private Camera _camera;
     
     void Start()
@@ -64,6 +65,11 @@ public class GameManager : MonoBehaviour
             PauseMenu.transform.localScale = new Vector3(PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) * 0.06f),
                                                          PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) * 0.06f),
                                                          PauseMenu.transform.localScale.z);
+        }
+
+        if (Application.loadedLevelName == "MaleScenario")
+        {
+            _guiManager = FindObjectOfType<GUIManager>();
         }
     }
 
@@ -79,6 +85,11 @@ public class GameManager : MonoBehaviour
     {
         if (Time.timeScale > 0)
         {
+            if (Application.loadedLevelName == "MaleScenario")
+            {
+                _guiManager.ShowTextBar = false;
+            }
+
             audioPaused = true;
             CursorIndexAtPause = _cursorHandler.CursorIndex;
             _cursorHandler.ChangeCursor(1);
@@ -87,6 +98,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            if (Application.loadedLevelName == "MaleScenario")
+            {
+                _guiManager.ShowTextBar = true;
+            }
+
             audioPaused = false;
             PauseMenu.SetActive(false);
             Time.timeScale = 1;

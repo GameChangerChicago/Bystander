@@ -11,7 +11,7 @@ public class GUIManager : MonoBehaviour
                      textFieldActive;
 		private int screenWidth, screenHeight;
 		public GUISkin maleSkin;
-        public bool ShowingHint = true;
+        public bool ShowTextBar = true;
 
 
 	void Start ()
@@ -39,7 +39,7 @@ public class GUIManager : MonoBehaviour
 
         if (!gameManager.isGameState(GameState.Intro) && !gameManager.isGameState(GameState.Outro))
         {
-            if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Mouse0) && !Input.GetKeyDown(KeyCode.Escape))
                 GUI.FocusControl("InputField");
             if (Event.current.keyCode == KeyCode.Return && Event.current.type == EventType.KeyDown && !questionAnswered)
             {
@@ -75,7 +75,7 @@ public class GUIManager : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Mouse0))
                 textFieldActive = true;
 
-            if (textFieldActive && ShowingHint)
+            if (textFieldActive && ShowTextBar)
             {
                 GUI.SetNextControlName("InputField");
                 inputField = GUI.TextField(new Rect(screenWidth - 200, screenHeight - 45, 250, 50), inputField, 15);

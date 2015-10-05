@@ -28,9 +28,9 @@ public class InteractableProp : MonoBehaviour
                 else
                 {
                     MouseOverObject.SetActive(false);
-                    if (!_clicked)
+
+                    if (!_clicked && !Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f))
                     {
-                        Debug.Log("Poop");
                         _cursorHandler.ChangeCursor(1);
                     }
                     else
@@ -104,10 +104,10 @@ public class InteractableProp : MonoBehaviour
 
     private void ClickHandler()
     {
-        _clicked = true;
-
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
+            _clicked = true;
+
             //If an Interactable Props changes animations while off screen
             if (AnimationChanges)
                 Invoke("ChangeAnimation", CameraMoveTime);

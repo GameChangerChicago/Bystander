@@ -68,7 +68,7 @@ public class HintManager : MonoBehaviour
     private void Fading()
     {
         if (_fadingIn && InstructionSprite.color.a == 0 && Application.loadedLevelName == "MaleScenario")
-            FindObjectOfType<GUIManager>().ShowingHint = false;
+            FindObjectOfType<GUIManager>().ShowTextBar = false;
 
         if (_fadingIn && InstructionSprite.color.a < 1)
         {
@@ -107,7 +107,7 @@ public class HintManager : MonoBehaviour
                 }
 
                 if (Application.loadedLevelName == "MaleScenario")
-                    FindObjectOfType<GUIManager>().ShowingHint = true;
+                    FindObjectOfType<GUIManager>().ShowTextBar = true;
 
                 if (MyTrigger != null)
                 {

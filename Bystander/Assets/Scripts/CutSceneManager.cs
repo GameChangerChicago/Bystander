@@ -28,6 +28,7 @@ public class CutSceneManager : MonoBehaviour
     public AudioSource IntroAudio,
                        StepSoundEffect;
 
+    private GameManager _gameManager;
     private CursorHandler _cursorHandler;
     private Rect _rect,
                  _rectDiff;
@@ -44,15 +45,18 @@ public class CutSceneManager : MonoBehaviour
     void Start()
     {
         _cursorHandler = FindObjectOfType<CursorHandler>();
+        _gameManager = FindObjectOfType<GameManager>();
 
         if (IntroAudio != null)
         {
+            _cursorHandler.ChangeCursor(2);
             _introAudioFinished = false;
         }
-        else if (Page[_currentStep].InitialAutoStep)
+        
+        if (Page[_currentStep].InitialAutoStep)
         {
             _currentStep--;
-            AutoStep();
+            Invoke("AutoStep", Page[_currentStep + 1].InitialDelay);
         }
     }
 
@@ -102,21 +106,35 @@ public class CutSceneManager : MonoBehaviour
         }
         else if (Page[_currentStep].SceneToLoad != "")
         {
-            if (Page[_currentStep].SceneToLoad == "CLOSE")
-                Application.Quit();
+            Debug.LogError(_gameManager.SingleScenarioMode);
+            //The only scenes who's second character is 'o' are the post cutscenes
+            //So basically what I'm doing with that second condition is seeing if this is a post cutscene
+            if (_gameManager.SingleScenarioMode && Application.loadedLevelName[1] == 'o')
+            {
+                Application.LoadLevel("MainMenu_Generic");
+                _gameManager.SingleScenarioMode = false;
+            }
             else
-                Application.LoadLevel(Page[_currentStep].SceneToLoad);
+            {
+                if (Page[_currentStep].SceneToLoad == "CLOSE")
+                    Application.Quit();
+                else
+                    Application.LoadLevel(Page[_currentStep].SceneToLoad);
+            }
         }
     }
 
     void Update()
     {
-        if (IntroAudio != null && !IntroAudio.isPlaying && !_introAudioFinished)
+        if (IntroAudio != null && IntroAudio.time >= IntroAudio.clip.length && !_introAudioFinished)
         {
-            if (Page[_currentStep].AutoStep)
+            if (_currentStep > -1)
             {
-                _currentStep--;
-                AutoStep();
+                if (Page[_currentStep].AutoStep)
+                {
+                    _currentStep--;
+                    AutoStep();
+                }
             }
 
             _introAudioFinished = true;
@@ -141,7 +159,7 @@ public class CutSceneManager : MonoBehaviour
 
     private void ChangeDialog()
     {
-        if (!Page[_currentStep].TextBox.active)
+        if (!Page[_currentStep].TextBox.activeSelf)
             Page[_currentStep].TextBox.SetActive(true);
 
         StringFormatter(Page[_currentStep].MyText);
@@ -214,6 +232,7 @@ public class CutSceneManager : MonoBehaviour
             _camSize = Page[_currentStep].CamSize + (Page[_currentStep].CamSize * 0.11f);
         else
             _camSize = Page[_currentStep].CamSize;
+
         _camSizeDiff = Mathf.Abs(this.camera.orthographicSize - _camSize);
         _camRotation = Page[_currentStep].CamRotation;
         _camRotationDiff = Mathf.Abs(this.transform.rotation.z - Page[_currentStep].CamRotation);
@@ -252,6 +271,7 @@ public class CutSceneManager : MonoBehaviour
         if (this.camera.orthographicSize > _camSize)
         {
             this.camera.orthographicSize -= _camSizeDiff / (_camTravelTime / Time.deltaTime * travelTimeModifier);
+            _gameManager.PauseMenu.transform.localScale = new Vector3(_gameManager.PauseMenu.transform.localScale.x - ((_camSizeDiff * 0.06f) / (_camTravelTime / Time.deltaTime * travelTimeModifier)), _gameManager.PauseMenu.transform.localScale.y - ((_camSizeDiff * 0.06f) / (_camTravelTime / Time.deltaTime * travelTimeModifier)), _gameManager.PauseMenu.transform.localScale.z);
 
             //Eventually the camera size will be slightly smaller than the desired size; once this happens we simply set the size to _camSize
             if (this.camera.orthographicSize < _camSize)
@@ -260,6 +280,7 @@ public class CutSceneManager : MonoBehaviour
         else if (this.camera.orthographicSize < _camSize) //If the current camera size is less than _camSize then we know we need to increase the size of the camera
         {
             this.camera.orthographicSize += _camSizeDiff / (_camTravelTime / Time.deltaTime * travelTimeModifier);
+            _gameManager.PauseMenu.transform.localScale = new Vector3(_gameManager.PauseMenu.transform.localScale.x - ((_camSizeDiff * 0.06f) / (_camTravelTime / Time.deltaTime * travelTimeModifier)), _gameManager.PauseMenu.transform.localScale.y - ((_camSizeDiff * 0.06f) / (_camTravelTime / Time.deltaTime * travelTimeModifier)), _gameManager.PauseMenu.transform.localScale.z);
 
             //Eventually the camera size will be slightly larger than the desired size; once this happens we simply set the size to _camSize
             if (this.camera.orthographicSize > _camSize)
@@ -366,16 +387,26 @@ public class CutSceneManager : MonoBehaviour
         }
         else if (Page[_currentStep].SceneToLoad != "")
         {
-            if (Page[_currentStep].SceneToLoad == "CLOSE")
-                Application.Quit();
+            //The only scenes who's second character is 'o' are the post cutscenes
+            //So basically what I'm doing with that second condition is seeing if this is a post cutscene
+            if (_gameManager.SingleScenarioMode && Application.loadedLevelName[1] == 'o')
+            {
+                Application.LoadLevel("MainMenu_Generic");
+                _gameManager.SingleScenarioMode = false;
+            }
             else
-                Application.LoadLevel(Page[_currentStep].SceneToLoad);
+            {
+                if (Page[_currentStep].SceneToLoad == "CLOSE")
+                    Application.Quit();
+                else
+                    Application.LoadLevel(Page[_currentStep].SceneToLoad);
+            }
         }
     }
 
     private void ReEnableClicking()
     {
-        if (!Page[_currentStep + 1].AutoStep)
+        if (!Page[_currentStep].AutoStep)
             clickDisabled = false;
     }
 }

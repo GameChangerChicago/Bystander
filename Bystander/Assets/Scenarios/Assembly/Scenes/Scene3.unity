@@ -225,7 +225,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Page:
-  - {fileID: 0}
+  - {fileID: 177148718}
+  - {fileID: 234365991}
+  - {fileID: 2132561563}
+  - {fileID: 1002176977}
+  - {fileID: 1657066527}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 950832199}
 --- !u!65 &61502995
@@ -239,7 +243,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 20, y: 15, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 10}
 --- !u!114 &61502996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,8 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af76097c8a6a59f4b9273fab8e1b333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LetterBoxTop: {fileID: 0}
-  LetterBoxBottom: {fileID: 0}
+  LetterBoxTop: {fileID: 766228852}
+  LetterBoxBottom: {fileID: 247001821}
   IsMacAspect: 0
   StaticLetterBoxing: 0
 --- !u!1 &76282501
@@ -355,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
-  StepClip: {fileID: 0}
+  StepClip: {fileID: 8300000, guid: c082f4ebee012614388f0128fb0c8115, type: 3}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
@@ -372,13 +376,13 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 5
-  InitialDelay: 0
+  ClickDelay: 5.5
+  InitialDelay: 5.5
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
-  AutoStep: 1
-  InitialAutoStep: 0
+  AutoStep: 0
+  InitialAutoStep: 1
 --- !u!1 &195233121
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +504,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 234365989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 13.1001949, y: -.351211727, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 61502993}
@@ -524,22 +528,22 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
-  CamLocation: {x: 0, y: 0}
+    width: 1
+    height: 1
+  CamLocation: {x: 13.8994999, y: 0}
   MyText: 
   SceneToLoad: 
-  CamSize: 0
-  CamTravelTime: 0
+  CamSize: 4.4000001
+  CamTravelTime: 6.5
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
+  ClickDelay: 3
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
-  AutoStep: 0
+  AutoStep: 1
   InitialAutoStep: 0
 --- !u!1 &247001820
 GameObject:
@@ -909,7 +913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &347210370
 Transform:
   m_ObjectHideFlags: 0
@@ -1295,7 +1299,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 495881128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 8feec0cb03c1f6c4bb6abaaba358b282, type: 2}
   m_CullingMode: 0
@@ -1881,7 +1885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &739187872
 Transform:
   m_ObjectHideFlags: 0
@@ -2506,7 +2510,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1002176975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.7432642, y: -9.65831947, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 61502993}
@@ -2523,9 +2527,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
-  StepClip: {fileID: 0}
-  MyTextMesh: {fileID: 0}
-  TextBox: {fileID: 0}
+  StepClip: {fileID: 8300000, guid: 069e7bf82eec8344fa842f8fccd18110, type: 3}
+  MyTextMesh: {fileID: 1519310905}
+  TextBox: {fileID: 347210369}
   CamRectangle:
     serializedVersion: 2
     x: 0
@@ -2533,19 +2537,20 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: 
+  MyText: 'Sexual violence in some way involves everyone, and everyone here has a
+    role in preventing it. '
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
   CamRotation: 0
-  TextBounds: 0
+  TextBounds: 6
   AudioDelay: 0
   ClickDelay: 0
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
-  AutoStep: 0
+  AutoStep: 1
   InitialAutoStep: 0
 --- !u!1 &1002887193
 GameObject:
@@ -2784,7 +2789,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300004, guid: 2aafc4d86bb638f4384e9f7365b61ca0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1127768238
@@ -3188,8 +3193,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328950978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.37687683, y: .889014244, z: 0}
-  m_LocalScale: {x: 1.11036026, y: .682114899, z: 1}
+  m_LocalPosition: {x: -1.34697342, y: .889014244, z: 0}
+  m_LocalScale: {x: 1.1053555, y: .682114899, z: 1}
   m_Children: []
   m_Father: {fileID: 672814922}
   m_RootOrder: 0
@@ -3279,7 +3284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1399910067
 Transform:
   m_ObjectHideFlags: 0
@@ -3766,7 +3771,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1657066525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.73860192, y: -20.586731, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 61502993}
@@ -3782,30 +3787,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimator: {fileID: 0}
-  StepClip: {fileID: 0}
+  MyAnimator: {fileID: 495881130}
+  StepClip: {fileID: 8300000, guid: 6055145e040afac49b49319f80c4fc2d, type: 3}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
-  CamLocation: {x: 0, y: 0}
+    width: 1
+    height: 1
+  CamLocation: {x: -4.08324814, y: -20.4399796}
   MyText: 
   SceneToLoad: 
-  CamSize: 0
-  CamTravelTime: 0
+  CamSize: 5.4000001
+  CamTravelTime: 4
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
   ClickDelay: 0
   InitialDelay: 0
   AnimatorIndex: 0
-  PlayAnimImmediately: 0
-  PlayAudioImmediately: 0
-  AutoStep: 0
+  PlayAnimImmediately: 1
+  PlayAudioImmediately: 1
+  AutoStep: 1
   InitialAutoStep: 0
 --- !u!1 &1659413718
 GameObject:
@@ -4058,79 +4063,34 @@ GameObject:
   - 92: {fileID: 1837303184}
   - 124: {fileID: 1837303183}
   - 81: {fileID: 1837303182}
-  - 114: {fileID: 1837303181}
-  - 114: {fileID: 1837303180}
-  - 65: {fileID: 1837303179}
   m_Layer: 0
   m_Name: Reference Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1837303179
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1837303178}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 15, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1837303180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1837303178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af76097c8a6a59f4b9273fab8e1b333d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LetterBoxTop: {fileID: 0}
-  LetterBoxBottom: {fileID: 0}
-  IsMacAspect: 0
-  StaticLetterBoxing: 0
---- !u!114 &1837303181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1837303178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74719bd9f92d1e849a15dfd52814e88f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Page:
-  - {fileID: 0}
-  IntroAudio: {fileID: 0}
-  StepSoundEffect: {fileID: 950832199}
+  m_IsActive: 0
 --- !u!81 &1837303182
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837303178}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1837303183
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837303178}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &1837303184
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837303178}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1837303185
 Camera:
   m_ObjectHideFlags: 0
@@ -4151,7 +4111,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.5
+  orthographic size: 5.4000001
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4170,7 +4130,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837303178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -4.08324814, y: -20.4399834, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4413,8 +4373,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038234178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.00124335289, y: -4.07767153, z: 0}
-  m_LocalScale: {x: 1560.71057, y: 193.638336, z: 1}
+  m_LocalPosition: {x: -.00124311447, y: -5.59009743, z: 0}
+  m_LocalScale: {x: 1560.71057, y: 496.124603, z: 1}
   m_Children: []
   m_Father: {fileID: 1963556707}
   m_RootOrder: 1
@@ -4810,7 +4770,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132561561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.27008104, y: -8.92077541, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 61502993}
@@ -4827,20 +4787,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAnimator: {fileID: 0}
-  StepClip: {fileID: 0}
+  StepClip: {fileID: 8300000, guid: 314215a2dd401e441a8c3fde7bc26d75, type: 3}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
   CamRectangle:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
-  CamLocation: {x: 0, y: 0}
+    width: 1
+    height: 1
+  CamLocation: {x: 7.34332085, y: -9.62722397}
   MyText: 
   SceneToLoad: 
-  CamSize: 0
-  CamTravelTime: 0
+  CamSize: 5.4000001
+  CamTravelTime: 5
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
@@ -4848,8 +4808,8 @@ MonoBehaviour:
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
-  PlayAudioImmediately: 0
-  AutoStep: 0
+  PlayAudioImmediately: 1
+  AutoStep: 1
   InitialAutoStep: 0
 --- !u!1 &2139636990
 GameObject:

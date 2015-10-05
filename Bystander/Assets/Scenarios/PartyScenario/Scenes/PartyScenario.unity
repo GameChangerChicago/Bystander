@@ -4189,7 +4189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &403776972
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5244,6 +5244,70 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 2267121087
   m_SortingOrder: 0
+--- !u!1 &475245789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 475245790}
+  - 114: {fileID: 475245791}
+  m_Layer: 0
+  m_Name: Step2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &475245790
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 475245789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 969736302}
+  m_RootOrder: 8
+--- !u!114 &475245791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 475245789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
+  MyTextMesh: {fileID: 0}
+  TextBox: {fileID: 403776971}
+  CamRectangle:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  CamLocation: {x: 0, y: 0}
+  MyText: 
+  SceneToLoad: 
+  CamSize: 0
+  CamTravelTime: 0
+  CamRotation: 0
+  TextBounds: 0
+  AudioDelay: 0
+  ClickDelay: 0
+  InitialDelay: 0
+  AnimatorIndex: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
+  AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &478349395
 GameObject:
   m_ObjectHideFlags: 0
@@ -7117,7 +7181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &689523427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7410,6 +7474,70 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: d1242215ff746164cb4c9e2f166977e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &721062937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 721062938}
+  - 114: {fileID: 721062939}
+  m_Layer: 0
+  m_Name: Step3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &721062938
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 721062937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 969736302}
+  m_RootOrder: 9
+--- !u!114 &721062939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 721062937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
+  MyTextMesh: {fileID: 0}
+  TextBox: {fileID: 2108779874}
+  CamRectangle:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  CamLocation: {x: 0, y: 0}
+  MyText: 
+  SceneToLoad: 
+  CamSize: 0
+  CamTravelTime: 0
+  CamRotation: 0
+  TextBounds: 0
+  AudioDelay: 0
+  ClickDelay: 0
+  InitialDelay: 0
+  AnimatorIndex: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
+  AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &723664774
 GameObject:
   m_ObjectHideFlags: 0
@@ -10399,7 +10527,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 969736302}
   - 95: {fileID: 969736304}
-  - 212: {fileID: 969736303}
+  - 114: {fileID: 969736305}
   m_Layer: 0
   m_Name: ChatComic
   m_TagString: Untagged
@@ -10424,30 +10552,11 @@ Transform:
   - {fileID: 403776973}
   - {fileID: 2108779875}
   - {fileID: 360502288}
+  - {fileID: 1926863767}
+  - {fileID: 475245790}
+  - {fileID: 721062938}
   m_Father: {fileID: 1000717330}
   m_RootOrder: 1
---- !u!212 &969736303
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 969736301}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &969736304
 Animator:
   serializedVersion: 3
@@ -10463,6 +10572,23 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &969736305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969736301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74719bd9f92d1e849a15dfd52814e88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Page:
+  - {fileID: 1926863768}
+  - {fileID: 475245791}
+  - {fileID: 721062939}
+  IntroAudio: {fileID: 0}
+  StepSoundEffect: {fileID: 0}
 --- !u!1 &977030006
 GameObject:
   m_ObjectHideFlags: 0
@@ -19447,6 +19573,70 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5960a4a5101dc9a40b98d27555134863, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
+--- !u!1 &1926863766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1926863767}
+  - 114: {fileID: 1926863768}
+  m_Layer: 0
+  m_Name: Step1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1926863767
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1926863766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 969736302}
+  m_RootOrder: 7
+--- !u!114 &1926863768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1926863766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
+  MyTextMesh: {fileID: 0}
+  TextBox: {fileID: 689523426}
+  CamRectangle:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  CamLocation: {x: 0, y: 0}
+  MyText: 
+  SceneToLoad: 
+  CamSize: 0
+  CamTravelTime: 0
+  CamRotation: 0
+  TextBounds: 0
+  AudioDelay: 0
+  ClickDelay: 0
+  InitialDelay: 0
+  AnimatorIndex: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
+  AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &1928183681
 GameObject:
   m_ObjectHideFlags: 0

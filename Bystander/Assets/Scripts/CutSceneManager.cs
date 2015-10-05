@@ -170,10 +170,10 @@ public class CutSceneManager : MonoBehaviour
     {
         string currentWord = "";
         bool isFirstWord = true;
-        MeshRenderer currentRenderer;
         GameObject dialogBox = Page[_currentStep].TextBox;
+        TextMesh dBTextMesh = dialogBox.GetComponentInChildren<TextMesh>();
+        MeshRenderer currentRenderer = dialogBox.GetComponentInChildren<MeshRenderer>();
 
-        currentRenderer = dialogBox.GetComponentInChildren<MeshRenderer>();
         dialogBox.GetComponentInChildren<TextMesh>().text = currentWord;
 
         for (int i = 0; i < lineContent.Length; i++)
@@ -188,13 +188,13 @@ public class CutSceneManager : MonoBehaviour
                 //If currentWord is the first word it is added to the to the dialog box
                 if (isFirstWord)
                 {
-                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + currentWord;
+                    dBTextMesh.text = dBTextMesh.text + currentWord;
 
                     isFirstWord = false;
                 }
                 else // Otherwise it adds the current word with a space before the word.
                 {
-                    dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + " " + currentWord;
+                    dBTextMesh.text = dBTextMesh.text + " " + currentWord;
                 }
 
                 //If after adding the word the line extends past the TextBounds then the word will be added with a line break
@@ -202,16 +202,16 @@ public class CutSceneManager : MonoBehaviour
                 {
                     if (currentRenderer.bounds.extents.y > Page[_currentStep].TextBounds)
                     {
-                        dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text.Remove(dialogBox.GetComponentInChildren<TextMesh>().text.Length - (currentWord.Length));
-                        dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + "\n" + currentWord;
+                        dBTextMesh.text = dBTextMesh.text.Remove(dBTextMesh.text.Length - (currentWord.Length));
+                        dBTextMesh.text = dBTextMesh.text + "\n" + currentWord;
                     }
                 }
                 else
                 {
                     if (currentRenderer.bounds.extents.x > Page[_currentStep].TextBounds)
                     {
-                        dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text.Remove(dialogBox.GetComponentInChildren<TextMesh>().text.Length - (currentWord.Length));
-                        dialogBox.GetComponentInChildren<TextMesh>().text = dialogBox.GetComponentInChildren<TextMesh>().text + "\n" + currentWord;
+                        dBTextMesh.text = dBTextMesh.text.Remove(dBTextMesh.text.Length - (currentWord.Length));
+                        dBTextMesh.text = dBTextMesh.text + "\n" + currentWord;
                     }
                 }
 

@@ -62,6 +62,7 @@ public class CutSceneManager : MonoBehaviour
 
     void OnMouseDown()
     {
+        Debug.Log(_currentStep);
         if (!clickDisabled && _introAudioFinished && Page[_currentStep].SceneToLoad == "")
         {
             clickDisabled = true;

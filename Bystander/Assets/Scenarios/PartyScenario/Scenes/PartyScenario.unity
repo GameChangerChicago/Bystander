@@ -211,7 +211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 1
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -289,7 +288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 1
   HasCloseupAnimation: 1
@@ -795,7 +793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -1857,7 +1854,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &206889360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,7 +2179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -2856,7 +2852,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 1
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -3425,7 +3420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -4219,10 +4213,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403776971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3309021, y: 2.58528137, z: 0}
-  m_LocalScale: {x: 2.0999999, y: .747877717, z: 1}
+  m_LocalPosition: {x: -1.81422424, y: -3.01341248, z: 0}
+  m_LocalScale: {x: 2.20000005, y: .747877717, z: 1}
   m_Children:
-  - {fileID: 1785116838}
+  - {fileID: 1173450726}
   m_Father: {fileID: 969736302}
   m_RootOrder: 4
 --- !u!1 &407002680
@@ -4686,7 +4680,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 1
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -4887,7 +4880,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -5283,9 +5275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimator: {fileID: 0}
+  MyAnimator: {fileID: 969736304}
   StepClip: {fileID: 0}
-  MyTextMesh: {fileID: 0}
+  MyTextMesh: {fileID: 1173450724}
   TextBox: {fileID: 403776971}
   CamRectangle:
     serializedVersion: 2
@@ -5294,16 +5286,17 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: 
+  MyText: 'David: Actually man, that''s not cool. Not to Mention Illegal. '
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  PartyCameraTravelTime: 0
   CamRotation: 0
-  TextBounds: 0
+  TextBounds: 9
   AudioDelay: 0
-  ClickDelay: 0
+  ClickDelay: 2
   InitialDelay: 0
-  AnimatorIndex: 0
+  AnimatorIndex: 1
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
@@ -6664,7 +6657,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 1
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -7181,7 +7173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &689523427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7214,7 +7206,7 @@ Transform:
   m_LocalPosition: {x: -1.89357758, y: 2.58528137, z: 0}
   m_LocalScale: {x: 1.89999998, y: .747877717, z: 1}
   m_Children:
-  - {fileID: 1173450726}
+  - {fileID: 1785116838}
   m_Father: {fileID: 969736302}
   m_RootOrder: 3
 --- !u!1 &693772824
@@ -7513,10 +7505,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimator: {fileID: 0}
+  MyAnimator: {fileID: 969736304}
   StepClip: {fileID: 0}
-  MyTextMesh: {fileID: 0}
-  TextBox: {fileID: 2108779874}
+  MyTextMesh: {fileID: 1173450724}
+  TextBox: {fileID: 403776971}
   CamRectangle:
     serializedVersion: 2
     x: 0
@@ -7524,16 +7516,17 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: 
+  MyText: 'Bryan: Uh, yeah. Whatever. '
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  PartyCameraTravelTime: 0
   CamRotation: 0
-  TextBounds: 0
+  TextBounds: 9
   AudioDelay: 0
   ClickDelay: 0
   InitialDelay: 0
-  AnimatorIndex: 0
+  AnimatorIndex: 2
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
@@ -8175,7 +8168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -8458,6 +8450,71 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6180c9eb9753df442a08e79fb87b5d47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &814908353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 814908354}
+  - 114: {fileID: 814908355}
+  m_Layer: 0
+  m_Name: Step4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &814908354
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 814908353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 969736302}
+  m_RootOrder: 10
+--- !u!114 &814908355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 814908353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyAnimator: {fileID: 0}
+  StepClip: {fileID: 0}
+  MyTextMesh: {fileID: 0}
+  TextBox: {fileID: 0}
+  CamRectangle:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  CamLocation: {x: 0, y: 0}
+  MyText: 
+  SceneToLoad: 
+  CamSize: 0
+  CamTravelTime: 0
+  PartyCameraTravelTime: 1.5
+  CamRotation: 0
+  TextBounds: 0
+  AudioDelay: 0
+  ClickDelay: 0
+  InitialDelay: 0
+  AnimatorIndex: 0
+  PlayAnimImmediately: 0
+  PlayAudioImmediately: 0
+  AutoStep: 0
+  InitialAutoStep: 0
 --- !u!1 &814926856
 GameObject:
   m_ObjectHideFlags: 0
@@ -8751,7 +8808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -9291,7 +9347,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 1
   HasCloseupAnimation: 1
@@ -10528,6 +10583,7 @@ GameObject:
   - 4: {fileID: 969736302}
   - 95: {fileID: 969736304}
   - 114: {fileID: 969736305}
+  - 65: {fileID: 969736303}
   m_Layer: 0
   m_Name: ChatComic
   m_TagString: Untagged
@@ -10555,8 +10611,21 @@ Transform:
   - {fileID: 1926863767}
   - {fileID: 475245790}
   - {fileID: 721062938}
+  - {fileID: 814908354}
   m_Father: {fileID: 1000717330}
   m_RootOrder: 1
+--- !u!65 &969736303
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969736301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40, y: 25, z: 1}
+  m_Center: {x: .5, y: 0, z: 0}
 --- !u!95 &969736304
 Animator:
   serializedVersion: 3
@@ -10578,7 +10647,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969736301}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74719bd9f92d1e849a15dfd52814e88f, type: 3}
   m_Name: 
@@ -10587,6 +10656,7 @@ MonoBehaviour:
   - {fileID: 1926863768}
   - {fileID: 475245791}
   - {fileID: 721062939}
+  - {fileID: 814908355}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 0}
 --- !u!1 &977030006
@@ -11017,7 +11087,7 @@ Transform:
   - {fileID: 553619080}
   - {fileID: 1608155982}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!114 &1033707233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12173,7 +12243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -12868,7 +12937,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173450723}
-  m_Text: "Bryan: Girls are easy once\r\nyou get alcohol in them."
+  m_Text: "Bryan: Girls are easy once you\r\nget alcohol in them."
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -12909,10 +12978,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173450723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.75776196, y: 1.2286762, z: 0}
-  m_LocalScale: {x: .272920102, y: .693359256, z: 1}
+  m_LocalPosition: {x: -3.80840468, y: 1.2286762, z: 0}
+  m_LocalScale: {x: .235703722, y: .693359256, z: 1}
   m_Children: []
-  m_Father: {fileID: 689523428}
+  m_Father: {fileID: 403776973}
   m_RootOrder: 0
 --- !u!1 &1173578681
 GameObject:
@@ -14110,7 +14179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 1
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -15850,7 +15918,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 1
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -16762,7 +16829,7 @@ Transform:
   m_Children:
   - {fileID: 1194973162}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1632832815
 GameObject:
   m_ObjectHideFlags: 0
@@ -16956,7 +17023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -17293,7 +17359,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -17899,7 +17964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!102 &1785116836
 TextMesh:
   serializedVersion: 3
@@ -17948,10 +18013,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1785116835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.94699311, y: 1.2438966, z: 0}
-  m_LocalScale: {x: .246927559, y: .693359256, z: 1}
+  m_LocalPosition: {x: -4.59263659, y: 1.2438966, z: 0}
+  m_LocalScale: {x: .272919923, y: .693359256, z: 1}
   m_Children: []
-  m_Father: {fileID: 403776973}
+  m_Father: {fileID: 689523428}
   m_RootOrder: 0
 --- !u!1 &1786943657
 GameObject:
@@ -19612,10 +19677,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimator: {fileID: 0}
+  MyAnimator: {fileID: 969736304}
   StepClip: {fileID: 0}
-  MyTextMesh: {fileID: 0}
-  TextBox: {fileID: 689523426}
+  MyTextMesh: {fileID: 1173450724}
+  TextBox: {fileID: 403776971}
   CamRectangle:
     serializedVersion: 2
     x: 0
@@ -19623,20 +19688,21 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: 
+  MyText: 'Bryan: Girls are easy once you get alcohol in them. '
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  PartyCameraTravelTime: 0
   CamRotation: 0
-  TextBounds: 0
+  TextBounds: 9
   AudioDelay: 0
   ClickDelay: 0
-  InitialDelay: 0
+  InitialDelay: 1.5
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
   AutoStep: 0
-  InitialAutoStep: 0
+  InitialAutoStep: 1
 --- !u!1 &1928183681
 GameObject:
   m_ObjectHideFlags: 0
@@ -20056,7 +20122,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1951929292
 GameObject:
   m_ObjectHideFlags: 0
@@ -20565,7 +20631,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -21065,7 +21130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -21198,7 +21262,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 1
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
@@ -21380,7 +21443,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 0
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 0
@@ -21761,7 +21823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2108779875
 Transform:
   m_ObjectHideFlags: 0
@@ -22060,10 +22122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImportantProp: 1
-  HasDialog: 0
   HasMultipleSteps: 0
   AnimationChanges: 0
-  HasCloseupAnimation: 1
+  HasCloseupAnimation: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0

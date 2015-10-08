@@ -44,7 +44,6 @@ public class InteractableProp : MonoBehaviour
     private bool _mousedOver;
 
     public bool ImportantProp,
-                HasDialog,
                 HasMultipleSteps,
                 AnimationChanges,
                 HasCloseupAnimation,
@@ -65,12 +64,14 @@ public class InteractableProp : MonoBehaviour
     public GameObject MouseOverObject;
 
     private bool _firstDialog,
-                 _clicked;
+                 _clicked,
+                 _hasCutscene;
     private int _myClickCount = 0,
                 _SFXIndex;
     private string _dialog;
     private Animator _myAnimator;
     private PartyGameManager _myGameManager;
+    private CutSceneManager _myCSManager;
     private CursorHandler _cursorHandler;
     private Camera _myCamera;
     private Collider2D _overlapCircle;
@@ -82,7 +83,7 @@ public class InteractableProp : MonoBehaviour
         _myCamera = Camera.main;
         _cursorHandler = FindObjectOfType<CursorHandler>();
 
-        if (CloseUpAnimator != null)
+        if (HasCloseupAnimation)
             CloseUpAnimator.speed = 0;
     }
 
@@ -100,6 +101,13 @@ public class InteractableProp : MonoBehaviour
 
         if (MousedOver)
             ClickHandler();
+
+        _myCSManager = MyPanelPos.gameObject.GetComponent<CutSceneManager>();
+
+        if (_myCSManager != null)
+        {
+            _hasCutscene = true;
+        }
     }
 
     private void ClickHandler()
@@ -113,13 +121,13 @@ public class InteractableProp : MonoBehaviour
                 Invoke("ChangeAnimation", CameraMoveTime);
 
             //This calls PlayerClicked sending all of the impertinent data
-            _myGameManager.PlayerClicked(ImportantProp, HasDialog, CameraMoveTime, MyPanelPos.position, CameraSize, ViewTime, CamRotation);
+            _myGameManager.PlayerClicked(ImportantProp, _hasCutscene, CameraMoveTime, MyPanelPos.position, CameraSize, ViewTime, CamRotation);
 
             //If the interactable prop has dialog than this calls the first DialogHandler
-            if (HasDialog)
+            if (_hasCutscene)
             {
-                ConvoHandler currentCloseUpConvo = GameObject.Find(this.name + "Comic").GetComponent<ConvoHandler>();
-                StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
+                //ConvoHandler currentCloseUpConvo = GameObject.Find(this.name + "Comic").GetComponent<ConvoHandler>();
+                //StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
             }
             else
                 StartCoroutine(_myGameManager.FinsihInteractiveSegment((2 * CameraMoveTime) + ViewTime, Exit));
@@ -134,6 +142,11 @@ public class InteractableProp : MonoBehaviour
             if (MyBGM.Length != 0)
             {
                 Invoke("ChangeBGM", CameraMoveTime);
+            }
+
+            if (_hasCutscene)
+            {
+                _myCSManager.enabled = true;
             }
 
             _myClickCount++;

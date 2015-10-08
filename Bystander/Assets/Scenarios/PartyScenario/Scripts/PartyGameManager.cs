@@ -64,6 +64,14 @@ public class PartyGameManager : MonoBehaviour
     }
     private bool _choseCoral;
 
+    public GameObject CurrentSection
+    {
+        get
+        {
+            return _currentSection;
+        }
+    }
+
     //These five game objects are the various prefabs that make up the 5 levels
     public GameObject LivingRoom,
                       Kitchen,
@@ -120,11 +128,11 @@ public class PartyGameManager : MonoBehaviour
 
     //This method is called whenever an interactable prop is clicked
     //It's kind of an all purpose method handling the various types of interactable props
-    public void PlayerClicked(bool importantProp, bool hasDialog, float cameraTravelTime, Vector3 myPanelPos, float camSize, float viewTime, float camRotation)
+    public void PlayerClicked(bool importantProp, bool hasCutscene, float cameraTravelTime, Vector3 myPanelPos, float camSize, float viewTime, float camRotation)
     {
         _cameraTravelTime = cameraTravelTime;
 
-        if (!hasDialog)
+        if (!hasCutscene)
         {
             _clickCount++;
             StartCoroutine(_myCameraManager.ReturnCamera(_currentSection.transform.position, _cameraTravelTime + viewTime, 0));

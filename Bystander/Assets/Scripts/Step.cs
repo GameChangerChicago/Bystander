@@ -13,6 +13,7 @@ public class Step : MonoBehaviour
                   SceneToLoad;
     public float CamSize,
                  CamTravelTime,
+                 PartyCameraTravelTime,
                  CamRotation,
                  TextBounds,
                  AudioDelay,

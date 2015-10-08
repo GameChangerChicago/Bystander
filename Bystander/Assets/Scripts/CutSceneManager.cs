@@ -29,6 +29,8 @@ public class CutSceneManager : MonoBehaviour
                        StepSoundEffect;
 
     private GameManager _gameManager;
+    private PartyGameManager _partyGameManager;
+    private PartyCameraManager _partyCameraManager;
     private CursorHandler _cursorHandler;
     private Rect _rect,
                  _rectDiff;
@@ -52,6 +54,12 @@ public class CutSceneManager : MonoBehaviour
             _cursorHandler.ChangeCursor(2);
             _introAudioFinished = false;
         }
+
+        if (Page[Page.Length - 1].PartyCameraTravelTime > 0)
+        {
+            _partyGameManager = FindObjectOfType<PartyGameManager>();
+            _partyCameraManager = FindObjectOfType<PartyCameraManager>();
+        }
         
         if (Page[_currentStep].InitialAutoStep)
         {
@@ -62,7 +70,6 @@ public class CutSceneManager : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(_currentStep);
         if (!clickDisabled && _introAudioFinished && Page[_currentStep].SceneToLoad == "")
         {
             clickDisabled = true;
@@ -82,6 +89,12 @@ public class CutSceneManager : MonoBehaviour
 
             if (Page[_currentStep].MyTextMesh != null)
                 ChangeDialog();
+
+            if (Page[_currentStep].PartyCameraTravelTime > 0)
+            {
+                StartCoroutine(_partyCameraManager.ReturnCamera(_partyGameManager.CurrentSection.transform.position, 0, 0));
+                StartCoroutine(_partyGameManager.FinsihInteractiveSegment(Page[_currentStep].PartyCameraTravelTime, false));
+            }
 
             if (_currentStep + 1 < Page.Length)
             {
@@ -107,7 +120,6 @@ public class CutSceneManager : MonoBehaviour
         }
         else if (Page[_currentStep].SceneToLoad != "")
         {
-            Debug.LogError(_gameManager.SingleScenarioMode);
             //The only scenes who's second character is 'o' are the post cutscenes
             //So basically what I'm doing with that second condition is seeing if this is a post cutscene
             if (_gameManager.SingleScenarioMode && Application.loadedLevelName[1] == 'o')

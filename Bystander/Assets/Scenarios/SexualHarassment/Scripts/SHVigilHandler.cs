@@ -77,8 +77,8 @@ public class SHVigilHandler : MonoBehaviour
         _myAudioSource = GetComponentInChildren<AudioSource>();
         _wrongAnswerClip = Resources.Load("Sounds/04-Reminder") as AudioClip;
         _interventionClip = Resources.Load("Sounds/05-Interventions") as AudioClip;
-        _correctString = "That's right! But let's try to find an instance of sexual harrasment. ";
-        _wrongString = "It seems like you're having some trouble. Remember, we're trying to find an instance of sexual harrasment. ";
+        _correctString = "That's right! But let's try to find an instance of sexual harassment. ";
+        _wrongString = "It seems like you're having some trouble. Remember, we're trying to find an instance of sexual harassment. ";
     }
 
     //Clicking anywhere will call ShowSpringSegment

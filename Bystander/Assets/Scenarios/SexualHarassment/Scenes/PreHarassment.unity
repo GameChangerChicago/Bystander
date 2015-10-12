@@ -432,6 +432,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 17
   CamTravelTime: 5
+  PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
@@ -466,8 +467,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 152859741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.99490738, y: 1.31724524, z: 0}
-  m_LocalScale: {x: .266506076, y: 1.08713663, z: 1}
+  m_LocalPosition: {x: -3.79206896, y: 1.31724477, z: 0}
+  m_LocalScale: {x: .382775694, y: 1.08713663, z: 1}
   m_Children: []
   m_Father: {fileID: 1355593966}
   m_RootOrder: 0
@@ -478,7 +479,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 152859741}
-  m_Text: "Seriously, I need your support and\r\nI think someone needs to say something."
+  m_Text: "We need to say something. \r\nI need your support here. "
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -1784,8 +1785,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 833735413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.91316986, y: 1.67356932, z: 0}
-  m_LocalScale: {x: .411682099, y: .365711093, z: 1}
+  m_LocalPosition: {x: -3.90607667, y: 1.64012039, z: 0}
+  m_LocalScale: {x: .424282372, y: .418569833, z: 1}
   m_Children: []
   m_Father: {fileID: 1290963429}
   m_RootOrder: 0
@@ -1796,8 +1797,9 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 833735413}
-  m_Text: "Think about it. This stuff happens way too often around here. Sexual harassment
-    is a problem and I\u2019m not going to pretend it\u2019s okay. "
+  m_Text: "This stuff happens way \r\ntoo often and people \r\nthink it\u2019s \u201Cjust
+    playing\u201D.\r\nSexual harassment is a\r\nproblem and I\u2019m tired of\r\npretending
+    it\u2019s okay. "
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -1967,11 +1969,13 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: 'Think about it. This stuff happens way too often around here. Sexual harassment
-    is a problem and I''m not going to pretend it''s okay. '
+  MyText: "This stuff happens way \r\ntoo often and people \r\nthink it\u2019s \u201Cjust
+    playing\u201D.\r\nSexual harassment is a\r\nproblem and I\u2019m tired of\r\npretending
+    it\u2019s okay. "
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 3
   AudioDelay: 0
@@ -2330,7 +2334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1290963428
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2360,8 +2364,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1290963427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5741539, y: -2.01767993, z: 0}
-  m_LocalScale: {x: .700789809, y: .788881302, z: 1}
+  m_LocalPosition: {x: 2.48789024, y: -1.82789862, z: 0}
+  m_LocalScale: {x: .679977894, y: .689258099, z: 1}
   m_Children:
   - {fileID: 833735414}
   m_Father: {fileID: 784214182}
@@ -2524,8 +2528,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1355593964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.36415291, y: 3.32819414, z: 0}
-  m_LocalScale: {x: 1.0825367, y: .265378445, z: 1}
+  m_LocalPosition: {x: 2.72712517, y: 3.32819414, z: 0}
+  m_LocalScale: {x: .753711939, y: .265378445, z: 1}
   m_Children:
   - {fileID: 152859742}
   m_Father: {fileID: 784214182}
@@ -2554,8 +2558,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1375289872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.71382165, y: .974670291, z: 0}
-  m_LocalScale: {x: .765692055, y: 1.72078073, z: 1}
+  m_LocalPosition: {x: -3.90629959, y: 1.20239294, z: 0}
+  m_LocalScale: {x: .423870951, y: 1.29957438, z: 1}
   m_Children: []
   m_Father: {fileID: 1690799550}
   m_RootOrder: 0
@@ -2566,14 +2570,14 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1375289872}
-  m_Text: I don't know.
+  m_Text: "I don\u2019t know. Maybe you\u2019re\r\ntaking everything too seriously?"
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 80
+  m_FontSize: 60
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 68b1ba0d65756244192edd6201fdb2c9, type: 3}
@@ -2920,8 +2924,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1490342079}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3141923, y: .920339942, z: 0}
-  m_LocalScale: {x: 1.63964987, y: 1.82129884, z: 1}
+  m_LocalPosition: {x: -3.67134857, y: 1.03494072, z: 0}
+  m_LocalScale: {x: .934760451, y: 2.20829296, z: 1}
   m_Children: []
   m_Father: {fileID: 1686312758}
   m_RootOrder: 0
@@ -2932,14 +2936,14 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1490342079}
-  m_Text: Hmm...
+  m_Text: C'mon, Steve.
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 80
+  m_FontSize: 70
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 68b1ba0d65756244192edd6201fdb2c9, type: 3}
@@ -3020,6 +3024,7 @@ MonoBehaviour:
   SceneToLoad: SexualHarassment
   CamSize: 0
   CamTravelTime: 0
+  PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
@@ -3169,8 +3174,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1686312757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.91316223, y: -.575807929, z: 0}
-  m_LocalScale: {x: .287025213, y: .258398473, z: 1}
+  m_LocalPosition: {x: 4.08501625, y: -.938119411, z: 0}
+  m_LocalScale: {x: .503466785, y: .213115215, z: 1}
   m_Children:
   - {fileID: 1490342080}
   m_Father: {fileID: 458662010}
@@ -3292,8 +3297,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1690799548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.43878555, y: .482643723, z: 0}
-  m_LocalScale: {x: .376786739, y: .167657986, z: 1}
+  m_LocalPosition: {x: -1.17932892, y: .37912643, z: 0}
+  m_LocalScale: {x: .680637836, y: .221997783, z: 1}
   m_Children:
   - {fileID: 1375289873}
   m_Father: {fileID: 784214182}
@@ -3495,6 +3500,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 5
   CamTravelTime: 2
+  PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
@@ -3547,6 +3553,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 5
   CamTravelTime: 10
+  PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0

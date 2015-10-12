@@ -64,7 +64,10 @@ public class CutSceneManager : MonoBehaviour
         if (Page[_currentStep].InitialAutoStep)
         {
             _currentStep--;
+            _cursorHandler.ChangeCursor(2);
+            _clickDisabled = true;
             Invoke("AutoStep", Page[_currentStep + 1].InitialDelay);
+            Invoke("ReEnableClicking", Page[_currentStep + 1].InitialDelay);
         }
     }
 

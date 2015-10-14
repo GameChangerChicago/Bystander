@@ -7,6 +7,7 @@ public class InterventionManager : MonoBehaviour
     private SHVigilHandler _myVirgil;
     private Animator _myAnimator;
     private TextMesh _myText;
+    private BoxCollider[] _allSelectorColliders = new BoxCollider[5];
     private Vector3[] _interventionPositions = new Vector3[5];
     private string _interventionText;
     private bool _interventionActive;
@@ -17,6 +18,11 @@ public class InterventionManager : MonoBehaviour
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         _myAnimator = GetComponentInChildren<Animator>();
         _myText = this.GetComponentInChildren<TextMesh>();
+
+        for (int i = 0; i < 5; i++)
+        {
+            _allSelectorColliders[i] = _myGameManager.AllSelectors[i].GetComponent<BoxCollider>();
+        }
 
         _interventionPositions[0] = new Vector3(26.78879f, -35.70682f, -15.32112f);
         _interventionPositions[1] = new Vector3(16.9052f, -84.01974f, -15.32112f);
@@ -174,6 +180,12 @@ public class InterventionManager : MonoBehaviour
         this.transform.position = new Vector3(5000, -5000, -5000);
         _interventionActive = false;
         _myGameManager.SectionComplete = true;
+
+        for (int i = 0; i < 5; i++)
+        {
+            if (!_myGameManager.AllSelectors[i].Selected)
+                _allSelectorColliders[i].enabled = true;
+        }
         //_myVirgil.ShowStringSegment();
     }
 }

@@ -27,11 +27,13 @@ public class SHCameraSelector : MonoBehaviour
     private CursorHandler _cursorHandler;
     private SHGameManager _myGameManager;
     private SHCameraManager _myCamera;
+    private BoxCollider[] _allBoxColliders = new BoxCollider[5];
     private BoxCollider _myBoxCollider;
     private bool _clickInitialized;
 
     public MicroScenarios MyMicroScenario;
     public SpriteRenderer MySelectSprite;
+    public bool Selected;
 
     void Start()
     {
@@ -40,6 +42,11 @@ public class SHCameraSelector : MonoBehaviour
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myCamera = this.transform.parent.GetComponent<SHCameraManager>();
         _myBoxCollider = this.GetComponent<BoxCollider>();
+
+        for (int i = 0; i < 5; i++)
+        {
+            _allBoxColliders[i] = _myGameManager.AllSelectors[i].GetComponent<BoxCollider>();
+        }
 
         this.enabled = false;
     }
@@ -73,11 +80,18 @@ public class SHCameraSelector : MonoBehaviour
     {
         if (_clickInitialized)
         {
+            Selected = true;
             _myCamera.FocusOnCamera();
-            _myBoxCollider.enabled = false;
             _myGameManager.CurrentMicroScenario = MyMicroScenario;
             Invoke("ActivationDelay", 0.01f);
             _clickInitialized = false;
+
+            for (int i = 0; i < 5; i++)
+            {
+                _allBoxColliders[i].enabled = false;
+            }
+            //Disables them all but needs to make all the incompleted ones come back
+            //Talking about box colliders, not sure I made that clear...
         }
     }
 

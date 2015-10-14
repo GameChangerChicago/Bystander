@@ -28,7 +28,7 @@ public class SHGameManager : MonoBehaviour
     static Dictionary<ButtonType, bool> AnswersSelected = new Dictionary<ButtonType, bool>();
 
     private Dictionary<MicroScenarios, PointOfInterest[]> PointsOfInterestPerMicroScenario = new Dictionary<MicroScenarios, PointOfInterest[]>();
-    private SHCameraSelector[] _allSelectors;
+    private AudioSource _myAudioSource;
     private SHVigilHandler _myVirgil;
     private int _sectionsCompleted;
 
@@ -55,26 +55,6 @@ public class SHGameManager : MonoBehaviour
     }
     private SHCameraManager _currentCameraManager;
 
-    public int WrongAnswerCounter
-    {
-        get
-        {
-            return wrongAnswerCounter;
-        }
-        set
-        {
-            if (value > 2)
-            {
-                //If we call ShowDialog with 'false' it will bring up the virgil dialog box with the 'wrong' dialog
-                _myVirgil.ShowDialog(false);
-                wrongAnswerCounter = 0;
-            }
-            else
-                wrongAnswerCounter = value;
-        }
-    }
-    protected int wrongAnswerCounter;
-
     //This property, when set to true, calls ReturnToHub in whichever camera is the current camera.
     public bool SectionComplete
     {
@@ -89,7 +69,7 @@ public class SHGameManager : MonoBehaviour
                 _sectionsCompleted++;
 
                 //Checks to see if all sections are complete; if so then we'll load the epilogue
-                if (_sectionsCompleted == 5)
+                if (_sectionsCompleted == 5 && !_myAudioSource.isPlaying)
                     Application.LoadLevel("PostHarassment");
                 else //Otherwise we add one to _sectionsComplete and brings us back to the hub world
                     CurrentCameraManager.ReturnToHub();
@@ -100,9 +80,15 @@ public class SHGameManager : MonoBehaviour
     }
     protected bool sectionComplete;
 
+    public SHCameraSelector[] AllSelectors = new SHCameraSelector[5];
     public PointOfInterest CurrentPOI;
     public MicroScenarios CurrentMicroScenario;
     public bool FocusedOnPOI;
+
+    void Awake()
+    {
+        AllSelectors = FindObjectsOfType<SHCameraSelector>();
+    }
 
     void Start()
     {
@@ -113,7 +99,14 @@ public class SHGameManager : MonoBehaviour
         AnswersSelected.Add(ButtonType.IStatement, false);
         AnswersSelected.Add(ButtonType.Friends, false);
         InitializePointsOfView();
-        _allSelectors = FindObjectsOfType<SHCameraSelector>();
+
+        _myAudioSource = _myVirgil.GetComponentInChildren<AudioSource>();
+    }
+
+    void Update()
+    {
+        if (_sectionsCompleted == 5 && !_myAudioSource.isPlaying)
+            Application.LoadLevel("PostHarassment");
     }
 
     public bool CheckAnswer(ButtonType button)

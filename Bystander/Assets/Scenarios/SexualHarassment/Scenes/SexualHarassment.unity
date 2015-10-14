@@ -458,6 +458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyMicroScenario: 4
   MySelectSprite: {fileID: 822922098}
+  Selected: 0
 --- !u!1 &105907630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,6 +1949,7 @@ Transform:
   - {fileID: 453417047}
   - {fileID: 866427230}
   - {fileID: 1752545917}
+  - {fileID: 1282957997}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &312869271
@@ -2807,7 +2809,6 @@ Transform:
   m_Children:
   - {fileID: 1415197944}
   - {fileID: 755449243}
-  - {fileID: 1282957997}
   - {fileID: 1086916842}
   m_Father: {fileID: 304236756}
   m_RootOrder: 5
@@ -5414,6 +5415,7 @@ MonoBehaviour:
   SelectCursor: {fileID: 2800000, guid: 492d14872698a4945bbe5af1f501fdfb, type: 3}
   RegularCursor: {fileID: 2800000, guid: f0b193b09e1d587408e591fbd0523d80, type: 3}
   NoClickCursor: {fileID: 2800000, guid: b273bfb9beeea614ca44052a04f8ab48, type: 3}
+  CursorIndex: 0
 --- !u!4 &980634356
 Transform:
   m_ObjectHideFlags: 0
@@ -6129,7 +6131,7 @@ Transform:
   - {fileID: 1418452979}
   - {fileID: 607637274}
   m_Father: {fileID: 453417047}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1091018677
 GameObject:
   m_ObjectHideFlags: 0
@@ -6705,6 +6707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyMicroScenario: 0
   MySelectSprite: {fileID: 1708404785}
+  Selected: 0
 --- !u!1 &1137137394
 GameObject:
   m_ObjectHideFlags: 0
@@ -6943,7 +6946,7 @@ GameObject:
   - 4: {fileID: 1170292873}
   - 114: {fileID: 1170292872}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: SHGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6960,6 +6963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c30c40b115b2f4fa7d9b67fd01c5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllSelectors: []
   CurrentPOI: {fileID: 0}
   CurrentMicroScenario: 0
   FocusedOnPOI: 0
@@ -7841,11 +7845,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282957996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.89032555, y: .687084198, z: 2.70000005}
+  m_LocalPosition: {x: .922045708, y: 2.91501188, z: 0}
   m_LocalScale: {x: 1.44510305, y: 1.44510305, z: 1}
   m_Children: []
-  m_Father: {fileID: 453417047}
-  m_RootOrder: 2
+  m_Father: {fileID: 304236756}
+  m_RootOrder: 8
 --- !u!1 &1288437025
 GameObject:
   m_ObjectHideFlags: 0
@@ -8265,6 +8269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyMicroScenario: 1
   MySelectSprite: {fileID: 218261893}
+  Selected: 0
 --- !u!1 &1329614316
 GameObject:
   m_ObjectHideFlags: 0
@@ -10444,6 +10449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyMicroScenario: 2
   MySelectSprite: {fileID: 1553104222}
+  Selected: 0
 --- !u!1 &1655653317
 GameObject:
   m_ObjectHideFlags: 0
@@ -11522,6 +11528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyMicroScenario: 3
   MySelectSprite: {fileID: 1119198239}
+  Selected: 0
 --- !u!1 &1925001383
 GameObject:
   m_ObjectHideFlags: 0
@@ -11639,6 +11646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyMicroScenario: 0
   MySelectSprite: {fileID: 0}
+  Selected: 0
 --- !u!1 &1958780894
 GameObject:
   m_ObjectHideFlags: 0
@@ -12180,6 +12188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7209c91781cef3e4da531e1c8ff85208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseMenu: {fileID: 0}
+  DialogManager: {fileID: 0}
 --- !u!4 &2121119753
 Transform:
   m_ObjectHideFlags: 0

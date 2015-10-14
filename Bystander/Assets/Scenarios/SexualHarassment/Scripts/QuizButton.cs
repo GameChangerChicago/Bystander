@@ -108,8 +108,7 @@ public class QuizButton : MonoBehaviour
                 _myGameManager.CurrentPOI.ComicShown = false;
                 if (_myGameManager.CurrentPOI.CompanionPOI != null)
                     _myGameManager.CurrentPOI.CompanionPOI.ComicShown = false;
-                StartCoroutine(_myGameManager.ReenablePOIs());
-                _myGameManager.WrongAnswerCounter++;
+                _myVirgil.ShowDialog(false);
 
                 //When calling this method with 'true' it plays the wrong answer audio
                 _myVirgil.PlayAudio(true);

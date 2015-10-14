@@ -54,7 +54,7 @@ public class PointOfInterest : MonoBehaviour
 
     void Start()
     {
-        //Standard instantiation junk. UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT. WHATCHU GONNA DO NOW? A, B, START! -Konami
+        //Standard instantiation junk.
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         _myCamera = this.transform.parent.GetComponentInChildren<Camera>();

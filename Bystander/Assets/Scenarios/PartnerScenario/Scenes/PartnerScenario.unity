@@ -1356,7 +1356,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1061411762}
   DialogManager: {fileID: 1938608519}
-  CursorIndexAtPause: 0
 --- !u!4 &222780680
 Transform:
   m_ObjectHideFlags: 0
@@ -9285,7 +9284,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.63999987
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -14678,7 +14677,7 @@ Transform:
   m_GameObject: {fileID: 2049824706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.15665436}
-  m_LocalScale: {x: .920000017, y: .921000004, z: 1}
+  m_LocalScale: {x: .889999986, y: .889999986, z: 1}
   m_Children: []
   m_Father: {fileID: 1214040607}
   m_RootOrder: 2

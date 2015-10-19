@@ -366,7 +366,7 @@ public class CutSceneManager : MonoBehaviour
 
             if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayAnimImmediately)
                 Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
-            else if (Page[_currentStep].MyAnimator != null && !clickDisabled)
+            else if (Page[_currentStep].MyAnimator != null)// && !clickDisabled)
                 FireAnimation();
 
             if (Page[_currentStep].StepClip != null && !Page[_currentStep].PlayAudioImmediately)

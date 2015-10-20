@@ -8,7 +8,7 @@ AnimatorController:
   m_Name: Q&APanel
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: Index
+  - m_Name: AnimatorIndex
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -39,7 +39,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: Index
+    m_ConditionEvent: AnimatorIndex
     m_EventTreshold: 2
     m_ExitTime: 1
   m_Atomic: 1
@@ -59,7 +59,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: Index
+    m_ConditionEvent: AnimatorIndex
     m_EventTreshold: 3
     m_ExitTime: .916666687
   m_Atomic: 1
@@ -127,16 +127,16 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110210293}
-      second: []
+      first: {fileID: 110200000}
+      second:
+      - {fileID: 110100000}
     data:
       first: {fileID: 110231949}
       second:
       - {fileID: 110106524}
     data:
-      first: {fileID: 110200000}
-      second:
-      - {fileID: 110100000}
+      first: {fileID: 110210293}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 36, y: -24, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

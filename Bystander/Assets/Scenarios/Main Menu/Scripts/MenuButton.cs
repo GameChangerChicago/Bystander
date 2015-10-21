@@ -5,6 +5,7 @@ public class MenuButton : MonoBehaviour
 {
     public GameObject SelectedSprite;
     public string Level;
+    public int SubMenuIndex;
     public bool ScenerioButton,
                 CloseMenuButton;
 
@@ -69,7 +70,7 @@ public class MenuButton : MonoBehaviour
 
         if (mousedOver)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyUp(KeyCode.Mouse0))
             {
                 if (Level != "")
                 {
@@ -80,7 +81,7 @@ public class MenuButton : MonoBehaviour
                 }
                 else if (!CloseMenuButton)
                 {
-                    ToggleScenarios();
+                    Invoke("ToggleScenarios", 0.1f);
                 }
                 else
                 {
@@ -95,9 +96,19 @@ public class MenuButton : MonoBehaviour
 
     private void ToggleScenarios()
     {
-        if (_camera.transform.position.y > 0)
-            _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y - 15.5f, _camera.transform.position.z);
-        else
-            _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + 15.5f, _camera.transform.position.z);
+        if (SubMenuIndex == 0)
+        {
+            if (_camera.transform.position.y > 0)
+                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y - 15.5f, _camera.transform.position.z);
+            else
+                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + 15.5f, _camera.transform.position.z);
+        }
+        else if (SubMenuIndex == 1)
+        {
+            if (_camera.transform.position.y > 0)
+                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y - 31.4734f, _camera.transform.position.z);
+            else
+                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + 31.4734f, _camera.transform.position.z);
+        }
     }
 }

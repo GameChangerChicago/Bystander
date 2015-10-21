@@ -753,7 +753,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 634dbb0b9a0820f4ea3558bcb8705ba3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b356c51a902a8af40b251ce38dd1ce27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &601883782
 GameObject:
@@ -1113,7 +1113,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b0a81ba3597b42d498b5e4a17ccce16c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ca3280d010a07c4bb96562151bc71f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &921203503
 GameObject:
@@ -1151,7 +1151,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 921203503}
-  m_Text: this is the halfway point.
+  m_Text: We're a quarter trhough.
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -1266,7 +1266,7 @@ GameObject:
   - 114: {fileID: 968672509}
   - 61: {fileID: 968672508}
   m_Layer: 0
-  m_Name: Part3 Button
+  m_Name: Part2 Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 875624397}
-  Level: Scene11
+  Level: Scene7
   SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 0
@@ -1896,7 +1896,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1467752530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.2386818, y: 6.69581795, z: 0}
+  m_LocalPosition: {x: 9.77923393, y: 6.69581795, z: 0}
   m_LocalScale: {x: .642071068, y: .642071068, z: .642071068}
   m_Children:
   - {fileID: 1616757459}

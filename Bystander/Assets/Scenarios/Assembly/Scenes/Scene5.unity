@@ -4096,6 +4096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1415148060}
   Level: MainMenu_Generic
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 0
 --- !u!1 &1006657638
@@ -6574,6 +6575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1170587430}
   Level: 
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 1
 --- !u!1 &1545274156
@@ -9072,7 +9074,7 @@ MonoBehaviour:
     height: 0
   CamLocation: {x: 0, y: 0}
   MyText: 
-  SceneToLoad: Scene7
+  SceneToLoad: MainMenu_QuarterGame
   CamSize: 0
   CamTravelTime: 0
   PartyCameraTravelTime: 0

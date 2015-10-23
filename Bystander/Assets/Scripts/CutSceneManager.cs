@@ -14,9 +14,15 @@ public class CutSceneManager : MonoBehaviour
             if (value != _clickDisabled)
             {
                 if (value)
+                {
+                    Debug.Log("Sup");
                     _cursorHandler.ChangeCursor(2);
+                }
                 else
+                {
+                    Debug.Log("Yo");
                     _cursorHandler.ChangeCursor(1);
+                }
 
                 _clickDisabled = value;
             }
@@ -67,7 +73,7 @@ public class CutSceneManager : MonoBehaviour
             _cursorHandler.ChangeCursor(2);
             _clickDisabled = true;
             Invoke("AutoStep", Page[_currentStep + 1].InitialDelay);
-            Invoke("ReEnableClicking", Page[_currentStep + 1].InitialDelay);
+            Invoke("ReEnableClicking", Page[_currentStep + 1].ClickDelay);
         }
     }
 
@@ -142,6 +148,7 @@ public class CutSceneManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(clickDisabled);
         if (IntroAudio != null && IntroAudio.time >= IntroAudio.clip.length && !_introAudioFinished)
         {
             if (_currentStep > -1)

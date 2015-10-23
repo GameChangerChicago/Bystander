@@ -121,7 +121,7 @@ public class CutSceneManager : MonoBehaviour
                 }
             }
         }
-        else if (Page[_currentStep].SceneToLoad != "")
+        else if (!clickDisabled && Page[_currentStep].SceneToLoad != "")
         {
             //The only scenes who's second character is 'o' are the post cutscenes
             //So basically what I'm doing with that second condition is seeing if this is a post cutscene

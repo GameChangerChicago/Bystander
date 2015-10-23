@@ -16,6 +16,8 @@ public class CursorHandler : MonoBehaviour
 
     void OnGUI()
     {
+        GUI.depth = 0;
+
         if (CursorIndex == 0)
             GUI.DrawTexture(new Rect(Input.mousePosition.x, Screen.height - Input.mousePosition.y, Screen.height / 20, Screen.height / 20), SelectCursor);
         else if (CursorIndex == 1)

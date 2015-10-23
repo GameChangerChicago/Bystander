@@ -79,6 +79,8 @@ public class GUIManager : MonoBehaviour
             {
                 GUI.SetNextControlName("InputField");
                 inputField = GUI.TextField(new Rect(screenWidth - 200, screenHeight - 45, 250, 50), inputField, 15);
+
+                GUI.depth = 1;
             }
         }
     }

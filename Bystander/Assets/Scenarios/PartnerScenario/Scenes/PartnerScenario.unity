@@ -9386,7 +9386,7 @@ MonoBehaviour:
   MyTrigger: {fileID: 2124261003}
   MyPartnerGameManager: {fileID: 1817502298}
   MyDialogueManager: {fileID: 1938608519}
-  HintDelay: 5
+  HintDelay: 25
   InitialDelay: 0
 --- !u!1 &1217520254
 GameObject:
@@ -11543,6 +11543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1365540596}
   Level: 
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 1
 --- !u!1 &1602476803
@@ -13201,6 +13202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 33738556}
   Level: MainMenu_Generic
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 0
 --- !u!1 &1896638421

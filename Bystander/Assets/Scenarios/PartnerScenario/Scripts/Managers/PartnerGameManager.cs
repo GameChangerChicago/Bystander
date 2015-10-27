@@ -89,6 +89,15 @@ public class PartnerGameManager : MonoBehaviour
     {
         UpdateGinaAnimationParams();
         UpdateHollyAnimationParams();
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Debug.Log(FindObjectsOfType<GUIElement>().Length);
+            for (int i = 0; i < FindObjectsOfType<GUIElement>().Length; i++)
+            {
+                Debug.Log(FindObjectsOfType<GUIElement>()[i].name);
+            }
+        }
     }
 
     private void UpdateGinaAnimationParams()

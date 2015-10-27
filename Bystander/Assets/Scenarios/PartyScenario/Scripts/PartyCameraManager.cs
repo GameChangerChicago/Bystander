@@ -122,7 +122,10 @@ public class PartyCameraManager : MonoBehaviour
         _myGameManager.CameraMoving = false;
 
         if (_movingBack)
+        {
             _cursorHandler.ChangeCursor(1);
+            _movingBack = false;
+        }
     }
 
     public void ResetCam()

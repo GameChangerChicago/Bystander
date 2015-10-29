@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
 
             if (_partyGM != null)
             {
-                _partyGM.EnableAllProps();
+                StartCoroutine(_partyGM.EnableAllProps(0));
             }
 
             _cursorHandler.ChangeCursor(_cursorIndexAtPause);

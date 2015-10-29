@@ -101,6 +101,7 @@ public class PartyGameManager : MonoBehaviour
     private InteractiveMoments _currentInteractiveMoment = InteractiveMoments.LivingRoom;
     private PartyCameraManager _myCameraManager;
     private PartyVirgil _virgil;
+    private HintManager _hintManager;
     private SpriteRenderer _currentBystanderPortrait;
     private GameObject _currentSection;
     private float _cameraTravelTime;
@@ -112,6 +113,7 @@ public class PartyGameManager : MonoBehaviour
         _virgil = FindObjectOfType<PartyVirgil>();
         _currentSection = GameObject.Find("LivingRoom1");
         _currentBystanderPortrait = BystanderPortraits[0];
+        _hintManager = FindObjectOfType<HintManager>();
 
         InitializeProps();
     }
@@ -198,6 +200,7 @@ public class PartyGameManager : MonoBehaviour
                 case InteractiveMoments.LivingRoom2:
                     _currentInteractiveMoment = InteractiveMoments.Hallway;
                     _currentSection = Hallway;
+                    _hintManager.transform.localScale = new Vector3(4.45f, 4.45f, 1);
                     _myCameraManager.SetCameraToMove(Hallway.transform.position, 3, 24, 0);
                     MaxClicks = 1;
                     break;
@@ -245,11 +248,14 @@ public class PartyGameManager : MonoBehaviour
         }
     }
 
-    public void EnableAllProps()
+    public IEnumerator EnableAllProps(float waitTime)
     {
+        yield return new WaitForSeconds(waitTime);
+
         for (int i = 0; i < _allProps.Length; i++)
         {
             _allProps[i].Disabled = false;
+            Debug.Log(_allProps[i].name);
         }
     }
 

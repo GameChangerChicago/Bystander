@@ -7,6 +7,7 @@ public class HintManager : MonoBehaviour
     public SpriteRenderer InstructionSprite;
     public ConversationTrigger MyTrigger;
     public PartnerGameManager MyPartnerGameManager;
+    public PartyGameManager MyPartyGameManager;
     public GameObject MyDialogueManager;
     public float HintDelay,
                  InitialDelay;
@@ -53,6 +54,9 @@ public class HintManager : MonoBehaviour
 
         if (!_timerActive && !_fadingIn && Input.GetKeyUp(KeyCode.Mouse0))
         {
+            if(MyPartyGameManager)
+                StartCoroutine(MyPartyGameManager.EnableAllProps(0.01f));
+
             _timerActive = true;
             _fadingOut = true;
         }
@@ -69,6 +73,11 @@ public class HintManager : MonoBehaviour
     {
         if (_fadingIn && InstructionSprite.color.a == 0 && Application.loadedLevelName == "MaleScenario")
             FindObjectOfType<GUIManager>().ShowTextBar = false;
+
+        if (_fadingIn && Application.loadedLevelName == "PartyScenario")
+        {
+            MyPartyGameManager.DisableAllProps();
+        }
 
         if (_fadingIn && InstructionSprite.color.a < 1)
         {

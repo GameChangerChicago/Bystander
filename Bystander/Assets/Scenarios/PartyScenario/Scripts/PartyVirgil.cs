@@ -61,7 +61,7 @@ public class PartyVirgil : MonoBehaviour
             {
                 _maskAlphaValue = 0;
                 _maskFadingIn = false;
-                _myGameManager.EnableAllProps();
+                StartCoroutine(_myGameManager.EnableAllProps(0));
                 if (BGMSource.volume < 0.3f)
                     BGMSource.volume = BGMSource.volume * 3;
             }

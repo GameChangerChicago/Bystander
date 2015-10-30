@@ -255,7 +255,6 @@ public class PartyGameManager : MonoBehaviour
         for (int i = 0; i < _allProps.Length; i++)
         {
             _allProps[i].Disabled = false;
-            Debug.Log(_allProps[i].name);
         }
     }
 

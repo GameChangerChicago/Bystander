@@ -214,6 +214,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -291,6 +292,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 1
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -747,6 +749,7 @@ MonoBehaviour:
   - {fileID: 380349728}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 0}
+  CurrentStep: 0
 --- !u!1 &74783956
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +845,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 1
   Disabled: 0
   Exit: 0
@@ -2488,6 +2492,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 1
@@ -3226,6 +3231,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 1
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -3794,6 +3800,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 1
@@ -5184,6 +5191,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 1
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -5384,6 +5392,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 1
   Disabled: 0
   Exit: 0
@@ -7617,6 +7626,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 1
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -9388,6 +9398,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 1
@@ -10093,6 +10104,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 1
   Disabled: 0
   Exit: 0
@@ -10412,6 +10424,7 @@ MonoBehaviour:
   - {fileID: 1681295427}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 0}
+  CurrentStep: 0
 --- !u!65 &884721348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10673,6 +10686,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 1
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -12047,6 +12061,7 @@ MonoBehaviour:
   - {fileID: 814908355}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 0}
+  CurrentStep: 0
 --- !u!1 &975883928
 GameObject:
   m_ObjectHideFlags: 0
@@ -13480,6 +13495,7 @@ MonoBehaviour:
   - {fileID: 82118940}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 0}
+  CurrentStep: 0
 --- !u!1 &1103257508
 GameObject:
   m_ObjectHideFlags: 0
@@ -13742,6 +13758,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 1
   Disabled: 0
   Exit: 0
@@ -15988,6 +16005,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 1
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -18312,6 +18330,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -19482,6 +19501,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -19883,6 +19903,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 1
   Disabled: 0
   Exit: 0
@@ -20101,6 +20122,7 @@ MonoBehaviour:
   - {fileID: 1393127785}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 0}
+  CurrentStep: 0
 --- !u!1 &1757267768
 GameObject:
   m_ObjectHideFlags: 0
@@ -20538,6 +20560,7 @@ MonoBehaviour:
   - {fileID: 1340272838}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 0}
+  CurrentStep: 0
 --- !u!1 &1785116835
 GameObject:
   m_ObjectHideFlags: 0
@@ -23354,6 +23377,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 0
   Disabled: 0
   Exit: 1
@@ -23853,6 +23877,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 0
   InfiniteClicks: 1
   Disabled: 0
   Exit: 0
@@ -23985,6 +24010,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 1
+  HasCutscene: 1
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0
@@ -24296,6 +24322,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 0
+  HasCutscene: 0
   InfiniteClicks: 1
   Disabled: 0
   Exit: 0
@@ -25040,6 +25067,7 @@ MonoBehaviour:
   HasMultipleSteps: 0
   AnimationChanges: 0
   HasCloseupAnimation: 0
+  HasCutscene: 1
   InfiniteClicks: 0
   Disabled: 0
   Exit: 0

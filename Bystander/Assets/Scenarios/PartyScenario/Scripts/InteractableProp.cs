@@ -47,6 +47,7 @@ public class InteractableProp : MonoBehaviour
                 HasMultipleSteps,
                 AnimationChanges,
                 HasCloseupAnimation,
+                HasCutscene,
                 InfiniteClicks,
                 Disabled,
                 Exit;
@@ -85,6 +86,13 @@ public class InteractableProp : MonoBehaviour
 
         if (HasCloseupAnimation)
             CloseUpAnimator.speed = 0;
+
+        _myCSManager = MyPanelPos.gameObject.GetComponent<CutSceneManager>();
+
+        if (_myCSManager != null)
+        {
+            _hasCutscene = true;
+        }
     }
 
     void Update()
@@ -101,13 +109,6 @@ public class InteractableProp : MonoBehaviour
 
         if (MousedOver)
             ClickHandler();
-
-        _myCSManager = MyPanelPos.gameObject.GetComponent<CutSceneManager>();
-
-        if (_myCSManager != null)
-        {
-            _hasCutscene = true;
-        }
     }
 
     private void ClickHandler()
@@ -124,12 +125,7 @@ public class InteractableProp : MonoBehaviour
             _myGameManager.PlayerClicked(ImportantProp, _hasCutscene, CameraMoveTime, MyPanelPos.position, CameraSize, ViewTime, CamRotation);
 
             //If the interactable prop has dialog than this calls the first DialogHandler
-            if (_hasCutscene)
-            {
-                //ConvoHandler currentCloseUpConvo = GameObject.Find(this.name + "Comic").GetComponent<ConvoHandler>();
-                //StartCoroutine(currentCloseUpConvo.DialogHandler(CameraMoveTime));
-            }
-            else
+            if (!_hasCutscene)
                 StartCoroutine(_myGameManager.FinsihInteractiveSegment((2 * CameraMoveTime) + ViewTime, Exit));
 
             //If the interactable prop has dialog than this calls PlayCloseUpAnimation
@@ -188,6 +184,13 @@ public class InteractableProp : MonoBehaviour
             CloseUpAnimator.StartPlayback();
             CloseUpAnimator.Play(CloseUpAnimator.name + "_0");
             CloseUpAnimator.speed = 0;
+        }
+
+        if (HasCutscene)
+        {
+            CloseUpAnimator.SetInteger("AnimatorIndex", 0);
+            _myCSManager.enabled = false;
+            _myCSManager.CurrentStep = 0;
         }
     }
 }

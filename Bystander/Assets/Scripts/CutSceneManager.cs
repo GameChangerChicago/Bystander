@@ -15,12 +15,10 @@ public class CutSceneManager : MonoBehaviour
             {
                 if (value)
                 {
-                    Debug.Log("Sup");
                     _cursorHandler.ChangeCursor(2);
                 }
                 else
                 {
-                    Debug.Log("Yo");
                     _cursorHandler.ChangeCursor(1);
                 }
 
@@ -33,6 +31,7 @@ public class CutSceneManager : MonoBehaviour
     public Step[] Page;
     public AudioSource IntroAudio,
                        StepSoundEffect;
+    public int CurrentStep;
 
     private GameManager _gameManager;
     private PartyGameManager _partyGameManager;
@@ -46,9 +45,9 @@ public class CutSceneManager : MonoBehaviour
                   _camSizeDiff,
                   _camRotation,
                   _camRotationDiff;
-    private int _currentStep;
     private bool _movingCamera,
-                 _introAudioFinished = true;
+                 _introAudioFinished = true,
+                 _started;
 
     void Start()
     {
@@ -67,75 +66,96 @@ public class CutSceneManager : MonoBehaviour
             _partyCameraManager = FindObjectOfType<PartyCameraManager>();
         }
         
-        if (Page[_currentStep].InitialAutoStep)
+        if (Page[CurrentStep].InitialAutoStep)
         {
-            _currentStep--;
+            CurrentStep--;
             _cursorHandler.ChangeCursor(2);
             _clickDisabled = true;
-            Invoke("AutoStep", Page[_currentStep + 1].InitialDelay);
-            if (!Page[_currentStep + 2].AutoStep)
+            Invoke("AutoStep", Page[CurrentStep + 1].InitialDelay);
+            if (!Page[CurrentStep + 2].AutoStep)
             {
-                if (Page[_currentStep + 1].ClickDelay > Page[_currentStep + 1].CamTravelTime)
-                    Invoke("ReEnableClicking", Page[_currentStep + 1].ClickDelay);
+                if (Page[CurrentStep + 1].InitialDelay > Page[CurrentStep + 1].CamTravelTime)
+                    Invoke("ReEnableClicking", Page[CurrentStep + 1].InitialDelay);
                 else
-                    Invoke("ReEnableClicking", Page[_currentStep + 1].CamTravelTime);
+                    Invoke("ReEnableClicking", Page[CurrentStep + 1].CamTravelTime);
             }
+        }
 
-            Debug.Log(_clickDisabled);
+        _started = true;
+    }
+
+    void OnEnable()
+    {
+        if (_started)
+        {
+            if (Page[CurrentStep].InitialAutoStep)
+            {
+                CurrentStep--;
+                _cursorHandler.ChangeCursor(2);
+                _clickDisabled = true;
+                Invoke("AutoStep", Page[CurrentStep + 1].InitialDelay);
+                if (!Page[CurrentStep + 2].AutoStep)
+                {
+                    if (Page[CurrentStep + 1].InitialDelay > Page[CurrentStep + 1].CamTravelTime)
+                        Invoke("ReEnableClicking", Page[CurrentStep + 1].InitialDelay);
+                    else
+                        Invoke("ReEnableClicking", Page[CurrentStep + 1].CamTravelTime);
+                }
+            }
         }
     }
 
     void OnMouseDown()
     {
-        if (!clickDisabled && _introAudioFinished && Page[_currentStep].SceneToLoad == "")
+        if (!clickDisabled && _introAudioFinished && Page[CurrentStep].SceneToLoad == "")
         {
             clickDisabled = true;
 
-            if (Page[_currentStep].CamTravelTime > 0)
+            if (Page[CurrentStep].CamTravelTime > 0)
                 SetCameraToMove();
 
-            if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayAnimImmediately)
-                Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
-            else if (Page[_currentStep].MyAnimator != null)
+            if (Page[CurrentStep].MyAnimator != null && !Page[CurrentStep].PlayAnimImmediately)
+                Invoke("FireAnimation", Page[CurrentStep].CamTravelTime);
+            else if (Page[CurrentStep].MyAnimator != null)
                 FireAnimation();
 
-            if (Page[_currentStep].StepClip != null && !Page[_currentStep].PlayAudioImmediately)
-                Invoke("PlaySoundEffect", Page[_currentStep].CamTravelTime + Page[_currentStep].AudioDelay);
-            else if (Page[_currentStep].StepClip != null)
+            if (Page[CurrentStep].StepClip != null && !Page[CurrentStep].PlayAudioImmediately)
+                Invoke("PlaySoundEffect", Page[CurrentStep].CamTravelTime + Page[CurrentStep].AudioDelay);
+            else if (Page[CurrentStep].StepClip != null)
                 PlaySoundEffect();
 
-            if (Page[_currentStep].MyTextMesh != null)
+            if (Page[CurrentStep].MyTextMesh != null)
                 ChangeDialog();
 
-            if (Page[_currentStep].PartyCameraTravelTime > 0)
+            if (Page[CurrentStep].PartyCameraTravelTime > 0)
             {
                 StartCoroutine(_partyCameraManager.ReturnCamera(_partyGameManager.CurrentSection.transform.position, 0, 0));
-                StartCoroutine(_partyGameManager.FinsihInteractiveSegment(Page[_currentStep].PartyCameraTravelTime, false));
+                StartCoroutine(_partyGameManager.FinsihInteractiveSegment(Page[CurrentStep].PartyCameraTravelTime, false));
             }
 
-            if (_currentStep + 1 < Page.Length)
+            if (CurrentStep + 1 < Page.Length)
             {
-                if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
+                if (Page[CurrentStep].ClickDelay > Page[CurrentStep].CamTravelTime)
                 {
-                    Invoke("ReEnableClicking", Page[_currentStep].ClickDelay + 0.05f);
+                    Invoke("ReEnableClicking", Page[CurrentStep].ClickDelay + 0.05f);
 
-                    if (!Page[_currentStep + 1].AutoStep)
-                        Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.025f);
+                    if (!Page[CurrentStep + 1].AutoStep)
+                        Invoke("AdvanceStep", Page[CurrentStep].ClickDelay + 0.025f);
                     else
-                        Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.025f);
+                        Invoke("AutoStep", Page[CurrentStep].ClickDelay + 0.025f);
                 }
                 else
                 {
-                    Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime + 0.05f);
+                    Invoke("ReEnableClicking", Page[CurrentStep].CamTravelTime + 0.05f);
 
-                    if (!Page[_currentStep + 1].AutoStep)
-                        Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.025f);
+                    if (!Page[CurrentStep + 1].AutoStep)
+                        Invoke("AdvanceStep", Page[CurrentStep].CamTravelTime + 0.025f);
                     else
-                        Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.025f);
+                        Invoke("AutoStep", Page[CurrentStep].CamTravelTime + 0.025f);
                 }
             }
         }
-        else if (!clickDisabled && Page[_currentStep].SceneToLoad != "")
+        else if (!clickDisabled && Page[CurrentStep].SceneToLoad != "")
         {
             //The only scenes who's second character is 'o' are the post cutscenes
             //So basically what I'm doing with that second condition is seeing if this is a post cutscene
@@ -146,10 +166,10 @@ public class CutSceneManager : MonoBehaviour
             }
             else
             {
-                if (Page[_currentStep].SceneToLoad == "CLOSE")
+                if (Page[CurrentStep].SceneToLoad == "CLOSE")
                     Application.Quit();
                 else
-                    Application.LoadLevel(Page[_currentStep].SceneToLoad);
+                    Application.LoadLevel(Page[CurrentStep].SceneToLoad);
             }
         }
     }
@@ -158,11 +178,11 @@ public class CutSceneManager : MonoBehaviour
     {
         if (IntroAudio != null && IntroAudio.time >= IntroAudio.clip.length && !_introAudioFinished)
         {
-            if (_currentStep > -1)
+            if (CurrentStep > -1)
             {
-                if (Page[_currentStep].AutoStep)
+                if (Page[CurrentStep].AutoStep)
                 {
-                    _currentStep--;
+                    CurrentStep--;
                     AutoStep();
                 }
             }
@@ -176,23 +196,23 @@ public class CutSceneManager : MonoBehaviour
 
     private void FireAnimation()
     {
-        if (Page[_currentStep].AnimatorIndex != 0)
-            Page[_currentStep].MyAnimator.SetInteger("AnimatorIndex", Page[_currentStep].AnimatorIndex);
-        Page[_currentStep].MyAnimator.enabled = true;
+        if (Page[CurrentStep].AnimatorIndex != 0)
+            Page[CurrentStep].MyAnimator.SetInteger("AnimatorIndex", Page[CurrentStep].AnimatorIndex);
+        Page[CurrentStep].MyAnimator.enabled = true;
     }
 
     private void PlaySoundEffect()
     {
-        StepSoundEffect.clip = Page[_currentStep].StepClip;
+        StepSoundEffect.clip = Page[CurrentStep].StepClip;
         StepSoundEffect.Play();
     }
 
     private void ChangeDialog()
     {
-        if (!Page[_currentStep].TextBox.activeSelf)
-            Page[_currentStep].TextBox.SetActive(true);
+        if (!Page[CurrentStep].TextBox.activeSelf)
+            Page[CurrentStep].TextBox.SetActive(true);
 
-        StringFormatter(Page[_currentStep].MyText);
+        StringFormatter(Page[CurrentStep].MyText);
     }
 
     //This method takes current string and makes sure it doesn't run outhside the bounds of the dialog box
@@ -200,7 +220,7 @@ public class CutSceneManager : MonoBehaviour
     {
         string currentWord = "";
         bool isFirstWord = true;
-        GameObject dialogBox = Page[_currentStep].TextBox;
+        GameObject dialogBox = Page[CurrentStep].TextBox;
         TextMesh dBTextMesh = dialogBox.GetComponentInChildren<TextMesh>();
         MeshRenderer currentRenderer = dialogBox.GetComponentInChildren<MeshRenderer>();
 
@@ -228,9 +248,9 @@ public class CutSceneManager : MonoBehaviour
                 }
 
                 //If after adding the word the line extends past the TextBounds then the word will be added with a line break
-                if (Page[_currentStep].CamRotation == 90 || Page[_currentStep].CamRotation == -90 || Page[_currentStep].CamRotation == 270 || Page[_currentStep].CamRotation == -270)
+                if (Page[CurrentStep].CamRotation == 90 || Page[CurrentStep].CamRotation == -90 || Page[CurrentStep].CamRotation == 270 || Page[CurrentStep].CamRotation == -270)
                 {
-                    if (currentRenderer.bounds.extents.y > Page[_currentStep].TextBounds)
+                    if (currentRenderer.bounds.extents.y > Page[CurrentStep].TextBounds)
                     {
                         dBTextMesh.text = dBTextMesh.text.Remove(dBTextMesh.text.Length - (currentWord.Length));
                         dBTextMesh.text = dBTextMesh.text + "\n" + currentWord;
@@ -238,7 +258,7 @@ public class CutSceneManager : MonoBehaviour
                 }
                 else
                 {
-                    if (currentRenderer.bounds.extents.x > Page[_currentStep].TextBounds)
+                    if (currentRenderer.bounds.extents.x > Page[CurrentStep].TextBounds)
                     {
                         dBTextMesh.text = dBTextMesh.text.Remove(dBTextMesh.text.Length - (currentWord.Length));
                         dBTextMesh.text = dBTextMesh.text + "\n" + currentWord;
@@ -254,21 +274,21 @@ public class CutSceneManager : MonoBehaviour
     //This method initializes the moving process; setting impertinant fields and also invokes StopMoving
     public void SetCameraToMove()
     {
-        _pos = Page[_currentStep].CamLocation;
-        _rect = Page[_currentStep].CamRectangle;
-        _camTravelTime = Page[_currentStep].CamTravelTime;
+        _pos = Page[CurrentStep].CamLocation;
+        _rect = Page[CurrentStep].CamRectangle;
+        _camTravelTime = Page[CurrentStep].CamTravelTime;
 
         if (this.GetComponent<AspectRatioHandler>().IsMacAspect)
-            _camSize = Page[_currentStep].CamSize + (Page[_currentStep].CamSize * 0.11f);
+            _camSize = Page[CurrentStep].CamSize + (Page[CurrentStep].CamSize * 0.11f);
         else
-            _camSize = Page[_currentStep].CamSize;
+            _camSize = Page[CurrentStep].CamSize;
 
         _camSizeDiff = Mathf.Abs(this.camera.orthographicSize - _camSize);
-        _camRotation = Page[_currentStep].CamRotation;
-        _camRotationDiff = Mathf.Abs(this.transform.rotation.z - Page[_currentStep].CamRotation);
+        _camRotation = Page[CurrentStep].CamRotation;
+        _camRotationDiff = Mathf.Abs(this.transform.rotation.z - Page[CurrentStep].CamRotation);
         _rectDiff = new Rect(Mathf.Abs(this.camera.rect.x - _rect.x), Mathf.Abs(this.camera.rect.y - _rect.y), Mathf.Abs(this.camera.rect.width - _rect.width), Mathf.Abs(this.camera.rect.height - _rect.height));
         _movingCamera = true;
-        Invoke("StopMoving", Page[_currentStep].CamTravelTime);
+        Invoke("StopMoving", Page[CurrentStep].CamTravelTime);
     }
 
     //This method moves and resizes the camera for each page section
@@ -282,13 +302,13 @@ public class CutSceneManager : MonoBehaviour
         MoveValues.Add("x", _pos.x);
         MoveValues.Add("y", _pos.y);
         MoveValues.Add("z", this.transform.position.z);
-        MoveValues.Add("time", Page[_currentStep].CamTravelTime);
+        MoveValues.Add("time", Page[CurrentStep].CamTravelTime);
         MoveValues.Add("easetype", iTween.EaseType.easeOutQuad);
 
         //Initializing RotateTo values
         Hashtable RotateValues = new Hashtable();
         RotateValues.Add("z", _camRotation);
-        RotateValues.Add("time", Page[_currentStep].CamTravelTime);
+        RotateValues.Add("time", Page[CurrentStep].CamTravelTime);
         RotateValues.Add("easetype", iTween.EaseType.easeOutQuad);
 
         //Using the iTween method MoveTo we set an object to move, a location, and a speed; iTween handles the rest
@@ -364,58 +384,58 @@ public class CutSceneManager : MonoBehaviour
 
     private void AdvanceStep()
     {
-        GameObject.Destroy(Page[_currentStep]);
-        _currentStep++;
+        //GameObject.Destroy(Page[CurrentStep]);
+        CurrentStep++;
     }
 
     private void AutoStep()
     {
         clickDisabled = true;
-        _currentStep++;
+        CurrentStep++;
 
-        if (Page[_currentStep].SceneToLoad == "")
+        if (Page[CurrentStep].SceneToLoad == "")
         {
-            if (Page[_currentStep].CamTravelTime > 0)
+            if (Page[CurrentStep].CamTravelTime > 0)
                 SetCameraToMove();
 
-            if (Page[_currentStep].MyAnimator != null && !Page[_currentStep].PlayAnimImmediately)
-                Invoke("FireAnimation", Page[_currentStep].CamTravelTime);
-            else if (Page[_currentStep].MyAnimator != null)// && !clickDisabled)
+            if (Page[CurrentStep].MyAnimator != null && !Page[CurrentStep].PlayAnimImmediately)
+                Invoke("FireAnimation", Page[CurrentStep].CamTravelTime);
+            else if (Page[CurrentStep].MyAnimator != null)// && !clickDisabled)
                 FireAnimation();
 
-            if (Page[_currentStep].StepClip != null && !Page[_currentStep].PlayAudioImmediately)
-                Invoke("PlaySoundEffect", Page[_currentStep].CamTravelTime + Page[_currentStep].AudioDelay);
-            else if (Page[_currentStep].StepClip != null)
+            if (Page[CurrentStep].StepClip != null && !Page[CurrentStep].PlayAudioImmediately)
+                Invoke("PlaySoundEffect", Page[CurrentStep].CamTravelTime + Page[CurrentStep].AudioDelay);
+            else if (Page[CurrentStep].StepClip != null)
                 PlaySoundEffect();
 
-            if (Page[_currentStep].MyTextMesh != null)
+            if (Page[CurrentStep].MyTextMesh != null)
                 ChangeDialog();
 
-            if (_currentStep + 1 <= Page.Length)
+            if (CurrentStep + 1 <= Page.Length)
             {
-                if (Page[_currentStep].ClickDelay > Page[_currentStep].CamTravelTime)
+                if (Page[CurrentStep].ClickDelay > Page[CurrentStep].CamTravelTime)
                 {
-                    Invoke("ReEnableClicking", Page[_currentStep].ClickDelay + 0.05f);
+                    Invoke("ReEnableClicking", Page[CurrentStep].ClickDelay + 0.05f);
 
-                    if (!Page[_currentStep + 1].AutoStep)
-                        Invoke("AdvanceStep", Page[_currentStep].ClickDelay + 0.025f);
+                    if (!Page[CurrentStep + 1].AutoStep)
+                        Invoke("AdvanceStep", Page[CurrentStep].ClickDelay + 0.025f);
                     else
-                        Invoke("AutoStep", Page[_currentStep].ClickDelay + 0.025f);
+                        Invoke("AutoStep", Page[CurrentStep].ClickDelay + 0.025f);
                 }
                 else
                 {
-                    Invoke("ReEnableClicking", Page[_currentStep].CamTravelTime + 0.05f);
+                    Invoke("ReEnableClicking", Page[CurrentStep].CamTravelTime + 0.05f);
 
-                    if (!Page[_currentStep + 1].AutoStep)
-                        Invoke("AdvanceStep", Page[_currentStep].CamTravelTime + 0.025f);
+                    if (!Page[CurrentStep + 1].AutoStep)
+                        Invoke("AdvanceStep", Page[CurrentStep].CamTravelTime + 0.025f);
                     else
-                        Invoke("AutoStep", Page[_currentStep].CamTravelTime + 0.025f);
+                        Invoke("AutoStep", Page[CurrentStep].CamTravelTime + 0.025f);
                 }
             }
 
             clickDisabled = true;
         }
-        else if (Page[_currentStep].SceneToLoad != "")
+        else if (Page[CurrentStep].SceneToLoad != "")
         {
             //The only scenes who's second character is 'o' are the post cutscenes
             //So basically what I'm doing with that second condition is seeing if this is a post cutscene
@@ -426,17 +446,17 @@ public class CutSceneManager : MonoBehaviour
             }
             else
             {
-                if (Page[_currentStep].SceneToLoad == "CLOSE")
+                if (Page[CurrentStep].SceneToLoad == "CLOSE")
                     Application.Quit();
                 else
-                    Application.LoadLevel(Page[_currentStep].SceneToLoad);
+                    Application.LoadLevel(Page[CurrentStep].SceneToLoad);
             }
         }
     }
 
     private void ReEnableClicking()
     {
-        if (!Page[_currentStep].AutoStep)
+        if (!Page[CurrentStep].AutoStep)
             clickDisabled = false;
     }
 }

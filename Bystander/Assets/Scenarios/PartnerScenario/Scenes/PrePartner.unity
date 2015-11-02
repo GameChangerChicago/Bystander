@@ -1016,7 +1016,7 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: 'Something happened Friday night... I''m just not sure what to do. '
+  MyText: 'Something happened Friday night. I''m just not sure what to do. '
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
@@ -1658,8 +1658,8 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: 'Well, when we got to his house we were making out and that felt really
-    good, but then things started getting intense. '
+  MyText: 'Well, we were making out at his house. It was great, but then things started
+    getting intense. '
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
@@ -1887,8 +1887,7 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: 'It was great and afterwards, Isaac took me to his place and gave me this
-    bracelet. '
+  MyText: 'Afterwards, we headed to his place and he gave me this bracelet. '
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
@@ -2158,7 +2157,7 @@ TextMesh:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 506849957}
   m_Text: "Sometimes, the best way of being \r\na bystander is listening to a friend
-    \r\nwhen she needs you."
+    \r\nwhen she or he needs you."
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -2516,8 +2515,7 @@ MonoBehaviour:
     width: 1
     height: 1
   CamLocation: {x: 20.9218197, y: -24.1781902}
-  MyText: 'You want to know what he said to me? "Don''t worry, baby. You''re gonna
-    like it." '
+  MyText: 'He said, "Don''t worry, baby. You''re gonna like it." '
   SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 20
@@ -2761,8 +2759,8 @@ MonoBehaviour:
     width: 1
     height: 1
   CamLocation: {x: -2.01467204, y: -24.1781902}
-  MyText: 'Well, he kept trying to take my pants off even though I told him I wasn''t
-    ready. '
+  MyText: 'He kept trying to take my pants off even though I told him I wasn''t ready
+    to do that yet. He wasn''t listening to me. '
   SceneToLoad: 
   CamSize: 6.19999981
   CamTravelTime: 4
@@ -3320,6 +3318,7 @@ MonoBehaviour:
   - {fileID: 670501066}
   IntroAudio: {fileID: 1981265165}
   StepSoundEffect: {fileID: 1866891964}
+  CurrentStep: 0
 --- !u!65 &721782359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6097,7 +6096,7 @@ MonoBehaviour:
     width: .899999976
     height: 1
   CamLocation: {x: -5.72920179, y: -11}
-  MyText: 'Well Isaac and I went out ice skating on Friday, remember? '
+  MyText: 'Well Isaac and I went out on Friday, remember? '
   SceneToLoad: 
   CamSize: 6
   CamTravelTime: 3
@@ -7038,8 +7037,8 @@ MonoBehaviour:
     width: 0
     height: 0
   CamLocation: {x: 0, y: 0}
-  MyText: 'I didn''t want to, I really didn''t, but he just wasn''t listening. It
-    was horrible. '
+  MyText: 'It was horrible. I didn''t want to, but no matter what I said he just wasn''t
+    listening. '
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
@@ -7327,7 +7326,7 @@ MonoBehaviour:
     width: .899999976
     height: 1
   CamLocation: {x: 2.11047697, y: -10.05935}
-  MyText: "It was all so romantic. But uh\u2026 "
+  MyText: It was so sweet.
   SceneToLoad: 
   CamSize: 4.30000019
   CamTravelTime: 1

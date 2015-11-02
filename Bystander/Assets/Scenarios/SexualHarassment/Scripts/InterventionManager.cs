@@ -48,7 +48,12 @@ public class InterventionManager : MonoBehaviour
         char buttonTypeChar = '&';
         bool startPointFound = false;
         _interventionActive = true;
-        _myAnimator.SetBool("IsFaith", !_myAnimator.GetBool("IsFaith"));
+
+        //This makes sure that only faith will intervene in the bathroom
+        if (_myGameManager.CurrentMicroScenario == MicroScenarios.Bathroom)
+            _myAnimator.SetBool("IsFaith", true);
+        else
+            _myAnimator.SetBool("IsFaith", !_myAnimator.GetBool("IsFaith"));
 
         for (int i = 0; i < _interventionText.Length; i++)
         {

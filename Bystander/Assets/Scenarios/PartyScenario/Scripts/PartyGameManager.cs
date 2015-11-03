@@ -264,8 +264,13 @@ public class PartyGameManager : MonoBehaviour
         {
             _allProps[i].ResetProp();
         }
+
         _myCameraManager.ResetCam();
-        _currentBystanderPortrait.color = new Color(1, 1, 1, 1);
+
+        for (int i = 0; i < BystanderPortraits.Length; i++)
+        {
+            BystanderPortraits[i].color = new Color(1, 1, 1, 1);
+        }
     }
 
     public bool IsFinalInteractiveMoment()

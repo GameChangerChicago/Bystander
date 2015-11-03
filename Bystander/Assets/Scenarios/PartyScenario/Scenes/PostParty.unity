@@ -290,6 +290,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 0
   CamTravelTime: 0
+  PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
@@ -342,6 +343,7 @@ MonoBehaviour:
   SceneToLoad: 
   CamSize: 5.5
   CamTravelTime: 5
+  PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
@@ -666,6 +668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 708673009}
   Level: MainMenu_Generic
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 0
 --- !u!1 &1184906716
@@ -767,6 +770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 725007926}
   Level: 
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 1
 --- !u!1 &1214110403
@@ -928,8 +932,9 @@ MonoBehaviour:
   - {fileID: 307893924}
   - {fileID: 257928100}
   - {fileID: 2091407865}
-  IntroAudio: {fileID: 1409974949}
+  IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 1409974949}
+  CurrentStep: 0
 --- !u!65 &1252706853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1536,6 +1541,7 @@ MonoBehaviour:
   SceneToLoad: Scene13
   CamSize: 0
   CamTravelTime: 0
+  PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0

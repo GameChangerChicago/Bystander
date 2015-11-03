@@ -1464,7 +1464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &1085795003
 Camera:
   m_ObjectHideFlags: 0
@@ -2195,6 +2195,7 @@ MonoBehaviour:
   - {fileID: 707464413}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 707016661}
+  CurrentStep: 0
 --- !u!114 &1712914403
 MonoBehaviour:
   m_ObjectHideFlags: 0

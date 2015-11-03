@@ -405,6 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 823861222}
   Level: 
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 1
 --- !u!1 &131502550
@@ -641,6 +642,7 @@ MonoBehaviour:
   SceneToLoad: PartyScenario
   CamSize: 0
   CamTravelTime: 0
+  PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
@@ -1248,6 +1250,7 @@ MonoBehaviour:
   - {fileID: 544672109}
   IntroAudio: {fileID: 1245246187}
   StepSoundEffect: {fileID: 0}
+  CurrentStep: 0
 --- !u!114 &1612912290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,8 +1262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af76097c8a6a59f4b9273fab8e1b333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LetterBoxTop: {fileID: 0}
-  LetterBoxBottom: {fileID: 0}
+  LetterBoxTop: {fileID: 765984078}
+  LetterBoxBottom: {fileID: 131502552}
   IsMacAspect: 0
   StaticLetterBoxing: 0
 --- !u!1 &1777403862
@@ -1320,5 +1323,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1039463603}
   Level: MainMenu_Generic
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 0

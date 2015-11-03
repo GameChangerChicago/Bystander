@@ -1451,9 +1451,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 694337333}
   - 20: {fileID: 694337332}
-  - 124: {fileID: 694337331}
-  - 92: {fileID: 694337330}
-  - 81: {fileID: 694337329}
   m_Layer: 0
   m_Name: Background Camera
   m_TagString: Untagged
@@ -1461,27 +1458,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &694337329
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 694337328}
-  m_Enabled: 0
---- !u!92 &694337330
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 694337328}
-  m_Enabled: 0
---- !u!124 &694337331
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 694337328}
-  m_Enabled: 0
 --- !u!20 &694337332
 Camera:
   m_ObjectHideFlags: 0
@@ -2804,6 +2780,7 @@ MonoBehaviour:
   - {fileID: 1532622394}
   IntroAudio: {fileID: 864554660}
   StepSoundEffect: {fileID: 864554660}
+  CurrentStep: 0
 --- !u!114 &1397226378
 MonoBehaviour:
   m_ObjectHideFlags: 0

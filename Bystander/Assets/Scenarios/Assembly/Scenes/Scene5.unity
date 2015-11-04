@@ -542,6 +542,7 @@ MonoBehaviour:
   - {fileID: 2053497412}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 950832199}
+  CurrentStep: 0
 --- !u!65 &61502995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7426,8 +7427,8 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 22
-  InitialDelay: 0
+  ClickDelay: 0
+  InitialDelay: 22
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0

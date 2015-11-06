@@ -1512,7 +1512,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 333266318}
-  m_Text: 'Well Isaac and I went out ice skating on Friday, remember? '
+  m_Text: 'Well Isaac and I went on Friday, remember? '
   m_OffsetZ: 0
   m_CharacterSize: .5
   m_LineSpacing: 1
@@ -3391,8 +3391,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 725848984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.59975052, y: .0786775425, z: 24.998291}
-  m_LocalScale: {x: .693904281, y: .360686302, z: 1}
+  m_LocalPosition: {x: -3.28828239, y: .0786776021, z: 24.998291}
+  m_LocalScale: {x: .769048929, y: .360686302, z: 1}
   m_Children:
   - {fileID: 1237372502}
   m_Father: {fileID: 1291608821}
@@ -3449,8 +3449,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 794733816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5997448, y: -.366166949, z: 24.998291}
-  m_LocalScale: {x: .693903625, y: .594203174, z: 1}
+  m_LocalPosition: {x: -3.28827477, y: -.36616689, z: 24.998291}
+  m_LocalScale: {x: .769048095, y: .594203174, z: 1}
   m_Children:
   - {fileID: 1356012629}
   m_Father: {fileID: 1291608821}
@@ -3535,11 +3535,11 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 5
+  ClickDelay: 6
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
-  PlayAudioImmediately: 0
+  PlayAudioImmediately: 1
   AutoStep: 0
   InitialAutoStep: 0
 --- !u!1 &866249499
@@ -5029,8 +5029,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1237372501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.87849212, y: 1.28478658, z: 0}
-  m_LocalScale: {x: .707901418, y: 1.3618921, z: 1}
+  m_LocalPosition: {x: -3.78873301, y: 1.2847867, z: 0}
+  m_LocalScale: {x: .638731539, y: 1.3618921, z: 1}
   m_Children: []
   m_Father: {fileID: 725848986}
   m_RootOrder: 0
@@ -5431,8 +5431,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1356012627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.87850404, y: 1.52851701, z: 0}
-  m_LocalScale: {x: .707902312, y: .826680124, z: 1}
+  m_LocalPosition: {x: -3.78874707, y: 1.52851689, z: 0}
+  m_LocalScale: {x: .638732493, y: .826680124, z: 1}
   m_Children: []
   m_Father: {fileID: 794733817}
   m_RootOrder: 0

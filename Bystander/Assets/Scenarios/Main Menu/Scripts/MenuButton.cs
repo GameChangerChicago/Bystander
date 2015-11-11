@@ -75,7 +75,9 @@ public class MenuButton : MonoBehaviour
                 if (Level != "")
                 {
                     if (Level != "Close")
+                    {
                         Application.LoadLevel(Level);
+                    }
                     else
                         Application.Quit();
                 }

@@ -48,7 +48,8 @@ public class GameManager : MonoBehaviour
     private bool _audioPaused;
 
     public GameObject PauseMenu,
-                      DialogManager;
+                      DialogManager,
+                      LoadingScreen;
 
     private AudioSource[] _allAudioSources;
     private CursorHandler _cursorHandler;
@@ -67,7 +68,6 @@ public class GameManager : MonoBehaviour
         _camera = Camera.main;
         if (PauseMenu != null)
         {
-            Debug.Log(_camera);
             PauseMenu.transform.localScale = new Vector3(PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) * 0.06f),
                                                          PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) * 0.06f),
                                                          PauseMenu.transform.localScale.z);
@@ -136,5 +136,10 @@ public class GameManager : MonoBehaviour
             PauseMenu.SetActive(false);
             Time.timeScale = 1;
         }
+    }
+
+    public void LoadingHandler()
+    {
+        Instantiate(LoadingScreen, _camera.transform.position, Quaternion.identity);
     }
 }

@@ -136,19 +136,21 @@ public class MenuButton : MonoBehaviour
 	IEnumerator DisplayLoadingScreen (string Level){
 
 		StartCoroutine(FadeLoadingScreen(0f, 1f, 2f));
-		AsyncOperation async = Application.LoadLevelAsync (Level);
+		yield return new WaitForSeconds(2f);
 
-		while (!async.isDone) {
-
-						yield return null;
-				}
-
-		if (async.isDone) {
-			StartCoroutine(FadeLoadingScreen(1f, 0f, 2f));
-			               yield return new WaitForSeconds(2f);
+//		AsyncOperation async = Application.LoadLevelAsync (Level);
+//
+//		while (!async.isDone) {
+//
+//						yield return null;
+//				}
+//
+//		if (async.isDone) {
+//			StartCoroutine(FadeLoadingScreen(1f, 0f, 2f));
+//			               yield return new WaitForSeconds(2f);
 			Application.LoadLevel(Level);
-
-				}
+//
+//				}
 
 
 				

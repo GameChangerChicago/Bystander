@@ -68,9 +68,9 @@ public class GameManager : MonoBehaviour
         _camera = Camera.main;
         if (PauseMenu != null)
         {
-            PauseMenu.transform.localScale = new Vector3(PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) * 0.06f),
-                                                         PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) * 0.06f),
-                                                         PauseMenu.transform.localScale.z);
+//           PauseMenu.transform.localScale = new Vector3(PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) ),
+//                                                         PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) ),
+//                                                        PauseMenu.transform.localScale.z);
         }
 
         if (Application.loadedLevelName == "MaleScenario")

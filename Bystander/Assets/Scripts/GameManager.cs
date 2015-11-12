@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
             _cursorIndexAtPause = _cursorHandler.CursorIndex;
             _cursorHandler.ChangeCursor(1);
             PauseMenu.SetActive(true);
+            PauseMenu.transform.localScale = new Vector3(_camera.orthographicSize * 0.06f, _camera.orthographicSize * 0.06f, PauseMenu.transform.localScale.z);
             Time.timeScale = 0;
         }
         else

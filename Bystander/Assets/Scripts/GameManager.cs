@@ -83,7 +83,11 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePauseMenu();
+			if(Application.loadedLevelName != "Final_MainMenu")
+            	TogglePauseMenu();
+			else {
+				Application.Quit();
+			}
         }
     }
 

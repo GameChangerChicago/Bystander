@@ -113,18 +113,24 @@ public class MenuButton : MonoBehaviour
     {
         if (SubMenuIndex == 0)
         {
+			GameObject selectionScreen = GameObject.Find("Episode Selection");
+
             if (_camera.transform.position.y > 0)
-                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y - 15.5f, _camera.transform.position.z);
-            else
-                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + 15.5f, _camera.transform.position.z);
+
+				_camera.transform.position = new Vector3(selectionScreen.transform.position.x, selectionScreen.transform.position.y, -10);
+			else
+				_camera.transform.position = new Vector3(selectionScreen.transform.position.x, selectionScreen.transform.position.y, -10);
+//                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y - 15.5f, _camera.transform.position.z);
+//            else
+//                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + 15.5f, _camera.transform.position.z);
         }
-        else if (SubMenuIndex == 1)
-        {
-            if (_camera.transform.position.y > 0)
-                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y - 31.4734f, _camera.transform.position.z);
-            else
-                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + 31.4734f, _camera.transform.position.z);
-        }
+//        else if (SubMenuIndex == 1)
+//        {
+//            if (_camera.transform.position.y > 0)
+//                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y - 31.4734f, _camera.transform.position.z);
+//            else
+//                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + 31.4734f, _camera.transform.position.z);
+//        }
     }
 
 	IEnumerator DisplayLoadingScreen (string Level){

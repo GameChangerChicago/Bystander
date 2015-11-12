@@ -294,6 +294,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Page:
   - {fileID: 355451450}
+  - {fileID: 476240148}
+  - {fileID: 1178353547}
+  - {fileID: 121551913}
+  - {fileID: 704264164}
+  - {fileID: 508601074}
   - {fileID: 2138728170}
   IntroAudio: {fileID: 0}
   StepSoundEffect: {fileID: 950832199}
@@ -445,7 +450,7 @@ GameObject:
   - 4: {fileID: 121551912}
   - 114: {fileID: 121551913}
   m_Layer: 0
-  m_Name: Step
+  m_Name: Step4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,13 +487,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
-  CamLocation: {x: 0, y: 0}
+    width: 1
+    height: 1
+  CamLocation: {x: 6.86000299, y: -10.7732401}
   MyText: 
   SceneToLoad: 
-  CamSize: 0
-  CamTravelTime: 0
+  CamSize: 5.5999999
+  CamTravelTime: 5
   PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
@@ -497,7 +502,7 @@ MonoBehaviour:
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
-  PlayAudioImmediately: 0
+  PlayAudioImmediately: 1
   AutoStep: 0
   InitialAutoStep: 0
 --- !u!1 &152063183
@@ -603,8 +608,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205703099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.53681731, y: 1.9129554, z: 0}
-  m_LocalScale: {x: .724165022, y: 1.45121574, z: 1}
+  m_LocalPosition: {x: -3.68452215, y: 2.02090788, z: 0}
+  m_LocalScale: {x: .745794296, y: 1.26292372, z: 1}
   m_Children: []
   m_Father: {fileID: 1584812796}
   m_RootOrder: 0
@@ -615,15 +620,15 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205703099}
-  m_Text: "All involve victims who\r\n1) do not consent or who\r\n2) are unable to
-    consent."
+  m_Text: "All types of sexual violence\r\n involve victims who\r\n1) do not consent
+    or who\r\n2) are unable to consent."
   m_OffsetZ: 0
   m_CharacterSize: .150000006
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 60
+  m_FontSize: 55
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: c3a530f87f8fa1b4ab7ce4988759b1bf, type: 3}
@@ -919,7 +924,7 @@ GameObject:
   - 4: {fileID: 355451451}
   - 114: {fileID: 355451450}
   m_Layer: 0
-  m_Name: Step
+  m_Name: Step1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -936,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimator: {fileID: 0}
+  MyAnimator: {fileID: 454871991}
   StepClip: {fileID: 8300000, guid: 51d0544e767f65141a52f26c9d900619, type: 3}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
@@ -955,7 +960,7 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
+  ClickDelay: 11
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
@@ -1272,7 +1277,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.19999981
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1291,7 +1296,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 456357183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 22.2578583, y: -10.773242, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1306,7 +1311,7 @@ GameObject:
   - 4: {fileID: 476240147}
   - 114: {fileID: 476240148}
   m_Layer: 0
-  m_Name: Step
+  m_Name: Step2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1343,22 +1348,22 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
-  CamLocation: {x: 0, y: 0}
+    width: 1
+    height: 1
+  CamLocation: {x: 13.2860699, y: 0}
   MyText: 
   SceneToLoad: 
-  CamSize: 0
-  CamTravelTime: 0
+  CamSize: 5
+  CamTravelTime: 4
   PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
+  ClickDelay: 13
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
-  PlayAudioImmediately: 0
+  PlayAudioImmediately: 1
   AutoStep: 0
   InitialAutoStep: 0
 --- !u!1 &476631275
@@ -1502,7 +1507,7 @@ GameObject:
   - 4: {fileID: 508601073}
   - 114: {fileID: 508601074}
   m_Layer: 0
-  m_Name: Step
+  m_Name: Step6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1539,22 +1544,22 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
-  CamLocation: {x: 0, y: 0}
+    width: 1
+    height: 1
+  CamLocation: {x: 22.2578602, y: -10.7732401}
   MyText: 
   SceneToLoad: 
-  CamSize: 0
-  CamTravelTime: 0
+  CamSize: 5.19999981
+  CamTravelTime: 4
   PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
+  ClickDelay: 7
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
-  PlayAudioImmediately: 0
+  PlayAudioImmediately: 1
   AutoStep: 0
   InitialAutoStep: 0
 --- !u!1 &558027100
@@ -2041,7 +2046,7 @@ GameObject:
   - 4: {fileID: 704264163}
   - 114: {fileID: 704264164}
   m_Layer: 0
-  m_Name: Step
+  m_Name: Step5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2054,7 +2059,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 704264162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.9230843, y: -9.96654797, z: 0}
+  m_LocalPosition: {x: 7.64104366, y: -10.0219173, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 61502993}
@@ -2078,23 +2083,23 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
-  CamLocation: {x: 0, y: 0}
+    width: 1
+    height: 1
+  CamLocation: {x: 6.86000299, y: -10.7732401}
   MyText: 
   SceneToLoad: 
-  CamSize: 0
+  CamSize: 5.5999999
   CamTravelTime: 0
   PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
+  ClickDelay: 14
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
-  AutoStep: 0
+  AutoStep: 1
   InitialAutoStep: 0
 --- !u!1 &735791299
 GameObject:
@@ -2254,7 +2259,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789983684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: af65c5ac0fc8a82449402832177757e8, type: 2}
   m_CullingMode: 0
@@ -3277,7 +3282,7 @@ GameObject:
   - 4: {fileID: 1178353546}
   - 114: {fileID: 1178353547}
   m_Layer: 0
-  m_Name: Step
+  m_Name: Step3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3306,7 +3311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0954417bdaef4a44b9990aa93191e350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimator: {fileID: 0}
+  MyAnimator: {fileID: 789983686}
   StepClip: {fileID: 8300000, guid: 45ea7b11f48db59448f7f8a6a372a6a7, type: 3}
   MyTextMesh: {fileID: 0}
   TextBox: {fileID: 0}
@@ -3314,18 +3319,18 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
-  CamLocation: {x: 0, y: 0}
+    width: 1
+    height: 1
+  CamLocation: {x: 28.4590397, y: 0}
   MyText: 
   SceneToLoad: 
-  CamSize: 0
-  CamTravelTime: 0
+  CamSize: 5.19999981
+  CamTravelTime: 3
   PartyCameraTravelTime: 0
   CamRotation: 0
   TextBounds: 0
-  AudioDelay: 0
-  ClickDelay: 0
+  AudioDelay: 2
+  ClickDelay: 5
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
@@ -3632,8 +3637,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1286991415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.28881836e-05, y: -.0374708176, z: 0}
-  m_LocalScale: {x: 1.33029377, y: .889314413, z: 1}
+  m_LocalPosition: {x: -1.91150951, y: -.0374708176, z: 0}
+  m_LocalScale: {x: 1.01037085, y: .889314413, z: 1}
   m_Children: []
   m_Father: {fileID: 351372799}
   m_RootOrder: 0
@@ -3784,8 +3789,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1422220855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0331864357, y: -.13277626, z: 0}
-  m_LocalScale: {x: 1.62472999, y: .911517143, z: 1}
+  m_LocalPosition: {x: .0331864357, y: -.0778627396, z: 0}
+  m_LocalScale: {x: 1.62472999, y: .920700133, z: 1}
   m_Children: []
   m_Father: {fileID: 393548370}
   m_RootOrder: 2
@@ -3935,8 +3940,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1584812794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.97712946, y: -3.64539051, z: 0}
-  m_LocalScale: {x: .97606951, y: .487064332, z: 1}
+  m_LocalPosition: {x: 4.97260714, y: -3.2754879, z: 0}
+  m_LocalScale: {x: .947761714, y: .559681833, z: 1}
   m_Children:
   - {fileID: 205703100}
   m_Father: {fileID: 393548370}
@@ -4185,8 +4190,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1735511969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.28881836e-05, y: -.0374708176, z: 0}
-  m_LocalScale: {x: 1.33029377, y: .889314413, z: 1}
+  m_LocalPosition: {x: 2.28881836e-05, y: .00854825974, z: 0}
+  m_LocalScale: {x: 1.33029377, y: .881618559, z: 1}
   m_Children: []
   m_Father: {fileID: 476631276}
   m_RootOrder: 2

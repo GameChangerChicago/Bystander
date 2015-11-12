@@ -442,6 +442,7 @@ public class CutSceneManager : MonoBehaviour
             //So basically what I'm doing with that second condition is seeing if this is a post cutscene
             if (_gameManager.SingleScenarioMode && Application.loadedLevelName[1] == 'o')
             {
+                //StartCoroutine(_gameManager.LoadingHandler("MainMenu_Generic"));
                 Application.LoadLevel("MainMenu_Generic");
                 _gameManager.SingleScenarioMode = false;
             }
@@ -450,7 +451,10 @@ public class CutSceneManager : MonoBehaviour
                 if (Page[CurrentStep].SceneToLoad == "CLOSE")
                     Application.Quit();
                 else
+                {
+                    //StartCoroutine(_gameManager.LoadingHandler(Page[CurrentStep].SceneToLoad));
                     Application.LoadLevel(Page[CurrentStep].SceneToLoad);
+                }
             }
         }
     }

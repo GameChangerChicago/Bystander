@@ -288,6 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 0}
   DialogManager: {fileID: 0}
+  LoadingScreen: {fileID: 0}
 --- !u!4 &319730802
 Transform:
   m_ObjectHideFlags: 0
@@ -797,7 +798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &680377052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,7 +1152,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 921203503}
-  m_Text: We're a quarter trhough.
+  m_Text: We're a quarter through.
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1

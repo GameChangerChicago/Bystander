@@ -55,17 +55,17 @@ public class MenuButton : MonoBehaviour
 	void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
-        _camera = FindObjectOfType<Camera>();
+        _camera = Camera.main;
         _cursorHandler = FindObjectOfType<CursorHandler>();
         //hb_Manager = FindObjectOfType<HubWorldManager>();
         //gameState = hb_Manager.isGameState();
         SelectedSprite.GetComponent<SpriteRenderer>().enabled = false;
         _myCollider = this.GetComponent<BoxCollider2D>();
-		loadingBackground = GameObject.Find ("LoadingScreen");
-		backgroundColor = loadingBackground.GetComponent<SpriteRenderer> ().color = new Color (0,0,0,1);
+		//loadingBackground = GameObject.Find ("LoadingScreen");
+		//backgroundColor = loadingBackground.GetComponent<SpriteRenderer> ().color = new Color (0,0,0,1);
 
 
-		StartCoroutine (FadeLoadingScreen (1f, 0f, 3f));
+		//StartCoroutine (FadeLoadingScreen (1f, 0f, 3f));
 
     }
 

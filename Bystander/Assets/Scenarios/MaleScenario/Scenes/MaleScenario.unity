@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1937676943}
-  CursorIndexAtPause: 0
+  DialogManager: {fileID: 0}
 --- !u!4 &154372555
 Transform:
   m_ObjectHideFlags: 0
@@ -1382,6 +1382,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: f4cabb9608c6d4d92a8dbe15a3fed7c0, type: 2}
+      propertyPath: VirgilIncorrect
+      value: 
+      objectReference: {fileID: 8300000, guid: 040f39e5e657be841a7ae1eb8e356c13, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4cabb9608c6d4d92a8dbe15a3fed7c0, type: 2}
   m_RootGameObject: {fileID: 1351931322}
@@ -2478,6 +2482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1670070683}
   Level: 
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 1
 --- !u!1 &703409806
@@ -2894,6 +2899,7 @@ MonoBehaviour:
   InstructionSprite: {fileID: 462511479}
   MyTrigger: {fileID: 0}
   MyPartnerGameManager: {fileID: 0}
+  MyPartyGameManager: {fileID: 0}
   MyDialogueManager: {fileID: 0}
   HintDelay: 25
   InitialDelay: 8
@@ -5429,7 +5435,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3993981873
   m_SortingOrder: 15
-  m_Sprite: {fileID: 21300000, guid: be72519019d394546b065395240d1cde, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dceca74d72ff54291a14d81c62a5ee2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1564912116
 Transform:
@@ -5545,7 +5551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackgroundNoise: {fileID: 8300000, guid: 5386dd8a3941e431d9e99f8c2a5d12ec, type: 3}
   BackgroundMusic: {fileID: 0}
-  VirgilIncorrect: {fileID: 8300000, guid: ab42a99cf303a494fa11fc431c724930, type: 3}
+  VirgilIncorrect: {fileID: 8300000, guid: 040f39e5e657be841a7ae1eb8e356c13, type: 3}
 --- !u!1 &1614733545
 GameObject:
   m_ObjectHideFlags: 0
@@ -7159,6 +7165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1404148542}
   Level: MainMenu_Generic
+  SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 0
 --- !u!1 &2009367165

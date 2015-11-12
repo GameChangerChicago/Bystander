@@ -4,10 +4,12 @@ using System.Collections;
 public class MenuButton : MonoBehaviour
 {
     public GameObject SelectedSprite;
+
     public string Level;
     public int SubMenuIndex;
     public bool ScenerioButton,
                 CloseMenuButton;
+
 
     protected bool mousedOver
     {
@@ -43,9 +45,14 @@ public class MenuButton : MonoBehaviour
     private HubWorldManager hb_Manager;
     private HB_GameState gameState;
     private Collider2D _myCollider;
+	private Color backgroundColor;
+	private GameObject loadingBackground;
 
     // Use this for initialization
-    void Start()
+   
+
+
+	void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
         _camera = FindObjectOfType<Camera>();
@@ -54,6 +61,12 @@ public class MenuButton : MonoBehaviour
         //gameState = hb_Manager.isGameState();
         SelectedSprite.GetComponent<SpriteRenderer>().enabled = false;
         _myCollider = this.GetComponent<BoxCollider2D>();
+		loadingBackground = GameObject.Find ("LoadingScreen");
+		backgroundColor = loadingBackground.GetComponent<SpriteRenderer> ().color = new Color (0,0,0,1);
+
+
+		StartCoroutine (FadeLoadingScreen (1f, 0f, 3f));
+
     }
 
     void Update()
@@ -76,7 +89,7 @@ public class MenuButton : MonoBehaviour
                 {
                     if (Level != "Close")
                     {
-                        Application.LoadLevel(Level);
+						StartCoroutine(DisplayLoadingScreen(Level));
                     }
                     else
                         Application.Quit();
@@ -113,4 +126,47 @@ public class MenuButton : MonoBehaviour
                 _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + 31.4734f, _camera.transform.position.z);
         }
     }
-}
+
+	IEnumerator DisplayLoadingScreen (string Level){
+
+		StartCoroutine(FadeLoadingScreen(0f, 1f, 2f));
+		AsyncOperation async = Application.LoadLevelAsync (Level);
+
+		while (!async.isDone) {
+
+						yield return null;
+				}
+
+		if (async.isDone) {
+			StartCoroutine(FadeLoadingScreen(1f, 0f, 2f));
+			               yield return new WaitForSeconds(2f);
+			Application.LoadLevel(Level);
+
+				}
+
+
+				
+	}
+
+	IEnumerator FadeLoadingScreen(float currentAlpha, float finalAlpha, float time){
+
+		yield return new WaitForSeconds (1f);
+				for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / time) {
+						Color newColor = new Color (0, 0, 0, Mathf.Lerp (currentAlpha, finalAlpha, t));
+						loadingBackground.GetComponent<SpriteRenderer> ().color = newColor;
+				
+						yield return null;
+
+		
+				}
+		}
+
+
+	}
+		
+
+
+
+		                                                                
+
+		                                                                 

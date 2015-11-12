@@ -612,6 +612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 0}
   DialogManager: {fileID: 0}
+  LoadingScreen: {fileID: 0}
 --- !u!4 &319730802
 Transform:
   m_ObjectHideFlags: 0
@@ -2441,6 +2442,54 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 49afb047c42ab414f84b93d61af08e20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &1110853531
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -9.14000034
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4.61887503
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+  m_RootGameObject: {fileID: 2107421065}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1111547233
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,6 +4212,57 @@ MonoBehaviour:
   SubMenuIndex: 0
   ScenerioButton: 0
   CloseMenuButton: 0
+--- !u!1 &2107421065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+  m_PrefabInternal: {fileID: 1110853531}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2107421067}
+  - 212: {fileID: 2107421066}
+  m_Layer: 0
+  m_Name: LoadingScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &2107421066
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1110853531}
+  m_GameObject: {fileID: 2107421065}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6180c9eb9753df442a08e79fb87b5d47, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!4 &2107421067
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 75f4fe3af1c0e4067bbc22788ece7cf8, type: 2}
+  m_PrefabInternal: {fileID: 1110853531}
+  m_GameObject: {fileID: 2107421065}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -9.14000034}
+  m_LocalScale: {x: 2.6400156, y: 4.61887503, z: 2.64001751}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &2117146326
 GameObject:
   m_ObjectHideFlags: 0

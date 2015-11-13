@@ -179,7 +179,7 @@ public class DialogueHandler: MonoBehaviour
 								dialogueIndex = i + 1;
 								numDialogueLinesShown++;
 								StringFormatter (displayText);
-                                Debug.Log("Sup");
+                               
 								break;
 				
 				
@@ -231,7 +231,7 @@ public class DialogueHandler: MonoBehaviour
 								//dialogueSprite.GetComponenet<Transform>().
 								
 
-								Debug.Log (currentRenderer.bounds);
+						
 				
 								//Resets the current word each time
 								currentWord = "";

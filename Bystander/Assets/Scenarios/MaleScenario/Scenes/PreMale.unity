@@ -6956,7 +6956,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6989,6 +6989,14 @@ Prefab:
     - target: {fileID: 100014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
+      propertyPath: ScenerioButton
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
+      propertyPath: CloseMenuButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
@@ -7432,8 +7440,8 @@ Transform:
   m_PrefabInternal: {fileID: 1718028308}
   m_GameObject: {fileID: 1812859127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 10}
-  m_LocalScale: {x: .36189267, y: .36189276, z: .36189276}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: .30423376, y: .30423373, z: .30423373}
   m_Children:
   - {fileID: 1547464238}
   - {fileID: 1198111240}
@@ -8416,8 +8424,8 @@ MonoBehaviour:
   SelectedSprite: {fileID: 698645076}
   Level: 
   SubMenuIndex: 0
-  ScenerioButton: 1
-  CloseMenuButton: 0
+  ScenerioButton: 0
+  CloseMenuButton: 1
 --- !u!1 &2023074905
 GameObject:
   m_ObjectHideFlags: 0

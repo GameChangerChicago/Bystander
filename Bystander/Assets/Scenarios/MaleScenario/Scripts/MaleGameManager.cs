@@ -118,15 +118,16 @@ public class MaleGameManager : MonoBehaviour
 						switch (a) {
 
 						case "BELIEVE":
-								Debug.Log ("The Answer is Believe! Moving to next game State");
+								
 								//correctAnswer = a;
+								gameState = GameState.Q2;				
 								correctAnswer = answerArray [1];
 								questionAnswered = false;
-								gameState = GameState.Q2;
+								
 								//Debug.Log (correctAnswer);
 								break;
 						case "23":
-								Debug.Log ("The Answer is 23%! Moving to next game State");
+								
 								correctAnswer = answerArray [2];
 								questionAnswered = false;
 								gameState = GameState.Q3;
@@ -140,37 +141,37 @@ public class MaleGameManager : MonoBehaviour
 //								//Debug.Log (correctAnswer);
 //								break;
 						case "STATE":
-								Debug.Log ("Correct! You are really smart");
+								
 								correctAnswer = answerArray [3];
 								gameState = GameState.Q4;
 								//Debug.Log (correctAnswer);
 								break;
 						case "CONSENT":
-								Debug.Log ("Yep yep!");
+								
 								correctAnswer = answerArray [4];
 								gameState = GameState.Q5;
 								//Debug.Log (correctAnswer);
 								break;
 						case "THREATENED":
-								Debug.Log ("Uh-huh!");
+								
 								correctAnswer = answerArray [5];
 								gameState = GameState.Q6;
 								//Debug.Log (correctAnswer);
 								break;
 						case "ALCOHOL":
-								Debug.Log ("Yes~");
+								
 								correctAnswer = answerArray [6];
 								gameState = GameState.Q7;
 								//Debug.Log (correctAnswer);
 								break;
 						case "TRUSTED":
-								Debug.Log ("Correcto mundo");
+								
 								correctAnswer = answerArray [7];
 								gameState = GameState.Q8;
 								//Debug.Log (correctAnswer);
 								break;
 						case "656HOPE":	
-								Debug.Log ("Say what!");
+								
 								gameState = GameState.Outro;
 							//	cameraManager.GetComponent<Animator> ().Play ("TrackInLocation");
 								//Debug.Log (correctAnswer);

@@ -404,7 +404,7 @@ Transform:
   m_PrefabInternal: {fileID: 1279719779}
   m_GameObject: {fileID: 103137083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.63012958, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 270942922}
@@ -1431,7 +1431,7 @@ SpriteRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1279719779}
   m_GameObject: {fileID: 490532561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -2793,8 +2793,8 @@ Transform:
   m_PrefabInternal: {fileID: 1279719779}
   m_GameObject: {fileID: 995224465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 10}
-  m_LocalScale: {x: .349999994, y: .349999994, z: .349999994}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: .30423376, y: .30423373, z: .30423373}
   m_Children:
   - {fileID: 1087094605}
   - {fileID: 883515324}
@@ -2917,7 +2917,7 @@ SpriteRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1279719779}
   m_GameObject: {fileID: 1040409487}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -3526,7 +3526,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3554,7 +3554,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
       propertyPath: m_IsActive
@@ -4149,8 +4149,8 @@ MonoBehaviour:
   SelectedSprite: {fileID: 490532561}
   Level: 
   SubMenuIndex: 0
-  ScenerioButton: 1
-  CloseMenuButton: 0
+  ScenerioButton: 0
+  CloseMenuButton: 1
 --- !u!1 &1735511969
 GameObject:
   m_ObjectHideFlags: 0

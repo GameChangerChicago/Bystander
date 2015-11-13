@@ -47,7 +47,7 @@ public class MenuButton : MonoBehaviour
     private Collider2D _myCollider;
 	private Color backgroundColor;
 	private GameObject loadingBackground;
-
+	private GameObject selectionScreen;
     // Use this for initialization
    
 
@@ -63,7 +63,7 @@ public class MenuButton : MonoBehaviour
         _myCollider = this.GetComponent<BoxCollider2D>();
 		//loadingBackground = GameObject.Find ("LoadingScreen");
 		//backgroundColor = loadingBackground.GetComponent<SpriteRenderer> ().color = new Color (0,0,0,1);
-
+		selectionScreen = GameObject.Find("Episode Selection");
 
 		//StartCoroutine (FadeLoadingScreen (1f, 0f, 3f));
 
@@ -89,14 +89,14 @@ public class MenuButton : MonoBehaviour
                 {
                     if (Level != "Close")
                     {
-						StartCoroutine(DisplayLoadingScreen(Level));
+						Application.LoadLevel(Level);
                     }
                     else
                         Application.Quit();
                 }
                 else if (!CloseMenuButton)
                 {
-                    Invoke("ToggleScenarios", 0.1f);
+					ToggleScenarios();
                 }
                 else
                 {
@@ -105,6 +105,8 @@ public class MenuButton : MonoBehaviour
 
                 if (ScenerioButton)
                     _gameManager.SingleScenarioMode = true;
+
+
             }
         }
     }
@@ -113,7 +115,7 @@ public class MenuButton : MonoBehaviour
     {
         if (SubMenuIndex == 0)
         {
-			GameObject selectionScreen = GameObject.Find("Episode Selection");
+			Debug.Log("hello?");
 
             if (_camera.transform.position.y > 0)
 

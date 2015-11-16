@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,18 +27,26 @@ public class GameManager : MonoBehaviour
         {
             if (_audioPaused != value)
             {
+                _relaventAudioSources.Clear();
+
+                for (int i = 0; i < _allAudioSources.Length; i++)
+                {
+                    if (_allAudioSources[i].isPlaying)
+                        _relaventAudioSources.Add(_allAudioSources[i]);
+                }
+
                 if (value)
                 {
-                    for (int i = 0; i < _allAudioSources.Length; i++)
+                    for (int i = 0; i < _relaventAudioSources.Count; i++)
                     {
-                        _allAudioSources[i].Pause();
+                        _relaventAudioSources[i].Pause();
                     }
                 }
                 else
                 {
-                    for (int i = 0; i < _allAudioSources.Length; i++)
+                    for (int i = 0; i < _relaventAudioSources.Count; i++)
                     {
-                        _allAudioSources[i].Play();
+                        _relaventAudioSources[i].Play();
                     }
                 }
 
@@ -48,10 +57,11 @@ public class GameManager : MonoBehaviour
     private bool _audioPaused;
 
     public GameObject PauseMenu,
-                      DialogManager,
-                      LoadingScreen;
+                      DialogManager;
+    public Camera LoadingCamera;
 
     private AudioSource[] _allAudioSources;
+    private List<AudioSource> _relaventAudioSources = new List<AudioSource>();
     private CursorHandler _cursorHandler;
     private PartnerGameManager _partnerGM;
     private PartyGameManager _partyGM;
@@ -66,12 +76,6 @@ public class GameManager : MonoBehaviour
         _partnerGM = FindObjectOfType<PartnerGameManager>();
         _partyGM = FindObjectOfType<PartyGameManager>();
         _camera = Camera.main;
-        if (PauseMenu != null)
-        {
-          PauseMenu.transform.localScale = new Vector3(PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) ),
-                                                        PauseMenu.transform.localScale.x + ((_camera.orthographicSize - 17) ),
-                                                        PauseMenu.transform.localScale.z);
-        }
 
         if (Application.loadedLevelName == "MaleScenario")
         {
@@ -85,9 +89,8 @@ public class GameManager : MonoBehaviour
         {
 			if(Application.loadedLevelName != "Final_MainMenu")
             	TogglePauseMenu();
-			else {
+			else
 				Application.Quit();
-			}
         }
     }
 
@@ -143,8 +146,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadingHandler()
+    public void LoadingHandler(string sceneToLoad)
     {
-        Instantiate(LoadingScreen, _camera.transform.position, Quaternion.identity);
+        LoadingCamera.enabled = true;
+        AsyncOperation async = Application.LoadLevelAsync(sceneToLoad);
     }
 }

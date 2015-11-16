@@ -21,6 +21,7 @@ public class DialogueHandler: MonoBehaviour
 		public float TextBoxBounds;
 		private int dialogue_position;
 		public SpriteRenderer questionSprite, dialogueSprite, virgilDialogueSprite;
+        private bool _gameStarted;
 		
 	
 	
@@ -48,9 +49,12 @@ public class DialogueHandler: MonoBehaviour
 	
 		void Update ()
 		{
-		
-				if (gameManager.isGameState (GameState.Intro) && numDialogueLinesShown == numDialogueLines)
-						StartCoroutine (gameManager.StartGame ());
+
+            if (gameManager.isGameState(GameState.Intro) && numDialogueLinesShown == numDialogueLines && _gameStarted)
+            {
+                StartCoroutine(gameManager.StartGame());
+                _gameStarted = true;
+            }
 				//gameManager.StartGame ();
 						
 

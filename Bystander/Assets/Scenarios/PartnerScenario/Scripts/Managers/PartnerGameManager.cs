@@ -28,6 +28,7 @@ public class PartnerGameManager : MonoBehaviour
     public AudioSource VirgilAudioSource;
     public bool InteractionEnabled;
 
+    private GameManager _gameManager;
     private DialogueVisualUI _myDialogueUI;
     private CursorHandler _cursorHandler;
     private GinaStates _currentGinaState = GinaStates.BACK;
@@ -82,6 +83,7 @@ public class PartnerGameManager : MonoBehaviour
 
     void Start()
     {
+        _gameManager = FindObjectOfType<GameManager>();
         _cursorHandler = FindObjectOfType<CursorHandler>();
     }
 
@@ -258,7 +260,7 @@ public class PartnerGameManager : MonoBehaviour
                 else if (Input.GetKeyDown(KeyCode.Mouse0) && _helpfulPrimer && win)
                 {
                     DialogueManager.StopConversation();
-                    Application.LoadLevel("PostPartner");
+                    StartCoroutine(_gameManager.LoadingHandler("PostPartner"));
                     _currentHollyState = HollyStates.BACK;
                     _affect = "";
                     HollyAnimator.SetBool("Helpful", false);

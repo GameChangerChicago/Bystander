@@ -89,7 +89,7 @@ public class MenuButton : MonoBehaviour
                 {
                     if (Level != "Close")
                     {
-						Application.LoadLevel(Level);
+                        StartCoroutine(_gameManager.LoadingHandler(Level));
                     }
                     else
                         Application.Quit();
@@ -134,49 +134,4 @@ public class MenuButton : MonoBehaviour
 //                _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y + 31.4734f, _camera.transform.position.z);
 //        }
     }
-
-	IEnumerator DisplayLoadingScreen (string Level){
-
-		StartCoroutine(FadeLoadingScreen(0f, 1f, 2f));
-		yield return new WaitForSeconds(2f);
-
-//		AsyncOperation async = Application.LoadLevelAsync (Level);
-//
-//		while (!async.isDone) {
-//
-//						yield return null;
-//				}
-//
-//		if (async.isDone) {
-//			StartCoroutine(FadeLoadingScreen(1f, 0f, 2f));
-//			               yield return new WaitForSeconds(2f);
-			Application.LoadLevel(Level);
-//
-//				}
-
-
-				
 	}
-
-	IEnumerator FadeLoadingScreen(float currentAlpha, float finalAlpha, float time){
-
-		yield return new WaitForSeconds (1f);
-				for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / time) {
-						Color newColor = new Color (0, 0, 0, Mathf.Lerp (currentAlpha, finalAlpha, t));
-						loadingBackground.GetComponent<SpriteRenderer> ().color = newColor;
-				
-						yield return null;
-
-		
-				}
-		}
-
-
-	}
-		
-
-
-
-		                                                                
-
-		                                                                 

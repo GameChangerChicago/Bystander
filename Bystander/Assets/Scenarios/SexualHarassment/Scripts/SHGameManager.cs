@@ -28,6 +28,7 @@ public class SHGameManager : MonoBehaviour
     static Dictionary<ButtonType, bool> AnswersSelected = new Dictionary<ButtonType, bool>();
 
     private Dictionary<MicroScenarios, PointOfInterest[]> PointsOfInterestPerMicroScenario = new Dictionary<MicroScenarios, PointOfInterest[]>();
+    private GameManager _gameManager;
     private AudioSource _myAudioSource;
     private SHVigilHandler _myVirgil;
     private int _sectionsCompleted;
@@ -70,7 +71,7 @@ public class SHGameManager : MonoBehaviour
 
                 //Checks to see if all sections are complete; if so then we'll load the epilogue
                 if (_sectionsCompleted == 5 && !_myAudioSource.isPlaying)
-                    Application.LoadLevel("PostHarassment");
+                    StartCoroutine(_gameManager.LoadingHandler("PostHarassment"));
                 else //Otherwise we add one to _sectionsComplete and brings us back to the hub world
                     CurrentCameraManager.ReturnToHub();
             }
@@ -92,6 +93,7 @@ public class SHGameManager : MonoBehaviour
 
     void Start()
     {
+        _gameManager = FindObjectOfType<GameManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         AnswersSelected.Add(ButtonType.CheckIn, false);
         AnswersSelected.Add(ButtonType.Empathy, false);
@@ -106,7 +108,7 @@ public class SHGameManager : MonoBehaviour
     void Update()
     {
         if (_sectionsCompleted == 5 && !_myAudioSource.isPlaying)
-            Application.LoadLevel("PostHarassment");
+            StartCoroutine(_gameManager.LoadingHandler("PostHarassment"));
     }
 
     public bool CheckAnswer(ButtonType button)

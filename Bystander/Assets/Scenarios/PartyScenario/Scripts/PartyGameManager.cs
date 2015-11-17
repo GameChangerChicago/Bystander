@@ -98,6 +98,7 @@ public class PartyGameManager : MonoBehaviour
 
     private Dictionary<InteractiveMoments, InteractableProp[]> _propsPerIM = new Dictionary<InteractiveMoments, InteractableProp[]>();
     private InteractableProp[] _allProps;
+    private GameManager _gameManager;
     private InteractiveMoments _currentInteractiveMoment = InteractiveMoments.LivingRoom;
     private PartyCameraManager _myCameraManager;
     private PartyVirgil _virgil;
@@ -109,6 +110,7 @@ public class PartyGameManager : MonoBehaviour
 
     void Start()
     {
+        _gameManager = FindObjectOfType<GameManager>();
         _myCameraManager = FindObjectOfType<PartyCameraManager>();
         _virgil = FindObjectOfType<PartyVirgil>();
         _currentSection = GameObject.Find("LivingRoom1");
@@ -205,7 +207,7 @@ public class PartyGameManager : MonoBehaviour
                     MaxClicks = 1;
                     break;
                 case InteractiveMoments.Hallway:
-                    Application.LoadLevel("PostParty");
+                    StartCoroutine(_gameManager.LoadingHandler("PostParty"));
                     break;
                 default:
                     Debug.Log("There are only 5 Interactive moments. You should check _currentInteractiveMoment.");

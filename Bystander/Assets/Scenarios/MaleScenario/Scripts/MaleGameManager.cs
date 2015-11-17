@@ -27,6 +27,7 @@ public class MaleGameManager : MonoBehaviour
 		public static GameState gameState;
 		private CameraManager cameraManager;
 	private SoundManager soundManager;
+    private GameManager _gameManager;
 
 		//MASON NOTE: This array is redundant. In the switch you can just have correctAnswer = a. I left a commented out example below in the "BELIEVE" case.
 		//Holds correct answers for next question asked
@@ -43,6 +44,7 @@ public class MaleGameManager : MonoBehaviour
 
 		void Start ()
 		{
+            _gameManager = FindObjectOfType<GameManager>();
 				gameState = GameState.Intro;
 				cameraManager = FindObjectOfType<CameraManager> ();
 				soundManager = FindObjectOfType<SoundManager> ();
@@ -79,9 +81,9 @@ public class MaleGameManager : MonoBehaviour
 
 		yield return new WaitForSeconds (5);
 			//gameState = GameState.Outro;
-			
 
-		Application.LoadLevel ("PostMale");
+
+        StartCoroutine(_gameManager.LoadingHandler("PostMale"));
 
 		}
 

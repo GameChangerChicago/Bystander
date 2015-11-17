@@ -146,9 +146,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadingHandler(string sceneToLoad)
+    public IEnumerator LoadingHandler(string sceneToLoad)
     {
         LoadingCamera.enabled = true;
         AsyncOperation async = Application.LoadLevelAsync(sceneToLoad);
+        yield return async;
     }
 }

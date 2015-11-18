@@ -4,6 +4,7 @@ using System.Collections;
 public class PartyCameraManager : MonoBehaviour
 {
     public float DefaultSize;
+    public bool MovingToNext;
 
     private CursorHandler _cursorHandler;
     private PartyGameManager _myGameManager;
@@ -121,10 +122,11 @@ public class PartyCameraManager : MonoBehaviour
         _movingCamera = false;
         _myGameManager.CameraMoving = false;
 
-        if (_movingBack)
+        if (_movingBack || MovingToNext)
         {
             _cursorHandler.ChangeCursor(1);
             _movingBack = false;
+            MovingToNext = false;
         }
     }
 

@@ -181,6 +181,7 @@ public class PartyGameManager : MonoBehaviour
                     //Each one of these also needs to set the Max click count as it may be different for each Interactive moment
                     _currentInteractiveMoment = InteractiveMoments.Kitchen;
                     _currentSection = Kitchen;
+                    _myCameraManager.MovingToNext = true;
                     _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19, 0);
                     _currentBystanderPortrait = BystanderPortraits[1];
                     MaxClicks = 3;
@@ -188,6 +189,7 @@ public class PartyGameManager : MonoBehaviour
                 case InteractiveMoments.Kitchen:
                     _currentInteractiveMoment = InteractiveMoments.BackPoarch;
                     _currentSection = BackPoarch;
+                    _myCameraManager.MovingToNext = true;
                     _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19, 0);
                     _currentBystanderPortrait = BystanderPortraits[2];
                     MaxClicks = 2;
@@ -195,6 +197,7 @@ public class PartyGameManager : MonoBehaviour
                 case InteractiveMoments.BackPoarch:
                     _currentInteractiveMoment = InteractiveMoments.LivingRoom2;
                     _currentSection = LivingRoom2;
+                    _myCameraManager.MovingToNext = true;
                     _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19, 0);
                     _currentBystanderPortrait = BystanderPortraits[3];
                     MaxClicks = 2;
@@ -202,6 +205,7 @@ public class PartyGameManager : MonoBehaviour
                 case InteractiveMoments.LivingRoom2:
                     _currentInteractiveMoment = InteractiveMoments.Hallway;
                     _currentSection = Hallway;
+                    _myCameraManager.MovingToNext = true;
                     _hintManager.transform.localScale = new Vector3(4.45f, 4.45f, 1);
                     _myCameraManager.SetCameraToMove(Hallway.transform.position, 3, 24, 0);
                     MaxClicks = 1;

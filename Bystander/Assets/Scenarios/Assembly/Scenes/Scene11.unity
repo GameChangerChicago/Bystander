@@ -1277,7 +1277,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.19999981
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1296,7 +1296,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 456357183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.2578583, y: -10.773242, z: -10}
+  m_LocalPosition: {x: 28.4590397, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2705,7 +2705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 995224465}
   DialogManager: {fileID: 0}
-  LoadingScreen: {fileID: 0}
+  LoadingCamera: {fileID: 1773691862}
 --- !u!4 &986680835
 Transform:
   m_ObjectHideFlags: 0
@@ -3326,7 +3326,7 @@ MonoBehaviour:
   CamLocation: {x: 28.4590397, y: 0}
   MyText: 
   SceneToLoad: 
-  CamSize: 5.19999981
+  CamSize: 5
   CamTravelTime: 3
   PartyCameraTravelTime: 0
   CamRotation: 0
@@ -4289,7 +4289,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 5
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -4595,7 +4595,7 @@ Transform:
   m_PrefabInternal: {fileID: 227563206}
   m_GameObject: {fileID: 1974896119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.5093498, y: -53.9666367, z: 8.27393913}
+  m_LocalPosition: {x: 56.5093498, y: 46.0333595, z: 8.27393913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 986680835}

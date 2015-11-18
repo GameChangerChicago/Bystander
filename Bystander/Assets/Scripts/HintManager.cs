@@ -14,6 +14,7 @@ public class HintManager : MonoBehaviour
 
     DatabaseManager _databaseManager;
     private SHCameraSelector[] _SHCameraSelector;
+    private CursorHandler _cursorHandler;
     private float _hintTimer;
     private bool _timerActive = true,
                  _initialHintShown,
@@ -22,6 +23,8 @@ public class HintManager : MonoBehaviour
 
     void Start()
     {
+        _cursorHandler = FindObjectOfType<CursorHandler>();
+
         if (Application.loadedLevelName == "SexualHarassment")
             _SHCameraSelector = FindObjectsOfType<SHCameraSelector>();
     }
@@ -76,6 +79,7 @@ public class HintManager : MonoBehaviour
 
         if (_fadingIn && Application.loadedLevelName == "PartyScenario")
         {
+            _cursorHandler.ChangeCursor(1);
             MyPartyGameManager.DisableAllProps();
         }
 

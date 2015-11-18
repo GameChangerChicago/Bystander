@@ -47,6 +47,7 @@ public class HintManager : MonoBehaviour
             _hintTimer = 0;
             _timerActive = false;
             _fadingIn = true;
+            HintDelay += 10;
 
             if (MyTrigger != null)
             {

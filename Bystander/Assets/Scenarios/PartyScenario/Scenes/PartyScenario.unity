@@ -5606,7 +5606,7 @@ MonoBehaviour:
   AnimationChanges: 0
   HasCloseupAnimation: 1
   HasCutscene: 0
-  InfiniteClicks: 1
+  InfiniteClicks: 0
   Disabled: 0
   Exit: 0
   MaxClicks: 1
@@ -12936,6 +12936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultSize: 19
+  MovingToNext: 0
 --- !u!114 &1033707234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23200,6 +23201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultSize: 10
+  MovingToNext: 0
 --- !u!81 &1950212618
 AudioListener:
   m_ObjectHideFlags: 0

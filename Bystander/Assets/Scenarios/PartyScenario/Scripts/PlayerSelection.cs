@@ -56,6 +56,7 @@ public class PlayerSelection : MonoBehaviour
             }
             else
             {
+                _cursorManager.ChangeCursor(1);
                 SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", false);
                 SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
             }

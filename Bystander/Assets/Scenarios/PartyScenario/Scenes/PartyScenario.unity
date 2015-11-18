@@ -1673,8 +1673,8 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
-  InitialDelay: 1.5
+  ClickDelay: 1.5
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -3356,7 +3356,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 5
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -3888,7 +3888,7 @@ Transform:
   m_GameObject: {fileID: 323094620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: .192500025, y: .192500025, z: .192500025}
+  m_LocalScale: {x: .30423376, y: .30423373, z: .30423373}
   m_Children:
   - {fileID: 872589024}
   - {fileID: 499660202}
@@ -6615,8 +6615,8 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
-  InitialDelay: 1.5
+  ClickDelay: 1.5
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -9066,7 +9066,7 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
+  ClickDelay: 2
   InitialDelay: 0
   AnimatorIndex: 2
   PlayAnimImmediately: 0
@@ -10051,7 +10051,7 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
+  ClickDelay: 2
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
@@ -12993,7 +12993,7 @@ Transform:
   m_PrefabInternal: {fileID: 1847767896}
   m_GameObject: {fileID: 1035409384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.5093498, y: -53.9666367, z: 8.27393913}
+  m_LocalPosition: {x: 56.5093498, y: 46.0333595, z: 8.27393913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1199484290}
@@ -15561,7 +15561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 323094620}
   DialogManager: {fileID: 0}
-  LoadingScreen: {fileID: 0}
+  LoadingCamera: {fileID: 290041015}
 --- !u!4 &1199484290
 Transform:
   m_ObjectHideFlags: 0
@@ -17939,8 +17939,8 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
-  InitialDelay: 1.5
+  ClickDelay: 1.5
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -19537,8 +19537,8 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
-  InitialDelay: 1.5
+  ClickDelay: 1.5
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -22838,8 +22838,8 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
-  InitialDelay: 1.5
+  ClickDelay: 1.5
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0
@@ -24603,8 +24603,8 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 0
-  InitialDelay: 1.5
+  ClickDelay: 1.5
+  InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
   PlayAudioImmediately: 0

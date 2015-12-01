@@ -21,7 +21,7 @@ public class PartyGameManager : MonoBehaviour
                         _propsPerIM[_currentInteractiveMoment][i].Disabled = true;
                     }
                 }
-                else
+                else if(!_exit)
                 {
                     for (int i = 0; i < _propsPerIM[_currentInteractiveMoment].Length; i++)
                     {
@@ -108,6 +108,7 @@ public class PartyGameManager : MonoBehaviour
     private GameObject _currentSection;
     private float _cameraTravelTime;
     private int _clickCount = 0;
+    private bool _exit;
 
     void Start()
     {
@@ -223,8 +224,7 @@ public class PartyGameManager : MonoBehaviour
         }
         else if (_clickCount >= MaxClicks || exit) //If you never clicked the correct interactable prop or you hit the exit sign
         {
-            //Debug.Log("Poop");
-            DisableAllProps();
+            _exit = exit;
             _virgil.VirgilReset();
             _currentSection = GameObject.Find("LivingRoom1");
             _currentInteractiveMoment = InteractiveMoments.LivingRoom;
@@ -251,7 +251,6 @@ public class PartyGameManager : MonoBehaviour
 
     public void DisableAllProps()
     {
-        Debug.Log("Disable");
         for (int i = 0; i < _propsPerIM[_currentInteractiveMoment].Length; i++)
         {
             _propsPerIM[_currentInteractiveMoment][i].Disabled = true;
@@ -260,7 +259,6 @@ public class PartyGameManager : MonoBehaviour
 
     public IEnumerator EnableAllProps(float waitTime)
     {
-        Debug.Log("Enable");
         yield return new WaitForSeconds(waitTime);
 
         for (int i = 0; i < _allProps.Length; i++)

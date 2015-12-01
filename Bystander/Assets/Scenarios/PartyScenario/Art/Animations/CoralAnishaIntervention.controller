@@ -266,6 +266,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110289675
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CoralAnishaInterventionIdle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 93adf20eb2592e448b1ca800d37b5d2c, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 323, y: 557, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110700000
 StateMachine:
   serializedVersion: 2
@@ -283,38 +298,39 @@ StateMachine:
   - {fileID: 110237256}
   - {fileID: 110254275}
   - {fileID: 110239255}
+  - {fileID: 110289675}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
-    data:
-      first: {fileID: 110239255}
-      second: []
-    data:
-      first: {fileID: 110254275}
-      second:
-      - {fileID: 110187870}
-    data:
-      first: {fileID: 110237256}
-      second:
-      - {fileID: 110196637}
-    data:
-      first: {fileID: 110258303}
-      second:
-      - {fileID: 110153236}
-    data:
-      first: {fileID: 110260523}
-      second:
-      - {fileID: 110154553}
-    data:
-      first: {fileID: 110286574}
-      second:
-      - {fileID: 110195331}
     data:
       first: {fileID: 110200920}
       second:
       - {fileID: 110100000}
     data:
       first: {fileID: 110200000}
+      second: []
+    data:
+      first: {fileID: 110286574}
+      second:
+      - {fileID: 110195331}
+    data:
+      first: {fileID: 110260523}
+      second:
+      - {fileID: 110154553}
+    data:
+      first: {fileID: 110258303}
+      second:
+      - {fileID: 110153236}
+    data:
+      first: {fileID: 110237256}
+      second:
+      - {fileID: 110196637}
+    data:
+      first: {fileID: 110254275}
+      second:
+      - {fileID: 110187870}
+    data:
+      first: {fileID: 110239255}
       second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}

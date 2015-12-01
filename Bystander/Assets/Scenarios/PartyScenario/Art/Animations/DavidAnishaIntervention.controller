@@ -177,7 +177,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: c8a79b49e33670a4ca181747137aa92a, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 36, y: 72, z: 0}
+  m_Position: {x: 24, y: 84, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -223,6 +223,21 @@ State:
   - {fileID: 7400000, guid: 9b8c08ef268ae954d8a63e0d3d6f1449, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 264, y: 444, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110236813
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: DavidBryanIntervention2Idle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 8492adcf67222574790e542ed2892e86, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 383, y: 629, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -319,6 +334,7 @@ StateMachine:
   - {fileID: 110235891}
   - {fileID: 110280101}
   - {fileID: 110286110}
+  - {fileID: 110236813}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:

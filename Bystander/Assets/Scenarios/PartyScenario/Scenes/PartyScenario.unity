@@ -2273,7 +2273,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 213135588}
   - 95: {fileID: 213135589}
-  - 212: {fileID: 213135590}
   m_Layer: 0
   m_Name: PizzaComic
   m_TagString: Untagged
@@ -2310,28 +2309,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &213135590
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 213135587}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &218610232
 GameObject:
   m_ObjectHideFlags: 0
@@ -11484,7 +11461,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 929038935}
   - 95: {fileID: 929038937}
-  - 212: {fileID: 929038936}
   m_Layer: 0
   m_Name: TVComic
   m_TagString: Untagged
@@ -11507,28 +11483,6 @@ Transform:
   - {fileID: 2011313444}
   m_Father: {fileID: 2083676826}
   m_RootOrder: 2
---- !u!212 &929038936
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 929038934}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &929038937
 Animator:
   serializedVersion: 3
@@ -12106,7 +12060,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 950486466}
   - 95: {fileID: 950486468}
-  - 212: {fileID: 950486467}
   m_Layer: 0
   m_Name: FlirtComic
   m_TagString: Untagged
@@ -12128,28 +12081,6 @@ Transform:
   - {fileID: 279080736}
   m_Father: {fileID: 2083676826}
   m_RootOrder: 1
---- !u!212 &950486467
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 950486465}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &950486468
 Animator:
   serializedVersion: 3
@@ -13481,7 +13412,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1085505069}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -19844,6 +19775,7 @@ MonoBehaviour:
   - {fileID: 634538023}
   - {fileID: 1092028405}
   - {fileID: 1194116838}
+  RelaventAnimators: []
   MaxClicks: 100
   SectionCompleted: 0
 --- !u!4 &1617902220
@@ -23396,7 +23328,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1960891806}
   - 95: {fileID: 1960891808}
-  - 212: {fileID: 1960891807}
   m_Layer: 0
   m_Name: FaucetComic
   m_TagString: Untagged
@@ -23417,28 +23348,6 @@ Transform:
   - {fileID: 280075447}
   m_Father: {fileID: 1706554208}
   m_RootOrder: 3
---- !u!212 &1960891807
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1960891805}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1960891808
 Animator:
   serializedVersion: 3
@@ -25210,7 +25119,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2111722849}
   - 95: {fileID: 2111722850}
-  - 212: {fileID: 2111722851}
   m_Layer: 0
   m_Name: StereoComic
   m_TagString: Untagged
@@ -25247,28 +25155,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &2111722851
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2111722848}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2114483221
 GameObject:
   m_ObjectHideFlags: 0

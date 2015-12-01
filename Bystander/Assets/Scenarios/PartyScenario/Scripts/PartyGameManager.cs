@@ -83,6 +83,7 @@ public class PartyGameManager : MonoBehaviour
                       CoralAnishaProp,
                       DavidBryanProp2;
     public SpriteRenderer[] BystanderPortraits;
+    public List<Animator> RelaventAnimators = new List<Animator>();
     public int MaxClicks;
     public bool SectionCompleted = false;
 
@@ -220,8 +221,10 @@ public class PartyGameManager : MonoBehaviour
             SectionCompleted = false;
             _clickCount = 0;
         }
-        else if (_clickCount >= MaxClicks || exit) //If you never clicked the correct interactable prop
+        else if (_clickCount >= MaxClicks || exit) //If you never clicked the correct interactable prop or you hit the exit sign
         {
+            //Debug.Log("Poop");
+            DisableAllProps();
             _virgil.VirgilReset();
             _currentSection = GameObject.Find("LivingRoom1");
             _currentInteractiveMoment = InteractiveMoments.LivingRoom;
@@ -237,8 +240,8 @@ public class PartyGameManager : MonoBehaviour
 
         if (currentAnimator.speed == 0) //Initially and when props are reset, the animator's speed is set to 0; this set's it back to 1
         {
-            currentAnimator.StopPlayback();
             currentAnimator.speed = 1;
+            currentAnimator.Play(currentAnimator.gameObject.name + "_" + clickCount);
         }
         else //Otherwise we will play the next animation
         {
@@ -248,6 +251,7 @@ public class PartyGameManager : MonoBehaviour
 
     public void DisableAllProps()
     {
+        Debug.Log("Disable");
         for (int i = 0; i < _propsPerIM[_currentInteractiveMoment].Length; i++)
         {
             _propsPerIM[_currentInteractiveMoment][i].Disabled = true;
@@ -256,6 +260,7 @@ public class PartyGameManager : MonoBehaviour
 
     public IEnumerator EnableAllProps(float waitTime)
     {
+        Debug.Log("Enable");
         yield return new WaitForSeconds(waitTime);
 
         for (int i = 0; i < _allProps.Length; i++)

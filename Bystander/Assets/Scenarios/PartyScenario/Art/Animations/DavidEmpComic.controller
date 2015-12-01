@@ -256,6 +256,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110257900
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: DavidBryanInterventionIdle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: d1826858092357a488c34f35d2f7400b, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 365, y: 635, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110269899
 State:
   m_ObjectHideFlags: 3
@@ -319,42 +334,43 @@ StateMachine:
   - {fileID: 110216720}
   - {fileID: 110241935}
   - {fileID: 110292910}
+  - {fileID: 110257900}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110292910}
-      second: []
-    data:
       first: {fileID: 110241935}
       second:
       - {fileID: 110139269}
-    data:
-      first: {fileID: 110216720}
-      second:
-      - {fileID: 110153433}
-    data:
-      first: {fileID: 110230201}
-      second:
-      - {fileID: 110137339}
-    data:
-      first: {fileID: 110257816}
-      second:
-      - {fileID: 110159517}
-    data:
-      first: {fileID: 110269899}
-      second:
-      - {fileID: 110145375}
-    data:
-      first: {fileID: 110217935}
-      second:
-      - {fileID: 110151094}
     data:
       first: {fileID: 110284983}
       second:
       - {fileID: 110100000}
     data:
       first: {fileID: 110200000}
+      second: []
+    data:
+      first: {fileID: 110217935}
+      second:
+      - {fileID: 110151094}
+    data:
+      first: {fileID: 110269899}
+      second:
+      - {fileID: 110145375}
+    data:
+      first: {fileID: 110257816}
+      second:
+      - {fileID: 110159517}
+    data:
+      first: {fileID: 110230201}
+      second:
+      - {fileID: 110137339}
+    data:
+      first: {fileID: 110216720}
+      second:
+      - {fileID: 110153433}
+    data:
+      first: {fileID: 110292910}
       second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}

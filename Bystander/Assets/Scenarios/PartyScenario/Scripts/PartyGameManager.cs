@@ -28,6 +28,10 @@ public class PartyGameManager : MonoBehaviour
                         _propsPerIM[_currentInteractiveMoment][i].Disabled = false;
                     }
                 }
+                else if (_exit)
+                {
+                    _exit = false;
+                }
 
                 _cameraMoving = value;
             }

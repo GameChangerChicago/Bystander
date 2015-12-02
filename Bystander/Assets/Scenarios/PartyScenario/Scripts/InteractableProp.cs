@@ -132,20 +132,10 @@ public class InteractableProp : MonoBehaviour
             if (HasCloseupAnimation && !InfiniteClicks)
             {
                 StartCoroutine(_myGameManager.PlayCloseUpAnimation(CloseUpAnimator, _myClickCount, CameraMoveTime));
-                bool animatorAlreadyAdded = false;
-                for (int i = 0; i < _myGameManager.RelaventAnimators.Count; i++)
-                {
-                    if (CloseUpAnimator == _myGameManager.RelaventAnimators[i])
-                        animatorAlreadyAdded = true;
-                }
-
-                if (!animatorAlreadyAdded)
-                    _myGameManager.RelaventAnimators.Add(CloseUpAnimator);
             }
             else if (HasCloseupAnimation)
             {
                 StartCoroutine(_myGameManager.PlayCloseUpAnimation(CloseUpAnimator, 0, CameraMoveTime));
-                _myGameManager.RelaventAnimators.Add(CloseUpAnimator);
             }
 
             //This bit handles background music changes

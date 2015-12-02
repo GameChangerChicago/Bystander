@@ -87,7 +87,6 @@ public class PartyGameManager : MonoBehaviour
                       CoralAnishaProp,
                       DavidBryanProp2;
     public SpriteRenderer[] BystanderPortraits;
-    public List<Animator> RelaventAnimators = new List<Animator>();
     public int MaxClicks;
     public bool SectionCompleted = false;
 

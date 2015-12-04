@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using PixelCrushers.DialogueSystem;
 
 public class HintManager : MonoBehaviour
@@ -12,9 +13,43 @@ public class HintManager : MonoBehaviour
     public float HintDelay,
                  InitialDelay;
 
+    protected bool fadingIn
+    {
+        get
+        {
+            return _fadingIn;
+        }
+        set
+        {
+            if (value)
+            {
+                List<Camera> allCameras = new List<Camera>();
+                
+                allCameras.AddRange(FindObjectsOfType<Camera>());
+
+                if (allCameras.Count > 2)
+                {
+                    for (int i = 0; i < allCameras.Count; i++)
+                    {
+                        //this is for the sh scene
+                    }
+                }
+                else
+                {
+                    _currentCamera = Camera.main;
+
+                    InstructionSprite.transform.localScale = new Vector3(_currentCamera.orthographicSize * 0.19f, _currentCamera.orthographicSize * 0.19f, 1);
+                }
+            }
+
+            _fadingIn = value;
+        }
+    }
+
     DatabaseManager _databaseManager;
     private SHCameraSelector[] _SHCameraSelector;
     private CursorHandler _cursorHandler;
+    private Camera _currentCamera;
     private float _hintTimer;
     private bool _timerActive = true,
                  _initialHintShown,
@@ -39,14 +74,14 @@ public class HintManager : MonoBehaviour
             _hintTimer = 0;
             _timerActive = false;
             _initialHintShown = true;
-            _fadingIn = true;
+            fadingIn = true;
         }
 
         if (_hintTimer > HintDelay && _initialHintShown)
         {
             _hintTimer = 0;
             _timerActive = false;
-            _fadingIn = true;
+            fadingIn = true;
             HintDelay += 10;
 
             if (MyTrigger != null)
@@ -56,7 +91,7 @@ public class HintManager : MonoBehaviour
             }
         }
 
-        if (!_timerActive && !_fadingIn && Input.GetKeyUp(KeyCode.Mouse0))
+        if (!_timerActive && !fadingIn && Input.GetKeyUp(KeyCode.Mouse0))
         {
             if(MyPartyGameManager)
                 StartCoroutine(MyPartyGameManager.EnableAllProps(0.01f));
@@ -75,23 +110,23 @@ public class HintManager : MonoBehaviour
 
     private void Fading()
     {
-        if (_fadingIn && InstructionSprite.color.a == 0 && Application.loadedLevelName == "MaleScenario")
+        if (fadingIn && InstructionSprite.color.a == 0 && Application.loadedLevelName == "MaleScenario")
             FindObjectOfType<GUIManager>().ShowTextBar = false;
 
-        if (_fadingIn && Application.loadedLevelName == "PartyScenario")
+        if (fadingIn && Application.loadedLevelName == "PartyScenario")
         {
             _cursorHandler.ChangeCursor(1);
             MyPartyGameManager.DisableAllProps();
         }
 
-        if (_fadingIn && InstructionSprite.color.a < 1)
+        if (fadingIn && InstructionSprite.color.a < 1)
         {
             InstructionSprite.color = new Color(1, 1, 1, InstructionSprite.color.a + (2f * Time.deltaTime));
 
             if (InstructionSprite.color.a > 1)
             {
                 InstructionSprite.color = new Color(1, 1, 1, 1);
-                _fadingIn = false;
+                fadingIn = false;
 
                 if (Application.loadedLevelName == "SexualHarassment")
                 {

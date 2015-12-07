@@ -50,7 +50,8 @@ public class DialogueHandler: MonoBehaviour
 		void Update ()
 		{
 
-            if (gameManager.isGameState(GameState.Intro) && numDialogueLinesShown == numDialogueLines && _gameStarted)
+            Debug.Log(numDialogueLinesShown == numDialogueLines);// + " & " + _gameStarted);
+            if (gameManager.isGameState(GameState.Intro) && numDialogueLinesShown == numDialogueLines && !_gameStarted)
             {
                 StartCoroutine(gameManager.StartGame());
                 _gameStarted = true;

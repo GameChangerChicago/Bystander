@@ -27,18 +27,14 @@ public class HintManager : MonoBehaviour
                 
                 allCameras.AddRange(FindObjectsOfType<Camera>());
 
-                if (allCameras.Count > 2)
-                {
-                    for (int i = 0; i < allCameras.Count; i++)
-                    {
-                        //this is for the sh scene
-                    }
-                }
-                else
+                if (allCameras.Count < 3)
                 {
                     _currentCamera = Camera.main;
 
-                    InstructionSprite.transform.localScale = new Vector3(_currentCamera.orthographicSize * 0.19f, _currentCamera.orthographicSize * 0.19f, 1);
+                    if (((16 * this.camera.rect.width) / (this.camera.aspect * this.camera.rect.height)) > 9.01f)
+                        InstructionSprite.transform.localScale = new Vector3(_currentCamera.orthographicSize * 0.175f, _currentCamera.orthographicSize * 0.175f, 1);
+                    else
+                        InstructionSprite.transform.localScale = new Vector3(_currentCamera.orthographicSize * 0.19f, _currentCamera.orthographicSize * 0.19f, 1);
                 }
             }
 

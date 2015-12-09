@@ -11,6 +11,7 @@ public class CutSceneManager : MonoBehaviour
         }
         set
         {
+            Debug.Log(value);
             if (value != _clickDisabled)
             {
                 if (value)
@@ -73,13 +74,15 @@ public class CutSceneManager : MonoBehaviour
             _clickDisabled = true;
             Invoke("AutoStep", Page[CurrentStep + 1].InitialDelay);
 
-            if (!Page[CurrentStep + 2].AutoStep)
-            {
-                if (Page[CurrentStep + 1].ClickDelay > Page[CurrentStep + 1].CamTravelTime)
-                    Invoke("ReEnableClicking", Page[CurrentStep + 1].ClickDelay);
-                else
-                    Invoke("ReEnableClicking", Page[CurrentStep + 1].CamTravelTime);
-            }
+            //DELETE THIS SOON
+            //As long as it doesn't break anything...
+            //if (!Page[CurrentStep + 2].AutoStep)
+            //{
+            //    if (Page[CurrentStep + 1].ClickDelay > Page[CurrentStep + 1].CamTravelTime)
+            //        Invoke("ReEnableClicking", Page[CurrentStep + 1].ClickDelay);
+            //    else
+            //        Invoke("ReEnableClicking", Page[CurrentStep + 1].CamTravelTime);
+            //}
         }
 
         _started = true;
@@ -95,13 +98,16 @@ public class CutSceneManager : MonoBehaviour
                 _cursorHandler.ChangeCursor(2);
                 _clickDisabled = true;
                 Invoke("AutoStep", Page[CurrentStep + 1].InitialDelay);
-                if (!Page[CurrentStep + 2].AutoStep)
-                {
-                    if (Page[CurrentStep + 1].InitialDelay > Page[CurrentStep + 1].CamTravelTime)
-                        Invoke("ReEnableClicking", Page[CurrentStep + 1].InitialDelay);
-                    else
-                        Invoke("ReEnableClicking", Page[CurrentStep + 1].CamTravelTime);
-                }
+
+                //DELETE THIS SOON
+                //As long as it doesn't break anything...
+                //if (!Page[CurrentStep + 2].AutoStep)
+                //{
+                //    if (Page[CurrentStep + 1].InitialDelay > Page[CurrentStep + 1].CamTravelTime)
+                //        Invoke("ReEnableClicking", Page[CurrentStep + 1].InitialDelay);
+                //    else
+                //        Invoke("ReEnableClicking", Page[CurrentStep + 1].CamTravelTime);
+                //}
             }
         }
     }

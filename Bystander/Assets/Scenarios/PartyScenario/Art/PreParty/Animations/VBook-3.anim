@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: VBook-1
+  m_Name: VBook-3
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -17,18 +17,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: .855533421, y: -1.71344447, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 6
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: CoralPanel
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: {x: -.0558576584, y: -4.90045071, z: 0}
+        value: {x: -.0558576584, y: -1.87035084, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -62,7 +51,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.r
-    path: CoralPanel/Background/WhiteBorder
+    path: AnishaPanel/Background/WhiteBorder
     classID: 212
     script: {fileID: 0}
   - curve:
@@ -76,7 +65,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.g
-    path: CoralPanel/Background/WhiteBorder
+    path: AnishaPanel/Background/WhiteBorder
     classID: 212
     script: {fileID: 0}
   - curve:
@@ -90,7 +79,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.b
-    path: CoralPanel/Background/WhiteBorder
+    path: AnishaPanel/Background/WhiteBorder
     classID: 212
     script: {fileID: 0}
   - curve:
@@ -104,23 +93,27 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
-    path: CoralPanel/Background/WhiteBorder
+    path: AnishaPanel/Background/WhiteBorder
     classID: 212
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300010, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300028, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     - time: .25
-      value: {fileID: 21300012, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300030, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     - time: .5
-      value: {fileID: 21300014, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300032, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     - time: .75
-      value: {fileID: 21300016, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300034, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     - time: 1
-      value: {fileID: 21300018, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300036, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - time: 1.25
+      value: {fileID: 21300038, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - time: 1.5
+      value: {fileID: 21300040, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     attribute: m_Sprite
-    path: CoralPanel/Coral/CoralSprite
+    path: AnishaPanel/Anisha/AnishaSprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 4
@@ -136,58 +129,54 @@ AnimationClip:
       classID: 1
       customType: 0
       isPPtrCurve: 0
-    - path: 2275636961
+    - path: 2080657494
       attribute: 0
       script: {fileID: 0}
       classID: 212
       customType: 23
       isPPtrCurve: 1
-    - path: 202477355
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
     - path: 1644829554
       attribute: 1
       script: {fileID: 0}
       classID: 4
       customType: 0
       isPPtrCurve: 0
-    - path: 2339797266
+    - path: 839923580
       attribute: 2526845255
       script: {fileID: 0}
       classID: 212
       customType: 0
       isPPtrCurve: 0
-    - path: 2339797266
+    - path: 839923580
       attribute: 4215373228
       script: {fileID: 0}
       classID: 212
       customType: 0
       isPPtrCurve: 0
-    - path: 2339797266
+    - path: 839923580
       attribute: 2334886179
       script: {fileID: 0}
       classID: 212
       customType: 0
       isPPtrCurve: 0
-    - path: 2339797266
+    - path: 839923580
       attribute: 304273561
       script: {fileID: 0}
       classID: 212
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300010, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
-    - {fileID: 21300012, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
-    - {fileID: 21300014, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
-    - {fileID: 21300016, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
-    - {fileID: 21300018, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300028, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300030, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300032, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300034, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300036, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300038, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300040, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 1.25
+    m_StopTime: 1.75
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -220,43 +209,57 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .855533421
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalPosition.x
-    path: CoralPanel
-    classID: 4
+    attribute: m_Color.r
+    path: AnishaPanel/Background/WhiteBorder
+    classID: 212
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -1.71344447
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalPosition.y
-    path: CoralPanel
-    classID: 4
+    attribute: m_Color.g
+    path: AnishaPanel/Background/WhiteBorder
+    classID: 212
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalPosition.z
-    path: CoralPanel
-    classID: 4
+    attribute: m_Color.b
+    path: AnishaPanel/Background/WhiteBorder
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Color.a
+    path: AnishaPanel/Background/WhiteBorder
+    classID: 212
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
@@ -276,9 +279,9 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -4.90045071
-        inSlope: 0
-        outSlope: 0
+        value: -1.87035084
+        inSlope: -286.120148
+        outSlope: -286.120148
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -299,62 +302,6 @@ AnimationClip:
     attribute: m_LocalPosition.z
     path: MessengerUI/Messages
     classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.r
-    path: CoralPanel/Background/WhiteBorder
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.g
-    path: CoralPanel/Background/WhiteBorder
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.b
-    path: CoralPanel/Background/WhiteBorder
-    classID: 212
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.a
-    path: CoralPanel/Background/WhiteBorder
-    classID: 212
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_Events: []

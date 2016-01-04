@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: VBook-2
+  m_Name: VBook-8
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -39,13 +39,24 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: -.0558576584, y: -3.4784565, z: 0}
+        value: {x: -.0558576584, y: 6.58991337, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: MessengerUI/Messages
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: .282120049, y: .344810575, z: 10}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: AnishaPanel/Anisha/AnishaSprite
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -65,7 +76,7 @@ AnimationClip:
         value: {x: 1.5, y: 1.5, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
+        tangentMode: 13948
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: DavidPanel
@@ -143,17 +154,33 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: -0
-      value: {fileID: 21300062, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300072, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     - time: .25
-      value: {fileID: 21300064, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300074, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     - time: .5
-      value: {fileID: 21300066, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300076, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     - time: .75
-      value: {fileID: 21300068, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300078, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     - time: 1
-      value: {fileID: 21300070, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+      value: {fileID: 21300080, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - time: 1.25
+      value: {fileID: 21300082, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
     attribute: m_Sprite
     path: DavidPanel/David/DavidSprite
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: -0
+      value: {fileID: 21300006, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    attribute: m_Sprite
+    path: CoralPanel/Coral/CoralSprite
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: -0
+      value: {fileID: 21300042, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    attribute: m_Sprite
+    path: AnishaPanel/Anisha/AnishaSprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 4
@@ -175,6 +202,18 @@ AnimationClip:
       classID: 212
       customType: 23
       isPPtrCurve: 1
+    - path: 2275636961
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - path: 2080657494
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
     - path: 3218028519
       attribute: 1
       script: {fileID: 0}
@@ -188,6 +227,12 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - path: 1644829554
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2080657494
       attribute: 1
       script: {fileID: 0}
       classID: 4
@@ -230,15 +275,18 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300062, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
-    - {fileID: 21300064, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
-    - {fileID: 21300066, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
-    - {fileID: 21300068, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
-    - {fileID: 21300070, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300072, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300074, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300076, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300078, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300080, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300082, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300006, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
+    - {fileID: 21300042, guid: 47e1587c03cdfe84c87024c2f6b1948a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 1.25
+    m_StopTime: 1.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -253,20 +301,6 @@ AnimationClip:
     m_HeightFromFeet: 0
     m_Mirror: 0
   m_EditorCurves:
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_IsActive
-    path: VirgilPanel
-    classID: 1
-    script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -439,6 +473,20 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: VirgilPanel
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
         value: -.0558576584
         inSlope: 0
         outSlope: 0
@@ -453,7 +501,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -3.4784565
+        value: 6.58991337
         inSlope: -12.6422539
         outSlope: -12.6422539
         tangentMode: 10
@@ -532,6 +580,48 @@ AnimationClip:
     attribute: m_Color.a
     path: DavidPanel/Background/WhiteBorder
     classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .282120049
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: AnishaPanel/Anisha/AnishaSprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .344810575
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: AnishaPanel/Anisha/AnishaSprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: AnishaPanel/Anisha/AnishaSprite
+    classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_Events: []

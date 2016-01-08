@@ -55,8 +55,8 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110231949}
   m_DstState: {fileID: 110210293}
-  m_TransitionDuration: .0833333358
-  m_TransitionOffset: 0
+  m_TransitionDuration: 0
+  m_TransitionOffset: .00357732037
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: AnimatorIndex

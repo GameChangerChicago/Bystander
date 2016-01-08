@@ -1294,7 +1294,7 @@ Transform:
   m_PrefabInternal: {fileID: 1262272829}
   m_GameObject: {fileID: 317133414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.5093498, y: -53.9666367, z: 8.27393913}
+  m_LocalPosition: {x: 56.5093498, y: 46.0333595, z: 8.27393913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 998038472}
@@ -3126,7 +3126,7 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 8
+  ClickDelay: 5.69999981
   InitialDelay: 0
   AnimatorIndex: 2
   PlayAnimImmediately: 0
@@ -3331,7 +3331,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 5
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -4315,7 +4315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1103662781}
   DialogManager: {fileID: 0}
-  LoadingScreen: {fileID: 0}
+  LoadingCamera: {fileID: 732375251}
 --- !u!4 &998038472
 Transform:
   m_ObjectHideFlags: 0
@@ -4389,7 +4389,7 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 6
   AudioDelay: 0
-  ClickDelay: 20
+  ClickDelay: 19
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0
@@ -6634,7 +6634,7 @@ MonoBehaviour:
   CamRotation: 0
   TextBounds: 0
   AudioDelay: 0
-  ClickDelay: 9
+  ClickDelay: 7.9000001
   InitialDelay: 0
   AnimatorIndex: 0
   PlayAnimImmediately: 0

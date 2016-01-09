@@ -8,6 +8,8 @@ TextureImporter:
     21300006: SteveIdleLookingSprite_3
     21300008: SteveIdleLookingSprite_4
     21300010: SteveIdleLookingSprite_5
+    21300012: SteveIdleLookingSprite_6
+    21300014: SteveIdleLookingSprite_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,9 +55,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1266
+        y: 1024
         width: 1024
-        height: 1266
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -63,9 +65,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1266
+        y: 1024
         width: 1024
-        height: 1266
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -73,39 +75,59 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2048
-        y: 1266
+        y: 1024
         width: 1024
-        height: 1266
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SteveIdleLookingSprite_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 3072
+        y: 1024
         width: 1024
-        height: 1266
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SteveIdleLookingSprite_4
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 0
         y: 0
         width: 1024
-        height: 1266
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SteveIdleLookingSprite_5
       rect:
         serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SteveIdleLookingSprite_6
+      rect:
+        serializedVersion: 2
         x: 2048
         y: 0
         width: 1024
-        height: 1266
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SteveIdleLookingSprite_7
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

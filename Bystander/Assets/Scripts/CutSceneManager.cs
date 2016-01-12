@@ -11,7 +11,6 @@ public class CutSceneManager : MonoBehaviour
         }
         set
         {
-            Debug.Log(value);
             if (value != _clickDisabled)
             {
                 if (value)

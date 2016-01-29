@@ -4,6 +4,8 @@ using System.Collections;
 public class MenuButton : MonoBehaviour
 {
     public GameObject SelectedSprite;
+	public AudioClip HoverSound,
+					 ClickSound;
 
     public string Level;
     public int SubMenuIndex;
@@ -26,11 +28,13 @@ public class MenuButton : MonoBehaviour
                 {
                     _cursorHandler.ChangeCursor(0);
                     SelectedSprite.GetComponent<SpriteRenderer>().enabled = true;
+					_audioManager.PlaySFX(HoverSound, true);
                 }
                 else
                 {
                     _cursorHandler.ChangeCursor(1);
                     SelectedSprite.GetComponent<SpriteRenderer>().enabled = false;
+					_audioManager.StopSFX();
                 }
 
                 _mousedOver = value;
@@ -40,6 +44,7 @@ public class MenuButton : MonoBehaviour
     private bool _mousedOver;
 
     private GameManager _gameManager;
+	private AudioManager _audioManager;
     private Camera _camera;
     private CursorHandler _cursorHandler;
     private HubWorldManager hb_Manager;
@@ -55,6 +60,7 @@ public class MenuButton : MonoBehaviour
 	void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
+		_audioManager = _gameManager.GetComponent<AudioManager>();
         _camera = Camera.main;
         _cursorHandler = FindObjectOfType<CursorHandler>();
         //hb_Manager = FindObjectOfType<HubWorldManager>();
@@ -85,6 +91,7 @@ public class MenuButton : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
+				_audioManager.PlaySFX(ClickSound, false);
                 if (Level != "")
                 {
                     if (Level != "Close")
@@ -105,8 +112,6 @@ public class MenuButton : MonoBehaviour
 
                 if (ScenerioButton)
                     _gameManager.SingleScenarioMode = true;
-
-
             }
         }
     }

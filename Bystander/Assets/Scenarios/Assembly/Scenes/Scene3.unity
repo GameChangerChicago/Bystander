@@ -945,11 +945,11 @@ Prefab:
     - target: {fileID: 11400002, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
       propertyPath: AmbientTrack
       value: 
-      objectReference: {fileID: 8300000, guid: 7290dbd794b9e3a45bfb431b976a0327, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
       propertyPath: BGMTrack
       value: 
-      objectReference: {fileID: 8300000, guid: 1701bfa91d61cfd4c8848e7b851ff8ec, type: 3}
+      objectReference: {fileID: 8300000, guid: d81e4fb0377ccaa4181a4cb66d130322, type: 3}
     - target: {fileID: 11400002, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
       propertyPath: Enabled
       value: 1
@@ -4494,8 +4494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f583b9876426c14ea1cccb343e2f3a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMTrack: {fileID: 8300000, guid: 1701bfa91d61cfd4c8848e7b851ff8ec, type: 3}
-  AmbientTrack: {fileID: 8300000, guid: 7290dbd794b9e3a45bfb431b976a0327, type: 3}
+  BGMTrack: {fileID: 8300000, guid: d81e4fb0377ccaa4181a4cb66d130322, type: 3}
+  AmbientTrack: {fileID: 0}
   SFXTrack: {fileID: 0}
   Enabled: 1
 --- !u!1 &1002176975

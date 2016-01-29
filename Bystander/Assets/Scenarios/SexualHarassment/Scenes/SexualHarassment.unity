@@ -558,6 +558,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0838456bc6eb83742b83454d9144d628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
+  AmbientTrack: {fileID: 8300000, guid: 19c2f00a5fc72ac40b6379279b4e09c6, type: 3}
   MyMicroScenario: 4
   MySelectSprite: {fileID: 822922098}
   Selected: 0
@@ -5371,6 +5374,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1076363388}
   m_RootOrder: 2
+--- !u!1 &935632717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 935632718}
+  - 82: {fileID: 935632719}
+  m_Layer: 0
+  m_Name: AmbientSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &935632718
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  m_GameObject: {fileID: 935632717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.3744068, y: -9.81082249, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2121119753}
+  m_RootOrder: 3
+--- !u!82 &935632719
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200002, guid: d0dbd5501345e794b83f56978e681c83,
+    type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  m_GameObject: {fileID: 935632717}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .75
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &935855129
 GameObject:
   m_ObjectHideFlags: 0
@@ -5752,6 +5842,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 13890964}
+  HoverSound: {fileID: 0}
+  ClickSound: {fileID: 0}
   Level: 
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -7179,6 +7271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0838456bc6eb83742b83454d9144d628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
+  AmbientTrack: {fileID: 8300000, guid: 2fa103bba7e1d6941af4d5c5d095d160, type: 3}
   MyMicroScenario: 0
   MySelectSprite: {fileID: 1708404785}
   Selected: 0
@@ -7368,6 +7463,18 @@ Prefab:
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 560196482}
+    - target: {fileID: 11400002, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: BGMTrack
+      value: 
+      objectReference: {fileID: 8300000, guid: 37b7c5627111d0d4491afd0de4ceead4, type: 3}
+    - target: {fileID: 8200000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_Volume
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200002, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_Volume
+      value: .75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
   m_RootGameObject: {fileID: 2121119751}
@@ -8058,6 +8165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1792844379}
+  HoverSound: {fileID: 0}
+  ClickSound: {fileID: 0}
   Level: Close
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -8849,6 +8958,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0838456bc6eb83742b83454d9144d628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
+  AmbientTrack: {fileID: 8300000, guid: df7961914fa8dc146b58afc135a61c33, type: 3}
   MyMicroScenario: 1
   MySelectSprite: {fileID: 218261893}
   Selected: 0
@@ -11150,6 +11262,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0838456bc6eb83742b83454d9144d628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
+  AmbientTrack: {fileID: 8300000, guid: 1bb0ce28e4b557b4699ac49f49430ea9, type: 3}
   MyMicroScenario: 2
   MySelectSprite: {fileID: 1553104222}
   Selected: 0
@@ -11416,6 +11531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 191095592}
+  HoverSound: {fileID: 0}
+  ClickSound: {fileID: 0}
   Level: Final_MainMenu
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -11470,6 +11587,93 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fe274634098a36d4f9ac56d6ed101506, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1722437716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1722437717}
+  - 82: {fileID: 1722437718}
+  m_Layer: 0
+  m_Name: SFXSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1722437717
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  m_GameObject: {fileID: 1722437716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.3744068, y: -9.81082249, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2121119753}
+  m_RootOrder: 4
+--- !u!82 &1722437718
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: d0dbd5501345e794b83f56978e681c83,
+    type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  m_GameObject: {fileID: 1722437716}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .25
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1752545916
 GameObject:
   m_ObjectHideFlags: 0
@@ -12340,6 +12544,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0838456bc6eb83742b83454d9144d628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
+  AmbientTrack: {fileID: 8300000, guid: bb65c5605033db6409c62c4d254992f2, type: 3}
   MyMicroScenario: 3
   MySelectSprite: {fileID: 1119198239}
   Selected: 0
@@ -12458,6 +12665,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0838456bc6eb83742b83454d9144d628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 0}
+  ClickSound: {fileID: 0}
+  AmbientTrack: {fileID: 0}
   MyMicroScenario: 0
   MySelectSprite: {fileID: 0}
   Selected: 0
@@ -13025,6 +13235,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1011716437}
   m_RootOrder: 4
+--- !u!1 &2116562410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2116562412}
+  - 82: {fileID: 2116562411}
+  m_Layer: 0
+  m_Name: BGMSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2116562411
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200004, guid: d0dbd5501345e794b83f56978e681c83,
+    type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  m_GameObject: {fileID: 2116562410}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &2116562412
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400010, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  m_GameObject: {fileID: 2116562410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.3744068, y: -9.81082249, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2121119753}
+  m_RootOrder: 2
 --- !u!1 &2121119751
 GameObject:
   m_ObjectHideFlags: 0
@@ -13034,6 +13331,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2121119753}
   - 114: {fileID: 2121119752}
+  - 114: {fileID: 2121119754}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13068,8 +13366,26 @@ Transform:
   m_Children:
   - {fileID: 1335585674}
   - {fileID: 188984221}
+  - {fileID: 2116562412}
+  - {fileID: 935632718}
+  - {fileID: 1722437717}
   m_Father: {fileID: 0}
   m_RootOrder: 19
+--- !u!114 &2121119754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: d0dbd5501345e794b83f56978e681c83,
+    type: 2}
+  m_PrefabInternal: {fileID: 1158091820}
+  m_GameObject: {fileID: 2121119751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f583b9876426c14ea1cccb343e2f3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGMTrack: {fileID: 8300000, guid: 37b7c5627111d0d4491afd0de4ceead4, type: 3}
+  AmbientTrack: {fileID: 0}
+  SFXTrack: {fileID: 0}
 --- !u!1 &2135517877
 GameObject:
   m_ObjectHideFlags: 0

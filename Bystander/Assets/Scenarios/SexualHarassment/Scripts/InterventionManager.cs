@@ -3,6 +3,7 @@ using System.Collections;
 
 public class InterventionManager : MonoBehaviour
 {
+	private AudioManager _audioManager;
     private SHGameManager _myGameManager;
     private SHVigilHandler _myVirgil;
     private Animator _myAnimator;
@@ -15,6 +16,7 @@ public class InterventionManager : MonoBehaviour
     void Start()
     {
         _myGameManager = FindObjectOfType<SHGameManager>();
+		_audioManager = FindObjectOfType<AudioManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         _myAnimator = GetComponentInChildren<Animator>();
         _myText = this.GetComponentInChildren<TextMesh>();
@@ -35,6 +37,7 @@ public class InterventionManager : MonoBehaviour
     {
         if (_interventionActive)
         {
+			_audioManager.StopAmbience();
             RemoveIntervention();
             _myGameManager.HideCurrentPOIs();
             StartCoroutine(_myGameManager.ReenablePOIs());

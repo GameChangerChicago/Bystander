@@ -3,6 +3,10 @@ using System.Collections;
 
 public class SHCameraSelector : MonoBehaviour
 {
+	public AudioClip HoverSound,
+					 ClickSound,
+					 AmbientTrack;
+
     protected bool MousedOver
     {
         get
@@ -14,9 +18,15 @@ public class SHCameraSelector : MonoBehaviour
             if (_mousedOver != value)
             {
                 if (value)
+				{
+					_audioManager.PlaySFX(HoverSound, true);
                     _cursorHandler.ChangeCursor(0);
+				}
                 else
+				{
+					_audioManager.StopSFX();
                     _cursorHandler.ChangeCursor(1);
+				}
 
                 _mousedOver = value;
             }
@@ -24,6 +34,7 @@ public class SHCameraSelector : MonoBehaviour
     }
     private bool _mousedOver;
 
+	private AudioManager _audioManager;
     private CursorHandler _cursorHandler;
     private SHGameManager _myGameManager;
     private SHCameraManager _myCamera;
@@ -38,6 +49,7 @@ public class SHCameraSelector : MonoBehaviour
     void Start()
     {
         //Standard initialization junk
+		_audioManager = FindObjectOfType<AudioManager>();
         _cursorHandler = FindObjectOfType<CursorHandler>();
         _myGameManager = FindObjectOfType<SHGameManager>();
         _myCamera = this.transform.parent.GetComponent<SHCameraManager>();
@@ -80,6 +92,8 @@ public class SHCameraSelector : MonoBehaviour
     {
         if (_clickInitialized)
         {
+			_audioManager.PlaySFX(ClickSound, false);
+			_audioManager.ChangeAmbientTrack(AmbientTrack);
             Selected = true;
             _myCamera.FocusOnCamera();
             _myGameManager.CurrentMicroScenario = MyMicroScenario;

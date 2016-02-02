@@ -932,6 +932,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 34905653}
   MouseOverSprite: {fileID: 1473320983}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &164554365
@@ -1428,6 +1429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376e1a64c0885a040b6489ce5dfac1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   CorrectAnswer: 1
   GameWinner: 0
 --- !u!65 &216097349
@@ -1939,6 +1942,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376e1a64c0885a040b6489ce5dfac1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   CorrectAnswer: 0
   GameWinner: 0
 --- !u!65 &295538647
@@ -2601,6 +2606,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 1867381536}
   InstantiationTransform: {fileID: 1353114230}
   MouseOverSprite: {fileID: 810717315}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 1
   ComicShown: 0
 --- !u!1 &393741439
@@ -3072,6 +3078,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 1282957997}
   MouseOverSprite: {fileID: 755449244}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &479378887
@@ -3136,6 +3143,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 38661799}
   MouseOverSprite: {fileID: 273705895}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 1
   ComicShown: 0
 --- !u!1 &487003626
@@ -3284,6 +3292,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 236753355}
   MouseOverSprite: {fileID: 922523502}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 1
   ComicShown: 0
 --- !u!4 &541411160
@@ -3344,6 +3353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376e1a64c0885a040b6489ce5dfac1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   CorrectAnswer: 1
   GameWinner: 0
 --- !u!65 &554368343
@@ -3429,6 +3440,7 @@ Transform:
   - {fileID: 1696905044}
   - {fileID: 968771933}
   - {fileID: 1236076438}
+  - {fileID: 1437814872}
   m_Father: {fileID: 0}
   m_RootOrder: 18
 --- !u!1 &572446448
@@ -3827,6 +3839,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376e1a64c0885a040b6489ce5dfac1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   CorrectAnswer: 0
   GameWinner: 0
 --- !u!65 &636418275
@@ -4665,6 +4679,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 1878841807}
   MouseOverSprite: {fileID: 407696265}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &854699871
@@ -4856,6 +4871,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 887904452}
   MouseOverSprite: {fileID: 211746476}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &860987221
@@ -5050,6 +5066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376e1a64c0885a040b6489ce5dfac1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   CorrectAnswer: 1
   GameWinner: 0
 --- !u!65 &879076049
@@ -5295,6 +5313,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 1295244268}
   MouseOverSprite: {fileID: 822726262}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 1
   ComicShown: 0
 --- !u!1 &922523501
@@ -5413,7 +5432,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: .75
+  m_Volume: .25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6107,7 +6126,6 @@ Transform:
   - {fileID: 383231877}
   - {fileID: 680169119}
   - {fileID: 1925001384}
-  - {fileID: 2105565171}
   m_Father: {fileID: 2032067575}
   m_RootOrder: 6
 --- !u!95 &1011716438
@@ -6139,6 +6157,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 680169119}
   MouseOverSprite: {fileID: 383231878}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &1012558392
@@ -6617,6 +6636,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 924953455}
   MouseOverSprite: {fileID: 1391597523}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &1083445876
@@ -6723,7 +6743,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.02106285, y: -2.70802307, z: 0}
   m_LocalScale: {x: 2.69142151, y: 2.69142151, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2105565171}
   m_Father: {fileID: 1011716437}
   m_RootOrder: 0
 --- !u!212 &1091018680
@@ -7473,7 +7494,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8200002, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
       propertyPath: m_Volume
-      value: .75
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200004, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_Volume
+      value: .150000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
@@ -7670,6 +7695,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 15901150}
   MouseOverSprite: {fileID: 1588665220}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &1179422254
@@ -8247,6 +8273,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 2072489978}
   MouseOverSprite: {fileID: 572446450}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 1
   ComicShown: 0
 --- !u!1 &1241212682
@@ -8291,6 +8318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376e1a64c0885a040b6489ce5dfac1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   CorrectAnswer: 0
   GameWinner: 0
 --- !u!65 &1241212685
@@ -9774,6 +9803,66 @@ PolygonCollider2D:
       - {x: -1.779302, y: .886584699}
       - {x: -1.77293801, y: 2.54281735}
       - {x: -1.59369648, y: 2.77810812}
+--- !u!1 &1437814871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1437814872}
+  - 20: {fileID: 1437814873}
+  m_Layer: 0
+  m_Name: PauseCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1437814872
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437814871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6.93039322}
+  m_LocalScale: {x: 1.31803405, y: 1.31803417, z: 1.31803417}
+  m_Children: []
+  m_Father: {fileID: 560196483}
+  m_RootOrder: 5
+--- !u!20 &1437814873
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437814871}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 15
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
 --- !u!1 &1443460908
 GameObject:
   m_ObjectHideFlags: 0
@@ -9836,6 +9925,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 1494850815}
   MouseOverSprite: {fileID: 688755650}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &1452746063
@@ -10620,6 +10710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376e1a64c0885a040b6489ce5dfac1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   CorrectAnswer: 1
   GameWinner: 0
 --- !u!65 &1555827433
@@ -10737,6 +10829,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 1796149324}
   MouseOverSprite: {fileID: 1233290718}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &1565714181
@@ -11048,6 +11141,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 980718699}
   MouseOverSprite: {fileID: 59629401}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 0
   ComicShown: 0
 --- !u!1 &1592427000
@@ -12461,6 +12555,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 393470571}
   InstantiationTransform: {fileID: 1353114230}
   MouseOverSprite: {fileID: 492553958}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   IsSexualHarassment: 1
   ComicShown: 0
 --- !u!1 &1878841806
@@ -13230,11 +13325,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2105565169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.58087921, y: -14.6702576, z: 0}
-  m_LocalScale: {x: 1374.84485, y: 417.336975, z: 1}
+  m_LocalPosition: {x: .163550615, y: -4.34002876, z: 0}
+  m_LocalScale: {x: 510.824768, y: 155.061905, z: 1}
   m_Children: []
-  m_Father: {fileID: 1011716437}
-  m_RootOrder: 4
+  m_Father: {fileID: 1091018678}
+  m_RootOrder: 0
 --- !u!1 &2116562410
 GameObject:
   m_ObjectHideFlags: 0
@@ -13262,7 +13357,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .150000006
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13432,6 +13527,7 @@ MonoBehaviour:
   CompanionPOI: {fileID: 0}
   InstantiationTransform: {fileID: 860987222}
   MouseOverSprite: {fileID: 0}
+  ClickSound: {fileID: 0}
   IsSexualHarassment: 1
   ComicShown: 0
 --- !u!61 &2135517880

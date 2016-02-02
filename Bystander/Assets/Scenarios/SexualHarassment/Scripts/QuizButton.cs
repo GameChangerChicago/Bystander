@@ -8,8 +8,11 @@ public class QuizButton : MonoBehaviour
     private InterventionManager _myInterventionManager;
     private SHVigilHandler _myVirgil;
     private QuizHandler _otherQuiz;
+	private AudioManager _audioManager;
     private GameObject _myQuiz,
-                       _currentMiniComic;
+					   _currentMiniComic;
+	public AudioClip HoverSound,
+					 ClickSound;
     private ButtonType _myButtonType;
 
     protected GameObject currentMiniComic;
@@ -24,9 +27,15 @@ public class QuizButton : MonoBehaviour
             if (_mousedOver != value)
             {
                 if (value)
+				{
+					_audioManager.PlaySFX(HoverSound, true);
                     _cursorHanlder.ChangeCursor(0);
+				}
                 else
+				{
+					_audioManager.StopSFX();
                     _cursorHanlder.ChangeCursor(1);
+				}
 
                 _mousedOver = value;
             }
@@ -42,6 +51,7 @@ public class QuizButton : MonoBehaviour
     {
         //Standard initialization junk
         _myGameManager = FindObjectOfType<SHGameManager>();
+		_audioManager = FindObjectOfType<AudioManager>();
         _myInterventionManager = FindObjectOfType<InterventionManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         _cursorHanlder = FindObjectOfType<CursorHandler>();
@@ -79,6 +89,7 @@ public class QuizButton : MonoBehaviour
     {
         if (_myButtonType == ButtonType.Yes || _myButtonType == ButtonType.No)
         {
+			_audioManager.PlaySFX(ClickSound, false);
             if (CorrectAnswer)
             {
                 //Tells the virgil handler that the player was correct

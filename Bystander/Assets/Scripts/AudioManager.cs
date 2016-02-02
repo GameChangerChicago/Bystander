@@ -3,12 +3,14 @@ using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
+	//All ClickSounds are the same so a public field here that stores it for all. Do this tomorrow.
     public AudioClip BGMTrack,
                      AmbientTrack,
                      SFXTrack;
     private AudioSource _BGMSource,
                         _ambientSource,
                         _SFXSource;
+	private float _volumeIncreaseValue;
     
     void Start()
     {
@@ -53,6 +55,17 @@ public class AudioManager : MonoBehaviour
 	{
 		_ambientSource.clip = newClip;
 		_ambientSource.Play();
+	}
+
+	public void IncreaseAmbientVolume(float amount)
+	{
+		_volumeIncreaseValue = amount;
+		_ambientSource.volume += amount;
+	}
+
+	public void RevertAmbientVolume()
+	{
+		_ambientSource.volume -= _volumeIncreaseValue;
 	}
 
 	public void StopAmbience()

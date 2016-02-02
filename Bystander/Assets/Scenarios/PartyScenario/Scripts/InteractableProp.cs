@@ -13,10 +13,12 @@ public class InteractableProp : MonoBehaviour
         set
         {
             if (_mousedOver != value)
-            {
+			{
+				MouseOverObject.SetActive(value);
+
                 if (value)
                 {
-                    MouseOverObject.SetActive(true);
+					_audioManager.IncreaseAmbientVolume(0.4f);
                     _cursorHandler.ChangeCursor(0);
 
                     for (int i = 0; i < FindObjectsOfType<InteractableProp>().Length; i++)
@@ -27,14 +29,15 @@ public class InteractableProp : MonoBehaviour
                 }
                 else
                 {
-                    MouseOverObject.SetActive(false);
-
-                    if (!_clicked && !Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f))
-                    {
-                        _cursorHandler.ChangeCursor(1);
+					if (!_clicked && !Physics2D.OverlapCircle(_myCamera.ScreenToWorldPoint(Input.mousePosition), 0.01f))
+					{
+						_cursorHandler.ChangeCursor(1);
+						_audioManager.RevertAmbientVolume();
                     }
                     else
-                        _clicked = false;
+					{
+						_clicked = false;
+					}
                 }
 
                 _mousedOver = value;
@@ -59,8 +62,8 @@ public class InteractableProp : MonoBehaviour
                  CamRotation;
     public Transform MyPanelPos;
     public AudioSource BGMSource;
-    public AudioClip[] MyBGM,
-                       MySFX;
+	public AudioClip[] MyBGM;
+	public AudioClip ClickSound;
     public Animator CloseUpAnimator;
     public GameObject MouseOverObject;
 
@@ -76,10 +79,12 @@ public class InteractableProp : MonoBehaviour
     private CursorHandler _cursorHandler;
     private Camera _myCamera;
     private Collider2D _overlapCircle;
+	private AudioManager _audioManager;
 
     void Start()
     {
         _myGameManager = FindObjectOfType<PartyGameManager>();
+		_audioManager = FindObjectOfType<AudioManager>();
         _myAnimator = GetComponent<Animator>();
         _myCamera = Camera.main;
         _cursorHandler = FindObjectOfType<CursorHandler>();
@@ -116,6 +121,7 @@ public class InteractableProp : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             _clicked = true;
+			_audioManager.PlaySFX(ClickSound, false);
 
             //If an Interactable Props changes animations while off screen
             if (AnimationChanges)

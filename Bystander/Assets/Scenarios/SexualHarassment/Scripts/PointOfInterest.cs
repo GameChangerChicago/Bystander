@@ -12,23 +12,23 @@ public class PointOfInterest : MonoBehaviour
         set
         {
             if (value != _mouseOver)
-            {
+			{
+				MouseOverSprite.enabled = value;
+
                 if (value)
                 {
-                    MouseOverSprite.enabled = true;
                     _cursorHandler.ChangeCursor(0);
                     _myGameManager.DeselectPOIs(this);
-
-                    if (CompanionPOI != null)
-                        CompanionPOI.MouseOverSprite.enabled = true;
+					_audioManager.IncreaseAmbientVolume(0.4f);
                 }
                 else
                 {
-                    MouseOverSprite.enabled = false;
                     _cursorHandler.ChangeCursor(1);
-                    if (CompanionPOI != null)
-                        CompanionPOI.MouseOverSprite.enabled = false;
+					_audioManager.RevertAmbientVolume();
                 }
+
+				if (CompanionPOI != null)
+					CompanionPOI.MouseOverSprite.enabled = value;
 
                 _mouseOver = value;
             }
@@ -40,6 +40,7 @@ public class PointOfInterest : MonoBehaviour
     private SHGameManager _myGameManager;
     private SHVigilHandler _myVirgil;
     private QuizHandler _myQuiz;
+	private AudioManager _audioManager;
     private GameObject _myMiniComic;
     private Camera _myCamera;
     private bool _showingComic;
@@ -49,6 +50,7 @@ public class PointOfInterest : MonoBehaviour
     public PointOfInterest CompanionPOI;
     public Transform InstantiationTransform;
     public SpriteRenderer MouseOverSprite;
+	public AudioClip ClickSound;
     public bool IsSexualHarassment,
                 ComicShown = false;
 
@@ -56,6 +58,7 @@ public class PointOfInterest : MonoBehaviour
     {
         //Standard instantiation junk.
         _myGameManager = FindObjectOfType<SHGameManager>();
+		_audioManager = FindObjectOfType<AudioManager>();
         _myVirgil = FindObjectOfType<SHVigilHandler>();
         _myCamera = this.transform.parent.GetComponentInChildren<Camera>();
         _myQuiz = GameObject.Find("Quiz True False").GetComponent<QuizHandler>();
@@ -80,6 +83,7 @@ public class PointOfInterest : MonoBehaviour
                     _showingComic = true;
                     _myGameManager.CurrentPOI = this.GetComponent<PointOfInterest>();
                     _myGameManager.FocusedOnPOI = true;
+					_audioManager.PlaySFX(ClickSound, false);
                 }
             }
         }

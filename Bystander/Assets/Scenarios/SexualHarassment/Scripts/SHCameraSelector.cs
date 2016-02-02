@@ -19,13 +19,17 @@ public class SHCameraSelector : MonoBehaviour
             {
                 if (value)
 				{
-					_audioManager.PlaySFX(HoverSound, true);
+					_audioManager.ChangeAmbientTrack(AmbientTrack);
+					//_audioManager.PlaySFX(HoverSound, true);
                     _cursorHandler.ChangeCursor(0);
 				}
                 else
 				{
-					_audioManager.StopSFX();
-                    _cursorHandler.ChangeCursor(1);
+					if(!_clickInitialized)
+					{
+						_audioManager.StopAmbience();
+	                    _cursorHandler.ChangeCursor(1);
+					}
 				}
 
                 _mousedOver = value;
@@ -93,11 +97,11 @@ public class SHCameraSelector : MonoBehaviour
         if (_clickInitialized)
         {
 			_audioManager.PlaySFX(ClickSound, false);
-			_audioManager.ChangeAmbientTrack(AmbientTrack);
             Selected = true;
             _myCamera.FocusOnCamera();
             _myGameManager.CurrentMicroScenario = MyMicroScenario;
             Invoke("ActivationDelay", 0.01f);
+			MousedOver = false;
             _clickInitialized = false;
 
             for (int i = 0; i < 5; i++)

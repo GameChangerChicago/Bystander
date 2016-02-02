@@ -4,10 +4,12 @@ using System.Collections;
 public class PlayerSelection : MonoBehaviour
 {
     public GameObject[] SelectObjects;
+	public AudioClip ClickSound;
     public PolygonCollider2D[] HallwayColliders;
 
     private PartyGameManager _myGameManager;
     private CursorHandler _cursorManager;
+	private AudioManager _audioManager;
     private SpriteRenderer _idleSprite;
     private Camera _myCamera;
     private bool _selectionMade;
@@ -15,6 +17,7 @@ public class PlayerSelection : MonoBehaviour
     void Start()
     {
         _myCamera = Camera.main;
+		_audioManager = FindObjectOfType<AudioManager>();
         _myGameManager = FindObjectOfType<PartyGameManager>();
         _cursorManager = FindObjectOfType<CursorHandler>();
     }
@@ -35,7 +38,10 @@ public class PlayerSelection : MonoBehaviour
                     SelectObjects[1].GetComponent<Animator>().SetBool("MousedOver", false);
 
                     if (Input.GetKeyUp(KeyCode.Mouse0))
+					{
                         StartCoroutine(SelectionMade(true));
+						_audioManager.PlaySFX(ClickSound, false);
+					}
                 }
                 else if (overlapCircle.gameObject == SelectObjects[1])
                 {
@@ -45,7 +51,10 @@ public class PlayerSelection : MonoBehaviour
                     SelectObjects[0].GetComponent<Animator>().SetBool("MousedOver", false);
 
                     if (Input.GetKeyUp(KeyCode.Mouse0))
+					{
                         StartCoroutine(SelectionMade(false));
+						_audioManager.PlaySFX(ClickSound,false);
+					}
                 }
                 else
                 {

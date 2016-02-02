@@ -226,8 +226,9 @@ MonoBehaviour:
   CamRotation: 0
   MyPanelPos: {fileID: 950486466}
   BGMSource: {fileID: 0}
-  MyBGM: []
-  MySFX: []
+  MyBGM:
+  - {fileID: 0}
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 950486468}
   MouseOverObject: {fileID: 1490358706}
 --- !u!95 &12764877
@@ -305,7 +306,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 1103640908}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 1103640910}
   MouseOverObject: {fileID: 96953733}
 --- !u!212 &40538239
@@ -858,7 +859,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 1305278957}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 1305278958}
   MouseOverObject: {fileID: 1077356187}
 --- !u!1 &82118938
@@ -2531,8 +2532,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 185781667}
-  HoverSound: {fileID: 0}
-  ClickSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: Final_MainMenu
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -2595,7 +2596,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 1561526549}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 1561526551}
   MouseOverObject: {fileID: 322966149}
 --- !u!1 &233905247
@@ -3281,8 +3282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1865983084}
-  HoverSound: {fileID: 0}
-  ClickSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: 
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -3457,7 +3458,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 1750407258}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 1750407259}
   MouseOverObject: {fileID: 1192342993}
 --- !u!1 &301923898
@@ -3869,7 +3870,7 @@ Transform:
   m_GameObject: {fileID: 323094620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: .30423376, y: .30423373, z: .30423373}
+  m_LocalScale: {x: 1, y: 1, z: .758705676}
   m_Children:
   - {fileID: 872589024}
   - {fileID: 499660202}
@@ -4058,7 +4059,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 251973698}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 251973699}
   MouseOverObject: {fileID: 2016017153}
 --- !u!1 &339614458
@@ -5398,7 +5399,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 1783044675}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 1783044677}
   MouseOverObject: {fileID: 47688100}
 --- !u!1 &437088161
@@ -5599,7 +5600,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 1208502729}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 1208502730}
   MouseOverObject: {fileID: 2034051819}
 --- !u!1 &442068804
@@ -7884,7 +7885,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 1097363215}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 1097363217}
   MouseOverObject: {fileID: 1776875573}
 --- !u!1 &645394991
@@ -9707,7 +9708,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 1561526549}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 1561526551}
   MouseOverObject: {fileID: 2094780322}
 --- !u!1 &790725888
@@ -10415,7 +10416,7 @@ MonoBehaviour:
   MyBGM:
   - {fileID: 8300000, guid: 40d86f73f456dfd4986c09b4ed792ac0, type: 3}
   - {fileID: 8300000, guid: 9f8aa1843d93c224094bce18b7794e15, type: 3}
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 2111722850}
   MouseOverObject: {fileID: 1579759447}
 --- !u!1 &836935740
@@ -10986,7 +10987,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 798795355}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 798795356}
   MouseOverObject: {fileID: 1981576963}
 --- !u!95 &904932142
@@ -11452,8 +11453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 694164009}
-  HoverSound: {fileID: 0}
-  ClickSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: Close
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -13195,6 +13196,7 @@ MonoBehaviour:
   SelectObjects:
   - {fileID: 1855546067}
   - {fileID: 528805478}
+  ClickSound: {fileID: 0}
   HallwayColliders:
   - {fileID: 425619739}
   - {fileID: 618253334}
@@ -14143,7 +14145,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 929038935}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 929038937}
   MouseOverObject: {fileID: 290256876}
 --- !u!1 &1106469512
@@ -15642,6 +15644,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
   m_RootGameObject: {fileID: 323094620}
@@ -16151,7 +16165,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16594,7 +16608,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 66290033}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 66290034}
   MouseOverObject: {fileID: 1712306231}
 --- !u!1 &1289818706
@@ -16675,7 +16689,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: .75
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -19057,7 +19071,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 579730325}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 579730326}
   MouseOverObject: {fileID: 765095140}
 --- !u!1 &1520774665
@@ -20285,7 +20299,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 213135588}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 213135589}
   MouseOverObject: {fileID: 2099930512}
 --- !u!1 &1681295425
@@ -20687,7 +20701,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 1960891806}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 1960891808}
   MouseOverObject: {fileID: 1460254092}
 --- !u!1 &1732125290
@@ -21965,7 +21979,11 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 2693af6257a6e474f981917daa64a41d, type: 3}
     - target: {fileID: 8200004, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
       propertyPath: m_Volume
-      value: .75
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200002, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_Volume
+      value: .25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
@@ -23996,7 +24014,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 251973698}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 251973699}
   MouseOverObject: {fileID: 1208987199}
 --- !u!1 &1989090053
@@ -24498,7 +24516,7 @@ MonoBehaviour:
   MyBGM:
   - {fileID: 8300000, guid: 40d86f73f456dfd4986c09b4ed792ac0, type: 3}
   - {fileID: 8300000, guid: 9f8aa1843d93c224094bce18b7794e15, type: 3}
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 2111722850}
   MouseOverObject: {fileID: 1413553607}
 --- !u!1 &2048930381
@@ -24629,7 +24647,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 884721345}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 884721346}
   MouseOverObject: {fileID: 625503008}
 --- !u!1 &2060826387
@@ -24941,7 +24959,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 941117786}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 0}
   MouseOverObject: {fileID: 1129474172}
 --- !u!1 &2079223453
@@ -25663,7 +25681,7 @@ MonoBehaviour:
   MyPanelPos: {fileID: 969736302}
   BGMSource: {fileID: 0}
   MyBGM: []
-  MySFX: []
+  ClickSound: {fileID: 0}
   CloseUpAnimator: {fileID: 969736304}
   MouseOverObject: {fileID: 62931417}
 --- !u!1 &2137125952

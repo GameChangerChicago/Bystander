@@ -40,7 +40,7 @@ public class PlayerSelection : MonoBehaviour
                     if (Input.GetKeyUp(KeyCode.Mouse0))
 					{
                         StartCoroutine(SelectionMade(true));
-						_audioManager.PlaySFX(ClickSound, false);
+						_audioManager.PlaySFX(ClickSound, 0.7f, false);
 					}
                 }
                 else if (overlapCircle.gameObject == SelectObjects[1])
@@ -53,7 +53,7 @@ public class PlayerSelection : MonoBehaviour
                     if (Input.GetKeyUp(KeyCode.Mouse0))
 					{
                         StartCoroutine(SelectionMade(false));
-						_audioManager.PlaySFX(ClickSound,false);
+						_audioManager.PlaySFX(ClickSound, 0.7f, false);
 					}
                 }
                 else

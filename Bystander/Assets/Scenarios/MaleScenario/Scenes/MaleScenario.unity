@@ -1412,6 +1412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9068b7a5839d42a0b1d14222c03b637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   MyWebMenu: {fileID: 925071194}
   webPage: {fileID: 243387661}
 --- !u!114 &353672296
@@ -1637,6 +1638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9068b7a5839d42a0b1d14222c03b637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   MyWebMenu: {fileID: 925071194}
   webPage: {fileID: 2009367166}
 --- !u!61 &408677308
@@ -2227,6 +2229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9068b7a5839d42a0b1d14222c03b637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   MyWebMenu: {fileID: 925071194}
   webPage: {fileID: 1646915567}
 --- !u!114 &515560483
@@ -2611,8 +2614,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 631875026}
-  HoverSound: {fileID: 0}
-  ClickSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: Final_MainMenu
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -3372,6 +3375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9068b7a5839d42a0b1d14222c03b637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   MyWebMenu: {fileID: 0}
   webPage: {fileID: 83739426}
 --- !u!61 &909093829
@@ -3566,6 +3570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuToTransitionTo: {fileID: 1094763313}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   isMenu: 1
   isOpen: 0
 --- !u!1 &925901453
@@ -3802,6 +3807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9068b7a5839d42a0b1d14222c03b637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   MyWebMenu: {fileID: 0}
   webPage: {fileID: 1564912114}
 --- !u!61 &946695329
@@ -3981,6 +3987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9068b7a5839d42a0b1d14222c03b637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   MyWebMenu: {fileID: 925071194}
   webPage: {fileID: 442022081}
 --- !u!114 &966907984
@@ -4447,6 +4454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuToTransitionTo: {fileID: 925071189}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   isMenu: 0
   isOpen: 1
 --- !u!1 &1094822690
@@ -4680,6 +4688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9068b7a5839d42a0b1d14222c03b637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   MyWebMenu: {fileID: 925071194}
   webPage: {fileID: 1767547868}
 --- !u!114 &1194548815
@@ -5487,6 +5496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9068b7a5839d42a0b1d14222c03b637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClickSound: {fileID: 0}
   MyWebMenu: {fileID: 0}
   webPage: {fileID: 1767547868}
 --- !u!114 &1499536639
@@ -6280,7 +6290,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6610,6 +6620,10 @@ Prefab:
       propertyPath: AmbientTrack
       value: 
       objectReference: {fileID: 8300000, guid: 052b56863ebd7d14aa3f0177d5837669, type: 3}
+    - target: {fileID: 8200004, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: m_Volume
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
   m_RootGameObject: {fileID: 154372553}
@@ -7161,7 +7175,7 @@ Transform:
   m_GameObject: {fileID: 1860871517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: .30423376, y: .30423373, z: .30423373}
+  m_LocalScale: {x: .758705735, y: .758705676, z: .758705676}
   m_Children:
   - {fileID: 290614675}
   - {fileID: 405332488}
@@ -7543,8 +7557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 502166696}
-  HoverSound: {fileID: 0}
-  ClickSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: Close
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -8020,8 +8034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 128047004}
-  HoverSound: {fileID: 0}
-  ClickSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: 
   SubMenuIndex: 0
   ScenerioButton: 0

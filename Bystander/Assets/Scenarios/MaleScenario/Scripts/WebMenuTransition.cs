@@ -4,10 +4,12 @@ using System.Collections;
 public class WebMenuTransition : MonoBehaviour
 {
 		public GameObject menuToTransitionTo;
+	public AudioClip ClickSound;
 		private WebMenuTransition menu;
 		private LinkHighlight[] menuOptions;
 		private BoxCollider2D[] menuOptionsColliders;
         private CursorHandler _cursorHandler;
+	private AudioManager _audioManager;
 		public bool isMenu;
 		public bool isOpen;
 	private bool isClicked;
@@ -18,7 +20,7 @@ public class WebMenuTransition : MonoBehaviour
 		{
 				menu = menuToTransitionTo.GetComponent<WebMenuTransition> ();
                 _cursorHandler = FindObjectOfType<CursorHandler>();
-				
+		_audioManager = FindObjectOfType<AudioManager>();
 		if(isMenu)
 			menuOptions = menu.GetComponentsInChildren<LinkHighlight> ();
 
@@ -56,7 +58,7 @@ public class WebMenuTransition : MonoBehaviour
 
 		void OnMouseDown ()
 		{
-				
+		_audioManager.PlaySFX (ClickSound, 0.7f, false);
 				TransitionToMenu ();
 				if (isMenu)
 						isClicked = true;

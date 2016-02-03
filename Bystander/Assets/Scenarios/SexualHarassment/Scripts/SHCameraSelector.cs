@@ -96,7 +96,7 @@ public class SHCameraSelector : MonoBehaviour
     {
         if (_clickInitialized)
         {
-			_audioManager.PlaySFX(ClickSound, false);
+			_audioManager.PlaySFX(ClickSound, 0.7f, false);
             Selected = true;
             _myCamera.FocusOnCamera();
             _myGameManager.CurrentMicroScenario = MyMicroScenario;

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
-	//All ClickSounds are the same so a public field here that stores it for all. Do this tomorrow.
     public AudioClip BGMTrack,
                      AmbientTrack,
                      SFXTrack;
@@ -44,9 +43,10 @@ public class AudioManager : MonoBehaviour
 	    }
     }
 
-    public void PlaySFX(AudioClip newClip, bool loop)
+    public void PlaySFX(AudioClip newClip, float volume, bool loop)
     {
 		_SFXSource.clip = newClip;
+		_SFXSource.volume = volume;
 		_SFXSource.loop = loop;
         _SFXSource.Play();
     }

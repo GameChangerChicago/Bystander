@@ -7,6 +7,33 @@ public class DialogueVisualUI : UnityDialogueUI
 {
     protected PartnerGameManager myGameManager;
 
+	protected bool hovering
+	{
+		get
+		{
+			return _hovering;
+		}
+		set
+		{
+			if(_hovering != value)
+			{
+				if(value)
+				{
+					_audioManager.PlaySFX(HoverSound, 0.025f, true);
+					_cursorHandler.ChangeCursor(0);
+				}
+				else
+				{
+					_audioManager.StopSFX();
+					_cursorHandler.ChangeCursor(1);
+				}
+
+				_hovering = value;
+			}
+		}
+	}
+	private bool _hovering;
+
     protected bool ClickEnabled
     {
         get
@@ -28,9 +55,12 @@ public class DialogueVisualUI : UnityDialogueUI
     }
     private bool _clickEnabled = true;
 
+	public AudioClip HoverSound,
+					 ClickSound;
     public bool ButtonsShowing = false;
 
     private CursorHandler _cursorHandler;
+	private AudioManager _audioManager;
     private GUIButton[] _guiButtons;
     private float _width,
                   _height;
@@ -49,6 +79,7 @@ public class DialogueVisualUI : UnityDialogueUI
     // Make sure npcBorderFadeEffect is assigned:
     public override void Awake()
     {
+		_audioManager = FindObjectOfType<AudioManager>();
         _guiButtons = FindObjectsOfType<GUIButton>();
         _cursorHandler = FindObjectOfType<CursorHandler>();
         base.Awake();
@@ -94,6 +125,7 @@ public class DialogueVisualUI : UnityDialogueUI
     {
         if (ClickEnabled)
         {
+			_audioManager.PlaySFX(ClickSound, 0.7f, false);
             ClickEnabled = false;
             myGameManager.InteractionEnabled = false;
             Invoke("EnableClick", 1.25f);
@@ -157,9 +189,9 @@ public class DialogueVisualUI : UnityDialogueUI
         }
 
         if (_button1MouseOver || _button2MouseOver || _button3MouseOver || _button4MouseOver)
-            _cursorHandler.ChangeCursor(0);
+			hovering = true;
         else
-            _cursorHandler.ChangeCursor(1);
+			hovering = false;
     }
 
     public override void ShowResponses(Subtitle subtitle, Response[] responses, float timeout)

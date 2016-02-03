@@ -28,7 +28,7 @@ public class MenuButton : MonoBehaviour
                 {
                     _cursorHandler.ChangeCursor(0);
                     SelectedSprite.GetComponent<SpriteRenderer>().enabled = true;
-					_audioManager.PlaySFX(HoverSound, true);
+					_audioManager.PlaySFX(HoverSound, 0.05f, true);
                 }
                 else
                 {
@@ -91,7 +91,7 @@ public class MenuButton : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-				_audioManager.PlaySFX(ClickSound, false);
+				_audioManager.PlaySFX(ClickSound, 0.7f, false);
                 if (Level != "")
                 {
                     if (Level != "Close")

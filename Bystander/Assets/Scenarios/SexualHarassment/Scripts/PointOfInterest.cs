@@ -83,7 +83,7 @@ public class PointOfInterest : MonoBehaviour
                     _showingComic = true;
                     _myGameManager.CurrentPOI = this.GetComponent<PointOfInterest>();
                     _myGameManager.FocusedOnPOI = true;
-					_audioManager.PlaySFX(ClickSound, false);
+					_audioManager.PlaySFX(ClickSound, 0.7f, false);
                 }
             }
         }

@@ -2579,6 +2579,9 @@ MonoBehaviour:
     panel: {fileID: 0}
     line: {fileID: 11400064}
     continueButton: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
+  ButtonsShowing: 0
   npcBorderFadeEffect: {fileID: 11400056}
 --- !u!114 &11400082
 MonoBehaviour:

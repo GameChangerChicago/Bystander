@@ -28,6 +28,6 @@ public class CursorHandler : MonoBehaviour
 
     public void ChangeCursor(int cursorIndex)
     {
-        CursorIndex = cursorIndex;
+		CursorIndex = cursorIndex;
     }
 }

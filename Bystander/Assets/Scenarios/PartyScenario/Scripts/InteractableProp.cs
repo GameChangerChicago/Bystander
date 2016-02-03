@@ -121,7 +121,7 @@ public class InteractableProp : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             _clicked = true;
-			_audioManager.PlaySFX(ClickSound, false);
+			_audioManager.PlaySFX(ClickSound, 0.7f, false);
 
             //If an Interactable Props changes animations while off screen
             if (AnimationChanges)

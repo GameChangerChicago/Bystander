@@ -28,7 +28,7 @@ public class QuizButton : MonoBehaviour
             {
                 if (value)
 				{
-					_audioManager.PlaySFX(HoverSound, true);
+					_audioManager.PlaySFX(HoverSound, 0.05f, true);
                     _cursorHanlder.ChangeCursor(0);
 				}
                 else
@@ -89,7 +89,7 @@ public class QuizButton : MonoBehaviour
     {
         if (_myButtonType == ButtonType.Yes || _myButtonType == ButtonType.No)
         {
-			_audioManager.PlaySFX(ClickSound, false);
+			_audioManager.PlaySFX(ClickSound, 0.7f, false);
             if (CorrectAnswer)
             {
                 //Tells the virgil handler that the player was correct

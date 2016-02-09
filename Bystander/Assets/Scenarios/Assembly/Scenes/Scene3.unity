@@ -3488,6 +3488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1992680677}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: 
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -4497,7 +4499,6 @@ MonoBehaviour:
   BGMTrack: {fileID: 8300000, guid: d81e4fb0377ccaa4181a4cb66d130322, type: 3}
   AmbientTrack: {fileID: 0}
   SFXTrack: {fileID: 0}
-  Enabled: 1
 --- !u!1 &1002176975
 GameObject:
   m_ObjectHideFlags: 0
@@ -4874,7 +4875,7 @@ Transform:
   m_GameObject: {fileID: 1103662781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: .30423376, y: .30423373, z: .30423373}
+  m_LocalScale: {x: .758705735, y: .758705676, z: .758705676}
   m_Children:
   - {fileID: 1387808764}
   - {fileID: 1162743474}
@@ -6867,6 +6868,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1398837615}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: Close
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -7907,6 +7910,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1440292476}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: Final_MainMenu
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -8048,6 +8053,10 @@ Prefab:
     - target: {fileID: 400014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a40fb3bc5871d4e1e9c6f7da29136f2c, type: 2}

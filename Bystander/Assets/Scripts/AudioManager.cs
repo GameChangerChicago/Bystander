@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
 					if(BGMTrack)
 					{
                         _BGMSource.clip = BGMTrack;
+						_BGMSource.volume = 0.25f;
                         _BGMSource.Play();
 					}
 	                break;

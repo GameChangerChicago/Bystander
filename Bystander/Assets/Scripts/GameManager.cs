@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour
         {
             if (_audioPaused != value)
             {
-                _relaventAudioSources.Clear();
-
                 for (int i = 0; i < _allAudioSources.Length; i++)
                 {
                     if (_allAudioSources[i].isPlaying)
@@ -46,8 +44,10 @@ public class GameManager : MonoBehaviour
                 {
                     for (int i = 0; i < _relaventAudioSources.Count; i++)
                     {
+						Debug.Log ("Sup " + _relaventAudioSources[i].name);
                         _relaventAudioSources[i].Play();
-                    }
+					}
+					_relaventAudioSources.Clear();
                 }
 
                 _audioPaused = value;

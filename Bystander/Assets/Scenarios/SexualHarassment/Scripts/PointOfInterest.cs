@@ -19,7 +19,7 @@ public class PointOfInterest : MonoBehaviour
                 {
                     _cursorHandler.ChangeCursor(0);
                     _myGameManager.DeselectPOIs(this);
-					_audioManager.IncreaseAmbientVolume(0.4f);
+					_audioManager.IncreaseAmbientVolume(0.1f);
                 }
                 else
                 {

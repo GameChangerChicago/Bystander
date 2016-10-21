@@ -19,7 +19,11 @@ public class SHCameraSelector : MonoBehaviour
             {
                 if (value)
 				{
-					_audioManager.ChangeAmbientTrack(AmbientTrack);
+					if(AmbientTrack.name == "03_hallway")
+						_audioManager.ChangeAmbientTrack(AmbientTrack, 0.05f);
+					else
+						_audioManager.ChangeAmbientTrack(AmbientTrack, 1f);
+
 					//_audioManager.PlaySFX(HoverSound, true);
                     _cursorHandler.ChangeCursor(0);
 				}

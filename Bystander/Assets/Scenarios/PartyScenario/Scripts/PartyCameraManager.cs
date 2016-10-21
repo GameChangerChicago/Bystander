@@ -15,7 +15,8 @@ public class PartyCameraManager : MonoBehaviour
                   _camSizeDiff,
                   _camRotation;
     private bool _movingCamera,
-                 _movingBack;
+                 _movingBack,
+				 _recentImportantProp;
 
     void Start()
     {
@@ -76,7 +77,7 @@ public class PartyCameraManager : MonoBehaviour
     }
 
     //This method initializes the moving process; setting impertinant fields and also invokes StopMoving
-    public void SetCameraToMove(Vector3 pos, float camTravelTime, float camSize, float camRotation)
+    public void SetCameraToMove(Vector3 pos, float camTravelTime, float camSize, float camRotation, bool imporant)
     {
         _pos = pos;
         _camTravelTime = camTravelTime;
@@ -93,6 +94,7 @@ public class PartyCameraManager : MonoBehaviour
         _movingCamera = true;
         _camRotation = camRotation;
         Invoke("StopMoving", camTravelTime);
+		_recentImportantProp = imporant;
         _myGameManager.CameraMoving = true;
         _cursorHandler.ChangeCursor(2);
     }
@@ -120,7 +122,11 @@ public class PartyCameraManager : MonoBehaviour
     private void StopMoving()
     {
         _movingCamera = false;
-        _myGameManager.CameraMoving = false;
+		if(_recentImportantProp)
+		{
+			_myGameManager.CameraMoving = false;
+			_recentImportantProp = false;
+		}
 
         if (_movingBack || MovingToNext)
         {

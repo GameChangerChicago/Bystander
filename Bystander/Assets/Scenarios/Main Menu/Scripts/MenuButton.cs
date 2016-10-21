@@ -120,9 +120,7 @@ public class MenuButton : MonoBehaviour
     {
         if (SubMenuIndex == 0)
         {
-			Debug.Log("hello?");
-
-            if (_camera.transform.position.y > 0)
+			if (_camera.transform.position.y > 0)
 
 				_camera.transform.position = new Vector3(selectionScreen.transform.position.x, selectionScreen.transform.position.y, -10);
 			else

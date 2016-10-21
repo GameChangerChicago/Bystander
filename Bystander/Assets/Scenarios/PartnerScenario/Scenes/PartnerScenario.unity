@@ -3619,7 +3619,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -5079,7 +5079,7 @@ Transform:
   m_GameObject: {fileID: 651822238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 57.679081}
-  m_LocalScale: {x: .758705735, y: .758705676, z: .758705676}
+  m_LocalScale: {x: .200100496, y: .200100496, z: .200100496}
   m_Children:
   - {fileID: 1206545563}
   - {fileID: 1556756998}
@@ -8675,6 +8675,14 @@ Prefab:
       propertyPath: AmbientTrack
       value: 
       objectReference: {fileID: 8300000, guid: 082da383c63df1c429c570e1ff881add, type: 3}
+    - target: {fileID: 8200004, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200002, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
   m_RootGameObject: {fileID: 222780678}
@@ -10603,7 +10611,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1

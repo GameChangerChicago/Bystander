@@ -14,6 +14,7 @@ public class PartyGameManager : MonoBehaviour
         {
             if (value != _cameraMoving)
             {
+				Debug.Log(value);
                 if (value)
                 {
                     for (int i = 0; i < _propsPerIM[_currentInteractiveMoment].Length; i++)
@@ -153,7 +154,7 @@ public class PartyGameManager : MonoBehaviour
         else
             _currentBystanderPortrait.color = new Color(1, 1, 1, 1f - (float)_clickCount / (float)MaxClicks);
 
-        _myCameraManager.SetCameraToMove(myPanelPos, _cameraTravelTime, camSize, camRotation);
+        _myCameraManager.SetCameraToMove(myPanelPos, _cameraTravelTime, camSize, camRotation, importantProp);
     }
 
     //This is called when a dialog has reached its end
@@ -187,7 +188,7 @@ public class PartyGameManager : MonoBehaviour
                     _currentInteractiveMoment = InteractiveMoments.Kitchen;
                     _currentSection = Kitchen;
                     _myCameraManager.MovingToNext = true;
-                    _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19, 0);
+                    _myCameraManager.SetCameraToMove(Kitchen.transform.position, 3, 19, 0, false);
                     _currentBystanderPortrait = BystanderPortraits[1];
                     MaxClicks = 3;
                     break;
@@ -195,7 +196,7 @@ public class PartyGameManager : MonoBehaviour
                     _currentInteractiveMoment = InteractiveMoments.BackPoarch;
                     _currentSection = BackPoarch;
                     _myCameraManager.MovingToNext = true;
-                    _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19, 0);
+                    _myCameraManager.SetCameraToMove(BackPoarch.transform.position, 3, 19, 0, false);
                     _currentBystanderPortrait = BystanderPortraits[2];
                     MaxClicks = 2;
                     break;
@@ -203,7 +204,7 @@ public class PartyGameManager : MonoBehaviour
                     _currentInteractiveMoment = InteractiveMoments.LivingRoom2;
                     _currentSection = LivingRoom2;
                     _myCameraManager.MovingToNext = true;
-                    _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19, 0);
+                    _myCameraManager.SetCameraToMove(LivingRoom2.transform.position, 3, 19, 0, false);
                     _currentBystanderPortrait = BystanderPortraits[3];
                     MaxClicks = 2;
                     break;
@@ -212,7 +213,7 @@ public class PartyGameManager : MonoBehaviour
                     _currentSection = Hallway;
                     _myCameraManager.MovingToNext = true;
                     _hintManager.transform.localScale = new Vector3(4.45f, 4.45f, 1);
-                    _myCameraManager.SetCameraToMove(Hallway.transform.position, 3, 24, 0);
+                    _myCameraManager.SetCameraToMove(Hallway.transform.position, 3, 24, 0, false);
                     MaxClicks = 1;
                     break;
                 case InteractiveMoments.Hallway:

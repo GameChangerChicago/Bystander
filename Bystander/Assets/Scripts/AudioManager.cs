@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
 					if(BGMTrack)
 					{
                         _BGMSource.clip = BGMTrack;
-						_BGMSource.volume = 0.25f;
+						_BGMSource.volume = 0.05f;
                         _BGMSource.Play();
 					}
 	                break;
@@ -52,9 +52,10 @@ public class AudioManager : MonoBehaviour
         _SFXSource.Play();
     }
 
-	public void ChangeAmbientTrack(AudioClip newClip)
+	public void ChangeAmbientTrack(AudioClip newClip, float volume)
 	{
 		_ambientSource.clip = newClip;
+		_ambientSource.volume = volume;
 		_ambientSource.Play();
 	}
 

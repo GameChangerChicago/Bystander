@@ -5861,8 +5861,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 13890964}
-  HoverSound: {fileID: 0}
-  ClickSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: 
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -7490,7 +7490,7 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 37b7c5627111d0d4491afd0de4ceead4, type: 3}
     - target: {fileID: 8200000, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
       propertyPath: m_Volume
-      value: .25
+      value: .150000006
       objectReference: {fileID: 0}
     - target: {fileID: 8200002, guid: d0dbd5501345e794b83f56978e681c83, type: 2}
       propertyPath: m_Volume
@@ -8191,8 +8191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 1792844379}
-  HoverSound: {fileID: 0}
-  ClickSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: Close
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -11625,8 +11625,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSprite: {fileID: 191095592}
-  HoverSound: {fileID: 0}
-  ClickSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: abad4ff62213cb54ea7bb88f5b84e50c, type: 3}
+  ClickSound: {fileID: 8300000, guid: 5a4b150e172b33f44845104e1dac4a5c, type: 3}
   Level: Final_MainMenu
   SubMenuIndex: 0
   ScenerioButton: 0
@@ -11720,7 +11720,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: .25
+  m_Volume: .150000006
   m_Pitch: 1
   Loop: 0
   Mute: 0

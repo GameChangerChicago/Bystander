@@ -167,7 +167,7 @@ public class CutSceneManager : MonoBehaviour
             //So basically what I'm doing with that second condition is seeing if this is a post cutscene
             if (_gameManager.SingleScenarioMode && Application.loadedLevelName[1] == 'o')
             {
-                StartCoroutine(_gameManager.LoadingHandler("MainMenu_Generic"));
+				StartCoroutine(_gameManager.LoadingHandler("Final_MainMenu"));
                 _gameManager.SingleScenarioMode = false;
             }
             else
@@ -449,7 +449,7 @@ public class CutSceneManager : MonoBehaviour
             //So basically what I'm doing with that second condition is seeing if this is a post cutscene
             if (_gameManager.SingleScenarioMode && Application.loadedLevelName[1] == 'o')
             {
-                StartCoroutine(_gameManager.LoadingHandler("MainMenu_Generic"));
+                StartCoroutine(_gameManager.LoadingHandler("Final_MainMenu"));
                 _gameManager.SingleScenarioMode = false;
             }
             else
